@@ -39,7 +39,7 @@
 	
 
 ## Hacktoberfest-Guideline
-Beginner Friendly Hacktoberfest2021 repository. You can contribute anything from algorithm codes important DS questions with there solutions.</br> 
+Beginners to expert Friendly Hacktoberfest2021 repository. You can contribute any of the given tracks and make a valid PR for the project/mini-project you've added.</br> 
 Happy Coding!
 
 ## How to contribute:
