@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List</title>
+
+    <!-- Fontawesome -->
+
+    <script src="https://kit.fontawesome.com/ee20cf2264.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+
+<!-- Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap" rel="stylesheet">
+
+<!-- Favicon -->
+<link rel="icon" type="image/png" href="Favicon.png">
+
+    <!-- Css -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <h1>To Do List</h1>
+    <div class="container">
+      <h2> Add Your List here!</h2>
+      <input type="text" id="inputField" placeholder="Enter the task!">
+      <button class="addbtn" type="submit"><span>Add Task</span></button>
+      <div class="to-do" id="toDoContainers">
+          <ul style="text-align: left;" class="task-list">
+          </ul>
+
+          <button class="clearbtn" type="submit"><span style="color: white;">Clear All</span></button> 
+      </div>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
