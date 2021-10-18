@@ -28,7 +28,7 @@
          <tr>
             <td><a href="https://github.com/pranjay-poddar/Dev-Geeks"</a>Project</td>
             <td><img alt="Stars" src="https://img.shields.io/github/stars/pranjay-poddar/Dev-Geeks?style=flat&logo=github"/></td>
-            <td><img alt="Forks" src="https://img.shields.io/github/forks/pranjay-poddar/Dev-Geeks?style=flat&logo=github"/></td>
+             <td><img alt="Forks" src="https://img.shields.io/github/forks/pranjay-poddar/Dev-Geeks?style=flat&logo=github"/></td>
             <td><img alt="Issues" src="https://img.shields.io/github/issues/pranjay-poddar/Dev-Geeks?style=flat&logo=github"/></td>
             <td><img alt="Open Pull Requests" src="https://img.shields.io/github/issues-pr/pranjay-poddar/Dev-Geeks?style=flat&logo=github"/></td>
            <td><img alt="Close Pull Requests" src="https://img.shields.io/github/issues-pr-closed/pranjay-poddar/Dev-Geeks?style=flat&color=critical&logo=github"/></td>
