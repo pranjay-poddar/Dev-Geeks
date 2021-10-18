@@ -1,0 +1,92 @@
+/* scrollbar start  */
+
+::-webkit-scrollbar {
+    width: 5px;
+    border-radius: 50%;
+}
+
+
+/* Track */
+
+ ::-webkit-scrollbar-track {
+    background: black;
+}
+
+
+/* Handle */
+
+ ::-webkit-scrollbar-thumb {
+    background: rgb(47, 120, 255);
+}
+
+
+/* Handle on hover */
+
+ ::-webkit-scrollbar-thumb:hover {
+    background: rgb(53, 0, 199);
+}
+
+
+/* scrollbar end  */
+
+.grow {
+    transition: all 0.3s ease-in-out;
+}
+
+.grow:hover {
+    transform: scale(1.1);
+}
+
+body {
+    height: 100vh;
+    background-color: #ececec;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-image: url('./images/background.png');
+    background-size: cover;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+}
+
+.head {
+    padding: 5px 10px;
+    margin-top: 2vh;
+    background-color: #ececec;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+td {
+    background-color: #0a0322;
+    border: 3px solid white;
+    font-size: 80px;
+    color: #ffffff;
+    border-radius: 10px 10px 10px 10px;
+    transition: all 0.3s ease-in-out;
+}
+
+td:hover {
+    transform: scale(1.1);
+    background-color: #301097;
+}
+
+#turn {
+    padding: 10px;
+    margin: 5px;
+    font-size: 1.3em;
+}
+
+#tictactoe {
+    margin: 5vh 0px;
+}
+
+.rights {
+    color: black;
+    padding: 5px;
+    font-size: 0.9em;
+    background-color: #ececec;
+}
