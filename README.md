@@ -42,25 +42,40 @@
 Beginners to expert Friendly Hacktoberfest2021 repository. You can contribute any of the given tracks and make a valid PR for the project/mini-project you've added.</br> 
 Happy Coding!
 
-## How to contribute:
-* Drop a :star: on the Github repository (optional)<br/>
+## How to do contributions 
 
-* Fork the repo to your Github.<br/>
+### 1. Fork the Project
+Fork this repository and make changes in code as required. You can change it online or by cloning it in your device. Then Pust it on your Forked Repo for furteher Actions. Do not use special characters in the template above.
 
-* Clone the Repo by going to your local Git Client in a particular local folder in your local machine by using this command with your forked repository link in place of below given link: <br/>
-	```git clone https://github.com/pranjay-poddar/Data-Structures-And-Algorithms.git```
-* Create a branch using below command.
-  ```git branch <your branch name>```
-* Checkout to your branch.
-  ```git checkout <your branch name>```
-* Add your code in your local machine folder.
-  ```git add . ```
-* Commit your changes.
-  ```git commit -m"<add your message here>"```
-* Push your changes.
-  ```git push --set-upstream origin <your branch name>```
+### 2. Write a Good Commit Message
+You have written some code in your branch, and are ready to commit. So, make sure to written good, clean commit messages. Let's review the anatomy of a commit message.
 
-* Make a pull request! (compare your branch with the owner main branch)
+
+---
+First line, no more than 50 characters
+
+Details section, as long as you want. Not always necessary, but
+available if you need it. Wrapped at 72 characters. Present imperative
+tense is preferred for commits. That means "fix bug", not "fixes bug" or
+"fixed bug".
+
+- Use bullets if you need
+- Bullets are a good way to summarize a few things
+
+If you have too much info here, it might be a good candidate to break
+down into multiple commits. You can use emoji here too :sparkles:
+
+---
+
+
+### 3. Lastly, submit your Pull Request
+Go through the checklist on the pull request template to guarantee your submission is valid. Our team will review your application, approve and merge your submission if everything is correct. Otherwise, you will get notified of the changes requested in the pull request comment section.
+
+*Note:* Don't Forget to add `hacktoberfest-accepted` Label.
+
+
+Please check first and then send your codes with discription.
+
 
   
   
