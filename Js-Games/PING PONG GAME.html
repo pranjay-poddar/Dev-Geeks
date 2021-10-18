@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lights, Camera, PONG!</title>
+    <style>
+            html, body {
+                margin: 0px;
+                padding: 0px;
+                overflow: hidden;
+            }
+        </style>
+</head>
+<body>
+<script>
+    var canvas = document.createElement("canvas"),
+    width = canvas.width = window.innerWidth,
+    height = canvas.height = window.innerHeight;
+
+var enemyVelocity = 5;
+var enemyScore = 0,
+    playerScore = 0;
+
+document.body.appendChild(canvas);
+
+var ctx = canvas.getContext("2d");
+
+ctx.fillRect(0, 0, width, height);
+
+    var paddle = {
+    _x: 0,
+    _y: 0,
+    _width: 0,
+    _height: 0,
+    create: function(x, y, width, height) {
+        var p = Object.create(this);
+            p._x = x;
+            p._y = y;
+            p._width = width;
+            p._height = height;
+        return p;
+    },
+
+    render: function(c) {
+        c.fillRect(this._x, this._y, this._width, this._height);
+    },
+
+    setX: function(x) {
+        this._x = x
+    },
+
+    setY: function(y) {
+        this._y = y;
+    },
+
+    getX: function() {
+        return this._x;
+    },
+
+    getY: function() {
+        return this._y;
+    },
+
+        getWidth: function() {
+        return this._width;
+    },
+
+    getHeight: function() {
+        return this._height;
+    }
+};
+
+var ball = {
+    _x: width / 2, // center the ball
+    _y: height / 2, // center the ball
+    _vx: -4,
+    _vy: 4,
+    _size: 6,
+
+    update: function() {
+        this._x += this._vx;
+        this._y += this._vy;
+    },
+
+    render: function(c) {
+        c.beginPath();
+        c.arc(this._x, this._y, this._size, 0, Math.PI * 2);
+        c.fill();
+        c.closePath();
+    }
+};
+
+var playerPaddle = paddle.create(0, 0, 10, 100);
+var enemyPaddle = paddle.create(width - 10, 0, 10, 100);
+
+document.body.addEventListener("mousemove", mouseMoveHandler);
+
+function mouseMoveHandler(event) {
+    playerPaddle.setY(event.clientY - playerPaddle.getHeight() / 2);
+}
+
+function reset() {
+    ball._x = width / 2;
+    ball._y = height / 2;
+ball._vx *= -1;
+}
+
+update();
+
+function update() {
+
+    ctx.fillStyle = "black";
+    ctx.fillRect(0, 0, width, height);
+
+    if(ball._y - ball._size < 0 || ball._y + ball._size > height) {
+    ball._vy *= -1;
+}
+
+if(ball._x - ball._size < 0) {
+    if(ball._y >= playerPaddle.getY() && ball._y <= playerPaddle.getY() + playerPaddle.getHeight()) {
+        ball._vx *= -1;
+    } else {
+    enemyScore++;
+  reset();
+    }
+}
+
+if(ball._x + ball._size > width) {
+    if(ball._y >= enemyPaddle.getY() && ball._y <= enemyPaddle.getY() + enemyPaddle.getHeight()) {
+        ball._vx *= -1;
+    } else {
+playerScore++;
+reset();
+    }
+}
+
+    var enemyPos = enemyPaddle.getY();
+
+
+// if the paddle is at the top of the screen, start moving down
+if(enemyPos < 0) {
+    enemyVelocity *= -1;
+}
+
+// if the paddle is at the bottom of the screen, start moving up
+if(enemyPos + enemyPaddle.getHeight() > height) {
+    enemyVelocity *= -1;
+}
+
+    // update the position of the enemy paddle
+enemyPaddle.setY(enemyPos + enemyVelocity);
+
+ball.update();
+ctx.fillStyle = "white";
+    playerPaddle.render(ctx);
+    enemyPaddle.render(ctx);
+ball.render(ctx);
+
+    ctx.fillText(playerScore, width / 4, height / 10);
+ctx.fillText(enemyScore, width / 4 * 3, height / 10);
+    requestAnimationFrame(update);
+}
+</script>
+</body>
+</html>
