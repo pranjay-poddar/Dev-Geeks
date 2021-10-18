@@ -6,7 +6,7 @@
 
   ![forthebadge](https://forthebadge.com/images/badges/uses-brains.svg)
   ![forthebadge](https://forthebadge.com/images/badges/check-it-out.svg)
-  ![GitHub repo size](https://img.shields.io/github/repo-size/pranjay-poddar/Dev-Geek?color=yellow)
+  ![GitHub repo size](https://img.shields.io/github/repo-size/pranjay-poddar/Dev-Geeks?color=yellow)
   [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
   [![Open Source Love svg2](https://badges.frapsoft.com/os/v2/open-source.svg?v=103)](https://github.com/ellerbrock/open-source-badges/)
   <p align="center">
@@ -28,10 +28,10 @@
          <tr>
             <td><a href="https://github.com/pranjay-poddar/Dev-Geeks"</a>Project</td>
             <td><img alt="Stars" src="https://img.shields.io/github/stars/pranjay-poddar/Dev-Geeks?style=flat&logo=github"/></td>
-            <td><img alt="Forks" src="https://img.shields.io/github/forks/pranjay-poddar/Dev-Geek?style=flat&logo=github"/></td>
-            <td><img alt="Issues" src="https://img.shields.io/github/issues/pranjay-poddar/Dev-Geek?style=flat&logo=github"/></td>
-            <td><img alt="Open Pull Requests" src="https://img.shields.io/github/issues-pr/pranjay-poddar/Dev-Geek?style=flat&logo=github"/></td>
-            <td><img alt="Close Pull Requests" src="https://img.shields.io/github/issues-pr-closed/pranjay-poddar/Dev-Geek?style=flat&color=critical&logo=github"/></td>
+            <td><img alt="Forks" src="https://img.shields.io/github/forks/pranjay-poddar/Dev-Geeks?style=flat&logo=github"/></td>
+            <td><img alt="Issues" src="https://img.shields.io/github/issues/pranjay-poddar/Dev-Geeks?style=flat&logo=github"/></td>
+            <td><img alt="Open Pull Requests" src="https://img.shields.io/github/issues-pr/pranjay-poddar/Dev-Geeks?style=flat&logo=github"/></td>
+            <td><img alt="Close Pull Requests" src="https://img.shields.io/github/issues-pr-closed/pranjay-poddar/Dev-Geeks?style=flat&color=critical&logo=github"/></td>
         </tr>
     </tbody>        
 </table>
