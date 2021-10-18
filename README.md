@@ -1,7 +1,7 @@
 # Dev-Geeks
 
 <br>
-A collection vibrant frontend projects, mini-projects, components, animations, games 
+<h2 align="center"> A collection vibrant frontend projects, mini-projects, components, animations, games and much more!</h2>
 <br><br>
 
   ![forthebadge](https://forthebadge.com/images/badges/uses-brains.svg)
@@ -10,7 +10,7 @@ A collection vibrant frontend projects, mini-projects, components, animations, g
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
 [![Open Source Love svg2](https://badges.frapsoft.com/os/v2/open-source.svg?v=103)](https://github.com/ellerbrock/open-source-badges/)
   <p align="center">
-    <a href="https://github.com/pranjay-poddar"><img src="https://github.com/pranjay-poddar/Dev-Geeks/blob/master/hacktoberfest'21.png" />
+    <a href="https://github.com/pranjay-poddar"><img src="https://github.com/pranjay-poddar/Dev-Geeks/blob/main/images/hacktoberfest'21.png" />
     </a>
 	</p>
 	<table align="center">
@@ -39,7 +39,7 @@ A collection vibrant frontend projects, mini-projects, components, animations, g
 	
 
 ## Hacktoberfest-Guideline
-Beginner Friendly Hacktoberfest2021 repository. You can contribute anything from algorithm codes important DS questions with there solutions.</br> 
+Beginners to expert Friendly Hacktoberfest2021 repository. You can contribute any of the given tracks and make a valid PR for the project/mini-project you've added.</br> 
 Happy Coding!
 
 ## How to contribute:
