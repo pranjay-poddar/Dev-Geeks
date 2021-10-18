@@ -45,6 +45,8 @@ Happy Coding!
 ## How to contribute:
 * Drop a :star: on the Github repository (optional)<br/>
 
+* Create an issue of the project or a feature you would like to add in the project and get the task assigned for youself. (issue can be any feature or project that you think you could contribute to). 
+
 * Fork the repo to your Github.<br/>
 
 * Clone the Repo by going to your local Git Client in a particular local folder in your local machine by using this command with your forked repository link in place of below given link: <br/>
