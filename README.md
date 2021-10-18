@@ -31,7 +31,7 @@
             <td><img alt="Forks" src="https://img.shields.io/github/forks/pranjay-poddar/Dev-Geeks?style=flat&logo=github"/></td>
             <td><img alt="Issues" src="https://img.shields.io/github/issues/pranjay-poddar/Dev-Geeks?style=flat&logo=github"/></td>
             <td><img alt="Open Pull Requests" src="https://img.shields.io/github/issues-pr/pranjay-poddar/Dev-Geeks?style=flat&logo=github"/></td>
-            <td><img alt="Close Pull Requests" src="https://img.shields.io/github/issues-pr-closed/pranjay-poddar/Dev-Geeks?style=flat&color=critical&logo=github"/></td>
+           <td><img alt="Close Pull Requests" src="https://img.shields.io/github/issues-pr-closed/pranjay-poddar/Dev-Geeks?style=flat&color=critical&logo=github"/></td>
         </tr>
     </tbody>        
 </table>
