@@ -174,7 +174,7 @@ body {
     transition: --num 1s;
     counter-set: num var(--num);
     font: 800 40px system-ui;
-    --num: 100;
+    --num: 10;
     color: #F74700;
 }
 
@@ -183,7 +183,7 @@ body {
 }
 
 #value4:hover {
-    --num: 150;
+    --num: 20;
 }
 
 .contri {
