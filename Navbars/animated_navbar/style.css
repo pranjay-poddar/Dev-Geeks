@@ -1,0 +1,30 @@
+
+.navbar{
+    padding: 20px 10px 20px 0px;
+    background-color: #e06636;
+
+    transition: all ease 0.4s;
+  }
+  .navbar-brand{
+    font-size: 22px;
+    color: white !important;
+  }
+  .navbar .navbar-nav li a{
+    font-size: 16px;
+    color: white;
+  }
+  
+  #text{
+    font-weight: bolder;
+    color: #e06636;
+  }
+
+  .animate{
+    padding: 0px 10px 0px 0px;
+    transition: all ease 0.4s;
+  }
+  
+
+  .jumbotron{
+    margin-top: 110px;
+  }
