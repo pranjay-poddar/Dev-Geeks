@@ -1,11 +1,13 @@
 # Dev-Geeks
-
+<div align="center">
 <br>
 <h2 align="center"> A collection vibrant frontend projects, mini-projects, components, animations, games and much more!</h2>
+<img src="https://cdn.evilmartians.com/front/posts/scroll-to-the-future-modern-javascript-css-scrolling-implementations/smooth-39c1d26.gif" alt="Frontend tools and languages" />
 <br><br>
 
   ![forthebadge](https://forthebadge.com/images/badges/uses-brains.svg)
   ![forthebadge](https://forthebadge.com/images/badges/check-it-out.svg)
+  <br>
   ![GitHub repo size](https://img.shields.io/github/repo-size/pranjay-poddar/Dev-Geeks?color=yellow)
   [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
   [![Open Source Love svg2](https://badges.frapsoft.com/os/v2/open-source.svg?v=103)](https://github.com/ellerbrock/open-source-badges/)
@@ -33,19 +35,19 @@
             <td><img alt="Open Pull Requests" src="https://img.shields.io/github/issues-pr/pranjay-poddar/Dev-Geeks?style=flat&logo=github"/></td>
            <td><img alt="Close Pull Requests" src="https://img.shields.io/github/issues-pr-closed/pranjay-poddar/Dev-Geeks?style=flat&color=critical&logo=github"/></td>
         </tr>
-    </tbody>        
+    </tbody>
 </table>
-	
-	
+</div>
+<br>
 
 ## Hacktoberfest-Guideline
-Beginners to expert Friendly Hacktoberfest2021 repository. You can contribute any of the given tracks and make a valid PR for the project/mini-project you've added.</br> 
+Beginners to expert Friendly Hacktoberfest2021 repository. You can contribute any of the given tracks and make a valid PR for the project/mini-project you've added.</br>
 Happy Coding!
 
 ## How to contribute:
 * Drop a :star: on the Github repository (optional)<br/>
 
-* Create an issue of the project or a feature you would like to add in the project and get the task assigned for youself. (issue can be any feature or project that you think you could contribute to). 
+* Create an issue of the project or a feature you would like to add in the project and get the task assigned for youself. (issue can be any feature or project that you think you could contribute to).
 
 * Fork the repo to your Github.<br/>
 
@@ -64,18 +66,23 @@ Happy Coding!
 
 * Make a pull request! (compare your branch with the owner main branch)
 
-  
-  
 
-## Contributors
+<br>
+<h2 align="center">
+ <b>Contributors
+<h2>
+<br>
 
 <a href="https://github.com/pranjay-poddar/Dev-Geeks/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=pranjay-poddar/Dev-Geeks&&max=514" />
 </a>
 
 <!-- &max={number} -->
-  <br><br>
- <p align="center">< /> with &hearts; By<a href="https://github.com/pranjay-poddar"> Pranjay Poddar </a>&copy;</p>
+  <br>
+  <p align="center">
+   <a target="_blank"href="https://www.linkedin.com/in/pranjay-poddar/"><img src="https://forthebadge.com/images/badges/built-with-love.svg" alt="Built with love" /></a><br>
+  By<a href="https://github.com/pranjay-poddar"> Pranjay Poddar </a>&copy;</p>
+
 <h3 align="center">Connect Project Admin </h3>
 <p align="center">
   <a target="_blank"href="https://www.linkedin.com/in/pranjay-poddar/"><img src="https://img.shields.io/badge/linkedin-%230077B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white" /></a>&nbsp;&nbsp;&nbsp;&nbsp;
