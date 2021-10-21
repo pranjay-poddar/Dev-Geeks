@@ -2,7 +2,7 @@
 <div align="center">
 <br>
 <h2 align="center"> A collection vibrant frontend projects, mini-projects, components, animations, games and much more!</h2>
-<img src="https://cdn.evilmartians.com/front/posts/scroll-to-the-future-modern-javascript-css-scrolling-implementations/smooth-39c1d26.gif" />
+<img src="https://cdn.evilmartians.com/front/posts/scroll-to-the-future-modern-javascript-css-scrolling-implementations/smooth-39c1d26.gif" alt="Frontend tools and languages" />
 <br><br>
 
   ![forthebadge](https://forthebadge.com/images/badges/uses-brains.svg)
@@ -80,7 +80,7 @@ Happy Coding!
 <!-- &max={number} -->
   <br>
   <p align="center">
-   <a target="_blank"href="https://www.linkedin.com/in/pranjay-poddar/"><img src="https://forthebadge.com/images/badges/built-with-love.svg" /></a><br>
+   <a target="_blank"href="https://www.linkedin.com/in/pranjay-poddar/"><img src="https://forthebadge.com/images/badges/built-with-love.svg" alt="Built with love" /></a><br>
   By<a href="https://github.com/pranjay-poddar"> Pranjay Poddar </a>&copy;</p>
 
 <h3 align="center">Connect Project Admin </h3>
