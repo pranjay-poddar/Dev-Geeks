@@ -2,7 +2,7 @@
 <div align="center">
 <br>
 <h2 align="center"> A collection vibrant frontend projects, mini-projects, components, animations, games and much more!</h2>
-<img src="https://cdn.evilmartians.com/front/posts/scroll-to-the-future-modern-javascript-css-scrolling-implementations/smooth-39c1d26.gif" alt="Frontend tools and languages" />
+
 <br><br>
 
   ![forthebadge](https://forthebadge.com/images/badges/uses-brains.svg)
