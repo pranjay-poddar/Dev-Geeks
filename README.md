@@ -79,9 +79,9 @@ Happy Coding!
 
 <!-- &max={number} -->
   <br>
-  <p align="center">
+  <h3 align="center">
    <a target="_blank"href="https://www.linkedin.com/in/pranjay-poddar/"><img src="https://forthebadge.com/images/badges/built-with-love.svg" alt="Built with love" /></a><br>
-  By<a href="https://github.com/pranjay-poddar"> Pranjay Poddar </a>&copy;</p>
+  By<a href="https://github.com/pranjay-poddar"> Pranjay Poddar </a>&copy;</h3>
 
 <h3 align="center">Connect Project Admin </h3>
 <p align="center">
