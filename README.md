@@ -1,4 +1,4 @@
-# Dev-Geeks
+<h1 align="center"> Dev-Geeks </h1>
 <div align="center">
 <br>
 <h2 align="center"> A collection vibrant frontend projects, mini-projects, components, animations, games and much more!</h2>
@@ -71,8 +71,6 @@ Happy Coding!
 <h1 align="center">
  <b>Contributors
 <h1>
-<br>
-
 <a href="https://github.com/pranjay-poddar/Dev-Geeks/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=pranjay-poddar/Dev-Geeks&&max=615" />
 </a>
