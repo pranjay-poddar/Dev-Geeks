@@ -1,0 +1,103 @@
+#container
+{
+  width: 50%;
+  margin: 3.125rem auto 0 auto;
+  opacity: 0.7;
+  background-color: rgb(161, 16, 74);
+  padding: 50px;
+  border: 1px solid purple;
+  border-radius: 2.5rem;
+}
+#heading
+{
+  font-size: 45px;
+  text-align: center;
+  font-family: sans-serif;
+  font-weight: bold;
+  color: black;
+}
+body
+{
+  background-image: url("https://i.pinimg.com/originals/84/1b/e2/841be2ff1e0ce35beca92c26a07556e8.jpg");
+}
+label,p
+{
+  font-family: comic sans MS;
+  color: skyblue;
+  font-weight: bold;
+}
+#details
+{
+}
+.info
+{
+
+}
+.radio
+{
+  color: skyblue;
+  font-family: sans-serif;
+  font-weight: bold;
+}
+.name
+{
+  width: 48%;
+  height: 2.375rem;
+  color: green;
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 0.25rem;
+}
+.control
+{
+  display:block;
+  width: 95%;
+  height: 2.375rem;
+  color: green;
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 0.25rem;
+}
+.but
+{
+  font-size: 17px;
+  width: 25%;
+  height: 35px;
+  padding: 5px;
+  background-color: red;
+  border: 1px solid black;
+  border-radius: 15px;
+}
+a
+{
+  color: yellow;
+  text-decoration: none;
+}
+.name:hover,.control:hover
+{
+  background-color: rgb(169, 209, 174);
+}
+button:hover
+{
+  background-color: green;
+}
+@media (max-width:1080px) {
+  #heading
+  {
+    font-size: 35px;
+    text-align: center;
+    font-family: sans-serif;
+    font-weight: bold;
+    color: rgb(240, 34, 92);
+  }
+  #container
+  {
+    width: 70%;
+    margin: 3.125rem auto 0 auto;
+  }
+  .name
+  {
+    width: 45%;
+  }
+
+}

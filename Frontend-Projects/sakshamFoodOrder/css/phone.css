@@ -1,0 +1,76 @@
+/* body{
+    /* background-color: violet; */
+
+
+
+.services{
+    flex-direction: column;
+}
+
+.box{
+    width: 70%;
+}
+
+.clientbox{
+    flex-direction: column;
+}
+
+.cl img{
+    height:50px;
+    width: 100px;
+    /* margin: 20px; */
+}
+
+#navbar{
+    flex-direction: column;
+}
+
+#navbar ul{
+    /* display: flex;
+    list-style: none; */
+    flex-direction: column;
+    text-align: center;
+}
+/* 
+.contactUS input,
+.contactUS textarea{
+    width: 80%;
+    /* padding: 0.5rem;
+    border-radius: 12px;
+    font-size: 1.1rem; */
+/* } */ 
+
+/* .contForm{
+    flex-direction: column;
+} */
+
+/* .form-group{
+    width: 50%;
+} */
+
+.h-primary{
+    font-size: 2.8rem;
+}
+
+.h-sec{
+    font-size: 1.5rem;
+}
+
+.contForm, #intro p,#bt1{
+    font-size: 1rem;
+}
+
+.contactUS input, .contactUS textarea {
+    /* width: 100%;
+    padding: 0.5rem;
+    border-radius: 12px; */
+    font-size: 1.0rem;
+}
+
+.box p{
+    font-size: 10px;
+}
+
+.contactUS form{
+    width: 60%;
+}
