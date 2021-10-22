@@ -1,264 +1,266 @@
 body {
-    font-family: Poppins, sans-serif;
-    background: #334d50;
-    /* fallback for old browsers */
-    background: -webkit-linear-gradient(to bottom, #cbcaa5, #334d50);
-    /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to bottom, #cbcaa5, #334d50);
-    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    padding-left: 0px;
-    padding-right: 0px;
+  font-family: Poppins, sans-serif;
+  background: #334d50;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to bottom, #cbcaa5, #334d50);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to bottom, #cbcaa5, #334d50);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  padding-left: 0px;
+  padding-right: 0px;
 }
 
 ::-webkit-scrollbar {
-    width: 10px;
-    overflow-y: scroll;
-    background: #f8f8f8;
-    box-shadow: inset 0 0 4px #707070;
+  width: 10px;
+  overflow-y: scroll;
+  background: #f8f8f8;
+  box-shadow: inset 0 0 4px #707070;
 }
 
 ::-webkit-scrollbar-thumb {
-    background: #F74700;
-    border-radius: 100px;
-    height: 10px !important;
-    overflow-x: hidden;
+  background: #f74700;
+  border-radius: 100px;
+  height: 10px !important;
+  overflow-x: hidden;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: black;
-    border-radius: 100px;
-    height: 50px !important;
-    overflow: auto;
+  background: black;
+  border-radius: 100px;
+  height: 50px !important;
+  overflow: auto;
 }
-
 
 /* ANIMATION  */
 
 .grow2 {
-    transition: all 0.01s ease-in-out;
+  transition: all 0.01s ease-in-out;
 }
 
 .grow2:hover {
-    transform: scale(1.03);
+  transform: scale(1.03);
 }
 
 .grow {
-    transition: all 0.2s ease-in-out !important;
+  transition: all 0.2s ease-in-out !important;
 }
 
 .grow:hover {
-    transform: scale(1.1) !important;
+  transform: scale(1.1) !important;
 }
 
 .rotate {
-    transition: transform 0.5s ease-in-out;
+  transition: transform 0.5s ease-in-out;
 }
 
 .rotate:hover {
-    transform: rotate(360deg);
+  transform: rotate(360deg);
 }
 
 .object {
-    animation: MoveUpDown 3s linear infinite;
-    position: absolute;
+  animation: MoveUpDown 3s linear infinite;
+  position: absolute;
 }
 
 @keyframes MoveUpDown {
-    0%,
-    100% {
-        bottom: 0;
-    }
-    50% {
-        bottom: 10px;
-    }
+  0%,
+  100% {
+    bottom: 0;
+  }
+  50% {
+    bottom: 10px;
+  }
 }
 
 .middle {
-    position: relative;
+  position: relative;
 }
 
 .middle:before {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 2px;
-    bottom: 0;
-    left: 0;
-    background-color: rgb(255, 255, 255);
-    visibility: hidden;
-    transform: scaleX(0);
-    transition: all 0.3s ease-in-out;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: rgb(255, 255, 255);
+  visibility: hidden;
+  transform: scaleX(0);
+  transition: all 0.3s ease-in-out;
 }
 
 .middle:hover:before {
-    visibility: visible;
-    transform: scaleX(1);
+  visibility: visible;
+  transform: scaleX(1);
 }
-
 
 /* Poster */
 
 #poster {
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
-    overflow: hidden;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+    rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+  overflow: hidden;
 }
 
-#poster>a>img:hover {
-    transition: transform 1s;
-    transform: scale(1.1);
+#poster > a > img:hover {
+  transition: transform 1s;
+  transform: scale(1.1);
 }
-
-
+#poster > a > img:not(:hover) {
+  transition: transform 1s;
+  transform: scale(1);
+}
 /* Numbers */
 
 @property --num {
-    syntax: "<integer>";
-    initial-value: 0;
-    inherits: false;
+  syntax: "<integer>";
+  initial-value: 0;
+  inherits: false;
 }
 
 #value1 {
-    transition: --num 2s;
-    counter-set: num var(--num);
-    font: 800 40px system-ui;
-    --num: 16;
-    color: #F74700;
+  transition: --num 2s;
+  counter-set: num var(--num);
+  font: 800 40px system-ui;
+  --num: 16;
+  color: #f74700;
 }
 
 #value1::after {
-    content: counter(num);
-    --num: 16;
+  content: counter(num);
+  --num: 16;
 }
 
 #value1:hover {
-    --num: 23;
+  --num: 23;
 }
 
 .pranjay-img {
-    border: 1px black solid;
+  border: 1px black solid;
 }
 
 #value2 {
-    transition: --num 1s;
-    counter-set: num var(--num);
-    font: 800 40px system-ui;
-    --num: 21;
-    color: #F74700;
+  transition: --num 1s;
+  counter-set: num var(--num);
+  font: 800 40px system-ui;
+  --num: 21;
+  color: #f74700;
 }
 
 #value2::after {
-    content: counter(num);
+  content: counter(num);
 }
 
 #value2:hover {
-    --num: 9;
+  --num: 9;
 }
 
 #value3 {
-    transition: --num 1s;
-    counter-set: num var(--num);
-    font: 800 40px system-ui;
-    --num: 18;
-    color: #F74700;
+  transition: --num 1s;
+  counter-set: num var(--num);
+  font: 800 40px system-ui;
+  --num: 18;
+  color: #f74700;
 }
 
 #value3::after {
-    content: counter(num);
+  content: counter(num);
 }
 
 #value3:hover {
-    --num: 23;
+  --num: 23;
 }
 
 #value4 {
-    transition: --num 1s;
-    counter-set: num var(--num);
-    font: 800 40px system-ui;
-    --num: 10;
-    color: #F74700;
+  transition: --num 1s;
+  counter-set: num var(--num);
+  font: 800 40px system-ui;
+  --num: 10;
+  color: #f74700;
 }
 
 #value4::after {
-    content: counter(num);
+  content: counter(num);
 }
 
 #value4:hover {
-    --num: 20;
+  --num: 20;
 }
 
 .contri {
-    width: 80%;
+  width: 80%;
 }
 
 .footer {
-    text-align: center;
-    background-color: black;
-    color: white;
+  text-align: center;
+  background-color: black;
+  color: white;
 }
 
 .footer a {
-    color: #F74700;
+  color: #f74700;
 }
 
-@media(max-width:1000px) {
-    .contri {
-        height: 70vh;
-    }
+@media (max-width: 1000px) {
+  .contri {
+    height: 70vh;
+  }
 }
 
-@media(max-width:768px) {
-    .contri {
-        height: 50vh;
-    }
-    .values h2 {
-        margin-top: 5vh;
-        font-size: 2rem;
-    }
-    .stat {
-        margin-top: 10vh;
-    }
-    .contri {
-        width: 100%;
-    }
+@media (max-width: 768px) {
+  .contri {
+    height: 50vh;
+  }
+  .values h2 {
+    margin-top: 5vh;
+    font-size: 2rem;
+  }
+  .stat {
+    margin-top: 10vh;
+  }
+  .contri {
+    width: 100%;
+  }
 }
 
-@media(max-width:513px) {
-    .contri {
-        height: 45vh;
-    }
-    .repo h1 {
-        margin: 5vh 0;
-        font-size: 1.7rem;
-    }
-    .repo h3 {
-        margin: 5vh 0;
-        font-size: 1.5rem;
-    }
-    .values h2 {
-        margin-top: 6vh;
-        font-size: 1.5rem;
-    }
-    .footer h4 {
-        font-size: 1rem;
-    }
-    .admin h1 {
-        font-size: 1.9rem;
-    }
-    .admin h2 {
-        font-size: 1.2rem;
-        font-weight: 600;
-    }
-    .pranjay-img {
-        height: 200px;
-        width: 200px;
-    }
+@media (max-width: 513px) {
+  .contri {
+    height: 45vh;
+  }
+  .repo h1 {
+    margin: 5vh 0;
+    font-size: 1.7rem;
+  }
+  .repo h3 {
+    margin: 5vh 0;
+    font-size: 1.5rem;
+  }
+  .values h2 {
+    margin-top: 6vh;
+    font-size: 1.5rem;
+  }
+  .footer h4 {
+    font-size: 1rem;
+  }
+  .admin h1 {
+    font-size: 1.9rem;
+  }
+  .admin h2 {
+    font-size: 1.2rem;
+    font-weight: 600;
+  }
+  .pranjay-img {
+    height: 200px;
+    width: 200px;
+  }
 }
 
-@media(max-width:370px) {
-    .contri {
-        height: 40vh;
-    }
-    .footer h4 {
-        font-size: 0.9rem;
-    }
+@media (max-width: 370px) {
+  .contri {
+    height: 40vh;
+  }
+  .footer h4 {
+    font-size: 0.9rem;
+  }
 }
