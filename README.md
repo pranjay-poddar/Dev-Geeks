@@ -74,14 +74,14 @@ Happy Coding!
 <br>
 
 <a href="https://github.com/pranjay-poddar/Dev-Geeks/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=pranjay-poddar/Dev-Geeks&&max=514" />
+  <img src="https://contrib.rocks/image?repo=pranjay-poddar/Dev-Geeks&&max=515" />
 </a>
 
 <!-- &max={number} -->
   <br>
   <h3 align="center">
    <a target="_blank"href="https://www.linkedin.com/in/pranjay-poddar/"><img src="https://forthebadge.com/images/badges/built-with-love.svg" alt="Built with love" /></a><br>
-  By<a href="https://github.com/pranjay-poddar"> Pranjay Poddar </a>&copy;</h3>
+  By<a href="https://github.com/pranjay-poddar"> Pranjay Poddar </a>&copy; MIT License</h3>
 
 <h3 align="center">Connect Project Admin </h3>
 <p align="center">
