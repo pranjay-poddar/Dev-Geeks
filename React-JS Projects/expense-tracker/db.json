@@ -1,0 +1,24 @@
+{
+  "transactions": [
+    {
+      "text": "Salary",
+      "amount": "500",
+      "id": 1
+    },
+    {
+      "text": "Food",
+      "amount": "-120",
+      "id": 2
+    },
+    {
+      "text": "Recharge",
+      "amount": "-150",
+      "id": 4
+    },
+    {
+      "text": "Cab",
+      "amount": "-70",
+      "id": 5
+    }
+  ]
+}
