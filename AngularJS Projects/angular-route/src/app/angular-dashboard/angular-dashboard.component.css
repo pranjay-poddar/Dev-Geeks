@@ -1,0 +1,168 @@
+/*---------MOBILE SCREEN------------*/
+@media only screen and (max-width: 737px){
+    .memberDashPage{
+      width: 100%;
+      height: 48em;
+      background-color: black;
+    }
+    .profilePanel{
+      background-color: #ffffffc7;
+      margin: auto;
+      width: 94%;
+      height: 45em;
+      position: relative;
+      top: 2em;
+    }
+    .center{
+      display: flex;
+      justify-content: center;
+    }
+    img{
+      width: 10em;
+      border-radius: 50%;
+      margin-top: 15%;
+    }
+    .profileSec{
+      background-color: #000000c7;
+      box-shadow: 0px 0px 9px 6px #000000c4;
+      width: 20em;
+      margin: auto;
+      position: relative;
+      top: 2%;
+      height: 40em;
+    }
+    .btn{
+      background-color: #089cd7;
+      padding: 2%;
+      border-radius: 6%;
+    }
+    .textField{
+      color: white;
+      border: 2px solid;
+      padding: 4%;
+      border-radius: 40px;
+      margin-top: 4%;
+    }
+    .example-sidenav{
+      width: 11em;
+      background-color: #2c2c2cb0;
+      color: white;
+    }
+    .accessoryTabs{
+      width: 100%;
+    }
+    a{
+      position: relative;
+      top: 7%;
+      margin: auto;
+      color: white;
+      text-decoration: none;
+    }
+    /* h3{
+      padding: 10px;
+      margin-top: 2%;
+      border: 2px solid;
+      border-radius: 40px;
+    } */
+    mat-list-item{
+      text-align: center;
+      margin-top: 15%;
+      padding: 10px;
+      border: 2px solid white;
+      border-radius: 40px;
+    }
+    mat-list-item:hover,
+    mat-list-item:active{
+      background-color: #089ad4;
+      transition: background-color 0.5s;
+    }
+    
+  
+    
+  
+    
+    
+  }
+  
+  /*------BIG SCREEN----------*/
+  @media only screen and (min-width: 738px){
+    .memberDashPage{
+      width: 100%;
+      height: 45em;
+      background-color: black;
+    }
+    .profilePanel{
+      background-color: #ffffffc7;
+      margin: auto;
+      width: 75%;
+      height: 38em;
+      position: relative;
+      top: 2em;
+    }
+    .center{
+      display: flex;
+      justify-content: center;
+    }
+    img{
+      width: 10em;
+      border-radius: 50%;
+      margin-top: 6%;
+    }
+    .profileSec{
+      background-color: #000000c7;
+      box-shadow: 0px 0px 9px 6px #000000c4;
+      margin: auto;
+      width: 35em;
+      height: 33em;
+      position: relative;
+      top: 3%;
+    }
+    .btn{
+      background-color: #089cd7;
+      padding: 1%;
+      border-radius: 6%;
+    }
+    .textField{
+      color: white;
+      border: 2px solid;
+      padding: 4%;
+      border-radius: 40px;
+      margin-top: 4%;
+    }
+    .example-sidenav{
+      width: 11em;
+      background-color: #2c2c2cb0;
+      color: white; 
+    }
+    .accessoryTabs{
+      width: 100%;
+    }
+    a{
+      position: relative;
+      top: 7%;
+      margin: auto;
+      color: white;
+      text-decoration: none;
+    }
+    /* h3{
+      padding: 10px;
+      margin-top: 2%;
+      border: 2px solid;
+      border-radius: 40px;
+    } */
+    mat-list-item{
+      text-align: center;
+      margin-top: 15%;
+      padding: 10px;
+      border: 2px solid white;
+      border-radius: 40px;
+    }
+    mat-list-item:hover,
+    mat-list-item:active{
+      background-color: #089ad4;
+      transition: background-color 0.5s;
+    }
+    
+    
+    
+  } 
