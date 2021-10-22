@@ -7,39 +7,32 @@
     <title>Animated Navbar</title>
 </head>
 
+
 <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css'>
 <link rel="stylesheet" href="./style.css">
 <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
 <script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js'></script><script  src="./script.js"></script>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
+</style>
 
 <link rel="stylesheet" href="style.css">
 <script src="scripts.js"></script>
 
 
-
-    
 <!-- Navigation Bar -->
-<nav class="navbar navbar-default navbar-fixed-top">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#resNav">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      
-      <a href="#" class="navbar-brand">Logo</a>
-    </div>
-    <div class="collapse navbar-collapse" id="resNav">
-      <ul class="nav navbar-nav navbar-right">
-        <li><a href="#">Home</a></li>
-        <li><a href="#">About Us</a></li>
-        <li><a href="#">Our Services</a></li>
-        <li><a href="#">Our Team</a></li>
-        <li><a href="#">Contact Us</a></li>
+<img href="#" class="navbar-brand" alt="Hacktober 2021" src="./images/hacktoberfest.svg"/>
+    <div  id="mainbox"onclick="openFunction()">&#9776;</div>
+      <ul id="menu" class="sidemenu">
+        <a href="#">Home</a>
+        <a href="#">About Us</a>
+        <a href="#">Our Services</a>
+        <a href="#">Our Team</a>
+        <a href="#">Contact Us</a>
+        <a href="#" class="closebtn" onclick="closeFunction()">&times;</a>
       </ul>
     </div>
-  </nav>  
-  
+
   <!-- Jumbotron -->
   <div class="container">
     <center>
@@ -53,10 +46,6 @@
       </div>
     </div>
   </center>
-  </div> 
-
-
-   
-
+  </div>
 </body>
 </html>
