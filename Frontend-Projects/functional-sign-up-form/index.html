@@ -1,0 +1,108 @@
+<!DOCTYPE Html>
+<html>
+    <head>
+        <title>food survey form</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <meta name="viewport" content="width = device-width, initial-scale = 1.0"> 
+    </head>
+    <body>
+        <header>
+            <!--first compartment-->
+            <div id="title">
+                <h1>Omnifood Signup</h1>
+            </div>
+        </header>
+        <!---<hr>-->
+        <center>
+            <div class="error-banner">
+                <div class="message"></div>
+                <div class="cross" onclick="toggleErrorBanner()">X</div>
+            </div>
+           <div id="fields">
+              <main id="page">
+                 <form id="foodForm">
+                      <table id="form">
+         <!----fields of form---->
+                       <br>
+                       <br>
+                       <tr> 
+                           <td>    
+                              <label for="name" id="f1">Name:</label>
+                           </td>
+            <!--name-->
+                           <td>
+                              <input id= "name" type="text" minlength ="5" placeholder="Enter your name" required onfocusin="removeBorder(event)" onfocusout="displayName(event)">
+                           </td>
+                      </tr>
+                      <tr>
+                          <td>
+                             <label for="email"id="f2">Email:</label>
+                         </td>
+            <!--email--->
+                          <td>
+                             <input id="email" type="email" placeholder="Enter your email" required onfocusin="removeBorder(event)" onfocusout="displayEmail(event)">
+                         </td>
+                     </tr>
+                     <tr>
+                         <td>
+                             <label for="date"id="f5">Date Of Birth:</label>
+            <!--DOB--->
+                        </td>
+                         <td>
+                             <input id="date"type="date"placeholder="Enter your DOB"required>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="gender"id="f6">Gender:</label>
+                       </td>
+            <!--gender------------------------------------->
+                        <td>
+                            <label for="g1">
+                                <input id="g1"name="gen"type="radio"value="1"checked class="radio-btn">Male
+                            </label>
+                            <label for="g2">
+                                <input id="g2"name="gen"type="radio"value="2" class="radio-btn">Female
+                            </label>
+                            <label for="g3">
+                                <input id="g3"name="gen"type="radio"value="3" class="radio-btn">Other
+                            </label>
+                       </td>
+                    </tr>
+            <!-----favourite food----->
+                    <tr>
+                        <td>
+                            <label for="fav_food"id="f7">Comments:</label></td>
+                        <td>
+                            <textarea id="fav_food" rows="2" cols="20" name="com" placeholder="We would love to hear from you" maxlength="25"></textarea>
+                       </td>
+                    </tr>
+            <!------------------------------->
+                    <tr>
+                        <td>
+                            <label for="pass"id="f3">Password:</label>
+                        </td>
+            <!---pass--->
+                        <td>
+                            <input id="pass" type="password" placeholder="Enter your Password" required onfocusin="removeBorder(event)" onfocusout="validate(event)">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                           <label for="con_pass"id="f4">Confirm Password:</label>
+                        </td>
+            <!--con_pass--->
+                        <td>
+                           <input id="con_pass" type="password" placeholder="Confirm your Password" required  onfocusin="removeBorder(event)" onfocusout="check(event)">
+                        </td>
+                    </tr>
+                     </table>
+                     <br>
+                     <input type="button" onclick="redirect()" value="Submit">
+                  </form>
+               </main>
+            </div>
+        </center>
+        <script src="script.js"type="text/javascript"></script>
+    </body>
+</html>
