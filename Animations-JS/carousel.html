@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie-edge">
+    <title>Title</title>
+
+    <!--FONT ASWESOME-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" 
+    integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+    <!--CSS/BOOTSTRAP-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="img/img1.jpg" type="image/gif" sizes="16*16">
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cookie&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=PT+Sans+Narrow&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Lobster+Two&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Tangerine:wght@700&display=swap');
+
+        * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  html {
+    font-size: 10px;
+    font-family: "Roboto Cn", sans-serif;
+  }
+
+  body {
+      overflow-x: hidden;
+      background-image: linear-gradient(rgba(0, 0, 0, 0.555),black,grey,black);
+  }
+  
+  a {
+    text-decoration: none;
+    color: #eee;
+  }
+
+  
+  .overlay {
+    background-color: rgba(0, 0, 0, 0.95);
+    position: fixed;
+    right: 0;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    transition: opacity 650ms;
+    transform: scale(0);
+    opacity: 0;
+    display: none;
+  }
+  
+  nav ul li a:hover::before,
+  nav ul li a:hover::after {
+    transform: scaleX(1);
+  }
+
+  /*SWIPER*/
+
+.swiper-container {
+    width: 100%;
+    padding-top: 90px;
+    padding-bottom: 10px;
+}
+
+.swiper-slide {
+    background-position: center;
+    background-size: cover;
+    width: 400px;
+    height: 400px;
+}
+
+.swiper-slide .description {
+    position: absolute;
+    top: 70%;
+    width: 100%;
+    left: 50%;
+    transform: translate(-50%,50%);
+    opacity: 1;
+    text-shadow: 4px 4px 4px rgba(221, 14, 14, 0.5),
+    -5px 0px 4px rgba(255,255,255,0.5);
+    background-color: rgba(0, 0, 0, 0.863);
+    font-size: 20px;
+    font-weight: 200;
+    color: rgb(255, 166, 0);
+    text-align: center;
+    font-family: 'Abril Fatface', cursive;;
+}
+    </style>
+  </head>
+  
+  
+
+  <body>
+
+    <!--START PAGE-->
+    <header class="work">
+      <div class="menu-toggle" id="hamburger">
+        <i class="fas fa-bars"></i>
+      </div>
+      <div class="overlay"></div>
+      <div class="container">
+      </div>
+
+      <div class="heading">
+          <h1>Awards and Honours</h1>
+      </div>
+
+
+      <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide" style="background-image: url(img/a1.jpg);">
+            <div class="description">Awarded by Honourable PM<br>7th Sept 2020</div>
+            </div>
+              <div class="swiper-slide" style="background-image: url(img/a2.jpg);">
+                <div class="description">Awarded by Honourable PM<br>7th Sept 2020</div>
+            </div>
+            <div class="swiper-slide" style="background-image: url(img/a3.jpg);">
+                <div class="description">Awarded by Honourable PM<br>7th Sept 2020</div>
+            </div>
+            <div class="swiper-slide" style="background-image: url(img/a4.jpg);">
+                <div class="description">Awarded by Honourable PM<br>7th Sept 2020</div>
+            </div>
+            <div class="swiper-slide" style="background-image: url(img/a5.jpg);">
+                <div class="description">Awarded by Honourable PM<br>7th Sept 2020</div>
+            </div>
+            <div class="swiper-slide" style="background-image: url(img/a6.jpg);">
+                <div class="description">Awarded by Honourable PM<br>7th Sept 2020</div>
+            </div>
+            <div class="swiper-slide" style="background-image: url(img/a7.jpg);">
+                <div class="description">Awarded by Honourable PM<br>7th Sept 2020</div>
+            </div>
+            <div class="swiper-slide" style="background-image: url(img/a8.jpg);">
+                <div class="description">Awarded by Honourable PM<br>7th Sept 2020</div>
+            </div>
+            <div class="swiper-slide" style="background-image: url(img/a9.jpg);">
+                <div class="description">Awarded by Honourable PM<br>7th Sept 2020</div>
+            </div>
+            <div class="swiper-slide" style="background-image: url(img/a10.jpg);">
+                <div class="description">Awarded by Honourable PM<br>7th Sept 2020</div>
+            </div>
+            <div class="swiper-slide" style="background-image: url(img/a11.jpg);">
+                <div class="description">Awarded by Honourable PM<br>7th Sept 2020</div>
+            </div>
+            <div class="swiper-slide" style="background-image: url(img/a12.jpg);">
+                <div class="description">Awarded by Honourable PM<br>7th Sept 2020</div>
+            </div>
+            <div class="swiper-slide" style="background-image: url(img/a13.jpg);">
+                <div class="description">Awarded by Honourable PM<br>7th Sept 2020</div>
+            </div>
+            <div class="swiper-slide" style="background-image: url(img/a14.jpg);">
+                <div class="description">Awarded by Honourable PM<br>7th Sept 2020</div>
+            </div>
+            <div class="swiper-slide" style="background-image: url(img/a15.jpg);">
+                <div class="description">Awarded by Honourable PM<br>7th Sept 2020</div>
+            </div>
+            <div class="swiper-slide" style="background-image: url(img/a16.jpg);">
+                <div class="description">Awarded by Honourable PM<br>7th Sept 2020</div>
+            </div>
+        </div>
+        <div class="swiper-pagination"></div>   
+    </div><br><br><br>
+    <div class="heading">
+        <h1>Statues</h1>
+    </div>
+
+    </header>
+    <div class="container">
+        <div class="color"></div>
+    </div>
+    <!--FOOTER-->
+    
+
+    <script src="main.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+        var swiper = new Swiper('.swiper-container', {
+  effect: 'coverflow',
+  grabCursor: true,
+  centeredSlides: true,
+  slidesPerView: 'auto',
+  coverflowEffect: {
+    rotate: 50,
+    stretch: 0,
+    depth: 100,
+    modifier: 1,
+    slideShadows: true,
+  },
+  pagination: {
+    el: '.swiper-pagination',
+  },
+
+  loop: true,
+  autoplay: {
+      delay: 2500,
+      disableOnInteraction:false,
+  }
+
+});
+    </script>
+    
+  </body>
+</html>
