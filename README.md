@@ -3,7 +3,10 @@
 <br>
 <h2 align="center"> A collection vibrant frontend projects, mini-projects, components, animations, games and much more!</h2>
 
-<br><br>
+<br>
+	<p text-align="center">For More Information log on to
+	<a href="https://pranjay-poddar.github.io/Dev-Geeks/Repository_web_page/index.html">dev-geeks.netlify.app/repository_web_page</p>
+	<br>
 
   ![forthebadge](https://forthebadge.com/images/badges/uses-brains.svg)
   ![forthebadge](https://forthebadge.com/images/badges/check-it-out.svg)
@@ -72,7 +75,7 @@ Happy Coding!
  <b>Contributors
 <h1>
 <a href="https://github.com/pranjay-poddar/Dev-Geeks/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=pranjay-poddar/Dev-Geeks&&max=616" />
+  <img src="https://contrib.rocks/image?repo=pranjay-poddar/Dev-Geeks&&max=617" />
 </a>
 
 <!-- &max={number} -->
