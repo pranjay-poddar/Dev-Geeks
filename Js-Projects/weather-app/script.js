@@ -1,4 +1,6 @@
-let appId = "c0e4b3d9be14a150a117efe798421dfe";
+// create your account on https://openweathermap.org/ and
+// enter you api id
+// let appId =
 let units = "metric"; //metric,imperial
 let searchMethod;
 
