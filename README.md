@@ -82,8 +82,10 @@ Happy Coding!
   <h3 align="center">
    <a target="_blank"href="https://www.linkedin.com/in/pranjay-poddar/"><img src="https://forthebadge.com/images/badges/built-with-love.svg" alt="Built with love" /></a><br>
   By<a href="https://github.com/pranjay-poddar"> Pranjay Poddar </a></h3>
-<p align="center> &copy; MIT License </p>
-<h3 align="center">Connect Project Admin </h3>
+<br>
+<p align="center"> &copy; MIT License </p>
+	  
+<h2 align="center"> Connect Project Admin </h2>
 <p align="center">
   <a target="_blank"href="https://www.linkedin.com/in/pranjay-poddar/"><img src="https://img.shields.io/badge/linkedin-%230077B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white" /></a>&nbsp;&nbsp;&nbsp;&nbsp;
   <a target="_blank"href="https://twitter.com/PranjayPoddar"><img src="https://img.shields.io/badge/twitter-%231DA1F2.svg?&style=for-the-badge&logo=twitter&logoColor=white" /></a>&nbsp;&nbsp;&nbsp;&nbsp;
