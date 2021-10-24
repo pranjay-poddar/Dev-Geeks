@@ -1,0 +1,258 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Baloo Bhai 2', cursive;
+    transition: 0.3s;
+}
+html{
+    scroll-behavior: smooth;
+}
+/* NAVBAR */
+#navbar{
+    display: flex;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    width: 100%;
+}
+
+#navbar::before{
+    content: "";
+    position: absolute;
+    background-color: black;
+    top: 0;
+    left: 0;
+    z-index: -2;
+    opacity: 0.5;
+    width: 100%;
+    height: 100%;
+}
+
+#logo{
+    margin: 6px 33px;
+}
+
+#logo img{
+    margin: 3px 8px;
+    height: 90px;
+    width: 117px;
+    /* border-radius: 86% 43% 10% 85% / 37% 93% 0% 87%  ; */
+}
+
+#navbar ul{
+    display: flex;
+}
+
+#navbar ul li{
+    list-style-type: none;
+
+}
+
+#navbar ul li a{
+    display: block;
+    text-decoration: none;
+    padding: 10px 20px;
+    color: wheat;
+}
+#navbar ul li a:hover{
+    color: black;
+    background-color: white;
+    border-radius: 20px;
+}
+
+
+
+/* HOME */
+
+#home{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 510px;
+    justify-content: center;
+    padding: 15px 250px;
+    /* position: relative; */
+}
+
+#home::before{
+    content: "";
+    position: absolute;
+    background-image: url("image/bg-food.jpg");
+    background-repeat: no-repeat;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    opacity: 0.8;
+}
+
+#home h1{
+    color: white;
+    font-size: 3.5rem;
+    text-align: center;
+}
+#home p{
+    font-family: 'PT Serif', serif;
+    color: white;
+    text-align: center;
+    font-size: 1.3rem;
+}
+
+.h_primary{
+    font-size: 2.8rem;
+    padding: 14px;
+}
+.h_secondary{
+    font-size: 1.9rem;
+    padding: 14px;
+}
+.btn{
+    padding: 8px 25px;
+    border: 3px solid black;
+    background-color: turquoise;
+    color: white;
+    margin: 20px;
+    font-size: 1.1rem;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.center{
+    text-align: center;
+}
+
+#services{
+    display: flex;
+    margin: 35px;
+}
+#services .box{
+    border: 2px solid red;
+    padding: 40px;
+    margin: 4px 8px;
+    border-radius: 30px;
+    background-color: #f2f2f2;
+}
+#services .box:hover{
+    border: 2px solid red;
+    padding: 40px;
+    margin: 4px 8px;
+    border-radius: 30px;
+    background-color: #ebe4e4;
+}
+#services .box img{
+    display: block;
+    margin: auto;
+    height: 160px;
+}
+section h1{
+    margin-top: 140px;
+}
+
+
+
+/* client section */
+
+#client_section{
+    position: relative;
+}
+#client_section::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: url("image/plate.jpg");
+    z-index: -1;
+    opacity: 0.5;
+}
+.clients{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.clients img{
+    width: 130px;
+    height: 130px;
+}
+
+.client_item{
+    padding: 40px;
+}
+
+/* contact us */
+
+#contact{
+    position: relative;
+}
+
+#contact::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: url("image/contact-us-4193523_1920.jpg");
+    opacity: 0.9;
+    z-index: -1;
+}
+
+#contact_box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 40px;
+}
+
+#contact_box form{
+    width: 40%;
+}
+
+#contact_box label{
+    font-size: 1.4rem;
+}
+
+.form_group input{
+    text-align: center;
+}
+
+.submit button{
+    padding: 8px 25px;
+    border: 3px solid black;
+    background-color: rgb(67, 65, 75);
+    color: white;
+    margin: 20px;
+    font-size: 1.1rem;
+    border-radius: 15px;
+    cursor: pointer;
+}
+.submit button:hover{
+    padding: 8px 25px;
+    border: 3px solid black;
+    background-color: rgb(14, 14, 15);
+    color: white;
+    margin: 20px;
+    font-size: 1.1rem;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+#contact_box input, #contact_box textarea{
+    width: 100%;
+    padding: 0.5rem;
+    border-radius: 20px;
+    font-size: 1rem;
+}
+
+.form_group input:hover, .form_group textarea:hover{
+    width: 100%;
+    padding: 0.5rem;
+    border-radius: 20px;
+    font-size: 1rem;
+    background-color: rgb(rgb(189, 189, 189);
+    /* box-shadow: rgb(rgb(68, 68, 68); */
+}
+
+
+
+footer{
+    color: white;
+    background-color: black;
+    padding: 10px 20px;
+}
