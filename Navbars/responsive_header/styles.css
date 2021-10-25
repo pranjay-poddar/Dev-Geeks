@@ -1,0 +1,142 @@
+*{
+    margin:0;
+    padding:0;
+
+}
+body{
+    display:flex;
+    flex-direction: row;
+    background-color: #1f543a;
+    position: relative;
+}
+nav{
+    background-color: #1F1A1E;
+    width:100vw;
+    height:4em;
+}
+.logo img{
+  justify-content: left;
+   position: absolute;
+   height:100%;
+   
+}
+.menu{
+    float:right;
+    align-self: flex-end;
+    
+}
+.menu li{
+    display: inline-block;
+  
+    margin-left: 8em;
+    margin-right:2em;
+    margin-top: 2%;
+  
+}
+.menu li a{
+    position: relative;
+    text-decoration: none;
+    font-size: 1.5rem;
+    color:white;
+    /* margin-left: auto; */
+   /* padding:0.8em; */
+   padding-bottom:0.8em;
+   padding-top:0.8em;
+}
+li{
+    position: relative;
+}
+.menu li a::after{
+    width:0%;
+    position: absolute;
+    display:block;
+    height:0.1em;
+    top:100%;
+    
+    transition: all ease-in-out 1000ms;
+}
+.menu li a:hover::after{
+    content: '';
+    background-color: white;
+    display:block;
+    height:0.1em;
+    width:100%;
+   
+}
+.menu li a::before{
+    width:0%;
+    position: absolute;
+    display:block;
+    height:0.1em;
+    top:0%;
+    
+    transition: all ease-in-out 1000ms;
+}
+.menu li a:hover::before{
+    content: '';
+    background-color: white;
+    display:block;
+    height:0.15em;
+    width:100%;
+   
+}
+@media (max-width:1090px){
+    .menu li a{
+        font-size: 0.9rem;
+        
+    }
+    .menu li{
+        margin-top: 2%;
+    }
+    nav {
+        height:3em;
+    }
+}
+@media (max-width:1000px){
+    .menu li{
+        margin-left:2em;
+    }
+    .menu li{
+        margin-top:3%;
+    }
+}
+@media (max-width:768px){
+    .menu li{
+        margin-left:2em;
+    }
+    .menu li{
+        margin-top:3%;
+    }
+    .menu li a {
+        font-size:0.9rem;
+    }
+}
+@media (max-width:600px){
+
+    .menu li a {
+      font-size:0.8rem;
+    }
+    .menu li{
+        margin-left:1em;
+    }
+}
+@media(max-width:480px){
+    .menu li a{
+        font-size:0.4rem;
+    }
+    .menu li{
+        margin-left:0.4em ;
+        margin-bottom:0.2em;
+    }
+    nav{
+        height:2em;
+    }
+}
+@media (max-width:320px){
+    .menu li{
+        display:block;
+    }
+    nav{
+        height:5.4em;
+    }
+}
