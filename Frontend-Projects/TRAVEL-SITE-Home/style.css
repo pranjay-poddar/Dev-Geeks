@@ -1,0 +1,65 @@
+.jumbotron{
+    text-align: center;
+    background: none;
+}
+.about{
+    display: block;
+}
+.explorebutton{
+    text-align: center;
+}
+.festivetext{
+    text-align: center;
+}
+.box{
+    padding: 10px;
+}
+
+.imgatribute{
+    width: 100%;
+    height: 200px; 
+}
+.modaltitlem{
+    display: block;
+    margin: auto;
+}
+
+.formemail{
+    margin-bottom: 0.2rem;
+}
+.navcol{
+    color: white;
+}
+.snaphead{
+    padding: 8px;
+    margin: auto;
+}
+.snapshots i{
+    display: inline-block;
+    position: relative;
+    color: #fff;
+    border: 1px solid #fff;
+    border-radius: 50px;
+    padding: 10px;
+    width: 40px;
+    margin-right: 10px;
+    font-size: 15px;
+    line-height: 20px;
+    text-align: center;
+    
+}
+.footsy
+{
+    padding-right: 0;
+    padding-left: 10px;
+    text-decoration: none;
+}
+.footsy ul li a{
+    text-decoration: none;
+    color: #fff;
+}
+
+.snapshots i:hover{
+    background-color: white;
+    color: skyblue;
+}
