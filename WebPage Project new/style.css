@@ -1,0 +1,272 @@
+/* Navbar */ 
+.navbar {
+    overflow: hidden;
+    /* position: fixed; */
+    z-index: 23;
+    width: 100vw;
+    
+
+}
+.navbar-dark .navbar-nav .nav-link {
+     color: black;
+     padding: 7px 16px 7px 37px;
+     font-weight: bold;
+}
+.navbar-brand { 
+    
+    padding-top: 0.3125rem; 
+    padding-bottom: 0.3125rem; 
+    margin-right: 6rem; 
+    margin-left: 13rem; 
+    font-size: 1.35rem; 
+    font-weight: bolder; 
+    text-decoration: none; 
+    white-space: nowrap;
+    }
+.nav-link:hover{ 
+    color: #ebd329e8;
+} 
+.contactimg{ 
+    height: 300px;
+}
+.formhead{ 
+    padding-left: 30px;
+} 
+.form{ 
+    padding-left: 30px;
+}
+#banner{ 
+    margin-left: 13rem; 
+    padding-top: 150px;
+}
+.form-btn{ 
+    border-radius: 0; 
+    width: 350px; 
+    color: white; 
+    padding: 3px;
+} 
+/* Blog */ 
+.blog-btn{ 
+    background-color: gainsboro; 
+    border: 2px solid gainsboro; 
+    border-radius: 2px; 
+    padding: 8px 8px 8px 8px;
+}
+.date{ 
+    color: rgb(172, 170, 170);
+}
+.blog-btn:hover{
+    background-color: #ebd329e8 ; 
+    border: 2px solid #ebd329e8;
+}
+/* SIGNUP */
+.signup-submit{ 
+    background-color: #ebd329e8; 
+    border: 2px solid #ebd329e8; 
+    position: relative; 
+    padding: 8px 8px 8px 8px; 
+    left: -5px; 
+    border-radius: 2px;
+}
+.signup-search{ 
+    padding: 8px 8px 8px 8px; 
+    width: 400px;
+}
+.signup-search2{ 
+    padding: 8px 8px 8px 8px; 
+    width: 400px; 
+    display: none;
+} 
+.signup-submit2{ 
+    margin-top: 30px; 
+    background-color: rgb(128 17 127); 
+    border: 2px solid rgb(128 17 127); 
+    position: relative; 
+    color: white; 
+    padding: 8px 8px 8px 8px; 
+    left: 197px; 
+    border-radius: 2px;
+}
+/* TEAM */ 
+#teammain{ 
+    height: 700px; 
+} 
+@media only screen and (max-width: 770px){ 
+    #teammain{ height: 2000px;
+    }
+}
+/* WELCOME */
+.welcome-para{ 
+    text-align: left;
+} 
+#welcol1{ 
+    padding-left: 100px; 
+} 
+#umbrella{ 
+    height: 150px; 
+    margin-right: 150px;
+} 
+.wel-btn{ 
+    background-color: #ebd329e8; 
+    border: 2px solid #ebd329e8; 
+    border-radius: 3px;
+}
+.wel-btn:hover{ 
+    background-color: indigo; 
+    border: 2px solid indigo; 
+    color: white;
+} 
+/* PROJECTS */ 
+#projectrow{ 
+    background-color: #D8D8D8 ; 
+    height: 700px;
+}
+@media only screen and (max-width: 880px){ 
+    #projectrow{ height: 900px;}
+}
+@media only screen and (max-width: 770px){
+    #projectrow{ height: 2300px;}
+}
+@media only screen and (max-width: 420px){ 
+    #projectrow{ height: 2500px;}
+} 
+.projecthead{ 
+    text-align: left; 
+    padding-left: 10px; 
+    padding-top: 30px; 
+    margin-top: 400px;
+} 
+.projectpara{ 
+    text-align: left; 
+    padding-left: 10px;
+}
+.projectpara:hover{ 
+    background-color:black;
+    color: white;
+}
+.pr-btn{ 
+    background-color: white; 
+    border: 2px solid white; 
+    padding: 5px; 
+    border-radius: 3px;
+}
+.pr-btn:hover{ 
+    background-color: indigo; 
+    border: 2px solid indigo; 
+    color: white;}
+/* PRICING TABLE */ 
+.price-btn{ 
+    background-color: #ebd329e8; 
+    border: 2px solid #ebd329e8; 
+    border-radius: 2px; 
+    padding: 0px 18px 0px 18px;
+} 
+.price-btn:hover{ 
+    background-color: indigo; 
+    border: 2px solid indigo; 
+    border-radius: 2px; 
+    padding: 0px 18px 0px 18px; 
+    color: white;
+}
+#prcol{ 
+    text-align: center;
+} 
+#prcol:hover{ 
+    border: 1px solid rgb(184, 181, 181); 
+}
+/* LIZ */
+ * { 
+     box-sizing: border-box;
+    }
+ /* Position the image container (needed to position the left and right arrows) */
+ .container { 
+     position: relative;
+} 
+/* Hide the images by default */
+.mySlides { 
+    display: none;
+} 
+/* Add a pointer when hovering over the thumbnail images */
+.cursor { 
+    cursor: pointer;
+}
+/* Next & previous buttons */
+.prev,.next { 
+    cursor: pointer; 
+    position: absolute; 
+    top: 40%; 
+    width: auto; 
+    padding: 16px; 
+    margin-top: -50px; 
+    color: white; 
+    font-weight: bold; 
+    font-size: 20px; 
+    border-radius: 0 3px 3px 0; 
+    user-select: none; 
+    -webkit-user-select: none;
+} 
+/* Position the "next button" to the right */
+.next { 
+    right: 0; border-radius: 3px 0 0 3px;
+} 
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,.next:hover { 
+    background-color: rgba(0, 0, 0, 0.8);
+}
+ /* Number text (1/3 etc) */
+.numbertext { 
+    color: #f2f2f2; 
+    font-size: 12px; 
+    padding: 8px 12px; 
+    position: absolute; 
+    top: 0;
+} 
+/* Container for image text */
+.caption-container { 
+    text-align: center; 
+    background-color: #222; 
+    padding: 2px 16px; 
+    color: white;
+} 
+.row:after { 
+    content: ""; 
+    display: table; 
+    clear: both;
+}
+ /* Six columns side by side */
+ .column { 
+     float: left; 
+     width: 16.66%;}
+/* Add a transparency effect for thumnbail images */
+.demo { 
+    opacity: 0.6;
+} 
+.active,.demo:hover { 
+    opacity: 1;
+} 
+/* TEAM2 */
+.team { 
+    padding: 70px 0 0px;
+}.team-list { 
+    display: flex; 
+    flex-wrap: wrap; 
+    justify-content: center;
+}
+.team-item { 
+    width: 26%; 
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+}
+.team-item-img { position:relative; margin-bottom: 30px;
+    display: inline-block;
+    width: 126px;
+    height: 126px;
+    border-radius: 50%;
+  
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;} .team-item-img-links { display:none; justify-content: center; align-items: center; width: 126px; height: 126px; border-radius: 50%; background-color: #660066; opacity: 0.8; position: absolute; top: 0;}.team-item-img-links a { margin: 0 6px;}.team-item-img:hover .team-item-img-links { display: flex;}h5.team-item-name { font-style: 14px; line-height: 7px; margin-bottom: 20px;}h5.team-item-job { font-style: 14px; font-weight: 600; color: #a1a1a1; margin-bottom: 70px;} /* videoProjects_section */  #videoProjects_section{ background-color: #5e0e99; margin: auto; padding: 14px; height: 500px;} .videoProjects_section_heading{ color: white; padding-top: 10px; text-align: center;} #video_section_slide_wrapper{ max-width: 100%; width: 2000px; margin: 0 15px; display: flex; min-height: 100px; align-items: center;}#video_section_slider{ width: 1600px;	display: flex;	flex-wrap: nowrap;	overflow-x: auto; } #video_section_slider::-webkit-scrollbar {		display: none; } .video_section_thumbnail{ object-fit: cover; max-width: 600px;max-height: 400px; cursor: pointer; opacity: 1;margin-top: 1px;margin-left: 2%;margin-bottom: 1%; } .video_section_thumbnail:hover{opacity:0.9;}.play_Button{ height: 60px; width: auto; position: relative; right: 20%; margin-top: 180px; }.play_Button:hover{ opacity: 0; cursor: pointer;}
+
+
+    
