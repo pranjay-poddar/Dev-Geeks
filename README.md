@@ -75,7 +75,7 @@ Happy Coding!
  <b>Contributors
 <h1>
 <a href="https://github.com/pranjay-poddar/Dev-Geeks/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=pranjay-poddar/Dev-Geeks&&max=910" />
+  <img src="https://contrib.rocks/image?repo=pranjay-poddar/Dev-Geeks&&max=911" />
 </a>
 
 <!-- &max={number} -->
