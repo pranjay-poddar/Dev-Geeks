@@ -1,0 +1,46 @@
+<div *ngIf="!access">Access Denied</div>
+<html *ngIf="access">
+  <app-navbar></app-navbar>
+  <body>
+    <div class="manage-container">
+      <div class="heading-container">
+        <span><button routerLink="../all" routerLinkActive="active" class="back"><i class="fa fa-chevron-left" aria-hidden="true"></i></button></span>
+        <span class="heading">Manage Tasks</span>
+      </div>
+      <div class="container">
+        <ul class="responsive-table">
+          <li class="table-header">
+            <div class="col col-1">ID</div>
+            <div class="col col-2">Task</div>
+            <div class="col col-3">Due Date</div>
+            <div class="col col-4">Status</div>
+            <div class="col col-5">Edit</div>
+            <div class="col col-6">Delete</div>
+          </li>
+          <li *ngFor="let hero of todos" class="table-row">
+            <div class="col col-1" data-label="Job Id">{{hero.id}}</div>
+            <div class="col col-2" data-label="Customer Name">{{hero.task}}</div>
+            <div class="col col-3" data-label="Amount">{{hero.dueby}}</div>
+            <div class="col col-4" data-label="Payment Status">{{hero.status}}</div>
+            <div class="col col-5">
+              <button (click)="showUpdatePrompt($event)" [id]="hero.id" class="edit">
+              <i class="fa fa-pencil" aria-hidden="true"></i>
+              </button>
+            </div>
+              <div class="col col-6">
+                <button (click)="dlt($event)" [id]="hero.id" class="delete">
+                  <i class="fa fa-trash-o" aria-hidden="true"></i>
+                  </button>
+              </div>
+          </li>
+        </ul>
+      </div>
+      <div class="footer">
+      <button (click)="showNewPrompt($event)" class="gradient-button">Add Task</button>
+      </div>
+    </div>
+  </body>
+</html>
+
+
+              

@@ -1,0 +1,30 @@
+.navbar-container{
+    position:absolute;
+    width:100%;
+    background-color: rgb(29, 29, 39);
+    height: 50px;
+}
+
+.navbar{
+    list-style-type: none;
+    margin-top: 5px;
+    padding-right:20px;
+    padding-left:20px;
+}
+
+.nav{
+    display:inline;
+}
+
+.logo {
+    margin: auto;
+    font-family: 'Allerta Stencil';
+    font-size: 30px;
+    color: white;
+}
+
+.usr{
+    font-family: Inter, sans-serif;
+    font-size: 20px;
+    color: white;
+}
