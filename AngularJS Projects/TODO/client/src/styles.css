@@ -1,0 +1,101 @@
+html,body
+{
+    margin: 0px;
+    padding: 0px;
+    background-color: rgb(24, 24, 32);
+}
+
+.modal{
+    background-color:rgba(0,0,0,.4);
+    bottom:0;
+    height:100%;
+    left:0;
+    overflow: hidden;
+    padding: 0 16px;
+    position: fixed;
+    right: 0;
+    top: 0;
+    text-align: center;
+    z-index: 10; /* Adjust according to your needs */
+  }
+  
+  .modal.fade-anim {
+    transition: opacity 400ms ease-in-out;
+    will-change: opacity;
+    opacity: 0;
+  }
+  
+  .modal.fade-anim.in {
+    opacity: 1;
+  }
+  
+  .modal-open {
+    overflow: hidden;
+  }
+  
+  .modal-content {
+    background-color:#ffffff;
+    border-radius: 4px;
+    margin: 16px auto;
+    max-width: 580px;
+    position: relative;
+    transition: opacity 400ms ease-in-out;
+    width: 100%;
+    will-change: opacity;
+    display: inline-block;
+    text-align: left;
+  }
+  
+  .modal-content-size-m {
+    max-width: 992px;
+  }
+  
+  .modal-content-size-l {
+    max-width: 1200px;
+  }
+  
+  .modal-footer,
+  .modal-header {
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    height: 56px;
+    padding: 0 16px;
+  }
+  
+  .modal-header {
+    border-bottom:1px solid #cecece;
+  }
+  
+  .modal-body {
+    padding: 16px;
+  }
+  
+  .modal-footer {
+    border-top:1px solid #cecece;
+  }
+  
+  
+  
+  /* Some button basic styles because i don't want BS in this demo */
+  .btn {
+    -webkit-border-radius: 7;
+    -moz-border-radius: 7;
+    border-radius: 7px;
+    font-family: Arial;
+    color: #ffffff;
+    font-size: 14px;
+    background: #3498db;
+    padding: 10px 20px 10px 20px;
+    text-decoration: none;
+    margin: 5px 5px;
+    border: none;
+  }
+  
+  .btn:hover {
+    background: #3cb0fd;
+    text-decoration: none;
+  }
