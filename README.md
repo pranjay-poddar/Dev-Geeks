@@ -55,7 +55,7 @@ Happy Coding!
 * Fork the repo to your Github.<br/>
 
 * Clone the Repo by going to your local Git Client in a particular local folder in your local machine by using this command with your forked repository link in place of below given link: <br/>
-	```git clone https://github.com/pranjay-poddar/Data-Structures-And-Algorithms.git```
+	```git clone https://github.com/pranjay-poddar/Dev-Geeks```
 * Create a branch using below command.
   ```git branch <your branch name>```
 * Checkout to your branch.
@@ -75,7 +75,7 @@ Happy Coding!
  <b>Contributors
 <h1>
 <a href="https://github.com/pranjay-poddar/Dev-Geeks/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=pranjay-poddar/Dev-Geeks&&max=911" />
+  <img src="https://contrib.rocks/image?repo=pranjay-poddar/Dev-Geeks&&max=913" />
 </a>
 
 <!-- &max={number} -->

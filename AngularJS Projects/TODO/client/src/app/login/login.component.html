@@ -1,0 +1,25 @@
+<div class="flex-container">
+    <div class="content-container">
+      <div class="form-container">
+        <form action="/action_page.php">
+          <h1>
+            Login
+          </h1>
+          <br>
+          <br>
+          <span class="subtitle">USERNAME:</span>
+          <br>
+          <input type="text" class="subtitle" name="username" [(ngModel)]="username">
+          <br>
+          <span class="subtitle">PASSWORD:</span>
+          <br>
+          <input type="password" class="subtitle" name="password" [(ngModel)]="password">
+          <br>
+          <div class="center">
+              <button type="submit" class="submit-btn" (click)="apply()">SUBMIT</button>
+          </div>
+          </form>
+        <div class="result" [innerHtml]="result"></div>
+      </div>
+    </div>
+  </div>
