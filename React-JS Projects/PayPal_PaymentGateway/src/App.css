@@ -1,0 +1,37 @@
+.App {
+  text-align: center;
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.checkout-button {
+  padding: 8px;
+  font-size: 20px;
+  border-radius: 5px;
+  border: 2px solid #61dafb;
+  color: #61dafb;
+  background: none;
+}
+
+.checkout-button:hover {
+  border: 2px solid #61dafb;
+  color: #282c34;
+  background: #61dafb;
+}
+
+.payment-div {
+  padding-top: 20px;
+  height: 300px;
+  width: 300px;
+  background: rgba(0, 0, 0, 0.6);
+  border-radius: 20px;
+}
