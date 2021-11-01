@@ -1,0 +1,201 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+a{
+    text-decoration: none;
+}
+a:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+header{
+    width: 100%;
+    height: 13vh;
+    background-color:rgb(57,83,157);
+    display: flex;
+}
+#logo h1{
+    /* margin: 3rem 15rem; */
+    padding: 3rem 13rem;
+    font-size: 3rem;
+    color: #fff;
+}
+#logo{
+    flex: 1;
+
+}
+#login{
+    flex: 1;
+    display: flex;
+    padding-top: 2.1rem;
+
+}
+.white{
+    color: #fff;
+    padding: 0.1rem 0;
+    font-size: 0.9rem;
+}
+.grey{
+    color: rgb(155, 170, 206);
+}
+#login button{
+    margin-top: 1.2rem;
+    background-color: rgb(90, 110, 174);
+    /* border: 1px solid rgb(26, 47, 114); */
+    padding:2px;
+    color: #fff;
+
+}
+#login input{
+    background-color: rgb(247,255,181);
+    border: none;
+    height: 1.2rem;
+    padding: 0.2rem 0.2rem;
+}
+.headclass{
+    margin: 0rem 1.1rem;
+}
+/* #login span{
+    margin-top: 1rem;
+} */
+#login input[type='checkbox']{
+    margin-top: 0.2rem;
+}
+/* #login p{
+    margin-top: 0.2rem;
+} */
+
+/* 155 170 206 
+247 255 181
+*/
+
+
+
+main{
+    display: flex;
+    /* align-items: center; */
+    justify-content: center;
+    height: 84vh;
+    background-color: rgb(237, 240, 246);
+}
+
+
+
+
+
+#left{
+    flex: 1;
+    text-align: center;
+    /* justify-content: center;
+    height: 84vh; */
+    margin: auto ;
+}
+#left h2{
+    margin: 1rem 6rem;
+    font-size: 2rem;
+    font-weight: 600;
+    line-height: 2.7rem;
+    letter-spacing: 0.1rem;
+}
+#left img{
+    max-width: 80%;
+    opacity: 0.9;
+}
+
+
+
+
+
+#right{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+#right h1{
+    margin-top: 1.6rem;
+    margin-bottom: 0.4rem;
+}
+#right>p{
+    margin-bottom: 0.8rem;
+}
+#right input{
+    font-size: 1.2rem;
+}
+.samecolor{
+    color: rgb(51, 51, 51);
+}
+.inpfield{
+    color: rgb(153, 153, 153);
+    
+}
+.sameheight{
+    border-radius: 4px;
+    border: 1px solid rgb(188, 198, 218);
+    height: 2.3rem;
+    padding: 0.1rem 0.6rem;
+    width: 65%;
+    margin: 0.6rem auto;
+}
+.samewidth{
+    width: 32.2%;
+}
+#birthday{
+    /* display: flex; */
+    /* width: 50%; */
+    margin-top: 0.5rem;
+}
+#smallbirthday{
+    margin-left: 0.9rem;
+    width: 20%;
+    display: inline-block;
+    /* padding: 1rem; */
+}
+select{
+    padding: 0.3rem 0.1rem;
+    border-radius: 5px;
+    border: 1px solid rgb(188, 198, 218);
+}
+#pbday{
+    font-size: 1.5rem;
+}
+.small{
+    font-size: 0.8rem;
+}
+#small{
+    width: 50%;
+    margin: 0rem 1rem 2rem 1rem;
+    color:rgb(119,119,119);
+}
+#female{
+    display: inline-block;
+    margin: 1rem 2rem 0rem 1rem;
+    /* font-weight: bold; */
+}
+#male{
+    margin: 1rem 2rem 0rem 1rem;
+    /* font-weight: bold; */
+}
+#check{
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+}
+#SignUp{
+    color: #fff;
+    background-color: rgb(72,161,67);
+    padding: 0.4rem 1.5rem;
+    font-size: 1.4rem;
+    border-radius: 5px;
+    border: 1px solid rgb(35, 115, 21);
+    margin-bottom: 2rem;
+}
+hr{
+    width: 65%;
+}
+#bottom{
+    margin-top: 1rem;
+    color:rgb(102,102,102);
+}
