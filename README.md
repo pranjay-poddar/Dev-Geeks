@@ -15,7 +15,7 @@
   [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
   [![Open Source Love svg2](https://badges.frapsoft.com/os/v2/open-source.svg?v=103)](https://github.com/ellerbrock/open-source-badges/)
   <p align="center">
-    <a href="https://github.com/pranjay-poddar"><img src="https://github.com/pranjay-poddar/Dev-Geeks/blob/main/Repository_images/hacktoberfest'21.png" />
+    <a href="https://github.com/pranjay-poddar"><img src="https://github.com/pranjay-poddar/Dev-Geeks/blob/main/Repository_images/hacktoberfest_logo.svg" width="200px" />
     </a>
 	</p>
 	<table align="center">
@@ -42,10 +42,14 @@
 </table>
 </div>
 <br>
-
-## Hacktoberfest-Guideline
+ <p align="center">
+    <a href="https://github.com/pranjay-poddar"><img src="https://github.com/pranjay-poddar/Dev-Geeks/blob/main/Repository_images/dev geeks.gif"  />
+    </a>
+	</p>
+  <br>
+<!-- ## Hacktoberfest-Guideline
 Beginners to expert Friendly Hacktoberfest2021 repository. You can contribute any of the given tracks and make a valid PR for the project/mini-project you've added.</br>
-Happy Coding!
+Happy Coding! -->
 
 ## How to contribute:
 * Drop a :star: on the Github repository (optional)<br/>
