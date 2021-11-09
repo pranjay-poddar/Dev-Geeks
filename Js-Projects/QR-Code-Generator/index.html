@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" />
+
+    <style>
+        .qr-code {
+            max-width: 200px;
+            margin: 10px;
+        }
+    </style>
+
+    <title>QR Code Generator</title>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="text-center">
+
+            <img src="https://chart.googleapis.com/chart?cht=qr&chl=Hello+World&chs=160x160&chld=L|0"
+                class="qr-code img-thumbnail img-responsive" alt="QR Code" />
+        </div>
+
+        <div class="form-horizontal">
+            <div class="form-group">
+                <label class="control-label col-sm-2" for="content">
+                    Content:
+                </label>
+                <div class="col-sm-10">
+
+                    <input type="text" size="60" maxlength="60" class="form-control" id="content"
+                        placeholder="Enter content" />
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-sm-offset-2 col-sm-10">
+
+                    <button type="button" class="btn btn-default" id="generate">
+                        Generate
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.js">
+    </script>
+
+    <script>
+        function htmlEncode(value) {
+            return $('<div/>').text(value)
+                .html();
+        }
+
+        $(function () {
+            $('#generate').click(function () {
+                let finalURL =
+                    'https://chart.googleapis.com/chart?cht=qr&chl=' +
+                    htmlEncode($('#content').val()) +
+                    '&chs=160x160&chld=L|0'
+                $('.qr-code').attr('src', finalURL);
+            });
+        });
+    </script>
+</body>
+
+</html>
