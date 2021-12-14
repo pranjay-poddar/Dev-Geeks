@@ -1,6 +1,7 @@
 <h1 align="center"> Dev-Geeks </h1>
 <div align="center">
 <br>
+	
 <h2 align="center"> A collection vibrant frontend projects, mini-projects, components, animations, games and much more!</h2>
 
 <br>
