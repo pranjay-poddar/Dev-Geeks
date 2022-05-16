@@ -22,5 +22,5 @@ pytz==2021.1
 requests==2.25.1
 six==1.16.0
 toml==0.10.2
-urllib3==1.26.4
+urllib3==1.26.5
 Werkzeug==0.16.0
