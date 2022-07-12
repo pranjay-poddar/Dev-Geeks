@@ -18,7 +18,7 @@
   <p align="center">
     <a href="https://github.com/pranjay-poddar"><img src="https://github.com/pranjay-poddar/Dev-Geeks/blob/main/Repository_images/hackclubrait-logo.png" width="200px" />
     </a>
-	    <a href="https://github.com/pranjay-poddar"><img src="https://github.com/pranjay-poddar/Dev-Geeks/blob/main/Repository_images/hacktoberfest_logo.svg" width="00px" />
+	    <a href="https://github.com/pranjay-poddar"><img src="https://github.com/pranjay-poddar/Dev-Geeks/blob/main/Repository_images/hacktoberfest_logo.svg" width="400px" />
     </a>
 	</p>
 	<table align="center">
