@@ -7,6 +7,8 @@
 <br>
 	<p text-align="center">For More Information log on to
 	<a href="https://pranjay-poddar.github.io/Dev-Geeks/Repository_web_page/index.html">dev-geeks.netlify.app/repository_web_page</p>
+	<a href="https://github.com/pranjay-poddar/Dev-Geeks/blob/main/Repository_images/hackclubrait-logo.png">dev-geeks.netlify.app/repository_web_page</p>
+	
 	<br>
 
   ![forthebadge](https://forthebadge.com/images/badges/uses-brains.svg)
