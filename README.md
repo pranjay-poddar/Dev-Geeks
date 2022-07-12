@@ -7,8 +7,6 @@
 <br>
 	<p text-align="center">For More Information log on to
 	<a href="https://pranjay-poddar.github.io/Dev-Geeks/Repository_web_page/index.html">dev-geeks.netlify.app/repository_web_page</p>
-	<a href="https://github.com/pranjay-poddar/Dev-Geeks/blob/main/Repository_images/hackclubrait-logo.png">dev-geeks.netlify.app/repository_web_page</p>
-	
 	<br>
 
   ![forthebadge](https://forthebadge.com/images/badges/uses-brains.svg)
@@ -19,6 +17,8 @@
   [![Open Source Love svg2](https://badges.frapsoft.com/os/v2/open-source.svg?v=103)](https://github.com/ellerbrock/open-source-badges/)
   <p align="center">
     <a href="https://github.com/pranjay-poddar"><img src="https://github.com/pranjay-poddar/Dev-Geeks/blob/main/Repository_images/hacktoberfest_logo.svg" width="200px" />
+    </a>
+	    <a href="https://github.com/pranjay-poddar"><img src="https://github.com/pranjay-poddar/Dev-Geeks/blob/main/Repository_images/hacktoberfest_logo.svg" width="200px" />
     </a>
 	</p>
 	<table align="center">
