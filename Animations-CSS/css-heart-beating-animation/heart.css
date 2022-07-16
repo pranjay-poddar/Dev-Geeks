@@ -1,0 +1,67 @@
+body{
+    width: 100vw;
+    height: 100vh;
+    background-color: aqua;
+    padding: 0; 
+    margin: 0;
+
+    /*  placing the element in the center */
+    display: grid;
+    place-items: center;
+}
+
+.heart {
+    width: 100px;
+    height: 100px;
+    background-color: hsl(0, 96%, 58%);
+    transform: rotate(45deg);
+}
+
+/*  placing the psuedo Elements in the Shape of Heart Around the rotated Square */
+.heart::before, .heart::after{
+    content: "";
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background-color: hsl(0, 96%, 58%);
+    border-radius: 50%;
+}
+.heart::before{
+    left: -50px;
+}
+.heart::after{
+    top: -50px;
+}
+
+/*  Adding Animations when the Heart is Hovered */
+
+.heart:hover{
+    animation: beat 1.5s infinite;
+    /* animation : animation-property-name animation-duration  animation-timing-function */
+}
+
+
+/*  we use rotate at every step to make sure that square shape is rotated in order to retain the shape of heart */
+@keyframes beat {
+    0%{
+        transform: rotate(45deg) scale(1);
+    }
+    25%{
+        transform: rotate(45deg) scale(1.4);
+
+    }
+    50%{
+        transform: rotate(45deg) scale(1);
+
+    }
+    75%{
+        transform: rotate(45deg) scale(1.4);
+
+    }
+    100%{
+        transform: rotate(45deg) scale(1);
+
+    }    
+}
+
+/*  we can change the step fucntions accordingly*/
