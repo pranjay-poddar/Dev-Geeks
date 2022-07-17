@@ -1,0 +1,32 @@
+body {
+  font-family: "Source Serif Pro", serif;
+}
+.header {
+  height: 90vh;
+  width: 100%;
+  background: linear-gradient(to right, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.5)),
+    url(https://images.pexels.com/photos/3861961/pexels-photo-3861961.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260);
+  color: white;
+}
+
+.h-100 {
+  height: 100%;
+  width: 100%;
+}
+.message {
+  background-image: linear-gradient(to top, #fbc2eb 0%, #a6c1ee 100%);
+}
+
+.btn {
+  padding: 1.25rem 2.25rem !important;
+  font-size: 0.85rem !important;
+  font-weight: 700 !important;
+  text-transform: uppercase !important;
+  border: none !important;
+  border-radius: 10rem !important;
+}
+
+.icon {
+  font-size: 60px;
+  margin: 20px;
+}
