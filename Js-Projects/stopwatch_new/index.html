@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Countdown</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+    	<h1 class="title">Stopwatch</h1>
+    </header>
+    <div class="content">
+    	<div class="counter"></div>
+    	<input id="seconds" type="number" placeholder="Seconds...">
+    	<div class="buttons">
+    		<button class="btn start" id="start" value="1" onclick="check(this)">Start</button>
+    		<button class="btn start" id="continue" value="1" onclick="check(this)">Continue</button>
+    		<button class="btn stop" id="stop" value="0" onclick="check(this)">Stop</button>
+    		<button class="btn start" id="submit" onclick="subm()">Submit</button>
+    	</div>
+    <script type="text/javascript" src="main.js"></script>
+</body>
+</html>
