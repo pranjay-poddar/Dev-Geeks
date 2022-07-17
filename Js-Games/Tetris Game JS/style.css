@@ -1,0 +1,901 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Assistant:wght@300;400;500;600;700;800&family=Rammetto+One&display=swap');
+
+
+
+
+
+* {
+
+    box-sizing: border-box;
+
+    margin: 0;
+
+    padding: 0;
+
+    border: none;
+
+    scroll-behavior: smooth;
+
+}
+
+
+
+
+
+
+
+/* navigation bar */
+
+.navbar {
+
+    font-family: 'Assistant', sans-serif;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    background: url("../images/blue-tetrimino.png");
+
+    background-repeat: no-repeat;
+
+    background-position: center;
+
+    background-size: cover;
+
+    color: white;
+
+    padding-right: 10px;
+
+}
+
+
+
+
+
+.brand-logo {
+
+    font-family: 'Rammetto One', sans-serif;
+
+    font-size: 1.25rem;
+
+    margin: 0;
+
+    padding: .55rem;
+
+    text-align: center;
+
+    color: #1f0322;
+
+}
+
+
+
+/* create an anchor on the brand logo that return the user back to home on click*/
+
+.brand-logo a {
+
+    text-decoration: none;
+
+    color: #1f0322;
+
+}
+
+
+
+.navbar-links ul {
+
+    margin: 0;
+
+    padding: 0;
+
+    display: flex;
+
+}
+
+
+
+.navbar-links li {
+
+    list-style: none;
+
+}
+
+
+
+.navbar-links li a {
+
+    text-decoration: none;
+
+    color: #fff;
+
+    padding: 1rem;
+
+    display: block;
+
+}
+
+
+
+.navbar-links li:hover {
+
+    background: url('../images/blue-tetrimino.png') no-repeat;
+
+    border-radius: 10px;
+
+
+
+}
+
+
+
+.navbar-links .active {
+
+    border: 2px solid white;
+
+    border-radius: 10px;
+
+}
+
+
+
+/* create a hamburger menu for mobile displays*/
+
+.toggle-btn {
+
+    position: absolute;
+
+    top: 1.2rem;
+
+    right: 1rem;
+
+    display: none;
+
+    flex-direction: column;
+
+    justify-content: space-between;
+
+    width: 40px;
+
+    height: 30px;
+
+}
+
+
+
+.toggle-btn .line {
+
+    width: 100%;
+
+    height: 5px;
+
+    background-color: white;
+
+    border-radius: 10px;
+
+}
+
+
+
+
+
+/* media query to change the flow of the navbar on mobile devices*/
+
+@media screen and (max-width: 400px) {
+
+
+
+    .toggle-btn {
+
+        display: flex;
+
+    }
+
+
+
+    .navbar-links {
+
+        display: none;
+
+        width: 100%;
+
+    }
+
+
+
+    .navbar {
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        padding: 0;
+
+    }
+
+
+
+    .navbar-links ul {
+
+        flex-direction: column;
+
+        width: 100%;
+
+    }
+
+
+
+    .navbar-links li {
+
+        text-align: center;
+
+    }
+
+
+
+    .navbar-links li a {
+
+        padding: .5rem 1rem;
+
+    }
+
+
+
+    .navbar-links.active {
+
+        display: flex;
+
+    }
+
+}
+
+
+
+/* create background image for the landing page */
+
+.main-bg {
+
+    background: url("../images/orange-tetrimino.png");
+
+    height: 100vh;
+
+    background-repeat: no-repeat;
+
+    background-position: center;
+
+    background-size: cover;
+
+}
+
+
+
+/* create background image for the instructions page */
+
+.about-bg {
+
+    background: url("../images/pink-tetrimino.jpg");
+
+    height: 100%;
+
+    background-repeat: no-repeat;
+
+    background-position: center;
+
+    background-size: cover;
+
+}
+
+
+
+/* create background image for the scores page */
+
+.scores-bg {
+
+    background: url("../images/blueCube.jpg");
+
+    height: 100vh;
+
+    background-repeat: no-repeat;
+
+    background-position: center;
+
+    background-size: cover;
+
+}
+
+
+
+/* universal styling for the headings across all pages */
+
+.title {
+
+    font-family: "Rammetto One", sans-serif;
+
+    margin: 20px auto;
+
+    text-align: center;
+
+}
+
+
+
+.title h1 {
+
+
+
+    font-size: 2.5rem;
+
+    text-transform: uppercase;
+
+    color: #1f0322;
+
+}
+
+
+
+.title h2::after {
+
+    content: "";
+
+    display: block;
+
+    height: 2px;
+
+    width: 10rem;
+
+    margin: .25em auto;
+
+    background-color: blueviolet;
+
+    box-shadow: 0px 2px 8px 0px red;
+
+}
+
+
+
+.title p {
+
+    font-family: "Assistant", sans-serif;
+
+    font-size: 1.25rem;
+
+    margin: 0 auto;
+
+    padding: .5rem;
+
+}
+
+.headings {
+
+    font-weight: bold;
+
+}
+
+.links  a {
+
+    font-family: "Assistant", sans-serif;
+
+    font-size: 1rem;
+
+    text-decoration: none;
+
+    margin-bottom: 1rem;
+
+    padding: .5rem;
+
+    text-align: center;
+
+    justify-content: center;
+
+    display: block;
+
+}
+
+
+
+/*game page panels*/
+
+.panels {
+
+    margin: 0 1rem;
+
+    width: 95%;
+
+    display: grid;
+
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+
+    grid-gap: 12px;
+
+    justify-content: center;
+
+    align-items: center;
+
+    /*background-color: #03011e;*/
+
+
+
+}
+
+
+
+/* main panel for the game grid and start button*/
+
+.box {
+
+    height: 460px;
+
+    border: none;
+
+    box-shadow: 0 0.1rem 1.4rem 0 rgba(86, 185, 235, 0.5);
+
+    position: relative;
+
+    border-radius: 5px;
+
+
+
+}
+
+
+
+/* create smaller side panels for the buttons and game information*/
+
+.sidebox1 {
+
+    height: 320px;
+
+}
+
+
+
+/* create smaller side panels for the buttons and game information*/
+
+.sidebox2 {
+
+    height: 250px;
+
+}
+
+
+
+.box-content {
+
+    margin: 0;
+
+    position: absolute;
+
+    left: 50%;
+
+    top: 50%;
+
+    transform: translate(-50%, -50%);
+
+
+
+}
+
+
+
+.box-content h2 {
+
+    color: #c24cf6;
+
+    visibility: hidden;
+
+}
+
+
+
+
+
+
+
+/*button used on the landing page and game screen*/
+
+.buttons {
+
+    text-align: center;
+
+    margin: 0 auto;
+
+    display: block;
+
+
+
+}
+
+
+
+/*styling for  the buttons that do some form of action on the site */
+
+.btn {
+
+    width: 20ch;
+
+    font-family: 'Assistant', sans-serif;
+
+    font-size: 1.12rem;
+
+    font-weight: bold;
+
+
+
+    background-color: #03011e;
+
+    border: 2px solid #847655;
+
+    color: #fc6e22;
+
+
+
+    padding: 1rem;
+
+    margin: .5rem auto;
+
+    border-radius: 10px;
+
+    justify-content: space-between;
+
+
+
+    transition: all 200ms ease-in-out;
+
+    text-decoration: none;
+
+}
+
+
+
+/* div to arrange the control buttons */
+
+.controls {
+
+    text-align: center;
+
+    margin: 0 auto;
+
+    /* border:  1px dashed blue; */
+
+}
+
+
+
+/* styling for the control keys left, rotate, right and down */
+
+.control-btn {
+
+    max-width: 40ch;
+
+    font-family: 'Assistant', sans-serif;
+
+    font-size: 1.12rem;
+
+    font-weight: bold;
+
+
+
+    display: inline-block;
+
+    background-color: #03011e;
+
+    border: 2px solid #847655;
+
+    color: #fc6e22;
+
+
+
+    padding: .5rem;
+
+    margin: .25rem 1rem;
+
+    border-radius: 10px;
+
+
+
+    transition: all 200ms ease-in-out;
+
+    text-decoration: none;
+
+}
+
+
+
+/* styling for the game information blocks */
+
+.un-btn {
+
+    width: 20ch;
+
+    font-family: 'Assistant', sans-serif;
+
+    font-size: 1.12rem;
+
+    font-weight: bold;
+
+
+
+    background-color: #03011e;
+
+    border: 2px solid #847655;
+
+    color: #fc6e22;
+
+
+
+    padding: 1rem;
+
+    margin: .5rem auto;
+
+    border-radius: 10px;
+
+    justify-content: space-between;
+
+
+
+    transition: all 200ms ease-in-out;
+
+    text-decoration: none;
+
+}
+
+
+
+.btn:hover {
+
+    background: #847655;
+
+    color: #fff;
+
+    cursor: pointer;
+
+}
+
+
+
+/* remove btn functionality during gameOver() and score form submission till requirements are met */
+
+.btn[disabled]:hover {
+
+    cursor: not-allowed;
+
+    transform: none;
+
+}
+
+
+
+.control-btn:hover {
+
+    background: #847655;
+
+    color: #fff;
+
+    cursor: pointer;
+
+}
+
+
+
+.music {
+
+    padding: 1rem;
+
+    margin: .5rem auto;
+
+    justify-content: space-between;
+
+}
+
+
+
+/* the grid created as the play area for housing the tetriminos */
+
+.grid {
+
+    width: 200px;
+
+    height: 400px;
+
+    border-radius: 5px;
+
+    background-color: lightgray;
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+}
+
+
+
+.grid div {
+
+    width: 20px;
+
+    height: 20px;
+
+}
+
+
+
+/* fallback color for tetrimino to display within the grid */
+
+.tetrimino {
+
+    background-color: violet;
+
+}
+
+
+
+/* Scores Page */
+
+
+
+.high-scores-wrapper {
+
+    margin: 0 auto;
+
+    padding: 2rem;
+
+}
+
+
+
+.high-scores {
+
+    display: flex;
+
+    text-align: center;
+
+    justify-content: center;
+
+    flex-direction: column;
+
+}
+
+
+
+.score {
+
+    text-align: center;
+
+    text-transform: uppercase;
+
+
+
+}
+
+
+
+/* styling for the score form */
+
+form {
+
+    width: 100%;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+
+
+}
+
+
+
+/* input for the player to enter their name */
+
+input {
+
+    font-size: 1rem;
+
+    max-width: 20ch;
+
+    text-align: center;
+
+
+
+    margin-bottom: 1rem;
+
+    padding: 1.5rem;
+
+
+
+    border: none;
+
+    box-shadow: 0 0.1rem 1.4rem 0 rgba(86, 185, 235, 0.5);
+
+}
+
+
+
+input::placeholder {
+
+    color: #ff1793;
+
+}
+
+
+
+/* footer section */
+
+footer {
+
+    height: 150px;
+
+}
+
+
+
+footer p {
+
+    font-family: 'Assistant', sans-serif;
+
+    font-size: .8rem;
+
+    padding: .25rem;
+
+    text-align: center;
+
+
+
+}
+
+
+
+.social-networks {
+
+    text-align: center;
+
+
+
+}
+
+
+
+.social-networks>li {
+
+    display: inline;
+
+}
+
+
+
+.social-networks i {
+
+    font-size: 2.5rem;
+
+    margin: 1rem;
+
+    padding: .25rem;
+
+    color: #cea716;
+
+    justify-content: space-between;
+
+}
+
+
+
+/* an arrow fixed to scroll with the screen, so that a user can quickly return to the top of the page */
+
+.arrow-top {
+
+    position: fixed;
+
+    right: .5rem;
+
+    bottom: .25rem;
+
+    font-family: 'Rammetto One', sans-serif;
+
+    font-size: 2rem;
+
+    color: #cea716;
+
+}
