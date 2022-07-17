@@ -7,9 +7,6 @@ The aim of this project to create QR Code of the given link or text.
 - [Nirvik07](https://github.com/Nirvik07)
 
 
-## Demo
+## demo
+https://github.com/Nirvik07/nirvik/blob/66c47e0115ce4b2c6a5a9e701a51f0f68c83f641/InShot_20220717_151324617.gif
 
-
-
-
-## Screenshots
