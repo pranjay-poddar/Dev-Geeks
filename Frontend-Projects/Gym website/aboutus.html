@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Us</title>
+    <style>
+        body{
+            background-image: url(aboutusiamge2.jpg);
+            height: 100%;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-position: 50% 50%;
+        }
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        font-family: cursive;
+        padding: 40px;
+        font-size: 15px;
+        margin: 15px;
+      }
+      .all {
+        background-attachment: no-repeat;
+        background-image: url("WhatsApp\ Image\ 2022-06-22\ at\ 10.29.51\ PM.jpeg");
+        padding: 50px 50px 50px;
+        border-radius: 30px;
+        box-shadow: 0 30px 40px rgba(0, 0, 0.6);
+      }
+
+      .who {
+        font-family: cursive;
+        text-align: center;
+        color: black;
+        background-color: rgb(179, 78, 78);
+        border-radius: 20px;
+        background-color: red;
+        background-image: linear-gradient(
+          to right,
+          rgba(70, 5, 5, 0.9) 25%,
+          rgba(214, 66, 66, 0.781) 50%,
+          rgba(70, 5, 5, 0.9) 75%
+        );
+        color: white;
+        -webkit-animation: 4s linear 0s infinite alternate move_eye;
+        animation: 4s linear 0s infinite alternate move_eye;
+      }
+      h2 {
+        margin-top: 10px;
+      }
+
+      button {
+        background-attachment: fixed;
+        background-color: rgb(0, 0, 0);
+        color: rgb(255, 255, 255);
+        margin: 20px;
+        width: 220px;
+        height: 36px;
+        border: none;
+        float: center;
+        border-radius: 5px;
+        font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+        font-weight: 500;
+        transition: all 1s ease;
+        cursor: pointer;
+        animation: down-bump 4s ease;
+      }
+
+      button:hover {
+        color: rgb(179, 78, 78);
+        background-color: bisque;
+        border-radius: 20px;
+        animation: reverse 3s ease;
+      }
+      select {
+        color: white;
+        border-radius: 30px;
+        float: center;
+        border-color: black;
+        background-color: rgb(0, 0, 0);
+        width: 20%;
+        height: 20%;
+      }
+      .heading {
+        text-align: center;
+        color: black;
+        font-family: cursive;
+        padding: 40px;
+      }
+      input[type="submit"] {
+        padding-inline-end: 1px 1px;
+        cursor: grabbing;
+        color: white;
+        border-radius: 30px;
+        float: center;
+        border-color: black;
+        background-color: rgb(0, 0, 0);
+        width: 20%;
+        height: 20%;
+      }
+
+      input[type="submit"]:hover {
+        color: rgb(179, 78, 78);
+        background-color: bisque;
+        border-color: bisque;
+        border-radius: 60px;
+        animation: reverse 3s ease;
+      }
+
+      select:hover {
+        color: bisque;
+      }
+      #whi{
+        color: rgb(255, 255, 255);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="all">
+      <form action="">
+        <h1 class="heading">About us</h1>
+        <div class="who">
+          <h2>Who are we?</h2>
+          <p>
+            My name is Md Ilham Ansari, and I am the founder of 'Apna Gym'. I
+            decided to become a trainer after I won a gold in the state level
+            bodybuilding championship.
+            <br />
+
+            We care about our clients and there's nothing more important to us
+            than helping them build a physique of their own choice. <br />
+            We at Apna gym offer a discount of 10% if you take a membership of 6
+            months and a discount of 25% if you take a membership of 1 year.
+            <br />
+            We also provide supplements at lower prices as compared to that available
+            at the market.
+            <br />
+            The equipments used by us here at Apna Gym are of best quality.
+
+            <br />
+          </p>
+          <button class="contact-us">Know more</button>
+        </div>
+
+        <p id="whi">
+          Ask :
+          <select name="sub1" id="">
+            <option value="Subject">Select Appropriate Subject</option>
+            <option value="Guide">About Trainers</option>
+            <option value="Help">Visit help desk</option>
+            <option value="write" class="write">Write an issue or a Question</option>
+          </select>
+        </p>
+        <p>
+          <input type="submit" value="CONFIRM" name="submit" id="submit" />
+        </p>
+      </form>
+    </div>
+  </body>
+</html>
