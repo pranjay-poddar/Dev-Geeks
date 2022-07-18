@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive sidebar </title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/e886567ce7.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="content">
+        <h2>sidebar Menu <br> Using html and CSS</h2>
+    </div>
+    <div class="open">
+        <span class="fa fa-bars" onclick="openbar()"></span>
+    </div>
+    <div class="sidebar" id="sidebar">
+    <div class="close">
+        <span class="fa fa-times" onclick="closebar()"></span>
+    </div>
+    <div class="title"> sidebar</div>
+    <ul class="links">
+        <li><a href="#"><i class="fa fa-home"> <br> Home</i></a></li>
+        <li><a href="#"><i class="fa fa-qrcode"> <br>  Dashboard</i></a></li>
+        <li><a href="#"><i class="fa fa-user"> <br>  Profile</i></a></li>
+        <li><a href="#"><i class="fa fa-bell"> <br>  Notification</i></a></li>
+        <li><a href="#"><i class="fa fa-envelope"> <br>  Contact us</i></a></li>
+        <li><a href="#"><i class="fa fa-power-off"> <br>  Logout</i></a></li>
+    </ul>
+    <div class="social">
+        <i class="fa fa-instagram"></i>
+        <i class="fa fa-youtube-play"></i>
+        <i class="fa fa-facebook"></i>
+        <i class="fa fa-twitter"></i>
+    </div>
+    </div>
+    <script src="script.js"></script>
+
+</body>
+</html>

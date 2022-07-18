@@ -1,0 +1,127 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+
+.content{
+    position: absolute;
+    top: 40%;
+    left: 40%;
+}
+
+.content h2{
+    text-align: center;
+    font-size: 40px;
+}
+
+.open{
+    position: absolute;
+    left: 0;
+}
+
+.open span{
+    position: absolute;
+    top: 20px;
+    left: 35px;
+    font-size: 30px;
+    line-height: 35px;
+    padding: 6px 10px;
+    color: white;
+    background: #333;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.sidebar{
+    width: 250px;
+    position: absolute;
+    left: -250px;
+    top: 0;
+    height: 100%;
+    background: #222;
+    transition: 0.5s;
+}
+
+.sidebar .close span{
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    padding: 7px;
+    color: white;
+    background: #444;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.sidebar .title{
+    padding-left: 60px;
+    font-size: 25px;
+    line-height: 60px;
+    color: white;
+    border-bottom: 2px solid gray;
+}
+
+.sidebar .links li{
+    list-style: none;
+    display: block;
+    width: 100%;
+    line-height: 60px;
+    border-left: 5px solid transparent;
+    border-bottom: 2px solid gray;
+    cursor: pointer;
+}
+
+.sidebar .links li:hover{
+    background: #333;
+    border-left: 5px solid cornflowerblue;
+}
+
+.sidebar .links li a{
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    padding-left: 40px;
+    transition: 0.5s;
+}
+
+.sidebar .links li:hover a{
+    color: cornflowerblue;
+    letter-spacing: 1.2px;
+}
+
+.sidebar .links li a i{
+    margin-right: 5px;
+}
+
+.sidebar .social{
+    width: 100%;
+    position: absolute;
+    bottom: 30px;
+    left: 20px;
+}
+
+.sidebar .social i{
+    width: 45px;
+    font-size: 25px;
+    color: white;
+    background: #444;
+    padding: 10px;
+    text-align: center;
+    margin-right: 5px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: 0.5s;
+}
+
+.sidebar .social i:hover{
+    background: cornflowerblue;
+    transform: translateY(-10px);
+}
