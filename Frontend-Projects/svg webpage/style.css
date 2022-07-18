@@ -1,0 +1,39 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'poppins' , sans-serif;
+}
+section
+{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 100px;
+    box-sizing: border-box;
+    background: linear-gradient(180deg, #008aff, #ff137d), url(tree-736885__480.jpg);
+    background-blend-mode: screen;
+}
+section .content{
+    max-width: 700px;
+}
+section .content h2{
+    font-size: 3em;
+    color: aliceblue;
+}
+
+section .content p{
+    font-size: 1.2em;
+    color: aliceblue;
+}
+section img{
+    position: relative;
+    max-width: 350px;
+}
+.wave{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
