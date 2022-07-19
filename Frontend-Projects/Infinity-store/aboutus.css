@@ -1,0 +1,36 @@
+/* about us css page */
+
+
+    body{
+        background-color: lightpink;
+    
+    }
+    
+    h1{
+        color: black;
+        text-decoration:solid;
+        text-align: center;
+        font-family: 'Mochiy Pop One', sans-serif;
+    }
+
+
+    p{
+        text-align: center;
+        font-size: 20px;
+        font-family: 'Mochiy Pop One', sans-serif;
+
+        
+    }
+
+   
+    .center {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 50%;
+      }
+   
+
+
+
+
