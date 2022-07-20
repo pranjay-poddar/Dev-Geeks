@@ -1,0 +1,37 @@
+body {
+    background: #202020;
+    color: white;
+}
+button {
+    margin: 10px;
+    margin-top: 100px;
+    width: 200px;
+    height: 60px;
+    border: 3px soldi white;
+    border-radius: 50px;
+    background: white;
+    color: #202020;
+    cursor: pointer;
+    outline: none;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: xx-large;
+    font-weight: bolder;
+}
+
+#stopwatch {
+    font-size: 150px;
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -55%);
+}
+#buttons {
+    position: absolute;
+    top: 55%;
+    left: 48.4%;
+    transform: translate(-51.6%, -45%);
+}
+#buttons li {
+    display: inline;
+    padding-left: 10px;
+}
