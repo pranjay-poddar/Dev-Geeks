@@ -1,0 +1,54 @@
+* {
+  background-color: rgb(209, 234, 242);
+}
+h1 {
+  text-decoration: underline;
+  /* display: inline-block; */
+  text-align: center;
+  display: relative;
+  float: top;
+}
+h1:hover {
+  font-family: "Courier New", Courier, monospace;
+  background-color: brown;
+  font-size: 40px;
+}
+p {
+  font-size: 20px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  text-align: center;
+}
+img {
+  height: 300px;
+  width: 300px;
+  margin-top: 0px;
+  padding: 5px;
+  margin-left: 10px;
+  display: inline-block;
+}
+#second {
+  position: relative;
+  float: right;
+}
+button:hover {
+  cursor: pointer;
+}
+div {
+  text-align: center;
+  font-size: 35px;
+  font-family: "Times New Roman", Times, serif;
+}
+button {
+  font-size: 25px;
+  height: 50px;
+  width: 150px;
+  background-color: crimson;
+  border-radius: 8px;
+}
+#gifty {
+  padding-top: 25px;
+}
+.gif {
+  margin-left: 550px;
+  margin-top: 50px;
+}
