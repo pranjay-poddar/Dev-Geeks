@@ -5,11 +5,11 @@
 
 ## Purpose
 
-- A simple game created using JavaScript . A great JS project made for participation in hackathon.
+- A simple game created using JavaScript . 
 
 ## Tech Stack
 
-**Client:** 
+
 - HTML5 
 - CSS3 
 - JavaScript
