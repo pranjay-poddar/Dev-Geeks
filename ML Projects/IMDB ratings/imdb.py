@@ -15,7 +15,7 @@ ratings = []
 genres = []
 
 # Define path where your films are present 
-# For eg: "/Users/utkarsh/Desktop/films"
+# For eg: "/Users/Avik/Desktop/films"
 path = input("Enter the path where your films are: ")
 
 # Films with extensions
