@@ -1,0 +1,236 @@
+body{
+    margin: 0;
+}
+.navbar {
+    overflow: hidden;
+    background-color: #333;
+  }
+  
+  .navbar a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 25px 26px;
+    text-decoration: none;
+    font-size: 40px;
+  }
+  .navbar img{
+      float: left;
+  }
+  
+  .navbar a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  .split{
+    height: 100%;
+    width: 50%;
+    position: fixed;
+  }
+  .left{
+    left: 0;
+  }
+  .right{
+    right: 0;
+  }
+  .split h1{
+   font-size: 100px;
+   color: white; 
+   padding: 30px;
+  }
+  .split span{
+    font-size: 50px;
+    color: orangered;
+  }
+  .split li{
+    font-size: 30px;
+    font-weight: bolder;
+  }
+  .button{
+    font-size: 35px;
+    padding: 20px;
+    border-radius: 10px;
+    font-weight: bold;
+    background-color: orangered;
+  }
+  .button:hover{
+    background-color: white;
+  }
+  .button a{
+    text-decoration: none;
+    color: black;
+  }
+  .split .img2{
+    float: right;
+  }
+  .split img{
+    border: 8px solid white;
+  }
+/* About section*/
+.about-section h2{
+    font-size: 50px;
+    text-align: center;
+}
+.about-section p{
+    font-size: 30px;
+}
+.column{
+
+    float: left;
+    width: 20%;
+    padding: 10px;
+    height: 300px;
+    
+}
+.row:after{
+    content: "";
+    display: table;
+    clear: both;
+}
+/*contact page----*/
+input[type=text],textarea{
+    width: 100%;
+    padding: 12px;
+    border: 5px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+    background-color: white;
+}
+input[type=submit] {
+    background-color: #04AA6D;
+    color: white;
+    padding: 12px 20px;
+    border: 3px solid black;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  input[type=submit]:hover {
+    background-color: #455aa0;
+  }
+  label{
+      font-size: 30px;
+      font-weight: bold;
+  }
+  .Contact h2{
+      text-align: center;
+      font-size: 40px;
+  }
+  body{
+    background-image: url('https://images.unsplash.com/photo-1472289065668-ce650ac443d2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8ZWR1Y2F0aW9uJTIwYmFja2dyb3VuZHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=800&q=60');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+  
+  }
+
+/* skills card*/
+
+.row{
+  display: flex;
+  flex-direction: row;
+}
+.row a{
+  text-decoration: none;
+}
+
+
+.flip-card {
+  background-color: transparent;
+  width: 300px;
+  height: 300px;
+  perspective: 1000px;
+  padding: 20px;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  border:5px solid black;
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flip-card-front {
+  background-color: #bbb;
+  color: black;
+}
+.flip-card-back h1 {
+ font-size: 30px;
+}
+
+.flip-card-back {
+  background-color: #2980b9;
+  color: white;
+  transform: rotateY(180deg);
+}
+/*boxes for sites/content/courses*/
+.column1{
+  float: left;
+  width: 33.095%;
+  height: 900px;
+  background-color: #04AA6D;
+  border: 0.2px solid black;
+}
+.column1 h1{
+  text-align: center;
+  font-size: 40px;
+}
+.row1:after{
+  content: "";
+  display: table;
+  clear: both;
+}
+.column1 li a{
+  font-size: 40px;
+  text-decoration: none;
+}
+/*footer*/
+.fa {
+  padding: 20px;
+  font-size: 40px;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+  border-radius: 10px;
+}
+.fa:hover {
+  opacity: 0.7;
+}
+
+.fa-facebook {
+background: #3B5998;
+color: white;
+}
+.fa-linkedin {
+  background: #007bb5;
+  color: white;
+}
+.fa-instagram {
+  background: #125688;
+  color: white;
+}
+.footer{
+  background-color: black;
+  color: white;
+  text-align: center;
+}
