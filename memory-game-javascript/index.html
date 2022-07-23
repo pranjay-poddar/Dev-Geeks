@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous" 0="">
+    <title>Memory game for web</title>
+    
+    <script src="static/script.js"></script>
+    <style>
+        .imgdiv{
+            position: relative;
+            display: inline-block;
+            width:150px;
+            height: 150px;
+            line-height: 150px;
+            font-size: 20px;
+            padding: 10px;
+            text-align: center;
+            border: 2px solid black;
+            cursor: pointer;
+        }
+        
+        img{
+            width:120px;
+            height: 120px;
+            padding: 10px;;
+        }
+
+        .hide{
+            padding: 10px;
+            visibility: hidden;
+        }
+
+        .match, .showimg{
+            visibility: visible !important;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class ="jumbotron">Memory game for web</h1>
+        
+        <button class="btn btn-success" onclick="start()">Start game</button><br><br>
+        <div id="score"></div>
+        <div id="boardgame"></div>
+    </div>
+    
+</body>
+</html>
