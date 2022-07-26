@@ -1,0 +1,129 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+.main{
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(242, 109, 135, 0.575),rgba(36, 71, 226, 0));
+    position: relative;
+    padding: 0 8%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+nav{
+    padding: 30px 20%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+nav .logo{
+    border-radius: 5px;
+    width: 60px;
+    height: 60px;
+    background: scroll;
+    background-color: beige;
+}
+
+nav .logo:hover{
+    
+    border-radius: 5px;
+    width: 50px;
+    height: 50px;
+}
+
+nav ul li{
+    list-style: none;
+    display: inline-block;
+    margin-left: 40px;
+}
+
+nav ul li:hover{
+    -webkit-text-stroke: 1.5px rgb(0, 0, 0);
+    color:transparent ;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color:azure;
+    font-size: 23px;
+}
+
+nav ul li a:hover{
+    text-decoration: none;
+    -webkit-text-stroke: 0.5px rgb(238, 235, 235);
+    color:#fff;
+    font-size: 28px;
+}
+
+.content{
+    text-align: center;
+
+}
+.content h1{
+    font-size: 70px;
+    color: azure;
+    font-weight: 600;
+    justify-content: center;
+    transition: 0.5s;
+    
+
+}
+.content h1:hover{
+    -webkit-text-stroke: 4px rgb(0, 0, 0);
+    color:transparent ;
+    
+}
+
+.content a{
+    text-decoration: none;
+    display: inline-block;
+    color: rgb(255, 255, 255);
+    font-size: 30px;
+    border: 2px solid rgb(252, 252, 252);
+    padding: 2px 40px;
+    border-radius: 50px;
+    
+}
+
+.content a:hover{
+    text-decoration: none;
+    display: inline-block;
+    color: rgb(4, 4, 4);
+    font-size: 40px;
+    border: 4px solid rgb(0, 0, 0);
+    padding: 2px 40px;
+    border-radius: 40px;
+    
+}
+
+.bgvideo{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+}
+
+@media (min-aspect-ratio: 16/9){
+    .bgvideo{
+        width: 100%;
+        height: auto;
+    }
+}
+@media (max-aspect-ratio: 16/9){
+    .bgvideo{
+        width: auto;
+        height: 100%;
+    }
+    
+}
