@@ -1,0 +1,27 @@
+h1 {
+  text-align: center;
+  margin-top: 30px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  text-decoration: underline;
+  font-style: italic;
+}
+.main {
+  margin-left: 140px;
+  width: 900px;
+  font-size: 25px;
+  font-family: "Courier New", Courier, monospace;
+  background-color: lightgray;
+}
+.container {
+  margin-left: 150px;
+  font-style: italic;
+  font-size: 25px;
+  font-weight: bold;
+}
+body {
+  background-color: rgb(246, 217, 217);
+}
+img {
+  height: 300px;
+  float: right;
+}
