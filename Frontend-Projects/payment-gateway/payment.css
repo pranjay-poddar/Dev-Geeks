@@ -1,0 +1,88 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+header{
+    width: 100vw;
+    min-height: 100vh;
+    background: #0cc9bc;
+    font-size: 1.2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    background: white;
+    max-width:800px;
+    min-height: 500px;
+    display: flex;
+    justify-content: space-between ;
+    align-items: flex-start;
+    padding: 0.5rem 1.5rem;
+
+}
+
+.left{
+    flex-basis: 50%;
+}
+
+.right{
+    flex-basis: 50%;
+} 
+
+form{
+    padding: 1rem;
+}
+
+h3{
+    margin-top: 1rem;
+    color: #2c3e50;
+}
+
+form input[type="text"]
+{
+    width: 100%;
+    padding: 0.5rem 0.7rem;
+    margin: 0.5rem 0;
+    outline: none;
+
+}
+
+#zip{
+    display: flex;
+    margin-top: 0.5rem;
+}
+
+#zip select{
+    padding: 0.5rem 0.7rem;
+}
+
+#zip input[type="number"]{
+    padding: 0.5rem 0.7rem;
+    margin-left: 5px;
+
+}
+
+input[type="submit"]{
+    width: 100%;
+    padding: 0.7rem 1.5rem;
+    background: #34495e;
+    color: white;
+    border: none;
+    margin-top: 1rem;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover{
+    background: #2c3e50; 
+}
+
+ @media only screen and (max-width: 770px){
+    .container{
+        flex-direction: column;
+    }
+ }
