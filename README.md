@@ -56,7 +56,7 @@ Happy Coding! -->
 
 ## Available Projects
 
-<table>
+<table align="center">
 <tr>
 <td align="center">S.No</td>
 <td align="center">Projects</td>
@@ -73,8 +73,9 @@ Happy Coding! -->
 <td align="center"> 3.</td>
 <td  align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Animations-JS">Animation-JS</a></td>
 </tr>
-</table
+</table>
 
+	
 ## How to contribute:
 * Drop a :star: on the Github repository (optional)<br/>
 
