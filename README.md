@@ -54,6 +54,15 @@
 Beginners to expert Friendly Hacktoberfest2021 repository. You can contribute any of the given tracks and make a valid PR for the project/mini-project you've added.</br>
 Happy Coding! -->
 
+## Available Projects
+
+<table>
+<tr>
+<td>S.No</td>
+<td> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/AngularJS%20Projects">AngularJS Projects</a></td>
+</tr>
+</table
+
 ## How to contribute:
 * Drop a :star: on the Github repository (optional)<br/>
 
