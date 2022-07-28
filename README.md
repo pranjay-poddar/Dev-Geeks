@@ -58,8 +58,20 @@ Happy Coding! -->
 
 <table>
 <tr>
-<td>S.No</td>
-<td> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/AngularJS%20Projects">AngularJS Projects</a></td>
+<td align="center">S.No</td>
+<td align="center">Projects</td>
+<td align="center">S.No</td>
+<td align="center">Projects</td>
+<td align="center">S.No</td>
+<td align="center">Projects</td>
+</tr>
+<tr align="center">
+<td align="center"> 1.</td>
+<td  align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/AngularJS%20Projects">AngularJS Projects</a></td>
+<td align="center"> 2.</td>
+<td  align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Animations-CSS">Animations-CSS</a></td>
+<td align="center"> 3.</td>
+<td  align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Animations-JS">Animation-JS</a></td>
 </tr>
 </table
 
