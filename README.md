@@ -519,7 +519,7 @@ Happy Coding! -->
   ```git commit -m"<add your message here>"```
 * Push your changes.
   ```git push --set-upstream origin <your branch name>```
-
+* Add your project name with the link in the readme in the desired format.
 * Make a pull request! (compare your branch with the owner main branch)
 
 
