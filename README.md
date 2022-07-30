@@ -231,7 +231,7 @@ Happy Coding! -->
 <td align="center">59.</td>
 <td  align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/React-JS%20Projects/i-keep-notes"> i-keep-notes</a>  </td>
 <td align="center">60.</td>
-<td  align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Js-Projects/image-converter"> </a> image-converter </td>
+<td  align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Js-Projects/image-converter"> image-converter</a>  </td>
 </tr>
 	
 <tr align="center">
