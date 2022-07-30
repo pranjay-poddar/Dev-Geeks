@@ -56,7 +56,7 @@ Happy Coding! -->
 
 ## Available Projects
 
-<table align="center">
+<table >
 <tr>
 <td align="center">S.No</td>
 <td align="center">Projects</td>
