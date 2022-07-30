@@ -64,14 +64,29 @@ Happy Coding! -->
 <td align="center">Projects</td>
 <td align="center">S.No</td>
 <td align="center">Projects</td>
+<td align="center">S.No</td>
+<td align="center">Projects</td>
 </tr>
 <tr align="center">
 <td align="center"> 1.</td>
-<td  align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/AngularJS%20Projects">AngularJS Projects</a></td>
+<td  align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Js-Games/2048%20game">2048 Game</a>  </td>
 <td align="center"> 2.</td>
-<td  align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Animations-CSS">Animations-CSS</a></td>
+<td  align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Navbars/3d_navbar_animations">3d Navbar Animations</a></td>
 <td align="center"> 3.</td>
-<td  align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Animations-JS">Animation-JS</a></td>
+<td  align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/blob/main/Python%20Projects/AI%20Calculator.py">AI Calculator</a></td>
+<td align="center"> 4.</td>
+<td  align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/AngularJS%20Projects/angular-route">Angular-route</a></td>	
+</tr>
+	
+<tr align="center">
+<td align="center"> 5.</td>
+<td  align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Navbars/animated_navbar">animated_navbar</a>  </td>
+<td align="center"> 6.</td>
+<td  align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Animations-JS">Animations-JS</a></td>
+<td align="center"> 7.</td>
+<td  align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/React-JS%20Projects/appointment-app">appointment-app</a></td>
+<td align="center"> 8.</td>
+<td  align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Js-Games/Ball%20game">Ball game</a></td>	
 </tr>
 </table>
 
