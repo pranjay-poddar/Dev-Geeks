@@ -344,7 +344,7 @@ Happy Coding! -->
 <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/ML%20Projects/Reduce%20Image%20Size"> Reduce Image Size </a></td>
 </tr>
 
-<tr align="center>
+<tr align="center">
 <td align="center"> 101.</td>
 <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Frontend-Projects/responsive%20footer"> responsive footer </a>  </td>
 <td align="center"> 102.</td>
