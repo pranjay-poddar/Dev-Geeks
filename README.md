@@ -344,12 +344,120 @@ Happy Coding! -->
 	
 <tr align="center">
 <td align="center"> 101.</td>
-<td  align="center"> <a href="">  </a></td>
+<td  align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Footers/social-footer"> social-footer </a></td>
 <td align="center"> 102.</td>
-<td  align="center"> <a href="">  </a></td>
+<td  align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Frontend-Projects/Spotify%20Clone">  Spotify Clone </a></td>
 <td align="center"> 103.</td>
-<td  align="center"> <a href="">  </a></td>
+<td  align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Js-Games/sudoku"> sudoku </a></td>
 <td align="center"> 104.</td>
+<td  align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/React-JS%20Projects/Task-Tracker"> Task-Tracker </a></td>	
+</tr>
+	
+	
+<tr align="center">
+<td align="center"> 105.</td>
+<td  align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Frontend-Projects/TBT">  TBT </a></td>
+<td align="center"> 106.</td>
+<td  align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Frontend-Projects/Tech%20Blog%20Template">  Tech Blog Template </a></td>
+<td align="center"> 107.</td>
+<td  align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Js-Games/Tetris%20Game%20JS"> Tetris Game JS </a></td>
+<td align="center"> 108.</td>
+<td  align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/blob/main/Python%20Projects/Tic%20Tac%20Toe.py"> Tic Tac Toe.py </a></td>	
+</tr>
+	
+	
+<tr align="center">
+<td align="center"> 109.</td>
+<td  align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Js-Games/Tic-Tac-Toe">  Tic-Tac-Toe </a></td>
+<td align="center"> 110.</td>
+<td  align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Frontend-Projects/To-do-list-2">  To-do-list-2 </a></td>
+<td align="center"> 111.</td>
+<td  align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/AngularJS%20Projects/TODO">  Todo </a></td>
+<td align="center"> 112.</td>
+<td  align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/React-JS%20Projects/todos-list"> todos-list </a></td>	
+</tr>
+	
+	
+<tr align="center">
+<td align="center"> 113.</td>
+<td  align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Frontend-Projects/TRAVEL-SITE-Home"> TRAVEL-SITE-Home </a></td>
+<td align="center"> 114.</td>
+<td  align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Frontend-Projects/Vignere"> Vignere </a></td>
+<td align="center"> 115.</td>
+<td  align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Frontend-Projects/Weather%20Forecast"> Weather Forecast </a></td>
+<td align="center"> 116.</td>
+<td  align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Frontend-Projects/WebPage%20Project%20new">  WebPage Project new </a></td>	
+</tr>
+	
+	
+<tr align="center">
+<td align="center"> 117.</td>
+<td  align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/.github/workflows">  workflows </a></td>
+<td align="center"> 118.</td>
+<td  align="center"> <a href="">  </a></td>
+<td align="center"> 119.</td>
+<td  align="center"> <a href="">  </a></td>
+<td align="center"> 120.</td>
+<td  align="center"> <a href="">  </a></td>	
+</tr>
+	
+	
+<tr align="center">
+<td align="center"> 121.</td>
+<td  align="center"> <a href="">  </a></td>
+<td align="center"> 122.</td>
+<td  align="center"> <a href="">  </a></td>
+<td align="center"> 123.</td>
+<td  align="center"> <a href="">  </a></td>
+<td align="center"> 124.</td>
+<td  align="center"> <a href="">  </a></td>	
+</tr>
+	
+	
+<tr align="center">
+<td align="center"> 125.</td>
+<td  align="center"> <a href="">  </a></td>
+<td align="center"> 126.</td>
+<td  align="center"> <a href="">  </a></td>
+<td align="center"> 127.</td>
+<td  align="center"> <a href="">  </a></td>
+<td align="center"> 128.</td>
+<td  align="center"> <a href="">  </a></td>	
+</tr>
+	
+	
+<tr align="center">
+<td align="center"> 129.</td>
+<td  align="center"> <a href="">  </a></td>
+<td align="center"> 120.</td>
+<td  align="center"> <a href="">  </a></td>
+<td align="center"> 131.</td>
+<td  align="center"> <a href="">  </a></td>
+<td align="center"> 132.</td>
+<td  align="center"> <a href="">  </a></td>	
+</tr>
+	
+	
+<tr align="center">
+<td align="center"> 133.</td>
+<td  align="center"> <a href="">  </a></td>
+<td align="center"> 134.</td>
+<td  align="center"> <a href="">  </a></td>
+<td align="center"> 135.</td>
+<td  align="center"> <a href="">  </a></td>
+<td align="center"> 136.</td>
+<td  align="center"> <a href="">  </a></td>	
+</tr>
+	
+	
+<tr align="center">
+<td align="center"> 137.</td>
+<td  align="center"> <a href="">  </a></td>
+<td align="center"> 138.</td>
+<td  align="center"> <a href="">  </a></td>
+<td align="center"> 139.</td>
+<td  align="center"> <a href="">  </a></td>
+<td align="center"> 140.</td>
 <td  align="center"> <a href="">  </a></td>	
 </tr>
 	
