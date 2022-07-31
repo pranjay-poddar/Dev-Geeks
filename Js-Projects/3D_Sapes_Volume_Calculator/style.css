@@ -1,0 +1,90 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+  }
+
+  @media screen and (max-width: 877px) {
+    .content {
+        width: 100%;
+    }
+}
+  
+  body {
+    background-color: #FFD908;
+    margin-top: 2%;
+  }
+  
+  div {
+    display: none;
+    background-color: #36FF08;
+    height: 350px;
+    border: 5px solid #F00689;
+    width: 45%;
+    font-size: 2.5rem;
+    padding: 2%;
+    margin-left: 28%;
+  }
+  
+  input {
+    width: 21%;
+    font-size: 2.5rem;
+    text-align: center;
+    padding-left: 0.5%;
+    padding-right: 0.5%;
+    margin-bottom: 5%;
+    border: 2px solid #ccc;
+    outline: none;
+  }
+  
+  input[type=text]:focus, input:hover {
+    border: 2px solid #71305b;
+  }
+  
+  button {
+    padding-top: 2%;
+    padding-bottom: 2%;
+    padding-left: 1.5%;
+    padding-right: 1.5%;
+    margin-left: 10rem;
+    margin-top: 6%;
+    background-color: #71305b;
+    color: white;
+    border: none;
+    width: 45%;
+    font-size: 2.5rem;
+  }
+  
+  h1 {
+    text-align: center;
+    font-size: 3rem;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    color: #1503E9;
+  }
+  
+  select {
+    width: 17.2%;
+    padding-top: 0.25%;
+    font-size: 1.5rem;
+    padding-bottom: 0.25%;
+    margin-top: 1.5%;
+    margin-bottom: 1%;
+    margin-left: 0.75%;
+  }
+  
+  select:hover {
+    cursor:pointer;
+  }
+  
+  select option {
+    background-color: #E03357;
+  }
+  
+  label {
+    font-size: 1.5rem;  
+    width: 10%;
+    margin-left: 35.5%;
+    font-weight: bold;
+  }
