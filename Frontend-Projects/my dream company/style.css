@@ -1,0 +1,55 @@
+h1 {
+  text-align: center;
+  font-family: "Nunito", sans-serif;
+  font-family: "Press Start 2P", cursive;
+  font-size: 40px;
+  text-decoration: underline;
+}
+.container {
+  height: 600px;
+  width: 1400px;
+  border: 3px solid red;
+  border-radius: 6px;
+  margin-left: 30px;
+  background-color: lightgray;
+}
+#hell {
+  margin-left: 100px;
+  margin-top: 50px;
+  font-size: 50px;
+  font-family: serif;
+  color: rgb(56, 112, 0);
+  display: inline-block;
+}
+#hello {
+  margin-left: 100px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 20px;
+}
+img {
+  float: right;
+  height: 500px;
+  width: 600px;
+  margin-right: 15px;
+  margin-top: 15px;
+}
+p{
+    font-size: 20px;
+    margin-left: 20px;
+}
+.buttons {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    margin-left: 500px;
+  }
+  body{
+    background-color: rgb(82, 187, 187);
+  }
