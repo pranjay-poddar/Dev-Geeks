@@ -1,0 +1,75 @@
+body {
+  background-image: linear-gradient(
+      rgba(255, 255, 255, 0.5),
+      rgba(255, 255, 255, 0.5)
+    ),
+    url(download.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+h1 {
+  text-align: center;
+  font-family: "Times New Roman", Times, serif;
+  text-decoration: underline;
+}
+h3 {
+  float: right;
+  margin-right: 30px;
+  color: brown;
+  font-size: 25px;
+  padding-bottom: 50px;
+}
+footer {
+  margin-left: 20px;
+  padding: 10px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 25px;
+}
+#middle {
+  text-align: center;
+  font-weight: bold;
+  font-family: 'Nunito', sans-serif;
+  font-family: 'Press Start 2P', cursive;
+}
+.container {
+  width: 900px;
+  font-size: 25px;
+  margin-left: 100px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+img {
+  float: right;
+  display: inline-block;
+}
+hr.new1{
+  border-top: 1px solid #000;
+  border-bottom: 1px solid black;
+}
+form{
+    text-align: center;
+    font-size: 25px;
+}
+.forum p{
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 28px;
+    font-weight: bold;
+}
+.big{
+  height: 30px;
+  width: 400px;
+}
+.btn{
+  width: 200px;
+  height: 50px;
+  background-color: black;
+  color: white;
+  border-radius: 8px;
+  font-size: 20px;
+}
+table, th, td{
+  border: 3px solid black;
+  background-color: burlywood;
+  font-size: 25px;
+}

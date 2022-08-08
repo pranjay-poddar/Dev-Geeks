@@ -1,5 +1,7 @@
 body{
     background-color: #FDB9FC;
+    background-image: url("https://cdn.wallpapersafari.com/41/41/o9Lnfa.jpg");
+    background-size: cover;
 }
 
 /* header section  */
@@ -8,11 +10,26 @@ body{
 }
 
 h1{
+    color: #5871ff;
+    font-size: 3rem;
+    font-family: 'Playfair Display', serif;
+    font-weight: bold;
+    
+
+}
+
+
+
+h2{
     color: #FF5C58;
     font-size: 3rem;
     font-family: 'Playfair Display', serif;
+    
+   
 
 }
+
+
 
 .icon{
     color: #ff0000;

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Shapes Volume Calculator</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <h1>Volume of 3D Shapes Calculator</h1><br><br>
+    <label for="Shape">Select the Shape: </label>
+    <select name="Shape" onchange=showDiv(this)>
+        <option value="Sphere">Sphere</option>
+        <option value="Cube">Cube</option>
+        <option value="Cuboid">Cuboid</option>
+        <option value="Cone">Cone</option>
+        <option value="Cylinder">Cylinder</option>
+        <option value="Ellipsoid">Ellipsoid</option>
+    </select><br><br><br>
+    <div id="Sphere" class="shape" style="display: block;">
+        <p>V = (4/3) * &pi; * 
+            <input id="sphere-radius" type="text" placeholder="radius"> <sup> 3 </sup>
+        </p>
+        <p id="sphereAnswer" class="answer"></p>
+        <button onclick=calculate()>Calculate</button>
+    </div>
+
+    <div id="Cone" class="shape">
+        <p>V = (1/3) * &pi; *
+            <input id="cone-radius" type="text" placeholder="radius"> <sup> 2 </sup>
+            <input id="cone-height" type="text" placeholder="height">
+        </p>
+        <p id="coneAnswer" class="answer"></p>
+        <button onclick=calculate()>Calculate</button>
+    </div>
+
+    <div id="Cube" class="shape">
+        <p>V =
+            <input id="cube-length" type="text" placeholder="length"> <sup> 3 </sup>
+        </p>
+        <p id="cubeAnswer" class="answer"></p>
+        <button onclick=calculate()>Calculate</button>
+    </div>
+
+    <div id="Cuboid" class="shape">
+        <p>V = 
+            <input id="cuboid-length" type="text" placeholder="length"> *
+            <input id="cuboid-width" type="text" placeholder="width"> *
+            <input id="cuboid-height" type="text" placeholder="height">
+        </p>
+        <p id="cuboidAnswer" class="answer"></p>
+        <button onclick=calculate()>Calculate</button>
+    </div>
+
+    <div id="Cylinder" class="shape">
+        <p>V = &pi; *
+            <input id="cylinder-radius" type="text" placeholder="radius"> <sup> 2 * </sup>
+            <input id="cylinder-height" type="text" placeholder="height">
+        </p>
+        <p id="cylinderAnswer" class="answer"></p>
+        <button onclick=calculate()>Calculate</button>
+    </div>
+
+    <div id="Ellipsoid" class="shape">
+        <p>V = (4/3) &pi;
+        <input id="axis-a" type="text" placeholder="axis">
+        <input id="axis-b" type="text" placeholder="axis">
+        <input id="axis-c" type="text" placeholder="axis"> 
+        </p>
+        <p id="ellipsoidAnswer" class="answer"></p>
+        <button onclick=calculate()>Calculate</button>
+    </div>
+
+</body>
+<script src="script.js"></script>
+</html>
