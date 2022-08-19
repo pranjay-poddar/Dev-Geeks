@@ -1,0 +1,116 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  overflow-y: hidden;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.city-outer {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  overflow-x: hidden;
+  background: linear-gradient(-360deg, rgb(143, 255, 245), rgb(247, 167, 87));
+}
+
+.city-outer:before {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  top: 3em;
+  content: "";
+  background: radial-gradient(
+    rgba(230, 222, 222, 0.25),
+    rgba(255, 255, 255, 0.25)
+  );
+}
+.cloud {
+  background: url("../images/cloud.png");
+  height: 160px;
+  background-repeat: repeat-x;
+  margin-top: 3em;
+  animation: cloudanimation 9s linear infinite;
+}
+
+.city-inner {
+  background: url("../images/way.png");
+  width: 500%;
+  height: 650px;
+  position: absolute;
+  bottom: 0;
+  background-repeat: repeat-x;
+  animation: cityanimation 8s linear infinite;
+}
+
+.car {
+  position: absolute;
+  bottom: 7%;
+  left: 15%;
+  animation: caranimation 1s linear infinite;
+}
+
+@keyframes cloudanimation {
+  100% {
+    transform: translateX(1200px);
+    opacity: 0.4;
+  }
+}
+
+@keyframes cityanimation {
+  100% {
+    transform: translateX(-2500px);
+  }
+}
+
+@keyframes caranimation {
+  100% {
+    transform: translateY(-2px);
+  }
+  50% {
+    transform: translateY(1px);
+  }
+  0% {
+    transform: translateY(-2px);
+  }
+}
+
+.daytonight {
+  background: linear-gradient(180deg, rgb(16, 17, 29), rgb(0, 16, 58));
+}
+
+.cityanimation {
+  animation: cityanimation 5s linear infinite;
+}
+.caranimation {
+  animation: caranimation 1s linear infinite;
+}
+
+.game-starter {
+  width: 50%;
+  height: 40vh;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.8);
+  line-height: 40vh;
+}
+.game-starter h2 {
+  color: #fff;
+  font-size: 30px;
+  text-align: center;
+}
+.game-starter h2 span {
+  font-size: 40px;
+  color: aqua;
+  padding-right: 8px;
+}
+.cloudanimation{animation: cloudanimation 9s linear infinite;}
