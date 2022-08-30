@@ -14,9 +14,10 @@
     padding: 10px; }
   }
 body {
-  background-image: url("https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/f96b24df-1528-436c-85a5-2d88dfd5ee31/d4ml1pu-f0263e80-e77c-4b1f-b860-efcbb7b3a225.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOiIsImlzcyI6InVybjphcHA6Iiwib2JqIjpbW3sicGF0aCI6IlwvZlwvZjk2YjI0ZGYtMTUyOC00MzZjLTg1YTUtMmQ4OGRmZDVlZTMxXC9kNG1sMXB1LWYwMjYzZTgwLWU3N2MtNGIxZi1iODYwLWVmY2JiN2IzYTIyNS5qcGcifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6ZmlsZS5kb3dubG9hZCJdfQ.LhniuW-hVZvnuE1tBg1yDxwMq6i9KdfDP15hVtfGDM0"); }
+  background-image: url("https://www.bing.com/images/search?view=detailV2&ccid=xjHw6FGQ&id=27954412878A0E506782B4C2993085A6BF67501C&thid=OIP.xjHw6FGQky-pZNM3FU9csAHaEK&mediaurl=https%3a%2f%2fwallup.net%2fwp-content%2fuploads%2f2016%2f01%2f7436-video_games-BioShock-sunset-bokeh.jpg&exph=1080&expw=1920&q=gaming+pics&simid=608052122705802984&FORM=IRPRST&ck=FAC2434CB5418FC8A97A49244ABB34E9&selectedIndex=140&ajaxhist=0&ajaxserp=0")};
 p {
-  color: rgb(56, 15, 150);
+  text-align: center;
+  color: rgb(46, 15, 118);
   padding: 10px;
   font-size: 20px;
 }
@@ -25,12 +26,14 @@ h1 {
   color: red; }
 
 h2 {
+  text-align: initial;
   font-size: 25px;
   font-family: cursive;
   margin: 10px;
-  color: darkviolet; }
+  color: rgb(77, 0, 211); }
 
 #data {
+  align-items: center;
   border: 2px solid brown;
   border-collapse: collapse;}
   #data th, #data td {
