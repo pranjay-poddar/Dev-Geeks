@@ -5,7 +5,7 @@
 <h2 align="center"> A collection of vibrant frontend projects, mini-projects, components, animations, games and much more!</h2>
 
 <br>
-	<p text-align="center">For More Information log on to <a href="https://pranjay-poddar.github.io/Dev-Geeks/Repository_web_page/index.html" target="_blank">dev-geeks.netlify.app/repository_web_page</a></p>
+	<p text-align="center">For More Information log on to <a href="https://pranjay-poddar.github.io/Dev-Geeks/Repository_web_page/index.html" target="_blank">Dev-Geeks</a></p>
 <br>
 
   ![forthebadge](https://forthebadge.com/images/badges/uses-brains.svg)
