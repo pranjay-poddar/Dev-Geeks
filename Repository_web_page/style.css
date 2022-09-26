@@ -1,10 +1,10 @@
 body {
     font-family: Poppins, sans-serif;
-    background: #334d50;
+    background: #E5E1E6;
     /* fallback for old browsers */
-    background: -webkit-linear-gradient(to bottom, #cbcaa5, #334d50);
+    background: #E5E1E6;
     /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to bottom, #cbcaa5, #334d50);
+    background: #E5E1E6;
     /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     padding-left: 0px;
     padding-right: 0px;
@@ -18,7 +18,7 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-    background: #f74700;
+    background: #170F1E;
     border-radius: 100px;
     height: 10px !important;
     overflow-x: hidden;
@@ -84,7 +84,7 @@ body {
     height: 2px;
     bottom: 0;
     left: 0;
-    background-color: rgb(255, 255, 255);
+    background-color: #E5E1E6;
     visibility: hidden;
     transform: scaleX(0);
     transition: all 0.3s ease-in-out;
@@ -126,13 +126,13 @@ body {
     transition: --num 2s;
     counter-set: num var(--num);
     font: 800 40px system-ui;
-    --num: 28;
-    color: #f74700;
+    --num: 132;
+    color: #170F1E;
 }
 
 #value1::after {
     content: counter(num);
-    --num: 28;
+    --num: 132;
 }
 
 #value1:hover {
@@ -147,8 +147,8 @@ body {
     transition: --num 1s;
     counter-set: num var(--num);
     font: 800 40px system-ui;
-    --num: 10;
-    color: #f74700;
+    --num: 60;
+    color: #170F1E;
 }
 
 #value2::after {
@@ -163,8 +163,8 @@ body {
     transition: --num 1s;
     counter-set: num var(--num);
     font: 800 40px system-ui;
-    --num: 89;
-    color: #f74700;
+    --num: 261;
+    color: #170F1E;
 }
 
 #value3::after {
@@ -180,7 +180,7 @@ body {
     counter-set: num var(--num);
     font: 800 40px system-ui;
     --num: 10;
-    color: #f74700;
+    color: #170F1E;
 }
 
 #value4::after {
@@ -202,7 +202,7 @@ body {
 }
 
 .footer a {
-    color: #f74700;
+    color: #64E3FF;
 }
 
 @media (max-width: 1000px) {
@@ -254,8 +254,8 @@ body {
         font-weight: 600;
     }
     .pranjay-img {
-        height: 200px;
-        width: 200px;
+        height: 100px;
+        width: 100px;
     }
 }
 
