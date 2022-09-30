@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <!-- author -->
+  <meta name="author" content="Aiman Adlawan">
+  <!-- description -->
+  <meta name="description" content="Block Puzzle Javascript Application">
+  <!-- keywords -->
+  <meta name="keywords" content="block puzzle">
+  <!-- icon -->
+  <link rel='icon' href='libs/img/js.png' type='image/x-icon'>
+  <!-- font -->
+  <link href="https://fonts.googleapis.com/css?family=Muli&display=swap" rel="stylesheet">
+  <!-- css link -->
+  <link rel="stylesheet" href="css/style.css">
+  <title>Aimanski | Budget Tracker</title>
+</head>
+<body>
+  <div class='container'>
+
+    <div class='header'>
+      <h1>Budget Tracker</h1>
+    </div>
+
+    <div class="dashboard">
+      <!-- 1st dashBoard -->
+      <div class='hDashBoard'>
+        <div class="TDashBoard">
+          <h5>Enter a budget</h5>
+          <div class="budgetOptions">
+            <label for="">Select an option</label>
+            <select name="" id="option">
+              <option value="income">Income</option>
+              <option value="expense">Expense</option>
+            </select>
+          </div>
+          <div class='budgetDesc'>
+            <label for="" class='descLabel'>Please enter a description</label>
+            <input type="text" id='desc' placeholder="eg. salary">
+            <label for="" class='amountLabel'>Please enter an amount</label>
+            <input type="text" id='amount' placeholder="eg. 10">
+            <button class='submit'>Submit</button>
+          </div>
+        </div>
+        <div class="TBetween"></div>
+      </div>
+
+      <!-- second dashboard -->
+      <div class='jDashBoard'>
+        <div class="jTopDashBoard">
+          <div class="iDashBoard iIncome">
+            <h5>Income</h5>
+            <p class='incTotal'>$ 0.00</p>
+            <span class='incSum'>No Income Yet</span>
+          </div>
+          <div class='jBetween'></div>
+          <div class="iDashBoard iExpense">
+            <h5>Expenses</h5>
+            <p class='expTotal'>$ 0.00</p>
+            <span class='expSum'>No Expense Yet</span>
+          </div>
+          <div class='jBetween'></div>
+          <div class="iDashBoard iBalance">
+            <h5>Balance</h5>
+            <p class='balSum'>$ 0.00</p>
+            <span class='balPercent'>No Savings Yet</span>
+          </div>
+        </div>
+
+        <!-- bottom bar starts here -->
+        <div class="jBottomDashBoard">
+          <div class="bar">
+            <!-- scroll bar shows here -->
+          </div>
+        </div>
+      </div>
+      <!-- second dashboard eand -->
+    </div>
+    <!-- dashboard ends -->
+        
+    <!-- summary ends here -->
+    <div class='summary'>
+      <div class='income'>
+        <h5>Income Summary</h5>
+        <ul class='incomeSummary'>
+          <!-- income list goes here -->
+        </ul>
+      </div>
+      <div class='inBetween'></div>
+      <div class='expense'>
+        <h5>Expense Summary</h5>
+        <ul class='expenseSummary'>
+           <!-- expense list goes here--> 
+        </ul>
+      </div>
+    </div>
+    
+  </div>
+</body>
+<script src='js/vars.js'></script>
+<script src='js/script.js'></script>
+</html>

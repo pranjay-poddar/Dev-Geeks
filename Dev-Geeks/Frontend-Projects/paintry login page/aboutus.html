@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <style>
+        * {
+            box-sizing:border-box;
+        }
+        body{
+            font-family: cursive;
+            padding: 80px;
+            font-size: 15px;
+            margin:15px ;
+        }
+        .all {
+            background-attachment: no-repeat;
+            background-image:url("aboutbg.jpeg") ;
+            padding: 50px 50px 50px;
+            border-radius: 10px;
+            box-shadow: 0 30px 40px rgba(0,0,0.6);
+        }
+
+        .who{
+            font-family: cursive;
+            text-align: center;
+            color: black;
+            background-color: rgb(179, 78, 78);
+            border-radius: 20px;
+            background-color: red;
+             background-image: linear-gradient(to right,
+             rgba(70, 5, 5, 0.9) 25%,
+              rgba(214, 66, 66, 0.781) 50%,
+              rgba(70, 5, 5, 0.9) 75%);
+              color: white;
+              -webkit-animation: 4s linear 0s infinite alternate move_eye;
+             animation: 4s linear 0s infinite alternate move_eye;
+        }
+        h2{
+            margin-top: 40px;
+        }
+
+        button{
+            background-attachment: fixed;
+            background-color: rgb(0, 0, 0);
+            color:rgb(255, 255, 255) ;
+            margin: 20px;
+            width: 220px;
+            height: 36px;
+            border: none;
+            float: center;
+            border-radius: 5px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-weight: 500;
+            transition: all 1s ease;
+            cursor: pointer;
+            animation: down-bump 4s ease;
+
+        }
+
+        button:hover {
+            color: rgb(179, 78, 78);
+            background-color: bisque;
+            border-radius: 20px;
+            animation: reverse 3s ease;
+        }
+        select{
+            color: white;
+            border-radius: 30px;
+            float: center;
+            border-color: black;
+            background-color: rgb(0, 0, 0);
+            width: 20%;
+            height: 20%;
+        }
+        .heading{
+            text-align: center;
+            color: black;
+            font-family: cursive;
+            padding: 40px;
+            
+        }
+        input[type="submit"]{
+            padding-inline-end: 1px 1px;
+            cursor: grabbing;
+            color: white;
+            border-radius: 30px;
+            float: center;
+            border-color: black;
+            background-color: rgb(0, 0, 0);
+            width: 20%;
+            height: 20%;
+        }
+        
+        input[type="submit"]:hover {
+            color: rgb(179, 78, 78);
+            background-color: bisque;
+            border-color: bisque;
+            border-radius: 60px;
+            animation: reverse 3s ease;
+
+        }
+       
+        select:hover {
+            color: bisque;
+        } 
+    </style>
+</head>
+<body>
+    <div class="all">
+        <form action="">
+            <h1 class="heading"> About us </h1>
+            <div class="who"> 
+                <h2>Who are we?</h2>
+                <p>
+                We are trying to reach out world wide artists, irrespective of how skilled they are.
+                <br>
+                
+                You are free to contribute all your art works here, it will also help you to check your progess and your improvements. <br>
+                You can also check out other artists', who have contribued to this platform and get in touch with them. 
+                <br>
+                We have been grying to connect world wide artists through this social platform
+                <br>
+                We are proud Paintry Squad and pride ourselves for cming up with this idea and giving every fellow a chance.
+
+
+                <br>
+                Share your ideas and paint out your imaginations, because thinking has no limits.
+            </p>
+            <button class="contact-us">Know more</button>
+            </div> 
+
+            
+            
+
+            <p> Ask :
+                <select name="sub1" id="">
+                <option value="Subject">Select Appropriate Subject</option>
+                <option value="Guide">Guide</option>
+                <option value="Help">Visit help desk</option>
+                <option value="write" class="write">Write issue or Question</option>
+                </select>
+            </p>
+            <p>
+                <input type="submit" value="CONFIRM" name="submit" id="submit">
+            </p>
+        </form>
+    </div>   
+</body>
+</html>

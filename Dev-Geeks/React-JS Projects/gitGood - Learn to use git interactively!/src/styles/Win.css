@@ -1,0 +1,168 @@
+.wincontainer {
+    width: 20vw;
+    height: 220px;
+    margin: 15px;
+    background-image: url("../assets/win11wall.jpg");
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 2px 2px 4px rgb(0, 0, 0);
+}
+
+#winlight {
+    box-shadow: 2px 2px 4px gray;
+    background-color: white;
+}
+
+.topbar {
+    background-color: #252934;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 20px;
+    border-bottom: 1px solid gray;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    overflow: hidden;
+}
+
+.topbar>img {
+    padding: 5px;
+}
+
+.topbar>img:hover {
+    background-color: red;
+}
+
+#toplight {
+    background-color: rgb(232, 232, 232);
+    color: black;
+}
+
+#toplight>.foldername>p {
+    color: black;
+}
+
+#toplight>img {
+    background-color: red;
+}
+
+#toplight>img:hover {
+    background-color: rgb(255, 168, 168);
+}
+
+.foldername {
+    display: flex;
+    margin-left: 3px;
+}
+
+.foldername>p {
+    font-size: 10px;
+    margin-left: 4px;
+    color: white;
+}
+
+.content {
+    background-color: #15171f;
+    height: 100%;
+}
+
+#contentlight {
+    background-color: white;
+}
+
+#contentlight>.aftertop p {
+    color: black;
+}
+
+.aftertop {
+    display: flex;
+    align-items: center;
+    border: 1px solid gray;
+    margin-top: 3px;
+    width: 95%;
+    margin-inline: auto;
+}
+
+.aftertop>* {
+    margin-inline: 3px;
+}
+
+.aftertop p {
+    color: white;
+    font-size: 9px;
+    box-sizing: border-box;
+}
+
+.aftertop p:hover {
+    background-color: rgb(160, 160, 160);
+    cursor: context-menu;
+}
+
+.contentfiles {
+    display: flex;
+    justify-content: left;
+    flex-wrap: wrap;
+    margin-top: 10px;
+    width: 95%;
+    margin-inline: auto;
+}
+
+#contentfileslight>.fileeach p {
+    color: black;
+}
+
+#contentfileslight>.fileeach:hover {
+    background-color: rgb(127, 193, 255);
+}
+
+.fileeach {
+    width: 50px;
+    height: 50px;
+    border-radius: 2px;
+    padding: 2px;
+}
+
+.fileeach:hover {
+    background-color: rgb(160, 160, 160);
+    cursor: context-menu;
+}
+
+.fileeach>p {
+    font-size: 9px;
+    color: white;
+}
+
+.taskbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 19px;
+    background-color: transparent;
+    backdrop-filter: blur(15px);
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+#taskbarlight {
+    background-color: rgb(213, 255, 255);
+}
+
+.taskbar>*{
+    margin-inline: 3px;
+    padding: 2px;
+    border-radius: 2px;
+}
+
+.taskbar>*:hover {
+    background-color:rgb(139, 139, 139);
+    backdrop-filter: blur(3px);
+}
+
+@media (max-width: 1010px) {
+    .wincontainer {
+        display: none;
+    }
+}

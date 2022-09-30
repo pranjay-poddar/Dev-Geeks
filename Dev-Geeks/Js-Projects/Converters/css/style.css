@@ -1,0 +1,78 @@
+body {
+  padding: 2rem 1rem;
+  overflow-x: hidden;
+  background: center/cover url(../img/bg.png);
+  font: 700 1.2rem "Jura", sans-serif;
+  background: linear-gradient(63deg, #999 23%, transparent 23%) 0.44rem 0,
+    linear-gradient(63deg, transparent 74%, #999 78%),
+    linear-gradient(63deg, transparent 34%, #999 38%, #999 58%, transparent 62%),
+    #444;
+  background-size: 1rem 3rem;
+}
+
+.converter {
+  background-color: #999999de;
+  margin-bottom: 2rem;
+  padding: 1.3rem 2rem 2rem;
+  border: 0.1rem solid #808080;
+}
+
+input {
+  padding: 0.2rem;
+  font-size: 1.1rem;
+  outline: none;
+  border-radius: 0.1rem;
+  width: 20rem;
+  text-indent: 0.2rem;
+  background-color: #fdfdfd;
+}
+
+input:focus {
+  background-color: #f1f1f1;
+}
+
+footer {
+  background-color: #999999de;
+  border: 0.1rem solid #808080;
+}
+
+.footer-link:hover {
+  transition: 0.3s ease;
+  color: #cdd4df;
+}
+
+#loadingDiv {
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  background-color: #535353;
+}
+
+.loader {
+  width: 3.6rem;
+  height: 3.6rem;
+  background: center / contain no-repeat url(../img/loader.gif);
+}
+
+::selection {
+  color: #fdfdfd;
+  background-color: #444;
+}
+
+@media screen and (max-width: 450px) {
+  html {
+    font-size: 13px;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  html {
+    font-size: 11px;
+  }
+}

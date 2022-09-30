@@ -1,0 +1,205 @@
+/*###### BASIC ########*/
+nav,header,footer
+{
+    display:block;
+}
+body
+{
+    line-height: 1;
+    margin:0;
+}
+/*########## ADDING GRADIENT###############*/
+
+.contain{
+    width:100%;
+    margin:auto;
+    padding-top: 4%;
+    padding-bottom: 4%;
+}
+.contain.rows{
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.contain.first{
+    background: linear-gradient(#076dff,#65a5ff);
+}
+
+footer.footsy{
+    background-color: #666;
+    padding-left: 10%;
+}
+.footsy ul{
+    list-style: none;
+    text-align: left;
+}
+/*################# Row ##################*/
+
+.row{
+    width:100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.row::after{
+    display: table;
+    clear:both;
+    content:"";
+}
+
+.col-1{width: 8.33%}
+.col-2{width: 16.66%}
+.col-3{width: 25%}
+.col-4{width: 33.33%}
+.col-5{width: 41.66%}
+.col-6{width: 50%;
+margin: auto;}
+.col-7{width: 58.33%}
+.col-8{width: 66.66%}
+.col-9{width: 75%}
+.col-10{width: 83.33%}
+.col-11{width: 91.66%}
+.col-12{width: 100%}
+
+/*################ box ##################*/
+div.box{
+    background-color: white;
+    box-shadow: 0 0 0 0px rgba(0,0,0,.15);
+    padding: 8px;
+    margin: 5px;
+    border-radius: 5px;
+}
+/*############## styling #################*/
+
+h1.heading1{
+    color:white;
+    font-size: 36px;
+    text-align: center;
+}
+       /*######################### IMG STYLING ###############*/
+.imgatribute{
+    width: 100%;
+    height: 300px; 
+    border-radius: 10px;
+    box-shadow: -2px -2px 20px 2px rgba(0,0,0,.15), 2px 2px 17px 2px rgba(0,0,0,1);
+}
+div.imgresize{
+    box-sizing: inherit;
+    width: 100%;
+}
+.imgresize p{
+    text-align: center; 
+    text-transform: uppercase;
+}
+.imgresize h1{
+    text-shadow: 2px 2px 5px black;
+    text-align: center;
+}
+
+.why p{
+    font-size: 20px;
+    text-align: center;
+    margin: 10px;
+    margin-bottom: 30px;
+    color: #009999;
+}
+
+.why2{
+    font-size: 16px;
+    color: #009999;
+    margin: 10px;
+    text-align: center;
+}
+
+.why2h{
+    text-align: center;
+    color: #009999;
+    margin: 10px;
+    text-shadow: 1px 1px 1px black;
+}
+/*########################## BUTTON ######################*/
+button{
+    display: block;
+    font-size=32px;
+    font-weight: 900;
+    margin: 5px;
+    padding:15px 60px;
+    background-color: #0069ff;
+    color: white;
+    text-align: center;
+    border-radius: 7px;
+    border: none;
+}
+button.mybutton{
+    display: block;
+    margin: auto;
+}
+/*################ NAV BAR ###############*/
+nav {
+    width:100%;
+    margin:0;
+}
+
+nav ul{
+    background-color: #eee;
+    overflow: hidden;
+    margin:0;
+    padding:0;
+}
+
+ul.topbar li{
+    list-style: none;
+    float :left;
+}
+
+ul.topbar li.topbar-right{
+    float:right;
+}
+
+ul.topbar li a{
+    display: block;
+    text-decoration: none;
+    text-align:center;
+    min-height: 16px;
+    padding:10px;
+    text-transform: uppercase;
+    color:#666;
+}
+
+ul.topbar li a:hover{
+    background-color:#0080ff;
+    color: white;
+}
+
+ul.topbar li.dropdown{
+    display: none;
+}
+/*####### RESPONSIVE NAVBAR ###########*/
+@media screen and (max-width: 1000px)
+{
+    ul.topbar li:not(:nth-child(1)){
+        display:none;
+    }
+    ul.topbar li.dropdown{
+        display: block;
+        float:right;
+    }
+    ul.topbar.responsive li.dropdown{
+        position: absolute;
+        top:0;
+        right:0;
+    }
+    ul.topbar.responsive{
+        position: relative;
+    }
+    ul.topbar.responsive li{
+        display: inline;
+        float:none;
+    }
+    ul.topbar.responsive li a{
+        display: block;
+        text-align: left;
+    }
+    .col-4, .col-3, .col-2{
+        width:100%;
+    }
+}

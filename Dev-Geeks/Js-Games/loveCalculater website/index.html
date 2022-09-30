@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Love Calculator</title>
+    <!--  style link  -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- fontAvesome link  -->
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+
+    <!-- google fonts link  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    
+    <!-- header section  -->
+    <div class="container">
+        <h1>Love Percentage Calculator <i class="icon far fa-grin-hearts"></i></h1>
+    </div>
+    <div class="content container container--small">
+        <h1>Welcome to the house of Love Cupid</h1>
+  
+        <span class="hide-mobile">
+        <p style = "font-family:georgia,garamond,serif;font-size:23px;font-style:italic;">Love Cupid, the God of Love and Desire is here here to help you calculate the love percentage of 
+            you and your crush</p>
+  
+        <p style = "font-family:georgia,garamond,serif;font-size:23px;font-style:italic;" >Just Enter your name and your lover's name and get the value of how much do you love each other!</p></span>
+  
+        <h2>Happy Loving!</h2>
+
+    <!-- form section  -->
+    <div class="formInput"><form action="#">
+        <input type="text" name="name" id="personOne" placeholder="Write your name">
+        <input type="text" placeholder="Write your lover name" id="personTwo">
+    </form>
+    </div>
+
+    <!-- button section  -->
+    <div class="buttonSection">
+       <button onclick="onLob()" type="button">Calculate</button>
+       <h3 id="output"></h3>
+    </div>
+    
+
+    
+    <script src="index.js"></script>
+</body>
+</html>

@@ -1,0 +1,279 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Mate SC', serif;
+}
+
+#navbar{
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    position: relative; /* Set the navbar to fixed position */
+  top: 0; /* Position the navbar at the top of the page */
+  width: 100%;
+}
+
+#navbar ::before{
+    content: "";
+    background-color: black;
+    position: absolute;
+    top:0px;
+    left:0px;
+    height: 100%;
+    width:100%;
+    z-index: -1;
+    opacity: 0.2;
+}
+
+#logo{
+    margin: 0px 25px;
+}
+
+#logo img{
+    
+    width:80px;
+    height: 80px;
+}
+
+#navbar ul{
+    display: flex;
+    list-style: none;
+}
+
+#navbar ul li a{
+    font-size: 1rem;
+    color:white;
+    display: block;
+    padding: 0px 25px;
+    text-decoration: none;
+    border-radius: 20px;
+}
+
+#navbar ul li a:hover{
+    color:black;
+    background-color: white;
+    display: block;
+    padding: 0px 25px;
+    text-decoration: none;
+    border-radius: 20px;
+    transition: 0.5s ease-in-out;
+}
+
+
+#intro{
+    
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* padding:  20px 100px; */
+    color: rgb(92 57 11);
+    word-wrap: break-word;
+}
+
+.top{
+    position: relative;
+}
+
+.top::before{
+    content: "";
+    
+    position: absolute;
+    background: url("../Chilis-3.jpg") no-repeat center center/cover;
+    top:0px;
+    left:0px;
+    height: 100%;
+    width:100%;
+    z-index: -1;
+    opacity: 0.3;
+}
+
+#intro p{
+    text-align: center;
+    margin-top: 25px;
+    font-size: 1.2rem;
+}
+
+.h-primary{
+    font-size: 3.8rem;
+    text-align: center;
+    padding-top: 10px;
+}
+#bt1{
+    margin: 26px;
+    border: 5px solid rgb(92 57 11);
+    background-color: transparent;
+    font-size: 1.3rem;
+    border-radius: 15px;
+    padding: 5px 5px;
+    color: rgb(92 57 11);
+}
+
+#bt1:hover{
+    margin: 26px;
+    border: 5px solid white;
+    background-color:rgb(92 57 11) ;
+    font-size: 1.3rem;
+    border-radius: 15px;
+    padding: 5px 5px;
+    color: white;
+    cursor: pointer;
+    transition: 0.5s ease-in-out;
+}
+
+.servicesCont{
+    /* margin-top: 10px; */
+    color: rgb(48, 46, 48);
+    
+}
+
+.services{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 1px;
+    flex-wrap: wrap;
+}
+
+.box{
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+    border: 5px solid rgb(6, 52, 255);
+    margin: 20px 25px;
+    padding: 10px;
+    border-radius: 20px;
+    color: rgb(6, 52, 255);
+    background-color: rgb(48, 46, 48);
+}
+
+
+.box img{
+    display: block;
+    margin: 15px;
+    width: 350;
+    height: 250px;
+}
+
+.box p{
+    text-align: center;
+}
+
+.h-sec{
+    text-align: center;
+    font-size: 2rem;
+}
+
+.clientbox{
+    display: flex;
+    margin: 0px 10px;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+
+}
+
+.cl img{
+    height:100px;
+    margin: 20px;
+}
+
+.clients h1{
+    color: rgb(21 104 143);
+}
+
+.contactUS h1{
+    color: rgb(21 104 143);
+}
+.clients{
+    position: relative;
+    /* margin-top: 15px; */
+    
+}
+
+.clients::before{
+    content: "";
+    /* margin-top: 15px; */
+    background-image: url("../clients-1.jpg");
+    top: 0px;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.4;
+}
+.contactUS{
+    position: relative;
+}
+.contForm{
+    /* position: relative; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.3rem;
+    color: #03253d;
+    /* flex-direction: column; */
+}
+
+.contactUS input,
+.contactUS textarea{
+    border: 3px solid  #03253d;
+    
+    width: 100%;
+    padding: 0.5rem 0rem;
+    /* padding-left: 0.1rem; */
+    border-radius: 12px;
+    font-size: 1.1rem;
+}
+.contactUS::before{
+    content: "";
+    background-image: url("../Internet_Business_Technology_HD_Wallpaper_07_2560x1600.jpg");
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.4;
+}
+
+footer{
+    /* margin-top: 100px; */
+    text-align: center;
+    background-color: black;
+    color: white;
+    /* padding: 10px; */
+}
+
+/* .form-group{
+    text-align: center;
+} */
+
+.contactUS form{
+    width: 40%;
+}
+
+#bt2{
+    /* width: 50%; */
+    padding: 5px;
+    border-radius: 12px;
+    border: 3px solid  #03253d;
+    background-color: transparent;
+    width: 100%;
+    padding: 0.5rem 0rem;
+    border-radius: 10px;
+    background-color: transparent;
+    /* font-weight: 200; */
+    margin: 10px 0px;
+    cursor: pointer;
+    font-size: 1rem;
+    color: #03253d;
+    /* margin-left: 2%; */
+}
+
+#bt2:hover{
+    border-color: white;
+    color: white;
+    background-color: #03253d;
+    transition: 0.5s ease-in-out;
+}
+

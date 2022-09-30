@@ -1,0 +1,269 @@
+body {
+    font-family: Poppins, sans-serif;
+    background: #E5E1E6;
+    /* fallback for old browsers */
+    background: #E5E1E6;
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: #E5E1E6;
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+    overflow-y: scroll;
+    background: #f8f8f8;
+    box-shadow: inset 0 0 4px #707070;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #170F1E;
+    border-radius: 100px;
+    height: 10px !important;
+    overflow-x: hidden;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: black;
+    border-radius: 100px;
+    height: 50px !important;
+    overflow: auto;
+}
+
+
+/* ANIMATION  */
+
+.grow2 {
+    transition: all 0.01s ease-in-out;
+}
+
+.grow2:hover {
+    transform: scale(1.03);
+}
+
+.grow {
+    transition: all 0.2s ease-in-out !important;
+}
+
+.grow:hover {
+    transform: scale(1.1) !important;
+}
+
+.rotate {
+    transition: transform 0.5s ease-in-out;
+}
+
+.rotate:hover {
+    transform: rotate(360deg);
+}
+
+.object {
+    animation: MoveUpDown 3s linear infinite;
+    position: absolute;
+}
+
+@keyframes MoveUpDown {
+    0%,
+    100% {
+        bottom: 0;
+    }
+    50% {
+        bottom: 10px;
+    }
+}
+
+.middle {
+    position: relative;
+}
+
+.middle:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #E5E1E6;
+    visibility: hidden;
+    transform: scaleX(0);
+    transition: all 0.3s ease-in-out;
+}
+
+.middle:hover:before {
+    visibility: visible;
+    transform: scaleX(1);
+}
+
+
+/* Poster */
+
+#poster {
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+    overflow: hidden;
+}
+
+#poster>a>img:hover {
+    transition: transform 1s;
+    transform: scale(1.1);
+}
+
+#poster>a>img:not(:hover) {
+    transition: transform 1s;
+    transform: scale(1);
+}
+
+
+/* Numbers */
+
+@property --num {
+    syntax: "<integer>";
+    initial-value: 0;
+    inherits: false;
+}
+
+#value1 {
+    transition: --num 2s;
+    counter-set: num var(--num);
+    font: 800 40px system-ui;
+    --num: 132;
+    color: #170F1E;
+}
+
+#value1::after {
+    content: counter(num);
+    --num: 132;
+}
+
+#value1:hover {
+    --num: 35;
+}
+
+.pranjay-img {
+    border: 1px black solid;
+}
+
+#value2 {
+    transition: --num 1s;
+    counter-set: num var(--num);
+    font: 800 40px system-ui;
+    --num: 60;
+    color: #170F1E;
+}
+
+#value2::after {
+    content: counter(num);
+}
+
+#value2:hover {
+    --num: 3;
+}
+
+#value3 {
+    transition: --num 1s;
+    counter-set: num var(--num);
+    font: 800 40px system-ui;
+    --num: 261;
+    color: #170F1E;
+}
+
+#value3::after {
+    content: counter(num);
+}
+
+#value3:hover {
+    --num: 101;
+}
+
+#value4 {
+    transition: --num 1s;
+    counter-set: num var(--num);
+    font: 800 40px system-ui;
+    --num: 10;
+    color: #170F1E;
+}
+
+#value4::after {
+    content: counter(num);
+}
+
+#value4:hover {
+    --num: 20;
+}
+
+.contri {
+    width: 80%;
+}
+
+.footer {
+    text-align: center;
+    background-color: black;
+    color: white;
+}
+
+.footer a {
+    color: #64E3FF;
+}
+
+@media (max-width: 1000px) {
+    .contri {
+        height: 70vh;
+    }
+}
+
+@media (max-width: 768px) {
+    .contri {
+        height: 50vh;
+    }
+    .values h2 {
+        margin-top: 5vh;
+        font-size: 2rem;
+    }
+    .stat {
+        margin-top: 10vh;
+    }
+    .contri {
+        width: 100%;
+    }
+}
+
+@media (max-width: 513px) {
+    .contri {
+        height: 45vh;
+    }
+    .repo h1 {
+        margin: 5vh 0;
+        font-size: 1.7rem;
+    }
+    .repo h3 {
+        margin: 5vh 0;
+        font-size: 1.5rem;
+    }
+    .values h2 {
+        margin-top: 6vh;
+        font-size: 1.5rem;
+    }
+    .footer h4 {
+        font-size: 1rem;
+    }
+    .admin h1 {
+        font-size: 1.9rem;
+    }
+    .admin h2 {
+        font-size: 1.2rem;
+        font-weight: 600;
+    }
+    .pranjay-img {
+        height: 100px;
+        width: 100px;
+    }
+}
+
+@media (max-width: 370px) {
+    .contri {
+        height: 40vh;
+    }
+    .footer h4 {
+        font-size: 0.9rem;
+    }
+}

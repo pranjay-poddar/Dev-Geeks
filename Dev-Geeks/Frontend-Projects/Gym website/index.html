@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Apna Gym</title>
+    
+    <style>
+      
+      body {
+        background-color: rgb(106, 102, 102);
+        font-family: "georgia",garamond,serif;
+
+      }
+      h1 {
+        text-align: center;
+        font-family: "georgia",garamond,serif;
+      }
+      .navbar {
+        display: flex;
+        border: 2px solid black;
+        border-radius: 10px;
+        margin: 10px;
+        padding: 10px;
+        padding-left: 1000px;
+        background-color: black;
+      }
+      
+      body {
+        
+        background-image: linear-gradient(
+            rgba(255, 255, 255, 0.5),
+            rgba(255, 255, 255, 0.5)
+          ),
+          url(backimage.jpg);
+        height: 100%;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-position: 50% 50%;
+      }
+      a {
+        color: white;
+        font-family: "georgia",garamond,serif;
+      }
+      a:hover {
+        background-color: rgb(0, 255, 247);
+        border: 2px solid black;
+      }
+      p {
+        margin-left: 200px;
+      }
+      
+      form {
+        padding-left: 200px;
+        text-align: justify;
+        float: top;
+        font-size: 25px;
+      }
+      img {
+        display: inline-block;
+        position: fixed;
+        right: 8px;
+      }
+      #para {
+        font-size: 20px;
+        font-family: "Lucida Console", Courier, monospace;
+        font-weight: bold;
+      }
+      #para2 {
+        font-size: 20px;
+        font-family: "Lucida Console", Courier, monospace;
+      }
+      #footer {
+        font-size: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <a href="home.html">HOME 
+        </a> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+        &nbsp &nbsp &nbsp &nbsp 
+        <a href="aboutus.html">ABOUT US
+        </a> &nbsp &nbsp
+        &nbsp &nbsp &nbsp &nbsp &nbsp
+      </nav>
+    </header>
+    <h1><b>Welcome to Apna Gym</b></h1>
+
+    <p id="para">
+      Apna Gym provides a personalized, accessible, and inclusive place for your
+      workout! Achieve your individual fitness goals under the supervision of
+      certified trainers. Get added benefits of feature-loaded AF workouts App
+      absolutely free with your membership.The best of time-tested fitness
+      essentials combined with cutting-edge modern exercise science. Our
+      workouts are effective, safe, dynamic and fun. They do not make you feel
+      bored and monotonous unlike conventional gyms. We emphasize on movement,
+      full-body involvement, and quality form for optimal results.
+    </p>
+    <br />
+    <p id="para2">GIVE YOUR DETAILS TO GRAB THE MEMBERSHIP:-</p>
+    
+    <form action="">
+      <label for="name" size="25">Name</label> <br />
+      <input type="text" placeholder="Enter your name" size="25" required /><br />
+      <br />
+      <label for="age">Age</label><br />
+      <input type="text" placeholder="Enter your age" size="25" required/> <br />
+      <br />
+      <label for="email">Email </label><br />
+      <input type="email" placeholder="Enter your email" size="25" required/> <br />
+      <br />
+      <label for="phone">Phone number</label><br />
+      <input type="text" placeholder="Enter your phone number" size="25" required/> <br /><br />
+      <label for="location">Location</label><br />
+      <input type="text" placeholder="Enter your location" size="25" required/> <br /><br />
+      <label for="shift">Which shift do you prefer</label><br />
+      <input type="radio" id="morningshift" name="shift" value="morningshift" size="25" required/>
+      <label for="morningshift">Morning shift(8am to 11:30am)</label><br />
+      <input type="radio" id="eveningshift" name="shift" value="eveningshift" size="25" required/>
+      <label for="eveningshift">Evening shift(4pm to 9pm)</label><br /><br />
+      <input type="submit" style="height: 30px" size="25" required/><br />
+    </form>
+    <hr />
+    <div id="footer">
+      <p>Contact us:</p>
+      <p>7/A Amber Street , Kolkata-700098</p>
+      <p>Contact number - 033-12345678/9876543210</p>
+    </div>
+  </body>
+</html>

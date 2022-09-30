@@ -1,0 +1,100 @@
+.container {
+    position: relative;
+}
+
+.top-right {
+    position: absolute;
+    top: 8px;
+    right: 16px;
+}
+
+#search-field {
+    padding: 8px 15px;
+    width: 45%;
+    height: 30px;
+    font-size: 15px;
+    border-radius: 25px;
+    outline: none;
+    margin-top: 3%;
+    border: 1px solid #e2e2e2;
+    box-shadow: 1px 1px 1px #e2e2e2;
+}
+
+#search-field:hover {
+    box-shadow: 2px 2px 2px #e2e2e2;
+}
+
+#heading {
+    margin-top: 22vh;
+    width: 45vh;
+}
+
+#search-button {
+    padding: 2px;
+    width: 10%;
+    margin: 2% 1%;
+    height: 35px;
+    background-color: #f8f9fa;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    box-shadow: 1px 2px rgb(235, 235, 235);
+}
+
+#search-button:hover {
+    border: 0.5px solid #e2e2e2;
+    border-radius: 5px;
+    box-shadow: 1px 1px 1px #e2e2e2;
+}
+
+#images,
+#advance-search {
+    padding: 2px;
+    height: 35px;
+    border-radius: 2px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    color: black;
+    text-align: right;
+}
+
+#images:hover,
+#advance-search:hover {
+    text-decoration: underline;
+}
+
+
+/* For small screens */
+
+@media screen and (max-width: 790px) {
+    #search-field {
+        width: 60%;
+        font-size: 13px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    #search-field {
+        width: 70%;
+        height: 25px;
+        font-size: 13px;
+        margin-top: 15%;
+    }
+    #heading {
+        margin-top: 30vh;
+        width: 33vh;
+    }
+    #search-button {
+        width: 110px;
+        margin: 10% 1%;
+        height: 35px;
+        font-size: 85%;
+    }
+    #images,
+    #advance-search {
+        font-size: 15px;
+        text-align: center;
+    }
+}

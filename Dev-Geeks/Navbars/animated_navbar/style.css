@@ -1,0 +1,44 @@
+body{
+  font-family: sans-serif;
+  margin: 20px 40px;
+  }
+   #mainbox{
+    font-size: 24px;
+    margin-left: 4px;
+    cursor: pointer;
+    transition: all .6s;
+   }
+
+   .navbar-brand{
+     padding: 0px !important;
+   }
+
+   .sidemenu{
+    position: fixed;
+    top: 0px;
+    left: -5px;
+    height: 100%;
+    width: 0px;
+    background-color: #e06636;
+    padding-top: 100px;
+    overflow-x: hidden;
+    transition: all .5s;
+   }
+   .sidemenu a{
+    padding: 8px 8px 8px 64px;
+    text-decoration: none;
+    font-size: 25px;
+    color: rgb(15, 14, 14);
+    display: block;
+    font-family: 'Noto Sans', sans-serif;
+   }
+   .sidemenu a:hover{
+     color: white;
+   }
+   .sidemenu .closebtn{
+    position: absolute;
+    top: 0px;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 32px;
+   }

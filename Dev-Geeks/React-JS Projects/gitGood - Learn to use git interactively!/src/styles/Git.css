@@ -1,0 +1,204 @@
+* {
+    margin: 0;
+}
+
+.gitcontainer {
+    width: 20vw;
+    height: 220px;
+    border-radius: 5px;
+    margin: 15px;
+    background-color: #0D1117;
+    box-shadow: 2px 2px 4px rgb(0, 0, 0);
+}
+
+#gitlight {
+    background-color: white;
+    box-shadow: 2px 2px 4px gray;
+}
+
+.gitnav {
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    background-color: #171A22;
+    display: flex;
+    fill: white;
+    height: auto;
+}
+
+.childnav {
+    margin: 5px;
+}
+
+.gitafternav {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    color: white;
+}
+
+.gitafternav>h6 {
+    color: #58A4FB;
+}
+
+.gitafternav>p {
+    font-size: 10px;
+    padding-inline: 2px;
+    border: 1px solid gray;
+    border-radius: 10px;
+}
+
+.childafternav {
+    margin: 5px;
+}
+
+#afternavlight {
+    background-color: white;
+    color: black;
+}
+
+.branches {
+    display: flex;
+    margin-top: 3px;
+}
+
+.currentbranch {
+    background-color: #21262D;
+    padding: 2px 6px;
+    border-radius: 4px;
+}
+
+.currentbranch:hover {
+    background-color: #4b515a;
+    cursor: pointer;
+}
+
+.currentbranch>h6 {
+    margin-left: 3px;
+}
+
+.numberbranch>p {
+    font-size: 10px;
+    color: gray;
+}
+
+.numberbranch>* {
+    margin-inline: 1.5px;
+}
+
+#brancheslight {
+    background-color: white;
+    color: black;
+    margin-top: 0;
+    padding-top: 3px;
+}
+
+#brancheslight>.numberbranch {
+    color: black;
+}
+
+.flexi {
+    display: flex;
+    align-items: center;
+    color: white;
+    margin-inline: 7px;
+}
+
+.userinfo {
+    display: flex;
+    color: white;
+    background-color: #171A22;
+    width: 100%;
+    margin-inline: auto;
+    border-bottom: 1px solid gray;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+#userinfolight {
+    background-color: white;
+    color: black;
+}
+
+.userinfo>h6 {
+    margin: 10px;
+}
+
+.underline:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.blue:hover {
+    color: #58A4FB;
+}
+
+.codecontainer {
+    border: 1px solid gray;
+    border-radius: 5px;
+    width: 95%;
+    margin-inline: auto;
+    margin-top: 5px;
+}
+
+#codecontainerlight {
+    background-color: white;
+    color: black;
+}
+
+.dotremove {
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin-inline: auto;
+    list-style-type: none;
+    color: white;
+    border-bottom: 1px solid gray;
+}
+
+.dotremove>* {
+    margin-inline: 4px;
+    margin: 3.7px;
+}
+
+.spacebetween {
+    margin-right: auto;
+    flex-direction: row;
+    display: flex;
+    align-items: center;
+}
+
+.list-main>*:nth-child(4) {
+    border-bottom: 0;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.list-main {
+    opacity: 0;
+    transition: opacity 1s ease;
+    display: none;
+}
+
+#listpushed {
+    display: block;
+    opacity: 1;
+}
+
+#lilight {
+    color: black;
+}
+
+#lilight:hover {
+    color: #58A4FB;
+}
+
+.margin {
+    margin-left: 5px;
+}
+
+@media (max-width: 1010px) {
+    .gitcontainer {
+        width: 90vw;
+    }
+}

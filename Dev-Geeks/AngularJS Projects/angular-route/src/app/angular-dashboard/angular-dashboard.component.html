@@ -1,0 +1,49 @@
+<section class="memberDashPage">
+    <div class="container">
+      <mat-drawer-container class="example-container profilePanel" autosize>
+        <mat-drawer #drawer class="example-sidenav" mode="side">
+          <h2 class="text-center">MY PROFILE</h2>
+          <div class="accessoryTabs center">
+            <mat-list role="list">
+              <mat-list-item role="listitem">
+                 <a routerLink="/achievements"><h3 class="text-center">Achievements</h3></a>
+              </mat-list-item>
+              <mat-list-item role="listitem">
+                <a routerLink=""><h3 class="text-center">heading 1</h3></a>
+              </mat-list-item>
+              <mat-list-item role="listitem">
+                <a routerLink=""><h3 class="text-center">heading 2</h3></a>
+              </mat-list-item>
+              <mat-list-item role="listitem">
+                <a routerLink=""><h3 class="text-center">heading 3</h3></a>
+              </mat-list-item>
+  
+            </mat-list>          
+          </div>
+        </mat-drawer>
+      
+        <div class="example-sidenav-content">
+          <button type="button" class="btn btn-primary toggleBtn"(click)="drawer.toggle()">My Dashboard</button>
+        </div>
+        <div class="profileSec">
+          <figure class="center">
+            <img src="assets/images/customer-1.jpg">
+          </figure>
+          <div class="container">
+            <div class="textField center">
+              John Cena
+            </div>
+            <div class="textField center">
+              Designation
+            </div>
+            <div class="textField center">
+              some data
+            </div>
+          </div>
+        </div>
+      
+      </mat-drawer-container>
+      
+        
+    </div>
+  </section>

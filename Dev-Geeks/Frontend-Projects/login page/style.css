@@ -1,0 +1,132 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+.full-page{
+	height: 100%;
+	width: 100%;
+	background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),url(login1.jpg);
+	background-position: center;
+	background-size: cover;
+	position: absolute; 
+}
+
+.navbar{
+	display: flex;
+	align-items: center;
+	padding: 20px;
+	padding-left: 50px;
+	padding-right: 30px;
+	padding-top: 50px;
+}
+.loginbtn{
+	transition: 1s;
+}
+
+nav{
+	flex: 1;
+	text-align: right;
+}
+
+nav ul{
+	display: inline-block;
+	list-style: none;
+}
+
+nav ul li{
+	display: inline-block;
+	margin-right: 70px;
+}
+
+
+nav ul li a{
+	text-decoration: none;
+	font-size: 20px;
+	color: white;
+	font-family: sans-serif;
+}
+
+nav ul li button{
+	font-size: 20px;
+	color: white;
+	outline: none;
+	border: none;
+	background: transparent;
+	cursor: pointer;
+	font-family: sans-serif;
+}
+
+nav ul li button:hover{
+	color: aqua;
+}
+nav ul li a:hover{
+	color: aqua;
+}
+
+a{
+	text-decoration: none;
+	color: palevioletred;
+	font-size: 28px;
+}
+.login{  
+	width: 500px;  
+	overflow: hidden;  
+	margin: auto;  
+	margin: 20 0 0 450px;  
+	padding: 80px;  
+	background: #23463f;  
+	border-radius: 15px ;  
+	  
+}  
+h2{  
+text-align: center;  
+color: #277582;  
+padding: 20px;  
+}  
+label{  
+color: #08ffd1;  
+font-size: 17px;  
+}  
+#Uname{  
+width: 300px;  
+height: 30px;  
+border: none;  
+border-radius: 3px;  
+padding-left: 8px;  
+}  
+#Pass{  
+width: 300px;  
+height: 30px;  
+border: none;  
+border-radius: 3px;  
+padding-left: 8px;  
+  
+}  
+#log{  
+width: 300px;  
+height: 30px;  
+border: none;  
+border-radius: 17px;  
+padding-left: 7px;  
+color: blue;  
+
+
+}  
+span{  
+color: white;  
+font-size: 17px;  
+}  
+a{  
+float: right;  
+background-color: grey;  
+}  
+
+
+
+
+
+
+
+
+

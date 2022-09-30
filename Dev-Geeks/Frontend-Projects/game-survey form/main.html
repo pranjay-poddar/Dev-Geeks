@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang = "en">
+  <head>
+    <title>Project</title>
+    <meta name = "viewport" content = "width=device-width,initial-scale=1.0">
+    <link rel="stylesheet" href="mystyles.css">
+  </head>
+  <body>
+    <div id="container">
+      <h1 id="heading">Gaming Survey Form</h1>
+      <form id="details">
+        <br>
+        <div class="info">
+          <p>Name :</p>
+          <input type="text" name="fname" class="name" placeholder="First name" required>
+          <input type="text" name="lname" class="name" placeholder="Last name" required>
+        </div>
+        <br>
+        <div class="info">
+          <label for="E-mail">Email : </label>
+          <input type="email" name="email" class="control" placeholder="abcd@xyz.com" required>
+        </div>
+        <br>
+        <div class="info">
+          <label for="Gamesplayed">Number of games played : </label>
+          <input type="number" name="noofgames" class="control" placeholder="Games Played" required>
+        </div>
+        <div class="info">
+          <p>Experience : </p>
+          <label><input type="radio" name="exp" class="radio" value="bad">Bad</label>
+          <label><input type="radio" name="exp" class="radio" value="average">Average</label>
+          <label><input type="radio" name="exp" class="radio" value="good">Good</label>
+          <label><input type="radio" name="exp" class="radio" value="excellent">Excellent</label>
+        </div>
+        <br>
+        <div class="info">
+          <label for="Password">Password : </label>
+          <input type="password" name="password" class="control" placeholder="Enter password" required>
+        </div>
+        <br>
+        <div class="info">
+          <label for="confirm">Confirm Password : </label>
+          <input type="password" name="confirm" class="control" required>
+        </div>
+        <br>
+      </form>
+      <br>
+      <div class="button">
+        <center><button type="submit" class="but"><a href="home.html">Submit!</a></button></center>
+      </div>
+      <br>
+    </div>
+  </body>
+</html>

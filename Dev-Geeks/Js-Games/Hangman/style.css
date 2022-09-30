@@ -1,0 +1,304 @@
+/* Variabes */
+
+
+/* Mixin's */
+
+
+/* scrollbar start  */
+
+::-webkit-scrollbar {
+    width: 5px;
+    border-radius: 50%;
+}
+
+
+/* Track */
+
+ ::-webkit-scrollbar-track {
+    background: black;
+}
+
+
+/* Handle */
+
+ ::-webkit-scrollbar-thumb {
+    background: rgb(255, 158, 47);
+}
+
+
+/* Handle on hover */
+
+ ::-webkit-scrollbar-thumb:hover {
+    background: rgb(255, 140, 8);
+}
+
+
+/* scrollbar end  */
+
+.grow {
+    transition: all 0.3s ease-in-out;
+}
+
+.grow:hover {
+    transform: scale(1.1);
+}
+
+body {
+    background: #ececec;
+    font-family: 'Roboto', sans-serif;
+    color: black;
+    height: 100vh;
+    text-align: center;
+    font-size: 12px;
+}
+
+.badge1 {
+    font-size: 1.5em;
+    background-color: rgb(255, 158, 47);
+    border-radius: 25px;
+    padding: 0 5px 0 5px;
+}
+
+.badge2 {
+    font-size: 1.5em;
+    color: white;
+    text-transform: uppercase;
+    background-color: #170a46;
+}
+
+.badge4 {
+    font-size: 1.5em;
+    color: black;
+    text-transform: uppercase;
+    display: inline-block;
+}
+
+#alert1 {
+    z-index: 10;
+}
+
+.badge3 {
+    font-size: 1.5em;
+    color: black;
+    background-color: rgb(255, 158, 47);
+    width: 10em;
+    border-radius: 25px;
+}
+
+#clue {
+    display: none;
+    font-size: 1.5em;
+    color: black;
+    background-color: rgb(255, 158, 47);
+    width: 10em;
+    text-transform: uppercase;
+    border-radius: 5px;
+}
+
+#hold {
+    font-size: 220%;
+}
+
+.wrappper {
+    width: 100%;
+    margin: 0 auto;
+}
+
+#hint {
+    background-color: #170a46;
+    width: 120px;
+    color: white;
+}
+
+#hint:hover {
+    background-color: brown;
+    border: black solid 2px;
+}
+
+#reset {
+    background-color: #170a46;
+    width: 120px;
+    color: white;
+}
+
+#reset:hover {
+    background-color: rgb(83, 175, 74);
+    border: black solid 2px;
+}
+
+#catagoryName {
+    color: white;
+    font-weight: 800;
+}
+
+.wrappper:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+canvas {
+    color: white;
+    border: black solid 2px;
+    padding: 15px;
+    background-color: white;
+}
+
+h1,
+h2,
+h3 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 100;
+    text-transform: uppercase;
+    margin: 3px 0;
+}
+
+h1 {
+    font-size: 3em;
+}
+
+h2 {
+    font-size: 1.6em;
+}
+
+p {
+    font-size: 1.6em;
+}
+
+#alphabet {
+    margin: 10px auto;
+    padding: 0;
+    max-width: 650px;
+}
+
+#alphabet:after {
+    content: "";
+    display: inline-block;
+    clear: both;
+}
+
+#alphabet li {
+    float: left;
+    margin: 0 10px 10px 0;
+    list-style: none;
+    width: 40px;
+    height: 40px;
+    padding-top: 5px;
+    background: #170a46;
+    color: white;
+    font-size: 18px;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    -khtml-border-radius: 5px;
+    border: solid 1px #fff;
+    border-radius: 10px;
+}
+
+.rights {
+    font-size: 100%;
+}
+
+#alphabet li:hover {
+    background: #fc8f2a;
+    border: solid 1px black;
+    color: black;
+    transform: scale(1.1);
+}
+
+#my-word {
+    margin: 0;
+    display: block;
+    padding: 0;
+    display: block;
+}
+
+#my-word li {
+    position: relative;
+    list-style: none;
+    margin: 0;
+    display: inline-block;
+    padding: 0 10px;
+    font-size: 1.6em;
+}
+
+.active {
+    opacity: 0.4;
+    filter: alpha(opacity=40);
+    transition: all 1s ease-in;
+    -moz-transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    cursor: default;
+}
+
+.active:hover {
+    transition: all 1s ease-in;
+    -moz-transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    opacity: 0.4;
+    filter: alpha(opacity=40);
+    transition: all 1s ease-in;
+    -moz-transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+}
+
+#mylives {
+    font-size: 1.6em;
+    text-align: center;
+    display: block;
+}
+
+@media (max-width: 767px) {
+    #alphabet {
+        padding: 0;
+    }
+    #my-word li {
+        position: relative;
+        list-style: none;
+        margin: 0;
+        display: inline-block;
+        padding: 0 10px;
+        font-size: 1.2em;
+    }
+    #hint {
+        background-color: #170a46;
+        width: 90px;
+        font-size: 100%;
+        color: white;
+    }
+    #reset {
+        background-color: #170a46;
+        width: 90px;
+        font-size: 100%;
+        color: white;
+    }
+}
+
+@media (max-width: 500px) {
+    #alphabet {
+        padding: 0;
+    }
+    .badge1 {
+        font-size: 1.2em;
+        border-radius: 5px;
+    }
+    .badge2 {
+        font-size: 1.3em;
+        color: white;
+    }
+    .badge3 {
+        font-size: 1em;
+        color: black;
+        background-color: rgb(255, 158, 47);
+        width: 10em;
+        border-radius: 25px;
+    }
+    canvas {
+        color: white;
+        border: black solid 2px;
+        padding: 15px;
+        background-color: white;
+    }
+}

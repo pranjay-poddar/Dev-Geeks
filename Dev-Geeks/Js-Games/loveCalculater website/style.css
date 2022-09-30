@@ -1,0 +1,86 @@
+body{
+    background-color: #FDB9FC;
+    background-image: url("https://cdn.wallpapersafari.com/41/41/o9Lnfa.jpg");
+    background-size: cover;
+}
+
+/* header section  */
+.container{
+    text-align: center;
+}
+
+h1{
+    color: #5871ff;
+    font-size: 3rem;
+    font-family: 'Playfair Display', serif;
+    font-weight: bold;
+    
+
+}
+
+
+
+h2{
+    color: #FF5C58;
+    font-size: 3rem;
+    font-family: 'Playfair Display', serif;
+    
+   
+
+}
+
+
+
+.icon{
+    color: #ff0000;
+}
+
+
+/* form section  */
+
+.formInput{
+    text-align: center;
+    /* margin-top: 5rem; */
+    padding: 5% 16%;
+    
+}
+
+input{
+    border: 2px solid grey;
+    border-radius: 6px;
+    font-size: 1.5rem;
+    margin-left: 2rem;
+    color: #6D9886;
+    padding: 10px 60px;
+}
+
+input:focus{
+    background-color: lightblue;
+}
+
+
+/* button section */
+.buttonSection{
+    text-align: center;
+
+}
+
+button{
+    font-size: 1.2rem;
+    border: 2px solid gainsboro;
+    border-radius: 7px;
+    cursor: pointer;
+    color: #fff;
+    background-color: indianred;
+    padding: 10px 60px;
+
+}
+
+button:hover{
+    background-color: #FFB085;
+}
+
+h3{
+    font-size: 6rem;
+    color: indianred;
+}

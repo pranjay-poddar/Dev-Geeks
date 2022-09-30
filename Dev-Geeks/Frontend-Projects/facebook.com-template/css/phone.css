@@ -1,0 +1,44 @@
+*{
+    overflow: auto;
+    box-sizing: border-box;
+}
+header{
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    align-items: center;
+    justify-content: center;
+    
+}
+#logo{
+    flex: auto;
+}
+#logo h1{
+    padding: 1rem 0;
+}
+#login{
+    flex: auto;
+    padding: 0;
+}
+#left{
+    display: none;
+}
+#right{
+    align-items: center;
+    justify-content: center;
+    /* width: 100%; */
+}
+.sameheight{
+    width: 100%;
+    margin: 0.6rem auto;
+}
+.samewidth{
+    width: 49.5%;
+}
+.inpfield{
+    width: 80%;
+}
+
+#smallbirthday{
+    width: auto;
+}

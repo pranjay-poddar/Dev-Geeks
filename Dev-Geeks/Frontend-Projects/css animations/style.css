@@ -1,0 +1,93 @@
+p {
+  text-align: center;
+  font-size: 35px;
+}
+marquee {
+  margin: 10px;
+  /* padding: 10px; */
+  overflow: hidden;
+  position: relative;
+  border: 2px solid orange;
+  background-color: yellow;
+}
+header p:hover {
+  font-family: "Courier New", Courier, monospace;
+}
+.container {
+  width: 500px;
+  border: 3px solid red;
+  margin-left: 490px;
+  margin-top: 10px;
+  padding: 20px;
+  display: inline-block;
+  border-radius: 8px;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  font-size: 25px;
+  box-shadow: 50px 10px violet;
+}
+.box{
+  display: inline-block;
+  margin-top: 450px;
+  margin-left: 15px;
+  width: 150px;
+  height: 150px;
+  background-color: red;
+  position: absolute;
+  animation-name: moving;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  /* animation-delay: 0s; */
+}
+@keyframes moving{
+  0%{background-color: red;left: 0%;top: 0%;}
+  25%{background-color: magenta;left: 200px;top: 0%;}
+  50%{background-color: blue;left: 200px;top: 200px;}
+  75%{background-color: green;left: 0%;top: 200px;}
+  100%{background-color: red;left: 0%;top: 0%;}
+}
+.ball{
+  margin-left: 600px;
+
+}
+div ul{
+  display: flex;
+  border-bottom: 8px solid black;
+  margin-right: 400px;
+  margin-top: 150px;
+}
+div ul li{
+  width: 50px;
+  height: 50px;
+  background-color: black;
+  list-style: none;
+  margin: 0 10px;
+  border-radius: 50%;
+  animation: bouncy 1s linear infinite;
+}
+@keyframes bouncy{
+  0%{transform: translateY(0);}
+  50%{transform: translateY(-150px);}
+  100%{transform: translateY(0);}
+}
+#first{
+  animation-delay: 0.2s;
+  background-color: #fdcb6e;
+}
+#second{
+  animation-delay: 0.6ss;
+  background-color: #ff7675;
+}
+#third{
+  animation-delay: 0.4s;
+  background-color: #81ecec;
+}
+#fourth{
+  animation-delay: 0.8s;
+  background-color: #55efc4;
+}
+#fifth{
+  animation-delay: 0.5s;
+  background-color: #fd79a8;
+}

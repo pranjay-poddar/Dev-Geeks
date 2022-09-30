@@ -1,0 +1,87 @@
+body
+{
+  background-image: url('https://cdn.pixabay.com/photo/2015/12/03/08/50/paper-1074131_1280.jpg');
+  background: cover;
+}
+#title
+{
+  font-size: 50px;
+  font-family: sans-serif;
+  text-decoration: underline;
+}
+header
+{
+  background-color: rgb(83, 83, 83);
+}
+form
+{
+  background-color: rgb(48, 51, 53);
+}
+.text-center
+{
+  text-align: center;
+}
+label,p,a
+{
+  color: yellow;
+  font-family: cursive;
+  font-weight: bold;
+  text-decoration: none;
+}
+.container
+{
+  width: 800px;
+  margin: 3.125rem auto 0 auto;
+}
+.form-control
+{
+  display: block;
+  width: 600px;
+  height: 2.375rem;
+  color: green;
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 0.25rem;
+}
+.form-group
+{
+  margin-left: 100px;
+}
+.input-radio
+{
+  display: inline-block;
+  margin-left: 0.625rem;
+  min-height: 1.25rem;
+  min-width: 1.25rem;
+}
+
+.input-textarea
+{
+  min-height: 120px;
+  width: 600px;
+  resize: vertical;
+  border-radius: 5px;
+}
+.submit-button
+{
+  background-color: skyblue;
+  display: block;
+  width: 200px;
+  padding: 0.75rem;
+  color: black;
+  border-radius: 20px;
+  cursor: pointer;
+}
+.sub
+{
+  margin-left: 300px;
+}
+
+@media screen and (max-width: 426px)
+{
+  #title
+  {
+    font-size: 20px;
+  }
+
+}

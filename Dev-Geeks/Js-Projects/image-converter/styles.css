@@ -1,0 +1,79 @@
+body {
+    background-color: black !important;
+    overflow: hidden !important;
+    margin: 0 !important;
+}
+
+h1 {
+    color: #3baf8a !important;
+    margin-top: 0;
+    font-family: sans-serif;
+    border-radius: 25px;
+    padding: 10px;
+}
+
+input::-webkit-file-upload-button {
+    visibility: hidden;
+}
+
+input::before {
+    position: absolute;
+    left: 50%;
+    transform: translatex(-50%);
+    bottom: 50px;
+    content: "Select Image";
+    display: inline-block;
+    color: #3baf8a;
+    border: 3px solid #22644f;
+    border-radius: 40px;
+    padding: 5px 20px;
+    outline: none;
+    white-space: nowrap;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 18px;
+    letter-spacing: 4px;
+}
+
+input:hover::before {
+    border-color: #3baf8a;
+}
+
+#credits {
+    color: aliceblue;
+    text-align: center;
+    font-size: 15px;
+    position: absolute;
+    bottom: 10px;
+    left: 44%;
+    z-index: 100;
+}
+
+input:focus {
+    outline: none;
+}
+
+input:active::before {
+    background: -webkit-linear-gradient(top, #e3e3e3, #f9f9f9);
+}
+
+p {
+    font-family: sans-serif;
+    line-height: 14px;
+    background-clip: text;
+    -webkit-background-clip: text;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    /* text-fill-color: rgba(255, 255, 255, 0); */
+    -webkit-text-fill-color: rgba(255, 255, 255, 0);
+    background-size: 70vh;
+    background-position: center;
+    word-break: break-all;
+    letter-spacing: 0px;
+}
+
+button {
+    position: absolute;
+    bottom: 15px;
+    border: 2px solid #3baf8a;
+}

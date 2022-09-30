@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html><head>
+<meta name="viewport" content="user-scalable=1.0,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+<title>Text Editor</title>
+<link rel="stylesheet" type="text/css" href="style.css">
+<style>
+   body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+   }
+   .content {
+    box-sizing: border-box;
+    margin: 0 auto;
+    max-width: 680px;
+    padding: 20px;
+   }
+   #html-output {
+    white-space: pre-wrap;
+   }
+   #editor{
+    width:40em;
+    font-family:sans-serif;
+   }
+   #source-editor{
+   display:none;
+   }
+</style></head>
+<body><div class="content">
+<form action="" method="POST">
+      <h1>Text Editor<input type="button" class="btn btn-blue btn-s12 btn-10p24 btn-b6" style="float:right;" onclick="toggleEditor()" id="btn_lbl" value="Source Editor"></h1>
+      <input name="art_id" type="hidden"><table width="90%">
+      <tr><td>Title</td><td><input class="btn btn-block btn-10p24" name="title" type="text" placeholder="" style="border:1px solid #000;text-align:left;color:black"></td></tr>
+      </table><div id="visual-editor">
+      <p><b>Editor<b>
+      <div id="editor" class="pell"></div></div><div id="source-editor">
+      <p><b>Source Editor<b><p>
+      <textarea id="html-output" name="html-output" onchange="TextArea()" onblur="TextArea()" rows="20" cols="88" style="resize:none;font-family: sans-serif;"><b>Hello World</b></textarea>
+      </div>
+      <button type="submit" class="btn btn-green btn-10p24 btn-block" style="float:right;">Source Editor</button>
+</form>
+    </div>
+    <script src="script.js"></script>
+    <script>
+      var editor = window.pell.init({
+        element: document.getElementById('editor'),
+        actions: ['bold', 'italic', 'underline', 'heading1', 'heading2', 'olist', 'ulist', 'link', 'image', 'justifyLeft', 'justifyRight', 'justifyCenter', 'justifyFull'],
+        defaultParagraphSeparator: 'p',
+        onChange: function (html) {
+          document.getElementById('html-output').value   = html
+        }
+      })
+     editor.content.innerHTML = document.getElementById('html-output').value
+     function TextArea(){
+     editor.content.innerHTML = document.getElementById('html-output').value
+     }function toggleEditor() {
+     if (document.getElementById("source-editor").style.display == "none") {
+        document.getElementById("source-editor").style.display = "block";
+        document.getElementById("visual-editor").style.display = "none";
+        document.getElementById("btn_lbl").value = "Visual Editor";
+     } else {
+        document.getElementById("source-editor").style.display = "none";
+        document.getElementById("visual-editor").style.display = "block";
+        document.getElementById("btn_lbl").value = "Source Editor";
+     }
+     }
+    </script>
+</body>
+</html>
