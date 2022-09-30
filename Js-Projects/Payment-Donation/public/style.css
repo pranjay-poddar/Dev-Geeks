@@ -1,0 +1,35 @@
+body{
+    width:100vw;
+    height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background-image: url(background.jpg);
+    overflow:hidden;
+}
+.card {
+    display: grid;
+    grid-template-columns: 300px;
+    grid-template-rows: 210px 210px 80px;
+    grid-template-areas: "image" "text" "stats";
+    border-radius: 18px;
+    background: white;
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.9);
+    font-family: roboto;
+    text-align: center;
+  }
+  .card-image {
+    grid-area: image;
+    background:url("dermat.jpg");
+    border-top-left-radius:15px ;
+    border-top-right-radius:15px ;
+    background-size:cover,
+  }
+  .card-text {
+    grid-area: text;
+    margin: 25px;
+    font-family: 'Hellena Script', sans-serif;                                               
+  }
+  .card-stats {
+    grid-area: stats; 
+  }

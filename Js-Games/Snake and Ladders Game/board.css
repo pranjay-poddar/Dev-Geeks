@@ -1,0 +1,39 @@
+body {
+  background-color: rgb(240, 197, 231);
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: white;
+}
+
+.box {
+  position: relative;
+  display: inline-block;
+  height: 60px;
+  width: 60px;
+  margin: 10px;
+  text-align: center;
+  align-items: center;
+  vertical-align: top;
+}
+.player {
+  display: inline-block;
+  margin: 5px;
+  height: 15px;
+  width: 15px;
+  border-radius: 50px;
+}
+.one {
+  background: #ff0000;
+}
+.two {
+  background: #00ffff;
+}
+.snake {
+  background: #7e1228;
+}
+.ladder {
+  background: #098a09;
+}
+.little-text {
+  color: #fff;
+  font-size: 12px;
+}

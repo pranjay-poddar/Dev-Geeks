@@ -1,0 +1,104 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,900;1,700&display=swap");
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* CSS Resets */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: #4756df;
+}
+
+a:hover {
+  color: #ff7235;
+}
+
+body {
+  font-family: "Roboto", sans-serf;
+}
+
+nav {
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5rem 3.5rem;
+    background-color: #fcfcfc;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+}
+
+nav h1 {
+    color: #4756df;
+}
+  
+nav a {
+    color: #4756df;
+    transition: 0.3s;
+}
+nav a:hover {
+    color: #ff7235;
+    border-bottom: 2px solid #ff7235;
+}
+  
+nav ul {
+    display: flex;
+    gap: 1.9rem;
+}
+  
+nav ul li {
+    font-weight: 700;
+}
+
+.burger-menu {
+    color: #4756df;
+    font-size: 2rem;
+    border: 0;
+    background-color: transparent;
+    cursor: pointer;
+    display: none;
+}
+  
+@media (max-width:800px) {
+    nav {
+        padding: 1.5rem 1rem;
+    }
+    
+    nav ul {
+        position: fixed;
+        background-color: #fcfcfc;
+        flex-direction: column;
+        top: 86px;
+        left: 10%;
+        width: 80%;
+        text-align: center;
+        transform: translateX(120%);
+        transition: transform 0.5s ease-in;
+    }
+    
+    nav ul li {
+        margin: 8px;
+    }
+
+    .burger-menu {
+        display: block;
+    }
+    
+    nav ul.show {
+        transform: translateX(0);
+    }
+    
+}

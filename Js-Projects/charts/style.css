@@ -1,0 +1,92 @@
+/* scrollbar start  */
+
+::-webkit-scrollbar {
+    width: 5px;
+    border-radius: 50%;
+}
+
+
+/* Track */
+
+ ::-webkit-scrollbar-track {
+    background: black;
+}
+
+
+/* Handle */
+
+ ::-webkit-scrollbar-thumb {
+    background: rgb(109, 47, 255);
+}
+
+
+/* Handle on hover */
+
+ ::-webkit-scrollbar-thumb:hover {
+    background: rgb(81, 13, 238);
+}
+
+
+/* scrollbar end  */
+
+.grow {
+    transition: all 0.3s ease-in-out;
+}
+
+.grow:hover {
+    transform: scale(1.1);
+}
+
+body {
+    background: #ffffff;
+    font-family: 'Roboto', sans-serif;
+    color: black;
+    height: 100vh;
+    text-align: center;
+    font-size: 12px;
+}
+
+.charts {
+    margin: 5vh 0;
+}
+
+#hold {
+    font-size: 220%;
+}
+
+.wrappper {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.wrappper:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.heading {
+    text-transform: uppercase;
+    background-color: rgb(62, 128, 252);
+    text-align: center;
+    border-radius: 10px;
+    display: flex;
+    justify-self: center;
+}
+
+h1 {
+    margin-top: 44px !important;
+    margin-bottom: 6.5rem !important;
+}
+
+p {
+    font-size: 1.6em;
+}
+
+.rights {
+    font-size: 100%;
+}
+
+@media (max-width: 767px) {}
+
+@media (max-width: 500px) {}

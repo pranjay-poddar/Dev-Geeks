@@ -1,0 +1,256 @@
+.logo #agent{
+    width: 130px;
+    padding: 5px;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.navbar{
+    display: flex;
+    padding: 20px;
+    align-items: center;
+}
+
+nav{
+    flex: 1;
+    text-align: right;
+}
+
+nav ul{
+    display: inline-block;
+    list-style-type: none;
+}
+
+nav ul li{
+    display: inline-block;
+    margin-right: 20px;
+}
+
+a{
+    text-decoration: none;
+    color: #fff;
+}
+ a:hover{
+     color: brown;
+ }
+
+ body{
+     background:linear-gradient(to top, #fff 50%, purple 50% );
+     color: blueviolet;
+     
+     margin: 0;
+ }
+ #table{
+     width: 100%;
+     text-align: center;
+     position: relative;
+     margin: auto;
+     top: 0;
+     bottom: 0;
+     left: 0;
+     right: 0;
+     padding: 0px;
+
+ }
+ table td{
+     padding: 20px;
+ }
+ .first{
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px 2px goldenrod;
+    transition: 0.5s;
+
+}
+
+.first:hover{
+    transform:scale(1,1);
+    color: blueviolet;
+    box-shadow: 0px 0px 5px 7px blueviolet;
+}
+
+.btnm{
+    padding:5px 15px 5px 15px;
+    border-radius: 20px 4px 20px 4px;
+    border: none;
+    color: #fff;
+    
+}
+
+.btn1{
+    background-color: blue;
+}
+.btn2{
+    background-color: red;
+}
+.btn3{
+    background-color: green;
+}
+.btn4{
+    background-color: darkorange;
+}
+
+
+.cool{
+    text-align: left;
+    font-size: 45px;
+    color: white;
+    font-family: cursive;
+}
+/* contest */
+.offer{
+    background: radial-gradient(#fff);
+    margin-top: 80px;
+    padding: 30px;
+}
+
+.col-2 .offer_img{
+    padding: 50px;
+}
+.small-container{
+    max-width: 1080px;
+    margin: auto;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+.col-2{
+    flex-basis: 50%;
+    min-width: 300px;
+}
+.row{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+ .p{
+   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+   font-weight: bold;
+   font-size: medium;
+}
+ .h1{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+   font-weight: bold;
+   font-size: medium;
+}
+ .small{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+   font-weight: bold;
+   font-size: medium;
+}
+
+/* testimonial */
+.testimonial{
+    padding-top: 100px;
+}
+.testimonial .col-3{
+    text-align: center;
+    padding: 40px 20px;
+    box-shadow: 0 0 20px 0 rgba(0,0,0,0.1);
+    cursor: pointer;
+    transition: transform 0.5s;
+}
+.testimonial .col-3 img{
+    width: 50px;
+    margin-top: 20px;
+    border-radius: 50%;
+}
+.testimonial:hover{
+    transform:translateY(-10px)
+}
+.fas.fa-quote-left{
+    font-size: 34px;
+    color: #ff523b
+}
+.fas.fa-star{
+    color: #ff523b;
+}
+.far.fa-star{
+    color: #ff523b;
+}
+.col-3 p{
+    font-size: 12px;
+    margin: 12px 0;
+    color: grey;
+}
+.col-3 h3{
+    font-weight: 600;
+    color: #555;
+    font-size: 16px;
+}
+
+.small-container{
+    max-width: 1080px;
+    margin: auto;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+.col-3{
+    flex-basis: 30%;
+    min-width: 250px;
+    margin-bottom: 30px;
+}
+.col-3 img{
+     width: 100%;
+}
+
+/* footer */
+.footer{
+    background-color: black;
+    color: #ffd6d6;
+    font-size: 14px;
+    padding: 60px 0 20px;
+}
+.footer p{
+    color: #ffd6d6;
+}
+.footer h3{
+    color: #fff;
+    margin-bottom: 20px;
+}
+.footer-col-1 , .footer-col-2 , .footer-col-3 , .footer-col-4{
+    min-width: 250px;
+    margin-bottom: 20px;
+}
+.footer-col-1{
+    flex-basis: 30%;
+}
+.footer-col-2{
+    flex: 1;
+    text-align: center;
+}
+.footer-col-2 img{
+        width: 180px;
+        margin-bottom: 20px;
+}
+.footer-col-3 , .footer-col-4{
+    flex-basis: 12%;
+    text-align: center;
+}
+ul{
+    list-style-type: none;
+}
+.logo1{
+    margin-top: 20px;
+}
+.logo1 img{
+    width: 140px;
+}
+.footer hr{
+    border: none;
+    background-color: #b5b5b5;
+    height: 1px;
+    margin: 20px 0;
+}
+.Copyright{
+    text-align: center;
+    }
+.Copyright p{
+    color: grey;
+}

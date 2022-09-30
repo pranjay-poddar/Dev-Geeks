@@ -1,0 +1,101 @@
+    .container {
+        position: relative;
+    }
+    
+    .top-right {
+        position: absolute;
+        top: 8px;
+        right: 16px;
+    }
+    
+    #search-field {
+        padding: 8px 15px;
+        width: 45%;
+        height: 30px;
+        font-size: 15px;
+        border-radius: 25px;
+        outline: none;
+        box-shadow: 2px 2px rgb(235, 235, 235);
+        border: 0.5px solid #dddddd;
+        color: rgba(0, 0, 0, .87);
+    }
+    
+    #search-field:hover {
+        box-shadow: 1px 1px 1px #d4d4d4;
+    }
+    
+    #heading {
+        margin-top: 16vh;
+        width: 50vh;
+    }
+    
+    #search-button {
+        padding: 2px;
+        width: 130px;
+        margin: 2% 1%;
+        height: 35px;
+        font-size: 85%;
+        box-shadow: 2px 2px rgb(235, 235, 235);
+        border-radius: 2px;
+        background-color: #f8f8f8;
+        outline: none;
+        border: none;
+        cursor: pointer;
+    }
+    
+    #search-button:hover {
+        border: 0.5px solid #e2e2e2;
+        border-radius: 5px;
+        box-shadow: 1px 1px 1px #e2e2e2;
+    }
+    
+    #images,
+    #advance-search {
+        padding: 2px;
+        height: 35px;
+        outline: none;
+        border: none;
+        cursor: pointer;
+        text-decoration: none;
+        color: black;
+        text-align: right;
+        margin-left: 8px;
+    }
+    
+    #images:hover,
+    #advance-search:hover {
+        border-radius: 5px;
+        text-decoration: underline;
+    }
+    /* For small screens */
+    
+    @media screen and (max-width: 790px) {
+        #search-field {
+            width: 60%;
+            font-size: 13px;
+        }
+    }
+    
+    @media screen and (max-width: 576px) {
+        #search-field {
+            width: 70%;
+            height: 25px;
+            font-size: 13px;
+            margin-top: 10%;
+        }
+        #heading {
+            margin-top: 25vh;
+            width: 33vh;
+        }
+        #search-button {
+            width: 110px;
+            margin: 10% 1%;
+            height: 35px;
+            font-size: 85%;
+        }
+        #images,
+        #advance-search {
+            font-size: 15px;
+            text-align: center;
+        }
+    }

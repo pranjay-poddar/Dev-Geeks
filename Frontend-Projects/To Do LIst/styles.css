@@ -1,0 +1,136 @@
+body {
+  text-align: center;
+  background-color: rgb(39, 35, 35);
+  font-family: 'Ubuntu', sans-serif;
+}
+h1 {
+  font-size: 3rem;
+  padding-top: 1rem;
+  color: white;
+}
+
+h2 {
+  font-weight: bold;
+}
+
+#inputField {
+  padding: 0.8rem 0.5rem;
+  width: 80%;
+  border-radius: 4px;
+}
+
+.container {
+  border-radius: 5px;
+  width: 30%;
+  margin: 4rem 0;
+  /* background-color: rgb(218, 211, 211); */
+  background: linear-gradient(
+    to left,
+    rgb(202, 100, 53) 0%,
+    rgb(92, 5, 95) 100%
+  );
+  padding: 4rem 0;
+  margin-left: 35%;
+}
+
+.addbtn {
+  margin-top: 1.3rem;
+  padding: 0.8rem 1.4rem;
+  border-radius: 10px;
+  background-color: rgb(8, 245, 174);
+  border: none;
+  cursor: pointer;
+  font-size: 1.2rem;
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+.addbtn.activate {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.addbtn.activate:hover {
+  background-color: rgb(11, 98, 197);
+}
+
+.task-list li {
+  align-items: center;
+  margin-left: 2%;
+  width: 80%;
+  list-style: none;
+  line-height: 45px;
+  padding-top: 20px;
+  height: 45px;
+  background-color: #f2f2f2;
+  position: relative;
+  margin-bottom: 8px;
+  border-radius: 4px;
+  padding: 0 15px;
+  overflow: hidden;
+}
+
+.task-list .fas {
+  color: white;
+  background-color: rgb(231, 75, 75);
+  padding: 0.8rem;
+  border-radius: 4px;
+  position: absolute;
+  right: -45px;
+  margin-bottom: 2px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.task-list li:hover .fas {
+  right: 0px;
+}
+
+.container .task-list {
+  max-height: 250px;
+  overflow-x: auto;
+}
+
+.clearbtn {
+  margin-top: 1.3rem;
+  padding: 0.8rem 1.4rem;
+  border-radius: 10px;
+  background-color: rgb(145, 9, 187);
+  border: none;
+  cursor: pointer;
+  font-size: 1.2rem;
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+.clearbtn.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.clearbtn.active:hover {
+  background-color: rgb(87, 8, 235);
+  pointer-events: auto;
+}
+
+@media (min-width: 400px) and (max-width: 800px) {
+  .container {
+    width: 80%;
+    margin-left: 10%;
+  }
+
+  .task-list li {
+    /* margin-left: ; */
+    width: 80%;
+  }
+}
+@media (min-width: 801px) and (max-width: 1000px) {
+  .container {
+    width: 60%;
+    margin-left: 20%;
+  }
+}
+
+.to-do-block {
+  word-break: break-all;
+}

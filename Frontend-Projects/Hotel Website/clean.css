@@ -1,0 +1,11 @@
+.card:hover{
+    transform: translateY(-5px);
+}
+
+.form-label{
+    color: white;
+}
+
+a{
+    text-decoration: none;
+}

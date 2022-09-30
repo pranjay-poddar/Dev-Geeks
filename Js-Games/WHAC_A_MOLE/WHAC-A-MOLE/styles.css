@@ -1,0 +1,74 @@
+body{
+	background-image: linear-gradient(to right,rgb(225, 40, 40),rgb(234, 255, 0));
+	padding-right: 400px;
+}
+.grid {
+	width: 606px;
+	height: 606px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+.main{
+	position: absolute;
+	top:50%;
+	padding-top: 30px;
+	left: 50%;
+	transform: translate(-50% , -50%);
+}
+.square {
+	height: 200px;
+	width: 200px;
+	border: solid rgb(218, 25, 25) 1px;
+	min-height: 0px;
+}
+
+.mole {
+	background-image: url("mole.jpg");
+	background-size: cover;
+}
+
+.heading{
+   color: rgb(255, 208, 0);
+   padding-bottom: 2em; 
+}  
+
+.card{
+	height: 650px;
+	width: 650px;
+	position: absolute;
+	border-radius: 15px 50px 30px;;
+	top:50%;
+	left: 50%;
+	transform: translate(-50% , -50%);
+	color: aliceblue;
+	background-image: linear-gradient(3deg,rgb(219, 115, 115),yellow); 
+	border: 2px;
+	border: solid rgb(195, 237, 6) 8px;
+	border-right-color: red;
+	margin-top: 50px;
+}
+ 
+.button1:hover{
+	box-shadow: 0 12px 16px 0 rgba(249, 108, 0, 0.635), 0 17px 50px 0 rgba(206, 241, 6, 0.916);
+}
+
+.button1 {
+	box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+	height: 50px;
+	width: 100px;
+	color: red;
+	background-color: yellow;
+	font-size: x-large;
+	border-radius: 7rem;
+	font-family: 'Courier New', Courier, monospace;
+	border: solid rgb(255, 4, 4) 2px;
+}
+.score , .time{
+	color: rgb(255, 242, 0);
+	top:10%;
+}
+.subs{
+	width: 212px;
+	color: yellow;
+}

@@ -1,0 +1,22 @@
+*{
+    margin: 0;
+    color: #333;
+    font: 1em sans-serif;
+}
+#particles-js{
+    background: rgb(254, 254, 254);
+    height: 900px;
+    width: 100%;
+
+}
+#login{
+    background-color: rgb(255, 255, 255);
+    opacity:0.9;
+    padding: 2rem;
+    border: rgb(183, 164, 217) solid;
+    position: absolute;
+    top: 100px;
+    left: 50px;
+
+}
+

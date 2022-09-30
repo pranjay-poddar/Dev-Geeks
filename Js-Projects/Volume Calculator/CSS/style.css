@@ -1,0 +1,283 @@
+body {
+	padding-top: 20px;
+}
+.navbar h1{
+  text-align: center;
+  background-color: black;
+  color: white;
+  padding: 40px;
+}
+.container{
+    background-image: url("https://images.unsplash.com/photo-1527239441953-caffd968d952?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTF8fHBsYW5lJTIwY29sb3J8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60");
+    background-size: cover;
+}
+#calculate-rectangle,
+#calculate-circle,
+#calculate-triangle {
+	width: 280px !important;
+}
+
+#calculator input[type=text]:hover {
+	cursor: default;
+}
+
+#calculator {
+	font-family: helvetica, arial, sans-serif;
+	display: block;
+	width: 300px;
+	margin: 0 auto;
+	height: 360px;
+	padding: 20px 20px 20px 20px;
+	background-color: rgba(0, 0, 0, .2);
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	-o-border-radius: 5px;
+	-opera-border-radius: 5px;
+	-ms-border-radius: 5px;
+	-khtml-border-radius: 5px;
+	box-shadow: inset 0 1px 0 rgba(255, 255, 255, .75), inset 1px 0 0 rgba(255, 255, 255, .35), inset -1px 0 0 rgba(0, 0, 0, .35), inset 0 -1px 0 rgba(0, 0, 0, .65), 0 1px 3px rgba(0, 0, 0, .3), inset 0 -10px 200px rgba(0, 0, 0, .35), 0 20px 25px -10px rgba(0, 0, 0, .6);
+	-webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, .75), inset 1px 0 0 rgba(255, 255, 255, .35), inset -1px 0 0 rgba(0, 0, 0, .35), inset 0 -1px 0 rgba(0, 0, 0, .65), 0 1px 3px rgba(0, 0, 0, .3), inset 0 -10px 200px rgba(0, 0, 0, .35), 0 20px 25px -10px rgba(0, 0, 0, .6);
+	-moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, .75), inset 1px 0 0 rgba(255, 255, 255, .35), inset -1px 0 0 rgba(0, 0, 0, .35), inset 0 -1px 0 rgba(0, 0, 0, .65), 0 1px 3px rgba(0, 0, 0, .3), inset 0 -10px 200px rgba(0, 0, 0, .35), 0 20px 25px -10px rgba(0, 0, 0, .6);
+	-o-box-shadow: inset 0 1px 0 rgba(255, 255, 255, .75), inset 1px 0 0 rgba(255, 255, 255, .35), inset -1px 0 0 rgba(0, 0, 0, .35), inset 0 -1px 0 rgba(0, 0, 0, .65), 0 1px 3px rgba(0, 0, 0, .3), inset 0 -10px 200px rgba(0, 0, 0, .35), 0 20px 25px -10px rgba(0, 0, 0, .6);
+	-opera-box-shadow: inset 0 1px 0 rgba(255, 255, 255, .75), inset 1px 0 0 rgba(255, 255, 255, .35), inset -1px 0 0 rgba(0, 0, 0, .35), inset 0 -1px 0 rgba(0, 0, 0, .65), 0 1px 3px rgba(0, 0, 0, .3), inset 0 -10px 200px rgba(0, 0, 0, .35), 0 20px 25px -10px rgba(0, 0, 0, .6);
+	-ms-box-shadow: inset 0 1px 0 rgba(255, 255, 255, .75), inset 1px 0 0 rgba(255, 255, 255, .35), inset -1px 0 0 rgba(0, 0, 0, .35), inset 0 -1px 0 rgba(0, 0, 0, .65), 0 1px 3px rgba(0, 0, 0, .3), inset 0 -10px 200px rgba(0, 0, 0, .35), 0 20px 25px -10px rgba(0, 0, 0, .6);
+	-khtml-box-shadow: inset 0 1px 0 rgba(255, 255, 255, .75), inset 1px 0 0 rgba(255, 255, 255, .35), inset -1px 0 0 rgba(0, 0, 0, .35), inset 0 -1px 0 rgba(0, 0, 0, .65), 0 1px 3px rgba(0, 0, 0, .3), inset 0 -10px 200px rgba(0, 0, 0, .35), 0 20px 25px -10px rgba(0, 0, 0, .6);
+	-webkit-animation: calc .8s 1 ease-out;
+	-moz-animation: calc .8s 1 ease-out;
+	position: relative;
+	display: block;
+}
+
+#calculator div {
+	padding: 10px;
+	width: 280px;
+	margin-top: 20px;
+	margin-bottom: 12px;
+	height: 180px;
+	background-color: rgba(0, 0, 0, .2);
+	border-radius: 3px;
+	color: #000;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	-o-border-radius: 3px;
+	-opera-border-radius: 3px;
+	-ms-border-radius: 3px;
+	-khtml-border-radius: 3px;
+	box-shadow: inset 0 1px 2px -1px rgba(0, 0, 0, .1), inset 0 -1px 0 rgba(255, 255, 255, .4), inset 0 -100px 200px rgba(0, 0, 0, .2);
+	-webkit-box-shadow: inset 0 1px 2px -1px rgba(0, 0, 0, .1), inset 0 -1px 0 rgba(255, 255, 255, .4), inset 0 -100px 200px rgba(0, 0, 0, .2);
+	-moz-box-shadow: inset 0 1px 2px -1px rgba(0, 0, 0, .1), inset 0 -1px 0 rgba(255, 255, 255, .4), inset 0 -100px 200px rgba(0, 0, 0, .2);
+	-o-box-shadow: inset 0 1px 2px -1px rgba(0, 0, 0, .1), inset 0 -1px 0 rgba(255, 255, 255, .4), inset 0 -100px 200px rgba(0, 0, 0, .2);
+	-opera-box-shadow: inset 0 1px 2px -1px rgba(0, 0, 0, .1), inset 0 -1px 0 rgba(255, 255, 255, .4), inset 0 -100px 200px rgba(0, 0, 0, .2);
+	-ms-box-shadow: inset 0 1px 2px -1px rgba(0, 0, 0, .1), inset 0 -1px 0 rgba(255, 255, 255, .4), inset 0 -100px 200px rgba(0, 0, 0, .2);
+	-khtml-box-shadow: inset 0 1px 2px -1px rgba(0, 0, 0, .1), inset 0 -1px 0 rgba(255, 255, 255, .4), inset 0 -100px 200px rgba(0, 0, 0, .2);
+}
+
+#calculator hr {
+	display: block;
+	height: 1px;
+	/*margin-top: -1%;*/
+	position: relative;
+	clear: both;
+	padding: 0;
+	width: 100%;
+	border: none !important;
+}
+
+input,
+isindex,
+input::-webkit-input-list-button {
+	display: block;
+	border: none !important;
+	-webkit-appearance: none !important;
+}
+
+#calculator input[type=text] {
+	width: 50px;
+	padding: 0 2px;
+	text-indent: .4em;
+	text-align: right;
+	height: 25px;
+	margin-right: 4px;
+	border: none !important;
+	display: inline;
+	clear: both;
+	letter-spacing: .1em;
+	color: #F3E8A3;
+	background-color: #999;
+	filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#80ffffff', endColorstr='#1affffff');
+	background: -webkit-gradient(linear, left top, left bottom, from(#292929), color-stop(50%, #5f5f5f), color-stop(50%, #1a1a1a), to(#000000));
+	background: -moz-linear-gradient(top, #434343, #5e5e5e 50%, #181818 51%, #010101);
+	background: -o-linear-gradient(top, #434343, #5e5e5e 50%, #181818 51%, #010101);
+	background: -ms-linear-gradient(top, #434343, #5e5e5e 50%, #181818 51%, #010101);
+	box-shadow: inset 40px 0 50px rgba(0, 0, 0, .6), inset -40px 0 50px rgba(0, 0, 0, .6), 0 1px 0 rgba(255, 255, 255, .3), 0 -1px 0 rgba(0, 0, 0, .3);
+	-webkit-box-shadow: inset 40px 0 50px rgba(0, 0, 0, .6), inset -40px 0 50px rgba(0, 0, 0, .6), 0 1px 0 rgba(255, 255, 255, .3), 0 -1px 0 rgba(0, 0, 0, .3);
+	-moz-box-shadow: inset 40px 0 50px rgba(0, 0, 0, .6), inset -40px 0 50px rgba(0, 0, 0, .6), 0 1px 0 rgba(255, 255, 255, .3), 0 -1px 0 rgba(0, 0, 0, .3);
+	-o-box-shadow: inset 40px 0 50px rgba(0, 0, 0, .6), inset -40px 0 50px rgba(0, 0, 0, .6), 0 1px 0 rgba(255, 255, 255, .3), 0 -1px 0 rgba(0, 0, 0, .3);
+	-opera-box-shadow: inset 40px 0 50px rgba(0, 0, 0, .6), inset -40px 0 50px rgba(0, 0, 0, .6), 0 1px 0 rgba(255, 255, 255, .3), 0 -1px 0 rgba(0, 0, 0, .3);
+	-ms-box-shadow: inset 40px 0 50px rgba(0, 0, 0, .6), inset -40px 0 50px rgba(0, 0, 0, .6), 0 1px 0 rgba(255, 255, 255, .3), 0 -1px 0 rgba(0, 0, 0, .3);
+	-khtml-box-shadow: inset 40px 0 50px rgba(0, 0, 0, .6), inset -40px 0 50px rgba(0, 0, 0, .6), 0 1px 0 rgba(255, 255, 255, .3), 0 -1px 0 rgba(0, 0, 0, .3);
+	text-shadow: 0 0 2px rgba(255, 255, 255, .8), 0 0 15px rgba(255, 255, 255, .8);
+}
+
+#calculator span {
+	float: left;
+	width: 100%;
+	margin: 10px 0;
+}
+
+#calculator span span {
+	float: none;
+	display: inline-block;
+	width: 70px;
+	margin: 0;
+}
+
+.result {
+	margin-left: 10px !important;
+}
+
+.result span {
+	width: 100px !important;
+	text-align: right;
+	margin-right: 10px !important;
+}
+
+#calculator input[type=button] {
+	width: 80px;
+	float: left;
+	margin: 10px;
+	white-space: normal !important;
+	padding: 0 !important;
+	height: 25px;
+	line-height: 15%;
+	text-align: center;
+	border-radius: 3px;
+	/*float: left;*/
+	font-size: 100%;
+	box-sizing: normal;
+	box-shadow: 0 1px 0 rgba(255, 255, 255, .2), 0 -1px 0 rgba(0, 0, 0, .4), inset 0 1px 0 rgba(255, 255, 255, .15), inset 0 20px 20px -10px rgba(255, 255, 255, .1), inset 0 -1px 0 rgba(0, 0, 0, 1);
+	-webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, .2), 0 -1px 0 rgba(0, 0, 0, .4), inset 0 1px 0 rgba(255, 255, 255, .15), inset 0 20px 20px -10px rgba(255, 255, 255, .1), inset 0 -1px 0 rgba(0, 0, 0, 1);
+	-moz-box-shadow: 0 1px 0 rgba(255, 255, 255, .2), 0 -1px 0 rgba(0, 0, 0, .4), inset 0 1px 0 rgba(255, 255, 255, .15), inset 0 20px 20px -10px rgba(255, 255, 255, .1), inset 0 -1px 0 rgba(0, 0, 0, 1);
+	-o-box-shadow: 0 1px 0 rgba(255, 255, 255, .2), 0 -1px 0 rgba(0, 0, 0, .4), inset 0 1px 0 rgba(255, 255, 255, .15), inset 0 20px 20px -10px rgba(255, 255, 255, .1), inset 0 -1px 0 rgba(0, 0, 0, 1);
+	-opera-box-shadow: 0 1px 0 rgba(255, 255, 255, .2), 0 -1px 0 rgba(0, 0, 0, .4), inset 0 1px 0 rgba(255, 255, 255, .15), inset 0 20px 20px -10px rgba(255, 255, 255, .1), inset 0 -1px 0 rgba(0, 0, 0, 1);
+	-ms-box-shadow: 0 1px 0 rgba(255, 255, 255, .2), 0 -1px 0 rgba(0, 0, 0, .4), inset 0 1px 0 rgba(255, 255, 255, .15), inset 0 20px 20px -10px rgba(255, 255, 255, .1), inset 0 -1px 0 rgba(0, 0, 0, 1);
+	-khtml-box-shadow: 0 1px 0 rgba(255, 255, 255, .2), 0 -1px 0 rgba(0, 0, 0, .4), inset 0 1px 0 rgba(255, 255, 255, .15), inset 0 20px 20px -10px rgba(255, 255, 255, .1), inset 0 -1px 0 rgba(0, 0, 0, 1);
+	border: none !important;
+	background-color: rgba(0, 0, 0, .6);
+	color: rgba(255, 255, 255, .8);
+	text-shadow: 0 -1px 0 rgba(0, 0, 0, .5);
+	cursor: pointer;
+}
+
+#calculator input[type=button].function {
+	text-shadow: 0 1px 0 rgba(255, 255, 255, 1);
+	background-color: rgba(255, 255, 255, .7);
+	color: rgba(0, 0, 0, .8);
+	box-shadow: 0 1px 0 rgba(255, 255, 255, .1), 0 -1px 0 rgba(0, 0, 0, .25), inset 0 1px 0 rgba(255, 255, 255, .5), inset 0 20px 20px -10px rgba(255, 255, 255, .2), inset 0 -1px 0 rgba(0, 0, 0, .6);
+	-webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, .1), 0 -1px 0 rgba(0, 0, 0, .25), inset 0 1px 0 rgba(255, 255, 255, .5), inset 0 20px 20px -10px rgba(255, 255, 255, .2), inset 0 -1px 0 rgba(0, 0, 0, .6);
+	-moz-box-shadow: 0 1px 0 rgba(255, 255, 255, .1), 0 -1px 0 rgba(0, 0, 0, .25), inset 0 1px 0 rgba(255, 255, 255, .5), inset 0 20px 20px -10px rgba(255, 255, 255, .2), inset 0 -1px 0 rgba(0, 0, 0, .6);
+	-o-box-shadow: 0 1px 0 rgba(255, 255, 255, .1), 0 -1px 0 rgba(0, 0, 0, .25), inset 0 1px 0 rgba(255, 255, 255, .5), inset 0 20px 20px -10px rgba(255, 255, 255, .2), inset 0 -1px 0 rgba(0, 0, 0, .6);
+	-opera-box-shadow: 0 1px 0 rgba(255, 255, 255, .1), 0 -1px 0 rgba(0, 0, 0, .25), inset 0 1px 0 rgba(255, 255, 255, .5), inset 0 20px 20px -10px rgba(255, 255, 255, .2), inset 0 -1px 0 rgba(0, 0, 0, .6);
+	-ms-box-shadow: 0 1px 0 rgba(255, 255, 255, .1), 0 -1px 0 rgba(0, 0, 0, .25), inset 0 1px 0 rgba(255, 255, 255, .5), inset 0 20px 20px -10px rgba(255, 255, 255, .2), inset 0 -1px 0 rgba(0, 0, 0, .6);
+	-khtml-box-shadow: 0 1px 0 rgba(255, 255, 255, .1), 0 -1px 0 rgba(0, 0, 0, .25), inset 0 1px 0 rgba(255, 255, 255, .5), inset 0 20px 20px -10px rgba(255, 255, 255, .2), inset 0 -1px 0 rgba(0, 0, 0, .6);
+	font-size: 150%;
+}
+
+#calculator input[type=button].function:hover {
+	background-color: rgba(255, 255, 255, .8);
+	color: black;
+	box-shadow: 0 1px 0 rgba(255, 255, 255, .25), 0 -1px 0 rgba(0, 0, 0, .25), inset 0 -1px 0 rgba(0, 0, 0, .5), inset 0 1px 0 rgba(255, 255, 255, .5), inset 0 0 20px white;
+	-webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, .25), 0 -1px 0 rgba(0, 0, 0, .25), inset 0 -1px 0 rgba(0, 0, 0, .5), inset 0 1px 0 rgba(255, 255, 255, .5), inset 0 0 20px white;
+	-moz-box-shadow: 0 1px 0 rgba(255, 255, 255, .25), 0 -1px 0 rgba(0, 0, 0, .25), inset 0 -1px 0 rgba(0, 0, 0, .5), inset 0 1px 0 rgba(255, 255, 255, .5), inset 0 0 20px white;
+	-o-box-shadow: 0 1px 0 rgba(255, 255, 255, .25), 0 -1px 0 rgba(0, 0, 0, .25), inset 0 -1px 0 rgba(0, 0, 0, .5), inset 0 1px 0 rgba(255, 255, 255, .5), inset 0 0 20px white;
+	-opera-box-shadow: 0 1px 0 rgba(255, 255, 255, .25), 0 -1px 0 rgba(0, 0, 0, .25), inset 0 -1px 0 rgba(0, 0, 0, .5), inset 0 1px 0 rgba(255, 255, 255, .5), inset 0 0 20px white;
+	-ms-box-shadow: 0 1px 0 rgba(255, 255, 255, .25), 0 -1px 0 rgba(0, 0, 0, .25), inset 0 -1px 0 rgba(0, 0, 0, .5), inset 0 1px 0 rgba(255, 255, 255, .5), inset 0 0 20px white;
+	-khtml-box-shadow: 0 1px 0 rgba(255, 255, 255, .25), 0 -1px 0 rgba(0, 0, 0, .25), inset 0 -1px 0 rgba(0, 0, 0, .5), inset 0 1px 0 rgba(255, 255, 255, .5), inset 0 0 20px white;
+	text-shadow: 0 1px 0 rgba(255, 255, 255, 1);
+}
+
+.last {
+	margin-right: 0 !important;
+	clear: right;
+}
+
+#calculator input[type=button].clearButton {
+	background-color: red;
+	color: rgba(255, 255, 255, .8);
+	box-shadow: 0 1px 0 rgba(255, 255, 255, .2), 0 -1px 0 rgba(0, 0, 0, .4), inset 0 1px 0 rgba(255, 255, 255, .15), inset 0 -30px 30px -20px rgba(0, 0, 0, .3), inset 0 -1px 0 rgba(0, 0, 0, 1);
+	-webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, .2), 0 -1px 0 rgba(0, 0, 0, .4), inset 0 1px 0 rgba(255, 255, 255, .15), inset 0 -30px 30px -20px rgba(0, 0, 0, .3), inset 0 -1px 0 rgba(0, 0, 0, 1);
+	-moz-box-shadow: 0 1px 0 rgba(255, 255, 255, .2), 0 -1px 0 rgba(0, 0, 0, .4), inset 0 1px 0 rgba(255, 255, 255, .15), inset 0 -30px 30px -20px rgba(0, 0, 0, .3), inset 0 -1px 0 rgba(0, 0, 0, 1);
+	-o-box-shadow: 0 1px 0 rgba(255, 255, 255, .2), 0 -1px 0 rgba(0, 0, 0, .4), inset 0 1px 0 rgba(255, 255, 255, .15), inset 0 -30px 30px -20px rgba(0, 0, 0, .3), inset 0 -1px 0 rgba(0, 0, 0, 1);
+	-opera-box-shadow: 0 1px 0 rgba(255, 255, 255, .2), 0 -1px 0 rgba(0, 0, 0, .4), inset 0 1px 0 rgba(255, 255, 255, .15), inset 0 -30px 30px -20px rgba(0, 0, 0, .3), inset 0 -1px 0 rgba(0, 0, 0, 1);
+	-ms-box-shadow: 0 1px 0 rgba(255, 255, 255, .2), 0 -1px 0 rgba(0, 0, 0, .4), inset 0 1px 0 rgba(255, 255, 255, .15), inset 0 -30px 30px -20px rgba(0, 0, 0, .3), inset 0 -1px 0 rgba(0, 0, 0, 1);
+	-khtml-box-shadow: 0 1px 0 rgba(255, 255, 255, .2), 0 -1px 0 rgba(0, 0, 0, .4), inset 0 1px 0 rgba(255, 255, 255, .15), inset 0 -30px 30px -20px rgba(0, 0, 0, .3), inset 0 -1px 0 rgba(0, 0, 0, 1);
+}
+
+#calculator input[type=button].clearButton:hover {
+	background-color: red;
+	color: white;
+	box-shadow: 0 1px 0 rgba(255, 255, 255, .2), 0 -1px 0 rgba(0, 0, 0, .4), inset 0 1px 0 rgba(255, 255, 255, .15), inset 0 30px 30px -20px rgba(0, 0, 0, .05), inset 0 -1px 0 rgba(0, 0, 0, 1);
+	-webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, .2), 0 -1px 0 rgba(0, 0, 0, .4), inset 0 1px 0 rgba(255, 255, 255, .15), inset 0 30px 30px -20px rgba(0, 0, 0, .05), inset 0 -1px 0 rgba(0, 0, 0, 1);
+	-moz-box-shadow: 0 1px 0 rgba(255, 255, 255, .2), 0 -1px 0 rgba(0, 0, 0, .4), inset 0 1px 0 rgba(255, 255, 255, .15), inset 0 30px 30px -20px rgba(0, 0, 0, .05), inset 0 -1px 0 rgba(0, 0, 0, 1);
+	-o-box-shadow: 0 1px 0 rgba(255, 255, 255, .2), 0 -1px 0 rgba(0, 0, 0, .4), inset 0 1px 0 rgba(255, 255, 255, .15), inset 0 30px 30px -20px rgba(0, 0, 0, .05), inset 0 -1px 0 rgba(0, 0, 0, 1);
+	-opera-box-shadow: 0 1px 0 rgba(255, 255, 255, .2), 0 -1px 0 rgba(0, 0, 0, .4), inset 0 1px 0 rgba(255, 255, 255, .15), inset 0 30px 30px -20px rgba(0, 0, 0, .05), inset 0 -1px 0 rgba(0, 0, 0, 1);
+	-ms-box-shadow: 0 1px 0 rgba(255, 255, 255, .2), 0 -1px 0 rgba(0, 0, 0, .4), inset 0 1px 0 rgba(255, 255, 255, .15), inset 0 30px 30px -20px rgba(0, 0, 0, .05), inset 0 -1px 0 rgba(0, 0, 0, 1);
+	-khtml-box-shadow: 0 1px 0 rgba(255, 255, 255, .2), 0 -1px 0 rgba(0, 0, 0, .4), inset 0 1px 0 rgba(255, 255, 255, .15), inset 0 30px 30px -20px rgba(0, 0, 0, .05), inset 0 -1px 0 rgba(0, 0, 0, 1);
+}
+
+#calculator input[type=button].clearButton:active {
+	background-color: red;
+	color: white;
+	box-shadow: 0 1px 0 rgba(255, 255, 255, .2), 0 -1px 0 rgba(0, 0, 0, .4), inset 0 0 30px -5px rgba(0, 0, 0, .3);
+	-webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, .2), 0 -1px 0 rgba(0, 0, 0, .4), inset 0 0 30px -5px rgba(0, 0, 0, .3);
+	-moz-box-shadow: 0 1px 0 rgba(255, 255, 255, .2), 0 -1px 0 rgba(0, 0, 0, .4), inset 0 0 30px -5px rgba(0, 0, 0, .3);
+	-o-box-shadow: 0 1px 0 rgba(255, 255, 255, .2), 0 -1px 0 rgba(0, 0, 0, .4), inset 0 0 30px -5px rgba(0, 0, 0, .3);
+	-opera-box-shadow: 0 1px 0 rgba(255, 255, 255, .2), 0 -1px 0 rgba(0, 0, 0, .4), inset 0 0 30px -5px rgba(0, 0, 0, .3);
+	-ms-box-shadow: 0 1px 0 rgba(255, 255, 255, .2), 0 -1px 0 rgba(0, 0, 0, .4), inset 0 0 30px -5px rgba(0, 0, 0, .3);
+	-khtml-box-shadow: 0 1px 0 rgba(255, 255, 255, .2), 0 -1px 0 rgba(0, 0, 0, .4), inset 0 0 30px -5px rgba(0, 0, 0, .3);
+	text-shadow: 0 0 4px white;
+}
+
+#calculator input[type=button]:hover {
+	background-color: rgba(0, 0, 0, .8);
+	color: white;
+	text-shadow: 0 -1px 0 black;
+}
+
+#calculator input[type=button]:active {
+	color: #F3E8A3;
+	text-shadow: 0 0 4px white, 0 0 20px rgba(255, 255, 255, 1);
+	box-shadow: 0 1px 0 rgba(255, 255, 255, .2), inset 0 0 30px -5px rgba(0, 0, 0, .4), inset 0 -1px 0 rgba(0, 0, 0, 1);
+	-webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, .2), inset 0 0 30px -5px rgba(0, 0, 0, .4), inset 0 -1px 0 rgba(0, 0, 0, 1);
+	-moz-box-shadow: 0 1px 0 rgba(255, 255, 255, .2), inset 0 0 30px -5px rgba(0, 0, 0, .4), inset 0 -1px 0 rgba(0, 0, 0, 1);
+	-o-box-shadow: 0 1px 0 rgba(255, 255, 255, .2), inset 0 0 30px -5px rgba(0, 0, 0, .4), inset 0 -1px 0 rgba(0, 0, 0, 1);
+	-opera-box-shadow: 0 1px 0 rgba(255, 255, 255, .2), inset 0 0 30px -5px rgba(0, 0, 0, .4), inset 0 -1px 0 rgba(0, 0, 0, 1);
+	-ms-box-shadow: 0 1px 0 rgba(255, 255, 255, .2), inset 0 0 30px -5px rgba(0, 0, 0, .4), inset 0 -1px 0 rgba(0, 0, 0, 1);
+	-khtml-box-shadow: 0 1px 0 rgba(255, 255, 255, .2), inset 0 0 30px -5px rgba(0, 0, 0, .4), inset 0 -1px 0 rgba(0, 0, 0, 1);
+}
+
+#calculator input[type=button].function:active {
+	background-color: rgba(255, 255, 255, .8);
+	color: black;
+	box-shadow: 0 1px 0 rgba(255, 255, 255, .25), 0 -1px 0 rgba(0, 0, 0, .25), inset 0 0 3px rgba(0, 0, 0, .6), inset 0 0 30px -5px rgba(0, 0, 0, .2);
+	-webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, .25), 0 -1px 0 rgba(0, 0, 0, .25), inset 0 0 3px rgba(0, 0, 0, .6), inset 0 0 30px -5px rgba(0, 0, 0, .2);
+	-moz-box-shadow: 0 1px 0 rgba(255, 255, 255, .25), 0 -1px 0 rgba(0, 0, 0, .25), inset 0 0 3px rgba(0, 0, 0, .6), inset 0 0 30px -5px rgba(0, 0, 0, .2);
+	-o-box-shadow: 0 1px 0 rgba(255, 255, 255, .25), 0 -1px 0 rgba(0, 0, 0, .25), inset 0 0 3px rgba(0, 0, 0, .6), inset 0 0 30px -5px rgba(0, 0, 0, .2);
+	-opera-box-shadow: 0 1px 0 rgba(255, 255, 255, .25), 0 -1px 0 rgba(0, 0, 0, .25), inset 0 0 3px rgba(0, 0, 0, .6), inset 0 0 30px -5px rgba(0, 0, 0, .2);
+	-ms-box-shadow: 0 1px 0 rgba(255, 255, 255, .25), 0 -1px 0 rgba(0, 0, 0, .25), inset 0 0 3px rgba(0, 0, 0, .6), inset 0 0 30px -5px rgba(0, 0, 0, .2);
+	-khtml-box-shadow: 0 1px 0 rgba(255, 255, 255, .25), 0 -1px 0 rgba(0, 0, 0, .25), inset 0 0 3px rgba(0, 0, 0, .6), inset 0 0 30px -5px rgba(0, 0, 0, .2);
+	text-shadow: 0 0 4px white;
+}
+
+.calculatorSelected {
+	background: white;
+	color: #F3E8A3 !important;
+	background-color: rgba(0, 0, 0, .8) !important;
+}
+.footer h2{
+    color: white;
+    background-color: black;
+    padding: 30px;
+    text-align: center;
+}

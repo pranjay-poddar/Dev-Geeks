@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Snake and Ladder Game</title>
+		<meta name="keywords" content="Snake And Ladder, HTML5 Game" />
+		<meta name="description" content="Snake and Ladder Game un HTML5 and Vannila JavaScript. Object orineted implementaion. No Canvas." />
+		<meta name="author" content="Sudipta Swain" />
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<link rel="stylesheet" type="text/css" href="board.css">
+	</head>
+	<body>
+		<div id="boardContainer"></div>
+		<div class="player-holder">
+			<div>
+				<span>Player 1:</span>
+				<span class="player one"></span>
+				<button onclick="move(0)" id='play0'>Play</button>
+				<span class="player0"></span>
+			</div>
+			<div>
+				<span>Player 2:</span>
+				<span class="player two"></span>
+				<button onclick="move(1)" id='play1' disabled>Play</button>
+				<span class="player1"></span>
+			</div>
+		</div>
+		<div class='button-holder'>
+			<button onclick='reset()'>Reset</button>
+		</div>
+		<script type="text/javascript" src="board.js"></script>
+	</body>
+</html>

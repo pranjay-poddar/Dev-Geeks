@@ -1,0 +1,37 @@
+*{
+    justify-content: center;
+    text-align: center;
+}
+.container{
+    height: 700px;
+    width: 400px;
+    background-color: grey;
+    text-align: center;
+    justify-content: center;
+    margin-left: 480px;
+    margin-top: 20px;
+    padding: 10px;
+}
+h1{
+    text-align: center;
+    justify-content: center;
+}
+.login{
+    height: 200px;
+    width: 400px;
+    background-color: grey;
+    text-align: center;
+    justify-content: center;
+    margin-left: 480px;
+    margin-top: 200px;
+    padding: 10px;
+}
+body{
+    background-color: lightblue;
+    font-family: sans-serif;
+    font-size: 16px;
+}
+h2{
+    font-family: 'Courier New', Courier, monospace;
+    font-style: bold italic;
+}

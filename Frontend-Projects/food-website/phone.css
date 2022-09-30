@@ -1,0 +1,48 @@
+#navbar{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* height: auto; */
+    
+}
+#navbar ul li a{
+    padding: 0px 15px;
+    
+}
+#logo img{
+    margin: auto;
+}
+#home{
+    height: 450px;
+    padding: 0;
+}
+#home::before{
+    height: 454px;
+}
+#home p{
+    font-size: 15px;
+}
+
+#services{
+    flex-direction: column;
+}
+#services .box{
+    margin: 10px 0;
+}
+#services .box img {
+    /* height: auto; */
+    height: 100px;
+    
+    /* width: auto; */
+}
+
+.clients{
+    flex-wrap: wrap;
+}
+#contact_box{
+    margin: auto;
+}
+#contact_box form {
+    width: 70%;
+}
+

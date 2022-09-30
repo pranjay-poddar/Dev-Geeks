@@ -1,0 +1,62 @@
+<html>
+  <head>
+    <script
+      src="https://kit.fontawesome.com/628c8d2499.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" type="text/css" />
+    <script src="script.js"></script>
+  </head>
+  <body>
+    <nav class="navMenu">
+      <a href="#" onclick="return showEnc();">Encrypt</a>
+      <a href="#" onclick="return showDec();">Decrypt</a>
+    </nav>
+    <div class="login-box" id="encrypt">
+        <h2>Encrypt</h2>
+        <form name="enc">
+          <div class="user-box">
+            <input type="text" name="plain" required="">
+            <label>Plaintext</label>
+          </div>
+          <div class="user-box">
+            <input type="text" name="key" required="">
+            <label>Key</label>
+          </div>
+          <a href="#" onclick="return encrypt();">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            Encrypt
+          </a>
+        </form>
+      </div>
+    <div class="login-box" id="decrypt" style="visibility: hidden;">
+        <h2>Decrypt</h2>
+        <form name="dec">
+          <div class="user-box">
+            <input type="text" name="cipher" required="">
+            <label>Ciphertext</label>
+          </div>
+          <div class="user-box">
+            <input type="text" name="key" required="">
+            <label>Key</label>
+          </div>
+          <a href="#" onclick="return decrypt();">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            Decrypt
+          </a>
+        </form>
+      </div>
+      <div class="output-box" id="output-box"></div>
+  </body>
+</html>

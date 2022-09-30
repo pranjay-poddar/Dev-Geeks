@@ -1,0 +1,96 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+body {
+  font-family: "Poppins", sans-serif;
+}
+.wrapper {
+  width: 1200px;
+  margin: 100px auto;
+}
+.title {
+  text-align: center;
+  margin-bottom: 60px;
+}
+.title h4 {
+  text-transform: capitalize;
+  font-size: 36px;
+  position: relative;
+  display: inline-block;
+  padding-bottom: 10px;
+}
+.title h4 span {
+  display: block;
+  font-size: 18px;
+  font-style: italic;
+  margin-bottom: 10px;
+}
+.title h4:before {
+  position: absolute;
+  content: "";
+  width: 100px;
+  height: 2px;
+  background-color: #ff7720;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.menu {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.single-menu {
+  flex-basis: 580px;
+  margin-bottom: 40px;
+  padding-bottom: 40px;
+  border-bottom: 1px solid #ddd;
+}
+.single-menu:nth-child(5),
+.single-menu:nth-child(6) {
+  border-bottom: 0;
+}
+.single-menu {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.single-menu:hover img {
+  border-radius: 0;
+}
+.single-menu img {
+  max-width: 180px;
+  margin-right: 30px;
+  border-radius: 50%;
+  border: 1px solid #ddd;
+  padding: 3px;
+  transition: 0.5s;
+}
+.single-menu h4 {
+  text-transform: capitalize;
+  font-size: 22px;
+  border-bottom: 1px dashed #333;
+  margin-bottom: 5px;
+  padding-bottom: 5px;
+}
+.single-menu h4 span {
+  float: right;
+  color: black;
+  font-style: italic;
+}
+body {
+  background-image: linear-gradient(
+      rgba(255, 255, 255, 0.5),
+      rgba(255, 255, 255, 0.5)
+    ),
+    url(background.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+h1{
+    text-decoration: underline;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}

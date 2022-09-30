@@ -1,0 +1,85 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    background-color: rgb(231, 227, 222);
+    padding-top: 30px;
+}
+.rule-heading{
+    color:rgb(19, 18, 18) ;
+    position: absolute;
+    left: 17%;
+    top: 30%;
+    font-size: 2rem;
+    font-weight: bolder;
+  }
+  .rule1{
+    position: absolute;
+    left: 17%;
+    top: 40%;
+    color: rgb(19, 18, 18);
+    font-size: 1rem;
+    font-weight: bold;
+  }
+  .rule2{
+    position: absolute;
+    left: 17%;
+    top: 40%;
+    color: rgb(19, 18, 18);
+    font-size: 1rem;
+    font-weight: bold;
+  }
+  .rule3{
+    position: absolute;
+    left: 17%;
+    top: 44%;
+    color: rgb(19, 18, 18);
+    font-size: 1rem;
+    font-weight: bold;
+  }
+  .rule4{
+    position: absolute;
+    left: 17%;
+    top: 52%;
+    color: rgb(19, 18, 18);
+    font-size: 1rem;
+    font-weight: bold;
+  }
+#game{
+    width: 400px;
+    height: 500px;
+    border: 3px solid black;
+    margin: auto;
+    overflow: hidden;
+}
+#character{
+    width: 25px;
+    height: 25px;
+    background-color: rgb(247, 102, 6);
+    border-radius: 50%;
+    position: relative;
+    top: 400px;
+    left: 190px;
+    z-index: 1000000;
+}
+.block{
+    width: 400px;
+    height: 20px;
+    background-color: rgb(17, 17, 17);
+    position: relative;
+    top: 100px;
+    margin-top: -20px;
+   
+}
+.hole{
+    width: 40px;
+    height: 20px;
+    background-color: rgb(231, 227, 222);
+    position: relative;
+    top: 100px;
+    margin-top: -20px;
+}
+
+ 

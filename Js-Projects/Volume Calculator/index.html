@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>volume calculator</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="jsfile.js"></script>
+</head>
+<body>
+    <div class="navbar">
+        <h1>Volume Calculator</h1>
+
+    </div>
+<div class="container">
+<form id="calculator" name="calculator">
+	<input id="rectangleButton" class="calculatorSelected" type="button" value="Rectangle" onclick="javascript:rectangleSelect();">
+	<input id="circleButton" type="button" value="Circle" onclick="javascript:circleSelect();">
+	<input id="triangleButton" type="button" value="Triangle" onclick="javascript:triangleSelect();">
+	<hr>
+	<div>
+		<span id="calc-diameter" style="display: none;"><span>Diameter:</span> <input type="text" name="diameter">ft<br></span>
+		<span id="calc-width"><span>Width:</span> <input type="text" name="width">ft<br></span>
+		<span id="calc-length"><span>Length:</span> <input type="text" name="length">ft<br></span>
+		<span id="calc-side1" style="display: none;"><span>Side 1:</span> <input type="text" name="side1">ft<br></span>
+		<span id="calc-side2" style="display: none;"><span>Side 2:</span> <input type="text" name="side2">ft<br></span>
+		<span id="calc-side3" style="display: none;"><span>Side 3:</span> <input type="text" name="side3">ft<br></span>
+		<span id="calc-depth"><span>Depth:</span> <input type="text" name="depth">in<br></span>
+	</div>
+	<hr>
+	<input id="calculate-rectangle" type="button" value="Calculate" onclick="javascript:rectangle();">
+	<input id="calculate-circle" type="button" value="Calculate" onclick="javascript:circle();" style="display: none;">
+	<input id="calculate-triangle" type="button" value="Calculate" onclick="javascript:triangle();" style="display: none;">
+	<span class="result"><span>Result:</span> <input type="text" name="total"> Yards</span>
+</div>
+</form>
+<div class="footer">
+    <h2>This calculator is used to calculate volume of rectangle, circle and triangle</h2>
+</div>
+</body>
+</html>
