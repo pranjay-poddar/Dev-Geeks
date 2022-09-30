@@ -65,22 +65,35 @@ function kelvinConverter(value) {
 // length converter
 const inputFeet = document.getElementById("inputFeet");
 const inputMeters = document.getElementById("inputMeters");
+const inputMillimeters = document.getElementById("inputMillimeters");
 const inputInches = document.getElementById("inputInches");
 const inputCm = document.getElementById("inputCm");
 const inputYards = document.getElementById("inputYards");
 const inputKilometers = document.getElementById("inputKilometers");
 const inputMiles = document.getElementById("inputMiles");
 
+function millimetersConverter(value) {
+  inputMeters.value = (value * 0.001).toFixed(5); // m=mm/0.001
+  inputInches.value = (value * 0.0393701).toFixed(5); // in=mm*0393701
+  inputCm.value = (value * 0.1).toFixed(5); // cm=mm/0.1
+  inputYards.value = (value * 0.00109361).toFixed(5); // yd=ft*0.33333
+  inputKilometers.value = (value * 0.000001).toFixed(7); // km=ft/3280.8
+  inputMiles.value = (value * 0.00000062137119223733).toFixed(8); // mi=m*00000062137119223733.00018939
+  inputFeet.value = (value * 0.00328084).toFixed(7); // ft=m*3.2808
+}
+
 function feetConverter(value) {
+  inputMillimeters.value = (value * 304.8).toFixed(5) //mm=ft/0.00328084
   inputMeters.value = (value / 3.2808).toFixed(2); // m=ft/3.2808
   inputInches.value = (value * 12).toFixed(2); // in=ft*12
   inputCm.value = (value / 0.032808).toFixed(0); // cm=ft/0.032808
-  inputYards.value = (value * 0.33333).toFixed(2); // yd=ft*0.33333
+  inputYards.value = (value * 0.00109361).toFixed(2); // yd=ft*0.00109361
   inputKilometers.value = (value / 3280.8).toFixed(5); // km=ft/3280.8
   inputMiles.value = (value * 0.00018939).toFixed(5); // mi=ft*0.00018939
 }
 
 function metersConverter(value) {
+  inputMillimeters.value = (value / 1000).toFixed(5) //mm=meters/1000
   inputFeet.value = (value * 3.2808).toFixed(2); // ft=m*3.2808
   inputInches.value = (value * 39.37).toFixed(2); // in=m*39.370
   inputCm.value = (value / 0.01).toFixed(0); // cm=m/0.01
@@ -90,6 +103,7 @@ function metersConverter(value) {
 }
 
 function inchesConverter(value) {
+  inputMillimeters.value = (value * 25.4).toFixed(2) //mm = in*25.4
   inputFeet.value = (value * 0.083333).toFixed(3); // ft=in*0.083333
   inputMeters.value = (value / 39.37).toFixed(3); // m=in/39.370
   inputCm.value = (value / 0.3937).toFixed(2); // cm=in/0.39370
@@ -99,6 +113,7 @@ function inchesConverter(value) {
 }
 
 function cmConverter(value) {
+  inputMillimeters.value = (value * 10).toFixed(2) //mm = in*10
   inputFeet.value = (value * 0.032808).toFixed(3); // ft=cm*0.032808
   inputMeters.value = (value / 100).toFixed(3); // m=cm/100
   inputInches.value = (value * 0.3937).toFixed(2); // in=cm*0.3937
@@ -108,6 +123,7 @@ function cmConverter(value) {
 }
 
 function yardsConverter(value) {
+  inputMillimeters.value = (value * 914.4).toFixed(2) //mm = yd*914.4
   inputFeet.value = (value * 3).toFixed(0); // ft=yd*3
   inputMeters.value = (value / 1.0936).toFixed(2); // m=yd/1.0936
   inputInches.value = (value * 36).toFixed(0); // in=yd*36
@@ -117,6 +133,7 @@ function yardsConverter(value) {
 }
 
 function kilometersConverter(value) {
+  inputMillimeters.value = (value / 0.000001).toFixed(0) //mm = km*914.4
   inputFeet.value = (value * 3280.8).toFixed(0); // ft=km*3280.8
   inputMeters.value = (value * 1000).toFixed(0); // m=km*1000
   inputInches.value = (value * 39370).toFixed(0); // in=km*39370
@@ -132,6 +149,7 @@ function milesConverter(value) {
   inputCm.value = (value / 0.0000062137).toFixed(0); // cm=mi/0.0000062137
   inputYards.value = (value * 1760).toFixed(0); // yd=mi*1760
   inputKilometers.value = (value / 0.62137).toFixed(2); // km=mi/0.62137
+  inputMillimeters.value = (value / 0.00000062137119223733).toFixed(2); // 
 }
 
 // speed converter
