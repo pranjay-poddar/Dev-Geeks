@@ -1,15 +1,8 @@
-#Sky Scapper Game <hr>
-In this game, your target is to release the hoisted blocks so as to construct the highest tower
 
->Rules:
-Place blocks by clicking, tapping, or space barring.
-
-
-
-# Building Tower
+# Sky Scapper Game <hr>
 
 ## Introduction
-Building Tower is  a light version based on the Tower Bloxx Skyscraper puzzle, built in vanilla Javascript. 
+In this game, your target is to release the hoisted blocks so as to construct the highest tower
 
 
 ## Game Rule
