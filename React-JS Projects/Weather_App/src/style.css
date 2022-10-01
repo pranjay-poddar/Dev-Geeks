@@ -1,0 +1,53 @@
+.heading{
+  color: rgb(3, 42, 90);
+  
+ 
+  text-align: center;
+  font-size: 3rem;
+  font-weight: 650;
+  padding:15px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+body{
+  display:flex;
+  justify-content: center;
+  align-self: center;
+  background-image: url(../bg.jpg);
+  background-size: cover;
+
+}
+.box{
+  width:387px;
+  height :450px;
+  background-color: #72d2ea;
+  
+  box-shadow: -1px 0px 5px 2px #c6c8cb;
+  
+  margin:auto;
+  padding: 10px;
+  border-radius: 1.2rem;
+}
+
+.inputFeild{
+  font-size: 1.3rem;
+  width:65%;
+ display: block;
+ margin: auto;
+ border:none;
+ border-radius:1.5rem;
+ padding: 0.8rem 0.8rem;
+}
+.location {
+  font-size: 2.5rem;
+  text-align: center;
+  padding:10px;
+  margin:10px;
+  text-transform: capitalize;
+}
+.temp{
+  text-align: center;
+   color:#e3260d;
+}
+.details{
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
