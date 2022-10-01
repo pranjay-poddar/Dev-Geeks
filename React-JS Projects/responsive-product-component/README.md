@@ -1,6 +1,6 @@
 # Responsive Product View Component
 
-<img src='/public/readme-images/desktop-layout.png' alt='desktop-layout'/>
+Visit https://chaaals.github.io/reactive-playground/ to view the component.
 
 ## Overview
 
