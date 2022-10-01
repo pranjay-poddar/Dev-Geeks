@@ -1,4 +1,4 @@
-# Responsive Product View Component
+# Reactive Product Component
 
 Visit https://chaaals.github.io/reactive-playground/ to view the component.
 
