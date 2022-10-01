@@ -1,7 +1,7 @@
 
-# Sky Scapper Game <hr>
+# Sky Scapper Game
 
-* Introduction
+## Introduction
 In this game, your target is to release the hoisted blocks so as to construct the highest tower
 
 
