@@ -34,7 +34,7 @@ Example:
   <Product product={data} />
 ```
 
-## Anatomy of the Product View Component
+## Anatomy of the Reactive Product Component
 
 The component has 4 files: component files, view file, hook file, and index file.
 
