@@ -8,12 +8,13 @@
 	<p text-align="center">For More Information log on to <a href="https://pranjay-poddar.github.io/Dev-Geeks/Repository_web_page/index.html" target="_blank">Dev-Geeks</a></p>
 <br>
 
-  ![forthebadge](https://forthebadge.com/images/badges/uses-brains.svg)
-  ![forthebadge](https://forthebadge.com/images/badges/check-it-out.svg)
-  <br>
-  ![GitHub repo size](https://img.shields.io/github/repo-size/pranjay-poddar/Dev-Geeks?color=yellow)
-  [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
-  [![Open Source Love svg2](https://badges.frapsoft.com/os/v2/open-source.svg?v=103)](https://github.com/ellerbrock/open-source-badges/)
+![forthebadge](https://forthebadge.com/images/badges/uses-brains.svg)
+![forthebadge](https://forthebadge.com/images/badges/check-it-out.svg)
+<br>
+![GitHub repo size](https://img.shields.io/github/repo-size/pranjay-poddar/Dev-Geeks?color=yellow)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
+[![Open Source Love svg2](https://badges.frapsoft.com/os/v2/open-source.svg?v=103)](https://github.com/ellerbrock/open-source-badges/)
+
   <p align="center">
    <!--- <a href="https://github.com/pranjay-poddar"><img src="https://github.com/pranjay-poddar/Dev-Geeks/blob/main/Repository_images/hackclubrait-logo.png" width="200px" />   
     </a>
@@ -112,7 +113,6 @@ Happy Coding! -->
 <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Js-Projects/Calculator"> Calculator </a></td>	
 </tr>
 
-	
 <tr align="center">
 <td align="center"> 17.</td>
 <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Frontend-Projects/car%20company%20website">Car company website</a>  </td>
@@ -133,7 +133,7 @@ Happy Coding! -->
 <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Js-Games/Connect%20Four">Connect Four</a></td>
 <td align="center"> 24.</td>
 <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Footers/content-footer">content-footer</a>  </td>
-</tr>	
+</tr>
 
 <tr align="center">
 <td align="center"> 25.</td>
@@ -495,33 +495,34 @@ Happy Coding! -->
 <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/.github/workflows">  workflows </a></td>
 <td align="center"> 155.</td>
 <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/ML%20Projects/Youtube-video-downloader"> Youtube-video-downloader </a></td>
+<td align="center"> 156.</td>
+<td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/React-JS%20Projects/responsive-product-component">Reactive-Product-Component</a></td>
 </tr>
 	
 </table>
 
-	
 ## How to contribute:
-* Drop a :star: on the Github repository (optional)<br/>
 
-* Create an issue of the project or a feature you would like to add in the project and get the task assigned for youself. (issue can be any feature or project that you think you could contribute to).
+- Drop a :star: on the Github repository (optional)<br/>
 
-* Fork the repo to your Github.<br/>
+- Create an issue of the project or a feature you would like to add in the project and get the task assigned for youself. (issue can be any feature or project that you think you could contribute to).
 
-* Clone the Repo by going to your local Git Client in a particular local folder in your local machine by using this command with your forked repository link in place of below given link: <br/>
-	```git clone https://github.com/pranjay-poddar/Dev-Geeks```
-* Create a branch using below command.
-  ```git branch <your branch name>```
-* Checkout to your branch.
-  ```git checkout <your branch name>```
-* Add your code in your local machine folder.
-  ```git add . ```
-* Commit your changes.
-  ```git commit -m"<add your message here>"```
-* Push your changes.
-  ```git push --set-upstream origin <your branch name>```
-* Add your project name with the link in the readme in the desired format.
-* Make a pull request! (compare your branch with the owner main branch)
+- Fork the repo to your Github.<br/>
 
+- Clone the Repo by going to your local Git Client in a particular local folder in your local machine by using this command with your forked repository link in place of below given link: <br/>
+  `git clone https://github.com/pranjay-poddar/Dev-Geeks`
+- Create a branch using below command.
+  `git branch <your branch name>`
+- Checkout to your branch.
+  `git checkout <your branch name>`
+- Add your code in your local machine folder.
+  `git add . `
+- Commit your changes.
+  `git commit -m"<add your message here>"`
+- Push your changes.
+  `git push --set-upstream origin <your branch name>`
+- Add your project name with the link in the readme in the desired format.
+- Make a pull request! (compare your branch with the owner main branch)
 
 <br>
 <h1 align="center">
@@ -545,4 +546,3 @@ Happy Coding! -->
   <a href="mailto:pranjaypoddar@gmail.com?subject=Hello,%20From%20Github"><img src="https://img.shields.io/badge/gmail-%23D14836.svg?&style=for-the-badge&logo=gmail&logoColor=white" /></a>&nbsp;&nbsp;&nbsp;&nbsp;
   <a href="https://www.instagram.com/pranjay_poddar/"><img src="https://img.shields.io/badge/instagram-%23D14836.svg?&style=for-the-badge&logo=instagram&logoColor=pink" /></a>&nbsp;&nbsp;&nbsp;&nbsp;
 </p>
-

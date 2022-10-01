@@ -1,0 +1,168 @@
+.product-wrapper {
+  max-width: 450px;
+
+  border-radius: 10px;
+  padding: 1rem;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.product-container {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+
+  gap: 8px;
+  width: 100%;
+}
+
+.product-content {
+  width: 100%;
+}
+
+.product-image {
+  --size: 300px;
+  max-width: var(--size);
+  aspect-ratio: 1;
+  border-radius: 10px;
+}
+
+.product-name {
+  max-width: 250px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.product-price {
+  font-size: 1.2em;
+  margin-top: 8px;
+
+  opacity: 0.5;
+}
+
+.product-count-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  margin-top: 12px;
+}
+
+.product-count-ctrl {
+  font-size: 1.5rem;
+  border: 1px solid black;
+
+  padding: 0.5em;
+  background: transparent;
+  cursor: pointer;
+}
+
+.product-count {
+  text-align: center;
+  width: 80px;
+}
+
+.product-variation {
+  max-width: 250px;
+  margin: 8px 0px 0px 12px;
+}
+
+.variations-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+
+  margin-top: 14px;
+}
+
+.variations {
+  font-size: 14px;
+  padding: 1em;
+
+  border-radius: 12px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+
+  transition: 300ms ease-in-out;
+  cursor: pointer;
+}
+
+.variation-type {
+  font-size: 14px;
+  opacity: 0.5;
+}
+
+.variations:hover {
+  background-color: rgba(238, 238, 238, 0.75);
+}
+
+.selected {
+  background-color: rgba(238, 238, 238, 0.75);
+}
+
+.product-action-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.product-action-buttons > button {
+  font-size: 14px;
+  padding: 1em;
+
+  width: 100%;
+  background-color: transparent;
+
+  border: 1px solid black;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.product-action-buttons > button:hover,
+.product-count-ctrl:hover {
+  color: #fff;
+  background-color: black;
+}
+
+.product-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  width: 100%;
+}
+
+@media only screen and (min-width: 768px) {
+  .product-wrapper {
+    max-width: 700px;
+    padding: 1rem;
+  }
+  .product-image {
+    --size: 500px;
+    max-width: var(--size);
+    aspect-ratio: 1;
+  }
+  .product-variation {
+    max-width: 375px;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .product-wrapper {
+    max-width: 950px;
+    padding: 1rem;
+  }
+  .product-image {
+    --size: 575px;
+    max-width: var(--size);
+    aspect-ratio: 1;
+  }
+  .product-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+}
