@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-160698309-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() { dataLayer.push(arguments); }
+      gtag('js', new Date());
+
+      gtag('config', 'UA-160698309-1');
+    </script>
+    <title>Building Tower</title>
+    <script src="https://kit.fontawesome.com/80a4c4e583.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./style.css">
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.0.0/lib/p5.js"></script>
+    <script src="https://unpkg.com/matter-js@0.14.2/build/matter.js"></script>
+    <meta charset="utf-8" />
+  </head>
+  <body>
+    <div className="container">
+      <script src="slingshot.js"></script>
+      <script src="block.js"></script>
+      <script src="box.js"></script>
+      <script src="score.js"></script>
+      <script src="ground.js"></script>
+      <script src="sketch.js"></script>
+    </div>
+    <footer className="container">
+      <div className="instructions">
+        <span className="steps">
+          <i class="fas fa-keyboard"> Press "space" key to restart the game </i>
+          <i class="fas fa-keyboard"> Press "enter" key to released the block </i>
+          <i class="fas fa-mouse"> Use the mouse to swing the pendulum </i>
+        </span>
+      </div>   
+    </footer>
+  </body>
+</html>

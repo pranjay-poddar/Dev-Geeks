@@ -1,0 +1,13 @@
+.instructions{
+  display: -webkit-box;
+} 
+.steps{
+  display: table-cell;
+}
+.container{
+ text-align: center;
+}
+
+i{
+  margin-right: 10px;
+}
