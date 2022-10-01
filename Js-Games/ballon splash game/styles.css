@@ -1,0 +1,78 @@
+@import url(https://fonts.googleapis.com/css?family=Montserrat);
+.name {
+   font-family: 'Montserrat', sans-serif;
+   color: #2e2e2e;
+   margin-bottom: 0;
+   margin-top: 0;
+}
+
+#reset{
+   float:left;
+}
+#start{
+   float:right;
+}
+.Life{
+   font-family: 'Montserrat', sans-serif;
+   color: rgba(69, 41, 255, 1);
+   float: left;
+   font-size: 24px;
+   margin-left: 40px;
+}
+.score{
+   font-family: 'Montserrat', sans-serif;
+   color: rgba(31, 209, 0, 1);
+   font-size: 24px;
+}
+
+.expl {
+   font-family: 'Montserrat', sans-serif;
+   color: #2e2e2e;
+   margin-top: 5px;
+   margin-bottom: 8px;
+}
+
+#coord {
+   font-family: 'Montserrat', sans-serif;
+   float: left;
+   font-size: 28px;
+   color: #9e1500;
+}
+
+#status {
+   font-family: 'Montserrat', sans-serif;
+   float: left;
+   font-size: 28px;
+   color: 'red';
+}
+
+#score {
+   font-family: 'Montserrat', sans-serif;
+   float: right;
+   font-size: 28px;
+   color: #2ab300;
+}
+
+#canvas{
+   background: #83a2bf; /* Old browsers */
+background: -moz-linear-gradient(top,  #83a2bf 0%, #9db3c1 17%, #bec4c0 34%, #e5d5bb 47%, #fde9aa 67%, #fdce96 81%, #faa088 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#83a2bf), color-stop(17%,#9db3c1), color-stop(34%,#bec4c0), color-stop(47%,#e5d5bb), color-stop(67%,#fde9aa), color-stop(81%,#fdce96), color-stop(100%,#faa088)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  #83a2bf 0%,#9db3c1 17%,#bec4c0 34%,#e5d5bb 47%,#fde9aa 67%,#fdce96 81%,#faa088 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  #83a2bf 0%,#9db3c1 17%,#bec4c0 34%,#e5d5bb 47%,#fde9aa 67%,#fdce96 81%,#faa088 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  #83a2bf 0%,#9db3c1 17%,#bec4c0 34%,#e5d5bb 47%,#fde9aa 67%,#fdce96 81%,#faa088 100%); /* IE10+ */
+background: linear-gradient(to bottom,  #83a2bf 0%,#9db3c1 17%,#bec4c0 34%,#e5d5bb 47%,#fde9aa 67%,#fdce96 81%,#faa088 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#83a2bf', endColorstr='#faa088',GradientType=0 ); /* IE6-9 */
+   -webkit-box-shadow: 0px 0px 9px 3px rgba(0, 5, 15, 0.32);
+   -moz-box-shadow: 0px 0px 9px 3px rgba(0, 5, 15, 0.32);
+   box-shadow: 0px 0px 9px 3px rgba(0, 5, 15, 0.32);
+   cursor: url(https://drive.google.com/uc?export=view&id=0BzIuZOZL5LxeMEdSem9KZTdIYWM), auto;
+}
+
+.contain {
+   text-align: center;
+   padding: 0;
+}
+.container_buttons{
+   text-align: center;
+   margin-top: 15px;
+}
