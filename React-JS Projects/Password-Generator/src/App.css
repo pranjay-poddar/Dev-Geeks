@@ -1,0 +1,39 @@
+
+.sumit {
+    margin: auto;
+      
+    width: 33rem;
+    color: red;
+    margin-top: 15rem;
+    border: 2px solid red;
+    padding: 2rem;
+    /* padding-left: 2rem; */
+    /* padding-right: 5rem; */
+  }
+  /* .btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+  } */
+  /* */
+
+  .group{
+    width: 25rem;
+    height: 3rem;
+    border: 4px solid red;
+    border-radius: 10px;
+    display:  flex ;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: auto;
+    padding-left: 10px;
+    padding-top: 8px;
+  }
+  .butn{
+    border-radius: 15px white;
+    margin-right:5px ;
+    margin-bottom:8px ;
+    /* width: 10vw; */
+  }
+ 
