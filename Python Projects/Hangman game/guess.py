@@ -5,13 +5,14 @@ import time
 word= random.choice(["pineapple","cholera","tiger","jaguar","deadly","alphaomega","kashish","hitler","build","earthly","blitzkreig","economy","finance","educate","efficient","supportive","elderly","flight","folk","flame","frustration","garbage","gather","gentle","global","hilarious","intelligence","knife","longevity","momument","nonsense","nobody","turmeric","utilize","reconfigure","wheat","yellowish"])
 # }
 name=input("enter your name ")
-print(f"hi!! {name}")
+print(f"hi!! {name}")#greet user
 print("_-_-_-_-_-_-_-_-_-_-_-_-")
 print("guess the word in less than 10 attempts")
 valid_letters ='abcdefghijklmnopqrstuvwxyz'
+#define set of valid letters
 turns=10
 guessmade=''
-while(len(word)>0):
+while(len(word)>0):#loop till either the word is guess or 10 chances run out
     main=""
     missed=0
     for letter in word:
@@ -22,18 +23,19 @@ while(len(word)>0):
     if main==word:
         print(main)
         print("Yeah you actually won!!")
-        time.sleep(3)
+        time.sleep(3)#to make the winning screen stay  for 3 seconds
         break
     print("guess the word ",main)
     guess=input()
-
+#take input from the user
     if guess in valid_letters:
         guessmade=guessmade+guess
     else:
-        print("enter a valid character")
+        print("enter a valid character")#error checking
         guess=input()
     if guess not in word:
         turns-=1
+        #wrong choice entered
         if turns==9 :
             print("you have 9 turns left")
             print("------------------")
@@ -91,7 +93,7 @@ while(len(word)>0):
             print("      / | \ |    ")
             print("       / \  |      ")
             print("------------------")
-            print(f"the answer was {word}")
+            print(f"the answer was {word}")#displaying the answer after a wrong atttempt
             print("YOU LOOSE")
             time.sleep(3)
             break
