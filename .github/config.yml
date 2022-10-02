@@ -4,7 +4,7 @@
 
 # Comment to be posted to on first time issues
 newIssueWelcomeComment: >
-  Thanks for opening your first issue here! Be sure to follow the issue template!
+  Thanks for opening your first issue here! Be sure to follow the issue template and also star the repository so that you don't miss out with it!
 
 # Configuration for new-pr-welcome - https://github.com/behaviorbot/new-pr-welcome
 
@@ -16,6 +16,6 @@ newPRWelcomeComment: >
 
 # Comment to be posted to on pull requests merged by a first time user
 firstPRMergeComment: >
-  Congrats on merging your first pull request! We here at behaviorbot are proud of you! 
+  Congrats on merging your first pull request! We here at DevGeeks are proud of you! 
 
 # It is recommend to include as many gifs and emojis as possible
