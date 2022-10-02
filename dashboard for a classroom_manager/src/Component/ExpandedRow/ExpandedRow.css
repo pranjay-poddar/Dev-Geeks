@@ -1,0 +1,35 @@
+#expandedrow {
+  padding: 1rem 1.27rem 1.6rem 0rem;
+}
+
+.header,
+.header-part-1,
+.header-part-2,
+.groups {
+  display: flex;
+  flex-direction: row;
+}
+.header-part-1,
+.header-part-2 {
+  flex-basis: 100%;
+}
+.header-part-2 {
+  justify-content: flex-end;
+}
+.fullrow {
+  width: 100%;
+}
+.vertical-bisector {
+  padding-left: 3rem;
+  padding-right: 3rem;
+}
+.groups {
+  padding-top: 1.5rem;
+  padding-left: 3rem;
+}
+.minusicon {
+  padding-right: 1rem;
+}
+.switcher {
+  margin-left: 8rem;
+}

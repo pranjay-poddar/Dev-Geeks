@@ -1,0 +1,55 @@
+.sizebutton {
+  /* position: ; */
+  width: 282px;
+  height: 58px;
+  left: 9px;
+  top: 190px;
+
+  background: #faf9f9;
+   display: flex;
+}
+
+.sizebutton:hover{
+  background: #F1D8D8;
+
+}
+
+.text {
+  /* position: absolute; */
+  width: 103px;
+  height: 58px;
+  left: calc(50% - 103px / 2 - 25.5px);
+  top: calc(50% - 21px / 2 + 0.5px);
+
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 21px;
+  /* identical to box height */
+   padding-left: 30px;
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.2px;
+
+  color: #d80d0d;
+}
+
+/* .design{
+    position: absolute;
+width: 310px;
+height: 58px;
+left: 9px;
+top: 190px;
+
+background: #F1D8D8;
+} */
+
+
+.rectangle {
+    /* position: absolute; */
+    display: inline-block;
+    height: 58px;
+    width: 5px;
+    background-color: #555;
+  }
