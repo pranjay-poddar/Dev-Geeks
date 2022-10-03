@@ -21,3 +21,4 @@ Open the **main.py** with *`python IDE`*.
 
 ### Screenshots
 
+![snip1](https://user-images.githubusercontent.com/73753957/193543106-3f897195-d4d2-420b-9b06-d0fa95ad409d.png)
