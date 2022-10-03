@@ -1,0 +1,119 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu&display=swap");
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: #62a2fc;
+}
+html, body {
+  width: 100%;
+  height: 100%;
+  overflow:hidden;
+}
+.container {
+  height: 54vh;
+  width: 56vw;
+  background: rgb(252, 244, 220);
+  border: 2px powderblue;
+  border-radius: 10px;
+  min-width: 450px;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  top: 50%;
+  padding: 25px 41px;
+}
+.container * {
+  border: none;
+  outline: none;
+}
+.inputs-wrapper {
+  background-color: #040035;
+  height: 17vh;
+  width: 51vw;
+  padding: 31px 25px;
+  border-radius: 8px;
+  box-shadow: 0 15px 20px rgb(0 0 0 / 30%);
+  margin-top: 20px;
+  margin-bottom: 50px;
+  position: relative;
+  margin-left: 0%;
+  font-family: "Poppins", sans-serif;
+}
+input,
+button {
+  height: 60px;
+  background-color: #ffffff;
+  color: #040035;
+  font-weight: 500;
+  font-size: 20px;
+  border-radius: 5px;
+}
+.inputs-wrapper button:hover {
+  cursor: pointer;
+  font-weight: 700;
+}
+input {
+  width: 60%;
+  padding: 0 10px;
+  font-size: 20px;
+}
+button {
+  width: 30%;
+  float: right;
+}
+#date-input {
+  cursor: pointer;
+}
+.outputs-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.outputs-wrapper div {
+  height: 60px;
+  width: 120px;
+  background-color: #070435;
+  border-radius: 5px;
+  color: #ffffff;
+  display: grid;
+  place-items: center;
+  padding: 20px 0;
+  box-shadow: 0 15px 20px rgb(0 0 0 / 30%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 40px;
+  margin-top: 5px;
+}
+span {
+  font-family: "Poppins", sans-serif;
+  font-size: 30px;
+  font-weight: 500;
+}
+p {
+  font-family: "Ubuntu", sans-serif;
+  font-size: 20px;
+  letter-spacing: 1px;
+  color: #c5fdfff8;
+  font-weight: 400;
+}
+.age {
+  text-align: center;
+  color: purple;
+  font-family: "Poppins", sans-serif;
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 18px;
+}
+@media screen and (max-width: 724px) and (min-width: 300px) {
+  .inputs-wrapper {
+    width: 92vw;
+  }
+  .outputs-wrapper div{
+    margin: 15px;
+  }
+}
