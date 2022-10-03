@@ -12,8 +12,8 @@ class App extends React.Component {
 		};
 	}
 
-	// ComponentDidMount is used to
-	// execute the code
+	// ComponentDidMount
+	// Using Lifecycle Method to fetch data from API
 	componentDidMount() {
 		fetch(
 "https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?sol=1000&page=1&api_key=tcg4xTn9KhW1ehDkkS4uW1tDGbd2d0uNBQF2xZFp")
@@ -36,6 +36,7 @@ class App extends React.Component {
 			<h1> Images from FHAZ Camera in Curiosity </h1> 
 			<p>These images were fetched from the Curiosity Rover on Mars using NASA's Open APIs</p>
       {
+		//Mapping the JSON object to convert it into an array and render it on the webpage
 		items.photos.map((item)=> (<p key={item.id}><img src={item.img_src} alt="" /></p>))
       }
 		</div>

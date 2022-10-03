@@ -11,8 +11,8 @@ class Page_2 extends React.Component {
 		};
 	}
 
-	// ComponentDidMount is used to
-	// execute the code
+	// ComponentDidMount
+	// Using Lifecycle Method to fetch data from API
 	componentDidMount() {
 		fetch(
 "https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?sol=1000&page=2&api_key=tcg4xTn9KhW1ehDkkS4uW1tDGbd2d0uNBQF2xZFp")
@@ -34,6 +34,7 @@ class Page_2 extends React.Component {
 		<div className = "page_2">
 			<h1 style={{textAlign:"center"}}>Mast Camera</h1> 
       {
+		//Mapping the JSON object to convert it into an array and render it on the webpage
 		items.photos.map((item)=> (<p key={item.id}><img src={item.img_src} alt="" /></p>))
       }
 		</div>
