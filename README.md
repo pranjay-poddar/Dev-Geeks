@@ -500,6 +500,10 @@ Happy Coding! -->
 <td align="center"> <a href="https://github.com/sumitkr2000/BMI_Calculator/tree/main/bmi-calculator">BMI Calculator</a></td>
 </tr>
 	
+<tr align="center">
+<td align="center"> 158.</td>
+<td align="center"> <a href="https://github.com/Noothan-am/Dice-game-/tree/main/dicegame">  Dice game</a></td>
+	
 </table>
 
 ## How to contribute:
