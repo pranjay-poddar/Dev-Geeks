@@ -1,0 +1,332 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+body{
+    margin: 0;
+}
+.header{
+    background-color: #0147FF;
+    margin: 0;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+h1{
+    font-size: 20px;
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    color: white;
+}
+.main{
+    display: flex;
+    height: 700px;
+    margin-top: 20px;
+    margin-left: 40px;
+}
+.name-email{
+    display: flex;
+    margin-bottom: 30px;
+}
+.website-link{
+    margin-bottom: 30px;
+}
+.image-link{
+    margin-bottom: 30px;
+}
+.gender{
+    margin-bottom: 30px;
+}
+.skill{
+    margin-bottom: 30px;
+}
+.name-box{
+    margin-right:15px;
+}
+#name{
+    margin-top:5px;
+    height: 30px;
+    width: 270px;
+    border-radius: 5px;
+    background-color: #F8FCFF;
+    border: transparent;
+}
+#email{
+    margin-top:5px;
+    height: 30px;
+    width: 270px;
+    border-radius: 5px;
+    background-color: #F8FCFF;
+    border: transparent;
+}
+#website{
+    margin-top:5px;
+    height: 30px;
+    width: 560px;
+    border-radius: 5px;
+    background-color: #F8FCFF;
+    border: transparent;
+}
+#image{
+    margin-top:5px;
+    height: 30px;
+    width: 560px;
+    border-radius: 5px;
+    background-color: #F8FCFF;
+    border: transparent;
+}
+span{
+    margin-right:20px;
+}
+form{
+    font-weight:400;
+    font-size: 20px;
+    font-family: Inter, sans-serif;
+    margin-top: 120px;
+    /* margin-right: 45px; */
+}
+#enroll-btn{
+    height:40px;
+    width: 120px;
+    background-color: #0147FF;
+    border: transparent;
+    border-radius: 5px;
+    color: white;
+    font-size: 18px;
+    font-weight: bolder;
+    margin-right: 12px;
+
+}
+#cancel-btn{
+    height:40px;
+    width: 120px;
+    background-color: red;
+    border: transparent;
+    border-radius: 5px;
+    color: white;
+    font-size: 18px;
+    font-weight: bolder;
+
+}
+.image-container{
+    margin-top: 60px;
+}
+.enrolled-students-container{
+    background-color:#0147FF;
+    color: white;
+    height: 750px;
+    display: flex;
+    font-family: Inter,sans-serif;
+}
+.image-container2{
+    margin-top: 130px;
+    margin-left: 60px;
+    margin-right: 40px;
+}
+.student-information{
+    width: 100%;
+    display: flex;
+    /* justify-content: center; */
+    flex-direction: column;
+    align-items: center;
+}
+h2{
+    margin-top: 70px;
+}
+.student-details{
+    color: black;
+}
+.student{
+    display: flex;
+    background-color: white;
+    width: 450px;
+    height: 164px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+.details{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.student-name{
+    margin-left: 15px;
+}
+.student-gender{
+    margin-left: 15px;
+}
+.student-email{
+    margin-left: 15px;
+}
+.student-website{
+    margin-left: 15px;
+}
+.student-skills{
+    margin-left: 15px;
+}
+.picture{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 60px;
+}
+.student-image{
+    width: 150px;
+    height: 150px;
+    background-image: url();
+}
+
+@media (min-width: 600px) and (max-width: 768px){
+    .main{
+        margin-top: 0px;
+        margin-left: 0px;
+        justify-content: center;
+    }
+    form{
+        margin-right:0px;
+    }
+    .image-container{
+        display: none;
+    }
+    .image-container2{
+        display: none;
+    }
+}
+
+@media (max-width:500px){
+    #name{
+        width: 150px;
+    }
+    #email{
+        width: 150px;
+    }
+    #website{
+        width: 320px;
+    }
+    #image{
+        width: 320px;
+    }
+    .student{
+        width: 320px;
+    }
+    .details{
+        width: 180px;
+        font-size: 12px;
+    }
+    .picture{
+        margin-left: 30px;
+    }
+    .student-image {
+        width:100px;
+        height: 100px;
+    }
+    .main{
+        margin-top: 0px;
+        margin-left: 0px;
+        justify-content: center;
+    }
+    form{
+        margin-right:0px;
+    }
+    .image-container{
+        display: none;
+    }
+    .image-container2{
+        display: none;
+    }
+}
+
+@media (min-width: 500px) and (max-width: 600px){
+    #name{
+        width: 180px;
+    }
+    #email{
+        width: 180px;
+    }
+    #website{
+        width: 380px;
+    }
+    #image{
+        width: 380px;
+    }
+    .student{
+        width: 380px;
+    }
+    .details{
+        width: 230px;
+        font-size: 12px;
+    }
+    .picture{
+        margin-left: 30px;
+    }
+    .student-image {
+        width:100px;
+        height: 100px;
+    }
+    .main{
+        margin-top: 0px;
+        margin-left: 0px;
+        justify-content: center;
+    }
+    form{
+        margin-right:0px;
+    }
+    .image-container{
+        display: none;
+    }
+    .image-container2{
+        display: none;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 992px){
+    
+    .main{
+        justify-content: center;
+        margin-left: 0px;
+    }
+    .image-container img{
+        display: none;
+    }
+    .image-container2{
+        display: none;
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+}
+@media (min-width: 992px) and (max-width: 1200px){
+    .main{
+        margin-left: 50px;
+    }
+    #name{
+        width: 180px;
+    }
+    #email{
+        width: 180px;
+    }
+    #website{
+        width: 380px;
+    }
+    #image{
+        width: 380px;
+    } 
+    .image-container img{
+        width: 520px;
+        /* margin-top: 100px; */
+    }
+    .image-container2 img{
+        width: 380px;
+    }
+
+}
+ @media (min-width: 1200px){
+    /*.main{
+        margin-left: 40px;
+    }
+    form{
+        margin-right: 0px;
+    }
+    */
+    .image-container img{
+        width: 580px;
+    }
+} 

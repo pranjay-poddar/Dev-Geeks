@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="form.css">
+    <title>Student Enrollment Form</title>
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <h1>Student Enrollment Form</h1>
+        </nav>
+    </header>
+    <div class="main">
+        <form id="student-enrollment-form">
+            <div class="name-email">
+                <div class="name-box">
+                    <div><label for="name">Name</label></div>
+                    <input type="text" name="name" id="name">
+                </div>
+            
+                <div class="email-box">
+                    <div><label for="email">Email</label></div>
+                    <input type="email" name="email" id="email">
+                </div>
+            </div>
+
+            <div class="website-link">
+                <div><label for="website">website</label></div>
+                <input type="url" name="website" id="website">
+            </div>
+
+            <div class="image-link">
+                <div><label for="image">Image Link</label></div>
+                <input type="text" name="image" id="image">
+            </div>
+
+            <div class="gender">
+                <span>Gender</span>
+                <input type="radio" id="male" name="choice1" value="male">
+                <label for="male">Male</label>
+
+                <input type="radio" id="female" name="choice1" value="female">
+                <label for="female">Female</label>
+
+            </div>
+
+            <div class="skill">
+                <span>Skills</span>
+                <input type="radio" id="java" name="option" value="java">
+                <label for="java">Java</label>
+
+                <input type="radio" id="HTML" name="option" value="HTML">
+                <label for="HTML">HTML</label>
+
+                <input type="radio" id="CSS" name="option" value="CSS">
+                <label for="HTML">CSS</label>
+
+            </div>
+            <div class="submit">
+                <input type="submit" value="Enroll" id="enroll-btn">
+                <input type="submit" value="Cancel" id="cancel-btn">
+            </div>
+            
+        </form>
+        <div class="image-container">
+            <img src="./assets/Image/student2.png" alt="student" width="720px" height="auto">
+        </div>
+    </div>
+    <section class="enrolled-students-container">
+        <div class="image-container2">
+            <img src="./assets/Image/student1.png" alt="a student" width="520px" height="auto">
+        </div>
+        <div class="student-information">
+            <h2>Enrolled Students</h2>
+            <div class="student-details">
+                <!-- <div class="student"> 
+                    <div class="details">
+                        <div class="student-name">Shiwangi Kumari</div>
+                        <div class="student-gender">Female</div>
+                        <div class="student-email">sshiwangi770@gmail.com</div>
+                        <div class="student-website"><a href="http://github.com/sshiwangi" target="_blank">https://github.com/sshiwangi</a></div>
+                        <div class="student-skills">java,css</div>
+                    </div>
+                    <div class="picture">
+                        <img src="https://parade.com/.image/t_share/MTkwNTc1ODc5NDk0MDUwOTQx/life-quotes-dolly.jpg" alt="" class="student-image">
+                    </div>
+                </div> -->
+            </div>
+        </div>
+        
+    </section>
+    <script src="form.js"></script>
+</body>
+</html>
