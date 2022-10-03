@@ -1,0 +1,210 @@
+*{
+    overflow: hidden;
+    margin:0;
+    padding:0;
+    
+       
+}
+.main-container{
+    font-family: cursive;
+    display: flex;
+    justify-content: center;
+    background-image: url(images/maintaining-a-healthy-lifestyle.jpeg);
+    opacity: 0.9;
+    background-size: cover;
+    background-repeat: no-repeat;
+     height: 100vh;
+}
+.container{
+    
+    height: 550px;
+    width: 400px;
+    background-color: white;
+    opacity: 0.9;
+    margin: 100px;
+    border: 1px solid black;
+    border-radius: 6%;
+
+   
+   
+}
+h2{
+    text-align: center;
+   margin-top: 26px;
+}
+.input-height,.input-weight{
+    text-align: center;
+    margin-top: 30px;
+   
+}
+.centimetre,.killograms{
+    font-size: 24px;
+    
+}
+#text-height, #text-weight{
+    height: 26px;
+    width: 180px;
+    margin-top: 25px;
+    font-size: 16px;
+   
+}
+.submit{
+    text-align: center;
+    margin-top: 40px;
+    
+}
+.calculate_btn, .reset_btn{
+    width: 110px;
+    height: 40px;
+    background-color: skyblue;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius:5px;
+}
+.calculate_btn:hover{
+   background-color: seagreen;
+}
+.reset_btn:hover {
+    background-color: red;
+}
+.chart-container {
+    background-color: coral;
+    width: 250px;
+  height: 220px;
+    border: black 2px solid;
+    margin-top: 150px;
+    margin-left:40px;
+    margin-right: 15px;
+    padding: 20px;
+   position: relative;
+    border-radius: 4px;
+    word-spacing: 12px;
+
+}
+
+.chart-container {
+    text-align: center;
+    color: black;
+}
+
+table,
+th,
+td {
+    border: 1px solid black;
+}
+.Result,.Value{
+    text-align: center;
+    font-size: 20px;
+    margin-top: 20px;
+}
+@media(max-width: 147px) {
+
+    .centimetre,
+    .killograms {
+        font-size: 5px;
+    }
+
+    .Result,
+    .Value {
+        font-size: 5px;
+    }
+
+    #text-height,
+    #text-weight {
+        width: 16px;
+        font-size: 5px;
+    }
+
+    h2 {
+        font-size: 5px;
+    }
+
+    .calculate_btn,
+    .reset_btn {
+        width: 25px;
+        height: 25px;
+        font-size: 5px;
+    }
+}
+@media(min-width: 127px) and (max-width: 147px) {
+
+    .centimetre,
+    .killograms {
+        font-size: 6px;
+    }
+
+    .Result,
+    .Value {
+        font-size: 6px;
+    }
+
+    #text-height,
+    #text-weight {
+        width: 30px;
+        font-size: 11px;
+    }
+
+    h2 {
+        font-size: 8px;
+    }
+
+    .calculate_btn,
+    .reset_btn {
+        width: 40px;
+        font-size: 8px;
+    }
+}
+@media(min-width: 147px) and (max-width: 202px) {
+
+    .centimetre,
+    .killograms {
+        font-size: 10px;
+    }
+
+    .Result,
+    .Value {
+        font-size: 10px;
+    }
+
+    #text-height,
+    #text-weight {
+        width: 60px;
+    }
+    h2{
+        font-size: 15px;
+    }
+    .calculate_btn, .reset_btn{
+        width: 60px;
+        font-size: 10px;
+    }
+}
+@media(min-width: 202px) and (max-width: 256px){
+    .centimetre,
+        .killograms {
+            font-size: 14px;
+        }
+    
+        .Result,
+        .Value {
+            font-size: 10px;
+        }
+    
+        #text-height,
+        #text-weight {
+            width: 90px;
+        }
+}
+
+ @media(min-width: 256px) and (max-width: 338px){
+   .centimetre, .killograms{
+    font-size: 16px;
+   }
+   .Result,
+   .Value{
+    font-size: 15px;
+   }
+   #text-height,#text-weight{
+          width: 130px;
+   }
+
+} 
