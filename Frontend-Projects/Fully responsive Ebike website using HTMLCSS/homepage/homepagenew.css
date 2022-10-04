@@ -1,0 +1,250 @@
+body {
+    background-color: rgb(56, 54, 54);
+  
+}
+html{
+    scroll-behavior: smooth;
+}
+body::before{
+content: "";
+background: url(./ebike/homepage/WhatsApp\ Image\ 2022-07-18\ at\ 8.42.39\ PM.jpeg) no-repeat center center;
+position: fixed;
+z-index: -1;
+opacity: 0.5;
+width: 100vw;
+height: 100vh;
+}
+
+
+/*-- navigation bar--*/
+nav{
+    background-color: rgb(91, 90, 90);
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+    border-radius: 2vw;
+}
+nav div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+nav a{
+    text-decoration: none;
+    color: white;
+}
+
+
+
+/*--logo--*/
+#logo img{
+    width: 5.4vw;
+    border-radius:1.5vw;
+    margin: 0.4vw 1vw 0.4vw 1.5vw;
+    
+}
+
+
+
+/*--sitename--*/
+#sitename{
+    font-size: 2vw;
+    justify-content: flex-start;
+    flex-grow: 10;
+}
+#sitename h1{
+    background-color: black;
+    padding: 0.5vw;
+    border-radius: 1vw;
+    border: 0.25vw solid white;
+    margin: 0;
+}
+#sitename a{
+    border-bottom: 0.1vw solid white;
+}
+
+
+/*--navigation list--*/
+#navlist{
+    margin-right: 3vw;
+    font-size: 1.6vw;
+}
+#navlist li{
+    margin: 1.2vw 1.2vw;   
+}
+#navlist ul{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    list-style: none;
+    justify-content: space-around;
+    border-radius: 1.7vw;
+}
+#navlist a{
+    color: white;
+    font-weight: bold;
+    transition: all 0.4s;
+    padding: 0.6vw;
+    border-radius: 0.6vw;
+}
+#navlist a:hover{
+    color: white;
+    border-bottom: 0.1vw solid white;
+    background-color: black;
+    text-decoration: underline;
+}
+/*------ end of navigation bar -----*/
+
+
+/*------ body of the page ------*/
+
+/*------ quote box-------*/
+.container1{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.quotebox{
+    text-align: center;
+    height: 40vw;
+    width: 50vw;
+    display: inline-block;
+    margin: 2vw;
+}
+
+.quoteimg img{
+    width: 50vw;
+    height: 40vw;
+    border-radius: 3vw;
+}
+.quotein{
+    display: flex;
+    position: relative;
+    bottom: 35vw;
+    flex-direction: column;
+    font-size: 1.5vw;
+    justify-content: center;
+    align-items: center;
+}
+.quotein h1{
+    width: 40vw;
+    border-top-left-radius: 2vw;
+    border-bottom-right-radius: 2vw;
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+    opacity: 0.7;
+}
+
+
+/*----- form box ----*/
+.formbox{
+    font-size: 1.4vw;
+    display: inline-block;
+    width: 30vw;
+    height: 35vw;
+    margin-right: 5vw;
+    background-color: rgb(185, 187, 150);
+    opacity: 0.8;
+    border-radius: 0.5vw;
+    padding: 2vw;
+}
+.formbox fieldset{
+    border-radius: 1vw;
+    border: 0.2vw solid black;
+    height: 32vw;
+}
+.formbox div{
+    margin: 1vw 0;
+}
+.sub{
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 0vw;
+}
+.submit{
+    display: inline-block;
+}
+.sub input{
+    width: 13vw;
+}
+
+
+/*----- product box ------*/
+.heading{
+    text-align: center;
+    font-size: 1.8vw;
+    background-color: grey;
+    border-radius: 2vw;
+    width: 50vw;
+    margin: auto;
+}
+.prodbox{
+    display: flex;
+    justify-content: space-around;
+    background-color: rgb(32, 32, 32);
+    padding: 1vw;
+    border: 0.5vw solid rgb(245, 241, 241);
+}
+.items{
+    border-radius: 1vw;
+    padding: 0.5vw;
+    padding-bottom: 0.3vw;
+}
+.items:hover{
+    transition: all 1s;
+    background-color: rgb(98, 95, 95);
+    
+}
+.prodbox img{
+    border-radius: 2vw;
+    width: 31vw;
+}
+
+
+/*--- coontact us----*/
+#contactus{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+#logo2 img{
+    width: 7vw;
+    margin: 3vw 0vw;
+    padding: 0.5vw;
+    background-color: black;
+    border-radius: 2vw;
+    border: 0.3vw solid grey;
+}
+#logo2{
+    width: 30vw;
+    display: flex;
+    justify-content: center;
+}
+#contact{
+    background-color: rgb(101, 99, 99);
+    padding: 1vw;
+    font-size: 1.7vw;
+    width: 50vw;
+    position: relative;
+    right: 11vw;
+    border-radius: 3vw;
+    margin-top: 3vw;
+    border: 0.3vw solid white;
+    /* flex-basis: 5; */
+    /* flex-grow: 10; */
+}
+.msg{
+    display: block;
+    text-align: center;
+    text-decoration: underline;
+}
+#contact span{
+    font-size: 1.8vw;
+    font-weight: bold;
+}
+footer{
+    text-align: center;
+    font-size: 1.2vw;
+    background-color: black;
+    color: white;
+}

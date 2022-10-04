@@ -1,0 +1,230 @@
+body {
+    background-color: rgb(56, 54, 54);
+}
+html{
+    scroll-behavior: smooth;
+}
+/* navigation bar */
+nav{
+    background-color: rgb(91, 90, 90);
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+    border-radius: 2vw;
+}
+nav div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+nav a{
+    text-decoration: none;
+    color: white;
+}
+
+/*--logo--*/
+#logo img{
+    width: 5.4vw;
+    border-radius:1.5vw;
+    margin: 0.4vw 1vw 0.4vw 1.5vw;  
+}
+
+/*--sitename--*/
+#sitename{
+    font-size: 2vw;
+    justify-content: flex-start;
+    flex-grow: 10;
+}
+#sitename h1{
+    background-color: black;
+    padding: 0.5vw;
+    border-radius: 1vw;
+    border: 0.25vw solid white;
+    margin: 0;
+}
+#sitename a{
+    border-bottom: 0.1vw solid white;
+}
+
+/*--navigation list--*/
+#navlist{
+    margin-right: 3vw;
+    font-size: 1.6vw;
+}
+#navlist li{
+    margin: 1.2vw 1.2vw;   
+}
+#navlist ul{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    list-style: none;
+    justify-content: space-around;
+    border-radius: 1.7vw;
+}
+#navlist a{
+    color: white;
+    font-weight: bold;
+    transition: all 0.4s;
+    padding: 0.6vw;
+    border-radius: 0.6vw;
+}
+#navlist a:hover{
+    color: white;
+    border-bottom: 0.1vw solid white;
+    background-color: black;
+    text-decoration: underline;
+}
+
+
+
+
+/*------body of the site------*/
+.headimg img{
+    border-radius: 8vw;
+    opacity: 0.3;
+    width: 70vw;
+    height: 18vw;
+    margin-top: 3vw;
+}
+.headimg{
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+}
+.head{
+    position: relative;
+    bottom: 11vw;
+    /* border-bottom: 1vw solid black; */
+}
+.head h1{
+    color: white;
+    font-size: 3vw;
+    border-bottom: 0.5vw solid black;
+    margin: 0;
+}
+.aboutus{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+}
+#text2{
+    background-color: rgb(240, 240, 174);
+}
+.text{
+    background-color: rgb(187, 133, 133);
+    text-align: justify;
+    padding: 2vw;
+    font-size: 2vw;
+    width: 38vw;
+    border: 0.2vw solid red;
+    border-bottom-right-radius: 8vw;
+    border-top-left-radius: 8vw;
+    margin: 1vw;
+}
+.pic img{
+    border-bottom-left-radius: 8vw;
+    border-top-right-radius: 8vw;
+    border: 0.2vw solid red;
+    margin: 1vw;
+width: 38vw;
+}
+.features{
+    background-color: grey;
+border-radius: 2vw;
+padding: 1vw;
+margin-bottom: 2vw;
+margin-top: 2vw;
+}
+.features h1{
+    background-color: rgb(23, 23, 23);
+    color: white;
+    font-size: 2vw;
+    border-radius: 1vw;
+width: 50vw;
+margin:1vw auto;
+text-align: center;
+
+}
+.mainbox{
+    display: flex;
+    justify-content: space-around;
+}
+.featurebox{
+    width: 28vw;
+    font-size: 2vw;
+    text-align: justify;
+    
+    background-color: rgb(237, 144, 144);
+    border: 0.3vw solid red;
+    border-radius: 2vw;
+    
+    padding: 1vw;
+    transition: all 1s;
+}
+#featurebox2{
+    transition: all 1s;
+    background-color: rgb(234, 238, 177);
+    border: 0.3vw solid rgb(35, 34, 34);
+}
+.featurebox:hover{
+    background-color: rgb(234, 238, 177);
+    border: 0.3vw solid rgb(35, 34, 34);
+}
+#featurebox2:hover{
+    background-color: rgb(237, 144, 144);
+    border: 0.3vw solid red;
+}
+
+
+
+/*--- coontact us----*/
+#contactus{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+#logo2 img{
+    width: 7vw;
+    margin: 3vw 0vw;
+    padding: 0.5vw;
+    background-color: black;
+    border-radius: 2vw;
+    border: 0.3vw solid grey;
+}
+#logo2{
+    width: 30vw;
+    display: flex;
+    justify-content: center;
+}
+#contact{
+    background-color: rgb(101, 99, 99);
+    padding: 1vw;
+    font-size: 1.7vw;
+    width: 50vw;
+    position: relative;
+    right: 11vw;
+    border-radius: 3vw;
+    margin-top: 3vw;
+    border: 0.3vw solid white;
+    /* flex-basis: 5; */
+    /* flex-grow: 10; */
+}
+.msg{
+    display: block;
+    text-align: center;
+    text-decoration: underline;
+}
+#contact span{
+    font-size: 1.8vw;
+    font-weight: bold;
+}
+footer{
+    text-align: center;
+    font-size: 1.2vw;
+    background-color: black;
+    color: white;
+}
