@@ -1,0 +1,223 @@
+html{
+    scroll-behavior: smooth;
+}
+body{
+    background-color:rgb(56,54,54);
+    
+}
+
+/* navigation bar */
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: rgb(95, 93, 93);
+    border-radius: 3vw;
+}
+#logo{
+    margin-top: 2vw;
+}
+#logo img{
+    border-radius: 2vw;
+    width: 13vw;
+}
+#navlist{
+    margin-bottom: 1vw;
+    border-radius: 2vw;
+}
+#navlist ul{
+    display: flex;
+    list-style: none;
+    text-align: center;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+    /* flex-wrap: wrap; */
+}
+#navlist li{
+    margin: 0vw 1vw;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+#navlist a{
+    text-decoration: none;
+    color: white;
+    font-size: 3.75vw;
+    margin: 1vw 0vw;
+    background-color: rgb(41, 40, 40);
+    padding: 4px 2px;
+    border-bottom: 1px solid white;
+    border-radius: 1vw;
+}
+#sitename a{
+    text-decoration: none;
+    color: white;
+    
+}
+#sitename h1{
+    background-color: black;
+    border-radius: 2vw;
+    padding: 2vw;
+    margin: 1vw;
+    font-size: 11vw;
+    border-bottom: 0.3vw solid white;
+
+}
+/* end of navigation bar */
+
+
+
+/* body of the site */
+
+/* quote box */
+.container1{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.quotebox{
+    text-align: center;
+    height: 70vw;
+    width: 80vw;
+    margin: 2vw;
+}
+
+.quoteimg img{
+    width: 80vw;
+    height: 72vw;
+    border-radius: 3vw;
+}
+.quotein{
+    display: flex;
+    position: relative;
+    bottom: 74vw;
+    flex-direction: column;
+    font-size: 3vw;
+    justify-content: center;
+    align-items: center;
+}
+.quotein h1{
+    width: 67vw;
+    border-top-left-radius: 2vw;
+    border-bottom-right-radius: 2vw;
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+    opacity: 0.7;
+}
+/* end of quote box */
+
+
+/* form box */
+.formbox{
+    font-size: 4vw;
+    /* display: inline-block; */
+    width: 60vw;
+    height: 70vw;
+    margin-top: 2vw;
+    background-color: rgb(185, 187, 150);
+    opacity: 0.8;
+    border-radius: 0.5vw;
+    padding: 2vw;
+}
+.formbox fieldset{
+    border-radius: 1vw;
+    border: 0.2vw solid black;
+    /* width: 28vw; */
+    /* height: 32vw; */
+}
+.formbox div{
+    margin: 1vw 0;
+}
+.sub{
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 0vw;
+}
+.formbox input{
+height: 5vw;
+width: 45vw;
+font-size: 4vw;
+}
+.submit{
+    display: inline-block;
+}
+.sub input{
+    width: 20vw;
+    height: 5vw;
+    font-size: 3vw;
+    margin: 0px;
+    padding: 0px ;
+    border: 0.2vw solid gray;
+    border-radius: 0.5vw;
+}
+
+/* product box */
+.prodbox{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.heading{
+    text-align: center;
+    width: 90vw;
+    margin: auto;
+    background-color: grey;
+    border-radius: 2vw;
+    font-size: 3vw;
+    padding-bottom:0.7vw;
+}
+.heading h1{
+    width: 70vw;
+    border-bottom: 0.5vw solid black;
+    margin: auto;
+}
+.prodbox img{
+    margin-top: 4vw;
+    border-radius: 3vw;
+    width: 85vw;
+}
+
+
+/* contact us */
+
+#contactus{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+#logo2 img{
+    width: 18vw;
+    margin-top: 5vw;
+    border-radius: 3vw;
+    padding: 2vw;
+    background-color: rgb(24, 24, 24);
+    border: 1vw solid rgb(159, 159, 159);
+}
+#contact{
+    background-color: rgb(35, 35, 35);
+    font-size: 5vw;
+    border-radius: 3vw;
+    padding:3vw ;
+    color: rgb(202, 197, 197);
+}
+#contact span{
+    font-weight: bold;
+    font-size: 5.5vw;
+    /* margin: 1vw; */
+}
+.msg{
+    display: block;
+    margin: auto;
+    text-align: center;
+}
+footer{
+    text-align: center;
+    color: white;
+    background-color: black;
+    font-size: 3vw;
+}
