@@ -1,0 +1,64 @@
+h1{
+    display: flex;
+    align-items: center;
+    margin-top: 3rem ;
+    justify-content: center;
+    width: auto;
+}
+.container{
+    margin-top: 8rem ;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+h2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.box{
+    border-radius: 30px;
+    margin: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 4rem;
+    border: 2px solid red;
+    width: 10rem;
+    height: 10rem;
+    background-color: yellow;
+}
+.button{
+    margin: 2rem;
+    display: flex;
+    justify-content: center;
+    
+}
+.buttons{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+button{
+    width: 8rem;
+    height: 2rem;
+    font-weight: bold;
+    font-size: 1rem;
+    color: aliceblue;
+    border: 0px solid blue;
+    border-radius: 1rem;
+    background-color: blue;
+
+}
+button:hover{
+    width: 8rem;
+    height: 2rem;
+    font-size: 1rem;
+    color: aliceblue;
+    border: 0px solid blue;
+    border-radius: 1rem;
+    background-color: rgb(0, 0, 0);
+
+}
