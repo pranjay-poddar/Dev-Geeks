@@ -1,12 +1,24 @@
+<<<<<<< HEAD
 #include<windows.h>
+
+// to import standard input and output  
+
 #include<stdio.h>
+// to import clear statements, etc. ( if any ) 
 #include<conio.h>
+<<<<<<< HEAD
 #include <stdlib.h>
 #include<string.h>                  //contains strcmp(),strcpy(),strlen(),etc
 #include<ctype.h>                   //contains toupper(), tolower(),etc
 #include<dos.h>                     //contains _dos_getdate
 #include<time.h>
 //#include<bios.h>
+
+ // to import standard libraries  
+#include<stdlib.h>
+// to import strings and use strings  
+#include<string.h>
+
 
 #define RETURNTIME 15
 
@@ -40,9 +52,21 @@ char password[10]={"codewithc"};
 
 void gotoxy (int x, int y)
 {
+
 coord.X = x; coord.Y = y; // X and Y coordinates
 SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE), coord);
 }
+=======
+   // to store the name of the book  
+char bk_name[30];
+    // to store the name of the author of the book  
+char author[30];
+ // to store the number of pages of the book  
+int pages;
+ // to store the cost of the book  
+float price;
+};
+
 
 struct meroDate
 {
@@ -65,6 +89,7 @@ struct meroDate duedate;
 struct books a;
 int main()
 {
+
 Password();
 getch();
 return 0;
@@ -136,7 +161,7 @@ gotoxy(16,13);
 printf("********************************************");
 gotoxy(10,17);
 printf("Exiting in 3 second...........>");
-//flushall();
+flushall();
 Sleep(3000);
 exit(0);
 }
@@ -441,11 +466,11 @@ printf("The name of book is %s",a.name);
 gotoxy(10,11);
 printf("Enter student name:");
 scanf("%s",a.stname);
-//struct dosdate_t d; //for current date
-//_dos_getdate(&d);
-//a.issued.dd=d.day;
-//a.issued.mm=d.month;
-//a.issued.yy=d.year;
+struct dosdate_t d; //for current date
+dos_getdate(&d);
+a.issued.dd=d.day;
+a.issued.mm=d.month;
+a.issued.yy=d.year;
 gotoxy(10,12);
 printf("Issued date=%d-%d-%d",a.issued.dd,a.issued.mm,a.issued.yy);
 gotoxy(10,13);
@@ -509,8 +534,8 @@ gotoxy(51,j);
 printf("%d-%d-%d",a.issued.dd,a.issued.mm,a.issued.yy );
 gotoxy(65,j);
 printf("%d-%d-%d",a.duedate.dd,a.duedate.mm,a.duedate.yy);
-//struct dosdate_t d;
-//_dos_getdate(&d);
+struct dosdate_t d;
+dos_getdate(&d);
 gotoxy(50,25);
 //            printf("Current date=%d-%d-%d",d.day,d.month,d.year);
 j++;
@@ -796,12 +821,12 @@ printf("Date and time:%s\n",ctime(&t));
 
 return 0 ;
 }
-/*void show_mouse(void) //show inactive mouse pointer in programme
+void show_mouse(void) //show inactive mouse pointer in programme
 {
 union REGS in,out;
        in.x.ax = 0x1;
        int86(0x33,&in,&out);
-}*/
+}
 void Password(void) //for password option
 {
 mainmenu();
@@ -816,7 +841,7 @@ printf("Issued Date:%d-%d-%d",a.issued.dd,a.issued.mm,a.issued.yy);
 gotoxy(10,10);
 printf("Returning Date:%d-%d-%d",a.duedate.dd,a.duedate.mm,a.duedate.yy);
 }
-/*void loaderanim()
+void loaderanim()
 {
 int loader;
 system("cls");
@@ -829,3 +854,90 @@ for(loader=1;loader<20;loader++)
 Sleep(100);printf("%c",219);}
 }*/
 //End of program
+
+  // using the struct library again.'  
+    // in order to perform operations  
+struct library l[100];
+char ar_nm[30],bk_nm[30];
+int i,j, keepcount;
+i=j=keepcount = 0;
+//while loops of repetition of statements
+while(j!=6)
+{
+printf("\n\n1. Add book information\n2. Display book information\n");
+printf("3. List all books of given author\n");
+printf("4. List the title of specified book\n");
+printf("5. List the count of books in the library\n");
+printf("6. Exit");
+
+printf ("\n\nEnter one of the above : ");
+scanf("%d",&j);
+
+switch (j)
+{
+// in order to add the book details  
+/* Add book */
+case 1:  
+
+printf ("Enter book name = ");
+scanf ("%s",l[i].bk_name);
+
+printf ("Enter author name = ");
+scanf ("%s",l[i].author);
+
+printf ("Enter pages = ");
+scanf ("%d",&l[i].pages);
+
+printf ("Enter price = ");
+scanf ("%f",&l[i].price);
+keepcount++;
+
+break;
+case 2:
+ // to view the list of the books  
+printf("you have entered the following information\n");
+for(i=0; i<keepcount; i++)
+{
+printf ("book name = %s",l[i].bk_name);
+
+printf ("\t author name = %s",l[i].author);
+
+printf ("\t  pages = %d",l[i].pages);
+
+printf ("\t  price = %f",l[i].price);
+}
+break;
+
+case 3:
+printf ("Enter author name : ");
+scanf ("%s",ar_nm);
+for (i=0; i<keepcount; i++)
+{
+if (strcmp(ar_nm, l[i].author) == 0)
+printf ("%s %s %d %f",l[i].bk_name,l[i].author,l[i].pages,l[i].price);
+}
+break;
+
+case 4:
+printf ("Enter book name : ");
+scanf ("%s",bk_nm);
+for (i=0; i<keepcount; i++)
+{
+if (strcmp(bk_nm, l[i].bk_name) == 0)
+printf ("%s \t %s \t %d \t %f",l[i].bk_name,l[i].author,l[i].pages,l[i].price);
+}
+break;
+
+case 5:
+printf("\n No of books in library : %d", keepcount);
+break;
+case 6:
+  // to exit from the program  
+exit (0); 
+
+}
+}
+return 0;
+
+}
+
