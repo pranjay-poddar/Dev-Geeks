@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A BMI calculator| To measure your BMI and keep you healthy</title>
+    <link rel="stylesheet" href="BMI.css">
+</head>
+<body>
+    <div class="main-container">
+      
+        <div class="container"> 
+            <h2> BMI Calculator <hr></h2>
+            <div class="input-height">
+              <p class="centimetre"><label for="text-height"> Enter your Height(cm): </label></p>
+                <input type="text" id="text-height" class="height"name="height" placeholder="Ex:167.64cm" required>
+            </div>
+            <div class="input-weight">
+                <p class="killograms"><label for="text-weight"> Enter your weight(kg):</label></p>
+                <input type="text" id="text-weight" class="weight" name="weight" placeholder="Ex: 54kg">
+            </div>
+            <div class="submit">
+                <button class="calculate_btn">Calculate</button>
+                <button class="reset_btn">Reset</button>
+            </div>
+            <div class="Value"></div>
+            <div class="Result"></div>
+        </div>       
+          </div>
+    <script src="BMI.js"></script>
+</body>
+</html>
