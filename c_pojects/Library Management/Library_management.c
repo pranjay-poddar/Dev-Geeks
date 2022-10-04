@@ -1,24 +1,33 @@
-
+// to import standard input and output  
 #include<stdio.h>
+// to import clear statements, etc. ( if any ) 
 #include<conio.h>
+ // to import standard libraries  
 #include<stdlib.h>
+// to import strings and use strings  
 #include<string.h>
 
 struct library
 {
+   // to store the name of the book  
 char bk_name[30];
+    // to store the name of the author of the book  
 char author[30];
+ // to store the number of pages of the book  
 int pages;
+ // to store the cost of the book  
 float price;
 };
 
 int main()
 {
+  // using the struct library again.'  
+    // in order to perform operations  
 struct library l[100];
 char ar_nm[30],bk_nm[30];
 int i,j, keepcount;
 i=j=keepcount = 0;
-
+//while loops of repetition of statements
 while(j!=6)
 {
 printf("\n\n1. Add book information\n2. Display book information\n");
@@ -32,6 +41,7 @@ scanf("%d",&j);
 
 switch (j)
 {
+// in order to add the book details  
 /* Add book */
 case 1:  
 
@@ -50,6 +60,7 @@ keepcount++;
 
 break;
 case 2:
+ // to view the list of the books  
 printf("you have entered the following information\n");
 for(i=0; i<keepcount; i++)
 {
@@ -87,6 +98,7 @@ case 5:
 printf("\n No of books in library : %d", keepcount);
 break;
 case 6:
+  // to exit from the program  
 exit (0); 
 
 }
