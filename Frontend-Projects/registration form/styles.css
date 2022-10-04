@@ -3,14 +3,14 @@ body{
     background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(253,45,207,1) 81%);
 }
 
-// For heading
+/* For heading */
 h1	{
 		text-align:center; 
         font-size: 40px; 
         text-decoration: underline;
 }
 
-//Aligning the form to center
+/* Aligning the form to center */
 .center {
         margin: auto;
         width: 50%;
@@ -21,7 +21,7 @@ h1	{
         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-//Adding css to submit button
+/* Adding css to submit button */
 .btn {
     position: relative; 
     left: 250px;
