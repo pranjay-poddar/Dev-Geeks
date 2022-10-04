@@ -1,0 +1,19 @@
+h1 {
+  text-align: center;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  text-decoration: wavy;
+  text-decoration: underline;
+  color: rgb(3, 19, 170);
+}
+p {
+  text-align: center;
+  font-family: serif;
+  font-size: 25px;
+}
+footer {
+  padding-left: 50px;
+  font-size: 25px;
+}
+body {
+  background-color: lightgray;
+}
