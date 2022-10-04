@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Ubuntu', sans-serif;
+    box-sizing: border-box;
+}
+
+.cust-navbar {
+    display: flex;
+    align-items: center;
+    height: 100px;
+    background-color: #F96666;
+}
+
+.cust-navbar .brand-name {
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 20px;
+    font-size: 30px;
+}
+
+.cust-navbar .brand-name .fa-calculator {
+    font-size: 35px;
+    margin-left: 5px;
+}
+
+.cust-navbar .brand-name .fa-calculator:hover {
+    transform: rotate(25deg);
+}
+
+.mid {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 96vw;
+    margin-left: 5px;
+}
+
+.box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 3px solid #F96666;
+    border-radius: 6px;
+    font-family: 'Ubuntu', sans-serif;
+    box-shadow: 10px 5px 10px #ccc;
+}
+
+.heading {
+    padding: 30px;
+}
+
+.box .form-inp .height {
+    padding: 20px;
+}
+.box .form-inp .weight {
+    padding: 20px;
+}
+.box .form-inp .btnn {
+    font-size:20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.box .form-inp #ht {
+    font-size: 18px;
+    margin-right: 15px;
+}
+.box .form-inp #wt {
+    font-size: 18px;
+    margin-right: 15px;
+}
+
+.box .form-inp .ht {
+    border-radius: 6px;
+    padding: 5px 10px;
+}
+.box .form-inp .wt {
+    border-radius: 6px;
+    padding: 5px 10px;
+}
+.box .form-inp #bt {
+    padding: 10px 15px;
+    border-radius: 6px;
+    background-color: #F96666;
+    color: white;
+    border: transparent;
+    transition: all 0.3s ease;
+}
+
+.box .form-inp #bt:hover {
+    background-color: #fff;
+    color: black;
+    border: 1px solid #F96666;
+}
+
+.box .form-inp .res {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    transition: all 0.3s ease;
+}
+
+.footer {
+    font-family: 'Ubuntu', sans-serif;
+    position: absolute;
+    bottom: 0;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #F96666;
+    height: 70px;
+}
+
+.footer p {
+    padding-top: 15px;
+}
+
+.footer p span {
+    padding-right: 2px;
+    transition: all 0.5s ease;
+}
+
+.footer p span:hover {
+    color: #F9F9F9;
+    cursor: pointer;
+}

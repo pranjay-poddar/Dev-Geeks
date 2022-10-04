@@ -496,7 +496,13 @@ Happy Coding! -->
 <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/ML%20Projects/Youtube-video-downloader"> Youtube-video-downloader </a></td>
 <td align="center"> 156.</td>
 <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/React-JS%20Projects/responsive-product-component">Reactive-Product-Component</a></td>
+<td align="center"> 157.</td>
+<td align="center"> <a href="https://github.com/sumitkr2000/BMI_Calculator/tree/main/bmi-calculator">BMI Calculator</a></td>
 </tr>
+	
+<tr align="center">
+<td align="center"> 158.</td>
+<td align="center"> <a href="https://github.com/Noothan-am/Dice-game-/tree/main/dicegame">  Dice game</a></td>
 	
 </table>
 
@@ -528,7 +534,7 @@ Happy Coding! -->
  <b>Contributors
 <h1>
 <a href="https://github.com/pranjay-poddar/Dev-Geeks/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=pranjay-poddar/Dev-Geeks&&max=917" />
+  <img src="https://contrib.rocks/image?repo=pranjay-poddar/Dev-Geeks&&max=817" />
 </a>
 
 <!-- &max={number} -->
