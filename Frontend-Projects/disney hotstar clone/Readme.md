@@ -3,7 +3,7 @@
 
 A fully responsive frontend project using HTML, CSS, JAVASCRIPT.
 
-##Screenshots
+## Screenshots
 
 1) Desktop/PC viewport
 
