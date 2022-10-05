@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+    <title>WeatherSense</title>
+    <style>
+            body {
+              
+               background-image: url('mount.jpg');
+               background-position: center;
+               background-attachment: fixed;
+               background-size: cover;
+               width: 100%; 
+               background-attachment: fixed;
+               margin: 0px 0px 0px 0px;
+               }
+      @media screen and (max-width: 1000px) {
+     #status{
+       margin-left:auto ;
+       margin-right: auto;
+     }
+     #temperature{
+        font-size: 3rem;
+     }
+     #feels-like{
+        font-size: 1.5rem;
+     }
+     #searchbar{
+        float: none;
+        margin-top: 10px;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 0px 0px 0px 0px;
+        width:100%;
+         }
+    #forcast{
+        column-gap: 10rem;
+    }
+    #details{
+        margin-top: 0px;
+        margin-right: auto ;
+        margin-left: auto;
+        justify-content: space-evenly;
+    }
+    #details table{
+        margin-top: 20px;
+    }
+    #location span{
+        font-size: 1.1rem;
+    }
+    #location{
+        width: 100%;
+      padding: 4px 4px 4px 4px;
+      display: flex;
+      justify-content: center;
+    }
+}
+    </style>
+</head>
+<body class="" >
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- search bar -->
+    <div id="searchbar" class="flex justify-center float-right w-64 mx-8">
+        <div class="mb-3 xl:w-96">
+          <div class="input-group relative flex flex-wrap items-stretch w-full mb-4">
+            <input id="input_text" type="search" class="form-control relative flex-auto min-w-0 block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" placeholder="Search around the globe" aria-label="Search" aria-describedby="button-addon2">
+            <button class="btn  px-6 py-2.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700  focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out flex items-center" type="button" id="button-addon2">
+              <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="w-4" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                <path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    <!-- search bar -->
+     <!-- location -->
+     <div class="float-left text-4xl p-3 text-yellow-50 " id="location">
+        <img class="inline w-6" src="place.png" alt="" srcset="">
+        <span><span>
+               
+    </div>
+    <br>
+    <div id="status" class=" m-10  text-center max-w-max bg-black opacity-50 text-white p-1 rounded-2xl  ">
+         
+            <img id="icon" class=" mx-auto block w-36 float-left" src="http://openweathermap.org/img/wn/10d@2x.png" alt="weather-icon" srcset="">
+            <span class="mx-auto text-2xl block"  id="stat">_</span>
+            <span id="dt" class="p-2 block">_</span>
+    </div>
+    <div id="details" class="mt-0 mb-10 mx-10 text-left flex flex-wrap justify-between">
+        <div class=" rounded-2xl p-6 bg-black opacity-50 text-yellow-50">
+            <h1 class="text-8xl block" id="temperature">-</h1>
+            <h2 class="text-2xl block text-center" >Feels like  <span id="feels-like">_</span>&degC</h2>
+        </div>
+        
+        <table class="opacity-50 border-solid border- border-sky-500  bg-black text-white rounded-xl">
+            <tr >
+                <th class="py-2 px-6">Humidity</th>
+                <td id="humidity" class="px-6">_</td>
+            </tr>
+            <tr>
+                <th class="px-6 py-2">Pressure</th>
+                <td id="pressure" class="px-6">_</td>
+            </tr>
+            <tr>
+                <th class="py-2 px-6">Wind Speed</th>
+                <td id="speed" class="px-6">_</td>
+            </tr>
+            <tr>
+                <th class="py-2 px-6">Sunrise</th>
+                <td id="sunrise" class="px-6">_</td>
+            </tr>
+            <tr>
+                <th class="py-2  px-6">Sunset</th>
+                <td id="sunset" class="px-6">_</td>
+            </tr>
+        </table>
+    </div>
+    <!-- FORECAST-->
+        <div class=" bg-black opacity-50 m-0 grid grid-cols-7 gap-x-6 overflow-x-scroll  py-6  text-white " id="forcast" > 
+           <div  class=" border-solid border-4 text-center rounded-2xl w-36"  id="0">
+            <h2>_</h2>
+            <img class="m-auto" src="http://openweathermap.org/img/wn/10d@2x.png" alt="weather-icon" srcset="">
+            <table class="mx-auto ">
+                <tr>
+                    <th class="p-2">Max</th>
+                    <td class="p-2">_</td>
+                </tr>
+                <tr>
+                    <th>Min</th>
+                    <td></td>
+                </tr>
+            </table> 
+        </div>
+           <div  class=" border-solid border-4 text-center rounded-2xl  w-36" id="1">
+            <h2></h2>
+            <img class="m-auto" src="http://openweathermap.org/img/wn/10d@2x.png" alt="weather-icon" srcset="">
+            <table class="mx-auto ">
+                <tr>
+                    <th class="p-2">Max</th>
+                    <td class="p-2">_</td>
+                </tr>
+                <tr>
+                    <th>Min</th>
+                    <td>_</td>
+                </tr>
+            </table> 
+        </div>
+           <div  class=" mx-1 border-solid border-4 text-center rounded-2xl w-36" id="2">
+            <h2></h2>
+            <img class="mx-auto" src="http://openweathermap.org/img/wn/10d@2x.png" alt="weather-icon" srcset="">
+            <table class="mx-auto ">
+                <tr>
+                    <th class="p-2">Max</th>
+                    <td class="p-2">_</td>
+                </tr>
+                <tr>
+                    <th>Min</th>
+                    <td>_</td>
+                </tr>
+            </table> 
+        </div>
+           <div  class=" border-solid border-4 text-center rounded-2xl  w-36" id="3">
+            <h2></h2>
+            <img class=" m-auto" src="http://openweathermap.org/img/wn/10d@2x.png" alt="weather-icon" srcset="">
+            <table class="mx-auto ">
+                <tr>
+                    <th class="p-2">Max</th>
+                    <td class="p-2">_</td>
+                </tr>
+                <tr>
+                    <th>Min</th>
+                    <td>_</td>
+                </tr>
+            </table> 
+        </div>
+           <div  class=" border-solid border-4 text-center rounded-2xl  w-36" id="4">
+            <h2></h2>
+           
+            <img class="m-auto" src="http://openweathermap.org/img/wn/10d@2x.png" alt="weather-icon" srcset="">
+            <table class="mx-auto ">
+                <tr>
+                    <th class="p-2">Max</th>
+                    <td class="p-2">_</td>
+                </tr>
+                <tr>
+                    <th>Min</th>
+                    <td>_</td>
+                </tr>
+            </table>  
+        </div>
+           <div  class="  border-solid border-4 text-center rounded-2xl  w-36" id="5">
+            <h2></h2>
+            <img class="m-auto" src="http://openweathermap.org/img/wn/10d@2x.png" alt="weather-icon" srcset="">
+            <table class="mx-auto ">
+                <tr>
+                    <th class="p-2">Max</th>
+                    <td class="p-2">_</td>
+                </tr>
+                <tr>
+                    <th>Min</th>
+                    <td>_</td>
+                </tr>
+            </table> 
+        </div>
+           <div  class=" border-solid border-4 text-center rounded-2xl  w-36" id="6">
+            <h2></h2>
+            <img class="m-auto" src="http://openweathermap.org/img/wn/10d@2x.png" alt="weather-icon" srcset="">
+            <table class="mx-auto ">
+                <tr>
+                    <th class="p-2">Max</th>
+                    <td class="p-2">_</td>
+                </tr>
+                <tr>
+                    <th>Min</th>
+                    <td>_</td>
+                </tr>
+            </table> 
+        </div>
+        </div>
+        
+    <script src="script.js" type="text/javascript" ></script>
+
+</body>
+</html>
