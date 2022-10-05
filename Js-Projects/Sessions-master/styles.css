@@ -1,0 +1,219 @@
+body {
+    margin: 0px;
+    padding: 0px;
+    display: flex;
+    flex-direction: column;
+    height: 430px;
+    width: 300px;
+    background-color: #11141C;
+    font-family: 'Nunito', sans-serif;
+    color: white;
+    align-items: center;
+    text-align: center;
+}
+
+
+
+h2 {
+    font-size: 23px;
+    font-weight: 700;
+    margin: 0px;
+    padding: 0px;
+}
+
+.headerContent {
+    font-size: 14px;
+    margin-left: 20px;
+    margin-right: 20px;
+    color: rgb(223, 223, 223);
+    padding: 0px;
+}
+
+img {
+    height: 130px;
+    margin-bottom: 18px;
+}
+
+.version {
+    font-weight: 100;
+    font-size: medium;
+    margin-left: 5px;
+}
+
+.main-btn {
+    border-radius: 3px;
+    border: none;
+    background: #0183FF;
+    color: white;
+    font-family: inherit;
+    font-weight: 600;
+    text-align: center;
+    font-size: 14px;
+    width: 220px;
+    padding: .9em;
+    transition: all 0.4s;
+    cursor: pointer;
+    margin-bottom: 14px;
+    margin-top: 10px;
+}
+
+.checkboxContainer {
+    display: flex;
+    align-items: center;
+    color: rgb(147, 161, 183);
+}
+
+.checkboxContainer label{
+    padding-left: 2px;
+}
+
+/* Card Section */
+
+.card {
+    background-color: rgb(17, 23, 34);
+    margin: 4px 12px 12px 12px;
+    padding-top: 8px;
+    width: 279px;
+}
+
+.card-action {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.actionBtn.restore {
+    border-radius: 4px;
+    border: none;
+    background: #1dca73;
+    color: white;
+    font-family: inherit;
+    font-weight: 600;
+    text-align: center;
+    text-decoration: none;
+    font-size: 14px;
+    width: 180px;
+    padding: .7em;
+    transition: all 0.4s;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.actionBtn.del {
+    border: 1px solid;
+    border-radius: 4px;
+    border-color: #ff0141;
+    color: #ff0141;
+    font-family: inherit;
+    font-weight: 600;
+    text-align: center;
+    text-decoration: none;
+    font-size: 14px;
+    width: 180px;
+    padding: .7em;
+    transition: all 0.4s;
+    cursor: pointer;
+    margin-top: 14px;
+    margin-bottom: 12px;
+}
+
+.actionBtn.del:hover {
+    background-color: #ff0141;
+    color: white;
+  }
+  
+.date{
+    float: right;
+    margin-right: 8px;
+    color: rgb(75, 101, 146);
+}
+
+.noOfTabs{
+    float: left;
+    margin-left: 8px;
+    color: rgb(75, 101, 146); 
+}
+
+
+li{
+    list-style-type: none;
+    padding-top:10px;
+}
+
+.collection-item{
+    padding-top:20px;
+    text-align: left;
+}
+
+.collection-item img{
+  align-content: left;
+  left: 20px;
+  width: 20px;
+  height: 20px;
+  position:absolute;
+}
+
+.name-text-box{
+    color: aliceblue;
+    background-color: #11141C;
+}
+
+.card-action label {
+    display: flex;
+    align-items: center;
+    padding-bottom: 12px;
+    color: rgb(147, 161, 183);
+    padding-left: 2px;
+}
+
+#card-section-0 {
+    margin-top: 20px;
+}
+
+/*Name section*/
+.row.name-row-div{
+    display: flex;
+    margin: 14px 0px 0px 8px;
+}
+
+.name-btn {
+    background-color: #11141C;
+    text-decoration: none;
+    border: none;
+    color: rgb(75, 101, 146);
+    font-family: inherit;
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.name-text-box {
+    border: none;
+    font-family: inherit;
+    border-color: aqua;
+}
+
+.name-save-btn {
+    background-color: #1dca73;
+    border: none;
+    box-shadow: none;
+    font-family: inherit;
+    color: rgb(223, 223, 223);
+    border-radius: 2px;
+}
+
+  /* Scrollbar Styling */
+  /* width */
+  ::-webkit-scrollbar {
+    width: 7px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    border-radius: 10px;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: rgb(32, 43, 61);
+    border-radius: 10px;
+  }

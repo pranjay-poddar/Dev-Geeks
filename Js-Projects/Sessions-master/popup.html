@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <h1 class = "header">Sessions<span class = "version">v1</span></h1>
+    <div class = "illustration">
+        <img src="No Favorite illustration.svg" alt="no sessions found">
+    </div>
+    <div class = "textContent">
+        <h2> No sessions created</h2>
+        <p class = "headerContent">Create a session now to save memory, to save tabs or to simply take a break</p>
+    </div>
+    <div>
+        <button a href="#" id="createSession" class="main-btn">Create Session</button>
+    </div>
+    <div class = "checkboxContainer">
+        <input type="checkbox" id="tabStateSelector" onclick="dontCloseTabs()">
+        <label for="tabStateSelector">Keep tabs open while saving</label>
+    </div>
+
+
+
+    <div class="sessionContainer">
+       
+    </div>
+
+    <script src="js/moment-with-locales.min.js"></script>
+    <script src="js/builder.js"></script>
+    <script src="js/popup.js"></script>
+    <script src="js/card-action.js"></script>
+    <script src="js/save-tabs.js"></script>
+    <script src="js/base-popup.js"></script>
+</body>
+
+</html>
