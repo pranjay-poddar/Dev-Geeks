@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <title>Quizing</title>
+</head>
+<style>
+   
+</style>
+
+<body>
+    <header>
+        <div id=leaderboard onclick="HighScore()">View Highscores <i class="fa fa-hand-point-left fa-lg"></i>
+        </div>
+        <div>Time:<span id="timer">00</span></div>
+    </header>
+    <div class="container1">
+        <h2>Coding Quiz Challenge</h2>
+        Try to answer to following code-related question within the time limit. <br>
+        Keep in mind that incorrect answers will penalize your time by ten second!!
+        <p><button id = "start"onclick="show();setInterval(times,1000)"> Start Quiz</button></p>
+    </div>
+    <div class="container2">
+        <div class="box" id="question">Qus</div>
+        <div class="box1">
+            <div class="option" id="1" onclick="getOption(this.id)">option 1</div>
+            <div class="option" id="2" onclick="getOption(this.id)">option2</div>
+            <div class="option" id="3" onclick="getOption(this.id)">option3</div>
+            <div class="option" id="4" onclick="getOption(this.id)">option4</div>
+
+        </div>
+        <hr>
+        <div class="box" id="result">
+
+        </div>
+    </div>
+    <div class="container3">
+        <h2>Highscores</h2>
+        <ol id="list">
+
+        </ol>
+        <button onclick="home()">Go Back</button> <button onclick="localStorage.clear(); location.reload();">Clear
+            Highscore</button>
+    </div>
+    <div class="container4">
+        <h1>All Done!!</h1>
+        <h2>Your final scores is:<span id="score">00 </span></h2>
+        <form action="">
+            <label for="name">Enter Initials:</label>
+            <input type="text" name="" id="name" width="5rem" height="1rem">
+            <button onclick="store()" id="submit">Submit</button>
+
+        </form>
+        <!-- <button onclick="home()">Go Back</button> -->
+    </div>
+
+    <script src="./index.js">
+
+        
+    </script>
+</body>
+
+</html>
