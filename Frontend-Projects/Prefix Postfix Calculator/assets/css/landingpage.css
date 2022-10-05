@@ -1,0 +1,58 @@
+.main-content{
+    /* display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center; */
+    position: relative;
+}
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-image: linear-gradient(rgb(94, 169, 224), rgb(175, 218, 225));
+    /* background: url(../Images/word_definition.png);
+    background-repeat: no-repeat;
+    background-size: cover; */
+}
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 520px;
+    height: 320px;
+    border-radius: 7px;
+    background: rgb(255, 255, 255);
+    padding: 25px 28px 25px;
+    box-shadow: 7px 7px 20px rgb(0 0 0 / 5%);
+}
+h1{
+    text-align: center;
+}
+.Calculators{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    margin: 35px 0 18px;
+}
+.buttons{
+    border-radius: 5px;
+    padding: 8px;
+    margin: 5px;
+    border: 2px solid  rgb(175, 218, 225);
+    background-color: white;
+
+}
+.buttons:hover {
+    background-color: rgb(94, 169, 224);
+}
+@media (max-width: 576px){
+    .container{
+        width: 440px;
+    }
+}
+@media (max-width: 476px){
+    .container{
+        width: 330px;
+    }
+}
