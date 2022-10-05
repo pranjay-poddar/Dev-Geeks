@@ -1,42 +1,46 @@
 * {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
   background-color: rgb(209, 234, 242);
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
+html {
+  overflow-y: hidden;
+  overflow-x: hidden;
+}
+.image {
+  width: 100vw;
+  display: flex; 
+  justify-content: space-evenly;
+}
+.image img {
+  width: 300px;
+  height: 300px;
+}
+
 h1 {
   text-decoration: underline;
-  /* display: inline-block; */
   text-align: center;
-  display: relative;
-  float: top;
+  transition: .5s ease;
+  margin: 2%;
 }
 h1:hover {
-  font-family: "Courier New", Courier, monospace;
-  background-color: brown;
   font-size: 40px;
+  transition: .5s ease;
 }
 p {
   font-size: 20px;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
   text-align: center;
+  margin: 1%;
+  line-height: 30px;
+  letter-spacing: 2px;
 }
-img {
-  height: 300px;
-  width: 300px;
-  margin-top: 0px;
-  padding: 5px;
-  margin-left: 10px;
-  display: inline-block;
-}
-#second {
-  position: relative;
-  float: right;
-}
-button:hover {
-  cursor: pointer;
-}
-div {
+
+.gift {
   text-align: center;
   font-size: 35px;
-  font-family: "Times New Roman", Times, serif;
+  margin: 3% auto auto auto;
 }
 button {
   font-size: 25px;
@@ -44,11 +48,22 @@ button {
   width: 150px;
   background-color: crimson;
   border-radius: 8px;
+  margin: 2%;
 }
-#gifty {
-  padding-top: 25px;
+
+
+.giftContent {
+  width: 100vw;
+  height: 100vh;
 }
-.gif {
-  margin-left: 550px;
-  margin-top: 50px;
+.giftContent h2 {
+  text-align: center;
+  margin: 2% auto;
+  font-size: 30px;
+  text-decoration: underline;
+}
+.giftPresent {
+  display: block;
+  margin: auto;
+  margin-top: 5%;
 }
