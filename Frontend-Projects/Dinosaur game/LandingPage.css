@@ -1,0 +1,49 @@
+* {
+    overflow: hidden;
+    margin: 0;
+}
+
+#background {
+    background-image: url(Images/51955.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 1530px;
+    height: 710px;
+    position: relative;
+
+
+
+}
+
+button {
+    border: 2px black solid;
+    text-align: center;
+    margin-top: 350px;
+    margin-left: 659px;
+    font-size: 30px;
+    border-radius: 25%;
+    position: absolute;
+    background-color: rgba(255, 119, 0, 0.795);
+
+
+
+
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+h2 {
+    text-align: center;
+    color: black;
+    margin-left: 240px;
+    margin-top: 450px;
+    font-size: 27px;
+    font-family: serif;
+    position: absolute;
+    border: 2px black solid;
+    background-color: rgba(255, 119, 0, 0.795);
+    border-radius: 10px;
+}

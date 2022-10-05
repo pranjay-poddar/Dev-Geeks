@@ -1,0 +1,124 @@
+* {
+    overflow: hidden;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: grid;
+    place-items: center;
+
+}
+
+
+
+
+
+#score {
+
+    height: auto;
+    width: auto;
+    font-size: 30px;
+    position: absolute;
+    top: 20px;
+    right: 700px;
+
+}
+
+#gameOver {
+    display: none;
+    font-size: 75px;
+    position: absolute;
+    left: 570px;
+    top: 400px;
+    width: 362px;
+    height: 80px;
+    color: black;
+
+
+}
+
+
+#game {
+    background-image: url(Images/background2.jpg);
+    background-size: cover;
+    position: relative;
+    width: 1530px;
+    height: 710px;
+    border: 2px solid black;
+    margin: auto;
+
+}
+
+
+
+
+
+
+
+#game #player {
+    background-image: url(Images/dino1.png);
+    background-size: 210px 210px;
+    background-repeat: no-repeat;
+    height: 210px;
+    width: 210px;
+    bottom: 16px;
+    left: 20px;
+    position: absolute;
+
+}
+
+.animate {
+    animation: jump 0.5s linear infinite;
+}
+
+
+
+
+
+
+
+@keyframes jump {
+    0% {
+        bottom: 20px;
+    }
+
+    50%,
+    60% {
+        bottom: 400px;
+        left: 100px;
+    }
+
+    100% {
+        bottom: 20px;
+        left: 50px;
+    }
+}
+
+
+#game #obstacle {
+    height: 100px;
+    width: 100px;
+    background-image: url(Images/cactus3.png.png);
+    background-size: 100px 100px;
+    bottom: 20px;
+    right: -20px;
+    position: absolute;
+}
+
+
+.obstacleActive {
+    animation: move 3s infinite linear;
+}
+
+
+
+@keyframes move {
+    0% {
+        right: -100px;
+    }
+
+    100% {
+        right: 100%;
+    }
+}
