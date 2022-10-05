@@ -41,7 +41,7 @@ body{
 }
 
 .sidebar{
-    width: 250px;
+    width: 275px;
     position: absolute;
     left: -250px;
     top: 0;
@@ -50,11 +50,12 @@ body{
     transition: 0.5s;
 }
 
+/*Moved the close button a bit to the bottom to align with the title*/
 .sidebar .close span{
     position: absolute;
-    top: 5px;
+    top: 15px;
     right: 10px;
-    padding: 7px;
+    padding: 7px 10px;
     color: white;
     background: #444;
     border-radius: 4px;
@@ -62,16 +63,19 @@ body{
 }
 
 .sidebar .title{
-    padding-left: 60px;
+    padding-left: 50px;
     font-size: 25px;
     line-height: 60px;
     color: white;
     border-bottom: 2px solid gray;
 }
 
+/*Aligned the icons with the links + added some padding for a better UI*/
+
 .sidebar .links li{
     list-style: none;
-    display: block;
+    display: flex;
+    justify-content: space-between;
     width: 100%;
     line-height: 60px;
     border-left: 5px solid transparent;
