@@ -1,17 +1,17 @@
 #header {
-  background-color: black;
+  background-color: rgb(237, 231, 231);
   margin: 20px 30px 20px 30px;
   border: 2px solid black;
   font-size: 20px;
   font-family: Arial, sans-serif;
   width: 95%; }
   #header a {
-    color: white;
+    color: blue;
     text-decoration: none; }
   #header td {
     text-align: center;
     padding: 10px;
-    background-color: black;
+    background-color: grey;
     width: 20%; }
   #header td:hover {
     background-color: grey; }
