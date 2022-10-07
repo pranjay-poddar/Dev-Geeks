@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html>
+	<head> 
+		<meta charset = "utf-8"/> 
+		<title>Cat Games</title>
+		<style>
+		#board {
+		width: 400px;
+		height: 400px;
+		position: relative;
+		background: black;
+		margin-bottom:20px;
+		}
+
+		#bobCat {
+		width: 20px;
+		height: 20px;
+		position: absolute;
+		background-color: brown;
+		text-align: center;
+		}
+		
+		#tomCat {
+		width: 20px;
+		height: 20px;
+		position: absolute;
+		background-color: blue;
+		text-align: center;
+		}
+
+		#jerryMouse {
+		width: 20px;
+		height: 20px;
+		position: absolute;
+		background-color: yellow;
+		text-align: center;
+		}
+		
+		#bobscore {
+		font-weight:bold;
+		}
+
+		#tomscore {
+		font-weight:bold;
+		}
+		</style>
+	</head>
+	<body>	
+		<div id="board">
+			<div id="jerryMouse"></div>
+			<div id="tomCat"></div>
+			<div id="bobCat"></div>
+		</div>
+		<div>Bob Score :<span id="bobscore">0</span></div>
+		<div>Tom Score :<span id="tomscore">0</span></div>
+		<div>
+		<p>Created by <a href = "https://www.algoberry.com" target="_blank">Algoberry</a></p> 
+		</div>
+	</body>
+</html>
+<script>
+
+//Object Declaration
+var boardobj;
+var jerryMouseobj;
+var bobCatobj;
+var tomCatobj;
+
+//Variable Declaration
+var portionSize = 20;	//Same portion size should be set to bobCat (width, height) & jerryMouse (width, height) 
+
+var boardTop = 400;		//Board top position
+var boardLeft = 400;	//Board left position
+
+var jerryMouseTop = 0;		//Default jerryMouse top position
+var jerryMouseLeft = 0;		//Default jerryMouse left position
+
+var bobCatTop = 0;
+var bobCatLeft = 0;
+
+var tomCatTop = 0;
+var tomCatLeft = 0;
+
+var bobscore = 0;
+var tomscore = 0;
+
+//Start Point
+starter();
+var runObj = setInterval(run,100);
+
+function starter() {
+	boardobj = document.getElementById("board");
+	
+	jerryMouseobj = document.getElementById("jerryMouse");
+	jerryMouseTop = getTop();
+	jerryMouseLeft = getLeft();
+	jerryMouseobj.style.top = jerryMouseTop+"px";
+	jerryMouseobj.style.left = jerryMouseLeft+"px";
+	jerryMouseobj.innerHTML = "J";
+	
+	bobCatobj = document.getElementById("bobCat");
+	bobCatTop = getTop();
+	bobCatLeft = getLeft();
+	bobCatobj.style.top = bobCatTop+"px";
+	bobCatobj.style.left = bobCatLeft+"px";
+	bobCatobj.innerHTML = "B";
+	
+	tomCatobj = document.getElementById("tomCat");
+	tomCatTop = getTop();
+	tomCatLeft = getLeft();
+	tomCatobj.style.top = tomCatTop+"px";
+	tomCatobj.style.left = tomCatLeft+"px";
+	tomCatobj.innerHTML = "T";
+}
+
+function run() {
+	//Get current bobCat position
+	bobCatTop = bobCatobj.style.top;
+	bobCatTop = bobCatTop.replace("px","");
+	bobCatTop = parseInt(bobCatTop);
+	
+	bobCatLeft = bobCatobj.style.left;
+	bobCatLeft = bobCatLeft.replace("px","");
+	bobCatLeft = parseInt(bobCatLeft);
+	
+	//Get current tomCat position
+	tomCatTop = tomCatobj.style.top;
+	tomCatTop = tomCatTop.replace("px","");
+	tomCatTop = parseInt(tomCatTop);
+
+	tomCatLeft = tomCatobj.style.left;
+	tomCatLeft = tomCatLeft.replace("px","");
+	tomCatLeft = parseInt(tomCatLeft);
+
+	
+	if(bobCatTop == jerryMouseTop || bobCatLeft < jerryMouseLeft || bobCatLeft > jerryMouseLeft) { //bobCat and jerryMouse are present in same column
+		//---
+		if(bobCatLeft < jerryMouseLeft) {
+			bobCatLeft = bobCatLeft + portionSize;
+		}
+		else
+		{
+			bobCatLeft = bobCatLeft - portionSize;
+		}
+		if(bobCatLeft < 0) {	
+			bobCatLeft = boardLeft-portionSize; 
+		}
+		else if(bobCatLeft == boardLeft) {
+			bobCatLeft = 0;
+		}
+	
+		bobCatobj.style.left = bobCatLeft+"px";
+		if(bobCatTop == jerryMouseTop && bobCatLeft == jerryMouseLeft) {
+			eat();
+		}
+		//---
+	}
+	else if(bobCatLeft == jerryMouseLeft || bobCatTop < jerryMouseTop || bobCatTop > jerryMouseTop) { //bobCat and jerryMouse are present in same row
+		//---
+		if(bobCatTop < jerryMouseTop) {
+			bobCatTop = bobCatTop + portionSize;
+		}
+		else
+		{
+			bobCatTop = bobCatTop - portionSize;
+		}
+		if(bobCatTop < 0) {	
+			bobCatTop = boardTop-portionSize; 
+		}
+		else if(bobCatTop == boardTop) {	
+			bobCatTop = 0; 
+		}
+		
+		bobCatobj.style.top = bobCatTop+"px";
+		if(bobCatTop == jerryMouseTop && bobCatLeft == jerryMouseLeft) {
+			eat();
+		}
+		//---
+	}
+	
+	if(tomCatTop == jerryMouseTop || tomCatLeft < jerryMouseLeft || tomCatLeft > jerryMouseLeft) { //tomCat and jerryMouse are present in same column
+		//---
+		if(tomCatLeft < jerryMouseLeft) {
+			tomCatLeft = tomCatLeft + portionSize;
+		}
+		else
+		{
+			tomCatLeft = tomCatLeft - portionSize;
+		}
+		if(tomCatLeft < 0) {	
+			tomCatLeft = boardLeft-portionSize; 
+		}
+		else if(tomCatLeft == boardLeft) {
+			tomCatLeft = 0;
+		}
+
+		tomCatobj.style.left = tomCatLeft+"px";
+		if(tomCatTop == jerryMouseTop && tomCatLeft == jerryMouseLeft) {
+			eat();
+		}
+		//---
+	}
+	else if(tomCatLeft == jerryMouseLeft || tomCatTop < jerryMouseTop || tomCatTop > jerryMouseTop) { //tomCat and jerryMouse are present in same row
+		//---
+		if(tomCatTop < jerryMouseTop) {
+			tomCatTop = tomCatTop + portionSize;
+		}
+		else
+		{
+			tomCatTop = tomCatTop - portionSize;
+		}
+		if(tomCatTop < 0) {	
+			tomCatTop = boardTop-portionSize; 
+		}
+		else if(tomCatTop == boardTop) {	
+			tomCatTop = 0; 
+		}
+		
+		tomCatobj.style.top = tomCatTop+"px";
+		if(tomCatTop == jerryMouseTop && tomCatLeft == jerryMouseLeft) {
+			eat();
+		}
+		//---
+	}
+}
+
+function eat() {
+	if(jerryMouseobj.style.left == bobCatobj.style.left && jerryMouseobj.style.top == bobCatobj.style.top) {
+		bobscore = bobscore + 1;
+		document.getElementById("bobscore").innerHTML = bobscore;
+		//alert("Bob Win");
+	}
+	else if(jerryMouseobj.style.left == tomCatobj.style.left && jerryMouseobj.style.top == tomCatobj.style.top) {
+		tomscore = tomscore + 1;
+		document.getElementById("tomscore").innerHTML = tomscore;
+		//alert("Tom Win");
+	}
+	
+	//Set new place for jerryMouse, bob cat & tom cat
+	jerryMouseTop = getTop();
+	jerryMouseLeft = getLeft();
+	jerryMouseobj.style.top = jerryMouseTop+"px";
+	jerryMouseobj.style.left = jerryMouseLeft+"px";
+
+	bobCatTop = getTop();
+	bobCatLeft = getLeft();
+	bobCatobj.style.top = bobCatTop+"px";
+	bobCatobj.style.left = bobCatLeft+"px";
+	
+	tomCatTop = getTop();
+	tomCatLeft = getLeft();
+	tomCatobj.style.top = tomCatTop+"px";
+	tomCatobj.style.left = tomCatLeft+"px";
+}
+
+function getTop() {
+	var pos = Math.floor((Math.random() * (boardTop - portionSize)) + 1);
+	pos = pos%portionSize;
+	if(pos >= 1) {
+	pos = portionSize*pos;
+	}
+	return pos;
+}
+
+function getLeft() {
+	var pos = Math.floor((Math.random() * (boardLeft - portionSize)) + 1);
+	pos = pos%portionSize;
+	if(pos >= 1) {
+	pos = portionSize*pos;
+	}
+	return pos;
+}
+</script>
