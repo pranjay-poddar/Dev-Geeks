@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/fontawesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous">
+    <title>gemsgalore.com</title>
+</head>
+<body>
+    <!--HOME-->
+    <section class="header">
+        <!--navigation bar-->
+        <nav class="navbar">
+            <a href="index.html"><img src="logo.png" alt=""></a>
+            <div class="nav-links" id="navLinks">
+                <i class="fas fa-times" onclick="hideMenu()"></i>
+                <div class="navbar-collapse">
+                <ul>
+                    <li class="nav-item"><a href="#home">HOME</a></li>
+                    <li class="nav-item"><a href="#category">CATEGORIES</a></li>
+                    <li class="nav-item"><a href="#video">VIDEO</a></li>
+                    <li class="nav-item"><a href="#team">TEAM</a></li>
+                    <li class="nav-item"><a href="#contact">CONTACT US</a></li>
+                </ul>
+                </div>
+            </div>
+            <i class="fas fa-bars" onclick="showMenu()"></i>
+        </nav>
+
+        <!--image slider start-->
+        <div class="slider" id="home">
+            <div class="slides">
+                <!--radio buttons start-->
+                <input type="radio" name="radio-btn" id="radio1">
+                <input type="radio" name="radio-btn" id="radio2">
+                <input type="radio" name="radio-btn" id="radio3">
+
+                <!--slide images-->
+                <div class="slide first">
+                    <img src="Welcome1.png">
+                </div>
+                <div class="slide">
+                    <img src="Welcome2.png">
+                </div>
+                <div class="slide">
+                    <img src="Welcome3.png">
+                </div>
+                
+            </div>
+            <!--manual navigation start-->
+            <div class="navigation-manual">
+                <label for="radio1" class="manual-btn"></label>
+                <label for="radio2" class="manual-btn"></label>
+                <label for="radio3" class="manual-btn"></label>
+            </div>
+        </div>
+        <!--image slider end-->
+
+        <div class="text-box">
+            <a href="" class="hero-btn">Visit us to know more</a>
+        </div>
+    </section>
+
+    <!--CATEGORIES-->
+    <section class="category" id="category">
+        <h1>Categories</h1>
+
+        <div class="row">
+            <div class="category-col">
+                <img src="bracelet.jfif" alt="">
+                <div class="layer">
+                <h3>Rings</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus<br> omnis natus inventore optio dolorum, magnam, vel voluptas necessitatibus<br> repudiandae sit, distinctio veniam! Dolore totam aliquam, quis quidem iusto cupiditate mollitia.</p>
+                </div>
+                <a href="#" class="btn">Explore More</a>
+            </div>
+            <div class="category-col">
+                <img src="bracelet.jfif" alt="">
+                <div class="layer">
+                <h3>Necklaces</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus<br> omnis natus inventore optio dolorum, magnam, vel voluptas necessitatibus<br> repudiandae sit, distinctio veniam! Dolore totam aliquam, quis quidem iusto cupiditate mollitia.</p>
+                </div>
+                <a href="#" class="btn">Explore More</a>
+            </div>
+            <div class="category-col">
+                <img src="bracelet.jfif" alt="">
+                <div class="layer">
+                <h3>Bracelets</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus<br> omnis natus inventore optio dolorum, magnam, vel voluptas necessitatibus<br> repudiandae sit, distinctio veniam! Dolore totam aliquam, quis quidem iusto cupiditate mollitia.</p>
+                </div>
+                <a href="#" class="btn">Explore More</a>
+            </div>
+        </div>
+    </section>
+
+    <!--VIDEO-->
+    <section class="videos" id="video">
+        <h1>Video Projects</h1>
+        <div class="vid">
+            <input type="radio" name="video" id="video2">  
+            <input type="radio" name="video" id="video3" checked>  
+            <input type="radio" name="video" id="video4">    
+            
+            <div class="video video2">
+                <a href = "https://www.youtube.com/watch?v=5Peo-ivmupE">
+                <i class="fas fa-play-circle fa-10x"></i>
+                </a>
+                <h2>Project 1</h2>
+            </div>
+            <div class="video video3">
+                <a href = "https://www.youtube.com/watch?v=5Peo-ivmupE">
+                <i class="fas fa-play-circle fa-10x"></i>
+                </a>
+                <h2>Project 2</h2>
+            </div>
+            <div class="video video4">
+                <a href = "https://www.youtube.com/watch?v=5Peo-ivmupE">
+                <i class="fas fa-play-circle fa-10x"></i>
+                </a>
+                <h2>Project 3</h2>
+            </div>
+        </div>
+    </section>
+
+    <!--TEAM-->
+    <section class="team" id="team" style="background-color: rgba(245, 210, 185, 0.623);">
+        <div class="margin">
+        <h1 class="team-heading" id = "section-head">Our Team</h1>
+        <div class="flex-members">
+            <div class="member">
+            <div class="image-container">
+                <img src="team1.jpg" alt="" class="team-fellow" />
+                <div class="icons">
+                <a href=""><i class="fab fa-facebook-f facebook"></i></a>
+                <a href=""><i class="fab fa-twitter twitter"></i></a>
+                <a href=""><i class="fab fa-google google"></i></a>
+                </div>
+            </div>
+            <h2 class="name">Andrew Hasten</h2>
+            <p class="profession">CEO</p>
+            </div>
+            <div class="member">
+            <div class="image-container">
+                <img src="team2.jpg" alt="" class="team-fellow" />
+                <div class="icons">
+                <a href=""><i class="fab fa-facebook-f facebook"></i></a>
+                <a href=""><i class="fab fa-twitter twitter"></i></a>
+                <a href=""><i class="fab fa-google google"></i></a>
+                </div>
+            </div>
+            <h2 class="name">Anne Hail</h2>
+            <p class="profession">Manager</p>
+            </div>
+            <div class="member">
+            <div class="image-container">
+                <img src="team3.jpg" alt="" class="team-fellow" />
+                <div class="icons">
+                <a href=""><i class="fab fa-facebook-f facebook"></i></a>
+                <a href=""><i class="fab fa-twitter twitter"></i></a>
+                <a href=""><i class="fab fa-google google"></i></a>
+                </div>
+            </div>
+            <h2 class="name">Lucy Pevensie</h2>
+            <p class="profession">Retail Sales<br>Professional</p>
+            </div>
+            <div class="member">
+            <div class="image-container">
+                <img src="team4.jpg" alt="" class="team-fellow" />
+                <div class="icons">
+                <a href=""><i class="fab fa-facebook-f facebook"></i></a>
+                <a href=""><i class="fab fa-twitter twitter"></i></a>
+                <a href=""><i class="fab fa-google google"></i></a>
+                </div>
+            </div>
+            <h2 class="name">Katherine Paulo</h2>
+            <p class="profession">Retail Sales<br>Professional</p>
+            </div>
+            <div class="member">
+            <div class="image-container">
+                <img src="team3.jpg" alt="" class="team-fellow" />
+                <div class="icons">
+                <a href=""><i class="fab fa-facebook-f facebook"></i></a>
+                <a href=""><i class="fab fa-twitter twitter"></i></a>
+                <a href=""><i class="fab fa-google google"></i></a>
+                </div>
+            </div>
+            <h2 class="name">Jane Lever</h2>
+            <p class="profession">Event Manager</p>
+            </div>
+            <div class="member">
+            <div class="image-container">
+                <img src="team1.jpg" alt="" class="team-fellow" />
+                <div class="icons">
+                <a href=""><i class="fab fa-facebook-f facebook"></i></a>
+                <a href=""><i class="fab fa-twitter twitter"></i></a>
+                <a href=""><i class="fab fa-google google"></i></a>
+                </div>
+            </div>
+            <h2 class="name">David Peeves</h2>
+            <p class="profession">Quality Assurance<br>Technician</p>
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <!--CONTACT US-->
+    <section class="contact" id="contact" style="background-color:  #9adaf375;">
+        <h1>Contact Us</h1>
+        <div class="form">
+            <form>
+                <label for="name">Name</label>
+                <input type="text" id="name">
+                <label for="email">Email</label>
+                <input type="email" id="email">
+                <label for="subject">Subject</label>
+                <input type="text" id="subject">
+                <label for="message">Message</label>
+                <textarea id="message" cols="30" rows="10"></textarea>
+                <input type="submit" value="Submit" class="btns">
+            </form>
+        </div>
+        <section class="address">
+        <div class="detail">
+            <h2>OFFICE ADDRESS</h2>
+            <h3>123 Anywhere street</h3>
+            <h3>Any city, ST 12345</h3>
+        </div>
+        <div class="detail">
+            <h2>CONTACT US</h2>
+            <h3>+ 123 456 789</h3>
+            <h3>gemsgalore@gmail.com</h3>
+            <h3>enquiry@gemsgalore.com</h3>
+        </div>
+        </section>
+        <div class="icon">
+            <h2>FOLLOW US</h2>
+            <div class="social-icons">
+            <i class="fab fa-facebook-f"></i>
+            <i class="fab fa-twitter"></i>
+            <i class="fab fa-instagram"></i>
+            <i class="fab fa-linkedin-in"></i>
+            <i class="fab fa-youtube"></i>
+            <i class="fab fa-google-plus-g"></i>
+            </div>
+        </div>
+        <p>Made with <i class="far fa-heart"></i> by Gems Galore</p>
+    </section>
+
+
+    <!--javascript-->
+    
+    <script>
+        var navLinks = document.getElementById("navLinks");
+
+        function showMenu(){
+            navLinks.style.right = "0";
+        }
+        function hideMenu(){
+            navLinks.style.right = "-200px";
+        }
+    </script>
+
+</body>
+</html>
