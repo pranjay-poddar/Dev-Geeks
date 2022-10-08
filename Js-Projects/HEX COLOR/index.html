@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Hex color generator</title>
+
+	<style>
+		body {
+			margin: 0;
+			padding: 0;
+			display: grid;
+			place-items: center;
+			height: 100vh;
+			font-size: 20px;
+		}
+		
+		.main {
+			height: 400px;
+			width: 250px;
+			background: #3A3A38;
+			border-radius: 10px;
+			display: grid;
+			place-items: center;
+			color: #fff;
+			font-family: verdana;
+			border-radius: 15px;
+		}
+		
+		#colorPicker {
+			background-color: none;
+			outline: none;
+			border: none;
+			height: 40px;
+			width: 60px;
+			cursor: pointer;
+		}
+		
+		#box {
+			outline: none;
+			border: 2px solid rgb(0, 0, 0);
+			border-radius: 50px;
+			height: 40px;
+			width: 120px;
+			padding: 0 10px;
+		}
+	</style>
+</head>
+
+<body>
+	<h1>Hex Color Generator</h1>
+
+	<div class="main">
+
+		
+		Color Picker: <input type="color"
+			id="colorPicker" value="#6a5acd">
+
+		
+		Hex Code: <input type="text" id="box">
+	</div>
+
+	<script>
+		function myColor() {
+
+			
+			var color = document.getElementById('colorPicker').value;
+
+			
+			document.body.style.backgroundColor = color;
+
+			
+			document.getElementById('box').value = color;
+		}
+
+		
+		document.getElementById('colorPicker')
+			.addEventListener('input', myColor);
+	</script>
+</body>
+
+</html>
