@@ -1,0 +1,114 @@
+*{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+    font-family:  "Montserrat", Sans-serif;
+  }
+  .background_image{
+  
+    
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    height:100vh;
+    max-width: 100%;
+  }
+  .overlay_effect{
+    background-color: rgba(0, 0, 0, 0);
+    padding:10px;
+    height:100vh;
+    max-width: 100%;
+    display:grid;
+    grid-template-columns: 1fr;
+    grid-auto-rows: auto 200px;
+    align-items: center;
+    justify-items: center;
+    gap:1em;
+  }
+  .Container{
+    position: fixed;
+    left:400px;
+    top:0px;
+    padding: 1.5em;
+    bottom: 0px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 50px auto;
+    justify-items: center;
+    width: 40%;
+    height: 95%;
+    background: rgba(31, 30, 30, 0.498);
+    margin: 20px;
+    box-shadow: 0 15px 35px rgb(0 0 0 / 20%);
+    border-radius: 15px;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(20px);
+  }
+  .Container h2{
+    height:fit-content;
+    font-size: 30px;
+    color: white;
+  }
+  .box{
+    margin-top: 0px;
+    display:grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+    gap:2em;
+  }
+  #feet{
+    margin: 0px 10px;
+  }
+  #inches{
+    margin: 10px 10px;
+  }
+  
+  label{
+    font-size:20px;
+    color: rgb(0, 0, 0);
+  }
+  input{
+    width:100%;
+    margin-top:5px;
+    border: 1px solid #1e293b;
+    border-radius: 4px;
+    padding: 6px 6px;
+  }
+  .button_container{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  
+  .button1{
+    background-color: #fff;
+    border: 1 solid #e2e8f0;
+    border-radius: 1.5rem;
+    width:90%;
+    height:100%;
+    color: #0d172a;
+    text-align: center;
+    text-decoration: none #0d172a solid;
+    margin-top:10px;
+  }
+  .button2{
+    background-color: #fff;
+    border: 1 solid #e2e8f0;
+    border-radius: 1.5rem;
+    width:90%;
+    height:100%;
+    color: #0d172a;
+    text-align: center;
+    text-decoration: none #0d172a solid;
+    margin-top:10px;
+    margin-left:20px;
+  }
+  
+  button:hover {
+  background-color: #1e293b;
+  color: #fff;
+  }
+  
+  .results{
+    color: white;
+  }
+  

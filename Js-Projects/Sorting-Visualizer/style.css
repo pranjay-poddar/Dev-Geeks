@@ -1,0 +1,82 @@
+body {
+  background-color: yellow;
+}
+
+.header {
+  font-size: 25px;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20vw;
+  margin-left: 20vw;
+  margin-right: 20vw;
+  background-color: rgba(142, 31, 253, 0.741);
+  color: white;
+  border-radius: 20px;
+  font-weight: bold;
+}
+
+.generate {
+  padding: 8px;
+  border-radius: 12px;
+  margin-left: 21vw;
+  margin-top: 4vw;
+  margin-right: 8vw;
+}
+
+.generate:hover {
+  cursor: pointer;
+  background-color: green;
+  color: white;
+}
+
+.sort-button {
+  padding: 8px;
+  border-radius: 12px;
+}
+
+.sort-button:hover {
+  cursor: pointer;
+  background-color: green;
+  color: white;
+}
+
+.data-container {
+  width: 600px;
+  height: 40px;
+  position: relative;
+  margin: 0 auto;
+}
+
+.bar {
+  width: 28px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background-color: rgb(0, 183, 255);
+  transition: 0.2s all ease;
+}
+
+.bar_id {
+  position: absolute;
+  top: -24px;
+  width: 100%;
+  text-align: center;
+  font-size: small;
+}
+
+.utility {
+  margin-top: 25px;
+  text-align: center;
+}
+
+#message {
+  text-align: center;
+  height: 30px;
+}
+
+.footer {
+  margin-top: 25px;
+  text-align: center;
+  background-color: turquoise;
+  border-radius: 20px;
+}
