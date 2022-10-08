@@ -1,7 +1,9 @@
 
 # Newsletter-API Project using Nde.js & Mailchimp API
 
-## Screenshots
+[Deployed project link](https://newsltr-mailchimp-api.herokuapp.com/)
+
+## Screenshots 
 
 ![Screenshot 2022-10-08 143752](https://user-images.githubusercontent.com/96445392/194700005-e60262c2-eab8-42c7-913c-71f85844a640.png)
 
