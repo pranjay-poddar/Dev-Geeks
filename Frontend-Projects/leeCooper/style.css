@@ -1,0 +1,137 @@
+*{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-weight: 900;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 10px 40px;
+    background-color: white;
+    position: fixed;
+    z-index: 5;
+    /* position: relative; */
+}
+nav ul{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+}
+nav ul li{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    color: red;
+}
+.mainPic{
+    /* margin-top:10px ; */
+    /* background-color: red; */
+    width: 100%;
+    position: relative;
+}
+.mainPic img{
+    width: 100%;
+    margin-top: 80px;
+}
+.wording{
+    color: white;
+    position: absolute;
+    top: 40%;
+    left: 20%;
+    text-align: center;
+}
+.wording h1{
+    font-size: 70px;
+}
+.wording a{
+    font-size: 20px;
+    color: white;
+}
+.pc2{
+    /* background-color: aqua; */
+    display: flex;
+    justify-content: center;
+    margin: 120px 0;
+    position: relative;
+}
+.pc2 img{
+    width: 20rem;
+}
+.wording2{
+    color: white;
+    position: absolute;
+    top: 40%;
+    left: 30%;
+    text-align: center;
+}
+.wording2 h1{
+    font-size: 70px;
+}
+.wording2 a{
+    font-size: 20px;
+    color: white;
+    text-decoration: none;
+}
+.pc3{
+    /* background-color: rgb(80, 131, 131); */
+    display: flex;
+    justify-content: center;
+    margin: 120px 0;
+    position: relative;
+}
+.pc3 img{
+    width: 65rem;
+}
+.dd{
+    /* background-color: bisque; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0px 260px;
+    width: 55rem;
+    flex-direction: column;
+    /* background-color: blue; */
+
+}
+.pic4 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.pic4 img{
+width: 16rem;
+margin: 10px 10px;
+}
+.pic4 img:hover{
+opacity: .3;    }
+
+.pic5 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.pic5 img{
+width: 12rem;
+margin: 40px 10px;
+}
+.hh {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.hh span{
+    margin: 70px 40px;
+cursor: pointer;
+}
+hr{
+    width: 100%;
+    height: 3px;
+    color: black;
+}
