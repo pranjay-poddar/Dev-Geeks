@@ -1,0 +1,9 @@
+.card-img-height {
+    height: 440px;
+}
+
+@media(max-width: 760px) {
+    .card-img-height {
+        height: 310px;
+    }
+}
