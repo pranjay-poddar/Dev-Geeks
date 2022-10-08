@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@600&family=Merriweather&family=Montserrat:wght@700&family=Sacramento&display=swap');
+
+.App {
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
+  font-family: 'League Spartan', sans-serif;
+}
+
+.coin-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* .input-coin {
+  margin-left: 39rem;
+} */
+
+::-webkit-input-placeholder {
+  text-align: center;
+}
+
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 38px;
+  background-color: #FACC15;
+  color: white;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.coininput {
+  text-align: center;
+}
