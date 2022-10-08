@@ -1,0 +1,17 @@
+show databases;
+create database Supermarket;
+use supermarket;
+create table Seller(Sel_Id int primary key, Sel_Name varchar(30) not null, Sel_Pssd varchar(10) not null, Sel_Gen varchar(6) not null);
+desc Seller;
+select * from Seller;
+create table Category(Cat_Id int primary key, Cat_Name varchar(20) not null, Cat_Desc varchar(40));
+desc Category;
+create table Product(Prod_Id int primary key, Prod_Name varchar(30) not null, Prod_Qty int not null, Prod_Price real not null, Prod_Cat varchar(20) not null);
+desc Product;
+create table Admin(Admin_Id int primary key, Admin_Name varchar(30) not null, Admin_Pssd varchar(10) not null);
+desc Admin;
+insert into Admin values(1,'admin','admin');
+select * from Admin;
+select * from Category;
+insert into Admin values(2,'admin1','1234');
+select * from Product;
