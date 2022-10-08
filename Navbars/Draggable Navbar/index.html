@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Draggable navbar</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="navbar">
+      <div class="toggle"></div>
+      <ul>
+        <li>
+          <a href="#">
+            <span class="icon"><ion-icon name="home"></ion-icon></span>
+            <span class="title">Home</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <span class="icon"><ion-icon name="person"></ion-icon></span>
+            <span class="title">Profile</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <span class="icon"
+              ><ion-icon name="chatbubble-ellipses"></ion-icon
+            ></span>
+            <span class="title">Messages</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <span class="icon"><ion-icon name="settings"></ion-icon></span>
+            <span class="title">Settings</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <span class="icon"><ion-icon name="lock-open"></ion-icon></span>
+            <span class="title">Password</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <span class="icon"><ion-icon name="log-in"></ion-icon></span>
+            <span class="title">Sign out</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+<!-- ------------- scripts ---------------  -->
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+
+    <script>
+      const navbar = document.querySelector(".navbar");
+      document.querySelector(".toggle").onclick = function () {
+        this.classList.toggle("active");
+        navbar.classList.toggle("active");
+      };
+    </script>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.js"></script>
+    <script>
+      $(function () {
+        $(".navbar").draggable();
+      });
+    </script>
+  </body>
+</html>
