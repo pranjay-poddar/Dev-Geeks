@@ -1,0 +1,87 @@
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+header{
+  width: 100%;
+  padding: 20px;
+  position: absolute;
+  top: 0;
+  background-color: #06283D;
+}
+
+nav{
+  display: inline-flex;
+  float: right;
+}
+
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  .dropdown-content a:hover {background-color: #ddd;}
+  
+  .home:hover .dropdown-content {display:block;}
+  
+
+  .home,.baacki a{
+    margin-right: 100px;
+  }
+  .baacki{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+  }
+  
+  a{
+    color: white;
+  }
+  .dropdown a:hover,.dropdown-content a:hover,.baacki a:hover{
+    color: #47B5FF;
+    transition: ease-in-out 20ms;
+  }
+
+  .home{
+    background: transparent;
+    border: none;
+    color:#f1f1f1;
+    font-size: 16px;
+  }
+
+  .signin{
+    border: 1px solid #47B5FF;
+    border-radius: 16px;
+    color: #f1f1f1;
+    padding: 6px 8px;
+    position:relative;
+    top: -6px;
+    background-color: #06283D;
+  }
+  .signin a{
+    color: #f1f1f1;
+    font-size: 16px;
+  }
+
+  .signin:hover{
+    background-color: #47B5FF;
+    transition: ease-in-out 20ms;
+  }
