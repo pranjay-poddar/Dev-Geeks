@@ -608,7 +608,63 @@ Happy Coding! -->
 <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/6605164a36c00589d2f3e9599ab92d85f9d5252e/Animations-CSS/Solar-System"> Solar System </a></td>
 <td align="center"> 200.</td>
 <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/08a7c8ae2052c8e243ac1c3c845d5ca72d8d6476/Frontend-Projects/TV%20Show%20Search%20WebApp"> TV SHOW </a></td>
+<td align="center"> 201.</td>
+<td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Js-Games/dicegame"> Dice Game </a></td>
+<td align="center"> 202.</td>
+<td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/React-JS%20Projects/Music_App/my-app"> Music Player App </a></td>
+</tr>
 
+<td align="center"> 203.</td>
+<td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Frontend-Projects/registration%20form"> Breaking Bad </a></td>
+<td align="center"> 204.</td>
+<td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Js-Projects/Digital_Clock"> Digital Clock </a></td>
+<td align="center"> 205.</td>
+<td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Js-Projects/AdBlocker"> Ad blocker </a></td>
+<td align="center"> 206.</td>
+<td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Frontend-Projects/Prefix%20Postfix%20Calculator"> Prefix Postfix Calculator </a></td>
+<td align="center"> 207.</td>
+<td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Frontend-Projects/Dinosaur%20game"> Dinosaur Game </a></td>
+</tr>
+
+<td align="center"> 208.</td>
+<td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Frontend-Projects/Registration%20Form%20for%20Driving%20License"> Registration Form for Driver's License </a></td>
+<td align="center"> 209.</td>
+<td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/ML%20Projects/Pose%20Classification"> Real-Time 3D Pose Classifier </a></td>
+<td align="center"> 210.</td>
+<td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Python%20Projects/Word%20Cloud"> Word Cloud </a></td>
+<td align="center"> 211.</td>
+<td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Js-Projects/Dictionary%20App"> Dictionary App </a></td>
+<td align="center"> 212.</td>
+<td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Animations-CSS/Curved%20Carousel"> Curved Carousel </a></td>
+</tr>
+
+<td align="center"> 213.</td>
+<td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/blob/main/Python%20Projects/dice_sim.py"> Dice Simulator </a></td>
+<td align="center"> 214.</td>
+<td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Frontend-Projects/Responsive%20omnifood%20project"> Web Design </a></td>
+<td align="center"> 215.</td>
+<td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Python%20Projects/Random%20Story%20Generator"> Random Story Generator </a></td>
+<td align="center"> 216.</td>
+<td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Frontend-Projects/Jwellery%20website%20landing%20page"> Jewellery Website Landing Page </a></td>
+<td align="center"> 217.</td>
+<td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/MERN/Exercise%20Tracker"> Exercise Tracker </a></td>
+</tr>
+
+<td align="center"> 218.</td>
+<td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Js-Projects/Resume-Builder"> Resume Builder </a></td>
+<td align="center"> 219.</td>
+<td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Frontend-Projects/Durga-puja"> Durga Puja Webpage </a></td>
+<td align="center"> 220.</td>
+<td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Random%20Quote%20generator"> Random Quote Generator </a></td>
+<td align="center"> 221.</td>
+<td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Js-Projects/Neon%20number"> Neon Number Checker </a></td>
+<td align="center"> 222.</td>
+<td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Python%20Projects/Timer"> Timer </a></td>
+</tr>
+
+<td align="center"> 223.</td>
+<td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Frontend-Projects/Electronic%20Gadget"> Electronic Gadget </a></td>
+</tr>
 	
 </table>
 
