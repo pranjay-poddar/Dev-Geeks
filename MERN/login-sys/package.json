@@ -1,0 +1,20 @@
+{
+  "name": "login-sys",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.0",
+    "express": "^4.18.1",
+    "express-session": "^1.17.3",
+    "hbs": "^4.2.0",
+    "nodemon": "^2.0.20",
+    "uuid": "^9.0.0"
+  }
+}
