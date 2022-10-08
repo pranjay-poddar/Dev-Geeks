@@ -1,0 +1,125 @@
+*{
+	margin:0;
+	padding:0;
+	box-sizing:border-box;
+}
+
+
+:root{
+      --myfont : 'Montserrat', sans-serif;
+      --my-btn-font : 'Montserrat' , sans-serif;
+      --lg-lightcolor: linear-gradient(to left , rgba(116,235,213,0.6), rgba(159, 172, 230,0.5));
+      --lg-color: linear-gradient(to left, #74ebdf , #9face6);
+
+}
+
+body{
+	background-image:  url("./formimage.jpg"); 
+	background-color: #4da6ff;
+	background-size:100%;
+	background-repeat: no-repeat;
+	font-family: var(--myfont);
+	display:flex;
+	align-items: center;
+	justify-content: center;
+	min-height:100vh;
+	width:100vw;	
+}
+
+.container{
+	background-color:#fff;
+	border-radius : 10px;
+	-webkit-border-radius:10px;
+	box-shadow : 0 2.8px 2.2px rgba(0,0,0,0.180),0 6.7px 5.3px rgba(0,0,0,0.28);
+	overflow:hidden;
+	width: calc(100vw - 65vw);
+	max-width : 100%;
+    padding:0;
+}
+
+.header{
+	background:var(--lg-color);
+	padding:30px 0;
+}
+
+.header h2{
+	color:#fff;
+	font-weight:bold;
+	font-family: var(--my-btn-font);
+	font-size:24px;
+	text-transform: uppercase;
+	text-align:center;
+}
+
+
+.form{
+	padding:20px;
+}
+
+.form-control{
+   margin-bottom: 40px;
+   position:relative;
+   border: none;
+}
+
+.form-control label{
+   display: inline-block;
+   font-size: 14px;
+   margin-bottom:5px;
+   color: #666;
+}
+
+.form-control input{
+    width: 100%;
+    border:2px solid #f0f0f0;
+    border-radius:5px;
+    display:block;
+    font-family:var(--myfont);
+    font-size:14px;
+    padding:6px 8px;
+    box-shadow : 0 3px 3px rgba(0,0,0,0.1);
+    color: #4a4a4a;
+}
+
+.form-control input:focus{
+	outline: 0;
+	box-shadow : 0 2px 2px #74ebd5;
+}
+
+.form .btn{
+	background: var(--lg-color);
+	border-radius: 6px;
+	border:none;
+	outline:none;
+	color:#fff;
+    cursor: pointer;
+	display: block;
+	font-family : var(--my-btn-font);
+	font-size : 16px;
+	padding:10px 0;
+	margin:10px;
+	margin-top: 50px;
+	width: 95%;
+	font-weight : bold;
+	text-transform: uppercase;
+	transition: all 1s ease;
+}
+
+.form .btn:hover{
+	background: linear-gradient(to right, #74ebd5, #9face6);
+}
+
+@media (min-width:501px) and (max-width:998px){
+	.container{
+		width: calc(100vw - 40vw);
+		max-width:100%;
+	}
+}
+
+@media (max-width:500px){
+	.container{
+		width: calc(100vw - 10vw);
+		margin:5vw;
+		max-width:100%;
+	}
+}
