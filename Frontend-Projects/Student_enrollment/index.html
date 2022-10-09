@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+</head>
+<body>
+   <h1>Student Enrollment Form</h1>
+    <div class="container">
+        
+       <!--Registration Form container-->
+       <div class="registrationcontainer">
+        <!--input fields for registration form-->
+
+        <div class="img">
+        <label>Image Url:</label>
+        <input type="text" id="img" name="img" placeholder="Enter your img Id">
+        </div>
+        <p style="font-size: 12px;">(Upload your image in Google drive and copy paste your image id which is a Bordered one<br>
+            Eg:-https://drive.google.com/file/d/<span style="border:1px solid black;">1zdLXZppYypxmBgD-LN1LM4yvCv1rutg8</span>/view?usp=sharing)
+        </p>
+        <div class="name">
+        <label>Name:</label>
+        <input type="text" id="name" name="Name" placeholder="Enter Your Name"/>
+        </div>
+       
+        <div class="email">
+        <label>E-Mail:</label>
+        <input type="email" id="email" name="Email" placeholder="Enter your Email Id"/>
+        </div>
+        <div class="websitelink">
+        <label>Website Link:</label>
+        <input type="text" id="websitelink" name="WebsiteLink" placeholder="Enter your Website Link"/>
+        </div>
+        <div class="skills">
+        <label>Enter Your Skills:</label>
+        <input type="text" id="skills" name="Skills" placeholder="Enter your Skills"/>
+        </div>
+        <button class="submit">Submit</button>
+       </div>
+       <!--Data displayed in the same screen-->
+       <div class="output">
+           <!--Data stored dynamically inside the container-->
+           
+       </div>
+    </div>
+
+
+    <script src="script.js"></script>
+</body>
+</html>
