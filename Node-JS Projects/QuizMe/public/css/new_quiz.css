@@ -1,0 +1,101 @@
+*{
+    margin : 0;
+    padding : 0;
+    font-family: sans-serif;
+}
+
+body{
+    height: 100%;
+    width : 100%;
+    padding: 2% 0;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    width : 100%;
+}
+
+.section{
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 15px;
+    width: 60%;
+    margin: 1%;
+    padding: 3% 5%;
+    display: flex;
+    flex-direction: column;
+}
+
+.section > input   , .option{
+    padding: 8px;
+    font-size: 14px;
+    border-radius: 5px;
+}
+
+.section *{
+    margin: 5px;
+}
+
+.question{
+    margin: 2% 0;
+    background-color: #c7dcff;
+    border-radius: 15px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+.option{
+    width: 50%;
+}
+
+textarea{
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.add_btn{
+    background: transparent;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.footer{
+    border-radius: 15px 15px 0 0;
+    padding: 20px 50px;
+    display: flex;
+    margin: 0;
+    justify-content: space-between;
+}
+
+.footer:hover{
+    background-color: #c7dcff;
+}
+
+.x{
+    padding-bottom: 0;
+}
+
+.create_btn{
+   padding: 15px;
+   font-size: 14px;
+   background-color: green;
+   border-radius: 10px;
+   border: none;
+   color : white;
+   cursor: pointer;
+   box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);;
+
+}
+
+.remove_btn{
+    background-color: transparent;
+    color : red;
+    border: none;
+    cursor: pointer;
+}
+
