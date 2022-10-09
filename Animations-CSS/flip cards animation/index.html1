@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Flipping Cards</title>
+</head>
+<body>
+    <h2>Lucky Draw</h2>
+    <ul class="wrap">
+        <li>
+            <div class="card front" style="background-color: lightpink;">1</div>
+            <div class="card back" style="background-color: rgb(248, 210, 215);">Oops! Better luck next time</div>
+        </li>
+
+        <li>
+            <div class="card front" style="background-color: lightskyblue;">2</div>
+            <div class="card back" style="background-color: rgb(175, 220, 248);">Oops! Better luck next time</div>
+        </li>
+
+        <li>
+            <div class="card front" style="background-color: lightgreen;">3</div>
+            <div class="card back" style="background-color: rgb(176, 243, 176);">Oops! Better luck next time</div>
+        </li>
+
+        <li>
+            <div class="card front" style="background-color: rgb(236, 236, 170);">4</div>
+            <div class="card back" style="background-color: rgb(245, 245, 206);">Oops! Better luck next time</div>
+        </li>
+        
+        <li>
+            <div class="card front" style="background-color: lightcoral;">5</div>
+            <div class="card back" style="background-color: rgb(238, 167, 167);">Oops! Better luck next time</div>
+        </li>
+
+        <li>
+            <div class="card front" style="background-color: rgb(8, 148, 235);">6</div>
+            <div class="card back" style="background-color: rgb(85, 178, 236);">Oops! Better luck next time</div>
+        </li>
+
+        <li>
+            <div class="card front" style="background-color: cyan;">7</div>
+            <div class="card back" style="background-color: rgb(131, 241, 241);">Yeah! You won</div>
+        </li>
+
+        <li>
+            <div class="card front" style="background-color: rgb(5, 102, 45);">8</div>
+            <div class="card back" style="background-color: rgb(35, 109, 66);">Oops! Better luck next time</div>
+        </li>
+    </ul>
+</body>
+</hC
