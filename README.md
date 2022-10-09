@@ -669,7 +669,7 @@ Happy Coding! -->
 <td align="center"> 225.</td>
 <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Frontend-Projects/QUIZ%20APP"> Quiz App </a></td>
 <td align="center"> 226.</td>
-<td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Frontend-Projects/IMDb-Clone"> Quiz App </a></td>
+<td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Frontend-Projects/IMDb-Clone"> IMDb-clone </a></td>
 </tr>
 	
 </table>
