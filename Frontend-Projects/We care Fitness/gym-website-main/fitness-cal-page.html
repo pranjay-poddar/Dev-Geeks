@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel= "stylesheet" href="fitcalstyle.css">
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Fitness Calculator</title>
+	<link href="https://fonts.googleapis.com/css?family=Baloo+Bhai&display=swap" rel="stylesheet">
+	<script src="fitcaljs.js"></script>
+
+</head>
+<body>
+	<header class="header">
+        <!-- Left box for logo -->
+        <div class="left">
+            <img src="gym1.png" alt="">
+            <div>Fitness</div>
+        </div>
+        <!-- Mid box for navbar -->
+        <div class="mid">
+            <ul class="navbar">
+                <li><a href="file:///D:/project/front%20end/Gym%20Website/gym-responsive-website.html">Home</a></li>
+                <li><a href="file:///D:/project/front%20end/Gym%20Website/packs.html">Our Packages</a></li>
+
+                <li><a href="#" class="active">BMI Calculator</a></li>
+                <li><a href="file:///D:/project/front%20end/Gym%20Website/about-us-page.html">About Us</a></li>
+            </ul>
+        </div>
+
+        <!-- Right box for buttons -->
+                <div class="right">
+            <a class="btn" href="#popupcall">Call Us</a>
+            <a class="btn" href="#popupemail">Email Us</a>
+        </div>
+
+        <div id="popupcall" class="overlay">
+    <div class="popup">
+        <h2>Call Us Now</h2>
+        <a class="close" href="#">&times;</a>
+        <div class="content">
+            +91-98xxxxxxxx
+        </div>
+    </div>
+</div>
+
+<div id="popupemail" class="overlay">
+    <div class="popup">
+        <h2>Email Us Now</h2>
+        <a class="close" href="#">&times;</a>
+        <div class="content">
+            <p>fitnessxx@gmail.com</p>
+        </div>
+    </div>
+</div>
+
+
+    </header>
+
+    <div class="container">
+    	<h1>BMI Calculator</h1>
+    	<div class="BMI">
+        <p id="intro">Calculate your BMI (body mass index) by using the form below. Enter your weight and height and click the Calculate button to display your BMI result.</p>
+		<form action="none" method="post" name="bmiform">
+			<fieldset>
+			<legend>Height and Weight</legend>
+				<label for="pounds">Weight (pounds):</label>
+				<input type="text" name="pounds" id="pounds">
+				<br>
+				<label for="inches">Height (inches):</label>
+				<input type="text" name="inches" id="inches">
+				<br>
+				<button type="button" name="calculate" value="Calculate your BMI" onclick="calcBMI()">Calculate your BMI</button>
+			</fieldset>
+			<fieldset>
+			<legend>BMI</legend>
+				<label for="bmi" id="bmi_label">Your calculated BMI is:</label>
+				<input type="text" name="bmi" id="bmi" readonly="readonly">
+			</fieldset>
+		</form>
+	</div>
+
+	<div class="Ideal weight">
+
+	</div>	
+    </div>
+
+</body>
+</html>

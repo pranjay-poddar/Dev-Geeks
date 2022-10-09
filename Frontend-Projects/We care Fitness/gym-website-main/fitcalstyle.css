@@ -1,0 +1,181 @@
+body{
+	font-family: 'Baloo Bhai', cursive;
+    color: white;
+    margin: 0px;
+    padding: 0px;
+    background: url('bg2.jpg');
+}
+
+.left{
+	display: inline-block;
+	position: absolute;
+	left: 60px;
+	top: 20px;
+}
+
+.left img{
+	width: 164px;
+}
+
+.left div{
+	line-height: 19px;
+	font-size: 26px;
+	text-align: center;
+}
+
+.mid{
+	display: block;
+	width: 60%;
+	margin: 60px 210px;
+}
+
+.right{
+	position: absolute;
+	right: 34px;
+	top: 43px;
+	display: inline-block;
+}
+
+.navbar{
+	display: inline-block;
+}
+
+.navbar li{
+	display: inline-block;
+	font-size: 25px;
+}
+
+.navbar li a{
+	color: white;
+	text-decoration: none;
+	padding: 34px 23px;
+}
+
+.navbar li a:hover,
+.navbar li a.active{
+	text-decoration: underline;
+	color: grey;
+}
+
+.btn{
+	font-family: 'Baloo Bhai', cursive;
+	margin: 0px 9px;
+	background-color: black;
+	color: white;
+	padding: 4px 14px;
+	border: 2px solid grey;
+	border-radius: 10px;
+	font-size: 20px;
+	cursor: pointer;
+}
+
+.btn:hover{
+	background-color: rgb(31,30,30);
+}
+
+.container{
+	border: 2px solid white;
+	margin: 160px 270px;
+	padding: 70px;
+	width: 50%;
+	border-radius: 28px;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  transition: opacity 500ms;
+  visibility: hidden;
+  opacity: 0;
+}
+.overlay:target {
+  visibility: visible;
+  opacity: 1;
+}
+
+.popup {
+  margin: 70px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 5px;
+  width: 30%;
+  position: relative;
+  transition: all 5s ease-in-out;
+}
+
+.popup h2 {
+  margin-top: 0;
+  color: #333;
+  font-family: Tahoma, Arial, sans-serif;
+}
+.popup .close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  transition: all 200ms;
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #333;
+}
+.popup .close:hover {
+  color: #06D85F;
+}
+.popup .content {
+  max-height: 30%;
+  overflow: auto;
+  color: #333
+}
+
+
+fieldset {
+	width: 400px;
+	margin: 25px 0 0 50px;
+	border: 1px solid #999999;
+	box-shadow: 1px 1px #cccccc;
+	padding: 10px;
+}
+
+label {
+	float: left;
+	width: 140px;
+	display: block;
+	clear: left;
+	text-align: right;
+	padding-right: 10px;
+	margin-top: 10px;
+}
+
+button {
+	margin-left: 150px;
+}
+
+input {
+	margin-top: 10px;
+	display: block;
+	text-align: right;
+	width: 128px;
+}
+
+#bmi_label {
+	width: 200px;
+}
+
+#bmi {
+	width: 66px;
+}
+
+#intro {
+	width: 500px;
+	margin: 25px 0 0 50px;
+	padding: 10px;
+	border: 1px solid #999999;
+	box-shadow: 1px 1px #cccccc;
+}
+.container h1{
+	text-align: center;
+}
