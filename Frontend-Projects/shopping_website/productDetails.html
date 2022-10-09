@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon" />
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
+
+  <!-- Custom StyleSheet -->
+  <link rel="stylesheet" href="./styles.css" />
+  <title>Codevo - Ecommerce Website</title>
+</head>
+
+<body>
+ 
+  <!-- Navigation -->
+  <nav class="nav">
+    <div class="wrapper container">
+      <div class="logo"><a href="">BLOGSHOP</a></div>
+      <ul class="nav-list">
+        <div class="top">
+          <label for="" class="btn close-btn"><i class="fas fa-times"></i></label>
+        </div>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li>
+          <a href="" class="desktop-item">Shop <span><i class="fas fa-chevron-down"></i></span></a>
+          <input type="checkbox" id="showMega" />
+          <label for="showMega" class="mobile-item">Shop <span><i class="fas fa-chevron-down"></i></span></label>
+          <div class="mega-box">
+            <div class="content">
+              <div class="row">
+                <img src="./images/woman.jpg" alt="" />
+              </div>
+              <div class="row">
+                <header>Shop Layout</header>
+                <ul class="mega-links">
+                  <li><a href="#">Shop With Background</a></li>
+                  <li><a href="#">Shop Mini Categories</a></li>
+                  <li><a href="#">Shop Only Categories</a></li>
+                  <li><a href="#">Shop Icon Categories</a></li>
+                </ul>
+              </div>
+              <div class="row">
+                <header>Filter Layout</header>
+                <ul class="mega-links">
+                  <li><a href="#">Sidebar</a></li>
+                  <li><a href="#">Filter Default</a></li>
+                  <li><a href="#">Filter Drawer</a></li>
+                  <li><a href="#">Filter Dropdown</a></li>
+                </ul>
+              </div>
+              <div class="row">
+                <header>Product Layout</header>
+                <ul class="mega-links">
+                  <li><a href="#">Layout Zoom</a></li>
+                  <li><a href="#">Layout Sticky</a></li>
+                  <li><a href="#">Layout Sticky 2</a></li>
+                  <li><a href="#">Layout Scroll</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li><a href="">Blog</a></li>
+        <li>
+          <a href="" class="desktop-item">Vendors <span><i class="fas fa-chevron-down"></i></span></a>
+          <input type="checkbox" id="showdrop1" />
+          <label for="showdrop1" class="mobile-item">Vendors <span><i class="fas fa-chevron-down"></i></span></label>
+          <ul class="drop-menu1">
+            <li><a href="">Vendor Store listings</a></li>
+            <li><a href="">Store Details</a></li>
+          </ul>
+        </li>
+
+        <li>
+          <a href="" class="desktop-item">Page <span><i class="fas fa-chevron-down"></i></span></a>
+          <input type="checkbox" id="showdrop2" />
+          <label for="showdrop2" class="mobile-item">Page <span><i class="fas fa-chevron-down"></i></span></label>
+          <ul class="drop-menu2">
+            <li><a href="">About</a></li>
+            <li><a href="">Contact</a></li>
+            <li><a href="">Faq</a></li>
+            <li><a href="">Page 404</a></li>
+          </ul>
+        </li>
+        <!-- icons -->
+        <li class="icons">
+          <span>
+            <img src="./images/shoppingBag.svg" alt="" />
+            <small class="count d-flex">0</small>
+          </span>
+          <span><img src="./images/search.svg" alt="" /></span>
+        </li>
+      </ul>
+      <label for="" class="btn open-btn"><i class="fas fa-bars"></i></label>
+    </div>
+  </nav>
+
+  <!-- Product Details -->
+  <section class="section product-detail">
+    <div class="details container">
+      <div class="left">
+        <div class="main">
+          <img src="./images/product1.jpg" alt="" />
+        </div>
+        <div class="thumbnails">
+          <div class="thumbnail">
+            <img src="./images/product2.jpg" alt="" />
+          </div>
+          <div class="thumbnail">
+            <img src="./images/product3.jpg" alt="" />
+          </div>
+          <div class="thumbnail">
+            <img src="./images/product4.jpg" alt="" />
+          </div>
+          <div class="thumbnail">
+            <img src="./images/product5.jpg" alt="" />
+          </div>
+        </div>
+      </div>
+      <div class="right">
+        <span>Home/T-shirt</span>
+        <h1>Bambi Print Mini Backpack</h1>
+        <div class="price">$50</div>
+        <form>
+          <div>
+            <select>
+              <option value="Select Size" selected disabled>
+                Select Size
+              </option>
+              <option value="1">32</option>
+              <option value="2">42</option>
+              <option value="3">52</option>
+              <option value="4">62</option>
+            </select>
+            <span><i class="fas fa-chevron-down"></i></span>
+          </div>
+        </form>
+
+        <form class="form">
+          <input type="text" placeholder="1" />
+          <a href="cart.html" class="addCart">Add To Cart</a>
+        </form>
+        <h3>Product Detail</h3>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero minima
+          delectus nulla voluptates nesciunt quidem laudantium, quisquam
+          voluptas facilis dicta in explicabo, laboriosam ipsam suscipit!
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Related Products -->
+
+  <section class="section related-products">
+    <div class="title">
+      <h2>Related Products</h2>
+      <span>Select from the premium product brands and save plenty money</span>
+    </div>
+    <div class="product-layout container">
+      <div class="product">
+        <div class="img-container">
+          <img src="./images/product1.jpg" alt="" />
+          <div class="addCart">
+            <i class="fas fa-shopping-cart"></i>
+          </div>
+
+          <ul class="side-icons">
+            <span><i class="fas fa-search"></i></span>
+            <span><i class="far fa-heart"></i></span>
+            <span><i class="fas fa-sliders-h"></i></span>
+          </ul>
+        </div>
+        <div class="bottom">
+          <a href="">Bambi Print Mini Backpack</a>
+          <div class="price">
+            <span>$150</span>
+          </div>
+        </div>
+      </div>
+      <div class="product">
+        <div class="img-container">
+          <img src="./images/product2.jpg" alt="" />
+          <div class="addCart">
+            <i class="fas fa-shopping-cart"></i>
+          </div>
+
+          <ul class="side-icons">
+            <span><i class="fas fa-search"></i></span>
+            <span><i class="far fa-heart"></i></span>
+            <span><i class="fas fa-sliders-h"></i></span>
+          </ul>
+        </div>
+        <div class="bottom">
+          <a href="">Bambi Print Mini Backpack</a>
+          <div class="price">
+            <span>$150</span>
+          </div>
+        </div>
+      </div>
+      <div class="product">
+        <div class="img-container">
+          <img src="./images/product3.jpg" alt="" />
+          <div class="addCart">
+            <i class="fas fa-shopping-cart"></i>
+          </div>
+
+          <ul class="side-icons">
+            <span><i class="fas fa-search"></i></span>
+            <span><i class="far fa-heart"></i></span>
+            <span><i class="fas fa-sliders-h"></i></span>
+          </ul>
+        </div>
+        <div class="bottom">
+          <a href="">Bambi Print Mini Backpack</a>
+          <div class="price">
+            <span>$150</span>
+          </div>
+        </div>
+      </div>
+      <div class="product">
+        <div class="img-container">
+          <img src="./images/product4.jpg" alt="" />
+          <div class="addCart">
+            <i class="fas fa-shopping-cart"></i>
+          </div>
+
+          <ul class="side-icons">
+            <span><i class="fas fa-search"></i></span>
+            <span><i class="far fa-heart"></i></span>
+            <span><i class="fas fa-sliders-h"></i></span>
+          </ul>
+        </div>
+        <div class="bottom">
+          <a href="">Bambi Print Mini Backpack</a>
+          <div class="price">
+            <span>$150</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer id="footer" class="section footer">
+    <div class="container">
+      <div class="footer-container">
+        <div class="footer-center">
+          <h3>EXTRAS</h3>
+          <a href="#">Brands</a>
+          <a href="#">Gift Certificates</a>
+          <a href="#">Affiliate</a>
+          <a href="#">Specials</a>
+          <a href="#">Site Map</a>
+        </div>
+        <div class="footer-center">
+          <h3>INFORMATION</h3>
+          <a href="#">About Us</a>
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms & Conditions</a>
+          <a href="#">Contact Us</a>
+          <a href="#">Site Map</a>
+        </div>
+        <div class="footer-center">
+          <h3>MY ACCOUNT</h3>
+          <a href="#">My Account</a>
+          <a href="#">Order History</a>
+          <a href="#">Wish List</a>
+          <a href="#">Newsletter</a>
+          <a href="#">Returns</a>
+        </div>
+        <div class="footer-center">
+          <h3>CONTACT US</h3>
+          <div>
+            <span>
+              <i class="fas fa-map-marker-alt"></i>
+            </span>
+            42 Dream House, Dreammy street, 7131 Dreamville, USA
+          </div>
+          <div>
+            <span>
+              <i class="far fa-envelope"></i>
+            </span>
+            company@gmail.com
+          </div>
+          <div>
+            <span>
+              <i class="fas fa-phone"></i>
+            </span>
+            456-456-4512
+          </div>
+          <div class="payment-methods">
+            <img src="./images/payment.png" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+  </footer>
+  <!-- End Footer -->
+
+  <!-- Custom Scripts -->
+  <script src="./js/products.js"></script>
+  <script src="./js/slider.js"></script>
+  <script src="./js/index.js"></script>
+</body>
+
+</html>
