@@ -1,0 +1,56 @@
+body{
+    margin: 0px;
+    padding: 0px;
+    background-color: rgb(88, 87, 87);
+}
+
+h2{
+    text-align: center;
+    text-decoration: underline;
+    font-size: 30px;
+}
+
+.wrap{
+    list-style: none;
+    padding: 0px;
+    margin: 0px;
+}
+
+.wrap li{
+    position: relative;
+    width: 20%;
+    display: block;
+    box-sizing: border-box;
+    float: left;
+    padding: 0px;
+    margin: 30px;
+
+}
+
+.wrap li div{
+    width: 100%;
+    padding: 35% 0%;
+    text-align: center;
+}
+
+
+.wrap div.back{
+    transform: rotateY(90deg);
+}
+
+.wrap div.front{
+    position: absolute;
+}
+
+.wrap li:hover div.front{
+    animation: twirl 0.2s ease-in forwards;
+}
+
+.wrap li:hover div.back{
+    animation: twirl 0.2s 0.2s ease-out forwards reverse;
+}
+
+@keyframes twirl{
+    0%{transform: rotateY(0deg);}
+    100%{transform: rotateY(90deg);}
+}
