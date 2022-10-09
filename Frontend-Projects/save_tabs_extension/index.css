@@ -1,0 +1,69 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Edu+TAS+Beginner&family=Inter&family=Karla:wght@400;700&family=Poppins:wght@400;500;600&display=swap');
+body{
+    margin: 0;
+    padding: 10px;
+    font-family: 'Karla';
+    font-style: normal;
+    min-width: 400px;
+    background-color: 1C1C1C;
+}
+input{
+    width:100%;
+    padding: 10px;
+    font-weight: 800;
+    box-sizing: border-box;
+    border: 5px solid rgb(141, 71, 99);
+    margin-bottom: 5px;
+    border-radius: 5px;
+    font-family: 'Karla';
+    font-style: normal;
+    background-color:#4e3f47;
+    color:rgb(166, 64, 105);
+
+}
+button{
+    
+    background-color: rgb(166, 64, 105);
+    font-weight: 800;
+    font-family: 'Karla';
+    font-style: normal;
+    color: white;
+    border: 2px solid rgb(166, 64, 105);
+    padding: 10px 20px;
+    border-radius: 5px;
+    
+    
+    
+    
+}
+#delete-btn{
+    background-color:1C1C1C;
+    color:rgb(166, 64, 105);
+    left: 255px;
+    position: absolute;
+}
+#tab-btn{
+    position: absolute;
+    left: 140px;
+}
+ul{
+
+    margin-top: 20px;
+    list-style: none;
+    padding-left:0;
+}
+li{ 
+    margin-top: 5px;
+    
+    
+    
+}
+a{
+    color: rgb(166, 64, 105);
+    font-weight: bold;
+    font-size: 20px;
+    font-weight: 800;
+    font-family: 'Karla';
+    font-style: normal;
+}
