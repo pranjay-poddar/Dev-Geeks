@@ -1,0 +1,48 @@
+body {
+ background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+ background-size: 400% 400%;
+ animation: gradient 10s ease infinite;
+ height: 100vh;
+ overflow: hidden;
+}
+
+@keyframes gradient {
+ 0% {
+   background-position: 0% 50%;
+ }
+ 50% {
+   background-position: 100% 50%;
+ }
+ 100% {
+   background-position: 0% 50%;
+ }
+}
+
+.box {
+ margin: 0 auto;
+ padding: 15%;
+}
+@media (max-width: 600px) {
+ .box {
+   margin: 0 auto;
+   padding: 30% 50% 10% 10%;
+ }
+}
+@media (max-width: 375px) {
+ .box {
+   margin: 0 auto;
+   padding: 40% 100% 20% 0px;
+ }
+ body {
+   background-size: 200% 200%;
+ }
+}
+@media (max-width: 475px) {
+ .box {
+   margin: 0 auto;
+   padding: 40% 100% 20% 0px;
+ }
+ body {
+   background-size: 200% 200%;
+ }
+}
