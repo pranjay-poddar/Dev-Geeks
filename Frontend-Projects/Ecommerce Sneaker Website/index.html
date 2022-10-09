@@ -1,0 +1,735 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sneaker Heads</title>
+    <!-- fontawesome cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+    <!-- bootstrap css -->
+    <link rel = "stylesheet" href = "bootstrap-5.0.2-dist/css/bootstrap.min.css">
+    <!-- custom css -->
+    <link rel = "stylesheet" href = "main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Acme&family=Bebas+Neue&family=Jost:ital,wght@0,400;1,700&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+    <!-- navbar -->
+    <nav class = "navbar navbar-expand-lg navbar-light bg-white py-4 fixed-top" class="container1">
+        <div class = "container">
+            <a class = "navbar-brand d-flex justify-content-between align-items-center order-lg-0" href = "index.html">
+                <img id="img52" src = "images/logo.jpeg" alt = "site icon"></img>
+                <span id="bold" class = "text-uppercase fw-lighter ms-2">SNEAKER HEADS</span>
+            </a>
+
+            <div class = "order-lg-2 nav-btns">
+                <button type = "button" class = "btn position-relative">
+                    <i class = "fa fa-shopping-cart"></i>
+                    <span class = "position-absolute top-0 start-100 translate-middle badge bg-primary">5</span>
+                </button>
+                <button type = "button" class = "btn position-relative">
+                    <i class = "fa fa-heart"></i>
+                    <span class = "position-absolute top-0 start-100 translate-middle badge bg-primary">2</span>
+                </button>
+                <button type = "button" class = "btn position-relative">
+                    <i class = "fa fa-search"></i>
+                </button>
+            </div>
+
+            <button class = "navbar-toggler border-0" type = "button" data-bs-toggle = "collapse" data-bs-target = "#navMenu">
+                <span class = "navbar-toggler-icon"></span>
+            </button>
+
+            <div class = "collapse navbar-collapse order-lg-1" id = "navMenu">
+                <ul class = "navbar-nav mx-auto text-center">
+                    <li class = "nav-item px-2 py-2">
+                        <a class = "nav-link text-uppercase text-dark" href = "#header" onclick="window.location.href='1.html'">home</a>
+                    </li>
+                    <li class = "nav-item px-2 py-2">
+                        <a class = "nav-link text-uppercase text-dark" href = "product.html">Products</a>
+                    </li>
+                    <li class = "nav-item px-2 py-2">
+                        <a class = "nav-link text-uppercase text-dark" href = "#special">offers</a>
+                    </li>
+                    <li class = "nav-item px-2 py-2">
+                        <a class = "nav-link text-uppercase text-dark" href = "login.html" >login</a>
+                    </li>
+                    <li class = "nav-item px-2 py-2 border-0">
+                        <a class = "nav-link text-uppercase text-dark"  href='signup.html'>sign in </a>
+                    </li>
+                    <li class = "nav-item px-2 py-2">
+                        <a class = "nav-link text-uppercase text-dark" href = "#about">about us</a>
+                    </li>
+                </ul>
+            </div>
+        </div>       
+    </nav>
+    <!-- end of navbar -->
+
+    <!-- header -->
+    <header id = "header" class = "vh-100 carousel slide" data-bs-ride = "carousel" style = "padding-top: 104px;">
+        <div class = "container h-100 d-flex align-items-center carousel-inner">
+            <div class = "text-center carousel-item active">
+                <h2 class = "text-capitalize text-white">best collection</h2>
+                <h1 class = "text-uppercase py-2 fw-bold text-white">new arrivals</h1>
+                <a href = "#" class = "btn mt-3 text-uppercase">shop now</a>
+            </div>
+            <div class = "text-center carousel-item">
+                <h2 class = "text-capitalize text-white">best price & offer</h2>
+                <h1 class = "text-uppercase py-2 fw-bold text-white">new season</h1>
+                <a href = "#" class = "btn mt-3 text-uppercase">buy now</a>
+            </div>
+        </div>
+
+        <button class = "carousel-control-prev" type = "button" data-bs-target="#header" data-bs-slide = "prev">
+            <span class = "carousel-control-prev-icon"></span>
+        </button>
+        <button class = "carousel-control-next" type = "button" data-bs-target="#header" data-bs-slide = "next">
+            <span class = "carousel-control-next-icon"></span>
+        </button>
+    </header>
+    <!-- end of header -->
+
+    <!-- collection -->
+    <section id = "collection" class = "py-5">
+        <div class = "container">
+            <div class = "title text-center">
+                <h2 class = "position-relative d-inline-block">New Collection</h2>
+            </div>
+
+            <div class = "row g-0">
+                <div class = "d-flex flex-wrap justify-content-center mt-5 filter-button-group">
+                    <button type = "button" class = "btn m-2 text-dark active-filter-btn" data-filter = "*">All</button>
+                    <button type = "button" class = "btn m-2 text-dark" data-filter = ".best">Best Sellers</button>
+                    <button type = "button" class = "btn m-2 text-dark" data-filter = ".feat">Featured</button>
+                    <button type = "button" class = "btn m-2 text-dark" data-filter = ".new">New Arrival</button>
+                </div>
+
+                <div class = "collection-list mt-4 row gx-0 gy-3">
+                    <div class = "col-md-6 col-lg-4 col-xl-3 p-2 best">
+                        <div class = "collection-img position-relative">
+                            <img src = "images/jordan.webp" class = "w-100">
+                            <span class = "position-absolute bg-primary text-white d-flex align-items-center justify-content-center">sale</span>
+                        </div>
+
+                        <div class = "text-center">
+                            <p class = "text-capitalize my-1 text-decoration-underline">Nike Air Jordan 1 University Blue</p>
+                            <span class = "fw-bold text-decoration-underline">Rs.35999</span>
+
+                        <br>
+                        <div class=" cart">
+                        <select name="size" id="size">
+                        <option value="Size">Size</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                    </select>
+                    <a href = "#" class = "btn btn-primary mt-3"><i class="fa fa-shopping-cart"></i></a>
+                </div>                               
+               </div>    
+             </div>
+
+                    <div class = "col-md-6 col-lg-4 col-xl-3 p-2 feat">
+                        <div class = "collection-img position-relative">
+                            <img src = "images/adidas.jpg" class = "w-100">
+                            <span class = "position-absolute bg-primary text-white d-flex align-items-center justify-content-center">sale</span>
+                        </div>
+                        <div class = "text-center">
+                            <p class = "text-capitalize my-1">Adidas R855</p>
+                            <span class = "fw-bold">Rs.2499</span>
+                            <br>
+                            <div class=" cart">
+                            <select name="size" id="size">
+                            <option value="Size">Size</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                        </select>
+                        <a href = "#" class = "btn btn-primary mt-3"><i class="fa fa-shopping-cart"></i></a>
+                    </div>   
+                        </div>
+                    </div>
+
+                    <div class = "col-md-6 col-lg-4 col-xl-3 p-2 new">
+                        <div class = "collection-img position-relative">
+                            <img src = "images/jordanblack.webp" class = "w-100">
+                            <span class = "position-absolute bg-primary text-white d-flex align-items-center justify-content-center">sale</span>
+                        </div>
+                        <div class = "text-center">
+                            
+                            <p class = "text-capitalize my-1">Nike Dunk Low Retro Sneakers</p>
+                            <span class = "fw-bold">Rs.31000</span>
+                            <br>
+                            <div class=" cart">
+                            <select name="size" id="size">
+                            <option value="Size">Size</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                        </select>
+                        <a href = "#" class = "btn btn-primary mt-3"><i class="fa fa-shopping-cart"></i></a>
+                    </div>   
+                        </div>
+                    </div>
+
+                    <div class = "col-md-6 col-lg-4 col-xl-3 p-2 best">
+                        <div class = "collection-img position-relative">
+                            <img src = "images/nike.jpg" class = "w-100">
+                            <span class = "position-absolute bg-primary text-white d-flex align-items-center justify-content-center">sale</span>
+                        </div>
+                        <div class = "text-center">
+                          
+                            <p class = "text-capitalize my-1">NIKE X865</p>
+                            <span class = "fw-bold">Rs.3999</span>
+                            <br>
+                        <div class=" cart">
+                        <select name="size" id="size">
+                        <option value="Size">Size</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                    </select>
+                    <a href = "#" class = "btn btn-primary mt-3"><i class="fa fa-shopping-cart"></i></a>
+                </div>      
+                        </div>
+                    </div>
+
+                    <div class = "col-md-6 col-lg-4 col-xl-3 p-2 feat">
+                        <div class = "collection-img position-relative">
+                            <img src = "images/p2.webp" class = "w-100">
+                            <span class = "position-absolute bg-primary text-white d-flex align-items-center justify-content-center">sale</span>
+                        </div>
+                        <div class = "text-center">
+                         
+                            <p class = "text-capitalize my-1">NIKE Z7675</p>
+                            <span class = "fw-bold">Rs.3999</span>
+                            <br>
+                            <div class=" cart">
+                            <select name="size" id="size">
+                            <option value="Size">Size</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                        </select>
+                        <a href = "#" class = "btn btn-primary mt-3"><i class="fa fa-shopping-cart"></i></a>
+                    </div>   
+                        </div>
+                    </div>
+
+                    <div class = "col-md-6 col-lg-4 col-xl-3 p-2 new">
+                        <div class = "collection-img position-relative">
+                            <img src = "images/sparxw.jpg" class = "w-100">
+                            <span class = "position-absolute bg-primary text-white d-flex align-items-center justify-content-center">sale</span>
+                        </div>
+                        <div class = "text-center">
+                          
+                            <p class = "text-capitalize my-1">Sparx Men's Sd0323g Sneakers</p>
+                            <span class = "fw-bold">Rs.699</span>
+                            <br>
+                            <div class=" cart">
+                            <select name="size" id="size">
+                            <option value="Size">Size</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                        </select>
+                        <a href = "#" class = "btn btn-primary mt-3"><i class="fa fa-shopping-cart"></i></a>
+                    </div>    
+                        </div>
+                    </div>
+
+                    <div class = "col-md-6 col-lg-4 col-xl-3 p-2 best">
+                        <div class = "collection-img position-relative">
+                            <img src = "images/p8.jpg" class = "w-100">
+                            <span class = "position-absolute bg-primary text-white d-flex align-items-center justify-content-center">sale</span>
+                        </div>
+                        <div class = "text-center">
+                           
+                            <p class = "text-capitalize my-1">CAMPUS CASUALS R761</p>
+                            <span class = "fw-bold">Rs. 799</span>
+                            <br>
+                        <div class=" cart">
+                        <select name="size" id="size">
+                        <option value="Size">Size</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                    </select>
+                    <a href = "#" class = "btn btn-primary mt-3"><i class="fa fa-shopping-cart"></i></a>
+                </div>   
+                        </div>
+                    </div>
+
+                    <div class = "col-md-6 col-lg-4 col-xl-3 p-2 feat">
+                        <div class = "collection-img position-relative">
+                            <img src = "images/adidashoops.jpg" class = "w-100">
+                            <span class = "position-absolute bg-primary text-white d-flex align-items-center justify-content-center">sale</span>
+                        </div>
+                        <div class = "text-center">
+                          
+                            <p class = "text-capitalize my-1">
+                                Adidas Men's Hoops 3.0 Mid Shoes
+                            </p>
+                            <span class = "fw-bold">Rs.5999</span>
+                            <br>
+                            <div class=" cart">
+                            <select name="size" id="size">
+                            <option value="Size">Size</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                        </select>
+                        <a href = "#" class = "btn btn-primary mt-3"><i class="fa fa-shopping-cart"></i></a>
+                    </div>   
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- special products-->
+    <section id = "special" class = "py-5">
+        <div class = "container">
+            <div class = "title text-center py-5">
+                <h2 class = "position-relative d-inline-block">Special Selection</h2>
+            </div>
+
+            <div class = "special-list row g-0">
+                <div class = "col-md-6 col-lg-4 col-xl-3 p-2">
+                    <div class = "special-img position-relative overflow-hidden">
+                        <img src = "images/p17.webp" class = "w-100">
+                        <span class = "position-absolute d-flex align-items-center justify-content-center text-primary fs-4">
+                            <i class = "fas fa-heart"></i>
+                        </span>
+                    </div>
+                    <div class = "text-center">
+                        <p class = "text-capitalize mt-3 mb-1">PUMA SPORTS Y787</p>
+                        <span class = "fw-bold d-block">Rs.2499</span>
+                        <br>
+                        <div class=" cart">
+                        <select name="size" id="size">
+                        <option value="Size">Size</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                    </select>
+                    <a href = "#" class = "btn btn-primary mt-3"><i class="fa fa-shopping-cart"></i></a>
+                </div>   
+                    </div>
+                </div>
+
+                <div class = "col-md-6 col-lg-4 col-xl-3 p-2">
+                    <div class = "special-img position-relative overflow-hidden">
+                        <img src = "images/p19.webp" class = "w-100">
+                        <span class = "position-absolute d-flex align-items-center justify-content-center text-primary fs-4">
+                            <i class = "fas fa-heart"></i>
+                        </span>
+                    </div>
+                    <div class = "text-center">
+                        <p class = "text-capitalize mt-3 mb-1">PUMA SPORTS X752</p>
+                        <span class = "fw-bold d-block">Rs.3499</span>
+                        <br>
+                        <div class=" cart">
+                        <select name="size" id="size">
+                        <option value="Size">Size</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                    </select>
+                    <a href = "#" class = "btn btn-primary mt-3"><i class="fa fa-shopping-cart"></i></a>
+                </div>   
+                    </div>
+                </div>
+
+                <div class = "col-md-6 col-lg-4 col-xl-3 p-2">
+                    <div class = "special-img position-relative overflow-hidden">
+                        <img src = "images/p21.webp" class = "w-100">
+                        <span class = "position-absolute d-flex align-items-center justify-content-center text-primary fs-4">
+                            <i class = "fas fa-heart"></i>
+                        </span>
+                    </div>
+                    <div class = "text-center">
+                        <p class = "text-capitalize mt-3 mb-1">JACK AND JONES SM 400</p>
+                        <span class = "fw-bold d-block">Rs.1999</span>
+                        <br>
+                        <div class=" cart">
+                        <select name="size" id="size">
+                        <option value="Size">Size</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                    </select>
+                    <a href = "#" class = "btn btn-primary mt-3">
+                        <i class="fa fa-shopping-cart"></i></a>
+                </div>   
+                    </div>
+                </div>
+
+                <div class = "col-md-6 col-lg-4 col-xl-3 p-2">
+                    <div class = "special-img position-relative overflow-hidden">
+                        <img src = "images/p22.webp" class = "w-100">
+                        <span class = "position-absolute d-flex align-items-center justify-content-center text-primary fs-4">
+                            <i class = "fas fa-heart"></i>
+                        </span>
+                    </div>
+                    <div class = "text-center">
+                        <p class = "text-capitalize mt-3 mb-1">SPARX SX-900</p>
+                        <span class = "fw-bold d-block">Rs.1799</span>
+                        <br>
+                        <div class=" cart">
+                        <select name="size" id="size">
+                        <option value="Size">Size</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                    </select>
+                    <a href = "#" class = "btn btn-primary mt-3"><i class="fa fa-shopping-cart"></i></a>
+                </div>   
+                           
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- end of special products -->
+
+    <!-- blogs -->
+    <div class = "title text-center">
+        <h2 class = "position-relative d-inline-block">Offers</h2>
+    </div>
+    <section id = "offers" class = "py-5">
+        <div class = "container">
+            <div class = "row d-flex align-items-center justify-content-center text-center justify-content-lg-start text-lg-start">
+                <div class = "offers-content">
+                    <br><br>
+                    <span class="buynowcaption" class="marquee">BEST SHOES TAKE YOU TO BEST PLACES</span><br><br><br>
+                        <div class="offers">
+                    <span>INDEPENDENCE DAY OFFER</span><br>
+                    <span>12th Aug-15th Aug</span><br>
+                    </div>
+                    <div class = "x1"><span>Discount Up To 40%<br></span></div>
+                   <div class="sale"><span><h2>Grand Sale Offer!</h2></span></div> <br><br>
+                    <a href = "#" class = "btn" class="green">Buy Now</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- end of blogs -->
+
+    <!-- blogs -->
+   <section id = "blogs" class = "py-5">
+        <div class = "container">
+            <div class = "title text-center py-5">
+                <h2 class = "position-relative d-inline-block">Our Latest Blog</h2>
+            </div>
+
+            <div class = "row g-3">
+                <div class = "card border-0 col-md-6 col-lg-4 bg-transparent my-3">
+                    <img src = "images/blog_1.jpg" alt = "">
+                    <div class = "card-body px-0">
+                        <h4 class = "card-title">Lorem ipsum, dolor sit amet consectetur adipisicing</h4>
+                        <p class = "card-text mt-3 text-muted">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet aspernatur repudiandae nostrum dolorem molestias odio. Sit fugit adipisci omnis quia itaque ratione iusto sapiente reiciendis, numquam officiis aliquid ipsam fuga.</p>
+                        <p class = "card-text">
+                            <small class = "text-muted">
+                                <span class = "fw-bold">Author: </span>John Doe
+                            </small>
+                        </p>
+                        <a href = "#" class = "btn">Read More</a>
+                    </div>
+                </div>
+
+                <div class = "card border-0 col-md-6 col-lg-4 bg-transparent my-3">
+                    <img src = "images/blog_2.jpg" alt = "">
+                    <div class = "card-body px-0">
+                        <h4 class = "card-title">Lorem ipsum, dolor sit amet consectetur adipisicing</h4>
+                        <p class = "card-text mt-3 text-muted">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet aspernatur repudiandae nostrum dolorem molestias odio. Sit fugit adipisci omnis quia itaque ratione iusto sapiente reiciendis, numquam officiis aliquid ipsam fuga.</p>
+                        <p class = "card-text">
+                            <small class = "text-muted">
+                                <span class = "fw-bold">Author: </span>John Doe
+                            </small>
+                        </p>
+                        <a href = "#" class = "btn">Read More</a>
+                    </div>
+                </div>
+
+                <div class = "card border-0 col-md-6 col-lg-4 bg-transparent my-3">
+                    <img src = "images/blog_3.jpg" alt = "">
+                    <div class = "card-body px-0">
+                        <h4 class = "card-title">Lorem ipsum, dolor sit amet consectetur adipisicing</h4>
+                        <p class = "card-text mt-3 text-muted">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet aspernatur repudiandae nostrum dolorem molestias odio. Sit fugit adipisci omnis quia itaque ratione iusto sapiente reiciendis, numquam officiis aliquid ipsam fuga.</p>
+                        <p class = "card-text">
+                            <small class = "text-muted">
+                                <span class = "fw-bold">Author: </span>John Doe
+                            </small>
+                        </p>
+                        <a href = "#" class = "btn">Read More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- end of blogs -->
+
+    <!-- about us -->
+    <section id = "about" class = "py-5">
+        <div class = "container">
+            <div class = "row gy-lg-5 align-items-center">
+                <div class = "col-lg-6 order-lg-1 text-center text-lg-start">
+                    <div class = "title pt-3 pb-5">
+                        <h2 class = "position-relative d-inline-block ms-4">About Us</h2>
+                    </div>
+                    <p class = "lead text-muted">All Wish Ends Here</p>
+                    <p>The SNEAKER HEADS is an e-commerce website for shoes where a customer can buy shoes of different categories and choice with the comfort of internet. The project is a platform just like any other e-commerce websites like flip kart, amazon etc. specifically designed for shoes and its related stuffs. .</p>
+                </div>
+                <div class = "col-lg-6 order-lg-0">
+                    <img  id="p14"src = "images/p14.jpg" alt = "" class = "img-fluid">
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- end of about us -->
+
+    <!-- popular -->
+    <section id = "popular" class = "py-5">
+        <div class = "container">
+            <div class = "title text-center pt-3 pb-5">
+                <h2 class = "position-relative d-inline-block ms-4">Popular Of This Year</h2>
+            </div>
+
+            <div class = "row">
+                <div class = "col-md-6 col-lg-4 row g-3">
+                    <h3 class = "fs-5">Top Rated</h3>
+                    <div class = "d-flex align-items-start justify-content-start">
+                        <img src = "images/p22.webp" alt = "" class = "img-fluid pe-3 w-25">
+                        <div>
+                            <p class = "mb-0">SPARX SX-900</p>
+                            <span>Rs.1799</span>
+                        </div>
+                    </div>
+                    <div class = "d-flex align-items-start justify-content-start">
+                        <img src = "images/nike.jpg" alt = "" class = "img-fluid pe-3 w-25">
+                        <div>
+                            <p class = "mb-0">NIKE X878</p>
+                            <span>Rs.3499</span>
+                        </div>
+                    </div>
+                    <div class = "d-flex align-items-start justify-content-start">
+                        <img src = "images/p20.webp" alt = "" class = "img-fluid pe-3 w-25">
+                        <div>
+                            <p class = "mb-0">ADIDAS SM 350</p>
+                            <span>Rs.2499</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class = "col-md-6 col-lg-4 row g-3">
+                    <h3 class = "fs-5">Best Selling</h3>
+                    <div class = "d-flex align-items-start justify-content-start">
+                        <img src = "images/p17.webp" alt = "" class = "img-fluid pe-3 w-25">
+                        <div>
+                            <p class = "mb-0">PUMA Y898</p>
+                            <span>Rs.3499</span>
+                        </div>
+                    </div>
+                    <div class = "d-flex align-items-start justify-content-start">
+                        <img src = "images/p3.jpg" alt = "" class = "img-fluid pe-3 w-25">
+                        <div>
+                            <p class = "mb-0">SPARX T848</p>
+                            <span>Rs.1299</span>
+                        </div>
+                    </div>
+                    <div class = "d-flex align-items-start justify-content-start">
+                        <img src = "images/p4.webp" alt = "" class = "img-fluid pe-3 w-25">
+                        <div>
+                            <p class = "mb-0">ADIDAS P768</p>
+                            <span>Rs.2999</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class = "col-md-6 col-lg-4 row g-3">
+                    <h3 class = "fs-5">On Sale</h3>
+                    <div class = "d-flex align-items-start justify-content-start">
+                        <img src = "images/p6.jpg" alt = "" class = "img-fluid pe-3 w-25">
+                        <div>
+                            <p class = "mb-0">CAMPUS M900</p>
+                            <span>Rs.999</span>
+                        </div>
+                    </div>
+                    <div class = "d-flex align-items-start justify-content-start">
+                        <img src = "images/p8.jpg" alt = "" class = "img-fluid pe-3 w-25">
+                        <div>
+                            <p class = "mb-0">JACK AND JONES</p>
+                            <span>Rs.999</span>
+                        </div>
+                    </div>
+                    <div class = "d-flex align-items-start justify-content-start">
+                        <img src = "images/p1.webp" alt = "" class = "img-fluid pe-3 w-25">
+                        <div>
+                            <p class = "mb-0">NIKE S384</p>
+                            <span>Rs.2499</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- end of popular -->
+
+    <!-- newsletter -->
+    <section id = "newsletter" class = "py-5">
+        <div class = "container">
+            <div class = "d-flex flex-column align-items-center justify-content-center">
+                <div class = "title text-center pt-3 pb-5">
+                    <h2 class = "position-relative d-inline-block ms-4">Newsletter Subscription</h2>
+                </div>
+
+                <p class = "text-center text-muted">Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus rem officia accusantium maiores quisquam dolorum?</p>
+                <div class = "input-group mb-3 mt-3">
+                    <input type = "text" class = "form-control" placeholder="Enter Your Email ...">
+                    <button class = "btn btn-primary" type = "submit">Subscribe</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- end of newsletter -->
+
+    <!-- footer -->
+    <footer class = "bg-dark py-5">
+        <div class = "container">
+            <div class = "row text-white g-4">
+                <div class = "col-md-6 col-lg-3">
+                    <a class = "text-uppercase text-decoration-none brand text-white" href = "index.html">SNEAKER HEADS</a>
+                    <br>
+                    <img src="images/p14.jpg" alt="" class="footerimg">
+                </div>
+
+                <div class = "col-md-6 col-lg-3">
+                    <h5 class = "fw-light">Links</h5>
+                    <ul class = "list-unstyled">
+                        <li class = "my-3">
+                            <a href = "#" class = "text-white text-decoration-none text-muted">
+                                <i class = "fas fa-chevron-right me-1"></i> Home
+                            </a>
+                        </li>
+                        <li class = "my-3">
+                            <a href = "#" class = "text-white text-decoration-none text-muted">
+                                <i class = "fas fa-chevron-right me-1"></i> Collection
+                            </a>
+                        </li>
+                        <li class = "my-3">
+                            <a href = "#" class = "text-white text-decoration-none text-muted">
+                                <i class = "fas fa-chevron-right me-1"></i> Blogs
+                            </a>
+                        </li>
+                        <li class = "my-3">
+                            <a href = "#" class = "text-white text-decoration-none text-muted">
+                                <i class = "fas fa-chevron-right me-1"></i> About Us
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class = "col-md-6 col-lg-3">
+                    <h5 class = "fw-light mb-3">Contact Us</h5>
+                    <div class = "d-flex justify-content-start align-items-start my-2 text-muted">
+                        <span class = "me-3">
+                            <i class = "fas fa-map-marked-alt"></i>
+                        </span>
+                        <span class = "fw-light">
+                            Dayananda Sagar College of Engineering , Shavige Malleshwara Hills, 91st Main Rd, 1st Stage, Kumaraswamy Layout, Bengaluru, Karnataka 560078
+
+                        </span>
+                    </div>
+                    <div class = "d-flex justify-content-start align-items-start my-2 text-muted">
+                        <span class = "me-3">
+                            <i class = "fas fa-envelope"></i>
+                        </span>
+                        <span class = "fw-light">
+                        sneakerheads.support@gmail.com
+                        </span>
+                    </div>
+                    <div class = "d-flex justify-content-start align-items-start my-2 text-muted">
+                        <span class = "me-3">
+                            <i class = "fas fa-phone-alt"></i>
+                        </span>
+                        <span class = "fw-light">
+                            +9786 6776 236
+                        </span>
+                    </div>
+                </div>
+
+                <div class = "col-md-6 col-lg-3">
+                    <h5 class = "fw-light mb-3">Follow Us</h5>
+                    <div>
+                        <ul class = "list-unstyled d-flex">
+                            <li>
+                                <a href = "#" class = "text-white text-decoration-none text-muted fs-4 me-4">
+                                    <i class = "fab fa-facebook-f"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href = "#" class = "text-white text-decoration-none text-muted fs-4 me-4">
+                                    <i class = "fab fa-twitter"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href = "#" class = "text-white text-decoration-none text-muted fs-4 me-4">
+                                    <i class = "fab fa-instagram"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href = "#" class = "text-white text-decoration-none text-muted fs-4 me-4">
+                                    <i class = "fab fa-pinterest"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- end of footer -->
+
+
+
+
+    <!-- jquery -->
+    <script src = "js/jquery-3.6.0.js"></script>
+    <!-- isotope js -->
+    <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.js"></script>
+    <!-- bootstrap js -->
+    <script src = "bootstrap-5.0.2-dist/js/bootstrap.min.js"></script>
+    <!-- custom js -->
+    <script src = "js/script.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visualize Your Sorting</title>
+
+    <link rel="icon" type='image/png' href="/favicon.png?">
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head> 
+
+<body>
+    
+    <div class="header">Sorting Visualizer</div>
+
+    <div class="data-container"></div>
+
+    <div id="message"></div>
+
+    <div class="button-group">
+        <button class="generate" onclick="generateArray()" id="generate">Generate New Array</button>
+
+        <button class="sort-button" onclick="selectionSort()" id="selection">Selection Sort</button>
+        <button class="sort-button" onclick="bubbleSort()" id="bubble">Bubble Sort</button>
+        <button class="sort-button" onclick="mergeSort()" id="merge">Merge Sort</button>
+        <button class="sort-button" onclick="quickSort()" id="quick">Quick Sort</button>
+        <button class="sort-button" onclick="insertionSort()" id="insertion">Insertion Sort</button>
+    </div>
+
+    <div class="utility">
+        <label for="speed">Select Speed:</label>
+        <select name="speed" id="speed" autocomplete="off">
+            <option value="">--select--</option>
+            <option value="50">3x</option>
+            <option value="150">2x</option>
+            <option value="250">1x</option>
+            <option value="350">0.5x</option>
+            <option value="450">0.1x</option>
+        </select>
+    </div>
+
+    <div class="footer" id="footer">
+        <footer>&copy; Copyright 2021 Anirban Das</footer>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
