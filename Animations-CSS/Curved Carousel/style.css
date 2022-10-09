@@ -1,0 +1,47 @@
+body {
+	margin: 0;
+	
+  }
+  .container {
+	width: min(100%, 1200px);
+	margin-inline: auto;
+  }
+  .curved-carousel {
+  
+	position: relative;
+	 min-height: 600px;
+  }
+  .top-curve, .bottom-curve {
+	width: min(100%, 1200px);
+	position: absolute;
+	z-index: 1000;
+	fill: white;
+  }
+  
+  .items-container {
+	display: flex;
+	align-items: end;
+	gap: 1rem;
+	min-height: 300px;
+	transform: translateY(60px);
+	overflow-x: scroll;
+	scroll-snap-type: x mandatory;
+  }
+   .item {
+	min-width: 400px;
+	height: 400px;
+	background-color: #dcecdf;
+	 scroll-snap-align: start;
+	 object-fit: cover;
+  }
+  
+  .
+  item__image {
+	width: 400px;
+	height: 400px;
+	object-fit: cover;
+  }
+  .bottom-curve {
+	transform: scaleY(-1);
+	bottom:0;
+  }

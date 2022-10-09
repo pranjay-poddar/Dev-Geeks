@@ -1,0 +1,84 @@
+.main-content{
+    position: relative;
+    width: 356px;
+}
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-image: linear-gradient(rgb(94, 169, 224), rgb(175, 218, 225));
+    /* background: url(../Images/word_definition.png);
+    background-repeat: no-repeat;
+    background-size: cover; */
+}
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 520px;
+    height: 320px;
+    border-radius: 7px;
+    background: rgb(255, 255, 255);
+    padding: 25px 28px 5px;
+    box-shadow: 7px 7px 20px rgb(0 0 0 / 5%);
+}
+h1{
+    /* text-align: center; */
+    font-size: 20px;
+}
+h2{
+    /* text-align: center; */
+    font-size: 20px;
+}
+.button-container{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    margin: 18px 0 0px;
+}
+#insert-expression {
+    width: 100%;
+}
+.output-area {
+    width: 100%;
+}
+.links{
+    font-size: 11px;
+    text-decoration: none;
+    color: rgb(66, 113, 128); 
+    padding: 15px;
+}
+.links-container{
+    display: flex;
+    justify-content: center;
+    margin: 5px; 
+}
+
+button{
+    border-radius: 5px;
+    padding: 5px;
+    width: 25%;
+    margin: 5px;
+    border: 2px solid  rgb(175, 218, 225);
+
+}
+button:hover {
+    background-color: rgb(94, 169, 224);
+}
+#evaluate-button{
+    background-color: white;
+}
+#evaluate-button:hover{
+    background-color: rgb(94, 169, 224);;
+}
+@media (max-width: 576px){
+    .container{
+        width: 440px;
+    }
+}
+@media (max-width: 476px){
+    .container{
+        width: 330px;
+    }
+}

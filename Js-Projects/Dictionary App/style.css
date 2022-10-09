@@ -1,0 +1,124 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+  transition: 0.3s all ease-in;
+}
+:root {
+  --light: #828a95;
+  --black: #181d27;
+  --blue: #97f9f9;
+  --blue1: #a4def9;
+  --white: #f7f5fb;
+  --white1: #f8f4e3;
+}
+body {
+  background: var(--light);
+}
+.wrapper {
+  background: var(--black);
+  width: 90vmin;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  padding: 80px 50px;
+  border-radius: 15px;
+  box-shadow: 0 20px 40px rgba(38, 33, 61, 0.5);
+}
+.search-box {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.search-box input {
+  padding: 5px;
+  width: 70%;
+  border: none;
+  outline: none;
+  border-bottom: 4px solid var(--blue);
+  background: none;
+  color: var(--white);
+  font-weight: 500;
+  font-size: 15px;
+}
+.search-box button {
+  padding: 5px 0;
+  width: 25%;
+  border: none;
+  outline: none;
+  background: var(--white);
+  opacity: 0.8;
+  color: var(--black);
+  font-size: 18px;
+  border-radius: 5px;
+  font-weight: 700;
+  cursor: pointer;
+}
+.search-box button:hover {
+  background-color: var(--blue);
+  opacity: 1;
+}
+.info {
+  position: relative;
+}
+.info h3 {
+  font-size: 35px;
+  color: var(--blue);
+  font-weight: 800;
+}
+.info .word {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 50px;
+}
+.info button {
+  background-color: transparent;
+  opacity: 0.6;
+  color: var(--blue);
+  border: none;
+  outline: none;
+  font-size: 25px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+.info button:hover {
+  opacity: 1;
+}
+.info .details {
+  display: flex;
+  gap: 10px;
+  color: var(--white1);
+  margin: 5px 0 20px 0;
+  font-size: 14px;
+  font-weight: 500;
+  opacity: 0.6;
+}
+.word-mean {
+  color: var(--white1);
+  font-weight: 500;
+  text-align: justify;
+  opacity: 0.9;
+  font-size: 17px;
+}
+.example {
+  color: var(--white1);
+  font-weight: 500;
+  opacity: 0.99;
+  padding-left: 20px;
+  border-left: 4px solid var(--blue);
+  margin-top: 30px;
+}
+.example a {
+  color: var(--white1);
+  transition: 0.8s all ease;
+}
+.example a:hover {
+  color: var(--blue);
+}
+.error{
+  margin-top: 50px;
+  text-align: center;
+}

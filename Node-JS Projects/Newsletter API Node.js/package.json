@@ -1,0 +1,18 @@
+{
+    "name": "newsletter-signup",
+    "version": "1.0.0",
+    "description": "newsletter-signup-app",
+    "main": "app.js",
+    "scripts": {
+      "start": "node app.js",
+      "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "vedant",
+    "license": "ISC",
+    "dependencies": {
+      "body-parser": "^1.20.0",
+      "express": "^4.18.1",
+      "request": "^2.88.2"
+    }
+  }
+  

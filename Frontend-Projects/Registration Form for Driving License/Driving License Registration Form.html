@@ -1,0 +1,130 @@
+<html>
+
+<head>
+  <title>Driving License Registration</title>
+  <script>
+    function validateForm(){
+      if(name==null || name=="")
+      {
+        alert("Name cannot be blank!")
+        return false
+      }
+      else if(aadhar==null || aadhar=="")
+      {
+        alert("Aadhar cannot be blank!")
+        return false
+      }
+      else if(city==null || city=="")
+      {
+        alert("city cannot be blank!")
+        return false
+      }
+      else if(State==null || State=="")
+      {
+        alert("State cannot be blank!")
+        return false
+      }
+      else if(LLID==null || LLID=="")
+      {
+        alert("Learning License cannot be blank!")
+        return false
+      }
+      else if(PAN==null || PAN=="")
+      {
+        alert("PAN cannot be blank!")
+        return false
+      }
+    }
+  </script>
+</head>
+
+<body style="background-image:url('https://img.freepik.com/free-vector/white-background-with-3d-hexagonal-pattern-design_1017-28443.jpg?w=2000');">
+  <hr size="5" style="background-color:black;" />
+  <img style="float:left;" src="https://upload.wikimedia.org/wikipedia/commons/5/55/Emblem_of_India.svg" alt="GOI Symbol" height=140px>
+  <!-- <center>  -->
+  <h1 style="padding-left:120px;margin:25 0 20 0;">Government of India</h1>
+  <!-- </center>  -->
+  <!--<center>  -->
+  <h1 style="padding-left:120px;margin:25 0 25 0;">Ministry of Road Transport and Highways</h1>
+  <!-- </center>  -->
+  <hr size="5" style="background-color:black;" />
+  <h2>To Apply for Driving License, please input all the fields correctly -</h2>
+  <center>
+    <form action="" onsubmit="return validateForm()" method="post">
+      <table cellspacing="40">
+        <tr>
+          <td>
+            <table cellspacing="10">
+              <tr>
+                <td>
+                  <h2>Personal Details:</h2>
+                </td>
+              </tr>
+              <tr>
+                <td>Full Name: <input type="text" name="name"></td>
+                <td>Contact Number:<input type="tel" name="phno" pattern="[6789][0-9]{9}" title="Please enter valid phone number"></td>
+              </tr>
+              <tr>
+                <td>Email: <input type="email" name="email" pattern="/^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/"></td>
+                <td>Date of Birth: <input type="date" name="dob"></td>
+              </tr>
+              <tr>
+                <td>Aadhar: <input type="number" min="100000000000" max="999999999999" name="aadhar"></td>
+              </tr>
+            </table>
+          </td>
+          <td>
+            <table cellspacing="10">
+              <tr>
+                <td>
+                  <h2>Address Details:</h2>
+                </td>
+              </tr>
+              <tr>
+                <td>Wing, Flat Number:<input type="text" name="flat"></td>
+                <td>Society Name:<input type="text" name="society"></td>
+              </tr>
+              <tr>
+                <td>Area/Locality:<input type="text" name="area"></td>
+                <td>Landmark:<input type="text" name="landmark"></td>
+              </tr>
+              <tr>
+                <td>City:<input type="text" name="city"></td>
+                <td>State:<input type="text" name="State"></td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <table cellspacing="10">
+              <tr>
+                <td>
+                  <h2>Additional Details:</h2>
+                </td>
+              <tr>
+                <td>Learner License ID:<input type="text" name="LLID"></td>
+                <td>PAN NUMBER:<input type="text" name="PAN"></td>
+              </tr>
+              <tr>
+                <td>Possible Day of Test:<input type="date" name="testdate"></td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+      <hr size="5" style="background-color:black;" />
+      <center>
+        <input type="checkbox" name="infocorrect">
+        <label for="infocorrect">I Agree that all the Information submitted above is correct to the full extent of my knowledge.</label>
+        <br>
+        <input type="checkbox" name="tandc">
+        <label for="tandc">I accept all the Terms and Conditions.</label>
+        <br>
+        <input type="submit" name="">
+      </center>
+    </form>
+  </center>
+</body>
+
+</html>
