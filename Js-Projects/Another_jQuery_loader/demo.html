@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet"> 
+	<script src="loader/jquery-3.6.1.min.js"></script>
+	<link rel="stylesheet" href="loader/loader.css">
+	<title>Simple jQuery loader 🚀</title>
+	<style>
+		*{font-family:Poppins;}
+		html,body{background:#00ffa2;color:#004466;}
+		.centrar{
+			width:100%;
+			position:absolute;
+			display:flex;
+			justify-content: center;
+			align-items: center;
+			top:50%;
+			left:50%;
+			transform:translate(-50%,-50%);
+			gap:50px;
+			padding:20px;
+			box-sizing: border-box;
+		}
+		.titulo {font-size:60px;font-weight:800;line-height:60px;margin-bottom:20px;}
+		.titulo span {font-size:40px;font-weight:400;}
+		.opciones {
+			width:100%;
+			display:flex;
+			justify-content: center;
+			flex-direction: column;
+			align-items: center;
+		}
+		.opciones button {
+			border:none;
+			outline:none;
+			font-weight:300;
+			background:#004466;
+			color:#00ffa2;
+			font-size:25px;
+			padding:10px 25px;
+			width:200px;
+			border-bottom-left-radius: 5px;
+			border-bottom-right-radius: 5px;
+		}
+		.opciones input {
+			font-size:25px;
+			padding:10px 25px;
+			width:max-content;
+			outline:none;
+			border:none;
+			width:200px;
+			box-sizing: border-box;
+			border-top-left-radius: 5px;
+			border-top-right-radius: 5px;
+			border:3px solid #004466;
+			background:#00ffa2;
+		}
+		.opciones button:hover{cursor:pointer;background:#002c66;}
+		pre {
+			white-space: nowrap;
+			counter-reset: line;
+			background: #004466;
+			padding: 15px;
+			overflow: scroll;
+			width:400px;
+			border-radius:5px;
+			color:#00ffa2;
+		}
+		code.especial {
+			padding-left:30px;
+			font-weight:600;
+			font-style:italic;
+		}
+		.sombra {box-shadow: rgba(0, 68, 102, 0.35) 0px 5px 15px;}
+		.madeby {
+			position:absolute;
+			bottom:0;
+			right:0;
+			padding:5px 15px;
+		}
+		a,a:link,a:visited {
+			text-decoration: underline;
+			color:#004466;
+			font-style: italic;
+			font-weight:600;
+		}
+
+		@media (max-width:775px){
+			.centrar {
+				flex-direction: column;
+			}
+		}
+		@media (max-width:450px){
+			pre {
+				width:90%;
+				font-size:4vw;
+			}
+		}
+	</style>
+</head>
+<body>
+	<div class="centrar">
+		<div class="cuadro">
+			<div class="titulo">Yet another loader <br> <span>with jQuery 🚀</span></div>
+			<div class="opciones">
+				<input id="hexval" type="text" placeholder="#004466">
+				<button class="sombra" onclick="LOADER.show($('#hexval').val())">SHOW</button>
+			</div>
+		</div>
+		<div class="cuadro">
+			<pre class="sombra">
+				<code>&#x3c;script src="jquery-3.X.X.js"&#x3e;</code><br>
+				<code>&#x3c;link rel="stylesheet" href="loader.css"&#x3e;</code><br>
+				<code>&#x3c;script src="loader.js"&#x3e;</code><br>
+				<code>&#x3c;script&#x3e;</code><br>
+				<code class="especial">LOADER.show(<span id="visualhex"></span>)</code><br>
+				<code class="especial">LOADER.hide()</code><br>
+				<code>&#x3c;/script&#x3e;</code>
+			</pre>
+			<i>To close the loader, via console or F5.</i>
+		</div>
+	</div>
+	<div class="madeby">made by <a href="https://github.com/keelus">keelus</a></div>
+</body>
+</html>
+<script src="loader/loader.js"></script>
+<script>
+	$("#hexval").on("focus keyup keydown key change value", ()=>{
+		$("#visualhex").text('"'+$("#hexval").val()+'"')
+	})
+</script>
