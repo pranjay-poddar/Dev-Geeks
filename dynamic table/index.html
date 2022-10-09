@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css">
+    <title>Dynamic table</title>
+  </head>
+  <body>
+    <h2>Registration form</h2>
+    <div class="container">
+      <div class="input">
+        NAME:
+        <input type="text" id="name" placeholder="shruti mishra" />
+      </div>
+      <div class="input">
+        EMAIL:
+        <input type="text" id="email"  placeholder="email" />
+      </div>
+      <div class="input">
+        SKILLS:
+        <input type="text" id="skill"  placeholder="skills" />
+      </div>
+      <button id="entry">ENTER</button>
+    </div>
+    <table id="display" border="1">
+        <tr>
+            <th>NAME</th>
+            <th>E-MAIL</th>
+            <th>SKILLS</th>
+        </tr>
+    </table>
+  </body>
+  <script src="script.js"></script>
+</html>
