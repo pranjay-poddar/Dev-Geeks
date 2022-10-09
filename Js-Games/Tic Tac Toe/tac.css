@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Mochiy+Pop+P+One&display=swap');
+*
+{
+  box-sizing: border-box;
+}
+body
+{
+  background: linear-gradient(160deg, #0093E9, #80D0C7  );
+  color: rgb(0, 0, 0);
+  font-family: sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  font-size: 25px;
+  font-family: 'Mochiy Pop P One', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+h1
+{
+  text-align: center;
+}
+.game
+{
+  width: 400px;
+}
+header
+{
+  width: 100%;
+  font-size: 35px;
+  text-align: center;
+   font-family: 'Mochiy Pop P One', sans-serif;
+}
+.grid
+{
+  display: grid;
+  grid-template-columns: 3fr 3fr 3fr;
+  width: 100%;
+  aspect-ratio: 1/1;
+}
+.cell
+{
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  border: 3px solid rgb(0, 0, 0);
+  cursor: pointer;
+  transition: 500ms ease;
+  z-index: 1;
+  font-size: 0;
+  aspect-ratio: 1 / 1;
+}
+.cell:hover
+{
+  z-index: 2;
+  font-size: 4rem;
+  box-shadow: 0 0 0.8rem rgb(0, 0, 0);
+}
+.cell.filled
+{
+  font-size: 5vw;
+}
+#popup
+{
+  position: fixed;
+  box-shadow: 0 0 0.4rem rgb(0, 0, 0);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 5vw;
+  padding: 3.2rem;
+  border: 3px solid rgb(0, 0, 0);
+  border-radius: 1.6rem;
+  background-color: #fff;
+  color: #000;
+  opacity: 0;
+  z-index: -1;
+  transition: 250ms ease-in-out;
+}
