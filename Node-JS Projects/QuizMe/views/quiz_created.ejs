@@ -1,0 +1,45 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/quiz_created.css">
+    <title>QuizME - Quiz created</title>
+</head>
+<body>
+       <div class="container">
+           <div class="box">
+               <h3>🎉 Quiz created successfully</h3>
+               <p class="desc">Share the link below to the players so that they can attempt the quiz. All submissions will be recorded as the players submit their responses
+               </p>
+
+               <a target="_blank" class="link" href="/?quiz=<%=link%>">
+                   ...
+               </a>
+
+               <label class="copy" onclick="copyLink()">Copy link</label>
+
+               <a href="/admin">Return Home</a>
+           </div>
+       </div>
+
+       <script>
+           var copy = document.getElementsByClassName('copy')[0]
+           var link = document.getElementsByClassName('link')[0]
+
+           link.innerText = link.href
+           function copyLink(){
+               
+
+             //  link.select()
+               navigator.clipboard.writeText(link.href);
+               copy.innerText = 'Link copied!'
+
+               setTimeout(()=>{
+                   copy.innerText = 'Copy link'
+               },2000)
+           }
+
+       </script>
+</body>
+</html>

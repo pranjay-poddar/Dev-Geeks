@@ -1,0 +1,54 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/view_submissions.css">
+    <title>QuizME - View submissions</title>
+</head>
+<body>
+    <%- include('partials/back_bar') %> 
+
+    <div class="container">
+
+        <h3>QuizME Admin Console</h3>
+
+        <div class="box">
+           <div class="row">
+               <label>All submissions</label>
+              
+           </div>
+           <div class="quiz_list">
+
+
+            <table>
+                <tr>
+                  <th>Username</th>
+                  <th>Date and time</th>
+                  <th>Score</th>
+                </tr>
+
+                <% for(var i=0; i<submissions.length; i++){ %> 
+                <tr>
+                  <td><%= submissions[i].username %> </td>
+                  <td><%= submissions[i].submission_date %></td>
+                  <td><%= submissions[i].score %>%</td>
+               
+                </tr>
+                <% } %> 
+                
+               
+                  
+          
+              </table>
+
+               
+           </div>
+        </div>
+
+    </div>
+
+
+    
+</body>
+</html>
