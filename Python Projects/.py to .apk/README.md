@@ -1,25 +1,31 @@
 # .py to .apk 
 In this project we convert a .py file to .apk file using kivy module and python.
 
-## Kivy Module
+## :point_right: Kivy Module
 Kivy is a graphical user interface opensource Python library that allows you to develop multi-platform applications on Windows, macOS, Android, iOS, Linux, and Raspberry-Pi. 
 
-## Steps 
+##  Steps 
 
-### First you have to install kivy using your terminal
+### :point_right: First you have to install kivy using your terminal
 
 *run this commands in your terminal.
+
+```
 
 pip install --force-reinstall https://github.com/kivymd/KivyMD/archive/master.zip
 
 pip install kivymd
 
-### Then create your main.py file
+```
 
-### Then open Google Colab from your browser and create a new notebook
+### :point_right: Then create your main.py file
 
-### Now in the notebook you have to run these following codes
+### :point_right: Then open Google Colab from your browser and create a new notebook
+##### Use this link to [Google Colab](https://colab.research.google.com/) 
 
+### :point_right: Now in the notebook you have to run these following codes
+
+```
  !pip install buildozer
  
  !pip install cython==0.29.19
@@ -50,10 +56,12 @@ pip install kivymd
 
 ! sudo apt-get install libffi-dev
 
-### upload your main.py and all raw data of your app into Google colab by using upload files,then run other commands
+```
 
+### :point_right: upload your main.py and all raw data of your app into Google colab by using upload files,then run other commands
+```
 !buildozer init
-
+```
 Choose Yes if prompts
 
 see that a buildozer.spec file created
@@ -62,15 +70,15 @@ open that file and find application requirement section and add the following ch
 
 [kivy==2.0.0,kivymd,pillow]
 
-### Now run the following commands
-
+### :point_right: Now run the following commands
+```
 !buildozer -v android debug
-
+```
 it takes some time to run and after completion you get the .apk file in bin folder.
 
 So now you can download it and send it into your android device and install it.
 
-## Great you did it.
+## Great! you did it :grinning:.
 
 
 
