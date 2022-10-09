@@ -1,0 +1,1515 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta Movie name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!--Owl Corousel CDN-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.css"
+        integrity="sha512-X/RSQYxFb/tvuz6aNRTfKXDnQzmnzoawgEQ4X8nZNftzs8KFFH23p/BA6D2k0QCM4R0sY1DEy9MIY9b3fwi+bg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>IMDb-c:Rating and reviews</title>
+</head>
+
+<body>
+    <!-- navbar starts here -->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-5 ">
+            <div class="container-fluid ms-md-5" id="navbar">
+
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0 ">
+                        <li class="nav-item mx-5 d-none d-lg-block">
+                            <div class="d-none d-md-block d-lg-block ms-5 ps-5" id="imdb-icon">
+                                <a class="navbar-brand" href="#">
+                                    <button class="  btn btn-warning text-dark"><b>IMDb-c </b>
+                                    </button>
+                                </a>
+                            </div>
+
+                        </li>
+                        <li class="nav-item mx-4">
+                            <a class="nav-link active" aria-current="page" href="#">Menu <i class="fa fa-bars"></i></a>
+                        </li>
+                        <li class="nav-item ms-4">
+                            <form class="d-flex me-5  ">
+                                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                                <button class="btn btn-outline-light" type="button"><i
+                                        class="fa fa-search"></i></button>
+
+                            </form>
+                        </li>
+                        <li class="nav-item mx-4">
+                            <a class="nav-link" href="">IMDb-cPro |</a>
+                        </li>
+
+                        <li class="nav-item mx-4">
+                            <a class="nav-link" aria-current="page" href="">
+                                <i class="fa fa-bookmark px-1"></i> watchlist</a>
+                        </li>
+                        <li class="nav-item mx-4">
+                            <a class="nav-link" href="">Sign in</a>
+                        </li>
+
+                    </ul>
+
+
+                </div>
+                <div class="nav-item mx-3 d-md-none">
+                    <a class="navbar-brand" href="#">
+                        <button class="  btn btn-warning text-dark">IMDb
+                        </button>
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- navbar & header ends here -->
+
+
+
+    <!-- welcome  carousel  -->
+    <div class="  container container-fluid    d-flex my-5" id="welcomeview">
+        <div class="container container-fluid  mx-0 h-300" id="crousel1">
+
+            <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0"
+                        class="active d-none" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" class="d-none"
+                        aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" class="d-none"
+                        aria-label="Slide 3"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3" class="d-none"
+                        aria-label="Slide 4"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="4" class="d-none"
+                        aria-label="Slide 5"></button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active p-0">
+                        <img src="image/banner/banner 1.jpg" class="d-block w-100" alt="...">
+                        <div class="carousel-caption1 w-100 mb-0 d-flex p-0 ms-3">
+                            <div class="innerbox1 col-2 p-0 mt-0 ">
+                                <img src="image/banner sm/banner sm 1.jpg " height="100%" alt="">
+                            </div>
+                            <div
+                                class="innerbox2 col-8 mt-4 d-flex ms-3 ms-md-5 ps-md-5 mt-md-5 pt-md-5  text-pc  text-left ">
+                                <!-- <div class="col-2"> <i class="fa fa-play fa-2x p-4 text-dark">  </i></div> -->
+                                <div> The rise of Lina Waith . <br> All about the actor, writer.</div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="image/banner/banner 2.jpg" class="d-block w-100" alt="...">
+                        <div class="carousel-caption1 w-100 mb-0 d-flex p-0 ms-3">
+                            <div class="innerbox1 col-2 p-0 mt-0 ">
+                                <img src="image/banner sm/banner sm 2.jpg " height="100%" alt="">
+                            </div>
+                            <div
+                                class="innerbox2 col-8 mt-4 d-flex ms-3 ms-md-5 ps-md-5 mt-md-5 pt-md-5  text-pc  text-left ">
+                                <!-- <div class="col-2"> <i class="fa fa-play fa-2x p-4 text-dark">  </i></div> -->
+                                <div> Buzzing movies from 2021 <br> Trabica Film festival.</div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="image/banner/banner 3.jpg" class="d-block w-100" alt="...">
+                        <div class="carousel-caption1 w-100 mb-0 d-flex p-0 ms-3">
+                            <div class="innerbox1 col-2 p-0 mt-0 ">
+                                <img src="image/banner sm/banner sm 3.jpg " height="100%" alt="">
+                            </div>
+                            <div
+                                class="innerbox2 col-8 mt-4 d-flex ms-3 ms-md-5 ps-md-5 mt-md-5 pt-md-5  text-pc  text-left ">
+                                <!-- <div class="col-2"> <i class="fa fa-play fa-2x p-4 text-dark">  </i></div> -->
+                                <div> Henry Goldy in 'Snake eyes'. <p class="text-muted">watch new trailer</p>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="image/banner/banner 4.jpg" class="d-block w-100" alt="...">
+                        <div class="carousel-caption1 w-100 mb-0 d-flex p-0 ms-3">
+                            <div class="innerbox1 col-2 p-0 mt-0 ">
+                                <img src="image/banner sm/banner sm 4.jpg " height="100%" alt="">
+                            </div>
+                            <div
+                                class="innerbox2 col-8 mt-4 d-flex ms-3 ms-md-5 ps-md-5 mt-md-5 pt-md-5  text-pc  text-left ">
+                                <!-- <div class="col-2"> <i class="fa fa-play fa-2x p-4 text-dark">  </i></div> -->
+                                <div> The suiside squad. <p class="text-muted">watch new trailer</p>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="image/banner/banner 5.jpg" class="d-block w-100" alt="...">
+                        <div class="carousel-caption1 w-100 mb-0 d-flex p-0 ms-3">
+                            <div class="innerbox1 col-2 p-0 mt-0 ">
+                                <img src="image/banner sm/banner sm 5.jpg " height="100%" alt="">
+                            </div>
+                            <div
+                                class="innerbox2 col-8 mt-4 d-flex ms-3 ms-md-5 ps-md-5 mt-md-5 pt-md-5  text-pc  text-left ">
+                                <!-- <div class="col-2"> <i class="fa fa-play fa-2x p-4 text-dark">  </i></div> -->
+                                <div> The Tommorow war. <p class="text-muted">watch new trailer</p>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+        <!--crousel on left ends here. -->
+
+
+        <div class="container container-fluid  col-md-3 col-sm-0  bg-dark" id="crousel2">
+            <ul>
+                <li class="mt-1 mt-md-4 d-flex">
+                    <div><img src="image/banner sm/banner sm 1.jpg" height="90px" alt=""></div>
+                    <div class="text-light mx-2   mt-4">From monster to F9
+                        <div class="text-muted"> the rise of Charlize</div></div>
+                </li>
+               
+                <li class="mt-1 mt-md-4  d-flex">
+                    <div><img src="image/banner sm/banner sm 2.jpg" height="90px" alt=""></div>
+                    <div class="text-light mx-2 mt-4">Buzzing movies from 2021
+                        <div class="text-muted"> add to watchlist</div></div>
+                </li>
+                <li class="mt-1 mt-md-4 d-flex">
+                    <div><img src="image/banner sm/banner sm 3.jpg" height="90px" alt=""></div>
+                    <div class="text-light mx-2  mt-4">Henry golding in ' Snake's eye' 
+                        <div class="text-muted">watch trailer now</div></div>
+                </li>
+                <li class="mt-1  mt-md-4 d-flex">
+                    <div><img src="image/banner sm/banner sm 4.jpg" height="90px" alt=""></div>
+                    <div class="text-light mx-2 mt-4">The Suiside squade
+                        <div class="text-muted"> watch trailer now</div></div>
+                </li>
+               
+            </ul>
+
+            <!--    <div class=" ">
+                <ul class="list-group">
+                    <li class="list-group-item bg-dark text-light">
+                        <div class="row ">
+                            <div class="col ">
+                                <img src="image/banner sm/banner sm 1.jpg" class="img-fluid poster" />
+                            </div>
+                            <div class="col text">
+                                text
+                            </div>
+                        </div>
+                    </li>
+                    <li class="list-group-item bg-dark text-light">
+                        <div class="row ">
+                            <div class="col ">
+                                <img src="image/banner sm/banner sm 2.jpg" class="img-fluid poster" />
+                            </div>
+                            <div class="col text">
+                                text
+                            </div>
+                        </div>
+                    </li>
+                    <li class="list-group-item bg-dark text-light">
+                        <div class="row ">
+                            <div class="col ">
+                                <img src="image/banner sm/banner sm 3.jpg" class="img-fluid poster" />
+                            </div>
+                            <div class="col text">
+                                text
+                            </div>
+                        </div>
+                    </li>
+                    <li class="list-group-item bg-dark text-light">
+                        <div class="row ">
+                            <div class="col ">
+                                <img src="image/banner sm/banner sm 4.jpg" class="img-fluid poster" />
+                            </div>
+                            <div class="col text">
+                                text
+                            </div>
+                        </div>
+                    </li>
+                    <li class="list-group-item bg-dark text-light">
+                        <div class="row">
+                            <div class="col  text">
+                                <img src="image/banner sm/banner sm 5.jpg" class="img-fluid poster" />
+                            </div>
+                            <div class="col">
+                                text
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div> -->
+        </div>
+    </div>
+
+    <!-- welcome carousel ends  -->
+
+
+
+
+    <!-- feature today carousel  -->
+    <div class="  container container-fluid  my-5 d-flex" id="Featuretoday">
+        <div class="  container container-fluid mx-md-4 mx-sm-0 col-md-10 col-sm-12" id="Featuretoday1">
+            <h2 class="heading ms-3"> <b>Feature Today</b></h2>
+
+
+            <div id="carouselExampleCaptions1" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleCaptions1" data-bs-slide-to="0" class="active"
+                        aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions1" data-bs-slide-to="1"
+                        aria-label="Slide 2"></button>
+                    <!-- <button type="button" data-bs-target="#carouselExampleCaptions1" data-bs-slide-to="2"
+                        aria-label="Slide 3"></button> -->
+                </div>
+                <div class="carousel-inner  ">
+                    <div class="carousel-item active ">
+
+                        <div class="d-flex justify-content-row">
+                            <div class="w-100  d-flex justify-content-column">
+                                <div class="mx-3 text-center">
+                                    <img src="image/feature today/feature-today1.jpg"
+                                        class="d-block w-100 col-4 img-fluid" alt="...">
+                                    <p class="description  "> Upcomming superhero movie</p>
+                                </div>
+
+                            </div>
+
+
+                            <div class="w-100 d-flex justify-content-column me-3">
+                                <div class="mx-3">
+                                    <img src="image/feature today/feature-today2.jpg"
+                                        class="d-block w-100 col-4 img-fluid" alt="...">
+                                    <p class="description text-center"> Satyajeet rai's award winning movies</p>
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="carousel-item">
+
+                        <div class="d-flex justify-content-row">
+                            <div class="w-100  d-flex justify-content-column">
+                                <div class="mx-3 text-center">
+                                    <img src="image/feature today/feature-today3.jpg"
+                                        class="d-block w-100 col-4 img-fluid" alt="...">
+                                    <p class="description  "> Inside news</p>
+                                </div>
+
+                            </div>
+
+
+                            <div class="w-100 d-flex justify-content-column me-3">
+                                <div class="mx-3">
+                                    <img src="image/feature today/feature-today4.jpg"
+                                        class="d-block w-100 col-4 img-fluid" alt="...">
+                                    <p class="description text-center"> Latest movies</p>
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions1"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions1"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+
+
+        </div>
+        <div class="  container container-fluid  text-center d-none d-md-block" id="advertise">
+            <p class="mt-5">Ad. will be displayed here</p>
+        </div>
+    </div>
+    <!-- feature today ends  -->
+
+
+    <!-- top pick caruosel  -->
+    <div class="  container container-fluid px-5 my-5 " id="toppick">
+        <h2 class="heading">What to watch</h2>
+        <h2 class="heading">| <span class="heading1">Top Picks </span> ></h2>
+        <div class="owl-carousel owl-theme">
+
+            <div class="item mx-2 ">
+                <div class="container-fluid">
+                    <div class="row"><img src="image/top pick/watch1.jpg" alt="" class="img-fluid"></div>
+                    <div class="row mx-2 mt-3">
+                        <div class="row d-inline-flex">
+                            <div class="col">
+                                <div class="row">
+                                    <div class="d-inline-flex">
+
+                                        <p class="px-2 text-light">***</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <!--like button-->
+                                <button class="test"><i class="fas fa-"></i></button>
+                                <!--like button-->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <p class="text-light">Movie name</p>
+                        </div>
+                    </div>
+                    <div class="row mx-2 mb-4 ">
+                        <button class="btn btn-outline-light btn-block buttonStyle">
+                            <p class="mb-0"><strong>Watchlist</strong></p>
+                        </button>
+                    </div>
+                    <div class="row mx-2 mb-4">
+                        <button class="btn btn-outline-light btn-block buttonStyle">
+
+                            <strong>Trailer</strong>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!--code of one slide-->
+
+            <div class="item mx-2 ">
+                <div class="container-fluid">
+                    <div class="row"><img src="image/top pick/watch2.jpg" alt="" class="img-fluid"></div>
+                    <div class="row mx-2 mt-3">
+                        <div class="row d-inline-flex">
+                            <div class="col">
+                                <div class="row">
+                                    <div class="d-inline-flex">
+
+                                        <p class="px-2 text-light">***</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <!--like button-->
+                                <button class="test"><i class="fas fa-"></i></button>
+                                <!--like button-->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <p class="text-light">Movie name</p>
+                        </div>
+                    </div>
+                    <div class="row mx-2 mb-4 ">
+                        <button class="btn btn-outline-light btn-block buttonStyle">
+                            <p class="mb-0"><strong>Watchlist</strong></p>
+                        </button>
+                    </div>
+                    <div class="row mx-2 mb-4">
+                        <button class="btn btn-outline-light btn-block buttonStyle">
+
+                            <strong>Trailer</strong>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="item mx-2 ">
+                <div class="container-fluid">
+                    <div class="row"><img src="image/top pick/watch3.jpg" alt="" class="img-fluid"></div>
+                    <div class="row mx-2 mt-3">
+                        <div class="row d-inline-flex">
+                            <div class="col">
+                                <div class="row">
+                                    <div class="d-inline-flex">
+
+                                        <p class="px-2 text-light">***</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <!--like button-->
+                                <button class="test"><i class="fas fa-"></i></button>
+                                <!--like button-->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <p class="text-light">Movie name</p>
+                        </div>
+                    </div>
+                    <div class="row mx-2 mb-4 ">
+                        <button class="btn btn-outline-light btn-block buttonStyle">
+                            <p class="mb-0"><strong>Watchlist</strong></p>
+                        </button>
+                    </div>
+                    <div class="row mx-2 mb-4">
+                        <button class="btn btn-outline-light btn-block buttonStyle">
+
+                            <strong>Trailer</strong>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="item mx-2 ">
+                <div class="container-fluid">
+                    <div class="row"><img src="image/top pick/watch4.jpg" alt="" class="img-fluid"></div>
+                    <div class="row mx-2 mt-3">
+                        <div class="row d-inline-flex">
+                            <div class="col">
+                                <div class="row">
+                                    <div class="d-inline-flex">
+
+                                        <p class="px-2 text-light">***</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <!--like button-->
+                                <button class="test"><i class="fas fa-"></i></button>
+                                <!--like button-->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <p class="text-light">Movie name</p>
+                        </div>
+                    </div>
+                    <div class="row mx-2 mb-4 ">
+                        <button class="btn btn-outline-light btn-block buttonStyle">
+                            <p class="mb-0"><strong>Watchlist</strong></p>
+                        </button>
+                    </div>
+                    <div class="row mx-2 mb-4">
+                        <button class="btn btn-outline-light btn-block buttonStyle">
+
+                            <strong>Trailer</strong>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="item mx-2 ">
+                <div class="container-fluid">
+                    <div class="row"><img src="image/top pick/watch5.jpg" alt="" class="img-fluid"></div>
+                    <div class="row mx-2 mt-3">
+                        <div class="row d-inline-flex">
+                            <div class="col">
+                                <div class="row">
+                                    <div class="d-inline-flex">
+
+                                        <p class="px-2 text-light">***</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <!--like button-->
+                                <button class="test"><i class="fas fa-"></i></button>
+                                <!--like button-->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <p class="text-light">Movie name</p>
+                        </div>
+                    </div>
+                    <div class="row mx-2 mb-4 ">
+                        <button class="btn btn-outline-light btn-block buttonStyle">
+                            <p class="mb-0"><strong>Watchlist</strong></p>
+                        </button>
+                    </div>
+                    <div class="row mx-2 mb-4">
+                        <button class="btn btn-outline-light btn-block buttonStyle">
+
+                            <strong>Trailer</strong>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="item mx-2 ">
+                <div class="container-fluid">
+                    <div class="row"><img src="image/top pick/watch6.jpg" alt="" class="img-fluid"></div>
+                    <div class="row mx-2 mt-3">
+                        <div class="row d-inline-flex">
+                            <div class="col">
+                                <div class="row">
+                                    <div class="d-inline-flex">
+
+                                        <p class="px-2 text-light">***</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <!--like button-->
+                                <button class="test"><i class="fas fa-"></i></button>
+                                <!--like button-->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <p class="text-light">Movie name</p>
+                        </div>
+                    </div>
+                    <div class="row mx-2 mb-4 ">
+                        <button class="btn btn-outline-light btn-block buttonStyle">
+                            <p class="mb-0"><strong>Watchlist</strong></p>
+                        </button>
+                    </div>
+                    <div class="row mx-2 mb-4">
+                        <button class="btn btn-outline-light btn-block buttonStyle">
+
+                            <strong>Trailer</strong>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="item mx-2 ">
+                <div class="container-fluid">
+                    <div class="row"><img src="image/top pick/watch7.jpg" alt="" class="img-fluid"></div>
+                    <div class="row mx-2 mt-3">
+                        <div class="row d-inline-flex">
+                            <div class="col">
+                                <div class="row">
+                                    <div class="d-inline-flex">
+
+                                        <p class="px-2 text-light">***</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <!--like button-->
+                                <button class="test"><i class="fas fa-"></i></button>
+                                <!--like button-->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <p class="text-light">Movie name</p>
+                        </div>
+                    </div>
+                    <div class="row mx-2 mb-4 ">
+                        <button class="btn btn-outline-light btn-block buttonStyle">
+                            <p class="mb-0"><strong>Watchlist</strong></p>
+                        </button>
+                    </div>
+                    <div class="row mx-2 mb-4">
+                        <button class="btn btn-outline-light btn-block buttonStyle">
+
+                            <strong>Trailer</strong>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="item mx-2 ">
+                <div class="container-fluid">
+                    <div class="row"><img src="image/top pick/watch8.jpg" alt="" class="img-fluid"></div>
+                    <div class="row mx-2 mt-3">
+                        <div class="row d-inline-flex">
+                            <div class="col">
+                                <div class="row">
+                                    <div class="d-inline-flex">
+
+                                        <p class="px-2 text-light">***</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <!--like button-->
+                                <button class="test"><i class="fas fa-"></i></button>
+                                <!--like button-->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <p class="text-light">Movie name</p>
+                        </div>
+                    </div>
+                    <div class="row mx-2 mb-4 ">
+                        <button class="btn btn-outline-light btn-block buttonStyle">
+                            <p class="mb-0"><strong>Watchlist</strong></p>
+                        </button>
+                    </div>
+                    <div class="row mx-2 mb-4">
+                        <button class="btn btn-outline-light btn-block buttonStyle">
+
+                            <strong>Trailer</strong>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="item mx-2 ">
+                <div class="container-fluid">
+                    <div class="row"><img src="image/top pick/watch9.jpg" alt="" class="img-fluid"></div>
+                    <div class="row mx-2 mt-3">
+                        <div class="row d-inline-flex">
+                            <div class="col">
+                                <div class="row">
+                                    <div class="d-inline-flex">
+
+                                        <p class="px-2 text-light">***</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <!--like button-->
+                                <button class="test"><i class="fas fa-"></i></button>
+                                <!--like button-->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <p class="text-light">Movie name</p>
+                        </div>
+                    </div>
+                    <div class="row mx-2 mb-4 ">
+                        <button class="btn btn-outline-light btn-block buttonStyle">
+                            <p class="mb-0"><strong>Watchlist</strong></p>
+                        </button>
+                    </div>
+                    <div class="row mx-2 mb-4">
+                        <button class="btn btn-outline-light btn-block buttonStyle">
+
+                            <strong>Trailer</strong>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="item mx-2 ">
+                <div class="container-fluid">
+                    <div class="row"><img src="image/top pick/watch10.jpg" alt="" class="img-fluid"></div>
+                    <div class="row mx-2 mt-3">
+                        <div class="row d-inline-flex">
+                            <div class="col">
+                                <div class="row">
+                                    <div class="d-inline-flex">
+
+                                        <p class="px-2 text-light">***</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <!--like button-->
+                                <button class="test"><i class="fas fa-"></i></button>
+                                <!--like button-->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <p class="text-light">Movie name</p>
+                        </div>
+                    </div>
+                    <div class="row mx-2 mb-4 ">
+                        <button class="btn btn-outline-light btn-block buttonStyle">
+                            <p class="mb-0"><strong>Watchlist</strong></p>
+                        </button>
+                    </div>
+                    <div class="row mx-2 mb-4">
+                        <button class="btn btn-outline-light btn-block buttonStyle">
+
+                            <strong>Trailer</strong>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="item mx-2 ">
+                <div class="container-fluid">
+                    <div class="row"><img src="image/top pick/watch11.jpg" alt="" class="img-fluid"></div>
+                    <div class="row mx-2 mt-3">
+                        <div class="row d-inline-flex">
+                            <div class="col">
+                                <div class="row">
+                                    <div class="d-inline-flex">
+
+                                        <p class="px-2 text-light">***</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <!--like button-->
+                                <button class="test"><i class="fas fa-"></i></button>
+                                <!--like button-->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <p class="text-light">Movie name</p>
+                        </div>
+                    </div>
+                    <div class="row mx-2 mb-4 ">
+                        <button class="btn btn-outline-light btn-block buttonStyle">
+                            <p class="mb-0"><strong>Watchlist</strong></p>
+                        </button>
+                    </div>
+                    <div class="row mx-2 mb-4">
+                        <button class="btn btn-outline-light btn-block buttonStyle">
+
+                            <strong>Trailer</strong>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="item mx-2 ">
+                <div class="container-fluid">
+                    <div class="row"><img src="image/top pick/watch12.jpg" alt="" class="img-fluid"></div>
+                    <div class="row mx-2 mt-3">
+                        <div class="row d-inline-flex">
+                            <div class="col">
+                                <div class="row">
+                                    <div class="d-inline-flex">
+
+                                        <p class="px-2 text-light">***</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <!--like button-->
+                                <button class="test"><i class="fas fa-"></i></button>
+                                <!--like button-->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <p class="text-light">Movie name</p>
+                        </div>
+                    </div>
+                    <div class="row mx-2 mb-4 ">
+                        <button class="btn btn-outline-light btn-block buttonStyle">
+                            <p class="mb-0"><strong>Watchlist</strong></p>
+                        </button>
+                    </div>
+                    <div class="row mx-2 mb-4">
+                        <button class="btn btn-outline-light btn-block buttonStyle">
+
+                            <strong>Trailer</strong>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- top pick ends here   -->
+
+    <!-- watchlist login  -->
+    <div class="  container container-fluid  my-5" id="watchlist">
+        <h2 class="heading">| <span class="heading1">From your watchlist </span> ></h2>
+        <div class="container text-center">
+            <i class="fa fa-bookmark fa-4x px-1"></i>
+            <p class="heading1"><b>Sign in to access watch list</b></p>
+            <p class="heading1">Save shows and movies to keep track of what you want to watch.</p>
+            <div class="btn btn-warning"><b> Sign in to IMDb-c</b></div>
+        </div>
+    </div>
+    <!-- watchlist ends  -->
+
+    <!-- fanfavorite here  -->
+    <div class="  container container-fluid my-3 " id="fanfavorite">
+        <h2 class="heading">| <span class="heading1">Fan Favourite </span> ></h2>
+        <p class="heading1">Top this week</p>
+
+        <div class="owl-carousel owl-theme">
+
+            <div class="item mx-2 ">
+                <div class="container-fluid ">
+                    <div class="row"><img src="image/fan fav/fan fav1.jpg" alt="" class="img-fluid"></div>
+                    <div class="row mx-2 mt-3">
+                        <div class="row d-inline-flex">
+                            <div class="col">
+                                <div class="row">
+                                    <div class="d-inline-flex">
+
+                                        <p class="px-2 text-light">***</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <!--like button-->
+                                <button class="test"><i class="fas fa-"></i></button>
+                                <!--like button-->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <p class="text-light">Movie name</p>
+                        </div>
+                    </div>
+                    <div class="row mx-2 mb-4 col">
+                        <button class="btn btn-outline-light btn-block buttonStyle">
+                            <p class="mb-0"><strong>Watchlist</strong></p>
+                        </button>
+                    </div>
+                    <div class="row mx-2 mb-4">
+                        <button class="btn btn-outline-light btn-block buttonStyle">
+
+                            <strong>Trailer</strong>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!--code of one slide-->
+
+            <div class="item mx-2 ">
+                <div class="container-fluid">
+                    <div class="row"><img src="image/fan fav/fan fav2.jpg" alt="" class="img-fluid"></div>
+                    <div class="row mx-2 mt-3">
+                        <div class="row d-inline-flex">
+                            <div class="col">
+                                <div class="row">
+                                    <div class="d-inline-flex">
+
+                                        <p class="px-2 text-light">***</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <!--like button-->
+                                <button class="test"><i class="fas fa-"></i></button>
+                                <!--like button-->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <p class="text-light">Movie name</p>
+                        </div>
+                    </div>
+                    <div class="row mx-2 mb-4 ">
+                        <button class="btn btn-outline-light btn-block buttonStyle">
+                            <p class="mb-0"><strong>Watchlist</strong></p>
+                        </button>
+                    </div>
+                    <div class="row mx-2 mb-4">
+                        <button class="btn btn-outline-light btn-block buttonStyle">
+
+                            <strong>Trailer</strong>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="item mx-2 ">
+                <div class="container-fluid">
+                    <div class="row"><img src="image/fan fav/fan fav3.jpg" alt="" class="img-fluid"></div>
+                    <div class="row mx-2 mt-3">
+                        <div class="row d-inline-flex">
+                            <div class="col">
+                                <div class="row">
+                                    <div class="d-inline-flex">
+
+                                        <p class="px-2 text-light">***</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <!--like button-->
+                                <button class="test"><i class="fas fa-"></i></button>
+                                <!--like button-->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <p class="text-light">Movie name</p>
+                        </div>
+                    </div>
+                    <div class="row mx-2 mb-4 ">
+                        <button class="btn btn-outline-light btn-block buttonStyle">
+                            <p class="mb-0"><strong>Watchlist</strong></p>
+                        </button>
+                    </div>
+                    <div class="row mx-2 mb-4">
+                        <button class="btn btn-outline-light btn-block buttonStyle">
+
+                            <strong>Trailer</strong>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="item mx-2 ">
+                <div class="container-fluid">
+                    <div class="row"><img src="image/fan fav/fan fav4.jpg" alt="" class="img-fluid"></div>
+                    <div class="row mx-2 mt-3">
+                        <div class="row d-inline-flex">
+                            <div class="col">
+                                <div class="row">
+                                    <div class="d-inline-flex">
+
+                                        <p class="px-2 text-light">***</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <!--like button-->
+                                <button class="test"><i class="fas fa-"></i></button>
+                                <!--like button-->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <p class="text-light">Movie name</p>
+                        </div>
+                    </div>
+                    <div class="row mx-2 mb-4 ">
+                        <button class="btn btn-outline-light btn-block buttonStyle">
+                            <p class="mb-0"><strong>Watchlist</strong></p>
+                        </button>
+                    </div>
+                    <div class="row mx-2 mb-4">
+                        <button class="btn btn-outline-light btn-block buttonStyle">
+
+                            <strong>Trailer</strong>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="item mx-2 ">
+                <div class="container-fluid">
+                    <div class="row"><img src="image/fan fav/fan fav9.jpg" alt="" class="img-fluid"></div>
+                    <div class="row mx-2 mt-3">
+                        <div class="row d-inline-flex">
+                            <div class="col">
+                                <div class="row">
+                                    <div class="d-inline-flex">
+
+                                        <p class="px-2 text-light">***</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <!--like button-->
+                                <button class="test"><i class="fas fa-"></i></button>
+                                <!--like button-->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <p class="text-light">Movie name</p>
+                        </div>
+                    </div>
+                    <div class="row mx-2 mb-4 ">
+                        <button class="btn btn-outline-light btn-block buttonStyle">
+                            <p class="mb-0"><strong>Watchlist</strong></p>
+                        </button>
+                    </div>
+                    <div class="row mx-2 mb-4">
+                        <button class="btn btn-outline-light btn-block buttonStyle">
+
+                            <strong>Trailer</strong>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="item mx-2 ">
+                <div class="container-fluid">
+                    <div class="row"><img src="image/fan fav/fan fav6.jpg" alt="" class="img-fluid"></div>
+                    <div class="row mx-2 mt-3">
+                        <div class="row d-inline-flex">
+                            <div class="col">
+                                <div class="row">
+                                    <div class="d-inline-flex">
+
+                                        <p class="px-2 text-light">***</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <!--like button-->
+                                <button class="test"><i class="fas fa-"></i></button>
+                                <!--like button-->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <p class="text-light">Movie name</p>
+                        </div>
+                    </div>
+                    <div class="row mx-2 mb-4 ">
+                        <button class="btn btn-outline-light btn-block buttonStyle">
+                            <p class="mb-0"><strong>Watchlist</strong></p>
+                        </button>
+                    </div>
+                    <div class="row mx-2 mb-4">
+                        <button class="btn btn-outline-light btn-block buttonStyle">
+
+                            <strong>Trailer</strong>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="item mx-2 ">
+                <div class="container-fluid">
+                    <div class="row"><img src="image/fan fav/fan fav7.jpg" alt="" class="img-fluid"></div>
+                    <div class="row mx-2 mt-3">
+                        <div class="row d-inline-flex">
+                            <div class="col">
+                                <div class="row">
+                                    <div class="d-inline-flex">
+
+                                        <p class="px-2 text-light">***</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <!--like button-->
+                                <button class="test"><i class="fas fa-"></i></button>
+                                <!--like button-->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <p class="text-light">Movie name</p>
+                        </div>
+                    </div>
+                    <div class="row mx-2 mb-4 ">
+                        <button class="btn btn-outline-light btn-block buttonStyle">
+                            <p class="mb-0"><strong>Watchlist</strong></p>
+                        </button>
+                    </div>
+                    <div class="row mx-2 mb-4">
+                        <button class="btn btn-outline-light btn-block buttonStyle">
+
+                            <strong>Trailer</strong>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="item mx-2 ">
+                <div class="container-fluid">
+                    <div class="row"><img src="image/fan fav/fan fav8.jpg" alt="" class="img-fluid"></div>
+                    <div class="row mx-2 mt-3">
+                        <div class="row d-inline-flex">
+                            <div class="col">
+                                <div class="row">
+                                    <div class="d-inline-flex">
+
+                                        <p class="px-2 text-light">***</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <!--like button-->
+                                <button class="test"><i class="fas fa-"></i></button>
+                                <!--like button-->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <p class="text-light">Movie name</p>
+                        </div>
+                    </div>
+                    <div class="row mx-2 mb-4 ">
+                        <button class="btn btn-outline-light btn-block buttonStyle">
+                            <p class="mb-0"><strong>Watchlist</strong></p>
+                        </button>
+                    </div>
+                    <div class="row mx-2 mb-4">
+                        <button class="btn btn-outline-light btn-block buttonStyle">
+
+                            <strong>Trailer</strong>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="item mx-2 ">
+                <div class="container-fluid">
+                    <div class="row"><img src="image/fan fav/fan fav5.jpg" alt="" class="img-fluid"></div>
+                    <div class="row mx-2 mt-3">
+                        <div class="row d-inline-flex">
+                            <div class="col">
+                                <div class="row">
+                                    <div class="d-inline-flex">
+
+                                        <p class="px-2 text-light">***</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <!--like button-->
+                                <button class="test"><i class="fas fa-"></i></button>
+                                <!--like button-->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <p class="text-light">Movie name</p>
+                        </div>
+                    </div>
+                    <div class="row mx-2 mb-4 ">
+                        <button class="btn btn-outline-light btn-block buttonStyle">
+                            <p class="mb-0"><strong>Watchlist</strong></p>
+                        </button>
+                    </div>
+                    <div class="row mx-2 mb-4">
+                        <button class="btn btn-outline-light btn-block buttonStyle">
+
+                            <strong>Trailer</strong>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="item mx-2 ">
+                <div class="container-fluid">
+                    <div class="row"><img src="image/fan fav/fan fav10.jpg" alt="" class="img-fluid"></div>
+                    <div class="row mx-2 mt-3">
+                        <div class="row d-inline-flex">
+                            <div class="col">
+                                <div class="row">
+                                    <div class="d-inline-flex">
+
+                                        <p class="px-2 text-light">***</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <!--like button-->
+                                <button class="test"><i class="fas fa-"></i></button>
+                                <!--like button-->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <p class="text-light">Movie name</p>
+                        </div>
+                    </div>
+                    <div class="row mx-2 mb-4 ">
+                        <button class="btn btn-outline-light btn-block buttonStyle">
+                            <p class="mb-0"><strong>Watchlist</strong></p>
+                        </button>
+                    </div>
+                    <div class="row mx-2 mb-4">
+                        <button class="btn btn-outline-light btn-block buttonStyle">
+
+                            <strong>Trailer</strong>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="item mx-2 ">
+                <div class="container-fluid">
+                    <div class="row"><img src="image/fan fav/fan fav11.jpg" alt="" class="img-fluid"></div>
+                    <div class="row mx-2 mt-3">
+                        <div class="row d-inline-flex">
+                            <div class="col">
+                                <div class="row">
+                                    <div class="d-inline-flex">
+
+                                        <p class="px-2 text-light">***</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <!--like button-->
+                                <button class="test"><i class="fas fa-"></i></button>
+                                <!--like button-->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <p class="text-light">Movie name</p>
+                        </div>
+                    </div>
+                    <div class="row mx-2 mb-4 ">
+                        <button class="btn btn-outline-light btn-block buttonStyle">
+                            <p class="mb-0"><strong>Watchlist</strong></p>
+                        </button>
+                    </div>
+                    <div class="row mx-2 mb-4">
+                        <button class="btn btn-outline-light btn-block buttonStyle">
+
+                            <strong>Trailer</strong>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="item mx-2 ">
+                <div class="container-fluid">
+                    <div class="row"><img src="image/top pick/watch12.jpg" alt="" class="img-fluid"></div>
+                    <div class="row mx-2 mt-3">
+                        <div class="row d-inline-flex">
+                            <div class="col">
+                                <div class="row">
+                                    <div class="d-inline-flex">
+
+                                        <p class="px-2 text-light">***</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <!--like button-->
+                                <button class="test"><i class="fas fa-"></i></button>
+                                <!--like button-->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <p class="text-light">Movie name</p>
+                        </div>
+                    </div>
+                    <div class="row mx-2 mb-4 ">
+                        <button class="btn btn-outline-light btn-block buttonStyle">
+                            <p class="mb-0"><strong>Watchlist</strong></p>
+                        </button>
+                    </div>
+                    <div class="row mx-2 mb-4">
+                        <button class="btn btn-outline-light btn-block buttonStyle">
+
+                            <strong>Trailer</strong>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+    </div>
+
+    <!-- fanfavorite ends  -->
+    <br>
+    <!-- exclusive video here  -->
+    <div class="  container container-fluid  my-3" id="exclusivevideo">
+        <h2 class="heading">Exclusive video</h2>
+        <h2 class="heading">| <span class="heading1">IMDb orignals </span> </h2>
+        <p class="heading1">Celebrety inteview,treanding entertainment stories and expert analysis</p>
+
+
+
+        <div class="owl-carousel1 owl-theme">
+            <div class="item mx-2 ">
+                <div class="container-fluid">
+                    <div class="row"><img src="image/exclusive/exclusive1.jpg" alt="" class="img-fluid"></div>
+                    <div class="row mx-2 mt-3">
+                        kdkjskdj
+                    </div>
+                </div>
+
+            </div>
+            <div class="item mx-2 ">
+                <div class="container-fluid">
+                    <div class="row"><img src="image/exclusive/exclusive2.jpg" alt="" class="img-fluid"></div>
+                    <div class="row mx-2 mt-3">
+                        kdkjskdj
+                    </div>
+                </div>
+
+            </div>
+            <div class="item mx-2 ">
+                <div class="container-fluid">
+                    <div class="row"><img src="image/exclusive/exclusive3.jpg" alt="" class="img-fluid"></div>
+                    <div class="row mx-2 mt-3">
+                        kdkjskdj
+                    </div>
+                </div>
+
+            </div>
+            <div class="item mx-2 ">
+                <div class="container-fluid">
+                    <div class="row"><img src="image/exclusive/exclusive4.jpg" alt="" class="img-fluid"></div>
+                    <div class="row mx-2 mt-3">
+                        kdkjskdj
+                    </div>
+                </div>
+
+            </div>
+            <div class="item mx-2 ">
+                <div class="container-fluid">
+                    <div class="row"><img src="image/exclusive/exclusive5.jpg" alt="" class="img-fluid"></div>
+                    <div class="row mx-2 mt-3">
+                        kdkjskdj
+                    </div>
+                </div>
+
+            </div>
+            <div class="item mx-2 ">
+                <div class="container-fluid">
+                    <div class="row"><img src="image/exclusive/exclusive6.jpg" alt="" class="img-fluid"></div>
+                    <div class="row mx-2 mt-3">
+                        kdkjskdj
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- exclusive ends  -->
+
+
+
+    <footer>
+        <div class="container my-5 d-block" id="socialmedia">
+
+            <ul class="social-icons text-center mt-5 ">
+                <li>
+                    <a href=" " class=" social-icon mx-4 "> <i class=" fa fa-facebook  fa-2x"></i></a>
+                </li>
+                <li>
+                    <a href=" " class=" social-icon mx-4"> <i class=" fa fa-twitter  fa-2x"></i></a>
+                </li>
+                <li>
+                    <a href=" " class=" social-icon mx-4"> <i class=" fa fa-instagram fa-2x"></i></a>
+                </li>
+                <li>
+                    <a href=" " class=" social-icon mx-4"> <i class=" fa fa-youtube  fa-2x"></i></a>
+                </li>
+                <li>
+                    <a href=" " class=" social-icon mx-4"> <i class=" fa fa-skype fa-2x"></i></a>
+                </li>
+
+            </ul>
+        </div>
+        <div id="endlink" class="heading1 container container-fluid  text-center text-muted ">
+            <div class="mx-5  px-5 row">
+                <div class="col-md-3 ms-md-5"><a>Get IMDb-c App</a></div>
+                <div class="col-md-2 "><a> Help</a></div>
+
+                <div class="col-md-2 "><a>IMDb-c Pro</a></div>
+                <div class="col-md-3"><a>Box Office Mojo</a></div>
+                <!-- <div class="col-md-2 col-sm-6">IMDB-c developer</div> -->
+            </div>
+            <div class="row mx-5 px-5">
+                <div class="col-md-2 ms-md-5"><a>Press Room</a> </div>
+                <div class="col-md-2 "><a>Advertise</a></div>
+                <div class="col-md-2 "><a>Jobs</a></div>
+                <div class="col-md-3 "><a> Condition of Use</a></div>
+            </div>
+            <!-- <div class="col-md-2 col-sm-6">Intrest-Based Ads</div> -->
+        </div>
+        <div class=" text-center my-5">
+            <p class="heading2">an <b>amazon </b> company</p>
+            <p class=" copyright"> 1990-2021 by IMDb-c.com</p>
+        </div>
+    </footer>
+
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+    <script src=" https://code.jquery.com/jquery-3.2.1.slim.min.js " integrity="
+        sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN " crossorigin=" anonymous "></script>
+
+    <script src=" https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js " integrity="
+        sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q " crossorigin=" anonymous "></script>
+
+    <script src=" https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.js " integrity="
+        sha512-9CWGXFSJ+/X0LWzSRCZFsOPhSfm6jbnL+Mpqo0o8Ke2SYr8rCTqb4/wGm+9n13HtDE1NQpAEOrMecDZw4FXQGg==" crossorigin="
+        anonymous " referrerpolicy=" no-referrer "></script>
+    <!-- <script>
+        $('.owl-carousel').owlCarousel({
+            stagePadding: 50,
+            item:5,
+            autoplay:true,
+            autoplayTimeout:1000,
+            loop: true,
+            margin: 10,
+            nav: true,
+            dotsEach:true,
+            responsive: {
+                0: {
+                    items: 1
+                },
+                600: {
+                    items: 3
+                },
+                1000: {
+                    items: 5
+                }
+            }
+        })
+    </script> -->
+    <script>
+
+        $(document).ready(function () {
+
+            $(".owl-carousel").owlCarousel({
+
+                autoPlay: 4000, //Set AutoPlay to 4 seconds
+                // autoPlayHoverPause:true,
+                nav: true,
+                items: 5,
+                itemsDesktop: [1199, 3],
+                itemsDesktopSmall: [979, 2]
+
+            });
+
+        });
+        $(document).ready(function () {
+
+            $(".owl-carousel1").owlCarousel({
+
+                autoPlay: 5000, //Set AutoPlay to 5 seconds
+                nav: true,
+                items: 3,
+                itemsDesktop: [1199, 2],
+                itemsDesktopSmall: [979, 1]
+
+            });
+
+        });
+    </script>
+    <!-- Option 2: Sepa***e Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    -->
+</body>
+
+</html>

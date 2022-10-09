@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;1,200&display=swap');
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: rgb(118, 247, 227);
+}
+.container{
+    width:600px;
+    background:#fff;
+    border-radius: 7px;
+    padding: 30px;
+}
+.wrapper{
+    border-radius: 5px;
+    border:1px solid #bbb;
+
+}
+.wrapper .text-input{
+    display:flex;
+    border:1px solid #bbb;
+}
+.text-input textarea{
+    height:300px;
+    width:100%;
+    border:none;
+    font-size: 18px;
+    resize:none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    background: none;
+    outline: none;
+}
+.text-input .to-text{
+    border-radius: 0px;
+    border-left:1px solid #bbb;
+}
+.controls,li,.icons{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+.controls .row .from-text{
+    padding:10px;
+    border-radius: 1px solid #bbb;
+}
+.controls .row.from .icons{
+    padding-right: 15px;
+    border-right: 1px solid #BBB;
+}
+.controls .row.to .icons{
+    padding-left: 15px;
+    border-left: 1px solid #bbb;
+}
+.controls .icons{
+    width:38%;
+}
+.controls{
+    
+    padding:12px 15px;
+    list-style:none;
+}
+.controls .icons i{
+    color:#9f9f9f9f;
+    font-size: 14px;
+    cursor:pointer;
+    width:50px;
+    justify-content: center;
+
+}
+.controls .row select{
+    border:none;
+    outline:none;
+    font-size: 18px;
+   
+    background:none;
+
+}
+.controls .exchange{
+    color: #9f9f9f9f;
+    cursor: pointer;
+    font-size: 16px;
+
+}
+.container button{
+    width:100%;
+    padding:14px;
+    margin-top: 20px;
+    border:none;
+    outline:none;
+    cursor:pointer;
+    color:#fff;
+    font-size: 17px;
+    border-radius: 5px;
+    background: rgb(64, 139, 128);
+}
