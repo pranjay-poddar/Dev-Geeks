@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GRADE CALCULATOR</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <script src="javasc.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Potta+One&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="background">
+        <div class="container">
+            <div class="card">
+                <div class="textbox">
+                    <div id="shape"></div>
+
+                    <div class="leftpart">
+                        GOD'S STUDENT<br>GRADE<br>CALCY
+                    </div>
+                    <div><button class="btn" onclick="calcy()">SHOW RESULT</button></div>
+                    <div class="rightpart">
+                        <input type="text" id="ma" placeholder="Maths marks"><br>
+                        <input type="text" id="phy" placeholder="physics marks"><br>
+                        <input type="text" id="chem" placeholder="chem marks"><br>
+                        <input type="text" id="comp" placeholder="computer marks"><br>
+                    </div>
+
+                    <div id="showdata"></div>
+
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+    <!-- <script>
+        const calcy = () => {
+            let ma = document.getElementById('ma').value;
+            let phy = document.getElementById('phy').value;
+            let chem = document.getElementById('chem').value;
+            let comp = document.getElementById('comp').value;
+            let grades = "";
+
+            let total = parseFloat(ma) + parseFloat(phy) + parseFloat(chem) + parseFloat(comp);
+
+            let per = (total / 400) * 100;
+
+            if (per <= 100 && per >= 80) {
+                grades = "A";
+            }
+
+            else if (per <= 80 && per >= 60) {
+                grades = "B";
+            }
+
+            else if (per <= 60 && per >= 40) {
+                grades = "C";
+            }
+            else {
+                grades = "D"
+            }
+
+            document.getElementById('showdata').innerHTML = `Out of 400 <br>Your total is : ${total} <br> Percentage is : ${per}% <br>  Grade is ${grades}`
+
+        }
+    </script> -->
+
+</body>
+
+</html>
