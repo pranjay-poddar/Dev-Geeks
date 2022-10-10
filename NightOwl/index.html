@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Dark Mode Toggle</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="app.css">
+    <style>
+        body {
+            background-color: #f6f6f6;
+            transition: background-color .3s;
+        }
+
+        body[light-mode=dark] {
+            background-color: #141516;
+            color: #ced4e2;
+        }
+
+        body[light-mode="dark"] .light-mode-button span:nth-child(1) {
+            background-color: #ced4e2;
+            color: #141516;
+        }
+
+        body[light-mode=dark] .light-mode-button span:nth-child(2) {
+            left: 65px;
+            background-color: #141516;
+        }
+
+        /* Light Mode Button Styles
+        --------------------------- */
+        .light-mode-button {
+            background: 0;
+            border: 0;
+            box-sizing: border-box;
+            cursor: pointer;
+            height: 40px;
+            width: 100px;
+            position: relative;
+            border: 1px solid rgba(255, 255, 255, 0);
+        }
+
+        .light-mode-button:focus {
+            outline: none;
+            /* Not ideal for accessibility */
+        }
+
+        .light-mode-button span:nth-child(1) {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100px;
+            height: 40px;
+            border-radius: 20px;
+            background-color: #d6d7db;
+            box-shadow: inset 1px 1px 3px 0 rgb(0 0 0 / 40%);
+            transition: .3s;
+        }
+
+        .light-mode-button span:nth-child(2) {
+            position: absolute;
+            top: 5px;
+            left: 5px;
+            width: 30px;
+            height: 30px;
+            background-color: #fff;
+            border-radius: 50%;
+            box-shadow: 1px 1px 2px 0 rgb(0 0 0 / 40%);
+            transition: .3s;
+
+
+
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+        window.addEventListener("storage", function () {
+            if (localStorage.lightMode == "dark") {
+                app.setAttribute("light-mode", "dark");
+            } else {
+                app.setAttribute("light-mode", "light");
+            }
+        }, false);
+        var app = document.getElementsByTagName("BODY")[0];
+        if (localStorage.lightMode == "dark") {
+            app.setAttribute("light-mode", "dark");
+        }
+    </script>
+    <div class="container">
+        <h1>Dark Mode Toggle</h1>
+        <button class="light-mode-button" aria-label="Toggle Light Mode" onclick="toggle_light_mode()">
+            <span></span>
+            <span></span>
+        </button>
+    </div>
+    <script>
+        function toggle_light_mode() {
+            var app = document.getElementsByTagName("BODY")[0];
+            if (localStorage.lightMode == "dark") {
+                localStorage.lightMode = "light";
+                app.setAttribute("light-mode", "light");
+            } else {
+                localStorage.lightMode = "dark";
+                app.setAttribute("light-mode", "dark");
+            }
+        }
+    </script>
+</body>
+
+</html>
