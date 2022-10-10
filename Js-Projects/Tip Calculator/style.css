@@ -1,7 +1,7 @@
 
 
 body {
-    background: #333 url(img/food8.jpeg) center center no-repeat;
+   
     background-size: cover;
     color:#532827;
 }
@@ -11,7 +11,6 @@ body {
     margin: 40px auto 0;
     padding: 50px;
     box-sizing: border-box;
-    background: url(img/paper-pattern.jpg)top left repeat;
     box-shadow: 0 10px 15px -8px #000;
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
@@ -94,8 +93,4 @@ button:active{
     font-weight: bold;
     display: block;
 }
-Footer
-© 2022 GitHub, Inc.
-Footer navigation
-Terms
-Pr
+
