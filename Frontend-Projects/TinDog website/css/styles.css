@@ -1,0 +1,143 @@
+#title{
+    background-color: #ff4c68;
+}
+h1,h2,h3,h4,h5,h6{
+    font-family: "Montserrat";
+}
+h1{
+    color: white;
+    font-size: 3.5rem;
+    line-height: 1.5;
+    font-weight: bolder;
+}
+.container-fluid{
+    padding:3% 15% 7%;
+}
+.navbar{
+    padding:0 0 4.5rem;
+    
+}
+h3{
+    font-weight: bolder;
+}
+p{
+    color:#8f8f8f ;
+}
+#features{
+    padding:7% 15% ;
+    background-color: white;
+    position: relative;
+}
+.check:hover{
+    color:#ff4c68;
+}
+.check{
+    color:#ef8172  ;
+    margin-bottom: 10%;
+}
+
+.navbar-brand{
+    font-family: "ubuntu";
+    font-size: 2.5rem;
+    font-weight:bold;
+}
+.nav-item{
+    padding:0 18px ;
+}
+.nav-link{
+    font-size: 1.2rem;
+    font-family: "Montserrat";
+    font-weight: lighter;
+}
+.phone{
+    transform: rotate(25deg);
+    width:21%;
+    position: absolute;
+    right:25%;
+}
+body{
+    font-family: "Montserrat";
+}
+.downloadbutton{
+    margin: 5% 3% 5% 0;
+}
+.featurebox{
+    background-color: white;
+    text-align: center;
+    padding:5% ;
+
+}
+#testimonials{
+    background-color:#ef8172 ;
+    text-align: center;
+    color: white;
+}
+h2{
+    font-family: "Montserrat";
+    font-weight: bolder;
+    line-height: 1.5;
+    font-size: 3rem;
+}
+.theimage{
+    border-radius: 100%;
+    width:10%;
+    margin:20px ;
+}
+.carousel-item{
+    padding:7% 15% ;
+}
+#press{
+    background-color: #ef8172;
+    text-align: center;
+    padding-bottom: 3%;
+}
+.sponsor{
+    margin:20px 20px ;
+    width: 15%;
+}
+#pricing{
+    padding:100px ;
+    text-align: center;
+}
+.price{
+    padding: 3% 2%;
+}
+.ofcard{
+    width: 100%;
+}
+
+@media (max-width:1028px){
+    #title{
+        text-align: center;
+    }
+
+    .phone{
+        width:60%;
+        position: static;
+        transform: rotate(0);
+    }
+}
+#cta{
+    background-color:#ff4c68 ;
+    text-align: center;
+    padding: 7% 15%;
+}
+
+.finding{
+    font-family: 'Montserrat';
+    font-size: 3.5rem;
+    line-height: 1.5;
+    color: white;
+    font-weight: bolder;
+
+}
+
+
+#footer{
+    background-color: white;
+    text-align: center;
+    padding: 7% 15%;
+}
+.social{
+    margin:20px 10px;
+}
