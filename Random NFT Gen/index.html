@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>My Notes</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+
+<body>
+
+<nav class="navbar navbar-light bg-light">
+  <a class="navbar-brand" href="#">
+    <img src="media/logo.png" width="40" height="40" class="d-inline-block align-top" alt="">
+   <span style="font-size:28px ; font-weight:bold">&nbsp My Notes</span>
+  </a>
+  <ul class="nav justify-content-end m-2">
+    <li class="nav-item m-2">
+        <a class="social" href="https://github.com/heyhimansh" >
+            <img src="media/git.png" width="30" height="30" alt="github">
+          </a>
+    </li>
+    <li class="nav-item m-2">
+        <a class="social" href="https://www.linkedin.com/in/himanshu-rathore-537885202/" >
+            <img src="media/link.png" width="30" height="30"  alt="linkedin">
+          </a>
+    </li>
+    <li class="nav-item m-2">
+        <a class="social" href="https://www.instagram.com/himansh_rathore_/" >
+            <img src="media/insta.png" width="30" height="30"  alt="insta">
+          </a>
+    </li>
+    
+  </ul>
+  
+</nav>
+
+<div class="container my-3">
+        <h1>My Notes</h1>
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Pin your important notes here : )</h5>
+                <div class="form-group" style=" border-radius: 40px">
+                    <textarea class="form-control" id="addTxt" rows="3"></textarea>
+                </div>
+                <button class="btn btn-info" id="addBtn">Add a Note</button>
+            </div>
+        </div>
+        <hr>
+        <h1>Your Notes</h1>
+        <hr>
+        <div id="notes" class="row container-fluid"> </div>
+    </div>
+
+<!--     
+    
+<div class="container my-3">
+    <h1>My Notes</h1>
+    <div class="card">
+        <div class="card-body">
+            <h5 class="card-title">Pin your important notes here : )</h5>
+            <div class="form-group" style=" border-radius: 40px">
+                <textarea class="form-control" id="addTxt" rows="3"></textarea>
+            </div>
+            <button class="btn btn-info" id="addBtn">Add a Note</button>
+        </div>
+    </div>
+    <hr>
+    <h1>Your Notes</h1>
+    <hr>
+    <div id="notes" class="row container-fluid"> </div>
+</div> -->
+
+
+    <script src="app.js"></script>
+
+</body>
+</html>
