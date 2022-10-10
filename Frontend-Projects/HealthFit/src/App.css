@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+::-webkit-scrollbar {
+  @apply w-0;
+}
+
+body {
+  @apply bg-gray-100 dark:bg-slate-800;
+}
+
+/*Horizontal Scrollbar*/
+
+.left-arrow,
+.right-arrow {
+  @apply cursor-pointer bg-transparent outline-none border-none flex items-center justify-between text-indigo-700 text-2xl rounded absolute -bottom-5 transition hover:scale-125;
+}
+
+.exercise-card {
+  @apply w-72 sm:w-80 min-h-[445px] bg-gray-100 border-t-8 border-indigo-700 rounded-b-lg flex flex-col justify-between pb-3 shadow-lg transition hover:scale-105 dark:border-indigo-500 dark:bg-gray-700;
+}
+
+.pagination-navigation {
+  @apply py-2 px-3 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white;
+}
+
+.pagination-btn {
+  @apply py-2 px-3 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white;
+}
+
+.pagination-btn.active {
+  @apply text-indigo-600 bg-indigo-50 hover:bg-indigo-100 hover:text-indigo-700 dark:bg-gray-700 dark:text-white;
+}
+
+.svg-icon path {
+  @apply fill-indigo-700 dark:fill-indigo-500;
+}
