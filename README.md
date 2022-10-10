@@ -669,7 +669,7 @@ Happy Coding! -->
 </tr>
 
 <td align="center"> 224.</td>
-<td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Frontend-Projects/HealthFit"> HealthFit </a></td>
+<td align="center"> <a href="https://github.com/ShivamAgarwal-code/Dev-Geeks/tree/new/Frontend-Projects/HealthFit"> HealthFit </a></td>
 </table>
 
 ## How to contribute:
