@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Rabitt vs Dog</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+  <link rel="stylesheet" href="./scss/style.css">
+
+</head>
+
+<body>
+
+  <div id="world" />
+  <div id="gameoverInstructions">
+    Game Over
+  </div>
+  <div id="dist">
+    <div class="label">distance</div>
+    <div id="distValue">000</div>
+  </div>
+  <!-- preloader -->
+  <div id="preloader">
+    <div class="image"><img src="./Screenshot_2022-10-02-00-29-34-36_99c04817c0de5652397fc8b56c3b3817.jpg" alt=""></div>
+    <div class="loadtext">Hello there!</div>
+  </div>
+  <!-- preloader-end -->
+  <div id="instructions">Click to jump<span class="lightInstructions"> — Grab the carrots / avoid the hedgehogs</span>
+  </div>
+
+
+  <div id="credits">
+    <h1> Created By Kunal Sen</h1>
+  </div>
+
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/three.js/r80/three.js'></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenMax.min.js'></script>
+  <script src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/264161/OrbitControls.js'></script>
+  <script src="./script.js"></script>
+  <script>
+    var preloader = document.querySelector('#preloader');
+    var instructions = document.querySelector('#instructions');
+    var loadtext = document.querySelector('.loadtext');
+    var h1 = document.querySelector('h1');
+    var preimage = document.querySelector('.image');
+
+    setTimeout(() => {
+      loadtext.style.opacity = 1;
+
+      loadtext.style.filter = "blur(0px)";
+
+
+    }, 100);
+    setTimeout(() => {
+
+      preimage.style.opacity = 1;
+
+      preimage.style.filter = "blur(0px)";
+
+    }, 1);
+    setTimeout(() => {
+      h1.style.opacity = 1;
+
+    }, 300);
+    setTimeout(() => {
+
+      instructions.style.opacity = 1;
+
+    }, 1500);
+    setTimeout(() => {
+      preloader.style.opacity = 0;
+
+    }, 3000);
+
+  </script>
+</body>
+
+</html>

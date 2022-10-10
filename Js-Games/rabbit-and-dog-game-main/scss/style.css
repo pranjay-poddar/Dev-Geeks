@@ -1,0 +1,173 @@
+@import url("https://fonts.googleapis.com/css?family=Voltaire");
+#world {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #dbe6e6;
+  overflow: hidden;
+}
+
+#preloader {
+  position: absolute;
+  background-color: #61a6ff;
+  height: 100vh;
+  width: 100%;
+  -webkit-transition-duration: 1s;
+          transition-duration: 1s;
+}
+
+#preloader .loadtext {
+  position: absolute;
+  color: #fff;
+  font-size: 5em;
+  top: 60%;
+  left: 50%;
+  font-family: 'Voltaire', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  opacity: 0;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -webkit-transition-duration: 2.5s;
+          transition-duration: 2.5s;
+  -webkit-filter: blur(20px);
+          filter: blur(20px);
+}
+
+#gameoverInstructions {
+  position: absolute;
+  font-family: 'Voltaire', sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 120px;
+  text-align: center;
+  color: #ffc5a2;
+  opacity: 0;
+  left: 50%;
+  top: 50%;
+  width: 100%;
+  -webkit-transform: translate(-50%, -100%);
+          transform: translate(-50%, -100%);
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  -webkit-transition: all 500ms ease-in-out;
+  transition: all 500ms ease-in-out;
+}
+
+#gameoverInstructions.show {
+  opacity: 1;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -webkit-transition: all 500ms ease-in-out;
+  transition: all 500ms ease-in-out;
+}
+
+.image {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  opacity: 0;
+  -webkit-filter: blur(20px);
+          filter: blur(20px);
+  -webkit-transition-duration: 2.5s;
+          transition-duration: 2.5s;
+}
+
+.image img {
+  border-radius: 1000px;
+  height: 200px;
+}
+
+#dist {
+  position: absolute;
+  left: 50%;
+  top: 50px;
+  -webkit-transform: translate(-50%, 0%);
+          transform: translate(-50%, 0%);
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.label {
+  position: relative;
+  font-family: 'Voltaire', sans-serif;
+  text-transform: uppercase;
+  color: #ff8032;
+  font-size: 12px;
+  letter-spacing: 2px;
+  text-align: center;
+  margin-bottom: 5px;
+}
+
+#distValue {
+  position: relative;
+  text-transform: uppercase;
+  color: #4598dc;
+  font-size: 40px;
+  font-family: 'Voltaire';
+  text-align: center;
+}
+
+#credits {
+  position: absolute;
+  width: 100%;
+  margin: auto;
+  bottom: 0;
+  margin-bottom: 20px;
+  font-family: 'Voltaire', sans-serif;
+  color: #544027;
+  font-size: 20px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  text-align: center;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+#credits h1 {
+  opacity: 0;
+  -webkit-transition-duration: 1s;
+          transition-duration: 1s;
+}
+
+#credits a {
+  color: #544027;
+}
+
+#credits a:hover {
+  color: #dc5f45;
+}
+
+#instructions {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  margin: auto;
+  margin-bottom: 50px;
+  font-family: 'Voltaire', sans-serif;
+  color: #dc5f45;
+  font-size: 16px;
+  opacity: 0;
+  -webkit-transition-duration: 1.5s;
+          transition-duration: 1.5s;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  text-align: center;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.lightInstructions {
+  color: #5f9042;
+}
+/*# sourceMappingURL=style.css.map */
