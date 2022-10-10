@@ -1,0 +1,211 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@200&display=swap');
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+
+html{
+    font-size: 62.5%;
+    font-family: "Jost",sans-serif;
+}
+
+.main_div{
+    width: 100vw;
+    height:100vh;
+    background: color #f6f6f6; 
+    display: grid;
+    place-items: center;
+
+}
+
+.music_container{
+    width: 35rem;
+    height: 55rem;
+    background-color: #ffffff;
+    border-radius: 2rem;
+    box-shadow: 0 1.2rem 3rem 0.5rem rgba(0,0,0,0.4);
+    padding: 3rem;
+    text-align: center;
+}
+
+.music_container #title
+{
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    word-spacing: 0.5rem;
+    color: black;
+    margin: 2rem 0 0.5rem 0;
+    font-size: 2.5rem;
+    font-weight: 500;
+    text-shadow: 0 0.3rem 0.5rem rgba(0,0,0,0.3);
+
+}
+
+.music_container #artist
+{
+    color: #cccaca;
+    text-transform: capitalize;
+    letter-spacing: 0.1rem;
+    font-size: 2rem;
+    margin-bottom: 4rem;
+    font-weight: 300;
+
+}
+
+.img-container
+{
+    width: 25rem;
+    height: 25rem;
+    margin: auto;
+}
+
+img{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: inherit;
+    box-shadow:0 1.2rem 3rem 0.5rem rgba(0,0,0,0.4);
+}
+.music_controls
+{
+    width: 20rem;
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+    margin-top:5rem ;
+    align-items: center;
+}
+
+.music_controls .fas{
+    color: #111111;
+    font-size: 2rem;
+    cursor:pointer;
+    filter:drop-shadow(0 1.2rem 3rem 0.5rem rgba(0,0,0,0.4));
+}
+
+.music_controls .main_button
+{
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    background-color: #111;
+    color: #f6f6f6;
+    font-size: 1.4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.music_controls .fas:hover
+{ 
+    color: grey;
+}
+.music_controls .fa-play:hover
+{
+    background-color: #f6f6f6;
+    color: #111;
+    box-shadow: 0 1rem 2rem 0.2rem rgba(0,0,0,0.4);
+}
+
+/* volume part */
+.left .volume{
+	position: absolute;
+	bottom: 10%;
+	left: 0;
+	width: 100%;
+	height: 30px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: #fff;
+}
+.left .volume p{
+	font-size: 15px;
+}
+.left .volume i{
+	cursor: pointer;
+	padding: 8px 12px;
+	background:black;
+}
+.left .volume i:hover{
+	background: rgba(245,245,245,0.1);
+}
+.volume #volume_show{
+	padding: 8px 12px;
+	margin: 0 5px 0 0;
+	background: rgba(245,245,245,0.1);
+}
+/* 
+.anime
+{
+    animation: rotatePlayer 3s  linear ;
+}
+
+@keyframes rotatePlayer 
+    
+
+{
+    from
+    {
+        transform:rotate(0deg);
+    }
+    to
+    {
+        transform: rotate(360deg);
+    }
+/* } */
+/* progress Style */ 
+
+
+.progressbar_container{
+    width: 100%;
+    height:auto;
+    padding:1rem 0;
+    margin-top:1rem ;
+}
+.progress_div
+{
+    width:100%;
+    height:0.5rem;
+    box-shadow:0 1px 2px rgba(0,0,0,0.07),0 2px 4px rgba(0,0,0,0.07),0 4px 8px rgba(0,0,0,0.07),0 8px 16px rgba(0,0,0,0.07),0 16px 32px rgba(0,0,0,0.07) ,0 32px 64px rgba(0,0,0,0.07);
+    border-radius: 4rem;
+    position: relative;
+    margin-top: 0.5rem;
+    transition: all 1s linear;
+    -moz-transition: all 1s linear;
+    -o-transition: all 1s linear;
+    cursor: pointer;
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+.progress{
+ 
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    background-color: black;
+    border-radius: 4rem;
+    position: relative;
+   
+    /* transition: all 1s linear;
+    -moz-transition: all 1s linear;
+    -o-transition: all 1s linear; */
+    cursor: pointer;
+    -webkit-appearance: none;
+    appearance: none;
+
+}
+
+.progress_duration_meter{
+    display: flex;
+    justify-content: space-between;
+
+}
+
