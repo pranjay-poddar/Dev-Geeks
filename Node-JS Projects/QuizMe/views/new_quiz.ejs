@@ -1,0 +1,82 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/new_quiz.css">
+    <title>QuizME - Add a quiz</title>
+</head>
+<body>
+  
+    <%- include('partials/back_bar') %> 
+
+        <form action="/new_quiz" class="container" method="post">
+        <div class="section">
+            <h3>Basic details</h3>
+            <input type="text" placeholder="Set quiz name" name="quiz_name">
+            <label for="due_date" >Set a due date</label>
+            <input type="datetime-local" id="due_date" name="due_date">
+            <label for="time" >Set quiz time (in minutes)</label>
+            <input type="number" id="due_date" name="time" placeholder="Enter number of minutes">
+        </div>
+        <div class="section x">
+            <h3>Set questions</h3>
+
+            <div class="questions">
+                <div class="question">
+                    <label>Question #1</label>
+                   <textarea   placeholder="Type your question..." class="question_text" name="question_text1"></textarea>
+                   <input type="text" placeholder="Option 1 (Correct answer)" class="option" name="option1_1">
+                   <input type="text" placeholder="Option 2" class="option" name="option1_2">
+                   <input type="text" placeholder="Option 3" class="option" name="option1_3">
+                   <input type="text" placeholder="Option 4" class="option" name="option1_4">
+                </div>
+            </div>
+
+
+            <div class="footer">
+                <button type="button" class="add_btn" onclick="add_question()"> + Add more questions</button>
+                <button class="create_btn" > Create Quiz</button>
+            </div>
+
+        </div>
+
+    </form>
+   
+
+
+    <script>
+        var i = 0
+        function add_question(){
+            
+              var colors = ['#f3e1fa' , '#fceddc' , '#dcfcdd' , '#fcdcdf' , '#c7dcff']
+              var node = document.createElement('div')
+              node.style.background = colors[i%5]
+              i++
+              var template = document.getElementsByClassName('question')[0]
+              node.classList.add('question')
+              node.innerHTML = template.innerHTML
+              .replace('#1' , '#'+(i+1))
+              .replace('question_text1' , 'question_text'+(i+1))
+              .replace('option1_1' , 'option'+(i+1)+'_1')
+              .replace('option1_2' , 'option'+(i+1)+'_2')
+              .replace('option1_3' , 'option'+(i+1)+'_3')
+              .replace('option1_4' , 'option'+(i+1)+'_4')
+
+              var main = document.getElementsByClassName('questions')[0]
+              main.appendChild(node)
+        
+        }
+        
+       
+        
+
+        
+
+        
+      
+        
+
+    </script>
+</body>
+</html>

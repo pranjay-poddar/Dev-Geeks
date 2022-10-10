@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Chelsea+Market&display=swap');
+
+.mainCont2 {
+    display: flex;
+    justify-content: center;
+    width: auto;
+    height: max-content;
+    box-sizing: border-box;
+    position: relative;
+    margin-bottom: 5px;
+}
+
+.navheader {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    width: 100%;
+    height: max-content;
+    background: radial-gradient(#b1aead85,#6b716f7a);
+    padding: 6px 6px;
+    justify-content: center;
+}
+
+.navLogo {
+    display: flex;
+    width: auto;
+    text-align: left !important;
+    margin: auto 19px auto 0;
+}
+.navLogo img {
+    height: 2.12em;
+    width: auto;
+    text-align: left;
+}
+.navHeading {
+    display: flex;
+    flex-wrap: wrap;
+    width: auto;
+    flex-direction: row;
+    margin: auto;
+    align-items: center;
+    justify-content: center !important;
+    color: white;
+    font-size: 2em;
+    font-family: 'Chelsea Market', cursive;
+    font-weight: bolder;
+    letter-spacing: 1px;
+    text-shadow: 2px 10px 3px rgba(64, 62, 62, 0.789);
+    text-transform: uppercase;
+}
+
+@media(max-width: 555px){
+    .navHeading{
+        font-size: large;
+    }
+    .navLogo img {
+    height: 7vh;
+}
+}

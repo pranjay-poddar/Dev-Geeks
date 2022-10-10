@@ -1,0 +1,266 @@
+body {
+  margin: 1.5em;
+  font-family: "Poppins";
+}
+
+a {
+  text-decoration: none;
+  font-size: 1.3rem;
+}
+
+.hero-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: url("../revolt-164_6wVEHfI-unsplash.jpg");
+  width: 100%;
+  height: 100vh;
+  z-index: -1;
+  background-size: cover;
+  background-position-x: 20%;
+  background-position-y: 20%;
+  -webkit-animation: introLoad 2s forwards;
+          animation: introLoad 2s forwards;
+}
+
+.Logo {
+  color: white;
+  font-weight: bold;
+}
+
+nav {
+  position: fixed;
+  right: 0;
+  top: 0;
+  background: white;
+  height: 100vh;
+  width: 50%;
+  z-index: 2;
+  text-transform: uppercase;
+  transform: translateX(100%);
+  transition: transform 0.5s ease-in-out;
+}
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin-top: 8em;
+}
+nav ul a {
+  color: black;
+  padding: 0.75em 2em;
+  display: block;
+  width: 100%;
+}
+nav ul a:hover {
+  background: none;
+  text-decoration: underline;
+}
+nav .close {
+  float: right;
+  margin: 2em;
+  width: 2.5em;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+}
+header svg {
+  width: 2.3em;
+  margin-top: -0.6em;
+  cursor: pointer;
+}
+
+h1 {
+  font-size: 3rem;
+  margin-top: 2em;
+  line-height: 3.3rem;
+}
+
+.subhead {
+  font-size: 1.4rem;
+}
+
+section.hero {
+  color: white;
+  height: 90vh;
+  -webkit-animation: moveDown 1s ease-in-out forwards;
+          animation: moveDown 1s ease-in-out forwards;
+  opacity: 0;
+}
+section.hero .down-arrow {
+  stroke: white;
+  position: absolute;
+  bottom: 2em;
+  width: 1em;
+  animation: moveArrow 1s alternate-reverse infinite;
+}
+section.hero .down-arrow path {
+  fill: white;
+}
+
+.more-info img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 11em;
+}
+.more-info .title {
+  font-weight: bold;
+  font-size: 1.25em;
+}
+.more-info .desc {
+  line-height: 1.5em;
+}
+
+.open-nav {
+  transform: translateX(0%);
+}
+
+@media only screen and (min-width: 680px) {
+  body {
+    margin: 1.5em 5em;
+    font-family: "Poppins";
+  }
+}
+@media only screen and (min-width: 920px) {
+  .menu {
+    display: none;
+  }
+  nav {
+    transform: translateX(0);
+    position: unset;
+    display: block;
+    width: auto;
+    height: auto;
+    background: none;
+  }
+  nav svg.close {
+    display: none;
+  }
+  nav ul {
+    display: flex;
+    margin: 0;
+  }
+  nav ul a {
+    color: white;
+    padding: 0.5em 1.5em;
+    font-size: 0.9rem;
+  }
+  nav ul a.hover {
+    background: none;
+    text-decoration: underline;
+  }
+  .hero-img {
+    left: unset;
+    right: 0;
+    width: 50%;
+    height: 42em;
+  }
+  .logo {
+    color: black;
+  }
+  .logo span {
+    color: red;
+  }
+  section.hero {
+    color: black;
+    height: auto;
+    width: 40%;
+    margin-bottom: 8em;
+  }
+  section.hero svg.down-arrow {
+    stroke: black;
+    position: unset;
+  }
+  section.hero svg.down-arrow path {
+    fill: black;
+  }
+  .feature {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    gap: 3em;
+    margin-bottom: 8em;
+  }
+  .feature img {
+    width: 25em;
+  }
+  .feature .content {
+    text-align: right;
+    width: 25em;
+  }
+  .feature.flip {
+    grid-template-areas: "left right";
+  }
+  .feature.flip img {
+    grid-area: left;
+  }
+  .feature.flip .content {
+    text-align: left;
+    width: 25em;
+    justify-self: left;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .wrapper {
+    width: 1200px;
+    margin: 0 auto;
+  }
+  .feature {
+    gap: 0;
+  }
+}
+@-webkit-keyframes introLoad {
+  from {
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+            clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+  }
+  to {
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+}
+@keyframes introLoad {
+  from {
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+            clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+  }
+  to {
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+}
+@-webkit-keyframes moveArrow {
+  from {
+    transform: translateY(-30px);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+@keyframes moveArrow {
+  from {
+    transform: translateY(-30px);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+@-webkit-keyframes moveDown {
+  from {
+    transform: translateY(-100px);
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes moveDown {
+  from {
+    transform: translateY(-100px);
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}/*# sourceMappingURL=main.css.map */

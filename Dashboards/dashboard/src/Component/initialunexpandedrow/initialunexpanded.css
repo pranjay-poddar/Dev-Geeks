@@ -1,0 +1,31 @@
+.header-space1 {
+    margin-right: 1.9rem;
+  }
+  
+  .unexpandedrow {
+    display: flex;
+    flex-direction: row;
+  }
+  .access {
+    min-width: 14.5rem;
+    text-align: left;
+  }
+  .MAX {
+    width: 14.5rem;
+    text-align: center;
+  }
+  
+  .row-content {
+    display: flex;
+    flex-direction: row;
+  
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  .switch {
+    margin-left: 2rem;
+  }
+  #unexpandedrowcomponent2:hover{
+transform: scale(1.01);
+  }
+  

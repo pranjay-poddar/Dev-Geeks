@@ -1,0 +1,351 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Libre+Baskerville:wght@400;700&family=Varela+Round&display=swap');
+
+/* font-family: 'Dancing Script', cursive; */
+/* font-family: 'Libre Baskerville', serif; */
+/* font-family: 'Varela Round', sans-serif; */
+
+
+/* root variables */
+:root{
+    --cream-color: #F2EDDB;
+    --brown-color: #967B5A;
+    --body-font: 'Varela Round', sans-serif;
+    --heading-font: 'Dancing Script', cursive;
+    --black-color: #191613;
+    --padding:7% 5%;
+    --line-height: 2;
+}
+
+/* tag selectors */
+html{
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+body{
+    font-family: var(--body-font); 
+    overflow-x: hidden;
+}
+
+h1,h2,h5{
+    font-family: var(--heading-font);
+}
+
+img{
+    width: 100%;
+}
+
+/* commonly used css */
+.button{
+    background-color: var(--brown-color);
+    transition: all .3s;
+    color: var(--cream-color);
+}
+
+.button-dark{
+    background-color: var(--black-color);
+}
+
+.button:hover{
+   border: 2px solid var(--brown-color);
+}
+
+.button-dark:hover{
+    border-color: var(--black-color);
+}
+
+.heading-dark{
+    color: var(--brown-color);
+}
+
+.heading-light{
+    color: var(--cream-color);
+}
+
+.section-light{
+    background-color: var(--cream-color);
+}
+.section-dark{
+    background-color: var(--black-color);
+}
+
+
+/* home section begins */
+#home{
+    position: relative;
+    background-image: url(images/home-img.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    overflow-x: hidden;
+}
+
+/* navbar */
+.navbar-brand{
+    font-family: var(--heading-font);
+    font-weight: 700;
+    font-size: 2.5rem;
+}
+
+.nav-item{
+    margin: 0 20px;
+}
+
+.navbar-nav .button{
+    width: fit-content;
+    padding: 0 10px;
+    border-radius: 5px;
+    background-color: transparent;
+    border: 2px solid var(--brown-color);
+}
+/* nabvar ends */
+
+/* title text */
+.title{
+    padding: 5%;
+    position: absolute;
+    bottom: 3%;
+    width: 100%;
+}
+
+.title h1{
+    font-size: 90px;
+    font-family: var(--heading-font);
+}
+
+.title .button{
+    float: right;
+}
+
+
+/* offer section */
+#offer{
+    color: var(--black-color);
+    padding:var(--padding);
+}
+
+.offer-column{
+    margin: 40px 0;
+    text-align: justify;
+    line-height: var(--line-height);
+}
+
+.offer-row h2{
+    padding: 10px 0;
+}
+
+/* banner section */
+#banner{
+    color: var(--cream-color);
+    padding: 7% 0;
+}
+
+.vertical-img{
+    width: auto;
+    height: 100%;
+}
+
+
+/* collection */
+.collection{
+    padding: var(--padding);
+}
+
+.collection-row{
+    margin:5% 0;
+}
+
+.collection-column{
+    margin: 20px 0;
+}
+
+.collection-card{
+    display: flex;
+    height: 150px;
+    width: 310px;
+    border-radius: 5px;
+}
+
+.collection-card-img{
+    width: 150px;
+    height: 100%;
+    border-radius: 5px;
+}
+
+.collection-card-info{
+    padding: 7px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.collection-card-info p{
+    font-size: .8rem;
+}
+
+.collection-card button{
+    width: fit-content;
+}
+
+.btn-more{
+    display: block;
+    margin:0 auto;
+}
+
+.dark-card{
+    background-color: var(--black-color);
+    color: var(--cream-color);
+}
+
+.light-card{
+    background-color:var(--brown-color);
+    color: var(--black-color);
+}
+
+/* testimonial section */
+#testimonial{
+    padding: var(--padding);
+    color: var(--cream-color);
+}
+
+.testimonial-col{
+    text-align: center;
+    border: 2px solid var(--brown-color);
+    line-height: var(--line-height);
+    padding: 20px;
+    margin: 5% 2%;
+}
+
+.testimonial-col img{
+    height: 100px;
+}
+
+.testimonial-col h2{
+    padding: 20px 0;
+}
+
+
+/* about section */
+#about{
+    color: var(--black-color);
+    text-align: center;
+    padding: var(--padding);
+    font-size: 20px;
+}
+
+.about-col{
+    line-height: var(--line-height);
+}
+
+.about-col h1{
+    font-size: 350%;
+    margin-bottom: 30px;
+}
+
+.about-col img{
+   position: relative;
+   left: 70px;
+    width: 300px;
+}
+
+
+/* footer section */
+#footer{
+    background-image: url(images/footer-img.png);
+    background-size: cover;
+    height: 100vh;
+    background-position: center;
+    color: var(--cream-color);
+}
+
+.footer-col{
+    text-align: center;
+    padding: 10px;
+}
+
+.footer-col h1{
+    padding-bottom: 30px;
+    font-size: 400%;
+}
+
+/* responsive media query */
+@media (max-width: 780px){
+  .about-img{
+    display: none;
+   }
+
+   #about{
+    padding: 20%;
+   }
+   .about-col{
+    font-size: 17px;
+   }
+   .about-col h1{
+    font-size: 50px;
+   }
+
+}
+
+@media (max-width:650px){
+    .collection, #testimonial{
+        padding: 10% 5%;
+    }
+    
+    #offer{
+        padding-top: 10%;
+    }
+
+    .footer-col h1{
+        font-size: 50px;
+    }
+
+}
+
+
+@media (max-width:500px){
+    .title h1{
+        font-size: 70px;
+    }
+
+    .title .button{
+        float: none;
+    }
+    .vertical-img{
+        width: 100%;
+        height: auto;
+    }
+
+    .collection, #testimonial, #offer, #about{
+        padding: 20% 5%;
+    }
+    
+}
+
+
+@media (max-width:450px){
+    .collection-card{
+        height: 200px;
+        width: 100%;
+        position: relative;
+    }
+    
+    .collection-card-img{
+        width: 130px;
+        height: 130px;
+    }
+    
+    .collection-card-info{
+        display: block;
+    }
+    .collection-card-info h5{
+        position: absolute;
+        right: 7px;
+        bottom: 0;
+    }
+    .collection-card-info .button{
+        position: absolute;
+        left: 7px;
+        bottom: 7px;
+    }
+}
