@@ -1,5 +1,5 @@
-<a href="https://rabbitdog.netlify.app/"><h1>click here for the demo</h1></a>
-
+<a href="https://rabbitdog.netlify.app/"><h1>click here for the demo
+<br>
 # Demo images
 
 <img src="./Rabitt vs Dog.png">
