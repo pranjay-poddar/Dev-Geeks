@@ -1,0 +1,331 @@
+button {
+  cursor: pointer;
+}
+
+.home {
+  background-color: #252627;
+  height: 60vh;
+}
+#container {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 800px;
+  margin: auto;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 2px;
+}
+.row-child {
+  width: 30%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+
+#headline {
+  padding: 5px 0px;
+}
+
+/* ---------------------
+  For all squares
+  --------------------- */
+
+.square {
+  width: 135px;
+  height: 135px;
+  border-radius: 20%;
+  border: 3px solid white;
+  background-color: #7a7877;
+  margin: 1.66%;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  flex-direction: column !important;
+  transition: background 0.5s;
+  -webkit-transition: background 0.5s;
+  -moz-transition: background 0.5s;
+  -o-transition: background 0.5s;
+}
+
+@media (max-width: 530px) {
+  .square {
+    width: 140px;
+    height: 140px;
+    border-radius: 20%;
+    border: 3px solid white;
+    background-color: #7a7877;
+    margin: 1.66%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    flex-direction: column !important;
+    transition: background 0.5s, box-shadow 0.5s;
+    -webkit-transition: background 0.5s, box-shadow 0.5s;
+    -moz-transition: background 0.5s, box-shadow 0.5s;
+    -o-transition: background 0.5s, box-shadow 0.5s;
+  }
+  .square:hover {
+    box-shadow: 0 8px 15px -8px rgba(255, 255, 255, 0.5),
+      inset 0 0 5px 5px rgba(255, 255, 255, 0.5),
+      inset 0 0 6px 6px rgba(0, 0, 0, 0.5);
+  }
+
+  @media (max-width: 530px) {
+    .square {
+      width: 25vw;
+      height: 15vh;
+    }
+  }
+
+  .square p {
+    font-size: 50%;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+  }
+  .square button {
+    height: max-content;
+    background-color: rgba(255, 255, 255, 0.333);
+    color: white;
+    font-size: 80%;
+    padding: 6px 8%;
+    border: none;
+    border-radius: 13px;
+    box-shadow: 1px 4px 1px 0px rgba(82, 82, 82, 0.37);
+    user-select: none;
+
+    width: 25vw;
+    height: 15vh;
+  }
+}
+
+.square p {
+  font-size: 50%;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+.square button {
+  height: max-content;
+  background-color: rgba(255, 255, 255, 0.333);
+  color: white;
+  font-size: 80%;
+  padding: 6px 8%;
+  border: none;
+  border-radius: 13px;
+  box-shadow: 1px 4px 1px 0px rgba(82, 82, 82, 0.37);
+}
+.square button:focus {
+  background-color: rgba(60, 59, 59, 0.544);
+  border: 1px solid white !important;
+}
+
+/* ---------------------
+  For Heading
+  --------------------- */
+
+h1 {
+  color: white;
+  background: linear-gradient(
+    to left,
+    rgba(254, 236, 97, 0.925),
+    rgba(88, 202, 88, 0.879),
+    rgba(122, 122, 245, 0.873),
+    rgba(245, 127, 127, 0.888)
+  );
+  font-size: 1.5em;
+  text-align: center;
+  text-transform: capitalize;
+  margin: 0;
+  padding: 15px 0;
+}
+
+#rgbdisplay {
+  font-size: 1em;
+}
+#color-display {
+  display: block;
+  font-size: 2em;
+}
+
+/* ---------------------
+  for paragraph tag in heading
+  --------------------- */
+
+.clickText {
+  color: white;
+  display: block;
+  font-size: medium;
+  font-weight: 350;
+  margin: 0 0 6px 0;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  letter-spacing: 1px;
+}
+
+.infoText {
+  margin: 10px 0px;
+}
+
+.help-icon {
+  margin-left: 0.25em;
+}
+
+.help-icon:hover,
+.help-icon:focus {
+  filter: drop-shadow(3px 3px 2px rgba(245, 127, 127, 0.888));
+}
+
+.clickText {
+  animation: shake 1s ease-in;
+}
+
+@keyframes shake {
+  0% {
+    transform: translate(2px, 1px) rotate(0deg);
+  }
+
+  10% {
+    transform: translate(-1px, -2px) rotate(-2deg);
+  }
+
+  20% {
+    transform: translate(-3px, 0px) rotate(3deg);
+  }
+
+  30% {
+    transform: translate(0px, 2px) rotate(0deg);
+  }
+
+  40% {
+    transform: translate(1px, -1px) rotate(1deg);
+  }
+
+  50% {
+    transform: translate(-1px, 2px) rotate(-1deg);
+  }
+
+  60% {
+    transform: translate(-3px, 1px) rotate(0deg);
+  }
+
+  70% {
+    transform: translate(2px, 1px) rotate(-2deg);
+  }
+
+  80% {
+    transform: translate(-1px, -1px) rotate(4deg);
+  }
+
+  90% {
+    transform: translate(2px, 2px) rotate(0deg);
+  }
+
+  100% {
+    transform: translate(1px, -2px) rotate(-1deg);
+  }
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+
+/* ---------------------
+  For Buttons
+  --------------------- */
+
+#stripe {
+  background: white;
+  height: 30px;
+  text-align: center;
+  color: black;
+}
+
+#btn1 {
+  height: 100%;
+  font-weight: 600 !important;
+  text-decoration: underline;
+}
+#endbtn {
+  font-weight: 200 !important;
+  font-size: small;
+  text-decoration: underline;
+  color: white !important;
+  background-color: transparent !important;
+}
+#endbtn:hover {
+  font-size: bolder;
+  letter-spacing: 2px;
+}
+
+#stripe button {
+  outline: none;
+  border: none;
+  /* text-decoration: underline ; */
+  color: black;
+  font-family: "Raleway", Sans-serif;
+  text-transform: capitalize;
+  font-size: medium;
+  background-color: white;
+  transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+}
+#clickimg {
+  width: 20px;
+  text-align: center;
+  margin-right: 3px;
+}
+
+#btn1:hover {
+  background-color: transparent;
+  color: black;
+  font-size: bolder;
+  letter-spacing: 2px;
+  box-shadow: 0px 0px 10px 0px white;
+}
+
+.footer {
+  /* margin-top: 0.5rem; */
+  /* padding: 1rem; */
+  background-color: rgb(50, 54, 61);
+  position: fixed;
+  text-align: center;
+  color: rgb(85, 85, 85);
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
+/* Copy color button styling */
+.btn:hover,
+.btn:focus {
+  cursor: pointer;
+  outline: none;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  transform: translateY(-0.25em);
+}
