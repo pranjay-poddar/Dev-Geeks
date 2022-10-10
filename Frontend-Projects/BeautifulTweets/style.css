@@ -1,0 +1,197 @@
+body {
+  background-color: #202021;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.box {
+  border: 0.01rem solid grey;
+  width: 300px;
+  margin: 1%;
+  border-radius: 7px;
+  padding: 1.2%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 5%;
+}
+
+.text {
+  color: #d4d4d4;
+  font-family: arial;
+  font-size: 16px;
+}
+
+.date {
+  color: grey;
+  font-family: sans-serif;
+  font-size: 14px;
+}
+
+svg {
+  color: white;
+  height: 20px;
+}
+
+.box:hover svg {
+  color: #1DA1F2;
+  transition: 0.5s;
+}
+
+.box:hover .date {
+  color: #cccccc;
+  transition: 0.5s;
+}
+
+.box:hover {
+  border: 0.01rem solid white;
+  transition: 0.5s;
+}
+
+.add-modal {
+  position: fixed;
+  z-index: 1;
+  left: 25vw;
+  top: 25vh;
+  width: 50vw;
+  height: 50vh;
+  overflow: auto;
+  background-color: white;
+  border-radius: 12px;
+  padding: 2%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  display: none;
+}
+
+.modal-heading {
+  font-size: 24px;
+  font-family: sans-serif;
+}
+
+button {
+  background-color: black;
+  border-radius: 10px;
+  color: white;
+  width: 20%;
+  border: none;
+  padding: 2%;
+  cursor: pointer;
+}
+
+button:hover {
+  color: #c9c9c9;
+}
+
+textarea {
+  height: 60%;
+  border: 1.5px solid grey;
+  border-radius: 5px;
+  padding: 1%;
+}
+
+.cancel-btn {
+  color: grey;
+  font-family: sans-serif;
+  font-size: 14px;
+  margin-left: 3%;
+  cursor: pointer;
+}
+
+.cancel-btn:hover {
+  color: red;
+}
+
+.add-btn {
+  height: 60px;
+  width: 60px;
+  border-radius: 100%;
+  background-color: #1DA1F2;
+  position: fixed;
+  z-index: 1;
+  right: 10vw;
+  bottom: 5vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.add-btn>svg {
+  height: 30px;
+}
+
+@media (max-width: 1000px) {
+  .box {
+    width: 70%;
+    margin: 3%;
+    padding: 5%;
+    border-radius: 15px;
+  }
+
+  .text {
+    font-size: 42px;
+  }
+
+  .date {
+    font-size: 32px;
+  }
+
+  svg {
+    height: 40px;
+  }
+
+  .bar {
+    margin-top: 5%;
+  }
+
+  .add-btn {
+    height: 150px;
+    width: 150px;
+  }
+
+  .add-btn>svg {
+    height: 60px;
+  }
+
+ .add-modal{
+   width: 70%;
+   height : 50%;
+   left: 10%;
+   top: 25%;
+   padding: 5%;
+
+ }
+
+ .add-modal > label{
+   font-size: 48px;
+ }
+
+ .add-modal button{
+   font-size: 32px;
+   width:auto;
+   padding: 4%;
+ }
+
+ textarea{
+   font-size: 24px;
+ }
+
+ .modal-bar > label{
+   font-size: 26px;
+ }
+
+
+
+}
