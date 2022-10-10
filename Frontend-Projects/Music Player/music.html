@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Music Player</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="main_div">
+      <div class="music_container">
+        <h2 id="title">Numb & Frozen</h2>
+        <h3 id="artist">Icy Narco</h3>
+        <div class="img_container">
+          <img src="assets/numb&frozen.jpg" alt="" />
+          <div class="disc"></div>
+        </div>
+        
+        <div class="content">
+          <div class="controls">
+            <audio src="music/Numb&frozen.mp3"></audio>
+            <canvas></canvas>
+          </div>
+        </div>
+        <div class="music_controls">
+          <i class="fa-solid fa-backward-step" id="prev" title="Previous"></i>
+          <i class="fa-solid fa-play main_button" id="play" title="Play"></i>
+          <i class="fa-solid fa-forward-step" id="next" title="Next"></i>
+        </div>
+        <!-- <audio
+            src="music/Numb&frozen.mp3"
+            bar-width="5"
+            bar-gap="2"
+            preload
+            autoplay
+            ></audio> -->
+      </div>
+    </div>
+    <script src="./main.js"></script>
+  </body>
+</html>
