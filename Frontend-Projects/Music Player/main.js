@@ -10,6 +10,8 @@ const title = document.getElementById("title");
 const prev = document.getElementById("prev");
 const next = document.getElementById("next");
 
+
+// later we can add a database or a music api 
 const songs = [
   {
     name: "Numb&Frozen",
