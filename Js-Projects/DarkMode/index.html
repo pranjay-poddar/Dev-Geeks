@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Dark Mode Toggle</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="app.css">
+    <style>
+        body {
+            background-color: #f6f6f6;
+            transition: background-color .3s;
+        }
+
+        body[light-mode=dark] {
+            background-color: #141516;
+            color: #ced4e2;
+        }
+
+        body[light-mode="dark"] .light-mode-button span:nth-child(1) {
+            background-color: #ced4e2;
+            color: #141516;
+        }
+
+        body[light-mode=dark] .light-mode-button span:nth-child(2) {
+            left: 65px;
+            background-color: #141516;
+        }
+
+        /* Light Mode Button Styles
+        --------------------------- */
+        .light-mode-button {
+            background: 0;
+            border: 0;
+            box-sizing: border-box;
+            cursor: pointer;
+            height: 40px;
+            width: 100px;
+            position: relative;
+            border: 1px solid rgba(255, 255, 255, 0);
+        }
+
+        .light-mode-button:focus {
+            outline: none;
+            /* Not ideal for accessibility */
+        }
+
+        .light-mode-button span:nth-child(1) {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100px;
+            height: 40px;
+            border-radius: 20px;
+            background-color: #d6d7db;
+            box-shadow: inset 1px 1px 3px 0 rgb(0 0 0 / 40%);
+            transition: .3s;
+        }
+
+        .light-mode-button span:nth-child(2) {
+            position: absolute;
+            top: 5px;
+            left: 5px;
+            width: 30px;
+            height: 30px;
+            background-color: #fff;
+            border-radius: 50%;
+            box-shadow: 1px 1px 2px 0 rgb(0 0 0 / 40%);
+            transition: .3s;
+
+
+
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+        window.addEventListener("storage", function () {
+            if (localStorage.lightMode == "dark") {
+                app.setAttribute("light-mode", "dark");
+            } else {
+                app.setAttribute("light-mode", "light");
+            }
+        }, false);
+        var app = document.getElementsByTagName("BODY")[0];
+        if (localStorage.lightMode == "dark") {
+            app.setAttribute("light-mode", "dark");
+        }
+    </script>
+    <div class="container">
+        <h1>Dark Mode Toggle</h1>
+        <button class="light-mode-button" aria-label="Toggle Light Mode" onclick="toggle_light_mode()">
+            <span></span>
+            <span></span>
+        </button>
+    </div>
+    <script>
+        function toggle_light_mode() {
+            var app = document.getElementsByTagName("BODY")[0];
+            if (localStorage.lightMode == "dark") {
+                localStorage.lightMode = "light";
+                app.setAttribute("light-mode", "light");
+            } else {
+                localStorage.lightMode = "dark";
+                app.setAttribute("light-mode", "dark");
+            }
+        }
+    </script>
+    <!-- Code injected by live-server -->
+    <script>
+        // <![CDATA[  <-- For SVG support
+        if ('WebSocket' in window) {
+            (function () {
+                function refreshCSS() {
+                    var sheets = [].slice.call(document.getElementsByTagName("link"));
+                    var head = document.getElementsByTagName("head")[0];
+                    for (var i = 0; i < sheets.length; ++i) {
+                        var elem = sheets[i];
+                        var parent = elem.parentElement || head;
+                        parent.removeChild(elem);
+                        var rel = elem.rel;
+                        if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+                            var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+                            elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+                        }
+                        parent.appendChild(elem);
+                    }
+                }
+                var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+                var address = protocol + window.location.host + window.location.pathname + '/ws';
+                var socket = new WebSocket(address);
+                socket.onmessage = function (msg) {
+                    if (msg.data == 'reload') window.location.reload();
+                    else if (msg.data == 'refreshcss') refreshCSS();
+                };
+                if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+                    console.log('Live reload enabled.');
+                    sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+                }
+            })();
+        }
+        else {
+            console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+        }
+	// ]]>
+    </script>
+</body>
+
+</html>
