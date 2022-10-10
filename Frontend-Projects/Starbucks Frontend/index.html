@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Starbucks</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <section>
+      <div class="circle"></div>
+      <header>
+        <a href="#" class="logo"
+          ><img src="logo.png" class="logo" alt="logo"
+        /></a>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Menu</a></li>
+          <li><a href="#">What's New</a></li>
+          <li><a href="#">Contact Us</a></li>
+        </ul>
+      </header>
+
+      <div class="content">
+        <div class="textBox">
+          <h2>
+            It's not just Coffee<br />It's<span class="star">Starbucks</span>
+          </h2>
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Animi
+            numquam corrupti perferendis, assumenda corporis possimus ipsum
+            adipisci illo soluta voluptate? Laudantium veniam, maiores facilis,
+            sint labore, odio numquam perspiciatis fuga voluptates officiis
+            doloribus aspernatur earum doloremque tempora?
+          </p>
+          <a href="#" background class="button">Learn More</a>
+        </div>
+        <div class="imgBox">
+          <img src="img1.png" class="starbucks" />
+        </div>
+      </div>
+      <ul class="thumb">
+        <li>
+          <img
+            src="thumb1.png"
+            alt="1"
+            onclick="imgSlider('img1.png');changeColor('#017143');changeColors('#017143');changeColours('#017143')"
+          />
+        </li>
+        <li>
+          <img
+            src="thumb2.png"
+            alt="2"
+            onclick="imgSlider('img2.png');changeColor('#eb7495');changeColors('#eb7495');changeColours('#eb7495')"
+          />
+        </li>
+        <li>
+          <img
+            src="thumb3.png"
+            alt="3"
+            onclick="imgSlider('img3.png');changeColor('#d752b1');changeColors('#d752b1');changeColours('#d752b1')"
+          />
+        </li>
+      </ul>
+      <ul class="sci">
+        <li>
+          <a href="#"><img src="facebook.png" /></a>
+        </li>
+        <li>
+          <a href="#"><img src="instagram.png" /></a>
+        </li>
+        <li>
+          <a href="#"><img src="twitter.png" /></a>
+        </li>
+      </ul>
+    </section>
+
+    <section class="contentcard">
+      <!-- <div class="conatiner"> -->
+      <div class="card">
+        <div class="imageBx">
+          <img src="img1.png" width="200px" height="280px" />
+        </div>
+        <div class="morecontent">
+          <h2>Starcoffe</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam
+            perferendis itaque illum optio!
+          </p>
+        </div>
+      </div>
+      <div class="card">
+        <div class="imageBx">
+          <img src="img2.png" width="200px" height="280px" />
+        </div>
+        <div class="morecontent">
+          <h2>Moon Coffee</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam
+            perferendis itaque illum optio!
+          </p>
+        </div>
+      </div>
+      <div class="card">
+        <div class="imageBx">
+          <img src="img3.png" width="200px" height="280px" />
+        </div>
+        <div class="morecontent">
+          <h2>SUncoffe</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam
+            perferendis itaque illum optio!
+          </p>
+        </div>
+      </div>
+      <!-- </div> -->
+    </section>
+    <script type="text/javascript">
+      function imgSlider(anything) {
+        document.querySelector(".starbucks").src = anything;
+      }
+      function changeColor(color) {
+        const circle = document.querySelector(".circle");
+        circle.style.background = color;
+      }
+
+      function changeColors(colors) {
+        const text = document.querySelector(".star");
+        text.style.color = colors;
+      }
+      function changeColours(colours) {
+        const but = document.querySelector(".button");
+        but.style.color = colours;
+      }
+    </script>
+    <section class="banner"></section>
+    <script type="text/javascript">
+      window.addEventListener("scroll", function () {
+        var header = document.querySelector("header");
+        header.classList.toggle("sticky", window.scrollY > 0);
+      });
+    </script>
+  </body>
+</html>
