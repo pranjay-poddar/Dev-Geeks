@@ -1,0 +1,80 @@
+*{
+    margin : 0;
+    padding : 0;
+}
+
+body{
+    height: 100vh;
+    width : 100vw;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 1)) , url('../images/circus_background.gif');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.container{
+    height: 100%;
+    width : 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container > img{
+    width : 70%;
+}
+
+.row > button{
+    padding:  8px;
+    margin-left: 10px;
+    background-color: yellow;
+    font-size: 32px;
+    border : 5px solid #dd00ae;
+    border-radius: 10px;
+    color : #dd00ae;
+    cursor: pointer;
+    animation-name: floating;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes floating {
+    0% { transform: translate(0,  0px); }
+    50%  { transform: translate(0, 15px); }
+    100%   { transform: translate(0, -0px); }   
+}
+
+
+/* .container > button:hover{
+    border : 8px solid #dd00ae;
+    transition: 0.5s;
+ 
+} */
+
+.container > label{
+    color : white;
+    font-size: 20px;
+    margin-top: 50px;
+    text-align: center;
+}
+
+.row > input{
+    padding: 20px;
+    
+    font-size: 20px;
+    border-radius: 10px;
+}
+
+.row{
+    display: flex;
+    align-items: center;
+}
+
+.quiz_name{
+    margin: 10px;
+    font-size: 28px;
+    color : white;
+    font-family: sans-serif;
+}
