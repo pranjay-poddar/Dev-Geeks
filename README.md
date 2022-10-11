@@ -693,7 +693,7 @@ Happy Coding! -->
 <td align="center"> 234.</td>
 <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Frontend-Projects/Netflix%20Clone"> Netflix Clone </a></td>
 <td align="center"> 235.</td>
-<td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Python%20Projects/Text-to-handwriting"> Text-to-handwriting </a></td>
+<td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Python%20Projects/Text-to-handwriting">  Text-to-handwriting </a></td>
 </tr>
 	
 </table>
