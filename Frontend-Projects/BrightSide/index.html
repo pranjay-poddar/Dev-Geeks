@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BrightSide</title>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            // Add smooth scrolling to all links
+            $("a").on('click', function(event) {
+
+                // Make sure this.hash has a value before overriding default behavior
+                if (this.hash !== "") {
+                    // Prevent default anchor click behavior
+                    event.preventDefault();
+
+                    // Store hash
+                    var hash = this.hash;
+
+                    // Using jQuery's animate() method to add smooth page scroll
+                    // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+                    $('html, body').animate({
+                        scrollTop: $(hash).offset().top
+                    }, 800, function() {
+
+                        // Add hash (#) to URL when done scrolling (default click behavior)
+                        window.location.hash = hash;
+                    });
+                } // End if
+            });
+        });
+
+
+
+        // $(document).ready(function() {
+
+        //     $(".scroll").click(function(event) {
+        //         $('html,body').animate({
+        //             scrollTop: $(this.hash).show()
+        //                 // .offset().top
+        //         }, 'slow');
+        //     });
+        // });
+    </script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet" />
+</head>
+
+<body>
+    <!-- Navbar goes here -->
+    <nav class="bg-white shadow-lg">
+        <div class="max-w-6xl mx-auto px-4" id="home">
+            <div class="flex justify-between">
+                <div class="flex space-x-7">
+                    <div>
+                        <!-- Website Logo -->
+                        <a href="#" class="flex items-center py-4 px-2">
+                            <img src="images\logo.png" alt="Logo" class="h-11 w-15 mr-2">
+                            <span class="font-semibold text-gray-500 text-lg">BrightSide</span>
+                        </a>
+                    </div>
+                    <!-- Primary Navbar items -->
+                    <div class="hidden md:flex items-center space-x-1">
+                        <a href="#home" class="py-4 px-2 text-blue-500 border-b-4 border-blue-500 font-semibold ">Home</a>
+                        <a href="#about" class="py-4 px-2 text-gray-500 font-semibold hover:text-blue-500 transition duration-300">About</a>
+                        <a href="#courses" class="py-4 px-2 text-gray-500 font-semibold hover:text-blue-500 transition duration-300">Courses</a>
+                        <!-- <a href="" class="py-4 px-2 text-gray-500 font-semibold hover:text-blue-500 transition duration-300">Time</a> -->
+                        <a href="#contact" class="py-4 px-2 text-gray-500 font-semibold hover:text-blue-500 transition duration-300">Contact Us</a>
+
+
+
+                    </div>
+                </div>
+                <!-- Secondary Navbar items -->
+                <div class="hidden md:flex items-center space-x-3 ">
+
+                    <a href="" class="py-2 px-2 font-medium text-white bg-blue-500 rounded hover:bg-blue-400 transition duration-300">Sign Up</a>
+                </div>
+                <!-- Mobile menu button -->
+                <div class="md:hidden flex items-center">
+                    <button class="outline-none mobile-menu-button">
+						<svg class=" w-6 h-6 text-gray-500 hover:text-blue-500 "
+							x-show="!showMenu"
+							fill="none"
+							stroke-linecap="round"
+							stroke-linejoin="round"
+							stroke-width="2"
+							viewBox="0 0 24 24"
+							stroke="currentColor"
+						>
+							<path d="M4 6h16M4 12h16M4 18h16"></path>
+						</svg>
+					</button>
+                </div>
+            </div>
+        </div>
+        <!-- mobile menu -->
+        <div class="hidden mobile-menu">
+            <ul class="">
+                <li class="active"><a href="#home" class="block text-sm px-2 py-4 text-white bg-blue-500 font-semibold">Home</a></li>
+                <li><a href="#about" class="block text-sm px-2 py-4 hover:bg-blue-500 transition duration-300">About</a></li>
+                <li><a href="#courses" class="block text-sm px-2 py-4 hover:bg-blue-500 transition duration-300">Courses</a></li>
+
+                <li><a href="#contact" class="block text-sm px-2 py-4 hover:bg-blue-500 transition duration-300">Contact Us</a></li>
+            </ul>
+        </div>
+        <script>
+            const btn = document.querySelector("button.mobile-menu-button");
+            const menu = document.querySelector(".mobile-menu");
+
+            btn.addEventListener("click", () => {
+                menu.classList.toggle("hidden");
+            });
+        </script>
+
+    </nav>
+    <!-- Navbar ends here -->
+    <!-- Hero section -->
+
+    <section class="text-gray-600 body-font">
+        <div class="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
+            <div class="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0">
+                <h1 class="title-font sm:text-7xl text-3xl mb-4 font-medium text-blue-500">Welcome To
+                    <br class="hidden lg:inline-block">BrightSide
+                </h1>
+                <p class="mb-8 leading-relaxed"> BrightSide is a collaborative community of higher education leaders and innovators, dedicated to advancing quality digital teaching and learning experiences designed to reach and engage the modern learner – anyone, anywhere, anytime.
+                </p>
+                <div class="flex justify-center">
+                    <button class="inline-flex text-white bg-blue-500 border-0 py-2 px-6 focus:outline-none hover:bg-blue-600 rounded text-lg">Read More</button>
+
+                </div>
+            </div>
+            <div class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6">
+                <img class="object-cover object-center rounded" alt="hero" src="images\mainimage.jfif" height="1400" width="1700">
+            </div>
+        </div>
+    </section>
+
+    <!-- Hero ends here -->
+    <!-- About section starts -->
+    <section class="text-gray-600 body-font">
+        <div class="container px-5 py-24 mx-auto " id="about">
+            <div class="flex flex-col text-center w-full mb-20">
+                <h1 class="sm:text-7xl text-2xl font-medium title-font mb-4 text-blue-500">ABOUT</h1>
+                <p class="lg:w-2/3 mx-auto leading-relaxed text-base">
+
+                    From our institutional offerings to our advisory services, our focus is on driving best practices for Quality Online Learning. Our platform is based on the Five Pillars of Quality Online Education – LEARNING EFFECTIVENESS, FACULTY SATISFACTION, STUDENT
+                    SATISFACTION, SCALE, AND ACCESS – Essentially building blocks providing the support for successful online learning.
+
+
+                </p>
+            </div>
+
+
+
+
+            <div class="flex flex-wrap -m-4 text-center">
+                <div class="p-4 md:w-1/4 sm:w-1/2 w-full">
+                    <div class="border-2 border-gray-200 px-4 py-6 rounded-lg">
+                        <img fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="text-blue-500 w-12 h-12 mb-3 inline-block" viewBox="0 0 24 24" src="https://img.icons8.com/ultraviolet/40/000000/skyscrapers.png" />
+                        <path d="M8 17l4 4 4-4m-4-5v9"></path>
+                        <path d="M20.88 18.09A5 5 0 0018 9h-1.26A8 8 0 103 16.29"></path>
+                        </svg>
+                        <h2 class="title-font font-medium text-3xl text-gray-900">500+</h2>
+                        <p class="leading-relaxed">Branches</p>
+                    </div>
+                </div>
+                <div class="p-4 md:w-1/4 sm:w-1/2 w-full">
+                    <div class="border-2 border-gray-200 px-4 py-6 rounded-lg">
+
+                        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="text-blue-500 w-12 h-12 mb-3 inline-block" viewBox="0 0 24 24">
+                  <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"></path>
+                  <circle cx="9" cy="7" r="4"></circle>
+                  <path d="M23 21v-2a4 4 0 00-3-3.87m-4-12a4 4 0 010 7.75"></path>
+                </svg>
+                        <h2 class="title-font font-medium text-3xl text-gray-900">50K+</h2>
+                        <p class="leading-relaxed">Students</p>
+                    </div>
+                </div>
+                <div class="p-4 md:w-1/4 sm:w-1/2 w-full">
+                    <div class="border-2 border-gray-200 px-4 py-6 rounded-lg">
+                        <img fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="text-blue-500 w-12 h-12 mb-3 inline-block" viewBox="0 0 24 24" src="https://img.icons8.com/external-parzival-1997-flat-parzival-1997/64/000000/external-community-human-networking-parzival-1997-flat-parzival-1997.png"
+                        />
+
+                        <path d="M3 18v-6a9 9 0 0118 0v6"></path>
+                        <path d="M21 19a2 2 0 01-2 2h-1a2 2 0 01-2-2v-3a2 2 0 012-2h3zM3 19a2 2 0 002 2h1a2 2 0 002-2v-3a2 2 0 00-2-2H3z"></path>
+                        </svg>
+                        <h2 class="title-font font-medium text-3xl text-gray-900">30k+</h2>
+                        <p class="leading-relaxed">Teachers</p>
+                    </div>
+                </div>
+                <div class="p-4 md:w-1/4 sm:w-1/2 w-full">
+                    <div class="border-2 border-gray-200 px-4 py-6 rounded-lg">
+                        <img fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="text-blue-500 w-12 h-12 mb-3 inline-block" viewBox="0 0 24 24" src="https://img.icons8.com/flat-round/64/000000/bookmark-corner.png" />
+
+                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                        </svg>
+                        <h2 class="title-font font-medium text-3xl text-gray-900">500+</h2>
+                        <p class="leading-relaxed">Scholorship</p>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="container px-5 py-24 mx-auto flex flex-wrap">
+                <div class="flex flex-wrap -mx-4 mt-auto mb-auto lg:w-1/2 sm:w-2/3 content-start sm:pr-10">
+                    <div class="w-full sm:p-4 px-4 mb-6">
+                        <h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900">We are networking, sharing and learning a whole lot more about online and digital learning.</h1>
+                        <div class="leading-relaxed">With over 4,000 learners attending our institute programs, with institutions from over 49 U.S states and global partnerships in Asia, Europe, the Middle East and South America, our members have a lot to say.
+
+                        </div>
+                    </div>
+                </div>
+                <div class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6 mb-10 md:mb-0">
+                    <img class="object-cover object-center rounded" alt="hero" height="350" width="600" src="images\networking.png">
+                </div>
+               
+            </div>
+
+
+
+
+            <div class="container px-5 py-24 mx-auto flex flex-wrap">
+
+                <div class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6 mb-10 md:mb-0">
+                    <img class="object-cover object-center rounded" alt="hero" height="350" width="600" src="images\community.jpeg">
+                </div>
+
+
+
+                <div class="lg:flex-grow md:w-1/2 lg:pl-24 md:pl-16 flex flex-col md:items-start md:text-left ">
+                    <h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900">We’re making headlines and strengthening our community in higher education</h1>
+                    <p class="mb-8 leading-relaxed">You’ll find the latest about OLC in the news and we also share the latest industry news in our monthly newsletter OLC Today.</p>
+                </div>
+
+
+
+            </div>
+
+
+
+
+
+
+
+        </div>
+    </section>
+
+    <!-- About section  ends here -->
+    <!-- courses section starts-->
+    <section class="text-gray-600 body-font">
+        <div class="flex flex-col text-center w-full mb-20" id="courses">
+            <h1 class="sm:text-7xl text-2xl font-medium title-font mb-4 text-blue-500">Our Courses</h1>
+            <p class="lg:w-2/3 mx-auto leading-relaxed text-base">
+
+                What are the trending courses being discussed on your campus today? BrightSide offers a large and growing number of online courses facilitated by experts in the field of online and digital education. Collaborate and learn with colleagues worldwide via
+                synchronous and asynchronous methods. Find a courses that meets your expectations today.
+
+
+            </p>
+        </div>
+        <div class="container px-5 py-24 mx-auto">
+            <div class="flex flex-wrap sm:-m-4 -mx-4 -mb-10 -mt-4">
+                <div class="p-4 md:w-1/3 sm:mb-0 mb-6">
+                    <div class="rounded-lg h-64 overflow-hidden">
+                        <img alt="content" class="object-cover object-center h-full w-full" height="503" width="1203" src="images\design.jpeg">
+                    </div>
+                    <h2 class="text-xl font-medium title-font text-gray-900 mt-5">Designing</h2>
+                    <p class="text-base leading-relaxed mt-2">Course design is the process and methodology of creating quality learning environments and experiences for students. Through deliberate and structured expose to instructional materials, learning activities, and interaction, students
+                        are able to access information, obtain skills, and practice higher levels of thinking.</p>
+                    <a class="text-indigo-500 inline-flex items-center mt-3">Learn More
+                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
+                  <path d="M5 12h14M12 5l7 7-7 7"></path>
+                </svg>
+              </a>
+                </div>
+                <div class="p-4 md:w-1/3 sm:mb-0 mb-6">
+                    <div class="rounded-lg h-64 overflow-hidden">
+                        <img alt="content" class="object-cover object-center h-full w-full" height="504" width="1204" src="images\coding.jpeg">
+                    </div>
+                    <h2 class="text-xl font-medium title-font text-gray-900 mt-5">Programming</h2>
+                    <p class="text-base leading-relaxed mt-2"> Learn the fundamentals of computer programming as well as the mathematical and scientific principles that provide the underpinnings.Coding can also be a rewarding career given its impact on the everyday world, and can be fun for those
+                        with interests in a wide-ranging list of topics.</p>
+                    <a class="text-indigo-500 inline-flex items-center mt-3">Learn More
+                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
+                  <path d="M5 12h14M12 5l7 7-7 7"></path>
+                </svg>
+              </a>
+                </div>
+                <div class="p-4 md:w-1/3 sm:mb-0 mb-6">
+                    <div class="rounded-lg h-64 overflow-hidden">
+                        <img alt="content" class="object-cover object-center h-full w-full" height="505" width="1205" src="images\web evelopment.jpeg">
+                    </div>
+                    <h2 class="text-xl font-medium title-font text-gray-900 mt-5">Web Development</h2>
+                    <p class="text-base leading-relaxed mt-2">Web development is one of the most rapidly growing and popular industries in the world and the year 2021 is a great time to enter the field. Reports suggest that web developer jobs are going to grow by thirteen percent between 2018
+                        and 2028. ... Typical job growth across all industries stands at only five percent.</p>
+                    <a class="text-indigo-500 inline-flex items-center mt-3">Learn More
+                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
+                  <path d="M5 12h14M12 5l7 7-7 7"></path>
+                </svg>
+              </a>
+                </div>
+            </div>
+
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- courses section end here -->
+
+
+    <!-- contact us starts -->
+    <div class="flex flex-col text-center w-full mb-20" id="contact">
+        <h1 class="sm:text-7xl text-2xl font-medium title-font mb-4 text-blue-500">Contact Us</h1>
+    </div>
+
+    <section class="text-gray-600 body-font relative">
+
+        <div class="absolute inset-0 bg-gray-300">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3578.4881887641!2d68.40941541423318!3d26.24581469479994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x394a4d48d004c98d%3A0xf060df76b3b97bb!2sNawabshah%20Railway%20Station!5e0!3m2!1sen!2s!4v1639239482122!5m2!1sen!2s"
+                width="100%" height="100%" frameborder="0" marginheight="0" marginwidth="0" title="map" scrolling="no" style="filter: grayscale(0.3) contrast(1.2) opacity(0.5);" allowfullscreen="" loading="lazy"></iframe>
+
+        </div>
+
+        <div class="container px-5 py-24 mx-auto flex">
+            <div class="lg:w-1/3 md:w-1/2 bg-white rounded-lg p-8 flex flex-col md:ml-auto w-full mt-10 md:mt-0 relative z-10 shadow-md">
+                <h2 class="text-gray-900 text-lg mb-1 font-medium title-font">Contact Us</h2>
+                <p class="leading-relaxed mb-5 text-gray-600">We are waiting for your valuable feedback</p>
+                <div class="relative mb-4">
+                    <label for="email" class="leading-7 text-sm text-gray-600">Email</label>
+                    <input type="email" id="email" name="email" class="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+                </div>
+                <div class="relative mb-4">
+                    <label for="message" class="leading-7 text-sm text-gray-600">Message</label>
+                    <textarea id="message" name="message" class="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 h-32 text-base outline-none text-gray-700 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"></textarea>
+                </div>
+                <button class="text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg">Submit</button>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- contact us ends -->
+
+
+
+
+
+    <!-- Developed by starts -->
+    <!-- <section class="text-gray-600 body-font">
+        <div class="flex flex-col text-center w-full mb-20">
+            <h1 class="sm:text-7xl text-2xl font-medium title-font mb-4 text-blue-500">Developed by </h1>
+        </div>
+        <div class="container px-5 py-24 mx-auto">
+            
+            <div class="xl:w-1/2 lg:w-3/4 w-full mx-auto text-center">
+                <img alt="testimonial" class="w-40 h-40 mb-8 object-cover object-center rounded-full inline-block border-2 border-gray-200 bg-gray-100" src="https://dummyimage.com/300x300">
+                <h2 class="text-gray-900 font-large title-font tracking-wider text-lg font-semibold">HOLDEN CAULFIELD</h2>
+                <p class="text-gray-500">Senior Product Designer</p>
+                <p class="leading-relaxed text-lg">Edison bulb retro cloud bread echo park, helvetica stumptown taiyaki taxidermy 90's cronut +1 kinfolk. Single-origin coffee ennui shaman taiyaki vape DIY tote bag drinking vinegar cronut adaptogen squid fanny pack vaporware. Man bun next
+                    level coloring book skateboard four loko knausgaard. Kitsch keffiyeh master cleanse direct trade indigo juice before they sold out gentrify plaid gastropub normcore XOXO 90's pickled cindigo jean shorts. Slow-carb next level shoindigoitch
+                    ethical authentic, yr scenester sriracha forage franzen organic drinking vinegar.</p>
+            </div>
+        </div>
+    </section> -->
+    <!-- Developed by ends -->
+
+
+    <!-- footer starts -->
+    <section class="text-gray-600 body-font relative">
+        <footer class="text-gray-600 body-font">
+            <div class="container px-5 py-24 mx-auto flex md:items-center lg:items-start md:flex-row md:flex-nowrap flex-wrap flex-col">
+                <div class="w-64 flex-shrink-0 md:mx-0 mx-auto text-center md:text-left">
+                    <a class="flex title-font font-large items-center md:justify-start justify-center text-gray-900">
+
+                        <img class="w-10 h-10 text-white p-2  bg-indigo-500 rounded-full" src="images\logo.png">
+                        <span class="ml-3 text-xl">BrightSide</span>
+                    </a>
+
+                </div>
+                <div class="flex-grow flex flex-wrap md:pl-20 -mb-10 md:mt-0 mt-10 md:text-left text-center">
+                    <div class="lg:w-2/4 md:w-1/2 w-full px-4">
+                        <h2 class="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">CATEGORIES</h2>
+                        <nav class="list-none mb-10">
+                            <li>
+                                <a class="text-gray-600 hover:text-gray-800">Programming</a>
+                            </li>
+                            <li>
+                                <a class="text-gray-600 hover:text-gray-800">Graphic Designing</a>
+                            </li>
+                            <li>
+                                <a class="text-gray-600 hover:text-gray-800">Python Programming</a>
+                            </li>
+                            <li>
+                                <a class="text-gray-600 hover:text-gray-800">Web Development</a>
+                            </li>
+
+                        </nav>
+
+                    </div>
+                    <div class="lg:w-2/4 md:w-1/2 w-full px-4">
+                        <h2 class="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">CATEGORIES</h2>
+                        <nav class="list-none mb-10">
+                            <li>
+                                <a class="text-gray-600 hover:text-gray-800">Android Development</a>
+                            </li>
+                            <li>
+                                <a class="text-gray-600 hover:text-gray-800">Creative Designing</a>
+                            </li>
+                            <li>
+                                <a class="text-gray-600 hover:text-gray-800">App Development</a>
+                            </li>
+                            <li>
+                                <a class="text-gray-600 hover:text-gray-800">Digital Marketing</a>
+                            </li>
+                        </nav>
+
+                    </div>
+                </div>
+                <div class="lg:w-1/4 md:w-1/2 w-full px-4">
+                    <h2 class="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">SUBSCRIBE FOR NEWSLETTER</h2>
+                    <div class="flex xl:flex-nowrap md:flex-nowrap lg:flex-wrap flex-wrap justify-center items-end md:justify-start">
+
+                        <button class="lg:mt-2 xl:mt-0 flex-shrink-0 inline-flex text-white bg-blue-500 border-0 py-2 px-6 focus:outline-none hover:bg-blue-600 rounded">SUBSCRIBE</button>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="bg-gray-100">
+                <div class="container mx-auto py-4 px-5 flex flex-wrap flex-col sm:flex-row">
+                    <p class="text-gray-500 text-sm text-center sm:text-left">© 2020 BrightSide —
+                        <a href="https://twitter.com/knyttneve" rel="noopener noreferrer" class="text-gray-600 ml-1" target="_blank">@HiraAmir</a>
+                    </p>
+                    <span class="inline-flex sm:ml-auto sm:mt-0 mt-2 justify-center sm:justify-start">
+        <a class="text-gray-500">
+          <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+            <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+          </svg>
+        </a>
+        <a class="ml-3 text-gray-500">
+          <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+            <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"></path>
+          </svg>
+        </a>
+        <a class="ml-3 text-gray-500">
+          <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+            <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+            <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"></path>
+          </svg>
+        </a>
+        <a class="ml-3 text-gray-500">
+          <svg fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="0" class="w-5 h-5" viewBox="0 0 24 24">
+            <path stroke="none" d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"></path>
+            <circle cx="4" cy="4" r="2" stroke="none"></circle>
+          </svg>
+        </a>
+      </span>
+                </div>
+            </div>
+        </footer>
+    </section>
+    <!-- footer ends here -->
+
+
+</body>
+
+</html>
