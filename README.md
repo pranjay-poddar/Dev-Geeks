@@ -674,6 +674,27 @@ Happy Coding! -->
 <td align="center"> 227.</td>
 <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Js-Projects/Digital%20Clock%20using%20JS"> Digital Clock using JS </a></td>
 </tr>
+
+<td align="center"> 228.</td>
+<td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Animations-JS/Snow%20Background%20Animation"> Snow Background Animation </a></td>
+<td align="center"> 229.</td>
+<td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Node-JS%20Projects/Newsletter%20API%20Node.js"> Newsletter API </a></td>
+<td align="center"> 230.</td>
+<td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Js-Projects/Height-converter"> Height-converter </a></td>
+<td align="center"> 231.</td>
+<td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Js-Projects/Quizzzeerrrrrr%20Quiz%20Web%20App"> Quizzzeerrrrrr-Quiz-Web-App </a></td>
+<td align="center"> 232.</td>
+<td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Frontend-Projects/Notes_App"> Notes_App </a></td>
+</tr>
+
+
+<td align="center"> 233.</td>
+<td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Java%20Projects/Rockpaperscissors"> Picture matching game </a></td>
+<td align="center"> 234.</td>
+<td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Frontend-Projects/Netflix%20Clone"> Netflix Clone </a></td>
+<td align="center"> 235.</td>
+<td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Python%20Projects/Text-to-handwriting"> Text-to-handwriting </a></td>
+</tr>
 	
 </table>
 
