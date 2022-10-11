@@ -1,0 +1,153 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins', sans-serif;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+
+}
+.card{
+    position: relative;
+    width: 600px;
+    height: 350px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    border-radius: 20px;
+    transition: 0.5s;
+
+
+}
+.card .circle{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    overflow: hidden;
+
+}
+.card .circle::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #d83133;
+    clip-path: circle(120px at center);
+    transition: 0.5s;
+
+} 
+.card:hover .circle:before{
+    clip-path: circle(400px at center);
+    background: #0065c3;
+
+
+
+
+}
+.card img{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    height: 300px;
+    pointer-events: none;
+    transition: 0.5s;
+
+}
+.card:hover img{
+    left: 72%;
+    height: 500px;
+
+}
+.card .content{
+    position: relative;
+    width: 50%;
+    left: 20%;
+    padding: 20px 20px 20px 40px;
+    transition: 0.5s;
+    visibility: hidden;
+    
+
+
+}
+.card:hover .content{
+    left: 0;
+    opacity: 1;
+    visibility: visible;
+
+}
+.card .content h2 {
+    color: white;
+    text-transform: uppercase;
+    font-size: 2em;
+    line-height: 1en;
+    margin-bottom: 5px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+
+
+}
+.card .content p {
+    color: white;
+
+} 
+.card .content a{
+    position: relative;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 10px;
+    background: white;
+    color: black;
+    margin-top: 10px;
+    display: inline-block;
+    text-decoration: none;
+    font-weight: 700;
+}
+@media (max-width:991px)
+{
+    .card{
+        width: auto;
+        max-width: 350px;
+        align-items: flex-start;
+        margin: 10px;
+        
+    }
+    .card:hover{
+        height: 600px;
+    }
+    .card .content
+{
+    width: 100%;
+    left: 0;
+    padding: 40px;
+}
+.card:hover img{
+    top: 70%;
+    left: 50%;
+    height: 320px;
+
+    
+}
+}
+@media (max-width: 420px)
+{
+    .card .content{
+        padding: 20px;
+    }
+}
+
+
+
+
+
