@@ -1,0 +1,162 @@
+body {
+    height: 100%;
+    background-color: cadetblue;
+    background: linear-gradient(to right, rgb(121, 145, 187), rgb(174, 201, 248), rgb(148, 186, 252));
+
+}
+
+.wpBackground {
+    height: 100vh;
+    min-height: 500px;
+    background: url(images/WeatherPrpBG.png) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+
+}
+
+#forecastTab li a.active {
+    border-bottom-color: transparent;
+    background-color: var(--CFColors-Orange-rgba);
+    color: var(--CFColors-darkGrey-rgba);
+    font-weight: bold;
+}
+
+#forecastTab li a {
+    border-bottom-color: transparent;
+    /*background-color: var(--CFColors-ltGrey-rgba);*/
+    color: white;
+    font-weight: 400;
+}
+
+
+
+:root {
+
+    /* Color Theme Swatches in RGBA */
+    --CFColors-darkGrey-rgba: rgba(33, 33, 33, 1);
+    --CFColors-grayBlue-rgba: rgba(44, 66, 81, .5);
+    --CfColors-darkBlue-rgba: rgba(0, 115, 171, .5);
+    --CFColors-Orange-rgba: rgba(247, 148, 29, .5);
+    --CFColors-ltGrey-rgba: rgba(223, 227, 228, .5);
+    --CFColors-Black-rgba: rgba(0, 0, 0, 1);
+}
+
+#weatherIcon {
+    max-width: 100%;
+    height: auto;
+
+}
+
+#location {
+    font-weight: bolder;
+}
+
+#wpTitle {
+    font-family: titling-gothic-fb-wide, sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 1.5em;
+    color: var(--CFColors-darkGrey-rgba);
+    -webkit-text-fill-color: white;
+    /* Will override color (regardless of order) */
+    -webkit-text-stroke-width: 1.5px;
+    -webkit-text-stroke-color: var(--CFColors-darkGrey-rgba);
+}
+
+#wpMain {
+    color: white;
+    padding: 20px;
+    resize: vertical;
+}
+
+#wpCurrent {
+    background-color: var(--CFColors-grayBlue-rgba);
+    color: white;
+    resize: vertical;
+}
+
+#currentTemp {
+    font-size: 5em;
+    font-family: titling-gothic-fb-wide, sans-serif;
+    color: white;
+    -webkit-text-fill-color: white;
+    /* Will override color (regardless of order) */
+    -webkit-text-stroke-width: 1.5px;
+    -webkit-text-stroke-color: var(--CFColors-darkGrey-rgba);
+}
+
+#wpConditions {
+    background-color: var(--CFColors-Orange-rgba);
+    color: white;
+    padding: 20px;
+    resize: vertical;
+
+}
+
+#wpForecast {
+    background-color: var(--CfColors-darkBlue-rgba);
+    color: white;
+    padding: 20px;
+    resize: vertical;
+    font-size: 1em;
+}
+
+#wpFooter {
+    font-size: 1em;
+    color: var(--CFColors-darkGrey-rgba);
+}
+
+#wpFooter div a {
+    font-size: 1em;
+    color: var(--CFColors-darkGrey-rgba);
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+    #wpTitle {
+        font-size: 1.5em;
+    }
+
+
+    #wpCurrent,
+    #wpConditions {
+        font-size: 1.5em;
+    }
+}
+
+/* Medium devices (tablets, 768px and up) The navbar toggle appears at this breakpoint */
+@media (min-width: 768px) {
+    #wpTitle {
+        font-size: 2em;
+    }
+
+    #wpCurrent,
+    #wpConditions {
+        font-size: 1.5em;
+    }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+    #wpTitle {
+        font-size: 2em;
+    }
+
+    #wpCurrent,
+    #wpForcast {
+        font-size: 1.5em;
+    }
+
+
+}
+
+@media (min-width :992px) {
+    #wpBackground {
+        font-size: 1em;
+    }
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {}
