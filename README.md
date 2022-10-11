@@ -19,8 +19,6 @@
    <!--- <a href="https://github.com/pranjay-poddar"><img src="https://github.com/pranjay-poddar/Dev-Geeks/blob/main/Repository_images/hackclubrait-logo.png" width="200px" />   
     </a>
    -->
-   <a href="https://github.com/pranjay-poddar"><img src="https://github.com/pranjay-poddar/Dev-Geeks/blob/main/Repository_images/Email%20Banners-Dark.png" width="600px" />
-    </a>
   </p>
 	<table align="center">
     <thead align="center">
