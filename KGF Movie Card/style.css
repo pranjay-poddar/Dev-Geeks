@@ -1,0 +1,69 @@
+*{
+  box-sizing:border-box;
+  font-family: 'Nunito', sans-serif;
+}
+body{
+  background-color:#ecf0f1;
+}
+#mainConatiner{
+  width:750px;
+  height:600px;
+   background-image:url("https://www.greatandhra.com/newphotos10/kgf2_101649933206.jpg");
+  background-size: cover;
+  background-position: -44px -10px;
+  background-repeat:no-repeat;
+  margin:0 auto;
+  display:flex;
+  flex-direction:column;
+  justify-content:flex-end;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
+}
+#description{
+  height:300px;
+  background-color:white;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 96%, 0 100%);
+  clip-path: polygon(0 20%, 100% 0, 100% 100%, 0 100%);
+  display:flex;
+  flex-direction:column;
+  padding-top:40px;
+  padding-bottom:20px;
+  justify-content:center;  
+}
+#title{
+  height:110px;
+}
+#info{
+  height:160px;
+  padding:26px;
+  font-size:15px;
+  color:#95a5a6;
+}
+#title > h3{
+  margin-top:10px;
+  margin-bottom:10px;
+  text-align:right;
+  color:#2c3e50;
+  padding-right:12px;
+  font-size:36px;
+}
+ul#menu li {
+    display:inline;
+    color:#d35400;
+  font-weight:bolder;
+}
+#buttons{
+  height:70px;
+  background-color:#000;
+  display:flex;
+  justify-content:space-between;
+/*   align-items:center; */
+}
+#buttons > div{
+  width:49.9%;
+  padding:8px;
+  display:flex;
+  justify-content:space-around;
+  align-items:center;
+/*   color:white; */
+  background-color:#f39c12;
+}
