@@ -666,6 +666,9 @@ Happy Coding! -->
 <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Frontend-Projects/Electronic%20Gadget"> Electronic Gadget </a></td>
 <td align="center"> 224.</td>
 <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/ML%20Projects/Analysis%20of%20Fashion_dataset"> Analysis_ of Fashion dataset </a></td>
+<td align="center"> 225.</td>
+<td align="center"> <a href=" https://github.com/UKVeteran/Dev-Geeks/tree/main/KGF%20Movie%20Card"</a></td>
+
 </tr>
 	
 </table>
@@ -674,7 +677,8 @@ Happy Coding! -->
 
 - Drop a :star: on the Github repository (optional)<br/>
 
-- Create an issue of the project or a feature you would like to add in the project and get the task assigned for youself. (issue can be any feature or project that you think you could contribute to).
+- Create an issue of the project or a feature you would like to add in the project and get the task assigned for youself. (issue c
+an be any feature or project that you think you could c5ntribute to).
 
 - Fork the repo to your Github.<br/>
 
