@@ -1,4 +1,5 @@
 <h1 align="center"> Dev-Geeks </h1>
+<h2>This Project is No longer accepting Hacktoberfest'22 PRs</h2>
 <div align="center">
 <br>
 <h2 align="center"> A collection of vibrant frontend projects, mini-projects, components, animations, games and much more!</h2>
