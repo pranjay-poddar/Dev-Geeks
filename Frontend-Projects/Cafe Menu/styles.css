@@ -1,0 +1,216 @@
+body {
+    background-image: url(https://cdn.freecodecamp.org/curriculum/css-cafe/beans.jpg);
+    
+    font-family: sans-serif;
+    padding: 20px;
+    
+  }
+  
+  h1 {
+    font-size: 30px;
+    margin-top: -30px;
+    margin-bottom: 15px;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    left: 50%;
+    font-family: 'Times New Roman',serif;   
+    background-image: linear-gradient(
+     to right,
+     #462523 0,
+            #cb9b51 22%, 
+     #f6e27f 35%,
+     #f6f2c0 50%,
+     #f6e27a 55%,
+     #cb9b51 78%,
+     #462523 100%
+     );
+    color:transparent;
+    -webkit-background-clip:text;
+  }
+  
+  h2 {
+    font-size: 30px;
+    margin-top:60px;
+  }
+  
+  .established {
+    font-style: italic;
+    margin-top: 60px;
+  }
+  
+  h1, h2, p {
+    text-align: center;
+  }
+  
+  .menu {
+    width: 80%;
+    background-color: burlywood;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+    max-width: 500px;
+  }
+  
+  img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  hr {
+    height: 2px;
+    background-color: brown;
+    border-color: brown;
+    margin-top:0;
+  }
+  
+  .bottom-line {
+    margin-top: 25px;
+  }
+  
+  h1, h2 {
+    font-family: Impact, serif;
+  }
+  
+  .item p {
+    display: inline-block;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-size: 18px;
+  }
+  
+  .flavor, .dessert {
+    text-align: left;
+    width: 75%;
+  }
+  
+  .price {
+    text-align: right;
+    width: 25%;
+  }
+  
+  /* FOOTER */
+  
+  footer {
+    font-size: 14px;
+    background: url("coffee-img-1.svg"), url("coffee-img-2.svg");
+  }
+  
+  .address {
+    margin-bottom: 5px;
+  }
+  
+  a {
+    color: black;
+  }
+  
+  a:visited {
+    color: black;
+  }
+  
+  a:hover {
+    color: brown;
+  }
+  
+  a:active {
+    color: brown;
+  }
+  * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+ 
+  .cup {
+    height: 80px;
+    width: 90px;
+    border: 5px solid #030303;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    border-radius: 20px 20px 60px 60px;
+    background: url("coffee-img-1.svg"), url("coffee-img-2.svg");
+    background-position: 0 0, 0 0;
+    background-repeat: repeat-x;
+    animation: coffee 4s infinite linear;
+    
+  }
+  @keyframes coffee {
+    100% {
+      background-position: -100% 0, -100% 0;
+    }
+  }
+  .cup:before {
+    content: "";
+    position: absolute;
+    height: 40px;
+    width: 50px;
+    border: 5px solid #030303;
+    border-left: none;
+    right: -55px;
+    top: 30px;
+    border-radius: 0 30px 40px 0;
+  }
+  .cup:after {
+    position: absolute;
+    content: "";
+    height: 10px;
+    width: 190px;
+    background-color: #030303;
+    left: -45px;
+    bottom: -10px;
+    border-radius: 5px;
+  }
+  .bubble {
+    height: 15px;
+    width: 15px;
+    background-color: #fbbe08;
+    border-radius: 50%;
+    position: absolute;
+    animation: bubbles forwards infinite;
+    opacity: 0.6;
+  }
+  @keyframes bubbles {
+    100% {
+      transform: translateY(-150px);
+      opacity: 0;
+    }
+  }
+  .bubble-1 {
+    left: 15px;
+    bottom: 5px;
+    animation-delay: 0.5s;
+    animation-duration: 3s;
+  }
+  .bubble-2 {
+    left: 40px;
+    bottom: 20px;
+    animation-delay: 1.s;
+    animation-duration: 4s;
+  }
+  .bubble-3 {
+    left: 70px;
+    bottom: 20px;
+    animation-duration: 4s;
+  }
+  .bubble-4 {
+    left: 15px;
+    bottom: 5px;
+    animation-delay: 0.2s;
+    animation-duration: 3s;
+  }
+  .bubble-5 {
+    left: 40px;
+    bottom: 20px;
+    animation-delay: 0.8s;
+    animation-duration: 4s;
+  }
+  .bubble-6 {
+    left: 70px;
+    bottom: 20px;
+    animation-duration: 4s;
+  }
+  
+  
+  
