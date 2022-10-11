@@ -2,7 +2,7 @@
 """
 Created on Tue Oct  4 03:57:31 2022
 
-@author: samay
+@author: samay dumasia
 """
 
 import ctypes
@@ -12,6 +12,7 @@ import re
 import os
 import matplotlib.pyplot as plt
 
+#add dataset here
 df = pd.read_csv('Suicide_Detection_clean.csv')
 
 df = df.fillna('')
