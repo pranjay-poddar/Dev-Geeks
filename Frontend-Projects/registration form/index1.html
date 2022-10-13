@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+  <!--  By WIZEEWIG  -->
+  <head>
+    <title>Registration Form</title>
+
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1.0"
+    />
+    <!-- css ref -->
+    <link rel="stylesheet" href="styles.css" />
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <!-- bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+      crossorigin="anonymous"
+    />
+  </head>
+
+  <body>
+    <h1>STUDENT REGISTRATION FORM</h1>
+    <div class="center">
+      <form>
+        <label> First Name:</label>
+        <input
+          type="text"
+          maxlength="30"
+          placeholder="Enter First Name"
+          size="50"
+          required
+        />
+        <br />
+        <label> Second Name:</label>
+        <input
+          type="text"
+          maxlength="30"
+          placeholder="Enter Second Name"
+          size="50"
+          required
+        />
+        <br />
+        <label> Email:</label>
+        <input type="mail" placeholder="Enter your Email" size="50" required />
+        <br />
+        <label>Enter Mobile No. :</label>
+        <input
+          type="phone"
+          placeholder="Enter 10 digit Mobile Number"
+          maxlength="10"
+          size="30"
+          required
+        />
+        <br />
+        <label>Address:</label>
+        <textarea
+          name="address"
+          id="address"
+          placeholder="Address"
+          cols="5"
+          rows="5"
+        ></textarea>
+        <br />
+        <label>City:</label>
+        <input
+          type="text"
+          maxlength="30"
+          placeholder="Enter your City"
+          size="50"
+          required
+        />
+        <br />
+        <label>Pin Code:</label>
+        <input
+          type="text"
+          maxlength="6"
+          placeholder="Enter the Pincode"
+          size="50"
+          required
+        />
+        <br />
+        <label for="states">State:</label>
+        <input
+          type="text"
+          list="states"
+          maxlength="30"
+          placeholder="Enter your State"
+          size="50"
+        />
+        <datalist id="states">
+          <option value="Andhra Pradesh"></option>
+          <option value="Arunachal Pradesh"></option>
+          <option value="Assam"></option>
+          <option value="Bihar"></option>
+          <option value="Chattisgarh"></option>
+          <option value="Goa"></option>
+          <option value="Gujarat"></option>
+          <option value="Haryana"></option>
+          <option value="Himachal Pradesh"></option>
+          <option value="Jharkhand"></option>
+          <option value="Karnataka"></option>
+          <option value="Kerela"></option>
+          <option value="Madhya Pradesh"></option>
+          <option value="Maharashtra"></option>
+          <option value="Manipur"></option>
+          <option value="Meghalaya"></option>
+          <option value="Mizoram"></option>
+          <option value="Nagaland"></option>
+          <option value="Odisha"></option>
+          <option value="Punjab"></option>
+          <option value="Rajasthan"></option>
+          <option value="Sikkim"></option>
+          <option value="TamilNadu"></option>
+          <option value="Telangana"></option>
+          <option value="Tripura"></option>
+          <option value="Uttarakhand"></option>
+          <option value="Uttar Pradesh"></option>
+          <option value="West Bengal"></option>
+        </datalist>
+        <br />
+        <label>Country:</label>
+        <input type="text" value="India" size="50" required />
+        <br />
+        <button type="submit" class="btn btn col-md-3 col-lg-4 col-sm-2  center align">
+      </form>
+        Submit
+      </button>
+    </div>
+  </body>
+</html>
