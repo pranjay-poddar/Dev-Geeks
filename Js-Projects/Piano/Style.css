@@ -1,0 +1,58 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(to bottom, #6FB2D2, #85C88A, #EBD671, #EEEEEE);
+    ;
+    /* fallback for old browsers */
+    background: burlywood;
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom, #332FD0, #9254C8, #E15FED, #6EDCD9);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.piano {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.key {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    font-size: 1.2rem;
+    font-weight: bolder;
+    padding-bottom: 28px;
+}
+
+.white {
+    width: 10%;
+    min-width: 60px;
+    height: 70%;
+    background-color: white;
+    border: 1px solid #ccc;
+    color: #000;
+}
+
+.black {
+    width: 8%;
+    height: 45%;
+    margin-left: -4%;
+    margin-right: -4%;
+    z-index: 2;
+    background-color: black;
+    color: #fff;
+}
+
+.white.active {
+    background-color: #ccc;
+}
+
+.black.active {
+    background-color: #333;
+}
