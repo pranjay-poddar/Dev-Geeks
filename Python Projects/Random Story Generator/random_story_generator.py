@@ -4,6 +4,7 @@
 #   3) run the command 'python random_story_generator.py' 
 
 import random
+from typing import List
 
 when = [
   "In ancient times", "A long long time ago", "A few years ago", 
@@ -50,4 +51,7 @@ went = ['cinema', 'university','seminar', 'school', 'laundry', 'playground', 'sh
 
 what = ['made a lot of friends', 'ate a burger', 'found a magical key', 'solved a mystery', 'wrote a book', 'discovered raw gems', 'ate delicious food', 'drank awesome drinks', 'ate yummy cookies', 'found ancient relics', 'saw something funny']
 
-print(random.choice(when) + ', ' + random.choice(who) + ' that lived in ' + random.choice(where) + ', went to the ' + random.choice(went) + ' and ' + random.choice(what))
+def randomizer(arg:List[str]) -> str:
+    return random.choice(arg)
+
+print(f'{randomizer(when)}, {randomizer(who)} that lived in {randomizer(where)}, went to the {randomizer(went)} and {randomizer(what)}')
