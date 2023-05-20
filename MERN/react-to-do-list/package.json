@@ -1,0 +1,21 @@
+{
+  "name": "to-do-list",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "material-ui": "^0.19.4",
+    "prop-types": "^15.5.8",
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1",
+    "react-scripts": "1.0.14",
+    "react-swipeable-views": "^0.12.10",
+    "react-transition-group": "^1.2.1",
+    "sort-by": "^1.2.0"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  }
+}

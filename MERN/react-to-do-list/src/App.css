@@ -1,0 +1,94 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 80px;
+}
+
+.App-header {
+  background-color: #222;
+  height: 150px;
+  padding: 20px;
+  color: white;
+}
+
+.App-title {
+  font-size: 1.5em;
+}
+
+.App-intro {
+  font-size: large;
+}
+
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.app-separator {
+  position: static;
+  height: 228px;
+}
+
+.enable-remove-mode {
+  position: fixed;
+  right: 25px;
+  bottom: 25px;
+}
+.remove-mode {
+  padding-top: 10px;
+}
+
+.swipeable-views {
+  padding: 10px;
+}
+
+/* task transition animations */
+
+.task-animation-enter {
+  opacity: 0.01;
+  height: 0;
+}
+
+.task-animation-enter.task-animation-enter-active {
+  opacity: 1;
+  height: 56px;
+  transition: 500ms;
+}
+
+.task-animation-leave {
+  opacity: 1;
+  height: 56px;
+}
+
+.task-animation-leave.task-animation-leave-active {
+  opacity: 0.01;
+  height: 0;
+  transition: 300ms;
+}
+
+/* remove mode transition animations */
+
+.remove-mode-animation-enter {
+  opacity: 0.01;
+  height: 0;
+}
+
+.remove-mode-animation-enter.remove-mode-animation-enter-active {
+  opacity: 1;
+  height: 36px;
+  transition: 300ms;
+}
+
+.remove-mode-animation-leave {
+  opacity: 1;
+  height: 36px;
+}
+
+.remove-mode-animation-leave.remove-mode-animation-leave-active {
+  opacity: 0.01;
+  height: 0;
+  transition: 300ms;
+}
