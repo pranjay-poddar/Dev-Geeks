@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EMI Calculator</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Emi Calculator</h1>
+
+      <label for="amount-input">
+        Loan Amount
+
+        <input type="number" id="amount-input" name="number-output" />
+
+        <input
+          type="range"
+          id="range-input"
+          name="range-input"
+          min="10000"
+          max="1000000"
+          onchange="updateAmount()"
+        />
+      </label>
+
+      <br />
+      <label for="interest-rate"> Interest Rate (P.A %) </label>
+
+      <input id="interest-rate" type="number" name="interest-input" />
+      <input
+        type="range"
+        id="interest-input"
+        name="interest-input"
+        min="1"
+        max="50"
+        onchange="updateInterest()"
+      />
+
+      <br />
+
+      <label for="month-input">
+        Loan tenure in months (In Years)
+        <input id="month-input" type="number" />
+        <input type="range" name="month" id="month" onchange="updateMonth()" />
+      </label>
+
+      <br />
+
+      <button id="emi-Btn">Calculate your Emi</button>
+
+      <h2 id="output">show emi here</h2>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

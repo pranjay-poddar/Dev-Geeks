@@ -1,0 +1,66 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 100vh;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background-color: #ccc;
+}
+
+.container {
+  line-height: 3px;
+  width: 900px;
+  margin: 2rem;
+}
+
+label,
+input {
+  display: block;
+}
+
+h1 {
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+label {
+  font-size: 1.3rem;
+  padding-top: 1rem;
+}
+
+input,
+button {
+  margin: 1rem 0;
+  padding: 0.6rem 1rem;
+  width: 100%;
+  border: none;
+  outline: none;
+  font-size: 1.3rem;
+}
+
+button {
+  background-color: black;
+  color: #fff;
+  font-size: 1.5rem;
+}
+
+button:hover {
+  opacity: 89%;
+}
+
+#output {
+  text-align: center;
+  padding-top: 3rem;
+}
+
+@media (max-width: 900px) {
+  .container {
+    margin: 1rem;
+  }
+}
