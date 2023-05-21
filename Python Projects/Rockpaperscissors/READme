@@ -23,3 +23,13 @@ This is a simple implementation of the classic game "Rock, Paper, Scissors" usin
 ## Requirements
 
 - Python 
+##Game Rules
+ Here are the rules for the game of Rock, Paper, Scissors:
+
+1.Rock beats Scissors: A player who chooses Rock wins against an opponent who chooses Scissors. Rock smashes Scissors.
+
+2.Paper beats Rock: A player who chooses Paper wins against an opponent who chooses Rock. Paper covers Rock.
+
+3.Scissors beat Paper: A player who chooses Scissors wins against an opponent who chooses Paper. Scissors cut Paper.
+
+4.If both players choose the same option, it's a tie, and the game is usually played again.
