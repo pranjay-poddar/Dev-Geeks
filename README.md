@@ -668,10 +668,11 @@ Happy Coding! -->
 
 <td align="center"> 224.</td>
 <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/ML%20Projects/Analysis%20of%20Fashion_dataset"> Analysis_ of Fashion dataset </a></td>
-</tr>
 
 <td align="center"> 225.</td>
 <td align="center"> <a href="https://github.com/shubhanshurav/Dev-Geeks/tree/master/Js-Games/Amazing-Snake-Game"> Amazing Snake Game </a></td>
+<td align="center"> 226.</td>
+<td align="center"> <a href="https://github.com/shubhanshurav/Dev-Geeks/tree/master/Js-Games/Amazing-Snake-Game"> Banking System </a></td>
 </tr>
 	
 </table>
