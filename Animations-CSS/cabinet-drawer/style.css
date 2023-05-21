@@ -37,7 +37,7 @@ body {
   height: calc(var(--height) * 1vmin);
   transform: translate3d(0, 0, 50vmin) rotateX(-32deg) rotateY(40deg);
   width: calc(var(--width) * 1vmin);
-  color: #1d1919;
+  color: #0c0c0c;
 }
 .chest__panel {
   position: absolute;
