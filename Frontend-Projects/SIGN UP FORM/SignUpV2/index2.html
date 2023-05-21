@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Dev-Geeks</title>
+
+<!--  Script-->
+  <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+
+<!--Google Doddle CSS link-->
+  <script src="css-doodle-0.34.0/css-doodle.js"></script>
+    <script src="https://unpkg.com/css-doodle@0.34.9/css-doodle.min.js"></script>
+
+<!--  CSS Style Linking -->
+  <link rel="stylesheet" href="./style2.css"/>
+  <link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+    <link rel="stylesheet" href="responsive2.css">
+
+<!--  AwsomeFont CND -->
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://rawcdn.githack.com/hung1001/font-awesome-pro/4cac1a6/css/all.css" rel="stylesheet" type="text/css" />
+
+<!--  Web Font -->
+  <link href="//fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i" rel="stylesheet">
+
+</head>
+<body>
+
+<!--Main section of Sign Up Form-->
+
+<main>
+  <section class="signUp-Form">
+    <div class="signup_container">
+      <div class="Signup-Side">
+        <h1 class="prim-signUp-heading">
+          Sign Up
+        </h1>
+
+        <div class="signUp-info">
+          <form action="#" method="post">
+            <div class="input-info">
+              <div class="input-field">
+<!--                <i class="fa-regular fa-user"></i>-->
+                <img src="assets/user.svg" alt="">
+                <input class="text" type="text" name="username" placeholder="Username" required="">
+              </div>
+
+              <div class="input-field">
+                <i class="fa-regular fa-mail"></i>
+                <img src="assets/mail.svg" alt="">
+                <input class="text email" type="email" name="email" placeholder="Email" required="">
+              </div>
+
+              <div class="input-field">
+                <i class="fa-regular fa-pass"></i>
+                <img src="assets/password.svg" alt="">
+                <input id="password" class="text pass" type="password" name="password" placeholder="Password"
+                       required="">
+                  <i class="far fa-eye" id="togglePassword" style="margin: 12.5px; color: #45108c;
+                  position: absolute; right: -2px; cursor: pointer;"
+                  ></i>
+              </div>
+
+              <div class="input-field">
+                <img src="assets/password.svg" alt=alt"">
+                <input id="confirm_password" class="text passConfirm" type="password" name="password"
+                       placeholder="Confirm Password" id="confirm_password" required="">
+              </div>
+            </div>
+
+            <div class="ToS">
+              <label>
+                <input type="checkbox" class="checkbox" required="">
+                <span>I Agree To The Terms & Conditions</span>
+              </label>
+            </div>
+            <input class="submit-btn" type="submit" value="Sign Up">
+          </form>
+
+          <p>Don't have an Account? <a href="#"> Login Now!</a></p>
+        </div>
+
+      </div>
+      <div class="doddle-side">
+        <css-doodle click-to-update>
+          <style>
+              @grid: 12 / 65vh / #0a0c27;
+          --hue: calc(180 + 1.5 * @x * @y);
+          background: hsl(var(--hue), 50%, 70%);
+          margin: -.5px;
+          transition: @r(.5s) ease;
+          clip-path: polygon(@p(
+          '0 0, 100% 0, 100% 100%',
+          '0 0, 100% 0, 0 100%',
+          '0 0, 100% 100%, 0 100%',
+          '100% 0, 100% 100%, 0 100%'
+          ));
+          </style>
+        </css-doodle>
+      </div>
+    </div>
+  </section>
+
+  <div class="Footer">
+    <p>© 2022 Dev-Geeks Signup Form. All rights reserved | Design by <a href="https://github.com/pranjay-poddar/Dev-Geeks" target="_blank">Dev-Geeks</a></p>
+  </div>
+</main>
+
+</body>
+<script>
+const password = document.getElementById("password");
+const confirm_password = document.getElementById("confirm_password");
+const togglePassword = document.querySelector('#togglePassword');
+
+// Password Validation
+function validatePassword() {
+    if (password.value !== confirm_password.value) {
+        confirm_password.setCustomValidity("Passwords Don't Match");
+    } else {
+        confirm_password.setCustomValidity('');
+    }
+}
+
+password.onchange = validatePassword;
+confirm_password.onkeyup = validatePassword;
+
+// Toggle Password eye
+
+togglePassword.addEventListener('click', function (e) {
+    const type = password.getAttribute('type') === 'password' ? 'text' : 'password';
+    password.setAttribute('type', type);
+    confirm_password.setAttribute('type', type);
+    this.classList.toggle('fa-eye-slash');
+});
+
+</script>
+</html>
+
+
