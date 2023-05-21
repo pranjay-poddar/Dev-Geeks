@@ -1,0 +1,78 @@
+@media screen and (max-width: 30rem) {
+    .doddle-side{
+        max-height: 64rem;
+    }
+}
+
+@media screen and (max-width: 35.5rem) {
+    /* CSS rules for iPhone 5/SE go here */
+    .doddle-side{
+        max-height: 64rem;
+    }
+}
+
+@media screen and (max-width: 23.375rem) {
+    /* CSS rules for iPhone 6/7/8/X go here */
+    .doddle-side{
+        max-height: 64rem;
+    }
+}
+
+@media screen and (max-width: 25.875rem) {
+    /* CSS rules for iPhone 6/7/8 Plus go here */
+    .doddle-side{
+        max-height: 64rem;
+    }
+}
+
+@media screen and (max-width: 42.25rem) {
+    /* CSS rules for portrait tablets go here */
+}
+
+@media screen and (max-width: 85.375rem) {
+    /* CSS rules for landscape tablets go here */
+}
+
+@media screen and (max-width: 105rem) {
+    /* CSS rules for small desktops and laptops go here */
+}
+
+@media screen and (min-width: 105rem) {
+    /* CSS rules for large desktops go here */
+}
+
+
+@media only screen and (min-width: 320px) and (max-width: 480px) {
+    /* CSS rules for smartphones go here */
+    
+}
+
+
+@media only screen and (min-width: 320px) and (max-width: 568px) {
+    /* CSS rules for iPhone 5/SE go here */
+}
+
+
+@media screen and (min-width: 375px) and (max-width: 667px) {
+    /* CSS rules for iPhone 6/7/8/X go here */
+}
+
+@media screen and (min-width: 414px) and (max-width: 736px) {
+    /* CSS rules for iPhone 6/7/8 Plus go here */
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    /* CSS rules for portrait tablets go here */
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1366px) {
+    /* CSS rules for landscape tablets go here */
+}
+
+@media screen and (min-width: 1367px) and (max-width: 1680px) {
+    /* CSS rules for small desktops and laptops go here */
+}
+
+@media screen and (min-width: 1681px) {
+    /* CSS rules for large desktops go here */
+}
