@@ -1,4 +1,7 @@
+//sign-in to open-weather api inorder to get your apikey
+
 const apikey="3c865c366a5470166aea5e2ccc871e8c";
+
 
 const weatherDataE1= document.getElementById("weatherdata");
 
@@ -11,7 +14,7 @@ formE1.addEventListener("submit",(event)=>{
     const cityValue=cityInputEl.value;
     getweatherdata(cityValue);
 });
-
+//to get the weather details from open weatherapi
 async function getweatherdata(cityValue){
     try {
         const response= await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${cityValue}&appid=${apikey}&units=metric`)
@@ -21,7 +24,7 @@ async function getweatherdata(cityValue){
         }
         const data= await response.json()
         console.log(data);
-       
+       //math.round is to round a number to its nearest value like eg.17.33 -> 17
         const temperature=Math.round(data.main.temp)
 
         const description=data.weather[0].description
@@ -33,7 +36,7 @@ async function getweatherdata(cityValue){
             `Humidity : ${data.main.humidity}%`,
             `Wind speed : ${data.wind.speed} m/s`,
         ]
-
+          // to get weather emojis
         weatherDataE1.querySelector(".icon").innerHTML= `<img src="https://openweathermap.org/img/wn/${icon}.png" alt="Weather icon">`;
 
         weatherDataE1.querySelector(".temperature").textContent = `${temperature}°C`;
