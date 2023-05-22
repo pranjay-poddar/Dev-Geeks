@@ -1,0 +1,17 @@
+asgiref==3.6.0
+certifi==2022.12.7
+charset-normalizer==3.1.0
+distlib==0.3.6
+Django==4.2.1
+django-cors-headers==3.14.0
+filelock==3.12.0
+idna==3.4
+pbr==5.11.1
+platformdirs==3.5.0
+requests==2.30.0
+sqlparse==0.4.4
+stevedore==5.0.0
+urllib3==2.0.2
+virtualenv==20.23.0
+virtualenv-clone==0.5.7
+virtualenvwrapper==4.8.4

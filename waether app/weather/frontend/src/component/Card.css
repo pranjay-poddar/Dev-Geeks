@@ -1,0 +1,80 @@
+body {
+    background-image: url('./sunny.jpg');
+    background-size: cover;
+  }
+
+.weather-app {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f2f2f2;
+  }
+  
+  .weather-app__heading {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: #333;
+  }
+  
+  .weather_form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .weather_label {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    color: #333;
+  }
+  
+  .weather_input {
+    font-size: 1.2rem;
+    padding: 0.5rem;
+    border-radius: 4px;
+    border: none;
+    margin-bottom: 1rem;
+    width: 300px;
+    max-width: 100%;
+  }
+  
+  .weather_button {
+    font-size: 1.2rem;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    border: none;
+    background-color: #4caf50;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+  }
+  
+  .weather_button:hover {
+    background-color: #388e3c;
+  }
+  
+  .weather_data {
+    margin-top: 2rem;
+    text-align: center;
+    background-color: white;
+    padding: 1rem;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .weather_city-name {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #333;
+  }
+  
+  .weather_temperature,
+  .weather_weather,
+  .weather_wind-speed {
+    font-size: 1.2rem;
+    margin-bottom: 0;
+    color: #333;
+  }
+  
