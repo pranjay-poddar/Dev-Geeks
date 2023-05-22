@@ -541,17 +541,20 @@ html {
 }
 
 .macbook-btn {
-  width: 25rem;
-  height: 5rem;
-  background-image: linear-gradient(#ddd, #fff);
-  border: none;
-  border-radius: 0.5rem;
-  box-shadow: 0.1rem 0.1rem 0.1rem #fff, -0.1rem -0.1rem 0.1rem #fff;
-  font-size: 1.5rem;
-  font-weight: 500;
-  letter-spacing: 0.2rem;
+  bottom: 30vh;
+  right: 80%;
+  width: 10rem;
+  height: 3rem;
+  background-color: var(--black-color);
   color: var(--primary-color);
+  border: 0.1rem dashed var(--primary-color);
+  border-radius: 8rem;
+  font-size: 2rem;
+  font-weight: 500;
   cursor: pointer;
+  padding-top: 0.3rem;
+  border: 1px solid;
+  text-align: center;
 }
 
 
@@ -569,7 +572,7 @@ html {
   overflow: hidden;
 }
 
-.watches>div {
+.watches div {
   position: absolute;
 }
 
@@ -648,9 +651,13 @@ html {
   color: var(--primary-color);
   border: 0.1rem dashed var(--primary-color);
   border-radius: 4rem;
-  font-size: 1.6rem;
-  font-weight: 200;
+  font-size: 2rem;
+  font-weight: 500;
   cursor: pointer;
+  padding-top: 0.3rem;
+border: 1px solid;
+text-align: center;
+
 }
 
 .section-5 {
@@ -875,7 +882,7 @@ html {
 
   .macbook-btn {
     width: 15rem;
-    height: 3rem;
+    height: 5rem;
     font-size: 1.3rem;
   }
 
@@ -889,7 +896,7 @@ html {
   }
 }
 
-@media (max-width: 450px) {
+@media (max-width:350px) {
   html {
     font-size: 35%;
   }
@@ -920,6 +927,11 @@ html {
 
   .macbook-info {
     width: 40rem;
+  }
+  .macbook-btn {
+    width: 15rem;
+    height: 5rem;
+    font-size: 1.3rem;
   }
 
   .macbook-info-heading {
