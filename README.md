@@ -670,7 +670,6 @@ Happy Coding! -->
 <td align="center"> 227.</td>
 <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Python%20Projects/Text%20Editor"> Text Editor in Python </a></td>
 </tr>
-</table>
 <td align="center"> 228.</td>
 <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Python%20Projects/Music%20Player"> Music Player in Python </a></td>
 </tr>
