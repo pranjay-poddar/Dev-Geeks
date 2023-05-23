@@ -79,3 +79,30 @@ body {
   color: var(--dark-text);
 }
 
+/* Game */
+.game {
+  position: relative;
+  display: grid;
+  grid-template-columns: (repeat(2, 1fr));
+  grid-template-areas:
+    "paper scissors"
+    "rock rock";
+  place-items: center;
+  height: 30rem;
+  padding-top: 4rem;
+}
+.choice-btn {
+  border: none;
+  outline: none;
+  background: none;
+  cursor: pointer;
+}
+.choice-btn[data-choice="paper"] {
+  grid-area: paper;
+}
+.choice-btn[data-choice="scissors"] {
+  grid-area: scissors;
+}
+.choice-btn[data-choice="rock"] {
+  grid-area: rock;
+}
