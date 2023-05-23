@@ -1,9 +1,11 @@
+/* Set the margin, padding, and background color for the body */
 body {
     margin: 0%;
     padding: 0%;
     background: #262626;
 }
 
+/* Styling for the glowing text container */
 .glowing {
     position: absolute;
     top: 50%;
@@ -11,6 +13,7 @@ body {
     transform: translate(-50%, -50%);
 }
 
+/* Styling for each individual span element */
 .glowing span {
     color: #fff;
     font-family: Verdana;
@@ -25,6 +28,7 @@ body {
     margin: 0 -2.5px;
 }
 
+/* Keyframes animation for the glow effect */
 @keyframes animate {
     0% {
         color: #f00;
@@ -48,6 +52,7 @@ body {
     }
 }
 
+/* Animation delay for each span element */
 .glowing span:nth-child(1) {
     animation-delay: 0s;
 }
