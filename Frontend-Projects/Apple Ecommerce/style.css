@@ -59,6 +59,7 @@ html {
   font-size: 2rem;
   display: inline-block;
   margin: 0 3rem;
+  font-weight: bolder;
   color: var(--black-color);
   transition: transform 0.5s;
 }
