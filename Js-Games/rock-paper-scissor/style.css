@@ -138,5 +138,15 @@ body {
 }
 .choice.paper::before{
   background:linear-gradient(to bottom, var(--paper-1), var(--paper-2));
+   box-shadow: 0 0.5rem var(--shadow-med), 0 0.5rem var(--paper-2);
+  
+}
+.choice.scissors::before{
+  background:linear-gradient(to bottom, var(--scissors-1), var(--scissors-2));
+  box-shadow: 0 0.5rem var(--shadow-med), 0 0.5rem var(--scissors-2);
+}
+.choice.rock::before{
+  background:linear-gradient(to bottom, var(--rock-1), var(--rock-2));
+  box-shadow: 0 0.5rem var(--shadow-med), 0 0.5rem var(--rock-2);
 }
 
