@@ -667,8 +667,9 @@ Happy Coding! -->
 <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Frontend-Projects/Electronic%20Gadget"> Electronic Gadget </a></td>
 <td align="center"> 224.</td>
 <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/ML%20Projects/Analysis%20of%20Fashion_dataset"> Analysis_ of Fashion dataset </a></td>
+<td align="center"> 227.</td>
+<td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Python%20Projects/Text%20Editor"> Text Editor in Python </a></td>
 </tr>
-	
 </table>
 
 ## How to contribute:
