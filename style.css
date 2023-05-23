@@ -6,8 +6,10 @@
 footer {
     background: black;
     color: white;
-    padding: 150px 15px;
+    padding: 50px 15px;
     width: 100%;
+    margin-bottom: 0%;
+    margin-top: 100%;
 }
 .center {
     align-items: center;
