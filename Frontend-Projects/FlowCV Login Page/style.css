@@ -1,0 +1,62 @@
+
+.title {
+    text-align: center;
+    margin-top: 75px;
+    margin-bottom: 0px;
+    font-family: "Inter";
+    font-size: 36px;
+}
+
+.card {
+    width: 400px;
+    height: 75vh;
+    border: 1px solid;
+    margin: 50px auto;
+    padding: 10px;
+    border-radius: 20px;
+    border: 2px solid #f20089;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+input {
+    display: block;
+    padding: 10px;
+    border: none;
+    border-bottom: 2px solid lightgray;
+    width: 75%;
+    margin-top: 50px;
+    font-size: 18px;
+    font-weight: 600;
+    color: rgb(206, 199, 199);
+    opacity: 0.8;
+}
+
+input:focus {
+    outline: none;
+}
+
+button {
+    padding: 15px;
+    width: 55%;
+    border-radius: 25px;
+    border: none;
+    color: white;
+    background-color: #e548a1;
+    font-size: 16px;
+    font-weight: 600;
+    margin-top: 65px;
+    cursor: pointer;
+}
+
+h2 {
+    font-family: Inter;
+    font-size: 14px;
+    margin-top: 35px;
+    cursor: pointer;
+}
