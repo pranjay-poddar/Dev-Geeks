@@ -91,6 +91,16 @@ body {
   height: 30rem;
   padding-top: 4rem;
 }
+.game::before{
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 28%;
+  top: 35%;
+  background:url(images/bg-triangle.svg) no-repeat;
+  z-index: -1;
+}
 .choice-btn {
   border: none;
   outline: none;
@@ -106,3 +116,27 @@ body {
 .choice-btn[data-choice="rock"] {
   grid-area: rock;
 }
+.choice {
+  position: relative;
+  width: 10rem;
+  height: 10rem;
+  background: #fff;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  box-shadow: inset 0 0.5rem var(--shadow-light);
+}
+.choice::before{
+  content: '';
+  position: absolute;
+  left: -15%;
+  top: -15%;
+  width: 130%;
+  height: 130%;
+  border-radius: 50%;
+  z-index: -1;
+}
+.choice.paper::before{
+  background:linear-gradient(to bottom, var(--paper-1), var(--paper-2));
+}
+
