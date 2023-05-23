@@ -1,4 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&family=Taviraj:wght@200;500&display=swap');
+/* Font */
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600;700&display=swap");
+
+/*Variable*/
+:root{
+--light-text: #ffffff;
+--dark-text:hsl(229, 25%, 31%);
+--score-text:hsl(229, 64%, 46%);
+--outline: hsl(217, 16%, 45%);
+--bg-grad-1:hsl(214, 47%, 23%);
+--bg-grad-2: hsl(237, 49%, 15%);
+--scissors-1:hsl(39, 89%, 49%)
+
+
+}
+
 
 body {
     background-color: #052755;
