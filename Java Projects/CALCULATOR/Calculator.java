@@ -14,6 +14,7 @@ public class Calculator extends JFrame implements ActionListener
       setLayout(new BorderLayout());
       JPanel p=new JPanel();
       p.setLayout(new GridLayout(4,4));
+      //created a for loop to add boxes for buttons
       for(int i=0;i<=9;i++)
       {
         b[i]=new JButton(i+"");
