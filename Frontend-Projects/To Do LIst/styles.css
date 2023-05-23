@@ -1,6 +1,7 @@
 body {
   text-align: center;
-  background-color: rgb(39, 35, 35);
+  /* background-color: rgb(39, 35, 35); */
+  background-color: #E384FF;
   font-family: 'Ubuntu', sans-serif;
 }
 h1 {
@@ -22,15 +23,18 @@ h2 {
 .container {
   border-radius: 5px;
   width: 30%;
-  margin: 4rem 0;
+  margin: 6rem 0 2rem;
   /* background-color: rgb(218, 211, 211); */
-  background: linear-gradient(
+  /* background: linear-gradient(
     to left,
     rgb(202, 100, 53) 0%,
     rgb(92, 5, 95) 100%
-  );
+  ); */
+  background-color: #AEE2FF;
+  border:5px solid black;
   padding: 4rem 0;
   margin-left: 35%;
+  box-shadow:5px 5px 5px #969696;
 }
 
 .addbtn {
@@ -133,4 +137,16 @@ h2 {
 
 .to-do-block {
   word-break: break-all;
+}
+
+
+#top_yello{
+  position:absolute;
+  top:130px;
+  right:37.5rem;
+}
+
+#imageee{
+  width: 40px;
+  padding-right: 1rem;
 }
