@@ -1,0 +1,219 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap');
+
+:root {
+    --dark-cyan : hsl(183, 100%, 15%);
+    --dark-grayish : hsl(186, 14%, 43%);
+    --graying-cyan : hsl(184, 14%, 56%);
+    --light-grayish-cyan : hsl(185, 41%, 84%);
+    --very-light-grayish-cyan: hsl(189, 41%, 97%);
+    --white : hsl(0 , 0% , 100%) ;
+    --primary-cyan : hsl(172, 67%, 45%);
+}
+
+body { 
+    margin : 0;
+    font-family: 'Space Mono', monospace;
+    background: var(--light-grayish-cyan);
+    height : 100vh;
+}
+
+.container { 
+    display: grid;
+    height: 100vh;
+    place-content: center;
+}
+/* heading */
+header {
+    text-align: center;
+    transform: translateY(-75px);
+    font-size: xx-large;
+    letter-spacing: 5px;
+}
+/* APP */
+.app {
+    background-color: var(--white);
+    display: flex;
+    gap: 50px;
+    padding : 25px;
+    border-radius: 25px;
+}
+.app_left_options{ 
+    display: flex;
+    flex-direction: column;
+    gap: 45px;
+    width: 75%;
+}
+.app_left_options label {
+    letter-spacing: 2px;
+    color:hsl(186, 14%, 43%)
+}
+
+.bill_input_div , .people_input_div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-color: var(--very-light-grayish-cyan);;
+    padding: 5px;
+}
+
+
+.bill_input_div span ,
+.people_input_div span  {
+    display: inline !important;
+    background-color: var(--very-light-grayish-cyan);
+    padding: 12px;
+}
+
+.app_left_options input {
+    height: 30px;
+    border-radius: 5px;
+    border: none;
+    background-color: var(--very-light-grayish-cyan);
+    text-align: right;
+    width: 100%;
+    display: inline;
+    padding: 10px;
+    
+}
+
+.app_left_options input:focus {
+    outline:none;
+}
+
+
+.app_left_options input::-webkit-outer-spin-button,
+.app_left_options input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.app_left_options input[type=number] {
+    -moz-appearance: textfield;
+}
+
+.app_left_options input::placeholder , .app_left_options input {
+    color: var(--dark-cyan) !important;
+    font-size: x-large;
+    font-weight: 800;
+}
+
+
+/* * TIPS GRID */
+.tips_grid {
+    display : grid;
+    grid-template-columns: repeat(3, 150px);
+    gap: 15px;
+}
+
+.tips_grid button {
+    padding: 13px 0;
+    background-color: var(--dark-cyan); 
+    color: white;
+    font-weight: 700;  
+    font-size: large;
+    border-radius: 5px ;
+    cursor: pointer;
+    outline: none;
+    border : none;
+    min-width: 75px;
+}
+
+.tips_grid input {
+    background-color: var(--very-light-grayish-cyan);
+    color: var(--dark-grayish) ;
+    width: 85%;
+}
+
+.tips_grid input::placeholder{ 
+    font-size: 18px;
+}
+.tips_grid button:hover {
+    background-color: var(--primary-cyan);
+}
+
+/* APP RIGHT */
+.app_right_options {
+    background : var(--dark-cyan) ;
+    padding: 15px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    min-width: 375px;
+}
+
+.app_reset{
+    width: 90%;
+    background-color: var(--primary-cyan);
+    text-transform: uppercase;
+    font-weight: 700;
+    padding: 15px 0;
+    font-size: large;
+    border-radius: 5px;
+    color: var(--dark-cyan);
+}
+
+.bill_main_content , .app_left_bill , .app_left_tip , .app_left_people {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.bill_content_row { 
+    display : flex;
+    justify-content: space-between;
+    /* padding: 0 15px; */
+    align-items: center;
+    width: 300px;
+}
+
+.bill_content_row .bill_row_text {
+    color: white;
+}
+
+.bill_row_text span{
+    display: block;
+    color:hsl(184, 14%, 56%);
+}
+
+.bill_row_num {
+    color: var(--primary-cyan) ;
+    font-size : 40px;
+}
+
+
+/* app right options */
+
+@media screen and (max-width : 480px) {
+    .app{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        margin-bottom: 50px;
+        padding: 15px 25px;
+    }
+    .app_right_options{ 
+        gap: 75px;
+    }
+
+    .container{ 
+        display: block;
+        height: 100%;
+        margin-top: 150px;
+    }
+    body {
+        height: 100%;
+    }
+
+    .tips_grid {
+        grid-template-columns: repeat(3, auto);
+    }
+    .app_right_options{
+        min-width: 0;
+        width: 100%;
+        margin: 0 10px;
+    }
+    
+}

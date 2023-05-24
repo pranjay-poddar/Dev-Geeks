@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Tip calculator app</title>
+
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+    </style>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
+  <!-- FONTAWESOME -->
+  
+  <script src="https://kit.fontawesome.com/ee31d545f8.js" crossorigin="anonymous" defer ></script>
+
+</head>
+<body>
+  <div class="container">
+    <header class="title">
+      SPLITTER
+    </header>
+    <!-- MAIN APPLICATION -->
+    <div class="app">
+      <!-- LEFT SIDE -->
+      <div class="app_left_options">
+        <div class="app_left_bill">
+          <label for="bill_input"
+                 class="bill_input_label">Bill</label>
+          <div class="bill_input_div" name="bill_input" >
+            <span><i class="fa-solid fa-dollar-sign"></i></span>
+            <input onchange="updateCounter()" type="number" inputmode="numeric" name="bill_input_input" id="bill_input_input" placeholder="0.0" >
+          </div>
+        </div>
+        <div class="app_left_tip">
+          <label for="bill_input"
+                 class="bill_input_label">Select Tip %</label>
+            <div class="tips_grid">
+              <button data-tip-button >5%</button>
+              <button data-tip-button >10%</button>
+              <button data-tip-button >15%</button>
+              <button data-tip-button >25%</button>
+              <button data-tip-button >50%</button>
+    <div 
+    onclick="custominput()"
+    >
+      <input data-tip-custom 
+      onclick="custominput()"
+      onblur="setCustom()"
+      type="number" 
+      placeholder="Custom"
+      disabled
+      name="custom" 
+      id="custom"
+      >
+    </div>
+            </div>
+        </div>
+        <div class="app_left_people">
+          <label for="bill_input"
+                 class="bill_input_label">Number of People</label>
+          <div class="people_input_div">
+            <span class="people_icon">
+              <i class="fa-solid fa-user"></i>
+            </span>
+            <input type="number" inputmode="numeric" name="people_input" 
+            onchange="updateCounter()"
+            id="people_input" placeholder="0" >
+          </div>
+        </div>
+      </div>
+
+      <!-- RIGHT SIDE -->
+      <div class="app_right_options">
+        <div class="bill_main_content">
+          <div class="bill_content_row">
+            <div class="bill_row_text">
+              Tip Amount <span>/ person</span>
+            </div>
+            <div id="tip_per_person" class="bill_row_num">
+              $0.00
+            </div>
+          </div>
+          <div class="bill_content_row">
+            <div class="bill_row_text">
+              Total <span>/ person</span>
+            </div>
+            <div id="total_per_person" class="bill_row_num">
+              $0.00
+            </div>
+          </div>
+        </div>
+        <button data-reset-bill class="app_reset"
+        
+        onclick="doReset()"
+        >
+          reset
+        </button>
+      </div>
+    </div>
+  </div>
+  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Yagyesh Bobde</a>.
+  </div>
+
+  <script src="./script.js"></script>
+</body>
+</html>
