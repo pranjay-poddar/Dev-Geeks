@@ -1,0 +1,10 @@
+{
+    "name": "Prakhar's Bot",
+    "description": "AI based bot",
+    "version": "1.0",
+    "manifest_version": 3,
+    "action" : {
+        "default_popup":"index.html",
+        "default_icon":"chatbot.png"
+    }
+}
