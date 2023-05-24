@@ -24,6 +24,8 @@ The project is a recommender system that utilizes a specific algorithm for gener
 ## Get dataset
 - Get the dataset [here](https://www.kaggle.com/datasets/tmdb/tmdb-movie-metadata)
 
+## Get you API_KEY [here](https://developer.themoviedb.org/docs/getting-started) and add it to app.py in `API_KEY = "..."`
+
 ## Run this project
 
 ### Get required files
