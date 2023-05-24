@@ -668,7 +668,7 @@ Happy Coding! -->
 <td align="center"> 224.</td>
 <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/ML%20Projects/Analysis%20of%20Fashion_dataset"> Analysis_ of Fashion dataset </a></td>
 <td align="center"> 225.</td>
-<td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/ML%20Projects/Analysis%20of%20Fashion_dataset"> Amazing Snake Game </a></td>
+<td align="center"> <a href="https://github.com/shubhanshurav/Dev-Geeks/tree/main/Js-Games/Amazing-Snake-Game"> Amazing Snake Game </a></td>
 </tr>
 	
 </table>
