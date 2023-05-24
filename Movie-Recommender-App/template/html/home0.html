@@ -1,0 +1,46 @@
+<style>
+    .container {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        margin-top: 20px;
+    }
+
+    @media only screen and (max-width: 600px) {
+        .container {
+            flex-direction: column;
+            margin-top: 10px;
+        }
+    }
+
+    .left-column {
+        width: 50%;
+        text-align: left;
+    }
+
+    .right-column {
+        width: 50%;
+        text-align: center;
+    }
+
+    .recommendation-container {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 30px;
+    }
+
+    .movie-item {
+        flex-basis: 20%;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .movie-item img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+    }
+    </style>
