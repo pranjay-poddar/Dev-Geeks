@@ -7,7 +7,7 @@
 <br>
 	<p text-align="center">For More Information log on to <a href="https://pranjay-poddar.github.io/Dev-Geeks/Repository_web_page/index.html" target="_blank">Dev-Geeks</a></p>
 <br>
-<p>The Dev-Geeks repository is a collection of projects. It contains a variety of projects, ranging from web development to machine learning.Each project is designed to help developers learn and improve their skills in a particular area. The projects are written in a variety of languages, including Python, JavaScript, and HTML.The repository also includes tutorials and resources to help developers get started with the projects. The tutorials provide step-by-step instructions on how to set up the projects and how to use them. The resources provide additional information on the topics covered in the projects. The Dev-Geeks repository is a great resource for developers who are looking to learn and improve their skills. It provides a variety of projects that can help developers learn and improve their skills in a particular area. The tutorials and resources provided in the repository make it easy for developers to get started with the projects.</p>
+<p>The Dev-Geeks repository is a collection of projects. It contains a variety of projects, ranging from web development to machine learning. Each project is designed to help developers learn and improve their skills in a particular domain. The projects are written in a variety of languages, including Python, JavaScript, and HTML.The repository also includes tutorials and resources to help developers get started with the projects. The tutorials provide step-by-step instructions on how to set up the projects use them. Along with that additional information in provided on the topics covered in the projects. The Dev-Geeks repository is a great resource for developers who are looking to learn and improve their skills. It provides a variety of projects that can help developers learn and improve their skills in a particular domain. The tutorials and resources provided in the repository make it easy for developers to get started with the projects.</p>
 
 ![forthebadge](https://forthebadge.com/images/badges/uses-brains.svg)
 ![forthebadge](https://forthebadge.com/images/badges/check-it-out.svg)
@@ -682,9 +682,9 @@ Happy Coding! -->
 
 - Create an issue of the project or a feature you would like to add in the project and get the task assigned for youself. (issue can be any feature or project that you think you could contribute to).
 
-- Fork the repo to your Github.<br/>
+- Fork the repo on your Github.<br/>
 
-- Clone the Repo by going to your local Git Client in a particular local folder in your local machine by using this command with your forked repository link in place of below given link: <br/>
+- Clone the Repo by going to your local Git Client in a local folder of your machine by using this command, with your forked repository link in place of below given link: <br/>
   `git clone https://github.com/pranjay-poddar/Dev-Geeks`
 - Create a branch using below command.
   `git branch <your branch name>`
@@ -697,7 +697,7 @@ Happy Coding! -->
 - Push your changes.
   `git push --set-upstream origin <your branch name>`
 - Add your project name with the link in the readme in the desired format.
-- Make a pull request! (compare your branch with the owner main branch)
+- Make a pull request! (compare your branch with the owner's main branch)
 
 <br>
 <h1 align="center">
@@ -714,7 +714,7 @@ Happy Coding! -->
   By<a href="https://github.com/pranjay-poddar"> Pranjay Poddar </a>&copy; MIT License</h4>
 	<br>
 
-<h4 align="center">Connect Project Admin </h4>
+<h4 align="center">Connect with Project Admin </h4>
 <p align="center">
   <a target="_blank"href="https://www.linkedin.com/in/pranjay-poddar/"><img src="https://img.shields.io/badge/linkedin-%230077B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white" /></a>&nbsp;&nbsp;&nbsp;&nbsp;
   <a target="_blank"href="https://twitter.com/PranjayPoddar"><img src="https://img.shields.io/badge/twitter-%231DA1F2.svg?&style=for-the-badge&logo=twitter&logoColor=white" /></a>&nbsp;&nbsp;&nbsp;&nbsp;
