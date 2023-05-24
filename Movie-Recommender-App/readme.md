@@ -1,4 +1,4 @@
-# Recommender-System &nbsp;&nbsp;[![](https://img.shields.io/badge/framework-Streamklit-red)](https://docs.streamlit.io/) 
+# Movie-Recommender-App &nbsp;&nbsp;[![](https://img.shields.io/badge/framework-Streamklit-red)](https://docs.streamlit.io/) 
 
 The project is a recommender system that utilizes a specific algorithm for generating personalized recommendations. It is designed to analyze user preferences and make relevant suggestions based on their previous interactions and behavior. The system aims to improve user experience by providing accurate and tailored recommendations, thereby enhancing their engagement with the platform. The project's implementation involves leveraging a tech stack consisting of Python and associated libraries for data processing and machine learning tasks. The recommender system employs sophisticated algorithms and techniques to offer users valuable and personalized recommendations.
 
