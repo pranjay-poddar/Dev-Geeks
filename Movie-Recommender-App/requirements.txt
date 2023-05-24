@@ -1,0 +1,8 @@
+pandas
+streamlit
+pickle5
+requests
+streamlit-lottie
+streamlit-option-menu
+Pillow
+nltk
