@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="icon" href="img/logo.png">
+    <title>Netflix</title>
+    
+</head>
+<body>
+    <div class="upper">
+        <div class="logo">
+            <a href="index.html">
+                <img src="img/Netflix-Logo.png" class="img-logo"/>
+            </a>
+        </div>
+        <div class="login-div">
+            <form class="login">
+                <h1>Sign In</h1>
+                <div class="input-text">
+                    <input type="text" id="inputEmail" name="email" placeholder="Email or phone number" onfocus="inputOnFocus(this)" onblur="inputOnBlur(this)"/>
+                    <div class="warning-input" id="warningEmail">
+                        Please enter a valid email or phone number.
+                    </div>
+                </div>
+                
+                <div class="input-text">
+                    <input type="password" id="inputPassword" name="password" placeholder="Password" onfocus="inputOnFocus(this)" onblur="inputOnBlur(this)"/>
+                    <div class="warning-input" id="warningPassword">
+                        Your password must contain between 4 and 60 characters.
+                    </div>
+                </div>
+                
+                <div>
+                    <button class="signin-button">Sign In</button>
+                </div>
+                <div class="remember-flex">
+                    <div>
+                        <input type="checkbox">
+                        <label class="color_text">Remember me</label>
+                    </div>
+                    <div class="help">
+                        <a class="color_text" href="#">Need help?</a>
+                    </div>
+                </div>
+                <div class="login-face">
+                    <img src="img/fb-icon.png" height="20"/><a href="https://www.facebook.com/v2.9/dialog/oauth?app_id=163114453728333&cbt=1630643111038&channel_url=https%3A%2F%2Fstaticxx.facebook.com%2Fx%2Fconnect%2Fxd_arbiter%2F%3Fversion%3D46%23cb%3Df9388900009cd4%26domain%3Dwww.netflix.com%26is_canvas%3Dfalse%26origin%3Dhttps%253A%252F%252Fwww.netflix.com%252Ff2b3f6b100e6d4%26relation%3Dopener&client_id=163114453728333&display=popup&domain=www.netflix.com&e2e=%7B%7D&fallback_redirect_uri=https%3A%2F%2Fwww.netflix.com%2Fin%2Flogin&locale=en_US&logger_id=f263beb3cf5a4b&origin=1&redirect_uri=https%3A%2F%2Fstaticxx.facebook.com%2Fx%2Fconnect%2Fxd_arbiter%2F%3Fversion%3D46%23cb%3Df360212a7625e8%26domain%3Dwww.netflix.com%26is_canvas%3Dfalse%26origin%3Dhttps%253A%252F%252Fwww.netflix.com%252Ff2b3f6b100e6d4%26relation%3Dopener%26frame%3Df821f68feff61&response_type=token%2Csigned_request%2Cgraph_domain&sdk=joey&version=v2.9" target="_blank" class="color_link log_face">Login with Facebook</a>
+                </div>
+                <div class="new-members">
+                    New to Netflix? <a href="#" class="signup-link">Sign up now</a>.
+                </div>
+                <div class="protection color_link help">
+                    This page is protected by Google reCAPTCHA to ensure you're not a bot. <a href="#">Learn more.</a>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="bottom">
+        <div class="bottom-width">
+            Questions? Call <a href="tel:1-844-542-4813" class="tel-link">1-844-542-4813</a>
+            <div>
+                <ul class="bottom-flex">
+                    <li class="list-bottom">
+                        <a href="#" class="link-bottom">
+                            FAQ
+                        </a>
+                    </li>
+                    <li class="list-bottom">
+                        <a href="#" class="link-bottom">
+                            Help Center
+                        </a>
+                    </li>
+                    <li class="list-bottom">
+                        <a href="#" class="link-bottom">
+                            Terms of Use
+                        </a>
+                    </li>
+                    <li class="list-bottom">
+                        <a href="#" class="link-bottom">
+                            Privacy
+                        </a>
+                    </li>
+                    <li class="list-bottom">
+                        <a href="#" class="link-bottom">
+                            Cookie Preferences
+                        </a>
+                    </li>
+                    <li class="list-bottom">
+                        <a href="#" class="link-bottom">
+                            Corporate information
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div>
+                <select class="fa select-language">
+                    <option> &#xf0ac; &nbsp;&nbsp;&nbsp;English</option>
+                    <option> &#xf0ac; &nbsp;&nbsp;&nbsp;Fran&ccedil;ais</option>
+                </select>
+            </div>
+        </div>
+    </div>
+    <script src="js/script.js"></script>
+</body>
+</html>
