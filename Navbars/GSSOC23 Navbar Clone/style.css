@@ -45,3 +45,14 @@ a {
     color: #fb8600;
     border-bottom: 3px solid #fb8600;
 }
+
+.main {
+    font-size: 36px;
+    margin: 250px auto;
+    letter-spacing: 1px;
+    font-weight: 400;
+    border: 3px solid #fb8600;
+    width: 75%;
+    padding: 25px;
+    text-align: center;
+}
