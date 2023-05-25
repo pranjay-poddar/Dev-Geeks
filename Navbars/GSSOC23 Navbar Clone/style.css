@@ -1,0 +1,47 @@
+body {
+    margin: 0;
+    font-family: Inter;
+}
+
+.nav {
+    height: 65px;
+    display: flex;
+    box-shadow: 5px 5px 10px lightgray;
+}
+
+.logo {
+    flex: 1;
+    margin: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-items {
+    flex: 4;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-right: 25px;
+}
+
+a {
+    text-decoration: none;
+}
+
+.item {
+    margin: 20px;
+    color: #1A202C;
+    opacity: 0.8;
+    font-weight: 600;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.item:hover {
+    transition: all 0.2s ease;
+    transform: scale(1.2);
+    color: #fb8600;
+    border-bottom: 3px solid #fb8600;
+}
