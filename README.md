@@ -7,7 +7,21 @@
 <br>
 	<p text-align="center">For More Information log on to <a href="https://pranjay-poddar.github.io/Dev-Geeks/Repository_web_page/index.html" target="_blank">Dev-Geeks</a></p>
 <br>
-<p>The Dev-Geeks repository is a collection of projects. It contains a variety of projects, ranging from web development to machine learning.Each project is designed to help developers learn and improve their skills in a particular area. The projects are written in a variety of languages, including Python, JavaScript, and HTML.The repository also includes tutorials and resources to help developers get started with the projects. The tutorials provide step-by-step instructions on how to set up the projects and how to use them. The resources provide additional information on the topics covered in the projects. The Dev-Geeks repository is a great resource for developers who are looking to learn and improve their skills. It provides a variety of projects that can help developers learn and improve their skills in a particular area. The tutorials and resources provided in the repository make it easy for developers to get started with the projects.</p>
+<p>The Dev-Geeks repository is a collection of projects.</p> 
+<br>
+<ul>
+<li>It contains a variety of <b>projects</b>, ranging from <b>web development</b> to <b>machine learning</b> .</li>
+<li>Each project is <b>designed</b> to help <b>developers</b> learn and improve their <b>skills</b> in a particular area.</li>
+<li>The projects are   written in a variety of languages,including <b>Python</b>, <b>JS</b>, and <b>HTML</b>.</li>
+ <li>The repository also includes <b>tutorials</b> and <b>resources</b> to help developers get started with the projects.</li>
+ <li> The tutorials provide step-by-step <b>instructions</b> on how to set up the projects and how to use them.</li>
+ <li> The resources provide additional <b>information</b> on the topics covered in the projects. </li>
+ <li><b>The Dev-Geeks</b> repository is a great resource for developers who are looking to learn and improve their skills. </li>
+ <li>It provides a variety of projects that can help <b>developers</b> learn and <b>improve</b> their skills in a particular area. </li>
+ <li>The tutorials and resources provided in the repository make it <b>easy</b> for developers to get started with the projects.</li>
+</ul>
+
+<br>
 
 ![forthebadge](https://forthebadge.com/images/badges/uses-brains.svg)
 ![forthebadge](https://forthebadge.com/images/badges/check-it-out.svg)
