@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Signup Page</title>
+    <title>SignIn Page</title>
 
   <style>
     body{
@@ -75,16 +75,13 @@
       border-color: green;
     }
     
-    button{
+    button {
       width: 100%;
       padding: 10px;
-      margin-top: 10px;
-           background-image: linear-gradient(30deg,#0f0c29,#302b63,#24243e,rgb(69, 69, 107));
-           /* margin-top: 20px; */
+      background-image: linear-gradient(30deg,#0f0c29,#302b63,#24243e,rgb(69, 69, 107));
       transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
       color: #fff;
       border: none;
-      line-height: 20px;
       font-weight:bolder ;
       border-radius: 5px;
       cursor: pointer;
@@ -99,41 +96,14 @@
       box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px, rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
   
     }
-    .a{
-      /* width: 100%; */
-      padding: 10px;
-      background-image: linear-gradient(30deg,#0f0c29,#302b63,#24243e,rgb(69, 69, 107));
-      transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-      color: #fff;
-      border: none;
-      font-weight:bolder ;
-      border-radius: 5px;
-      cursor: pointer;
-      width: 480px;
-      text-align: center;
-    }
-    
-    .a:hover{
-      /* background-color: #45a049;
-       */
-       background-image: linear-gradient(30deg,#2e42f5,#e7e7f0,#9494ef,rgb(69, 69, 107));
-     color: black;
-      transform: translateY(5px);
-      box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px, rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
-  
-    }
   </style>
 </head>
 <body>
     <div class="body">
   <div class="container">
-    <h2>Sign Up Form</h2>
+    <h2>Sign In Form</h2>
     <form id="signup-form">
-      <div class="form-group">
-        <label for="name">Name:</label>
-        <input type="text" id="name" required>
-        <span class="error-message"></span>
-      </div>
+     
       <div class="form-group">
         <label for="email">Email:</label>
         <input type="email" id="email" required>
@@ -150,15 +120,8 @@
         <span class="error-message"></span>
       </div>
       <div class="form-group">
-        <button  type="submit">Sign Up</button>
-       
+        <button type="submit">Sign Up</button>
       </div>
-      <div class="form-group a">
-       
-        <a  style="color:white" href="signin.html">Sign In</a>
-      
-      </div>
-      
     </form>
   </div>
 </div>
@@ -180,17 +143,14 @@
       }
       
       // Perform form validation
-      var nameInput = document.getElementById('name');
+      
       var emailInput = document.getElementById('email');
       var passwordInput = document.getElementById('password');
       var confirmPasswordInput = document.getElementById('confirm-password');
       
       var isValid = true;
       
-      if (nameInput.value.trim() === '') {
-        setError(nameInput, 'Name is required');
-        isValid = false;
-      }
+    
       
       if (emailInput.value.trim() === '') {
         setError(emailInput, 'Email is required');
@@ -215,7 +175,7 @@
       
       if (isValid) {
         // Form submission logic goes here
-        alert('Form submitted successfully!');
+        alert('Login successfully!');
       }
     });
     
