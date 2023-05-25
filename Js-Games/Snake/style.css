@@ -1,0 +1,51 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    padding: 0;
+}
+.container{
+    height: 100vh;
+    width: 100%;
+    background: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.game-board{
+    height: 90vmin;
+    width: 90vmin;
+    background: linear-gradient(rgb(22, 49, 130), rgb(93, 102, 204));
+    display: grid;
+    grid-template-columns: repeat(16, 1fr);
+    grid-template-rows: repeat(16, 1fr);
+}
+.score{
+    background: rgb(56, 48, 164);
+    padding: 10px 20px;
+    border-radius: 20px;
+}
+.snake{
+    background: #50973e;
+    /*border: 2px solid #000;*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+}
+.head{
+    background-image: url('snake.jpg');
+    background-size: 100% 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    z-index: 22;
+}
+.food{
+    background-image: url('edible.jpg');
+    background-size: 100% 100%;
+    z-index: 55;
+}
