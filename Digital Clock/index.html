@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="input.css">
+    <title>Digital Clock</title>
+</head>
+<body style="background-color: rgb(0, 0, 0)">
+    <h1 class="text-white text-center uppercase tracking-widest my-24 md:mx-[30rem]">Digital <span class="text-[#66fcf1]"> Clock </span></h1>
+
+    <div class="container flex flex-col md:flex-row">
+        
+        <div class="cq flex flex-col md:flex-row md:mx-[28rem]">
+            <div class="relative">
+                <div class="absolute inset-0 bg-[#66fcf1] rounded-lg blur"></div>
+  <div class="clock relative text-center mx-[1.35rem] rounded-lg space-y-6 bg-black p-10 w-[22rem] flex flex-col md:flex-row md:p-4 md:space-x-4 ">
+
+    <div class=" md:my-6 text-[#66fcf1]">
+        <span class="hour md:mx-2" id="hour">00</span>
+        <span class="text">Hours</span>
+    </div>
+
+    <div class="  text-[#66fcf1]">
+        <span class="minute" id="minute">00</span>
+        <span class="text">Minutes</span>
+    </div>
+
+    <div class=" text-[#66fcf1]">
+        <span class="second" id="second">00</span>
+        <span class="text">Seconds</span>
+    </div>
+
+    <div>
+        <span class="text-[#66fcf1]" id="session">AM</span>
+    </div>
+
+</div>
+  </div>
+  <div class="quote">
+    <div class="box bg-black p-10 mx-2">
+        <h1 class="text-white">Have a Good Day</h1>
+    </div>
+    </div>
+  </div>
+</div>
+<script src="index.js"></script>
+</body>
+</html>
