@@ -8,13 +8,13 @@
 }
 
 .card {
-    width: 400px;
+    width: 425px;
     height: 75vh;
     border: 1px solid;
-    margin: 50px auto;
+    margin: 75px auto;
     padding: 10px;
     border-radius: 20px;
-    border: 2px solid #f20089;
+    border: 3px solid #EC008C;
 }
 
 form {
@@ -47,16 +47,17 @@ button {
     border-radius: 25px;
     border: none;
     color: white;
-    background-color: #e548a1;
     font-size: 16px;
     font-weight: 600;
     margin-top: 65px;
     cursor: pointer;
+    background: linear-gradient(to right,#EC008C, #FC6767);
 }
 
 h2 {
     font-family: Inter;
     font-size: 14px;
+    font-weight: bold;
     margin-top: 35px;
     cursor: pointer;
 }
