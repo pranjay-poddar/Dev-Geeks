@@ -1,54 +1,161 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Poppins:wght@300&display=swap');
+
+
+
 * {
-  background-color: rgb(209, 234, 242);
+  
+  margin:0;
+  padding: 0;
 }
-h1 {
-  text-decoration: underline;
-  /* display: inline-block; */
-  text-align: center;
-  display: relative;
-  float: top;
+
+body
+{
+background-color: rgb(209, 234, 242);
+font-family: 'Open Sans', sans-serif;
+
 }
-h1:hover {
-  font-family: "Courier New", Courier, monospace;
-  background-color: brown;
-  font-size: 40px;
+
+
+header
+{
+  display: flex;
+  justify-content: center;
 }
-p {
-  font-size: 20px;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  text-align: center;
+
+header h1
+{
+font-family: 'Open Sans', sans-serif;
+font-family: 'Poppins', sans-serif;
+font-size: 45px;
+margin: 15px;
+padding: 5px;
+color: #333333;
+transition: color 0.3s ease-out;
+cursor: pointer;
 }
-img {
-  height: 300px;
-  width: 300px;
-  margin-top: 0px;
+
+header h1:hover
+{
+  color: #3a7eb1;
+ cursor: pointer;
+
+}
+
+main
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.container
+{
+  max-width: 800px;
+  margin: 20px;
+  padding: 20px;
+  background: linear-gradient(to bottom right,#c7ecee,#a5b1c2);
+  box-shadow: 0 0 10px rgba(0 , 0 , 0 , 0.2);
+  border-radius: 8px;
+  
+}
+
+.ballon-image
+{
+  height: 200px;
+  width: 350px;
+  margin: 10px;
   padding: 5px;
-  margin-left: 10px;
   display: inline-block;
 }
-#second {
+
+#second
+{
+  height: 200px;
+  width: 350px;
+  margin: 10px;
+  padding: 5px;
   position: relative;
   float: right;
 }
-button:hover {
-  cursor: pointer;
-}
-div {
+
+.main-body
+{
   text-align: center;
-  font-size: 35px;
-  font-family: "Times New Roman", Times, serif;
+  font-size: 20px;
+  margin-top: 20px;
 }
-button {
+
+.highlight
+{
+  font-weight: bold;
+}
+
+.quote
+{
+  font-style: italic;
+}
+
+.gift-heading
+{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 30px;
+  margin: 20px 0;
+}
+
+
+button
+{
+  margin-top: 12px;
   font-size: 25px;
   height: 50px;
   width: 150px;
-  background-color: crimson;
+  background-color: #3a7eb1;
+  border: none;
   border-radius: 8px;
 }
-#gifty {
-  padding-top: 25px;
+
+button:hover
+{
+  background: linear-gradient(to bottom right,#21686c,#828e9e);
+  color: #000000;
 }
-.gif {
-  margin-left: 550px;
+
+p{
+  text-align: left;
+  line-height: 1.6;
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+
+h2
+{
+  text-align: center;
+  margin: 10px;
+  padding: 5px;
+}
+
+#gifty1
+{
+  font-size: 30px;
+  margin: 15px;
+  padding: 5px;
+}
+
+.gifty
+{
   margin-top: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.gif{
+  
+  height: 300px;
+  width: 300px;
 }
