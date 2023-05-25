@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap');
+
+* {
+    margin: 10;
+    padding: 0px 15px 0px 15px;
+    box-sizing: border-box;
+    text-decoration: none;
+    scroll-behavior: smooth;
+
+
+}
+
+body {
+    background: black;
+
+}
+
+nav {
+    padding-left: 245px;
+}
+
+nav .navbar {
+    position: center;
+    top: 2rem;
+    left: 2rem;
+    background-color: hsla(330, 8%, 91%, 0.234);
+    width: 80%;
+    border-radius: 4rem;
+    padding: 1rem 2.5rem;
+    backdrop-filter: blur(20px);
+
+}
+
+.menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+nav .navbar .menu {
+    display: flex;
+    position: relative;
+
+}
+
+nav .navbar .menu li {
+    list-style: none;
+    margin: 0 8px;
+}
+
+.navbar .menu a {
+    font-size: 25px;
+    height: 100px;
+
+    font-weight: 500;
+    color: rgb(86, 130, 174);
+    padding: 6px 0;
+    transition: all 0.4s ease;
+}
+
+.navbar .menu a:hover {
+    color: white;
+}
+
+nav.sticky .menu a {
+    color: #FFF;
+}
+
+nav.sticky .menu a:hover {
+    color: #0E2431;
+}
