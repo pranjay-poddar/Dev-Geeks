@@ -1,38 +1,51 @@
-# Tic Tac Toe Project
+# Tic Tac Toe Game
 
-This project is a simple implementation of the Tic Tac Toe game using HTML, CSS, and JavaScript. It allows two players to take turns and aims to detect when a player has won or when it's a draw.
+This is a simple implementation of the Tic Tac Toe game using HTML, CSS, and JavaScript. It allows users to play against an AI opponent or against another user.
+
+## Demo
+
+You can try out the live demo of the Tic Tac Toe game by cloning the repository.
+
+## Features
+
+- Play against AI: Choose the "Play against AI" option to play against the computer AI.
+- Play against another user: Choose the "Play against other user" option to play against another player.
+- Restart game: Click the "Restart" button to reset the game and start a new round.
+- Winning and draw detection: The game detects when a player wins or when the game ends in a draw and displays the appropriate message.
+- Responsive design: The game interface is responsive and adapts to different screen sizes.
 
 ## Getting Started
 
-To run the game, follow these steps:
+These instructions will help you get a copy of the project up and running on your local machine.
 
-1. Clone the project repository or copy the HTML, CSS, and JavaScript code into separate files on your local machine.
-2. Open the HTML file (`index.html`) in a web browser.
-3. The Tic Tac Toe game will be displayed on the web page.
+### Prerequisites
 
-## Game Instructions
+- Web browser (Chrome, Firefox, Safari, etc.)
 
-1. The game is played on a 3x3 grid.
-2. Two players take turns marking empty spaces on the grid with their respective symbols ('X' or 'O').
-3. The first player to get three of their symbols in a row (horizontally, vertically, or diagonally) wins the game.
-4. If all spaces on the grid are filled and no player has won, the game ends in a draw.
+### Installation
 
-## Project Structure
+1. Clone the repository:
 
-The project consists of the following files:
+2. Navigate to the project directory:
 
-- `index.html`: The main HTML file that contains the structure of the web page, including the game board and buttons.
-- `style.css`: The CSS file that defines the visual styles for the game elements.
-- `script.js`: The JavaScript file that implements the game logic and functionality.
+3. Open the `index.html` file in your web browser.
 
-## Dependencies
+## Usage
 
-This project does not require any external dependencies or libraries.
+1. Upon launching the game, you will see two options: "Play against AI" and "Play against other user".
+2. Choose one of the options to start the game.
+3. If you choose to play against the AI, the computer will make its moves automatically. If you choose to play against another user, take turns placing X and O symbols on the game board.
+4. The game will detect and display a winning message when a player wins. If the game ends in a draw, a draw message will be shown.
+5. To start a new round, click the "Restart" button.
 
-## Contributing
+## Technologies Used
 
-If you would like to contribute to this project, you can fork the repository, make your changes, and submit a pull request. Your contributions are highly appreciated!
+- HTML
+- CSS
+- JavaScript
 
-## Acknowledgements
+## Acknowledgments
 
-The implementation of this Tic Tac Toe game was created by Ayishik Das.
+- The project is inspired by the classic game of Tic Tac Toe.
+- Created and made by Ayishik Das
+
