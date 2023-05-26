@@ -56,6 +56,18 @@ form{
     font-size: 28px;
     font-weight: bold;
 }
+.shiwani{
+  margin-left: 15px;
+}
+.tiwari{
+  margin-left: 68px;
+}
+.me{
+  margin-left: 0px;
+}
+.you{
+  margin-left: 50px;
+}
 .big{
   height: 30px;
   width: 400px;
