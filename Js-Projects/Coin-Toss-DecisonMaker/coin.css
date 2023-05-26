@@ -1,0 +1,155 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    color: aliceblue;
+}
+
+.wrapper{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #494D5F;
+}
+.container{
+    height: 100%;
+    width: 800px;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+}
+
+.wes-name{   
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 70px;
+  font-weight: 600;
+  color: #fdfdfe;
+  text-shadow: 0px 0px 5px #b393d3, 0px 0px 10px #b393d3, 0px 0px 10px #b393d3,
+    0px 0px 20px #b393d3;
+    font-family: 'Righteous', cursive;
+}
+.actual-coin{
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #383b42;
+    border-radius: 10px;
+}
+
+.head{
+    display: none;
+    object-fit: fill;
+}
+.tail{
+    display: none;
+    object-fit: fill;
+}
+.head.active{
+    display: flex;
+    object-fit: fill;
+    width: 400px;
+}
+.tail.active{
+    display: flex;
+    object-fit: fill;
+    width: 400px
+}
+.flip{
+    display: none;
+}
+.flip.active{
+    border-radius: 10px;
+    height: 480px;
+    width: 780px;
+    display: flex;
+    object-fit:cover;
+
+}
+
+
+button:hover{
+    scale: 1.1;
+
+}
+.toss-btn{
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* CSS */
+.btn {
+  padding: 0.6em 2em;
+  border: none;
+  outline: none;
+  color: rgb(255, 255, 255);
+  background: #111;
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  border-radius: 10px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  height:40px ;
+  width: 150px;
+  font-weight: bolder;
+  font-size: larger;
+}
+
+.btn:before {
+  content: "";
+  background: linear-gradient(
+    45deg,
+    #ff0000,
+    #ff7300,
+    #fffb00,
+    #48ff00,
+    #00ffd5,
+    #002bff,
+    #7a00ff,
+    #ff00c8,
+    #ff0000
+  );
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  -webkit-filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing-btn 20s linear infinite;
+  transition: opacity 0.3s ease-in-out;
+  border-radius: 10px;
+}
+
+@keyframes glowing-btn {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 400% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+
+.btn:after {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #222;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+}
