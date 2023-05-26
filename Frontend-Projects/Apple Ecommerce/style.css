@@ -641,16 +641,41 @@ html {
 .watch-btn {
   position: absolute;
   bottom: 30vh;
-  right: 80%;
-  width: 10rem;
-  height: 3rem;
+  right: 20%;
+  padding: 2rem 4rem;
+  font-size: 2rem;
   background-color: var(--black-color);
   color: var(--primary-color);
-  border: 0.1rem dashed var(--primary-color);
-  border-radius: 4rem;
-  font-size: 1.6rem;
-  font-weight: 200;
+  font-weight: 400;
+  letter-spacing: 0.1rem;
+  border: none;
+  border-radius: 0.5rem;
   cursor: pointer;
+  clip-path: polygon(50% 0%,
+      81% 5%,
+      100% 0,
+      100% 100%,
+      80% 95%,
+      50% 100%,
+      20% 95%,
+      0 100%,
+      0 0,
+      23% 5%);
+  transition: clip-path 0.5s;
+}
+
+
+.watch-btn:hover{
+  clip-path: polygon(40% 15%,
+  77% 15%,
+  100% 10%,
+  100% 90%,
+  75% 85%,
+  40% 85%,
+  30% 100%,
+  0 50%,
+  0 50%,
+  30% 0);
 }
 
 .section-5 {
