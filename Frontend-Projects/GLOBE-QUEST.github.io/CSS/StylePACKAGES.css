@@ -1,0 +1,99 @@
+body{
+    background-image: url('images/package.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    scroll-behavior: smooth;
+    background-attachment: fixed;
+    color: white;
+  }
+  html{
+    scroll-behavior: smooth;
+  }
+  #sea{
+    padding-top: 100px;
+  }
+  .card-deck{
+    width: 70%;
+    margin: auto;
+  }
+  #search{
+    margin-left: 0;
+  }
+  .card{
+    border: none;
+    z-index: 0;
+  }
+  .options{
+    margin: auto;
+  }
+  .nav-item{
+    padding: 0 30px;
+  }
+  .card:hover{
+    transform: scale(1.05);
+    transition: 0.3s;
+  }
+  .navbar-brand{
+    width: 15%;
+  }
+  h5{
+      text-align: center;
+font-family: Georgia, 'Times New Roman', Times, serif;
+font-size: x-large;
+  }
+  .navbar{
+    position: fixed;
+    z-index: 1;
+    width: 100%;
+  }
+  .logo{
+    width: 80%;
+    margin: auto;
+  }
+  h1{
+    position: relative;
+    margin: auto;
+    text-align: center;
+    padding: 20px;
+  }
+  .toph{
+    top: 100px;
+  }
+  .topc{
+    margin-top:100px;
+    margin: auto;
+  }
+  p{
+    text-align: center;
+    margin-bottom: 0;
+    font-style: initial;
+  }
+  footer{
+    background-color: #f8f9fa;
+  }
+  .head{
+    position: absolute;
+    margin-left: 40%;
+    margin-right: 40%;
+  }
+  .container {
+    overflow: hidden;
+  }
+  .btn{
+    margin-left: 30%;
+    margin-top: 20px;
+    border-color: white;
+    color: white;
+  }
+  .card{
+    background-color: inherit;
+  }
+  .f{
+    color: grey;
+  }
+  .card-text{
+    margin: auto;
+    padding: 0;
+  }
+  

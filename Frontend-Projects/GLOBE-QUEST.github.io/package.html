@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" ng-app="myApp">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Packages</title>
+  <link rel="icon" href="CSS\images\icon.ico" type="image/ico" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="CSS/StylePACKAGES.css">
+</head>
+
+<body ng-app="myApp">
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <div class="options">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home<span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#sea">Seas</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#mount">
+              Mountains
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#landscapes">Landscapes</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="checkout.html">
+              Checkout
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    </nav>
+    <div id="tours">
+      <h1 id="sea">Seas</h1>
+      <div class="card-deck topc">
+        <div class="card" id="cards">
+          <img class="card-img-top" src="CSS\images\andaman.jpg" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title" id="name">Andaman and Nicobar</h5>
+            <p class="card-text">The most beautiful blue spread of eastern oceans. Famous for serene, white sandy beaches and delicious sea food of port blair.</p>
+            <a href="andaman.html"><button type="button" id="amazon" class="btn btn-outline-primary">Gallery</button></a>
+            <div ng-view></div>
+          </div>
+        </div>
+        <div class="card" id="cards">
+          <img class="card-img-top" src="CSS\images\reef.jpg" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title" id="name">The Great Barrier Reef</h5>
+            <p class="card-text"> One of the planet's most extraordinary natural wonders. Famous for only living organism that could be seen from space, "The coral reef"</p>
+            <a href="reef.html"><button type="button" class="btn btn-outline-primary">Gallery</button></a>
+          </div>
+        </div>
+        <div class="card" id="cards">
+          <img class="card-img-top" src="CSS\images\caves.jpg" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title" id="name">Caves beach</h5>
+            <p class="card-text">Shady yet bright experience of Austrailian seas. Highly popular for spearfishing, with the premier target species being the elusive red morwong.</p>
+            <a href="caves.html"><button type="button" class="btn btn-outline-primary">Gallery</button></a>
+          </div>
+        </div>
+      </div>
+      <h1 id="mount">Mountains</h1>
+      <div class="card-deck">
+        <div class="card" id="cards">
+          <img class="card-img-top" src="CSS\images\antelope.jpg" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title" id="name">Antelope Canyon</h5>
+            <p class="card-text">The canvas of nature with fine strokes and smooth finish with beautiful color grade. The andtelope canyons are the sacred site of Navajo nation.</p>
+            <a href="antelope.html"><button type="button" class="btn btn-outline-primary">Gallery</button></a>
+          </div>
+        </div>
+        <div class="card" id="cards">
+          <img class="card-img-top" src="CSS\images\fuji.jpg" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title" id="name">Mount Fuji</h5>
+            <p class="card-text">The splendid snow covered volcano which has seen a gargantuan development of my most favourite culture in the world, Japan.</p>
+            <a href="fuji.html"><button type="button" class="btn btn-outline-primary">Gallery</button></a>
+          </div>
+        </div>
+        <div class="card" id="cards">
+          <img class="card-img-top" src="CSS\images\himalaya.jpg" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title" id="name">The Himalayas</h5>
+            <p class="card-text">What does it feel like to look down to the most advanced civillization in the entire known universe? well ask The Great Mount Everest.</p>
+            <a href="himalaya.html"><button type="button" class="btn btn-outline-primary">Gallery</button></a>
+          </div>
+        </div>
+      </div>
+      <h1 id="landscapes">Landscapes</h1>
+      <div class="card-deck topc">
+        <div class="card" id="cards">
+          <img class="card-img-top" src="CSS\images\azores.jpg" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title" id="name">Azores</h5>
+            <p>The Azores are known for their vibrantly-colored blue green lakes, fertile prairies, colorful hydrangeas, 15th century churches, and manor houses.</p>
+            <a href="azores.html"><button type="button" id="amazon" class="btn btn-outline-primary">Gallery</button></a>
+            <div ng-view></div>
+          </div>
+        </div>
+        <div class="card" id="cards">
+          <img class="card-img-top" src="CSS\images\iceland.jpg" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title" id="name">Iceland</h5>
+            <p class="card-text">Land of the vikings and beautiful waterfalls, also widely known as “The Land of Fire and Ice”.Iceland is home to some of the largest glaciers in Europe.</p>
+            <a href="iceland.html"><button type="button" class="btn btn-outline-primary">Gallery
+              </button></a>
+          </div>
+        </div>
+        <div class="card" id="cards">
+          <img class="card-img-top" src="CSS\images\amazon.jpg" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title" id="name">Amazon</h5>
+            <p>The biggest rainforest in the world with the lagest number of living species. Only bravest people choose this as their adventure destiny. There are spiders too</p>
+            <a href="amazon.html"><button type="button" class="btn btn-outline-primary">Gallery</button></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer>
+      <p class='f'>GLOBE QUEST © DEEPANSHI 2023
+      </p>
+    </footer>
+
+</body>
+</html>

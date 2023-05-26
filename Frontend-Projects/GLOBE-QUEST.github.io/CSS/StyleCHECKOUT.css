@@ -1,0 +1,81 @@
+
+form{
+    width: 70%;
+    margin: auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+  .navbar-brand{
+    margin: auto;
+  }
+  h1{
+    margin: auto;
+    margin-top: 20px;
+    text-align: center;
+    width: 60%;
+  }
+  .options {
+    width: 37%;
+    margin: auto;
+    justify-content: space-between;
+  }
+  .nav-item{
+    padding: 0 30px;
+  }
+  .navbar-brand{
+    width: 15%;
+  }
+select{
+  display: block;
+      width: 100%;
+      height: calc(2.25rem+ 2px );
+      padding: 0.375rem 0.75rem;
+      font-size: 1rem;
+      line-height: 1.5;
+      color: #495057;
+      background-color: #fff;
+      background-clip: padding-box;
+      border: 1px solid #ced4da;
+      border-radius: 0.2rem;
+      transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+
+}
+  body{
+    background-image: url('images/checkoutK.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+  }
+  body{
+    color: white;
+  }
+  .disclaimer{
+    margin-left: 20%;
+    margin-right: 20%;
+    text-align: center;
+  }
+  table{
+    margin: auto;
+  }
+  td{
+    padding: 10px;
+  }
+  h4{
+    text-align: center;
+    margin: auto;
+    width: 70%;
+  }
+  .menu{
+    transition: 0.3s;
+  }
+  h3{
+    margin-left: 40%;
+    margin-right: 40%;
+    text-align: center;
+    margin-top: 3%;
+    margin-bottom: 3%;
+  }
+  html{
+    scroll-behavior: smooth;
+  }
+ 

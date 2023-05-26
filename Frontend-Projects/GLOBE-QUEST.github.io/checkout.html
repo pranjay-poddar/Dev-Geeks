@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <link rel="icon" href="CSS\images\icon.ico" type="image/ico" />
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="CSS\StyleCHECKOUT.css">
+  <title>Checkout</title>
+</head>
+
+
+<body ng-app="myApp" ng-controller="myCtrl">
+  <div class="cont">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <div class="options">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home<span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="package.html">Packages</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="blogs.html">Blogs</a>
+            </li>
+          
+            <li class="nav-item">
+              <a class="nav-link" href="about_us.html">
+                About
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+</div>
+</div>
+
+  <h1>CHECKOUT</h1>
+  <div ng-show="showMe" class="menu">
+    <h3>Details</h3>
+    <table>
+      <tr>
+        <td>
+          <h4>Plan</h4>
+        </td>
+        <td>
+          <h4>Price</h4>
+        </td>
+      </tr>
+      <tr>
+        <td id="pack"></td>
+        <td id="price"></td>
+      </tr>
+    </table>
+    <h4>Request sent to Administrator, kindly wait for the response.<br /> It might take at most 24 hours to recieve the call.</h4>
+  </div>
+  <form>
+    <div class="form-row">
+      <div class="col-md-4 mb-3">
+        <label for="validationDefault01">First name</label>
+        <input type="text" class="form-control" id="validationDefault01" placeholder="First name" value="Mark" required>
+      </div>
+      <div class="col-md-4 mb-3">
+        <label for="validationDefault02">Last name</label>
+        <input type="text" class="form-control" id="validationDefault02" placeholder="Last name" value="Otto" required>
+      </div>
+      <div class="col-md-4 mb-3">
+        <label for="validationDefaultUsername">E-mail</label>
+        <input type="text" class="form-control" id="validationDefaultUsername" placeholder="Email" aria-describedby="inputGroupPrepend2" required>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="col-md-3 mb-3">
+        <label for="validationDefault03">City</label>
+        <input type="text" class="form-control" id="validationDefault03" placeholder="City" required>
+      </div>
+      <div class="col-md-3 mb-3">
+        <label for="validationDefault04">Contact no.</label>
+        <input type="text" class="form-control" id="validationDefault06" placeholder="Mobile No." required>
+      </div>
+      <div class="col-md-3 mb-3">
+        <label for="validationDefault05">State</label>
+        <input type="text" class="form-control" id="validationDefault04" placeholder="State" required>
+      </div>
+      <div class="col-md-3 mb-3">
+        <label for="validationDefault06">Zip</label>
+        <input type="text" class="form-control" id="validationDefault05" placeholder="Zip" required>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="col-md-9 mb-3">
+        <label for="address">Address</label>
+        <input type="text" class="form-control" id="validationDefault07" placeholder="Address" required>
+      </div>
+      <div class="col-md-3 mb-3">
+        <label for="address">Package</label>
+        <select name="address" >
+        <datalist id="Packages">
+          <option value="0" >Package</option>
+          <option value="1">andaman</option>
+          <option value="2">reef</option>
+          <option value="3">caves</option>
+          <option value="4">antelope</option>
+          <option value="5">fuji</option>
+          <option value="6">himalaya</option>
+          <option value="7">azores</option>
+          <option value="8">iceland</option>
+          <option value="9">amazon</option>
+        </select>
+        
+      </datalist>
+      <!-- </div> -->
+      </div>
+    </div>
+    <div class="form-group">
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" value="" id="invalidCheck2" required>
+        <label class="form-check-label" for="invalidCheck2">
+          Agree to terms and conditions
+        </label>
+      </div>
+    </div>
+    <button class="btn btn-primary" type="submit" ng-click="myFunc()" onclick="myFunc()">Submit form</button>
+  </form>
+  <p class='disclaimer'>Note: Please fill the details carefully so that our agent could reach you.<br /> Package keywords: andaman, reef, caves, antelope, fuji, himalaya, azores, iceland and amazon</p>
+
+  <script>
+    var app = angular.module('myApp', []);
+    app.controller('myCtrl', function($scope)
+    {
+      $scope.showMe = false;
+      $scope.myFunc = function()
+      {
+        var checka = document.getElementById("validationDefault08");
+        var checkb = document.getElementById("validationDefault07");
+        var checkc = document.getElementById("validationDefault06");
+        var checkd = document.getElementById("validationDefault05");
+        var checke = document.getElementById("validationDefault04");
+        var checkf = document.getElementById("validationDefault03");
+        var checkg = document.getElementById("validationDefault02");
+        var checkh = document.getElementById("validationDefault01");
+        var checki = document.getElementById("validationDefaultUsername");
+        if (checka.value === "")
+        {
+          alert('Fill the form!');
+          return;
+        }
+        if (checkb.value === "")
+        {
+          alert('Fill the form!');
+          return;
+        }
+        if (checkc.value === "")
+        {
+          alert('Fill the form!');
+          return;
+        }
+        if (checkd.value === "")
+        {
+          alert('Fill the form!');
+          return;
+        }
+        if (checke.value === "")
+        {
+          alert('Fill the form!');
+          return;
+        }
+        if (checkf.value === "")
+        {
+          alert('Fill the form!');
+          return;
+        }
+        if (checkg.value === "")
+        {
+          alert('Fill the form!');
+          return;
+        }
+        if (checkh.value === "")
+        {
+          alert('Fill the form!');
+          return;
+        }
+        if (checki.value === "")
+        {
+          alert('Fill the form!');
+          return;
+        }
+        $scope.showMe = !$scope.showMe;
+      }
+    });
+    var data, p;
+    data = {
+      "andaman": 4000,
+      "reef": 8000,
+      "caves": 6000,
+      "antelope": 6500,
+      "fuji": 5000,
+      "himalaya": 4000,
+      "azores": 5000,
+      "iceland": 9000,
+      "amazon": 7000
+    };
+
+    function myFunc()
+    {
+      p = document.getElementById('validationDefault08').value;
+      document.getElementById('pack').innerHTML = p;
+      if (p === "andaman")
+      {
+        document.getElementById('price').innerHTML = data.andaman + "$";
+      }
+      if (p === "reef")
+      {
+        document.getElementById('price').innerHTML = data.reef + "$";
+      }
+      if (p === "caves")
+      {
+        document.getElementById('price').innerHTML = data.caves + "$";
+      }
+      if (p === "antelope")
+      {
+        document.getElementById('price').innerHTML = data.antelope + "$";
+      }
+      if (p === "fuji")
+      {
+        document.getElementById('price').innerHTML = data.fuji + "$";
+      }
+      if (p === "himalaya")
+      {
+        document.getElementById('price').innerHTML = data.himalaya + "$";
+      }
+      if (p === "azores")
+      {
+        document.getElementById('price').innerHTML = data.azores + "$";
+      }
+      if (p === "iceland")
+      {
+        document.getElementById('price').innerHTML = data.iceland + "$";
+      }
+      if (p === "amazon")
+      {
+        document.getElementById('price').innerHTML = data.amazon + "$";
+      }
+    }
+  </script>
+</body>
+
+</html>
