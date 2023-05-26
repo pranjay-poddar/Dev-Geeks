@@ -673,8 +673,11 @@ Happy Coding! -->
 <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Animations-CSS/3D%20rotating%20cube"> 3D Rotating Cube </a></td>
 <td align="center"> 227.</td>
 <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/ReactJS%20Typescript%20Projects/typescript_todo"> Typescript React Todos </a></td>
+
+<td align="center"> 228.</td>
+<td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Frontend-Projects/Gadget%20Ecommerce">  Gadget Ecommerce </a></td>
 </tr>
-	
+
 </table>
 
 ## How to contribute:

@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clone E-Commerce</title>
+
+
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+
+    <!--Font awesome!-->
+    <script src="https://kit.fontawesome.com/f4e855eb8f.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+
+
+    <div class="container pt-3">
+
+        <div class="input-group">
+            <a class="navbar-brand" href="#"> <img alt="logo" class="me-3 me-md-5"
+                    src="img/logo.svg"></img></a> <!--LOGO!-->
+
+            <input type="text" id="input-form" class="form-control" placeholder="Search"
+                aria-label="Text input with dropdown button">
+            <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                aria-expanded="false">All type</button>
+            <button title="Search" class="btn btn-primary d-none d-lg-block"><i
+                    class="fa-solid fa-magnifying-glass rounded d-none d-lg-block"></i></button>
+
+            <div class="ms-md-5 mt-2 mt-md-0">
+                <a type="button" class="btn btn-outline-primary fw-500 rounded ">
+                    <i class="fa-solid fa-user me-lg-2"></i>
+                    <p class="d-none d-lg-inline">Sign in</p>
+                </a>
+                <a type="button" class="btn btn-outline-primary fw-500 rounded">
+                    <i class="fa-solid fa-heart me-lg-2"></i>
+                    <p class="d-none d-lg-inline">Wishlist</p>
+                </a>
+                <a type="button" class="btn btn-outline-primary fw-500 rounded ">
+                    <i class="fa-solid fa-cart-shopping me-lg-2"></i>
+                    <p class="d-none d-lg-inline">My Cart</p>
+
+                </a>
+            </div>
+
+            <ul class="dropdown-menu  dropdown-menu-start">
+                <li><a class="dropdown-item" href="#">Best</a></li>
+                <li><a class="dropdown-item" href="#">Special</a></li>
+                <li><a class="dropdown-item" href="#">Latest</a></li>
+            </ul>
+
+        </div>
+
+    </div> <!--Container div!-->
+    <hr>
+
+
+    <!--  Navbar  -->
+    <div class="container mt-3">
+        <nav class="navbar navbar-expand-lg navbar-light">
+
+            <button class="navbar-toggler mb-2" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Categories</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Hot offers</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Gift boxes</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Menu item</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Menu name</a>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Others
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                    </li>
+            </div>
+    </div>
+
+    <!-- Content --->
+    <div class="bg-primary py-5">
+        <div class="container py-5 text-light">
+            <h1 class="display-1">Best products &<br> Brands in our store</h1>
+            <p class="lead">Trendy Products, Factory Prices, Excellent Service</p>
+            <a id="shop-btn" href="#" role="button" class="btn btn-warning fs-5 text-light ">Shop
+                now</a>
+            <a href="#" role="button" class="btn btn-light text-dark fs-5  ">Learn more</a>
+        </div>
+    </div>
+
+
+    <!--   Product section   -->
+
+    <div class="py-5">
+        <div class="container">
+            <h3 class="fw-bold mb-sm-3 mb-md-5 text-center text-md-start">New products</h3>
+
+            <div class="row g-3 d-flex justify-content-evenly">
+                <div class="card" id="card-width">
+                    <img alt="GoPro HERO6 4K Action" class="img"
+                        src="img/GoPro HERO6 4K Action.jpg" width="100%"
+                        height="240px" img>
+                    <div class="card-body">
+                        <hr>
+                        <h5 class="card-title">$790.50</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">GoPro HERO6 4K Action</h6>
+                        <h6 class="card-subtitle mb-2 text-muted">Camera - Black</h6>
+                        <a href="#" role="button" class="btn btn-primary card-link py-2 px-4">Add to card</a>
+                        <a title="Add to cart" href="#" class="btn btn-outline-primary card-link"> <i class="fa-solid fa-heart"></i></a>
+                    </div>
+                </div> <!--First Card--->
+
+
+
+                <div class="card" id="card-width">
+                    <img alt="Canon camera 20x zoom, Black"
+                        src="img/Canon camera 20x zoom, Black.jpg" width="100%"
+                        height="240px" img>
+
+                    <div class="card-body">
+                        <hr>
+                        <h5 class="card-title">$320.00</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">Canon camera 20x zoom, Black</h6>
+                        <h6 class="card-subtitle mb-2 text-muted">color EOS 2000</h6>
+
+                        <a href="#" role="button" class="btn btn-primary card-link py-2 px-4">Add to card</a>
+                        <a title="Add to cart" href="#" class="btn btn-outline-primary card-link "> <i class="fa-solid fa-heart"></i></a>
+                    </div>
+                </div><!--  2nd card -->
+
+
+
+                <div class="card" id="card-width">
+                    <img alt="Xiaomi Redmi 8 Original Global"
+                        src="img/Xiaomi.jpg" width="100%"
+                        height="240px" img>
+
+                    <div class="card-body">
+                        <hr>
+                        <h5 class="card-title">$120.00</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">Xiaomi Redmi 8 Original Global</h6>
+                        <h6 class="card-subtitle mb-2 text-muted">Version 4GB</h6>
+
+                        <a href="#" role="button" class="btn btn-primary card-link py-2 px-4">Add to card</a>
+                        <a title="Add to cart" href="#" class="btn btn-outline-primary card-link "> <i class="fa-solid fa-heart"></i></a>
+                    </div>
+                </div><!--  3rd card -->
+
+
+
+                <div class="card" id="card-width">
+                    <img alt="Apple iPhone 12 Pro 6.1"
+                        src="img/Apple iPhone 12 Pro 6.1 RAM.jpg" width="100%"
+                        height="240px" img>
+
+                    <div class="card-body">
+                        <hr>
+                        <h5 class="card-title">$120.00</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">Apple iPhone 12 Pro 6.1 RAM</h6>
+                        <h6 class="card-subtitle mb-2 text-muted">6GB 512GB Unlocked</h6>
+
+                        <a href="#" role="button" class="btn btn-primary card-link py-2 px-4">Add to card</a>
+                        <a title="Add to cart" href="#" class="btn btn-outline-primary card-link "> <i class="fa-solid fa-heart"></i></a>
+                    </div>
+                </div><!--  4th card -->
+
+
+
+
+
+                <div class="card" id="card-width">
+                    <img alt="Apple Watch Series 1 Sport"
+                        src="img/Apple Watch Series 1 Sport.jpg" width="100%"
+                        height="240px" img>
+
+                    <div class="card-body">
+                        <hr>
+                        <h5 class="card-title">$120.00</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">Apple Watch Series 1 Sport</h6>
+                        <h6 class="card-subtitle mb-2 text-muted">Case 38mm Black</h6>
+
+                        <a href="#" role="button" class="btn btn-primary card-link py-2 px-4">Add to card</a>
+                        <a title="Add to cart" href="#" class="btn btn-outline-primary card-link "> <i class="fa-solid fa-heart"></i></a>
+                    </div>
+                </div><!--  5th card -->
+
+
+
+
+                <div class="card" id="card-width">
+                    <img alt="T-shirts with multiple colors"
+                        src="img/watch.jpg" width="100%"
+                        height="240px" img>
+
+                    <div class="card-body">
+                        <hr>
+                        <h5 class="card-title">$120.00</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">T-shirts with multiple colors, for</h6>
+                        <h6 class="card-subtitle mb-2 text-muted">men and lady</h6>
+
+                        <a href="#" role="button" class="btn btn-primary card-link py-2 px-4">Add to card</a>
+                        <a title="Add to cart" href="#" class="btn btn-outline-primary card-link "> <i class="fa-solid fa-heart"></i></a>
+                    </div>
+                </div><!--  6th card -->
+
+
+
+
+                <div class="card" id="card-width">
+                    <img alt="Gaming Headset 32db Black"
+                        src="img/Gaming Headset 32db Black.jpg" width="100%"
+                        height="240px" img>
+
+                    <div class="card-body">
+                        <hr>
+                        <h5 class="card-title">$99.50</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">Gaming Headset 32db Black</h6>
+                        <h6 class="card-subtitle mb-2 text-muted">built in mic</h6>
+
+                        <a href="#" role="button" class="btn btn-primary card-link py-2 px-4">Add to card</a>
+                        <a title="Add to cart" href="#" class="btn btn-outline-primary card-link "> <i class="fa-solid fa-heart"></i></a>
+                    </div>
+                </div><!--  7th card -->
+
+
+
+                <div class="card" id="card-width">
+                    <img alt="Blue Bag"
+                        src="img/blue bag.jpg" width="100%"
+                        height="240px" img>
+
+                    <div class="card-body">
+                        <hr>
+                        <h5 class="card-title">$120.00</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">Blue Bag, for</h6>
+                        <h6 class="card-subtitle mb-2 text-muted">men and lady</h6>
+
+                        <a href="#" role="button" class="btn btn-primary card-link py-2 px-4">Add to card</a>
+                        <a title="Add to cart" Fhref="#" class="btn btn-outline-primary card-link "> <i class="fa-solid fa-heart"></i></a>
+                    </div>
+                </div><!--  8th card -->
+
+            </div><!--row and container div--->
+        </div>
+
+
+
+        <!--  New section -->
+        <div class="py-5 px-3">
+            <div class="container py-5">
+                <h3 class="fw-bold  text-center text-md-start mb-3">Why choose Us?</h3>
+                <div class="row">
+
+                    <div class="col-lg-4 col-md-6 d-flex align-items-center">
+
+                        <div class="bg-white shadow-sm rounded-circle p-3">
+                            <i class="fa-solid fa-money-bill fs-1 text-primary"></i>
+                        </div>
+
+                        <div class="ms-3 mt-md-5">
+                            <h6 class="h6 fw-bold">Reasonable prices</h6>
+                            <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit sed do
+                                eiusmor</p>
+                        </div>
+                    </div>
+
+
+                    <div class="col-lg-4 col-md-6 d-flex align-items-center">
+
+                        <div class="bg-white shadow-sm rounded-circle p-3">
+                            <i class="fa-solid fa-star  fs-1 text-primary"></i>
+                        </div>
+
+                        <div class="ms-3 mt-md-5">
+                            <h6 class="h6 fw-bold">
+                                Best quality</h6>
+                            <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit sed do
+                                eiusmor</p>
+                        </div>
+                    </div>
+
+
+                    <div class=" col-lg-4 col-md-6 d-flex align-items-center">
+
+                        <div class="bg-white shadow-sm rounded-circle p-3">
+                            <i class="fa-solid fa-plane  fs-1 text-primary"></i>
+                        </div>
+                        <div class="ms-3 mt-md-5">
+                            <h6 class="h6 fw-bold">Worldwide shipping</h6>
+                            <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit sed do
+                                eiusmor</p>
+                        </div>
+                    </div>
+
+
+                    <div class="col-lg-4 col-md-6 d-flex align-items-center">
+
+                        <div class="bg-white shadow-sm rounded-circle p-3">
+                            <i class="fa-solid fa-users  fs-1 text-primary"></i>
+                        </div>
+                        <div class="ms-3 mt-md-5">
+                            <h6 class="h6 fw-bold">Customer satisfaction</h6>
+                            <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit sed do
+                                eiusmor</p>
+                        </div>
+                    </div>
+
+
+                    <div class="col-lg-4 col-md-6 d-flex align-items-center">
+
+                        <div class="bg-white shadow-sm rounded-circle p-3">
+                            <i class="fa-solid fa-thumbs-up  fs-1 text-primary"></i>
+                        </div>
+                        <div class="ms-3 mt-md-5">
+                            <h6 class="h6 fw-bold">Happy customers</h6>
+                            <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit sed do
+                                eiusmor</p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 d-flex align-items-center">
+
+                        <div class="bg-white shadow-sm rounded-circle p-3">
+                            <i class="fa-solid fa-box-open fs-1 text-primary"></i>
+                        </div>
+                        <div class="ms-3 mt-md-5">
+                            <h6 class="h6 fw-bold">Thousand items</h6>
+                            <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit sed do
+                                eiusmor</p>
+                        </div>
+                    </div>
+
+
+                </div><!--row idv--->
+
+            </div>
+        </div>
+
+
+        <!--blog post---->
+        <div class="pb-5">
+            <div class="container py-5">
+                <h3 class="h3 fw-bold mb-3 text-center text-md-start mb-3">Blog posts</h3>
+                <div class="row mt-md-5">
+
+                    <div class="col-sm-6 col-md-6 col-lg-3">
+                        <img alt="boxes" class="bg rounded"
+                            src="img/boxes.jpg" width="250"
+                            height="200" img>
+                        <div class="mt-3">
+                            <a href="#" class="fw-bold">How to promote brands</a>
+                            <p class="text-muted">When you enter into any new area of science, you almost reach</p>
+                        </div>
+                    </div><!--col div -->
+
+                    <div class="col-sm-6 col-md-6 col-lg-3">
+                        <img alt="shipping" class="bg rounded"
+                            src="img/ship.jpg" width="250"
+                            height="200" img>
+                        <div class="mt-3">
+                            <a class="fw-bold">How we handle shipping</a>
+                            <p class="text-muted">When you enter into any new area of science, you almost reach</p>
+                        </div>
+                    </div><!--col div -->
+
+                    <div class="col-sm-6 col-md-6 col-lg-3">
+                        <img alt="fruit" class="bg rounded"
+                            src="img/fruit.jpg" width="250"
+                            height="200" img>
+                        <div class="mt-3">
+                            <a class="fw-bold">How to promote brands</a>
+                            <p class="text-muted">When you enter into any new area of science, you almost reach</p>
+                        </div>
+                    </div><!--col div -->
+
+                    <div class="col-sm-6 col-md-6 col-lg-3">
+                        <img alt="a girl with her laptop" class="bg rounded"
+                            src="img/girl.jpg" width="250"
+                            height="200" img>
+                        <div class="mt-3">
+                            <a class="fw-bold">Success story of sellers</a>
+                            <p class="text-muted">When you enter into any new area of science, you almost reach</p>
+                        </div>
+                    </div><!--col div -->
+
+                </div><!-- div row -->
+
+            </div>
+        </div>
+
+
+        <!-- Footer -->
+
+        <div class="py-5">
+            <div class="container">
+
+                <div class="row d-flex">
+
+                    <div class="col-md-12 col-lg-3 mb-3">
+
+                        <img alt="logo"
+                            src="https://bootstrap-ecommerce.com/bootstrap5-ecommerce/images/logo.svg"></img>
+                        <p class="mt-4 text-muted">© 2018- 2021 Templatemount.<br>
+                            All rights reserved.</p>
+
+                    </div>
+
+                    <div class="col-6 col-sm-6 col-md-4 col-lg-2">
+
+                        <h6 class="h6 fw-bold">Store</h6>
+
+                        <a href="#" class="text-decoration-none text-muted">About us</a>
+                        <a href="#" class="text-decoration-none text-muted">Find stories</a>
+                        <a href="#" class="text-decoration-none text-muted">Categories</a>
+                        <a href="#" class="text-decoration-none text-muted">Blogs</a>
+                    </div>
+
+                    <div class="col-6 col-sm-6 col-md-4 col-lg-2">
+                        <h6 class="h6 fw-bold">Information</h6>
+                        <a href="#" class="text-decoration-none text-muted">About us</a>
+                        <a href="#" class="text-decoration-none text-muted">Find stories</a>
+                        <a href="#" class="text-decoration-none text-muted">Categories</a>
+                        <a href="#" class="text-decoration-none text-muted">Blogs</a>
+                    </div>
+
+                    <div class="col-6 col-sm-6 col-md-4 col-lg-2 mt-3 mt-md-0">
+                        <h6 class="h6 fw-bold">Support</h6>
+                        <a href="#" class="text-decoration-none text-muted">About us</a>
+                        <a href="#" class="text-decoration-none text-muted">Find stories</a>
+                        <a href="#" class="text-decoration-none text-muted">Categories</a>
+                        <a href="#" class="text-decoration-none text-muted">Blogs</a>
+                    </div>
+
+                    <div class="col-lg-3 mt-3 mt-lg-0">
+
+                        <h6 class="h6 fw-bold">Newsletter</h6>
+                        <p class="text-muted">Stay in touch with latest updates about our products and offers</p>
+
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="Email" aria-label="Email"
+                                aria-describedby="basic-addon2">
+                            <div class="input-group-append">
+                                <button class="btn btn-secondary" type="button">Join</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    
+
+
+
+                </div><!--row div-->
+
+
+
+            </div>
+        </div>
+
+
+
+
+
+
+
+</body>
+
+</html>
