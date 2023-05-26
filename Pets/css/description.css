@@ -1,0 +1,12 @@
+img{
+    object-fit: cover !important;
+    object-position: center;
+    height: 40rem !important;
+    
+}
+@media (max-width: 576px) {
+    img{
+    width: 100% !important; 
+    height: 100% !important;
+    }
+}

@@ -1,0 +1,346 @@
+@import url("https://fonts.googleapis.com/css2?family=Fredoka:wght@600&family=Poppins:wght@200&display=swap");
+
+body {
+  background-color: #f8f8fb;
+}
+nav {
+  background-color: #f8f8fb;
+}
+#home-head-carousel img {
+  height: 1130px !important;
+}
+.highlite-header-text {
+  font-size: 50px !important;
+  font-family: "Fredoka", sans-serif;
+}
+@import url("https://fonts.googleapis.com/css2?family=Fredoka:wght@600&family=Poppins:wght@200&display=swap");
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --color: #6a6a6a;
+  --body-background-color: #f8f8fb;
+  --nav-background-color: #f8f8fb;
+  --normal-font: 100;
+  --btn-background: #8a8a8a;
+  --btn-color: #454545;
+  --highlite-text-container-img: url(../image/homepage-img/imageedit_3_2637177959.png);
+  --footer-background-color:#f3dfa3;
+}
+
+.dark {
+  --color: #ffffff;
+  --body-background-color: #576e90;
+  --nav-background-color: #395a8a;
+  --normal-font: bold;
+  --btn-background: #ffff;
+  --card-text-color: #454545;
+  --text-shadow-color: #000000;
+  --highlite-text-container-img: url() !important;
+  transition: all 1.5s ease;
+  letter-spacing: .1rem;
+  --footer-background-color:#395a8a !important;
+}
+.card .card-body h4 {
+  color: var(--card-text-color) !important;
+}
+.card .card-body h5,
+.card-text {
+  color: var(--card-text-color) !important;
+}
+span,
+li,
+nav,
+a,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 button,
+a {
+  color: var(--color) !important;
+  font-weight: var(--normal-font);
+  text-shadow: 0 0 0.5px var(--text-shadow-color);
+}
+.search-btn {
+  background-color: var(--btn-background) !important;
+  color: var(--body-background-color) !important;
+}
+body {
+  background-color: var(--body-background-color) !important ;
+}
+nav {
+  background-color: var(--nav-background-color) !important;
+}
+input {
+  background-color: var(--body-background-color);
+  color: var(--btn-color) !important;
+}
+.highlite-holder h2,
+p,
+a {
+  color: var(--color) !important ;
+}
+.home-page-dispaly-pets-img-conntainer {
+  background-color: #f8f8fb;
+  width: 20rem;
+  height: 17rem;
+  border-radius: 10px;
+  margin: 5px;
+}
+
+#home-head-carousel img {
+  height: 1130px !important;
+}
+.highlite-header-text {
+  font-size: 50px !important;
+  font-family: "Fredoka", sans-serif;
+}
+.headerfont {
+  font-family: "Fredoka", sans-serif;
+  font-size: 60px !important;
+}
+.highlite-text-container {
+  background-image: var(--highlite-text-container-img) !important;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 0.75;
+}
+.spaciality-text {
+  font-size: 70px !important;
+  font-family: "Fredoka", sans-serif;
+}
+.spaciality-holder img {
+  width: 200px;
+}
+.icon-zoom {
+  transition: transform 0.2s ease-in-out;
+}
+.icon-zoom:hover {
+  transform: scale(1.2);
+}
+.media-container {
+  display: block;
+  width: 250px !important;
+}
+.media-container-img {
+  max-width: 100%;
+  height: auto;
+}
+
+.dark {
+  background-color: #333333;
+  color: white;
+}
+
+footer li {
+  list-style: none;
+}
+footer li :hover {
+  color: rgb(248, 179, 89);
+}
+
+.bird-container .card-img-top {
+  object-fit: cover !important;
+  width: 100% !important;
+  height: 230px !important;
+}
+.cat-container .card-img-top {
+  object-fit: cover !important;
+  width: 100% !important;
+  height: 230px !important;
+}
+
+@media (max-width: 576px) {
+  .highlite-header-text {
+    font-size: 30px !important;
+  }
+  .spaciality-text {
+    font-size: 25px !important;
+  }
+  .highlite-paragraph {
+    font-size: 16px !important;
+  }
+  .highlite-hrader-img {
+    width: 200px !important;
+    margin: auto !important;
+  }
+  .location-info-head-img {
+    width: 40px;
+    margin: 10px auto !important;
+  }
+  .location-info-head {
+    margin: 0 10px !important;
+  }
+  .location-info-footer-img {
+    width: 40px !important;
+  }
+  .media-container-img {
+    max-width: 100%;
+    height: auto;
+  }
+  .headerfont {
+    font-family: "Fredoka", sans-serif;
+    font-size: 30px !important;
+  }
+  .home-page-dispaly-pets-img-conntainer {
+    margin: 0;
+    width: 12rem;
+    height: 7rem;
+    margin: 5px;
+  }
+}
+.headerfont {
+  font-family: "Fredoka", sans-serif;
+  font-size: 60px !important;
+}
+.highlite-text-container {
+  background-image: url(../image/homepage-img/imageedit_3_2637177959.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 0.75;
+}
+.spaciality-text {
+  font-size: 70px !important;
+  font-family: "Fredoka", sans-serif;
+}
+.spaciality-holder img {
+  width: 200px;
+}
+.icon-zoom {
+  transition: transform 0.2s ease-in-out;
+}
+.icon-zoom:hover {
+  transform: scale(1.2);
+}
+.media-container {
+  display: block;
+  width: 250px !important;
+}
+.media-container-img {
+  max-width: 100%;
+  height: auto;
+}
+
+.dark {
+  background-color: #333333;
+  color: white;
+}
+
+footer li {
+  list-style: none;
+}
+footer li :hover {
+  color: rgb(248, 179, 89);
+}
+
+.bird-container .card-img-top {
+  object-fit: cover !important;
+  width: 100% !important;
+  height: 230px !important;
+}
+.cat-container .card-img-top {
+  object-fit: cover !important;
+  width: 100% !important;
+  height: 230px !important;
+}
+
+.inner{
+  overflow: hidden;
+}
+.inner .classic-hight {
+  transition: all 1.5s ease;
+}
+.inner:hover .classic-hight{
+  transform: scale(1.08);
+}
+.addbttn-conaiter{
+  display: flex;
+  justify-content: space-evenly ;
+  margin-bottom: 15px;
+  
+}
+.foodcard{
+  height: 450px;
+}
+#small-card{
+  height: 400px;
+}
+footer h3{
+  font-size: 35px !important;
+}
+footer h5{
+  font-size: 35px !important;
+}
+
+footer li, a, h6{
+  text-decoration: none;
+  font-size:20px;
+
+}
+.footer-a:hover{
+  transition: all .5s ease;
+  color: #ffb406 !important;
+}
+footer{
+  background-color: var(--footer-background-color) !important ;
+  border: none !important;
+}
+
+.odp-container a:hover {
+  transition: all .5s ease;
+  color: #ffb406 !important;
+}
+
+footer .card a h6:hover{
+  transition: all .5s ease;
+  color: #ffb406;
+}
+
+.about-section {
+  padding: 50px;
+  text-align: center;
+  color:var(--color) !important;
+  background-color:var(--footer-background-color) !important;
+  border-top: 1px solid var(--color) !important;
+}
+@media (max-width: 576px) {
+  .highlite-header-text {
+    font-size: 30px !important;
+  }
+  .spaciality-text {
+    font-size: 25px !important;
+  }
+  .highlite-paragraph {
+    font-size: 16px !important;
+  }
+  .highlite-hrader-img {
+    width: 200px !important;
+    margin: auto !important;
+  }
+  .location-info-head-img {
+    width: 40px;
+    margin: 10px auto !important;
+  }
+  .location-info-head {
+    margin: 0 10px !important;
+  }
+  .location-info-footer-img {
+    width: 40px !important;
+  }
+  .media-container-img {
+    max-width: 100%;
+    height: auto;
+  }
+  .headerfont {
+    font-family: "Fredoka", sans-serif;
+    font-size: 30px !important;
+  }
+}

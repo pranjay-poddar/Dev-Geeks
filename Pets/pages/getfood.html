@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./../css/index.css">
+    <link rel="stylesheet" href="./../css/getfood.css">
+    <link rel="stylesheet" href="./../css/abt.css">
+    <script src="./getfood.js"></script>
+
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg border-bottom sticky-top ">
+        <div class="container-fluid align-content-center">
+            <a class="navbar-brand fw-medium fs-3 ms-2" href="../index.html">
+                <img src="../image/homepage-img/logo.png" alt="" width="40" height="40">
+                Petopia
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active fs-6" aria-current="page" href="../index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active fs-6" aria-current="page" href="./login.html">login</a>
+                    </li>
+                    
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle fs-6" href="#" role="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        Make New Friends
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item " href="./dog.html">Dog</a></li>
+                        <li><a class="dropdown-item" href="./cat.html">Cat</a></li>
+                        <li><a class="dropdown-item" href="./birds.html">Birds</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link fs-6" href="./getfood.html">Get Food </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active fs-6" aria-current="page" href="./about.html">About</a>
+                </li>
+                </ul>
+                <form class="d-flex me-4" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn search-btn" type="submit">Search</button>
+                </form>
+
+                       <img src="../image/homepage-img/moon.png" alt="" id="icon" width="20px" style="cursor: pointer;">
+
+            </div>
+        </div>
+    </nav>
+
+    <!-- slide baar-->
+    <div id="carouselExampleCaptions" class="carousel slide mt-2 ">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+                aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="./../image/getfood/frame-2.webp" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5 class="text-body-emphasis fw-bold  fs-4">MATISSE</h5>
+                    <p class="text-body-emphasis fw-bold ">Give Your Cat Healthy and Testy Food</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="./../image/getfood/frame-3.webp" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5 class="text-body-emphasis fw-bold fs-4 ">Pedigree</h5>
+                    <p class="text-body-emphasis fw-bold ">Use Code - PEDIGREE to Get Extra 5% OF </p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="./../image/getfood/frame-5.webp" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5 class=" text-body-emphasis fw-bold fs-4">Royal Canin</h5>
+                    <p class=" text-body-emphasis fw-bold">Use Code - CANIN to Get Extra 15% OF</p>
+                </div>
+            </div>
+
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+
+
+    <!-- cards-section -->
+    <div class="container mt-5 ">
+        <h1 class="text-center headerfont">Dog Food</h1>
+        <div class="row justify-content-center ">
+            <!-- card-1 -->
+            <div class="col-md-3  mt-5 ">
+                <div class="card">
+                    <div class="inner">
+                        <img src="./../image/getfood/dog-1.webp" class="card-img-top classic-hight" alt="...">
+                    </div>
+                    <div class="card-body shadow">
+                        <h5 class="card-title text-center">₹792</h5>
+                        <p class="card-text text-center">Henlo Baked Dry Food for Puppies | 100% human-grade ingredients
+                        </p>
+                        <div class="addbttn-conaiter">
+                            <button class="btn btn-warning fw-bold " onclick="dec1()">- </button>
+                            <h5 id="product-quantity_1">1</h5><button class="btn btn-warning  "
+                                onclick="inc1()">+</button>
+                        </div>
+                        <a href="../pages/discription-pages/food-desc-pages/henlobakeddry.html" class="btn btn-warning d-grid gap-2  mx-auto w-50">ADD to Bag</a>
+                    </div>
+                </div>
+            </div>
+            <!-- card-2 -->
+            <div class="col-md-3  mt-5 ">
+                <div class="card">
+                    <div class="inner">
+                        <img src="./../image/getfood/dog-2.webp" class="card-img-top classic-hight" alt="...">
+                    </div>
+                    <div class="card-body shadow">
+                        <h5 class="card-title text-center">₹9775</h5>
+                        <p class="card-text text-center">Royal Canin Maxi Puppy Dry Food
+                        </p>
+                        <div class="addbttn-conaiter">
+                            <button class="btn btn-warning fw-bold" onclick="dec2()">-</button>
+                            <h5 id="product-quantity_2">1</h5><button class="btn btn-warning "
+                                onclick="inc2()">+</button>
+                        </div>
+                        <a href="../pages/discription-pages/food-desc-pages/royalchainmaxipuppi.html" class="btn btn-warning d-grid gap-2  mx-auto w-50">ADD to Bag</a>
+                    </div>
+                </div>
+            </div>
+            <!-- card-3 -->
+
+            <div class="col-md-3  mt-5 ">
+                <div class="card">
+                    <div class="inner">
+                        <img src="./../image/getfood/dog-3.jpg" class="card-img-top classic-hight" alt="...">
+                    </div>
+                    <div class="card-body shadow">
+                        <h5 class="card-title text-center">₹2890</h5>
+                        <p class="card-text text-center">Pedigree Chicken & Vegetables Adult Dog Dry Food
+                        </p>
+                        <div class="addbttn-conaiter">
+                            <button class="btn btn-warning " onclick="dec3()">-</button>
+                            <h5 id="product-quantity_3">1</h5><button class="btn btn-warning "
+                                onclick="inc3()">+</button>
+                        </div>
+                        <a href="../pages/discription-pages/food-desc-pages/pedigree.html" class="btn btn-warning d-grid gap-2  mx-auto w-50">ADD to Bag</a>
+                    </div>
+                </div>
+            </div>
+            <!-- card-4 -->
+
+            <div class="col-md-3  mt-5 ">
+                <div class="card">
+                    <div class="inner">
+                        <img src="./../image/getfood/dog-4.webp" class="card-img-top classic-hight" alt="...">
+                    </div>
+                    <div class="card-body shadow">
+                        <h5 class="card-title text-center">₹7921</h5>
+                        <p class="card-text text-center">Farmina N&D Pumpkin Lamb & Blueberry Maxi Dog Dry Food
+                        </p>
+                        <div class="addbttn-conaiter">
+                            <button class="btn btn-warning fw-bold" onclick="dec4()">-</button>
+                            <h5 id="product-quantity_4">1</h5><button class="btn btn-warning "
+                                onclick="inc4()">+</button>
+                        </div>
+                        <a href="../pages/discription-pages/food-desc-pages/ferminaN&D.html" class="btn btn-warning d-grid gap-2  mx-auto w-50">ADD to Bag</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+    <!-- card -->
+    <div class="container mt-5 ">
+        <h1 class="text-center  headerfont">Cats Food</h1>
+        <div class="row justify-content-center ">
+            <!-- card-1 -->
+            <div class="col-md-3  mt-5 ">
+                <div class="card">
+                    <div class="inner">
+                        <img src="./../image/getfood/cat-1.jpg" class="card-img-top classic-hight" alt="...">
+                    </div>
+                    <div class="card-body shadow">
+                        <h5 class="card-title text-center">₹892</h5>
+                        <p class="card-text text-center">Drools Ocean Fish Adult Cat Dry Food
+                        </p>
+                        <div class="addbttn-conaiter">
+                            <button class="btn btn-warning fw-bold">-</button>
+                            <h5>1</h5><button class="btn btn-warning ">+</button>
+                        </div>
+                        <a href="#" class="btn btn-warning d-grid gap-2  mx-auto w-50">ADD to Bag</a>
+                    </div>
+                </div>
+            </div>
+            <!-- card-2 -->
+            <div class="col-md-3  mt-5 ">
+                <div class="card">
+                    <div class="inner">
+                        <img src="./../image/getfood/cat-2.jpg" class="card-img-top classic-hight" alt="...">
+                    </div>
+                    <div class="card-body shadow">
+                        <h5 class="card-title text-center">₹9775</h5>
+                        <p class="card-text text-center">Arden Grange Fresh Chicken & Potato Grain Free Adult Cat Dry
+                            Food
+                        </p>
+                        <div class="addbttn-conaiter">
+                            <button class="btn btn-warning fw-bold">-</button>
+                            <h5>1</h5><button class="btn btn-warning ">+</button>
+                        </div>
+                        <a href="#" class="btn btn-warning d-grid gap-2  mx-auto w-50">ADD to Bag</a>
+                    </div>
+                </div>
+            </div>
+            <!-- card-3 -->
+
+            <div class="col-md-3  mt-5 ">
+                <div class="card">
+                    <div class="inner">
+                        <img src="./../image/getfood/cat-3.jpg" class="card-img-top classic-hight" alt="...">
+                    </div>
+                    <div class="card-body shadow">
+                        <h5 class="card-title text-center">₹5,645</h5>
+                        <p class="card-text text-center">Sheba Tuna Pumpkin & Carrot In Gravy Rich Premium Adult Fine
+                            Cat Wet Food
+
+                        </p>
+                        <div class="addbttn-conaiter">
+                            <button class="btn btn-warning fw-bold">-</button>
+                            <h5>1</h5><button class="btn btn-warning ">+</button>
+                        </div>
+                        <a href="#" class="btn btn-warning d-grid gap-2  mx-auto w-50">ADD to Bag</a>
+                    </div>
+                </div>
+            </div>
+            <!-- card-4 -->
+
+            <div class="col-md-3  mt-5 ">
+                <div class="card">
+                    <div class="inner">
+                        <img src="./../image/getfood/cat-4.jpg" class="card-img-top classic-hight" alt="...">
+                    </div>
+                    <div class="card-body shadow">
+                        <h5 class="card-title text-center">₹8000</h5>
+                        <p class="card-text text-center">Sheba Complete Nutrition Tuna White Meat & Snapper In Gravy Cat
+                            Wet Food
+                            <del>₹8,871 </del>
+                        </p>
+                        <div class="addbttn-conaiter">
+                            <button class="btn btn-warning fw-bold">-</button>
+                            <h5>1</h5><button class="btn btn-warning ">+</button>
+                        </div>
+                        <a href="#" class="btn btn-warning d-grid gap-2  mx-auto w-50">ADD to Bag</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+    <!-- birds card -->
+    <div class="container mt-5 ">
+        <h1 class="text-center  headerfont">birds Food</h1>
+        <div class="row justify-content-center ">
+            <!-- card-1 -->
+            <div class="col-md-3  mt-5 ">
+                <div class="card">
+                    <div class="inner">
+                        <img src="./../image/getfood/bird1.webp" class="card-img-top classic-hight" alt="...">
+                    </div>
+                    <div class="card-body shadow">
+                        <h5 class="card-title text-center">₹300</h5>
+                        <p class="card-text text-center">Boltz Immunity Booster for All Birds-100ml</p>
+                        <div class="addbttn-conaiter">
+                            <button class="btn btn-warning fw-bold">-</button>
+                            <h5>1</h5><button class="btn btn-warning ">+</button>
+                        </div>
+                        <a href="#" class="btn btn-warning d-grid gap-2  mx-auto w-50">ADD to Bag</a>
+                    </div>
+                </div>
+            </div>
+            <!-- card-2 -->
+            <div class="col-md-3  mt-5 ">
+                <div class="card">
+                    <div class="inner">
+                        <img src="./../image/getfood/bird2.webp" class="card-img-top classic-hight" alt="...">
+                    </div>
+                    <div class="card-body shadow">
+                        <h5 class="card-title text-center">₹799</h5>
+                        <p class="card-text text-center">Home
+                            JiMMy Exclusive Daily Mix Budgies Bird Food
+                            size 450g
+                        </p>
+                        <div class="addbttn-conaiter">
+                            <button class="btn btn-warning fw-bold">-</button>
+                            <h5>1</h5><button class="btn btn-warning ">+</button>
+                        </div>
+                        <a href="#" class="btn btn-warning d-grid gap-2  mx-auto w-50">ADD to Bag</a>
+                    </div>
+                </div>
+            </div>
+            <!-- card-3 -->
+
+            <div class="col-md-3  mt-5 ">
+                <div class="card">
+                    <div class="inner">
+                        <img src="./../image/getfood/bird3.webp" class="card-img-top classic-hight" alt="...">
+                    </div>
+                    <div class="card-body shadow">
+                        <h5 class="card-title text-center">₹1599</h5>
+                        <p class="card-text text-center">ZuPreem Fruit Blend Bird Food for Small Birds 200g
+
+                        </p>
+                        <div class="addbttn-conaiter">
+                            <button class="btn btn-warning fw-bold">-</button>
+                            <h5>1</h5><button class="btn btn-warning ">+</button>
+                        </div>
+                        <a href="#" class="btn btn-warning d-grid gap-2  mx-auto w-50">ADD to Bag</a>
+                    </div>
+                </div>
+            </div>
+            <!-- card-4 -->
+
+            <div class="col-md-3  mt-5 ">
+                <div class="card">
+                    <div class="inner">
+                        <img src="./../image/getfood/bird4.webp" class="card-img-top classic-hight" alt="...">
+                    </div>
+                    <div class="card-body shadow">
+                        <h5 class="card-title text-center">₹1199</h5>
+                        <p class="card-text text-center">Taiyo Petslife Fruit Mix Medium Bird Food 150g
+                        <div class="addbttn-conaiter">
+                            <button class="btn btn-warning fw-bold">-</button>
+                            <h5>1</h5><button class="btn btn-warning ">+</button>
+                        </div>
+                        <a href="#" class="btn btn-warning d-grid gap-2  mx-auto w-50">ADD to Bag</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+
+    <!-- small animal section  -->
+    <div class="container mt-5  ">
+        <h1 class="text-center headerfont">Small Animals</h1>
+        <div class="row">
+            <div class="col-md-3 col-sm-6 ">
+                <div class="card m-2 p-2 shadow " id="small-card">
+                    <img src="./../image/getfood/sm-dog.webp" class="card-img-top" alt="dog img">
+                    <h6 class="text-center mt-1  fs-4">Puppy</h6>
+                    <h5 class="card-title text-center mt-3">Puppies Foods are Available</h5>
+                </div>
+
+            </div>
+            <div class="col-md-3 col-sm-6">
+                <div class="card m-2 p-2 shadow" id="small-card">
+                    <img src="./../image/getfood/sm-cat.webp" class="card-img-top" alt="cat img">
+                    <h6 class="text-center mt-1 fs-4">kitten</h6>
+                    <h5 class="card-title text-center mt-3">kittens Foods are Available</h5>
+
+                </div>
+
+            </div>
+            <div class="col-md-3 col-sm-6">
+                <div class="card m-2 p-2 shadow" id="small-card">
+                    <img src="./../image/getfood/sm-bird.webp" class="card-img-top" alt="bird img">
+                    <h6 class="text-center mt-1 fs-4">Bird</h6>
+                    <h5 class="card-title text-center mt-3">Small birds Foods are Available</h5>
+                </div>
+
+            </div>
+            <div class="col-md-3 col-sm-6">
+                <div class="card m-2 p-2 shadow" id="small-card">
+                    <img src="./../image/getfood/sm-fish.webp" class="card-img-top" alt="fish img">
+
+                    <h6 class="text-center mt-1 fs-4">Fish</h6>
+                    <h5 class="card-title text-center mt-3">Fishesh Foods are Available</h5>
+                </div>
+
+            </div>
+
+
+        </div>
+    </div>
+    
+    <!-- about -->
+    <footer class="mt-5">
+
+        <div class="container-md mt-5 pt-5 text-center">
+        <div class="row my-5">
+            <div class="col-md-4">
+        
+                <div class="container">
+                    <img src="../image/homepage-img/logo.png" alt="" width="70px">
+                    <h3>Petopia</h3>
+                </div>
+                <p></p>
+            </div>
+            <div class="col-md-4">
+                <h5 class="">links</h5>
+                <ul class="m-0 p-0 ">
+                    <li>
+                        <a class="footer-a" href="../index.html">Homer</a>
+                    </li>
+                    <li>
+                        <a  class="footer-a" href="./dog.html">Dog</a>
+                    </li>
+                    <li>
+                        <a class="footer-a"  href="./cat.html">Cat</a>
+                    </li>
+                    <li>
+                        <a class="footer-a"  href="./birds.html">Birds</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-md-4 ">
+                <h5 class="">Other Links</h5>
+                <ul class="m-0 p-0">
+                <li>
+                    <a  class="footer-a" href="./getfood.html">Get Food </a>
+                </li>
+                <li>
+                    <a class="footer-a"  href="./login.html">LogIn</a>
+                </li>
+                <li>
+                    <a class="footer-a"  href="./.html">About</a>
+                </li>
+            </ul>
+            </div>
+        </div> 
+        
+        <h3 class="text-center">Our Developers</h3>
+        <div class="d-flex flex-wrap justify-content-center">
+            <div class=" mx-md-auto  m-3">
+               <a href=""><h6>Saurabh Jaykar</h6></a> 
+            </div>
+            <div class=" mx-md-auto  m-3">
+             <a href=""> <h6>Abhishek</h6></a> 
+            </div>
+            <div class=" mx-md-auto  m-3">
+               <a href=""><h6>Ruchika Kadu</h6></a> 
+            </div>
+            <div class=" mx-md-auto  m-3">
+              <a href=""> <h6>Nikita Jambe</h6></a> 
+            </div>
+            <div class=" mx-md-auto  m-3">
+               <a href=""> <h6>Sanika Bargal</h6></a>
+            </div>
+            <div class=" mx-md-auto  m-3">
+               <a href=""><h6>Sweta Ramteke</h6></a> 
+            </div>
+            <div class=" mx-md-auto  m-3">
+               <a href=""><h6>Harsh Bhange</h6></a> 
+            </div>
+        
+        </div>
+        </div>
+        </footer>
+            <!-- footer end -->
+        
+           <!-- about -->
+           <div class="about-section">
+            <h1>About Us</h1>
+            <p>who we are pet lovers and do a good work for pett and Understanding the growth stages your pets goes through will help you recognise the challenges they face, and how to take care of them. Ensuring they get the right nutritional balance in their food is key for a healthy development into adult life.</p>
+        </div>
+
+    
+    <script>
+        const icon = document.getElementById("icon");
+    
+    icon.onclick = function(){
+    
+      document.body.classList.toggle("dark");
+      if (document.body.classList.contains("dark")) {
+        icon.src="../image/homepage-img/sun.png";
+      }
+      else{
+        icon.src="../image/homepage-img/moon.png";
+      }
+    }
+    </script>
+</body>
+
+</html>

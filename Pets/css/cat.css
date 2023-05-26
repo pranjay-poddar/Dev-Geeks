@@ -1,0 +1,37 @@
+
+.card{
+    max-width: 90% !important;
+    max-height: 100% !important;
+    overflow: hidden !important;
+}
+.card-img-top {
+    object-fit: cover !important;
+    transition: all 1.5s ease;
+    height: 310px !important;
+    width: 300px !important;
+}
+.card-img-top:hover {
+    transform: scale(1.2);
+}
+
+.card  h4 {
+    color: var(--card-text-color) !important;
+  }
+  .card  h5,
+  .card-text {
+    color: var(--card-text-color) !important;
+  }
+@media (max-width: 900px){
+      .card{
+          margin:  3rem auto;
+          max-width: 90% !important;
+          max-height: 100% !important;
+          overflow: hidden;
+      }
+      .card-img-top{
+          margin: auto;
+          width: 100% !important;
+          height: 100% !important;
+
+      }
+}

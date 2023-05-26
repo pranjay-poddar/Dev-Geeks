@@ -1,0 +1,67 @@
+:root{
+    --linkedin-icon-shadow:#0076b577;
+    --github-icon-shadow:#5c6bc077;
+    --twitter-icon-shadow:#03a9f477;
+    --insta-icon-shadow:#ff593f77;
+}
+.card{
+  overflow: hidden;
+}
+
+.linkedin-icon-shadow:hover{
+    transition: .3s ease-in-out;
+-webkit-filter: drop-shadow(0 0 0.45rem var(--linkedin-icon-shadow));
+  filter: drop-shadow(0 0 0.45rem var(--linkedin-icon-shadow));
+}
+.github-icon-shadow:hover{
+    transition: .3s ease-in-out;
+-webkit-filter: drop-shadow(0 0 0.45rem var(--github-icon-shadow));
+  filter: drop-shadow(0 0 0.45rem var(--github-icon-shadow));
+}
+.twitter-icon-shadow:hover{
+    transition: .3s ease-in-out;
+-webkit-filter: drop-shadow(0 0 0.45rem var(--twitter-icon-shadow));
+  filter: drop-shadow(0 0 0.45rem var(--twitter-icon-shadow));
+}
+.insta-icon-shadow:hover{
+    transition: .3s ease-in-out;
+-webkit-filter: drop-shadow(0 0 0.45rem var(--insta-icon-shadow));
+  filter: drop-shadow(0 0 0.45rem var(--insta-icon-shadow));
+}
+.card .card-img-top{
+  object-fit: cover !important;
+  width: 100% !important;
+  height: 100% !important;
+  overflow: hidden;
+}
+card-body{
+  overflow: hidden;
+}
+.row .card{
+  transition: transform .2s ease-in-out;
+  overflow: hidden;
+  width: 100% !important;
+}
+.row .card,
+.icon-zoom:hover{
+  transform: scale(1.09);
+}
+a img{
+  width: 35px;
+}
+.card{
+  width: 20rem;
+  box-shadow: 0 0  10px 0 gainsboro  !important;
+}
+h5{
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+@media (max-width: 900px){
+  .card  .card-img-top{
+    margin: auto;
+    width: 100% !important;
+    height: 100% !important;
+
+}
+}

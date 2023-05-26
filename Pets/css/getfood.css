@@ -1,0 +1,57 @@
+
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: #fafafa;
+   
+   
+}
+nav{
+    background-color: #fafafa;
+
+}
+.container{
+    margin-top: 8%;
+}
+.inner{
+    overflow: hidden;
+}
+.inner .classic-hight {
+    transition: all 1.5s ease;
+}
+.inner:hover .classic-hight{
+    transform: scale(1.08);
+}
+.addbttn-conaiter{
+    display: flex;
+    justify-content: space-evenly ;
+    margin-bottom: 15px;
+    
+}
+.card{
+    height: 450px;
+}
+#small-card{
+    height: 400px;
+}
+
+
+.card  h4 {
+    color: var(--card-text-color) !important;
+  }
+  .card  h5,
+  .card-text {
+    color: var(--card-text-color) !important;
+  }
+
+  
+   
+  
+
+
+
+
+
+
