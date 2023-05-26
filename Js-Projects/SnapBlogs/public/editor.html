@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog : Editor</title>
+
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/editor.css">
+
+</head>
+<body>
+    <nav class="navbar">
+        <!-- <img src="img/logo.png" class="logo" alt=""> -->
+        <h1 class = "logo"><i><b><a href="/" class="link">SnapBlogs</a></b></i></h1>
+        <ul class="links-container">
+            <li class="link-item"><a href="/" class="link">home</a></li>
+            <li class="link-item"><a href="/editor" class="link">editor</a></li>
+        </ul>
+    </nav>
+
+    <div class="banner">
+        <input type="file" accept="image/*" id="banner-upload" hidden>
+        <label for="banner-upload" class="banner-upload-btn"><img src="img/upload.png" alt="upload banner"></label>
+    </div>
+    
+    <div class="blog">
+        <textarea type="text" class="title" placeholder="Blog title..."></textarea>
+        <textarea type="text" class="article" placeholder="Start writing here..."></textarea>
+    </div>
+
+    <div class="blog-options">
+        <button class="btn dark publish-btn">publish</button>
+        <input type="file" accept="image/*" id="image-upload" hidden>
+        <label for="image-upload" class="btn grey upload-btn">Upload Image</label>
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-firestore.js"></script>
+
+    <script src="js/firebase.js"></script>
+    <script src="js/editor.js"></script>
+
+</body>
+</html>

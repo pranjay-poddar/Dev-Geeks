@@ -1,0 +1,61 @@
+.blog, .article{
+    position: relative;
+    height: fit-content;
+    padding-bottom: 0;
+}
+
+.article, .title{
+    min-height: auto;
+    height: fit-content;
+    padding: 0 10px;
+    white-space: normal;
+}
+
+
+.published{
+    margin: 20px 0 60px;
+    padding: 0 10px;
+    text-transform: capitalize;
+    font-style: italic;
+    color: rgba(0, 0, 0, 0.5);
+}
+
+.published span{
+    font-weight: 700;
+    font-style: normal;
+}
+
+.article *{
+    margin: 30px 0;
+    color: #2d2d2d;
+}
+
+.article-image{
+    max-width: 100%;
+    max-height: 400px;
+    display: block;
+    margin: 30px auto;
+    object-fit: contain;
+}
+
+.sub-heading{
+    padding: 0 5vw;
+    color: #2d2d2d;
+    font-weight: 500;
+    font-size: 40px;
+    margin-top: 80px;
+}
+
+.navbar{
+    width: 100%;
+    height: 60px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5vw;
+    background: #fff;
+    z-index: 9;
+}
