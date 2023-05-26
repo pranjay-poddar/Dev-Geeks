@@ -4,6 +4,7 @@
     margin: 0;
     padding: 0;
     /* font-family: 'Poppins', sans-serif; */
+    /* new font-family added */
     font-family: 'Playfair', serif;
 }
 
@@ -18,6 +19,7 @@ body {
 h2 {
     position: relative;
     margin: 0;
+    /* font size of the h2 increased from 4em to 5em */
     font-size: 5em;
     font-weight: 900;
     color: #fff;
