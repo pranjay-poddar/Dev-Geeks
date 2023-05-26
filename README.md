@@ -687,6 +687,8 @@ Happy Coding! -->
 
 - Clone the Repo by going to your local Git Client in a particular local folder in your local machine by using this command with your forked repository link in place of below given link: <br/>
   `git clone https://github.com/pranjay-poddar/Dev-Geeks`
+- Go inside the cloned repo
+ `cd Dev-Geeks`
 - Create a branch using below command.
   `git branch <your branch name>`
 - Checkout to your branch.
