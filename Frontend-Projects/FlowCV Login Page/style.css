@@ -9,7 +9,7 @@
 
 .card {
     width: 425px;
-    height: 75vh;
+    height: 557px;
     border: 1px solid;
     margin: 75px auto;
     padding: 10px;
@@ -33,12 +33,15 @@ input {
     margin-top: 50px;
     font-size: 18px;
     font-weight: 600;
-    color: rgb(206, 199, 199);
+    color: rgb(116, 107, 107);
     opacity: 0.8;
 }
 
 input:focus {
     outline: none;
+    color: black;
+    opacity: 0.8;
+    font-weight: 400;
 }
 
 button {
@@ -54,10 +57,34 @@ button {
     background: linear-gradient(to right,#EC008C, #FC6767);
 }
 
+button:hover {
+    background: linear-gradient(to right, #FC6767, #EC008C);
+}
+
 h2 {
     font-family: Inter;
     font-size: 14px;
     font-weight: bold;
     margin-top: 35px;
     cursor: pointer;
+}
+
+@media screen and (max-width: 576px) {
+    .card {
+        width: 300px;
+        height: 500px;
+        padding: 5px;
+    }
+
+    .title {
+        margin-top: 55px;
+    }
+
+    button {
+        margin-top: 50px;
+    }
+
+    h2 {
+        margin-top: 25px;
+    }
 }
