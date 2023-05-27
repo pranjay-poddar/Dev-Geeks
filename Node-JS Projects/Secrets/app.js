@@ -79,9 +79,7 @@ passport.use(new GoogleStrategy({
   callbackURL: "http://localhost:3000/auth/google/secrets",
   userProfileURL: "https://www.googleapis.com/oauth2/v3/userinfo",
   scope: ["profile","email"]
-}, function(accessToken, refreshToken, profile,email, cb) {
-  console.log(profile);
-  console.log(email);
+}, function(accessToken, refreshToken, profile,cb) {
   User.findOrCreate({
     googleId: profile.id
   }, function(err, user) {
@@ -107,7 +105,6 @@ passport.use(new GitHubStrategy({
     callbackURL: "http://localhost:3000/auth/github/secrets"
   },
   function(accessToken, refreshToken, profile, done) {
-    console.log(profile);
     User.findOrCreate({ githubId: profile.id }, function (err, user) {
       return done(err, user);
     });
@@ -215,7 +212,7 @@ app.route('/register')
 app.route("/secrets")
   .get(function(req, res) {
     if (req.isAuthenticated()) {
-        User.find({"secret": {$ne: null}}).then(foundUsers=>{
+        User.find({"secrets": {$ne: null}}).then(foundUsers=>{
           if (foundUsers){
             res.render("secrets",{usersWithSecrets: foundUsers});
           }
