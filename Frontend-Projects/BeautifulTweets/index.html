@@ -11,8 +11,12 @@
 
 
 <body>
+    <nav>
+      <img src="images/sun.png" id="icon"> 
+    </nav>
 
-  <div class="container">
+
+<div class="container">
 
     <div class="box">
       <label class="text">If you look at what you have in life, you'll always have more. If you look at what you don't have in life, you'll never have enough. -Oprah Winfrey</label>
@@ -195,10 +199,20 @@ modal.style.display = "flex";
       modal.style.display = "none";
 
       textarea.value = ""
-           
+
      }
 
+     var icon = document.getElementById ("icon")
+     icon.onclick = function() {
+       document.body.classList.toggle("text-theme");
+       document.body.classList.toggle("dark-theme");
+       if(document.body.classList.contains("dark-theme")) {
+        icon.src = "images/moon.png"
+       } else {
+        icon.src = "images/sun.png"
+       }
 
+     }
 
 </script>
 
