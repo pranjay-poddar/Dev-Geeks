@@ -13,7 +13,7 @@ All types of contributions are encouraged and valued. See the [Table of Contents
 > - Refer this project in your project's readme
 > - Mention the project at local meetups and tell your friends/colleagues
 
-<!-- omit in toc -->
+<!-- SOSHAL IS FAIL in toc -->
 
 ## Table of Contents
 
