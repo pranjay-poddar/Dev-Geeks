@@ -678,6 +678,11 @@ Happy Coding! -->
 <td align="center"> 228.</td>
 <td align="center"> <a href="https://github.com/shubhanshurav/Dev-Geeks/tree/main/cpp-projects/Banking%20System%20Project"> Banking System Project </a></td>
 	
+<tr align="center">
+<td align="center"> 228.</td>
+<td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Frontend-Projects/FIght%20Game"> Fight Game </a></td>
+</tr>	
+	
 </table>
 
 ## How to contribute:
