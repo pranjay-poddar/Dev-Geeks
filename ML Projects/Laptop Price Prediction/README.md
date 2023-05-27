@@ -28,3 +28,7 @@ Step 5: Calculating the MAE & R2Score of various models that have been used
 ### Conclusion 
 
 Random Forest gives the best accuracy and the least MAE score. 
+
+R2 score 0.8873402378382488
+
+MAE 0.15860130110457718
