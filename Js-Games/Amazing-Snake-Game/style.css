@@ -1,0 +1,66 @@
+*{
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    /* background: linear-gradient(to bottom, #ff0019, #7bf113); */
+
+    background-image: radial-gradient(#ff8a00, #e52e71);
+    background-image: radial-gradient(circle at top right, #ffa200, red, #e52e71);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.gradient-border {
+    background-image: radial-gradient(#ff8a00 35%, transparent 35%);
+    background-size: 8px 8px;
+    border-radius: 16px;
+    padding: 35px;
+  }
+
+div{
+    text-align: center;
+}
+
+.heading{
+    color:rgb(47, 46, 47);
+    padding: 0.91rem;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.heading h2{
+    border-bottom: 4px solid rgb(55, 54, 54);
+    width: 18rem;
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin: 0 auto;
+  
+}
+
+#mycanvas{
+    background-image: url("Assets/bg.jpg");
+    border: 10px solid green;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+} 
+
+.startbtn{
+    padding: 0.81rem;
+    text-align: center;
+    background-image: radial-gradient(#ff8a00 25%, transparent 90%);
+
+}
+
+#start-button{
+    padding: 10px;
+    border-radius: 6px;
+    background-color: rgb(68, 71, 68);
+    color: white;
+    cursor: pointer;
+    font-size: 1rem;
+}
