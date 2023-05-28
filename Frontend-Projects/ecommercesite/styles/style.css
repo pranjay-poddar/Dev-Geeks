@@ -1,0 +1,900 @@
+    @import url("https://fonts.googleapis.com/css2?family=Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap");
+    * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Spartan", sans-serif;
+    }
+
+    /* body{
+        background-color: #faf2f2;
+    } */
+    html {
+    scroll-behavior: smooth;
+    }
+
+    body{
+        text-align: center;
+    }
+    /* Global Styles */
+
+    h1 {
+    font-size: 50px;
+    line-height: 64px;
+    color: #222;
+    }
+
+    h2 {
+    font-size: 46px;
+    line-height: 54px;
+    color: #222;
+    }
+
+    h4 {
+    font-size: 20px;
+    color: #222;
+    }
+
+    h6 {
+    font-weight: 700;
+    font-size: 12px;
+    }
+
+    p {
+    font-size: 16px;
+    color: #465b52;
+    margin: 15px 0 20px 0;
+    }
+
+    .section-p1 {
+    padding: 40px 80px;
+    }
+
+    .section-m1 {
+    margin: 40px 0;
+    }
+
+    body {
+    width: 100%;
+    }
+
+
+    .nav{
+        position: sticky;
+        top: 0;
+        left: 0;
+        width: 100%;
+        scroll-behavior: smooth;
+        display: flex;
+        justify-content: space-between;
+        padding: 0 20px;
+        background: #d7e0dc;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.6);
+        border: 1px solid rgb(222, 216, 209);
+        border-radius: 2px;
+        
+        color: rgb(22, 24, 22);
+
+    }
+    .nav img{
+        padding: 20px 10px;
+        align-items: center;
+    }
+    .nav #navitems #navbar{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 30px;
+        padding: 30px 20px;
+        font-weight: 700;
+
+
+
+
+
+    }
+    #close{
+        display: none;
+    }
+
+    .nav li{
+        list-style: none;
+        padding: 0 20px;
+        position: relative;
+
+
+    }
+    #navitems li a{
+        color: rgb(29, 35, 29);
+        align-items: center;
+        padding: 20px 2px;
+        transition: 0.4s ease;
+        
+    }
+
+    #navitems li a:hover,
+    #navitems li a.active{
+        color: rgb(15, 121, 58);
+    }
+    #navitems li a.active::after,
+    #navitems li a:hover::after{
+        content: " ";
+        width: 30%;
+        height: 2px;
+        background:#096c35;
+        position: absolute;
+        bottom: -4px;
+        left: 20px;
+        }
+    #navbar #bag{
+        font-size: 20px;
+    }
+    #navitems i{
+        color: #088178;
+    }
+    #navitems a{
+        text-decoration: none;
+    }
+    #mobile{
+        display: none;
+        align-items: center;
+    }
+
+    /* ------------     HERO      ---------------------------------- */
+    #hero{
+        background-image: url("../hero/heroreal.png");
+        height: 100vh;
+        width: 100%;    
+        background-size: cover;
+        background-position: top 25% right 0;
+        padding:0 100px;
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column;
+        justify-content: center;
+        background-position-x: -10px;
+            
+    }
+    #hero h4{
+        padding-bottom:20px ;
+    }
+    #hero h2{
+        padding-bottom: 5px;    
+    }
+    #hero h2 span{
+        color: #0a9289;
+    }
+    #hero p{
+        /* padding-left: 10px; */
+        font-weight: 600;
+    }
+    #hero p span{
+        color: rgb(237, 90, 90);
+    }
+
+    .herobutton{
+        background-image: url("../button.png");
+        border: none;
+        background-color: transparent;
+        color: #088178;
+        padding: 14px 80px 14px 70px;
+        font-size: 1rem;
+        font-weight: 600;
+        background-repeat: no-repeat;
+        cursor: pointer;
+        font-size: 15px;
+        }
+
+    /* ----------------------Features----------------------------------------- */
+    .features{
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        flex-wrap: wrap;
+
+    }
+    .features .box{
+        text-align: center;
+        width: 180px;
+        padding: 25px 15px;
+        margin: 20px 15px;
+        box-shadow: 20px 20px 34px rgba(0,0,0,0.03);
+        border: 1px solid rgb(195, 184, 184);
+        
+
+        
+    }
+    .features .box:hover{
+        box-shadow: 10px 10px 54px rgba(133, 38, 38, 0.1);
+
+    }
+    .features h5{
+        display: inline-block;
+        padding: 9px 8px 6px 8px;
+        line-height: 1;
+        color: #088178;
+        border-radius: 4px;
+        background-color: antiquewhite;
+    }
+    .features :nth-child(2) h5{
+        background-color: rgb(193, 234, 207);
+    }
+    .features :nth-child(3) h5{
+        background-color: rgb(202, 240, 155);
+    }
+    .features :nth-child(4) h5{
+        background-color: rgb(239, 187, 205);
+    }
+    .features :nth-child(5) h5{
+        background-color: rgb(191, 247, 243);
+    }
+    .features :nth-child(6) h5{
+        background-color: rgba(248, 235, 199, 0.932);
+    }
+    .features img{
+        margin-bottom: 10px;
+        width: 100%;
+    }
+
+    /* -------------Products1 ------------------------------*/
+
+    #products1{
+        text-align: center;
+        margin-left: 30px;
+
+    }
+    #products1 .boxes{
+        display: flex;
+        flex-wrap: wrap;
+        text-align: center;
+        justify-content: flex-start;
+    }
+    #products1 .boxes .box{
+        justify-content: flex-start;
+        margin: 20px;
+        width: 235;
+        min-width: 280px;
+        height: 350px;
+        border: 1px solid rgb(173, 163, 163);
+        padding: 10px 5px  ;
+        border-radius: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+
+
+    }
+    #products1 .boxes .box:hover{
+        cursor: pointer;
+        box-shadow: 10px 20px 30px rgba(189, 72, 72, 0.11);
+    }
+
+    #products1 .box p{
+        margin-bottom: 10px;
+        text-align: left;
+
+
+    }
+    #products1 .box .content{
+        text-align: left;
+        margin-left: 13px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+
+    }
+
+    #products1 .box img{
+        width: 230px;
+        border-radius: 20px;
+        
+        
+        }
+
+    #products1 .box .star{
+        color: rgb(248, 168, 30);
+
+    }
+    #products1 .box .content a i{
+        color: #088178;
+    padding-left: 85%;
+    
+    }
+
+    /* -----------Banner-------------------------- */
+
+    #banners .content{
+        text-align: center;
+        justify-content: center;
+        background-image: url("../banner/b2.jpg");
+        padding: 60px 40px;
+        background-size: cover;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 45vh;
+        background-position: center;
+    }
+    #banners .content h4,#banners .content h2{
+        padding-bottom: 10px;
+        color: rgb(247, 233, 233);
+        font-weight: 600;
+        margin-top: 15px;
+    }
+    #banners .content h2 span{
+        color: rgb(236, 30, 30);
+    }
+    #banners .content .button1{
+            padding: 15px 40px;
+            font-weight: 700;
+            word-spacing: 5px;
+            color: white;
+            background: #088178;
+            border-radius: 10px;
+            font-size: 1.2rem;
+            transition: 0.3s ease;
+            margin-bottom: 20px;
+            text-align: center;
+            justify-content: center;
+
+    }
+    #banners .content .button1:hover{
+        color: #088178;
+        cursor: pointer;
+        background: whitesmoke;
+        padding: 15px 60px;
+    }
+
+
+    /* ----------Arrivals------------------ */
+    #arrivals{
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        padding-bottom: 65px;
+        margin-top: 30px;
+
+    }
+    #arrivals h4{
+        margin: 30px;
+    }
+    #arrivals #boxes{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        
+    }
+    #arrivals #boxes .box{
+        width: 230px;
+        min-width: 280px;
+        height: 350px;
+        border: 1px solid rgb(194, 183, 183);
+        border-radius: 30px;
+        justify-content: flex-start;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        margin: 15px;
+
+
+    }
+    #arrivals #boxes .box:hover{
+        cursor: pointer;
+        box-shadow: 15px 10px 30px rgba(202, 61, 61, 0.13);
+    }
+
+    #arrivals .box img{
+        width: 240px;
+        border-radius: 40px;
+        margin: 10px 4px 2px 20px;
+    }
+
+    #arrivals .box .content{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+
+    }
+
+    #arrivals .box .content p{
+        margin:10px 4px 2px 20px;
+        font-weight: 500;
+    }
+    #arrivals .box .content h4,#arrivals .box .content .stars{
+        margin: 2px 0px 1px 20px;
+        font-size: 0.9rem;
+    }
+    #arrivals .box .stars{
+        display: flex;
+        color: #f0a431;
+    }
+
+    #arrivals .box .content .bag{
+        color: #088178;
+        padding-left: 80%;
+    }
+
+    /* -----------------------Ban------------------- */
+    #ban{
+        width: 90%;
+        margin: 0px 70px;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: center;
+
+    }
+
+    #ban .boxes1,#ban .boxes2{
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+        justify-content: center;
+        height: 35vh;
+        background-size: cover;
+        background-position: center;
+        width: 40%;
+        margin: 5px 5px 10px 40px;
+        padding: 25px 60px 20px 10px;
+        font-weight: 600;
+        
+        
+        
+    }
+    #ban .boxes1{
+        background-image: url("/banner/b17.jpg");
+    
+    }
+    #ban .boxes1 h4,#ban .boxes1 h2,#ban .boxes1 p{
+        color: white;
+    }
+    #ban .boxes2 h4,#ban .boxes2 h2,#ban .boxes2 p{
+        color: white;
+    }
+
+    #ban .boxes2{
+        background-image: url("/banner/b10.jpg");
+    
+    }
+     .transparentbutton{
+        color: #faf1f100;
+        width: 200px;
+         padding:10px 40px;
+         border:1.5px solid rgb(241, 232, 232);
+         color: #f2f4f4;
+         font-weight: 600;
+         background: transparent;
+         margin-left: 10px;
+
+    }
+    .transparentbutton:hover{
+        cursor: pointer;
+        box-shadow: 5px 10px 40px rgba(52, 57, 29, 0.53);
+
+
+    }
+
+    /* ----------------------------------ban3------------- */
+    #ban3 {
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        margin: 65px 40px;
+        text-align: left;
+        
+
+    }
+    #ban3 .box1 h2, #ban3 .box2 h2, #ban3 .box3 h2{
+        font-size: 1.9rem;
+        color: rgb(232, 72, 72);
+        
+    }
+    #ban3 p{
+        color: #f2f4f4;
+    }
+    #ban3 .box1{
+        background-image: url("../banner/b4.jpg");
+        background-size: cover;
+        background-position: center;
+        padding: 20px 40px ;
+    
+        
+    }
+    #ban3 .box2{
+        background-image: url("../banner/b16.jpg");
+        background-size: cover;
+        background-position: center;
+        padding: 20px 40px ;
+
+    }
+    #ban3 .box3{
+        background-image: url("../banner/b7.jpg");
+       
+        background-size: cover;
+        background-position: center;
+        padding: 20px 40px ;
+
+    }
+
+
+    /* ---------------newsleteter --------*/
+
+    #newsletter{
+        width: 100%;
+        height: 30vh;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #d1c4dd;
+        font-weight: 650;
+    }
+    #newsletter .content{
+        margin: 60px 50px;
+
+    }
+    #newsletter .content h3{
+        font-size: 1.5rem;
+
+    }
+    #newsletter .content span{
+        color: rgb(37, 161, 130);
+        font-size: 1.52rem;
+    }
+    
+   #newsletter input{
+    width: 200px;
+    height: 40px;
+    border-radius: 5px;
+    padding: 10px;
+    border-top-right-radius: 0;
+    margin-right: 0px;
+    border-bottom-right-radius: 0;
+   }
+
+   #newsletter .button1{
+    width: 100px;
+    height: 40px;
+    padding: 10px;
+    margin-left: -10px;
+    background: #23aea5;
+    color: white;
+    border-top-left-radius:0 ;
+    border-bottom-left-radius: 0;
+    font-weight: 600;
+   }
+   #newsletter .button1:hover{
+    background-color: #feffff;
+    color:#088178;
+   }
+
+   /* -----------------Footer-------------------- */
+
+   #footer{
+    margin-top: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: left;
+    font-weight: 500;
+    line-height: 0.8rem;
+    background-color: #e0eae9;
+   }
+
+   #footer img{
+    margin: 5px 0 20px 0px;
+   }
+   #footer span{
+    font-size: 1rem;
+    font-weight: 600;
+    color: #202323;
+   }
+   #footer p{
+    font-size: 0.78rem;
+    font-weight: 600;
+   }
+   #footer p:hover{
+    color: #088178;
+    cursor: pointer;
+   }
+   #footer h5{
+    font-size: 1rem;
+    margin-bottom: 15px;
+   }
+
+   #footer button{
+   width: 170px;
+   height: 50px;
+    background-size: cover;
+    background-position: center;
+    border: 1px solid #088178;
+    margin-bottom: 5px;
+   }
+   #footer .apple{
+    background-image: url("../pay/app.jpg");
+
+   }
+   #footer .playstore{
+    background-image: url("../pay/play.jpg");
+  
+   }
+   #footer .social a i{
+    margin: 2px;
+    color: #088178;
+    margin-bottom: 15px;
+   }
+
+/* ---------------------cppy ---------*/
+   .copy{
+    background-color:  #e0eae9;
+    padding: 5px;
+    font-weight: 800;
+   }
+
+   /* ------------------------------media query ------------------------ */
+   @media (max-width:799px){
+    #hero{
+        background-position: top 25% right 32%;
+        padding: 0px 25px;
+    }
+    #products1 .boxes {
+     justify-content: center;
+     padding: 39px 42px;
+
+    }
+    #products1 .box img {
+       margin-left: 20px;
+    }
+    #arrivals .box img {
+       
+        margin-top: 10px;
+        margin-left: 20px;
+    }
+    #arrivals {
+        margin-top: 45px;
+    }
+    #navitems li a {
+        padding: -3px 11px;
+    }
+    #banners .content h4, #banners .content h2 {
+        padding-bottom: 9px;
+        margin-top: 31px;
+    }
+    #ban {
+        width: 100%;
+        margin: 0px 1px 0 0;
+
+    }
+    #ban .boxes1, #ban .boxes2 {
+        height: 39vh;
+        width: 96%;
+    }
+    #ban3 .box3 {
+        background-position: top 2% left 25%;
+        height: 37vh;
+        width: 88%;
+        margin: 21px;
+        text-align: left;
+        display: flex;
+        flex-direction: column;
+        align-items: left;
+        justify-content: center;
+        
+    }
+    #ban3 .box1 ,#ban3 .box2{
+        padding: 20px 20px;
+        text-align: left;
+        margin: 1px;
+    }
+    #footer h5 {
+        margin: 15px;
+    }
+    #navitems i {
+        padding-left: 27px;
+        
+    }
+    .nav #navitems #navbar{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        position: fixed;
+        top: 0;
+        right: -300px;
+        height: 100vh;
+        width: 220px;
+        background-color: rgb(198, 194, 184);
+        padding: 80px 0 0 10px;
+        transition: ease 0.3s;
+
+    }
+   
+   
+    .nav #navitems #navbar.active{
+        right: -30px;
+        cursor: pointer;
+        background: #d7e0dc;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.6);
+    }
+    #navitems li{
+        margin-bottom: 30px;
+    }
+
+    #hero{
+        height: 60vh;
+        padding: 0 40px;
+        background-position: top 10% right 30%;
+        background-image: url("../hero/heroreal.png");
+        background-repeat: no-repeat;
+        background-position-x: -350px;
+    }
+    .features {
+        
+        justify-content: center;
+        padding: 40px 40px;
+    }
+    #banners .content {
+        height: 26vh;
+    }
+    #close{
+        display: flex;
+        position: absolute;
+        bottom: 270px;
+        left: 0px;
+        font-size: 25px;
+    }
+    
+    #bag{
+        display: none;
+        position: absolute;
+        left: 0px;
+        font-size: 25px;
+        
+    }
+    #mobile{
+        display: flex;
+        align-items: center;
+    }
+    #mobile i{
+        color: #313333;
+        padding: 15px;
+        font-size: 25px;
+    }
+    #ban3 {
+        margin: 40px 11px;
+
+
+    }
+    #ban3 .box1 h2, #ban3 .box2 h2, #ban3 .box3 h2 {
+        font-size: 1.14rem;
+    }
+    #newsletter {
+        height: 22vh;
+    }
+   
+    .input {
+        font-size: 20px;
+        display: flex;
+        margin: 10px 50px 34px 0;
+        padding: 20px 0px;
+    }
+    #footer {
+        margin-top: 31px;
+        padding: 0px;
+    }
+
+   
+   }
+
+   @media (max-width:397px) {
+    #hero {
+        height: 50vh;
+        padding: 3px 9px;
+        text-align: left;
+        background-position-x: -387px;
+    }
+    #hero h2 {
+        padding-bottom: 7px;
+        font-size: 16px;
+    font-weight: 800;
+    line-height: 23px;
+    color: #222;
+    }
+    #hero h4 {
+        padding-bottom: 13px;
+        font-size: 12px;
+    color: #222;
+    }
+    #hero p {
+        font-weight: 600;
+        font-size: 11px;
+        color: #000000;
+        margin: 4px 0 20px 0;
+    }
+     h1{
+        font-size:26px;
+        line-height: 25px;
+
+    }
+    #products1 .boxes {
+        padding: 0px 19px;
+    }
+    #banners .content h2  {
+        font-size: 12px;
+    }
+    #banners .content h4, #banners .content h2 {
+        padding-bottom: 1px;
+        margin-top: 7px;
+    }
+    #banners .content .button1 {
+        padding: 11px 20px;
+        color: white;
+        border-radius: 5px;
+        font-size: 0.6rem;
+    }
+    #banners .content {
+        height: 17vh;
+    }
+    #banners h4{
+        margin-top: 5px;
+    }
+    .content h4{
+        font-size: 18px;
+        margin-top: 22px;
+    }
+    #arrivals  h2{
+            font-size: 30px;
+            line-height: 5px;
+            color: #222;
+            margin-top: 2px;
+        
+    }
+    #arrivals h4 {
+        margin: 24px;
+        font-size: 16px;
+    }
+    #newsletter .content {
+
+        margin: -42px 8px;
+    }
+    #newsletter {
+        height: 19vh;
+        display: flex;
+        flex-direction: column;
+    }
+    #newsletter .content h3 {
+        font-size: 16px;
+        margin-top: 94px;
+    }
+    #newsletter .content p{
+        font-size: 10px;
+    margin: 10px 0 9px 0;
+    padding: 6px 5px;
+}
+    #newsletter input {
+    width: 154px;
+    height: 40px;
+    border-radius: 9px;
+    margin-left: 50px;
+    } 
+    #newsletter .content span {
+    font-size: 22px;
+        }   
+        #ban .boxes1, #ban .boxes2 {
+            height: 36vh;
+            width: 95%;
+            margin-left: 0;
+        }
+    }
+   
+
+
+
+  
