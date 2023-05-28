@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Tip Calculator</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+      text-align: center;
+    }
+
+    h1 {
+      margin-top: 0;
+    }
+
+    .container {
+      max-width: 400px;
+      margin: 0 auto;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    .form-group label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+
+    .form-group input[type="number"] {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 16px;
+    }
+
+    .form-group button {
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .form-group button:hover {
+      background-color: #45a049;
+    }
+
+    .result {
+      font-size: 24px;
+      font-weight: bold;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Tip Calculator</h1>
+    <div class="form-group">
+      <label for="billAmount">Bill Amount:</label>
+      <input type="number" id="billAmount" placeholder="Please enter Bill amount" step="0.01" min="0">
+    <h1></h1>
+      <label for="tipPercentage">Tip Percentage:</label>
+      <input type="number" id="tipPercentage" placeholder="Please enter tip percentage" step="1" min="0" list="tipsuggestions">
+<datalist id="tipsuggestions">
+    <option value="5">
+        <option value="10">
+            <option value="20">
+                <option value="50">
+                    <option value="75">
+</datalist>
+    </div>
+    <div class="form-group">
+      <button onclick="calculateTip()">Calculate Tip</button>
+    </div>
+    <div class="result" id="tipAmount"></div>
+  </div>
+
+  <script>
+    function calculateTip(){
+        billAmount=parseFloat(document.getElementById('billAmount').value);
+         tipPercentage=parseFloat(document.getElementById('tipPercentage').value);
+if(isNaN(billAmount) || isNaN(billAmount)){
+    document.getElementById('tipAmount').innerText = 'Invalid amount, please try again';
+return 0;
+}
+         tipAmount = (billAmount*tipPercentage)/100;
+
+document.getElementById('tipAmount').innerText = 'Tip Amount: $' + tipAmount.toFixed(2);
+
+
+    }
+  </script>
+</body>
+</html>
