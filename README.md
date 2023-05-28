@@ -677,6 +677,8 @@ Happy Coding! -->
 
 <td align="center"> 228.</td>
 <td align="center"> <a href="https://github.com/shubhanshurav/Dev-Geeks/tree/main/cpp-projects/Banking%20System%20Project"> Banking System Project </a></td>
+<td align="center"> 229.</td>
+<td align="center"> <a href=""> Current Weather App </a></td>
 	
 <tr align="center">
 <td align="center"> 228.</td>
