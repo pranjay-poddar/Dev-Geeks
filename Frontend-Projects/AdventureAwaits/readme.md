@@ -3,5 +3,5 @@
 
 Screeshots -
 <p align="center">
-  <img src="assets\ADVENTURE.png" width="350" >
+  <img src="assets\ADVENTURE.png" width="1000" >
 </p>
