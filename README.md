@@ -667,7 +667,18 @@ Happy Coding! -->
 <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Frontend-Projects/Electronic%20Gadget"> Electronic Gadget </a></td>
 <td align="center"> 224.</td>
 <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/ML%20Projects/Analysis%20of%20Fashion_dataset"> Analysis_ of Fashion dataset </a></td>
+<td align="center"> 225.</td>
+<td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/ML%20Projects/Analysis%20of%20Fashion_dataset"> Amazing Snake Game </a></td>
+<td align="center"> 226.</td>
+<td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Animations-CSS/3D%20rotating%20cube"> 3D Rotating Cube </a></td>
+<td align="center"> 227.</td>
+<td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/ReactJS%20Typescript%20Projects/typescript_todo"> Typescript React Todos </a></td>
 </tr>
+	
+<tr align="center">
+<td align="center"> 228.</td>
+<td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Frontend-Projects/FIght%20Game"> Fight Game </a></td>
+</tr>	
 	
 </table>
 
