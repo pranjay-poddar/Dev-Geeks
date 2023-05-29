@@ -1,12 +1,18 @@
+// QUERY SELECTORS
+
 const memeContent = document.querySelector(".meme-content");
 const jokeContent = document.querySelector(".joke-content");
 const quoteContent = document.querySelector(".quote-content");
 const riddleContent = document.querySelector(".riddle-content");
 const btn = document.getElementById("reveal-btn");
 
+// REVEAL BUTTON FOR RIDDLE
+
 const revealBtn = document.createElement("button");
 revealBtn.textContent = "Reveal riddle answer";
 var ans = document.createElement('p');
+
+// FUNCTIONS TO SHOW CONTENT
 
 function showMeme() {
     clearAll();
@@ -44,6 +50,8 @@ function showRiddle() {
     btn.appendChild(revealBtn);
 }
 
+// EVENT LISTENERS FOR REVEAL BUTTON
+
 revealBtn.addEventListener("click", () => {
     if (ans.hidden) {
       ans.hidden = false;
@@ -52,6 +60,8 @@ revealBtn.addEventListener("click", () => {
     }
   }
 );
+
+// FUNCTONS FOR CLEAR ALL AND REMOVING BUTTON AND GETTING RANDOM DATA FOR CONTENT
 
 function clearAll() {
     removeBtn(); 
@@ -70,6 +80,8 @@ function removeBtn() {
 function getRandomData(type) {
     return data[type][rn(data[type].length)];
 }
+
+// ARRAYS FOR THE CONTENT
 
 const memes = ['res/meme01.jpg', 'res/meme02.jpg', 'res/meme03.jpg', 'res/meme04.jpg', 'res/meme05.jpg', 'res/meme06.jpg', 'res/meme07.jpg', 'res/meme08.jpg', 'res/meme09.jpg', 'res/meme10.jpg', 'res/meme11.jpg', 'res/meme12.jpg', 'res/meme13.jpg', 'res/meme14.jpg', 'res/meme15.jpg', 'res/meme16.jpg', 'res/meme17.jpg', 'res/meme18.jpg', 'res/meme19.jpg', 'res/meme20.jpg'];
 
