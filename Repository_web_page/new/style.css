@@ -267,37 +267,3 @@ body {
         font-size: 0.9rem;
     }
 }
-.logo {
-    font-family: Arial, sans-serif;
-    font-size: 32px;
-    color: #ffffff;
-    background-color: #007bff;
-    padding: 10px;
-    border-radius: 5px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .github-logo {
-    width: 100px;
-    height: 60px;
-    background-image: url("./img/images.png");
-    background-size: contain;
-    margin-right: 10px;
-    border-radius: 100px;
-  }
-  
-  .dev {
-    font-weight: bold;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-  }
-  
-  .geeks {
-    font-style: italic;
-    color: #ffcc00;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-  }
-  
-  
