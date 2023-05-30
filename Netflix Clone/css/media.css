@@ -1,0 +1,176 @@
+@media only screen and (max-width: 820px){
+    nav .logo{
+      width: 80px;
+      cursor: pointer;   
+    }
+  
+    .header-content{
+      position: absolute;
+      top: 30%;
+      left: 50%;
+      text-align: center;
+    }
+  
+    .header-content h1{
+      font-size: 2.5rem;
+    }
+  
+    .header-content h3{
+      font-size: 1.4rem;
+    }
+  
+    .header-content p{
+      font-size: .95rem
+    }
+  
+    .text-col, .img-col{
+      flex-basis: 100%;
+      margin-bottom: 16%;
+      justify-content: center;
+      text-align: center;
+      align-items: center;
+    }
+    .img-col, .animated-video{
+      margin-left: 5%;
+    }
+  }
+  
+  @media only screen and (max-width: 600px){
+    nav{
+      margin: 0 1.5rem;
+    }
+  
+    nav .logo{
+      width: 80px;
+    }
+  
+    nav button{
+      padding: 4px 8px;
+      font-size: .8rem;
+    }
+  
+    option{
+      line-height: 1.3rem;
+      overflow: hidden;
+      white-space: none;
+    }
+  
+    .l-btn img{
+      width: 10px;
+      margin: 0 8px;
+    }
+  
+    .header-content{
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 75%;
+    }
+    .header-content h1{
+      font-size: 1.75rem;
+      line-height: 1.1;
+      font-weight: 500;
+    }
+    .header-content h3, .header-content p{
+      font-size: 1.125rem;
+      font-weight: 400;
+    }
+    .header-form{
+      height: 48px;
+      padding: 10px 10px 0;
+      width: 100%;
+      display: contents;
+    }
+  
+    .header-form input{
+      padding: 6% 8%;
+      width: 80%;
+      margin: 15px auto;
+    }
+    
+    .features h2{
+      font-size: 1.65rem;
+      font-weight: 500;
+      line-height: 1.1;
+      margin-bottom: 0.5rem;
+    }
+  
+    .features p{
+      font-size: 1.125rem;
+      margin: 0.95em -1.1em 0.25em;
+      font-weight: 400;
+      line-height: 1.4;
+    }
+  
+    .animated-video{
+      margin-left: 5%;
+      width: 100%;
+    }
+    .animated-video2{
+      left: 50%
+    }
+    .img-col img{
+      width: 100%;
+    }
+  
+    .features{
+      padding: 10px 12%;
+    }
+    .faq{
+      padding: 5% 0;
+      overflow-x: hidden;
+    }
+  
+    .faq h2{
+      padding-left: 12%;
+      padding-top: 5rem;
+      padding-right: 12%;
+      font-size: 1.65rem;
+      line-height: 1.1;
+      margin-bottom: 0.5rem;
+    }
+  
+    .accordian{
+      margin: 60px -15%;
+      width: 105%;
+    }
+  
+    .faq small{
+      font-weight: 400;
+      padding-left: 2%;
+      padding-right: 2%;
+      text-align: center;
+      font-size: 1.15rem;
+      max-width: none;
+      padding-bottom: 20px;
+    }
+  
+    .faq .header-form input{
+      width: 90%;
+      padding: 4% 5%;
+    }
+  
+    .faq .header-form button{
+      padding: 12px 24px;
+      margin-bottom: 4rem;
+    }
+  
+    .footer{
+      padding: 50px 9% 10px;
+    }
+  
+    .footer h2{
+      font-size: .85rem;
+    }
+  
+    .footer .col{
+      flex-grow: 1;
+      flex-basis: 50%;
+      margin-bottom: 5px;
+    }
+  
+    .footer .col a{
+      font-size: 0.8rem;
+      line-height: 1.5rem;
+    }
+  }
