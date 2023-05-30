@@ -1,54 +1,90 @@
 * {
-  background-color: rgb(209, 234, 242);
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-h1 {
-  text-decoration: underline;
-  /* display: inline-block; */
-  text-align: center;
-  display: relative;
-  float: top;
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #b36a6a;
 }
-h1:hover {
-  font-family: "Courier New", Courier, monospace;
-  background-color: brown;
-  font-size: 40px;
-}
-p {
-  font-size: 20px;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+header {
+  background-color: #acf5da;
+  color: #1a1919;
+  padding: 20px;
   text-align: center;
 }
-img {
-  height: 300px;
+
+
+.glowing-heading {
+  text-align: center;
+  font-size: 3rem;
+  font-weight: bold;
+  color: #b36a6a; /* Change this to your desired text color */
+  animation: glowing-animation 2s ease-in-out infinite;
+}
+
+@keyframes glowing-animation {
+  0% {
+    text-shadow: 0 0 10px #b36a6a; /* Change the shadow color and size as desired */
+  }
+  50% {
+    text-shadow: 0 0 20px #b36a6a; /* Change the shadow color and size as desired */
+  }
+  100% {
+    text-shadow: 0 0 10px #b36a6a; /* Change the shadow color and size as desired */
+  }
+}
+
+
+
+main {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #acf5da;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+section {
+  margin-bottom: 20px;
+}
+
+h2 {
+  margin-bottom: 10px;
+}
+
+.gift-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.gift {
+  width: calc(50% - 20px);
+  padding: 10px;
+  margin-bottom: 20px;
+  background-color: #f9f9f9;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.gift img {
+  max-width: 100%;
+}
+
+.picture-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.picture-container img {
   width: 300px;
-  margin-top: 0px;
-  padding: 5px;
-  margin-left: 10px;
-  display: inline-block;
+  height: 200px;
+  object-fit: cover;
+  margin: 10px;
 }
-#second {
-  position: relative;
-  float: right;
-}
-button:hover {
-  cursor: pointer;
-}
-div {
+footer{
   text-align: center;
-  font-size: 35px;
-  font-family: "Times New Roman", Times, serif;
-}
-button {
-  font-size: 25px;
-  height: 50px;
-  width: 150px;
-  background-color: crimson;
-  border-radius: 8px;
-}
-#gifty {
-  padding-top: 25px;
-}
-.gif {
-  margin-left: 550px;
-  margin-top: 50px;
 }
