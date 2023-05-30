@@ -73,3 +73,12 @@ table, th, td{
   background-color: burlywood;
   font-size: 25px;
 }
+.radio-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.radio-container input[type="radio"] {
+  margin-right: 5px; /* Adjust spacing between radio buttons and labels */
+}
