@@ -9,13 +9,21 @@
 <br>
 <p>The Dev-Geeks repository is a collection of projects. It contains a variety of projects, ranging from web development to machine learning.Each project is designed to help developers learn and improve their skills in a particular area. The projects are written in a variety of languages, including Python, JavaScript, and HTML.The repository also includes tutorials and resources to help developers get started with the projects. The tutorials provide step-by-step instructions on how to set up the projects and how to use them. The resources provide additional information on the topics covered in the projects. The Dev-Geeks repository is a great resource for developers who are looking to learn and improve their skills. It provides a variety of projects that can help developers learn and improve their skills in a particular area. The tutorials and resources provided in the repository make it easy for developers to get started with the projects.</p>
 
-![forthebadge](https://forthebadge.com/images/badges/uses-brains.svg)
-![forthebadge](https://forthebadge.com/images/badges/check-it-out.svg)
+<div align="center">
+<img src="https://forthebadge.com/images/badges/built-with-love.svg" />
+<img src="https://forthebadge.com/images/badges/uses-brains.svg" />
+<img src="https://forthebadge.com/images/badges/powered-by-responsibility.svg" />
 <br>
-![GitHub repo size](https://img.shields.io/github/repo-size/pranjay-poddar/Dev-Geeks?color=yellow)
-[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
-[![Open Source Love svg2](https://badges.frapsoft.com/os/v2/open-source.svg?v=103)](https://github.com/ellerbrock/open-source-badges/)
-
+<img src="https://img.shields.io/github/repo-size/AbhiPatel10/AISKCON-CONSTRUCTION?style=for-the-badge" />
+<img src="https://img.shields.io/github/issues/AbhiPatel10/AISKCON-CONSTRUCTION?style=for-the-badge" />
+<img src="https://img.shields.io/github/issues-raw/AbhiPatel10/AISKCON-CONSTRUCTION?style=for-the-badge" />
+<img src="https://img.shields.io/github/forks/AbhiPatel10/AISKCON-CONSTRUCTION?style=for-the-badge" />
+<img src="https://img.shields.io/github/issues-pr-closed/AbhiPatel10/AISKCON-CONSTRUCTION?style=for-the-badge" />
+<br>
+<img src="https://img.shields.io/github/stars/AbhiPatel10/AISKCON-CONSTRUCTION?style=for-the-badge" />
+<img src="https://img.shields.io/github/contributors/AbhiPatel10/AISKCON-CONSTRUCTION?style=for-the-badge" />
+<img src="https://img.shields.io/github/issues-pr-closed/AbhiPatel10/AISKCON-CONSTRUCTION?style=for-the-badge" />
+</div>
 
   <p align="center">
    <!--- <a href="https://github.com/pranjay-poddar"><img src="https://github.com/pranjay-poddar/Dev-Geeks/blob/main/Repository_images/hackclubrait-logo.png" width="200px" />   
