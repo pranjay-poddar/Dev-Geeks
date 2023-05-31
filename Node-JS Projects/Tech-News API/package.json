@@ -11,7 +11,9 @@
   "dependencies": {
     "axios": "^0.27.2",
     "cheerio": "^1.0.0-rc.12",
+    "dotenv": "^16.1.3",
     "express": "^4.18.1",
+    "mongoose": "^7.2.2",
     "nodemon": "^2.0.19"
   }
 }

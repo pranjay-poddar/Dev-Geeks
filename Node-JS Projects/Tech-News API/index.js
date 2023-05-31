@@ -1,9 +1,15 @@
-const PORT = process.env.PORT || 5000           //specially for deploying on heroku
 const express = require('express');
 const axios = require('axios');
 const cheerio = require('cheerio');
 const res = require('express/lib/response');
 const News = require('./NewsModel');
+const dotenv = require('dotenv');
+
+dotenv.config()
+
+const PORT = process.env.PORT || 5000           //specially for deploying on heroku
+
+require('./mongoose.js');
 
 const newspapers = [
     {
@@ -48,7 +54,8 @@ const newspapers = [
     }
 ]
 
-const app = express()
+const app = express();
+app.use(express.json());
 
 const articles = []
 
@@ -83,6 +90,16 @@ app.get('/news', (_req,res) =>{
     res.json(articles)
 })
 
+/* GET api to get all the custom news from mongodb database */
+app.get('/news/custom', async(req,res)=>{
+    try{
+        const allNews = await News.find();
+        res.status(201).send(allNews); 
+    }catch(e){
+        res.status(401).send(e);
+    }
+})
+
 app.get('/news/:newspaperId', async(req,res) => {
     const Id = req.params.newspaperId
 
@@ -111,11 +128,12 @@ app.get('/news/:newspaperId', async(req,res) => {
         }).catch((err) => console.log(err))
 });
 
-app.post('/customNews', async(req,res)=>{
-    const news = new News({
-        ...req.body
-    });
+/* POST api to post custom news to mongodb database */
+app.post('/news/custom', async(req,res)=>{
     try{
+        const news = new News({
+            ...req.body
+        });
         await news.save();
         res.status(201).send(news); 
     }catch(e){
@@ -124,4 +142,3 @@ app.post('/customNews', async(req,res)=>{
 })
 
 app.listen(PORT, () => console.log(`server running on PORT http://localhost:${PORT}`))
-
