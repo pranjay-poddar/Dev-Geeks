@@ -43,7 +43,7 @@
    - The final layers are a flattened layer, a dense layer with ReLU activation, and a dense layer with softmax activation for multi-class classification.
 
 ### 10. Model compilation:
-    - The model is compiled with the Adam optimizer, sparse categorical cross-entropy loss, and accuracy metric.
+    * The model is compiled with the Adam optimizer, sparse categorical cross-entropy loss, and accuracy metric.
 
 ### 11. Model training:
     - The fit() function is called to train the model on the training data.
