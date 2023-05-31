@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Poppins,'sans-serif';
+}
+i{
+    position: absolute;
+    right: 0;
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+    margin: -1rem 2rem;
+    transform: scale(2.5);
+}
+
+.heading{
+    text-align: center;
+    margin-top: 2.5rem;
+    margin-bottom: 3rem;
+    font-size: 3rem;
+}
+
+form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 60px;
+}
+
+#search-input{
+    width: 60%;
+    max-width: 400px;
+    padding: 10px 20px;
+    border: none;
+    box-shadow: 0 0 6px rgba(0,0,0,0.2);
+    border-radius: 5px;
+    font-size: 1.135rem;
+    color: #333;
+}
+
+.searchbtn{
+    padding: 10px 20px;
+    font: inherit;
+    border: none;
+    box-shadow: 0 0 6px rgba(0, 0, 0,0.2);
+    margin-left: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    background-color: rgb(82, 167, 237);
+}
+
+.searchbtn:hover{
+    background-color: rgb(82, 167, 237,0.944);
+}
+
+section .card-container{
+    display: flex;
+    justify-content: space-evenly;
+    flex-flow: row wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+section .card{
+    overflow: hidden;
+    height: 100%;
+    width: 30%;
+    border-radius: 5px;
+    margin-bottom: 60px;
+    box-shadow: 0 0 6px rgba(0, 0, 0,0.2);
+}
+
+section img{
+    width: 100%;
+    height: 400px;
+    transition: opacity 0.2s ease-in-out;
+    object-fit: cover;
+}
+
+section img:hover{
+    opacity: 0.9;
+}
+
+section .card-caption{
+    padding: 10px;
+    font-size: 1.2rem;
+    color: "black";
+    text-transform: capitalize;
+}
+
+#show-more-button{
+    padding: 10px 20px;
+    font: inherit;
+    border: none;
+    box-shadow: 0 0 6px rgba(0, 0, 0,0.2);
+    display: block;
+    margin: 30px auto;
+    cursor: pointer;
+    border-radius: 5px;
+    display: none;
+    background-color: rgb(82, 167, 237);
+}
+
+#show-more-button:hover{
+    background-color: rgba(82, 167, 237, 0.944);
+}
+
+footer{
+    text-align: center;
+}
+
+footer a{
+    font-size: 1.2rem;
+    text-decoration: none;
+    color: rgb(29, 60, 126);
+}
+
+footer a:hover{
+    color: rgba(29, 60, 126, 0.824);
+}
+
+.dark-mode{
+    background-color: black;
+    color: white;
+    transition: 2s;
+}
+
+.light-mode{
+    background-color: white;
+    color: black;
+    transition: 2s;
+}
+
+/* making our app responsive */
+@media screen and (max-width:768px) {
+    section .card-container{
+        align-items: center;
+        justify-content: center;
+        flex-flow: column wrap;
+        padding: 20px;
+    }
+    
+    section .card{
+        width: 45%;
+    }
+
+    section .card-caption{
+        font-size: 0.9em;
+    }
+}
+
+@media screen and (max-width:480px) {
+    section .card{
+        width: 100%;
+    }
+
+    .heading{
+        margin-top: 5rem;
+        font-size: 2rem;
+    }
+
+    i{
+        transform: scale(1.5);
+        position: absolute;
+        right: 0;
+        top: 50px;
+    }
+}
