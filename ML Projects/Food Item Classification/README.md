@@ -30,7 +30,7 @@
 
 ### 7. Preparing the datasets for training:
    - The training, validation, and test datasets are cached, shuffled, and prefetched to optimize data loading.
-   - tf.data.Dataset methods like cache(), shuffle(), and prefetch() is used.
+   - tf. data.Dataset methods like cache(), shuffle(), and prefetch() are used.
 
 ### 8. Data augmentation:
    - Data augmentation is performed to increase the dataset's diversity and improve model generalization.
