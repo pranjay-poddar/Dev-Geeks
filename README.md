@@ -677,13 +677,9 @@ Happy Coding! -->
 <tr align="center">
 <td align="center"> 228.</td>
 <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Frontend-Projects/FIght%20Game"> Fight Game </a></td>
-</tr>
-
-<tr align="center">
 <td align="center"> 229.</td>
 <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/MERN/GoogleDocsClone"> Google Docs Clone </a></td>
-</tr> 
-	
+</tr>	
 </table>
 
 ## How to contribute:
