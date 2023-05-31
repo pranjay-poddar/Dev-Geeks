@@ -3,6 +3,7 @@ const express = require('express');
 const axios = require('axios');
 const cheerio = require('cheerio');
 const res = require('express/lib/response');
+const News = require('./NewsModel');
 
 const newspapers = [
     {
@@ -109,6 +110,18 @@ app.get('/news/:newspaperId', async(req,res) => {
 
         }).catch((err) => console.log(err))
 });
+
+app.post('/customNews', async(req,res)=>{
+    const news = new News({
+        ...req.body
+    });
+    try{
+        await news.save();
+        res.status(201).send(news); 
+    }catch(e){
+        res.status(401).send(e);
+    }
+})
 
 app.listen(PORT, () => console.log(`server running on PORT http://localhost:${PORT}`))
 
