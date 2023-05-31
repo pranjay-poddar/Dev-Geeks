@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat&family=Press+Start+2P&display=swap');
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer_container {
+    max-width: 850px;
+    margin: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer_left {
+    flex: 0.8;
+}
+
+.footer_left > p {
+    padding-left: 2rem;
+    padding-right: 6em;
+    font-size: 28px;
+    font-family: 'Caveat', cursive;
+}
+
+.footer_right {
+    flex: 0.2;
+}
+
+.footer_right > img{
+    display: block;
+    width: 250px;
+}
+
+.footer_left > p > a {
+    text-decoration: none;
+    color: black;
+}
+
+
+.footer_left > p > a > .MuiSvgIcon-root{
+    position: relative;
+    top: 4px;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+}
+
+.footer_hrt {
+    margin-top: 4rem;
+}
+
+.footer_hrt > h3 {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 12px;
+    color: #b30059;
+}
+
+.footer_hrt > h3 > span{
+    font-size: 20px;
+}
+
+.footer_hrt > h3 > a {
+    text-decoration: none;
+    color: #660033 ;
+    font-size: 17px;
+}
+
+@media screen and (max-width: 992px) {
+    .footer_container {
+        margin: 1rem;
+        display: flex;
+        flex-direction: column;
+    }
+    .footer_left > p {
+        padding: 2rem;
+        font-size: 23px;
+    }
+
+  }
+
+  
+  @media screen and (max-width: 600px) {
+    .footer_container {
+        margin: 1rem;
+        display: flex;
+        flex-direction: column;
+    }
+    .footer_left > p {
+        padding: 2rem;
+        font-size: 23px;
+    }
+  }

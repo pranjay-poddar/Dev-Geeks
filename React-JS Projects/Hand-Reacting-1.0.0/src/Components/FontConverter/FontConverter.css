@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Bad+Script&family=Beth+Ellen&family=Bilbo&family=Calligraffitti&family=Caveat&family=Charmonman&family=Dancing+Script&family=Dawning+of+a+New+Day&family=Euphoria+Script&family=Homemade+Apple&family=Indie+Flower&family=Just+Me+Again+Down+Here&family=Kristi&family=Liu+Jian+Mao+Cao&family=Loved+by+the+King&family=Lovers+Quarrel&family=Marck+Script&family=Mr+Dafoe&family=Mr+De+Haviland&family=Mrs+Saint+Delafield&family=Nanum+Brush+Script&family=Over+the+Rainbow&family=Parisienne&family=Qwigley&family=Rancho&family=Reenie+Beanie&family=Ruthie&family=Sacramento&family=Shadows+Into+Light&family=Shadows+Into+Light+Two&family=Vibur&family=Waiting+for+the+Sunrise&family=Yellowtail&display=swap');
+
+
+.fontStyler {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 4rem;
+    margin-bottom: 2rem;
+    justify-content: space-around;
+}
+
+.input_container {
+    margin:1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.paper {
+    width: 460px;
+    height: 590px;
+    padding: 1rem;
+    overflow: hidden;   
+}
+
+.paper_input {
+    width: 360px;
+    height: 400px;
+    padding: 1rem;
+    overflow: hidden;   
+    background-image: linear-gradient(to right, #ed7474 0%, #ffffff 51%, #ed7474 100%) !important;
+}
+
+textarea {
+    font-size: 18px;
+    outline: none;
+    border: none;
+    resize: none;
+    background-color: transparent;
+    width: 100%;
+}
+
+.paper_input::-webkit-scrollbar {
+    display: none;
+}
+
+textarea::-webkit-scrollbar {
+    display: none;
+}
+
+.paper_input, textarea {
+    -ms-overflow-style: none;  
+    scrollbar-width: none; 
+}
+
+.output_container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem;
+}
+
+.output_text {
+    word-wrap: break-word;
+    height: 100%;
+    position: relative;
+    left: 2rem;
+}
+
+.font_selector {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.font_selector > h2 {
+    padding-bottom: 1rem;
+}
+
+.gridOne, .gridTwo .gridThree {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.MuiSlider-colorPrimary {
+    color: #ec4c4c !important;
+    size: 3rem;
+}
+
+.MuiSwitch-colorPrimary {
+    color: #ec4c4c !important;
+}
+
+.colorButton {
+    padding-bottom: 2rem;
+}
+
+.download_button {
+    margin-top: 2rem;
+}
+
+@media screen and (max-width: 1200px){
+    .font_selector {
+        margin: 1.8rem 2.2rem;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .fontStyler {
+        display: flex;
+        flex-direction: column;
+        margin-top: 2rem;
+    }
+    .input_container {
+        display: flex;
+        flex: 1;
+    }
+
+  }
+  
+  @media screen and (max-width: 600px) {
+    .paper {
+        width: 90%;
+        height: 590px;
+        padding: 1rem;
+        overflow: hidden;
+        margin: 5px;   
+    }
+    .paper_input {
+        width: 90%;
+    }
+    .font_selector {
+        margin-top: 0.5rem;
+        margin-bottom: 1.5rem;
+    }
+  }

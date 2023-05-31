@@ -1,0 +1,16 @@
+* {
+  margin: 0;
+}
+.App {
+  padding-bottom: 2rem;
+}
+
+::-webkit-scrollbar{
+  width: 10px;
+
+}
+::-webkit-scrollbar-thumb{
+/* background: linear-gradient(#FF6366,rgb(233,47,47)); */
+background:rgb(233,47,47) ;
+
+}

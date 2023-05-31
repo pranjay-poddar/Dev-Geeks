@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Frijole&family=Lobster+Two&display=swap');
+
+.info {
+    margin: 2rem;
+    display: flex;
+}
+
+.info_about  {
+    flex: 0.5;
+}
+
+.info_about > h3 {
+    padding-left: 2rem;
+    font-family: 'Frijole', cursive;
+    font-size: 25px;
+    color: #ec4c4c;
+}
+
+.info_about > h3 > span{
+    font-size: 32px;
+    color: #e92f2f;
+}
+
+.penIcon {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    color: black;
+}
+
+.info_image {
+    flex: 0.5;
+    float: right;
+    display: flex;
+    justify-content: center;
+}
+
+.info_about > p {
+    flex: 0.5;
+    font-size: 23px;
+    padding-top: 3rem;
+    padding-left: 2rem;
+    padding-right: 7rem;
+    font-weight: 100;
+    word-spacing: 2px;
+    font-family: 'Lobster Two', cursive;
+}
+
+.info_image > img {
+    flex: 0.5;
+    width: 400px;
+}
+
+@media screen and (max-width: 1400px) {
+    .info_about > p {
+        padding-right: 3rem;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .info {
+        margin: 1rem;
+        display: flex;
+        justify-content: center;
+    }
+    .info_image {
+        display: none;
+    }
+    .info_about  {
+        flex: 1;
+        max-width: 75%;
+    }
+    .info_about > p {
+        padding: 2rem 0;
+        text-align: justify;
+    }
+    .info_about > h3 {
+        padding-left:0;
+    }
+
+  }
+
+  
+  @media screen and (max-width: 600px) {
+    .info_about  {
+        max-width: 95%;
+    }
+    .info_about > p {
+        font-size: 18px;
+        padding: 1.5rem 0;
+    }
+  }
