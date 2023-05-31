@@ -30,7 +30,7 @@
 
 ### 7. Preparing the datasets for training:
    - The training, validation, and test datasets are cached, shuffled, and prefetched to optimize data loading.
-   - tf. data.Dataset methods like cache(), shuffle(), and prefetch() are used.
+   - tf. data. Dataset methods like cache(), shuffle(), and prefetch() are used.
 
 ### 8. Data augmentation:
    - Data augmentation is performed to increase the dataset's diversity and improve model generalization.
@@ -43,31 +43,31 @@
    - The final layers are a flattened layer, a dense layer with ReLU activation, and a dense layer with softmax activation for multi-class classification.
 
 ### 10. Model compilation:
-    * The model is compiled with the Adam optimizer, sparse categorical cross-entropy loss, and accuracy metric.
+   - The model is compiled with the Adam optimizer, sparse categorical cross-entropy loss, and accuracy metric.
 
 ### 11. Model training:
-    - The fit() function is called to train the model on the training data.
-    - Parameters include the training data, batch size, validation data, verbosity, and the number of epochs.
-    - The training history is stored in the history variable.
+   - The fit() function is called to train the model on the training data.
+   - Parameters include the training data, batch size, validation data, verbosity, and the number of epochs.
+   - The training history is stored in the history variable.
 
 ### 12. Model evaluation:
-    - The evaluate() function is used to evaluate the model's performance on the test dataset.
-    - The evaluation results (loss and accuracy) are stored in the scores variable.
+   - The evaluate() function is used to evaluate the model's performance on the test dataset.
+   - The evaluation results (loss and accuracy) are stored in the scores variable.
 
 ### 13. Predicting single images:
-    - A function predict() is defined to predict the class of a single image.
-    - It takes the model and an image as input, preprocesses the image, and returns the predicted class and confidence.
+   - A function predict() is defined to predict the class of a single image.
+   - It takes the model and an image as input, preprocesses the image, and returns the predicted class and confidence.
 
 ### 14. Visualizing predictions:
-    - The code selects a batch of images from the test dataset and visualizes their actual and predicted classes using the predict() function.
+   - The code selects a batch of images from the test dataset and visualizes their actual and predicted classes using the predict() function.
 
 ### 15. Saving the model:
-    - The trained model is saved to a directory using the save() function.
+   - The trained model is saved to a directory using the save() function.
 
 ### 16. Installing Gradio:
-    - Gradio is installed using the pip install command.
+   - Gradio is installed using the pip install command.
 
 ### 17. Creating a Gradio interface:
-    - A Gradio interface is created to allow interactive image classification using the trained model.
-    - The predict_image() function is defined to preprocess and predict the class probabilities for an input image.
-    - The interface specifies an input image and a label as outputs, and it launches the interface when executed.
+   - A Gradio interface is created to allow interactive image classification using the trained model.
+   - The predict_image() function is defined to preprocess and predict the class probabilities for an input image.
+   - The interface specifies an input image and a label as outputs, and it launches the interface when executed.
