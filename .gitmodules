@@ -1,3 +1,3 @@
 [submodule "path_to_submodule"] 
-  path = https://github.com/pranjay-poddar/Dev-Geeks 
+  path = pranjay-poddar/Dev-Geeks 
   url = https://github.com/pranjay-poddar/Dev-Geeks
