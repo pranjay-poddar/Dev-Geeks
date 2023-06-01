@@ -16,7 +16,6 @@
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
 [![Open Source Love svg2](https://badges.frapsoft.com/os/v2/open-source.svg?v=103)](https://github.com/ellerbrock/open-source-badges/)
 
-
   <p align="center">
    <!--- <a href="https://github.com/pranjay-poddar"><img src="https://github.com/pranjay-poddar/Dev-Geeks/blob/main/Repository_images/hackclubrait-logo.png" width="200px" />   
     </a>
@@ -684,26 +683,38 @@ Happy Coding! -->
 
 ## How to contribute:
 
-- Drop a :star: on the Github repository (optional)<br/>
+-   Drop a :star: on the Github repository (optional)<br/>
 
-- Create an issue of the project or a feature you would like to add in the project and get the task assigned for youself. (issue can be any feature or project that you think you could contribute to).
+-   Create an issue of the project or a feature you would like to add in the project and get the task assigned for youself. (issue can be any feature or project that you think you could contribute to).
 
-- Fork the repo to your Github.<br/>
+-   Fork the repo to your Github.<br/>
 
-- Clone the Repo by going to your local Git Client in a particular local folder in your local machine by using this command with your forked repository link in place of below given link: <br/>
-  `git clone https://github.com/pranjay-poddar/Dev-Geeks`
-- Create a branch using below command.
-  `git branch <your branch name>`
-- Checkout to your branch.
-  `git checkout <your branch name>`
-- Add your code in your local machine folder.
-  `git add . `
-- Commit your changes.
-  `git commit -m"<add your message here>"`
-- Push your changes.
-  `git push --set-upstream origin <your branch name>`
-- Add your project name with the link in the readme in the desired format.
-- Make a pull request! (compare your branch with the owner main branch)
+-   Clone the Repo by going to your local Git Client in a particular local folder in your local machine by using this command with your forked repository link in place of below given link: <br/>
+    ```
+    git clone https://github.com/pranjay-poddar/Dev-Geeks
+    ```
+-   Create a branch using below command.
+    ```
+    git branch <your branch name>
+    ```
+-   Checkout to your branch.
+    ```
+    git checkout <your branch name>
+    ```
+-   Add your code in your local machine folder.
+    ```
+    git add .
+    ```
+-   Commit your changes.
+    ```
+    git commit -m"<add your message here>"
+    ```
+-   Push your changes.
+    ```
+    git push --set-upstream origin <your branch name>
+    ```
+-   Add your project name with the link in the readme in the desired format.
+-   Make a pull request! (compare your branch with the owner main branch)
 
 <br>
 <h1 align="center">
