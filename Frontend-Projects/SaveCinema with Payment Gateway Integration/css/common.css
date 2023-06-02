@@ -1,0 +1,147 @@
+#navigation {
+  background-color: rgba(5, 42, 62, 1) !important;
+}
+
+.heading {
+  font-family: 'Sigmar One', cursive;
+  color: white !important;
+  font-size: 35px;
+  margin-left: 10px;
+  pointer-events: none;
+  cursor: default;
+}
+
+.navLinks {
+  margin-left: 45%;
+}
+
+.navItems {
+  margin: 0px 15px;
+}
+
+.navItems a {
+  font-size: 20px;
+  padding: 10px 0px;
+}
+
+.navItems .other-links {
+  color: white !important;
+}
+
+.navItems a:hover {
+  color: #85b0be !important;
+  font-weight: bold;
+}
+
+.navItems .active {
+  color: #85b0be !important;
+  font-weight: bold;
+  border: 3px solid;
+}
+
+.custom-toggler.navbar-toggler {
+  border-color: white;
+}
+
+section#footer {
+  background-color: rgba(5, 42, 62, 1);
+  margin: 0;
+  color: #fff;
+}
+
+section.section {
+  margin: 0;
+  padding: 80px 0 60px 0;
+}
+
+.align-center {
+  text-align: center;
+}
+
+ul.social-network {
+  list-style: none;
+  display: inline;
+  margin-left: 0 !important;
+  padding: 0;
+}
+
+ul.social-network li {
+  display: inline;
+  margin: 0 5px;
+}
+
+.social-network a.icoYt:hover {
+  background-color: #e52d27;
+}
+
+.social-network a.icoLinkedin:hover {
+  background-color: #2940d3;
+}
+
+.social-network a.icoInstagram:hover {
+  background-color: #ff449f;
+}
+
+.social-circle li a {
+  display: inline-block;
+  position: relative;
+  margin: 0px 10px 0 10px;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  text-align: center;
+  width: 70px;
+  height: 70px;
+  font-size: 30px;
+  padding-top: 10px;
+  background: #85b0be;
+}
+
+.social-circle li i {
+  margin: 0;
+  line-height: 50px;
+  text-align: center;
+}
+
+.social-circle li a:hover i, .triggeredHover {
+  -moz-transform: rotate(360deg);
+  -webkit-transform: rotate(360deg);
+  -ms--transform: rotate(360deg);
+  transform: rotate(360deg);
+  -webkit-transition: all 3.2s;
+  -moz-transition: all 0.2s;
+  -o-transition: all 0.2s;
+  -ms-transition: all 0.2s;
+  transition: all 0.8s;
+}
+
+.social-circle i {
+  color: #fff;
+  -webkit-transition: all 0.8s;
+  -moz-transition: all 0.8s;
+  -o-transition: all 0.8s;
+  -ms-transition: all 0.8s;
+  transition: all 0.8s;
+}
+
+@media screen and (max-width: 1190px) {
+  .navLinks {
+    margin-left: 40%;
+  }
+}
+
+@media screen and (max-width: 1090px) {
+  .navLinks {
+    margin-left: 33%;
+  }
+}
+
+@media screen and (max-device-width: 991px) {
+  .navLinks {
+    margin-left: 0;
+  }
+
+  .navItems a {
+    text-align: center;
+  }
+}

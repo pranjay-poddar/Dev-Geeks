@@ -1,0 +1,146 @@
+body {
+  background-color: #bd8848;
+  background-image: url("https://www.transparenttextures.com/patterns/45-degree-fabric-dark.png");
+}
+
+.topic {
+  font-family: 'Pacifico', cursive;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.container1 {
+  margin-top: 20px;
+}
+
+.cont1-para {
+  font-family: 'Times New Roman', serif;
+  padding-right: 70px;
+  font-size: 22px;
+  text-align: justify;
+}
+
+.history-img {
+  width: 80%;
+  height: 80%;
+  padding-left: 70px;
+  border-radius: 5%;
+}
+
+.container2 {
+  margin-top: 50px;
+}
+
+.div1 {
+  padding-left: 25px;
+  padding-right: 25px;
+  text-align: center;
+}
+
+.div2 {
+  text-align: center;
+}
+
+.div3 {
+  padding-left: 25px;
+  padding-right: 25px;
+  text-align: center;
+}
+
+.subheading {
+  font-family: 'Fredoka One', cursive;
+}
+
+.container2 h2 {
+  text-align: center;
+}
+
+.container2 p {
+  text-align: center;
+  font-family: 'Times New Roman', serif;
+  font-size: 17px;
+}
+
+.movie1-img {
+  width: 70%;
+  
+}
+
+.movie2-img {
+  width: 70%;
+  height: 60%;
+  
+  
+}
+
+.movie3-img {
+  width: 90%;
+}
+
+@media screen and (max-width: 900px) {
+  .history-img {
+    height: 80%;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .history-img {
+    height: 70%;
+  }
+}
+
+@media screen and (max-device-width: 767px) {
+  .history-img {
+    height: 95%;
+    width: 80%;
+    border-radius: 30px;
+    padding-left: 0;
+  }
+
+  .cont1-left {
+    text-align: center;
+  }
+
+  .cont1-right {
+    padding: 0 50px;
+  }
+
+  .cont1-para {
+    padding-right: 0;
+    font-size: 25px;
+  }
+
+  .div1 {
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom: 20px;
+  }
+
+  .div2 {
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom: 20px;
+  }
+
+  .div3 {
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom: 20px;
+  }
+
+  .study-img {
+    width: 85%;
+  }
+
+  .food-img {
+    width: 85%;
+  }
+
+  .health-img {
+    width: 85%;
+  }
+
+  .container2 p {
+    font-size: 21px;
+  }
+}

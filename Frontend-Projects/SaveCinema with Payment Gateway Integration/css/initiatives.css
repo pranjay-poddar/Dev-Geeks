@@ -1,0 +1,94 @@
+body {
+  background-color: #bd8848;
+  background-image: url("https://www.transparenttextures.com/patterns/45-degree-fabric-dark.png");
+}
+
+h1 {
+  font-family: 'Pacifico', cursive;
+  text-align: center;
+  margin: 0 20px 20px 20px;
+  font-size: 45px;
+}
+
+h2 {
+  font-family: 'Fredoka One', cursive;
+}
+
+p {
+  font-family: 'Times New Roman', serif;
+  font-size: 18px;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  border-radius: 40px;
+}
+
+.main-div {
+  padding: 20px 15px 30px 15px;
+}
+
+#btn1, #btn2, #btn3, #btn4 {
+  background-color: #575151;
+  height: 5px;
+}
+
+.prev-arrow {
+  left: -5%;
+  position: fixed;
+}
+
+.next-arrow {
+  right: -5%;
+  position: fixed;
+}
+
+.prev-span, .next-span {
+  background-color: #575151;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+
+.left-grid {
+  padding-left: 50px;
+  padding-bottom: 30px;
+}
+
+.right-grid {
+  padding-right: 50px;
+  padding-bottom: 30px;
+  text-align: justify;
+}
+
+@media screen and (max-device-width: 767px) {
+  img {
+    height: 90%;
+  }
+
+  .left-grid {
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-bottom: 0;
+  }
+
+  .right-grid {
+    padding-right: 35px;
+    padding-left: 35px;
+    padding-bottom: 10px;
+    text-align: center;
+  }
+
+  .prev-arrow {
+    left: -3%;
+  }
+
+  .next-arrow {
+    right: -3%;
+  }
+
+  p {
+    font-size: 20px;
+  }
+}
