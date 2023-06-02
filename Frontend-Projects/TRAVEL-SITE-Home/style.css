@@ -63,3 +63,12 @@
     background-color: white;
     color: skyblue;
 }
+
+ /* Animation for the logo */
+ .navbar img {
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .navbar img:hover {
+    transform: rotate(360deg);
+  }
