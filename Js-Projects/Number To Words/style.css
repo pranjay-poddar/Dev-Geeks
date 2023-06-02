@@ -31,6 +31,7 @@
     border-radius: 0.5rem;
 }
 
+/* CSS style of input box */
 .input {
     position: relative;
     top: 12%;
@@ -69,6 +70,7 @@ textarea {
     background-color: lightyellow;
 }
 
+/* CSS style of Output box */
 .output {
     position: relative;
     top: 14%;

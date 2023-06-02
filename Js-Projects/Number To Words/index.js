@@ -10,6 +10,8 @@ var input;
 
 function getValue() {
     input = inputBox.value;
+
+    // Conditions to check the entered value is under the length of 15 and contains only digits
     if (!/^\d+$/.test(input) && input.length > 0) {
         outputBox.innerHTML = "Invalid input. Please enter only digits.";
         outputBox.style.color = 'red';
@@ -37,6 +39,7 @@ function add(s1, s2) {
     return s1 + s2;
 }
 
+// Main function which will return the result and work recursively
 function convert(idx, level) {
     if (idx >= input.length)
         return "";
