@@ -1,16 +1,15 @@
-<div align="center">
-  <h1>Content-Based Recommender System</h1>
+# Content-Based Recommender System
  
  A Content-based movie recommender system uses the characteristics or features of movies to recommend similar movies to users. It analyzes the content of movies, such as genre, plot keywords, actors, directors, and other relevant attributes, to find patterns and similaritieS.
  
  ## Steps to do:-
  
- - 1.DATA COLLECTION
- - 2.DATA CLEANING
- - 3.DATA PREPARING
- - 4.CHOOSING A MODEL
- - 5.PREPARING A MODEL
- - 6.DEPLOY IN WEBSITE
+ - DATA COLLECTION
+ - DATA CLEANING
+ - DATA PREPARING
+ - CHOOSING A MODEL
+ - PREPARING A MODEL
+ - DEPLOY IN WEBSITE
  
  ## Model Use
   
