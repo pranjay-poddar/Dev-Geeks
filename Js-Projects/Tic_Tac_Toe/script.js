@@ -131,22 +131,33 @@ const makeAIMove = () => {
   };
   
 
-const handleClick = (event) => {
+  const handleClick = (event) => {
     const button = event.target;
     if (button.innerText === "" && gameActive) {
-      button.innerText = "X";
-      count++;
+      if (!isAgainstAI && ((xTurn && button.innerText !== "O") || (!xTurn && button.innerText !== "X"))) {
+        button.innerText = xTurn ? "X" : "O";
+        count++;
   
-      if (checkWin(button.innerText)) {
-        disableButtons();
-        showPopup(`Player ${button.innerText} wins!`);
-      } else if (checkDraw()) {
-        disableButtons();
-        showPopup("It's a draw!");
-      } else {
-        xTurn = !xTurn;
+        if (checkWin(button.innerText)) {
+          disableButtons();
+          showPopup(`Player ${button.innerText} wins!`);
+        } else if (checkDraw()) {
+          disableButtons();
+          showPopup("It's a draw!");
+        } else {
+          xTurn = !xTurn;
+        }
+      } else if (isAgainstAI) {
+        button.innerText = "X";
+        count++;
   
-        if (isAgainstAI && gameActive && button.innerText !== "O") {
+        if (checkWin(button.innerText)) {
+          disableButtons();
+          showPopup(`Player ${button.innerText} wins!`);
+        } else if (checkDraw()) {
+          disableButtons();
+          showPopup("It's a draw!");
+        } else {
           makeAIMove();
           count++;
   
@@ -161,6 +172,9 @@ const handleClick = (event) => {
       }
     }
   };
+  
+    
+  
   
   
   
