@@ -1,112 +1,120 @@
-var N_SIZE = 3,
-    EMPTY = "&nbsp;",
-    boxes = [],
-    turn = "X",
-    score,
-    moves;
-var x = document.getElementById("myAudio");
-var y = document.getElementById("win");
-// right click disable start-------------------------
-document.addEventListener("contextmenu", function(e) {
-    e.preventDefault();
-}, false);
-// right click disable end -------------------------------
-function init() {
-    var board = document.createElement('table');
-    board.setAttribute("border", 1);
-    board.setAttribute("cellspacing", 0);
+let btnRef = document.querySelectorAll(".button-option");
+let popupRef = document.querySelector(".popup");
+let newgameBtn = document.getElementById("new-game");
+let restartBtn = document.getElementById("restart");
+let msgRef = document.getElementById("message");
+//Winning Pattern Array
+let winningPattern = [
+  [0, 1, 2],
+  [0, 3, 6],
+  [2, 5, 8],
+  [6, 7, 8],
+  [3, 4, 5],
+  [1, 4, 7],
+  [0, 4, 8],
+  [2, 4, 6],
+];
+//Player 'X' plays first
+let xTurn = true;
+let count = 0;
 
-    var identifier = 1;
-    for (var i = 0; i < N_SIZE; i++) {
-        var row = document.createElement('tr');
-        board.appendChild(row);
-        for (var j = 0; j < N_SIZE; j++) {
-            var cell = document.createElement('td');
-            cell.setAttribute('height', 120);
-            cell.setAttribute('width', 120);
-            cell.setAttribute('align', 'center');
-            cell.setAttribute('valign', 'center');
-            cell.classList.add('col' + j, 'row' + i);
-            if (i == j) {
-                cell.classList.add('diagonal0');
-            }
-            if (j == N_SIZE - i - 1) {
-                cell.classList.add('diagonal1');
-            }
-            cell.identifier = identifier;
-            cell.addEventListener("click", set);
-            row.appendChild(cell);
-            boxes.push(cell);
-            identifier += identifier;
-        }
+//Disable All Buttons
+const disableButtons = () => {
+  btnRef.forEach((element) => (element.disabled = true));
+  //enable popup
+  popupRef.classList.remove("hide");
+};
+
+//Enable all buttons (For New Game and Restart)
+const enableButtons = () => {
+  btnRef.forEach((element) => {
+    element.innerText = "";
+    element.disabled = false;
+  });
+  //disable popup
+  popupRef.classList.add("hide");
+};
+
+//This function is executed when a player wins
+const winFunction = (letter) => {
+  disableButtons();
+  if (letter == "X") {
+    msgRef.innerHTML = "&#x1F389; <br> 'X' Wins";
+  } else {
+    msgRef.innerHTML = "&#x1F389; <br> 'O' Wins";
+  }
+};
+
+//Function for draw
+const drawFunction = () => {
+  disableButtons();
+  msgRef.innerHTML = "&#x1F60E; <br> It's a Draw";
+};
+
+//New Game
+newgameBtn.addEventListener("click", () => {
+  count = 0;
+  enableButtons();
+});
+restartBtn.addEventListener("click", () => {
+  count = 0;
+  enableButtons();
+});
+
+//Win Logic
+const winChecker = () => {
+  //Loop through all win patterns
+  for (let i of winningPattern) {
+    let [element1, element2, element3] = [
+      btnRef[i[0]].innerText,
+      btnRef[i[1]].innerText,
+      btnRef[i[2]].innerText,
+    ];
+    //Check if elements are filled
+    //If 3 empty elements are same and would give win as would
+    if (element1 != "" && (element2 != "") & (element3 != "")) {
+      if (element1 == element2 && element2 == element3) {
+        //If all 3 buttons have same values then pass the value to winFunction
+        winFunction(element1);
+      }
     }
+  }
+};
 
-    document.getElementById("tictactoe").appendChild(board);
-    startNewGame();
-}
-
-/*
- * New game
- */
-function startNewGame() {
-    score = {
-        "X": 0,
-        "O": 0
-    };
-    moves = 0;
-    turn = "X";
-    boxes.forEach(function(square) {
-        square.innerHTML = EMPTY;
-    });
-}
-
-/*
- * Check if a win or not
- */
-function win(clicked) {
-    // Get all cell classes
-    var memberOf = clicked.className.split(/\s+/);
-    for (var i = 0; i < memberOf.length; i++) {
-        var testClass = '.' + memberOf[i];
-        var items = contains('#tictactoe ' + testClass, turn);
-        x.play();
-        // winning condition: turn == N_SIZE
-        if (items.length == N_SIZE) {
-            return true;
-        }
-    }
-    return false;
-}
-
-function contains(selector, text) {
-    var elements = document.querySelectorAll(selector);
-    return [].filter.call(elements, function(element) {
-        return RegExp(text).test(element.textContent);
-    });
-}
-
-/*
- * Sets clicked square and also updates the turn.
- */
-function set() {
-    if (this.innerHTML !== EMPTY) {
-        return;
-    }
-    this.innerHTML = turn;
-    moves += 1;
-    score[turn] += this.identifier;
-    if (win(this)) {
-        y.play();
-        swal('Winner: Player ' + turn);
-        startNewGame();
-    } else if (moves === N_SIZE * N_SIZE) {
-        y.play();
-        swal("Draw");
-        startNewGame();
+//Display X/O on click
+btnRef.forEach((element) => {
+  element.addEventListener("click", () => {
+    if (xTurn) {
+      xTurn = false;
+      //Display X
+      element.innerText = "X";
+      element.disabled = true;
     } else {
-        turn = turn === "X" ? "O" : "X";
-        document.getElementById('turn').textContent = 'Player ' + turn;
+      xTurn = true;
+      //Display Y
+      element.innerText = "O";
+      element.disabled = true;
     }
-}
+    //Increment count on each click
+    count += 1;
+    if (count == 9) {
+      drawFunction();
+    }
+    //Check for win on every click
+    winChecker();
+  });
+});
+//Enable Buttons and disable popup on page load
+window.onload = enableButtons;
+// SOCIAL PANEL JS
+const floating_btn = document.querySelector('.floating-btn');
+const close_btn = document.querySelector('.close-btn');
+const social_panel_container = document.querySelector('.social-panel-container');
 
-init();
+floating_btn.addEventListener('click', () => {
+	social_panel_container.classList.toggle('visible')
+});
+
+close_btn.addEventListener('click', () => {
+	social_panel_container.classList.remove('visible')
+});
