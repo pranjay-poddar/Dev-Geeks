@@ -1,52 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Tic Tac Toe</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-    <script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
-    <link rel="shortcut icon" type="image/x-icon" href="./images/logo.png">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link rel="stylesheet" href="./style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac Toe Game</title>
+    <p> </p>
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&display=swap" rel="stylesheet">
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css">
 </head>
-
+<!-- SOCIAL PANEL HTML -->
+<div class="social-panel-container">
+	<div class="social-panel">
+		<p>Created by Ashsh Mishra</a></p>
+		<h4>Get in touch on</h4>
+		<ul>
+			<li>
+				<a href="https://www.linkedin.com/in/%E2%9C%A8ashish-mishra%E2%9C%A8-156ab5209/" target="_blank">
+                    <i class="fab fa-linkedin"></i>
+				</a>
+			</li>
+		</ul>
+	</div>
+</div>
+    </div>
+   <button class="floating-btn">Get in Touch</button>
 <body>
-    <div class="container">
-        <div class="row text-center d-flex justify-content-center">
-            <div classs="col-12 col-sm-12 col-md-12">
-                <span class="badge head"><h1>TIC-TAC-TOE</span> <img height=50px width=50px class="grow" src="./images/logo.png" /></h1>
-            </div>
-        </div>
-        <div class="row  d-flex justify-content-center">
-            <div class="col-12 col-sm-12 col-md-12">
-                <div class="text-center">
-                    <span class="badge badge-warning grow" id='turn'>Player X</span>
-                </div>
-            </div>
-            <div class="col-12 col-sm-12 col-md-12 d-flex justify-content-center">
-                <div id="tictactoe">
-                </div>
+   <div class="wrapper">
+       <div class="container">
+           <button class="button-option"></button>
+           <button class="button-option"></button>
+           <button class="button-option"></button>
+           <button class="button-option"></button>
+           <button class="button-option"></button>
+           <button class="button-option"></button>
+           <button class="button-option"></button>
+           <button class="button-option"></button>
+           <button class="button-option"></button>
+       </div>
+       <button id="restart">RESTART</button>
+   </div>
 
-            </div>
-        </div>
-    </div>
-    <audio id="myAudio">
-        <source src="./click.mp3" type="audio/ogg">
-      </audio>
-    <audio id="win">
-        <source src="./win.wav" type="audio/ogg">
-      </audio>
-    <div class="d-flex justify-content-center">
-        <p class="badge text-center rights">© 2021 <a href="https://github.com/pranjay-poddar">Pranjay-Poddar</a></p>
-    </div>
-    <script src='https://img1.wsimg.com/tcc/tcc_l.combined.1.0.6.min.js'></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+   <div class="popup hide">
+       <p id="message">Sample Message</p>
+       <button id="new-game">New Game</button>
+       <button class="floating-btn">Get in Touch</button>
+    <!-- Script -->
+    <script src="script.js"></script>
 </body>
-<script src="./script.js"></script>
-
 </html>
