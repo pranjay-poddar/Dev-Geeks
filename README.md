@@ -680,6 +680,8 @@ Happy Coding! -->
 <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Frontend-Projects/FIght%20Game"> Fight Game </a></td>
 <td align="center"> 229.</td>
 <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/React-JS Projects/Hand-Reacting-1.0.0">Hand Reacting</a></td>
+<td align="center"> 230.</td>
+<td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/Js-Projects/Excel Clone">Excel Clone/a></td>
 
 </tr>	
 	
