@@ -12,6 +12,7 @@
 </head>
 
 <body>
+    <div class="container-full">
     <div class="container">
         <h2> Password Validator <hr></h2>
         
@@ -19,7 +20,7 @@
            
             <div class="newupdate-1">
                 <label for="name">Password:</label>
-                <input type="password" name="name" id="name" placeholder="Enter your password" required>
+                <input type="password" name="name" id="name" class="input" placeholder="Enter your password" required>
                 <P id="message"></P>
 
                 <p class="change"> ** Password length should be greater than 5 and less than 20 with at least one
@@ -29,13 +30,14 @@
             </div>
             <div class="newupdate-2">
                 <label for="password"> Confirm Password:</label>
-                <input type="password" name="password" id="password" placeholder="Confirm your password" required>
+                <input type="password" name="password" id="password" class="input" placeholder="Confirm your password" required>
             </div>
 <div class="submit">
             <button> Submit </button>
 
 </div>
         </form>
+    </div>
     </div>
 </body>
 <script src="Password.js"></script>
