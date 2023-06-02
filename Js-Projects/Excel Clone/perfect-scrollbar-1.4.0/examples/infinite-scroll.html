@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../css/perfect-scrollbar.css" rel="stylesheet">
+    <script src="../dist/perfect-scrollbar.js"></script>
+    <style>
+    #container {
+      height: 400px;
+      width: 100%;
+      border: 1px solid blue;
+      overflow: auto;
+      position: relative;
+    }
+    .entryPlaceholder {
+      height: 48px;
+      width: 100%;
+    }
+    </style>
+  </head>
+  <body>
+    <div id="container">
+    </div>
+
+    <script>
+    var $ = document.querySelector.bind(document);
+
+    var x = 0;
+    function addEntries() {
+      for (var i = 0; i < 10; i++) {
+        $('#container').innerHTML += '<div class="entryPlaceholder">Entry #' + (x++) + '</div>';
+      }
+    }
+
+    addEntries();
+    var ps = new PerfectScrollbar('#container');
+
+    $('#container').addEventListener('ps-y-reach-end', function () {
+      addEntries();
+      ps.update();
+    });
+    </script>
+  </body>
+</html>
+

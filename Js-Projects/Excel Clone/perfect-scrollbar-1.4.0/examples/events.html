@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../css/perfect-scrollbar.css" rel="stylesheet">
+    <script src="../dist/perfect-scrollbar.js"></script>
+    <style>
+    #container {
+      position: relative;
+      margin: 0px auto;
+      padding: 0px;
+      width: 600px;
+      height: 400px;
+      overflow: auto;
+    }
+    #container .content {
+      background-image: url('./assets/azusa.jpg');
+      width: 1280px;
+      height: 720px;
+    }
+    table {
+      width: 600px;
+      margin: 30px auto;
+    }
+    table td:first-child {
+      width: 200px;
+      padding-right: 10px;
+      text-align: right;
+      font-weight: bold;
+    }
+    </style>
+  </head>
+  <body>
+    <div id="container">
+      <div class="content">
+      </div>
+    </div>
+
+    <table>
+      <tr>
+        <td>Axis:</td>
+        <td id="axis"></td>
+      </tr>
+      <tr>
+        <td>Direction:</td>
+        <td id="direction"></td>
+      </tr>
+      <tr>
+        <td>Reach event:</td>
+        <td id="reach-event"></td>
+      </tr>
+      <tr>
+        <td>Reach state (<code>ps.reach</code>):</td>
+        <td id="reach-state"></td>
+      </tr>
+    </table>
+
+    <script>
+    var $ = document.querySelector.bind(document);
+
+    var container = $('#container');
+    var axis = $('#axis');
+    var direction = $('#direction');
+    var reachEvent = $('#reach-event');
+    var reachState = $('#reach-state');
+
+    var ps = new PerfectScrollbar(container);
+
+    function showReachState() {
+      reachState.textContent = JSON.stringify(ps.reach);
+    }
+
+    showReachState();
+    container.addEventListener('scroll', showReachState);
+
+    container.addEventListener('ps-scroll-y', function () {
+      axis.textContent = 'ps-scroll-y';
+      reachEvent.textContent = '';
+    });
+
+    container.addEventListener('ps-scroll-x', function () {
+      axis.textContent = 'ps-scroll-x';
+      reachEvent.textContent = '';
+    });
+
+    container.addEventListener('ps-scroll-up', function () {
+      direction.textContent = 'ps-scroll-up';
+    });
+
+    container.addEventListener('ps-scroll-down', function () {
+      direction.textContent = 'ps-scroll-down';
+    });
+
+    container.addEventListener('ps-scroll-left', function () {
+      direction.textContent = 'ps-scroll-left';
+    });
+
+    container.addEventListener('ps-scroll-right', function () {
+      direction.textContent = 'ps-scroll-right';
+    });
+
+    container.addEventListener('ps-y-reach-start', function () {
+      reachEvent.textContent = 'ps-y-reach-start';
+    });
+
+    container.addEventListener('ps-y-reach-end', function () {
+      reachEvent.textContent = 'ps-y-reach-end';
+    });
+
+    container.addEventListener('ps-x-reach-start', function () {
+      reachEvent.textContent = 'ps-x-reach-start';
+    });
+
+    container.addEventListener('ps-x-reach-end', function () {
+      reachEvent.textContent = 'ps-x-reach-end';
+    });
+    </script>
+  </body>
+</html>

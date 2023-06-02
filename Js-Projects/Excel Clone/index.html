@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/png" href="unnamed.png"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <link rel="stylesheet" href="./perfect-scrollbar-1.4.0/css/perfect-scrollbar.css" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="./Flat-HTML5-Palette-Color-Picker-For-jQuery-colorPick-js/src/colorPick.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <title>Excel Clone</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="title-bar">Book-1 Excel</div>
+        <div class="menu-bar">
+            <div class="menu-bar-item" id="menu-file">File</div>
+            <div class="menu-bar-item selected">Home</div>
+            <div class="menu-bar-item">Insert</div>
+            <div class="menu-bar-item">Page Layout</div>
+            <div class="menu-bar-item">View</div>
+        </div>
+        <div class="menu-icon-bar">
+            <div class="material-icons menu-icon" id="cut">content_cut</div>
+            <div class="material-icons menu-icon" id="copy">content_copy</div>
+            <div class="material-icons menu-icon" id="paste">content_paste</div>
+            <select class="menu-selector" id="font-family">
+                <option style="font-family: Noto Sans;" value="Noto Sans">Noto Sans</option>
+                <option style="font-family:Arial" value="Arial">Arial</option>
+                <option style="font-family:Calibri" value="Calibri">Calibri</option>
+                <option style="font-family:Comic Sans MS" value="Comic Sans MS">Comic Sans MS</option>
+                <option style="font-family:Courier New" value="Courier New">Courier New</option>
+                <option style="font-family:Impact" value="Impact">Impact</option>
+                <option style="font-family:Georgia" value="Georgia">Georgia</option>
+                <option style="font-family:Garamond" value="Garamond">Garamond</option>
+                <option style="font-family:Lato" value="Lato">Lato</option>
+                <option style="font-family:Open Sans" value="Open Sans">Open Sans</option>
+                <option style="font-family:Palatino" value="Palatino">Palatino</option>
+                <option style="font-family:Verdana" value="Verdana">Verdana</option>
+            </select>
+            <select class="menu-selector" id="font-size">
+                <option value="10">10</option>
+                <option value="12">12</option>
+                <option value="14" selected="true">14</option>
+                <option value="16">16</option>
+                <option value="18">18</option>
+                <option value="20">20</option>
+                <option value="22">22</option>
+                <option value="24">24</option>
+                <option value="26">26</option>
+                <option value="28">28</option>
+                <option value="30">30</option>
+                <option value="32">32</option>
+            </select>
+            <div class="material-icons menu-icon" id="bold">format_bold</div>
+            <div class="material-icons menu-icon" id="italic">format_italic</div>
+            <div class="material-icons menu-icon" id="underlined">format_underlined</div>
+            <div class="material-icons menu-icon color-pick" id="fill-color"><img id="fill-color-icon" src="https://img.icons8.com/material-sharp/20/000000/fill-color.png"/></div>
+            <div class="material-icons menu-icon color-pick" id="text-color"><img id="text-color-icon" src="https://img.icons8.com/ios-filled/20/000000/generic-text-filled.png"/></div>
+            <div class="material-icons menu-icon alignment selected" data-type="left">format_align_left</div>
+            <div class="material-icons menu-icon alignment" data-type="center">format_align_center</div>
+            <div class="material-icons menu-icon alignment" data-type="right">format_align_right</div>
+        </div>
+        <div class="formula-bar">
+            <div class="formula-editor" id="selected-cell" contenteditable="true"></div>
+            <div id="function-sign">
+                <svg class="[object SVGAnimatedString] ewa-svg-icon" focusable="false" viewBox="0,0,2048,2048"
+                    style="height: 1rem; width: 1rem;">
+                    <title>Insert Function</title>
+                    <path type="path" class="OfficeIconColors_HighContrast"
+                        d="M 1198 639 h -194 l -126 511 q -62 249 -133 421 q -71 171 -150 277 q -79 106 -164 153 q -85 47 -175 47 q -30 0 -60 -9 q -30 -9 -54 -26 q -24 -17 -39 -42 q -15 -25 -15 -57 q 0 -22 10 -42 q 9 -21 26 -36 q 16 -15 38 -24 q 22 -9 46 -9 q 19 0 36 7 q 17 7 30 19 q 13 12 21 28 q 7 15 7 32 q 0 36 -30 63 q 33 0 66 -13 q 33 -14 64 -45 q 31 -31 59 -81 q 28 -50 51 -123 q 1 -8 6 -26 q 5 -18 15 -52 q 10 -34 25 -87 q 14 -53 34 -131 l 191 -755 h -217 l 26 -122 h 53 q 53 0 79 -3 q 26 -4 37 -8 q 7 -3 21 -9 q 13 -6 30 -18 q 16 -12 34 -31 q 17 -20 32 -50 q 33 -65 62 -113 q 29 -49 59 -85 q 86 -103 180 -151 q 93 -49 176 -49 q 45 0 82 14 q 37 14 64 36 q 26 22 41 50 q 14 28 14 56 q 0 24 -8 45 q -9 21 -24 37 q -15 15 -36 24 q -21 9 -46 9 q -44 0 -72 -26 q -29 -27 -29 -65 q 0 -12 5 -23 q 4 -11 9 -20 q 5 -10 10 -19 q 4 -9 4 -16 q -7 -5 -24 -5 q -70 0 -126 54 q -56 54 -101 151 q -6 13 -13 27 q -7 14 -16 37 q -10 23 -22 59 q -13 36 -30 92 h 195 m 488 514 q -49 40 -119 160 q 19 80 33 137 q 13 56 23 96 q 9 39 15 64 q 6 24 11 39 q 4 14 8 21 q 3 7 7 11 q 7 0 20 -10 q 13 -11 29 -29 q 15 -19 32 -43 q 17 -25 32 -52 l 76 39 q -26 50 -59 95 q -33 44 -68 78 q -35 34 -68 54 q -34 20 -61 20 q -22 0 -50 -13 q -28 -13 -51 -56 q -3 -5 -7 -17 q -4 -12 -11 -38 q -8 -27 -19 -70 q -11 -44 -27 -112 q -54 89 -97 148 q -43 59 -79 94 q -37 35 -69 50 q -33 14 -65 14 q -20 0 -39 -7 q -20 -7 -36 -20 q -17 -13 -27 -32 q -10 -19 -10 -44 q 0 -38 26 -65 q 26 -28 64 -28 q 17 0 30 6 q 12 5 23 13 q 11 7 22 16 q 10 8 23 13 q 30 -25 60 -62 q 29 -37 56 -77 q 27 -41 50 -81 q 22 -41 38 -73 q -18 -70 -28 -111 q -11 -42 -17 -64 q -6 -23 -8 -30 q -3 -8 -3 -9 q -9 -25 -19 -42 q -10 -17 -24 -27 q -14 -10 -34 -14 q -20 -4 -50 -4 q -9 0 -23 1 q -14 0 -46 2 v -80 l 269 -47 q 25 27 42 47 q 16 19 28 41 q 12 22 23 53 q 10 31 24 82 l 46 -69 q 22 -34 51 -62 q 29 -28 59 -48 q 29 -20 58 -31 q 28 -12 49 -12 q 47 0 79 27 q 31 27 31 68 q 0 27 -8 45 q -9 17 -23 28 q -14 11 -31 16 q -17 4 -33 4 q -13 0 -25 -3 q -12 -4 -23 -8 q -12 -4 -23 -7 q -12 -4 -24 -4 q -2 0 -10 3 q -8 3 -23 16 z">
+                    </path>
+                    <path type="path" class="OfficeIconColors_m22"
+                        d="M 1198 639 h -194 l -126 511 q -62 249 -133 421 q -71 171 -150 277 q -79 106 -164 153 q -85 47 -175 47 q -30 0 -60 -9 q -30 -9 -54 -26 q -24 -17 -39 -42 q -15 -25 -15 -57 q 0 -22 10 -42 q 9 -21 26 -36 q 16 -15 38 -24 q 22 -9 46 -9 q 19 0 36 7 q 17 7 30 19 q 13 12 21 28 q 7 15 7 32 q 0 36 -30 63 q 33 0 66 -13 q 33 -14 64 -45 q 31 -31 59 -81 q 28 -50 51 -123 q 1 -8 6 -26 q 5 -18 15 -52 q 10 -34 25 -87 q 14 -53 34 -131 l 191 -755 h -217 l 26 -122 h 53 q 53 0 79 -3 q 26 -4 37 -8 q 7 -3 21 -9 q 13 -6 30 -18 q 16 -12 34 -31 q 17 -20 32 -50 q 33 -65 62 -113 q 29 -49 59 -85 q 86 -103 180 -151 q 93 -49 176 -49 q 45 0 82 14 q 37 14 64 36 q 26 22 41 50 q 14 28 14 56 q 0 24 -8 45 q -9 21 -24 37 q -15 15 -36 24 q -21 9 -46 9 q -44 0 -72 -26 q -29 -27 -29 -65 q 0 -12 5 -23 q 4 -11 9 -20 q 5 -10 10 -19 q 4 -9 4 -16 q -7 -5 -24 -5 q -70 0 -126 54 q -56 54 -101 151 q -6 13 -13 27 q -7 14 -16 37 q -10 23 -22 59 q -13 36 -30 92 h 195 m 488 514 q -49 40 -119 160 q 19 80 33 137 q 13 56 23 96 q 9 39 15 64 q 6 24 11 39 q 4 14 8 21 q 3 7 7 11 q 7 0 20 -10 q 13 -11 29 -29 q 15 -19 32 -43 q 17 -25 32 -52 l 76 39 q -26 50 -59 95 q -33 44 -68 78 q -35 34 -68 54 q -34 20 -61 20 q -22 0 -50 -13 q -28 -13 -51 -56 q -3 -5 -7 -17 q -4 -12 -11 -38 q -8 -27 -19 -70 q -11 -44 -27 -112 q -54 89 -97 148 q -43 59 -79 94 q -37 35 -69 50 q -33 14 -65 14 q -20 0 -39 -7 q -20 -7 -36 -20 q -17 -13 -27 -32 q -10 -19 -10 -44 q 0 -38 26 -65 q 26 -28 64 -28 q 17 0 30 6 q 12 5 23 13 q 11 7 22 16 q 10 8 23 13 q 30 -25 60 -62 q 29 -37 56 -77 q 27 -41 50 -81 q 22 -41 38 -73 q -18 -70 -28 -111 q -11 -42 -17 -64 q -6 -23 -8 -30 q -3 -8 -3 -9 q -9 -25 -19 -42 q -10 -17 -24 -27 q -14 -10 -34 -14 q -20 -4 -50 -4 q -9 0 -23 1 q -14 0 -46 2 v -80 l 269 -47 q 25 27 42 47 q 16 19 28 41 q 12 22 23 53 q 10 31 24 82 l 46 -69 q 22 -34 51 -62 q 29 -28 59 -48 q 29 -20 58 -31 q 28 -12 49 -12 q 47 0 79 27 q 31 27 31 68 q 0 27 -8 45 q -9 17 -23 28 q -14 11 -31 16 q -17 4 -33 4 q -13 0 -25 -3 q -12 -4 -23 -8 q -12 -4 -23 -7 q -12 -4 -24 -4 q -2 0 -10 3 q -8 3 -23 16 z">
+                    </path>
+                </svg>
+            </div>
+            <div class="formula-editor" id="function-input" contenteditable="true"></div>
+        </div>
+        <div class="data-container">
+            <div id="select-all"></div>
+            <div id="columns">
+            </div>
+            <div id="rows">
+            </div>
+            <div id="cells">
+            </div>
+        </div>
+        <div class="sheet-bar">
+            <div class="sheet-scroller">
+                <div class="material-icons scroller left-scroller">arrow_left</div>
+                <div class="material-icons scroller right-scroller">arrow_right</div>
+            </div>
+            <div class="material-icons add-sheet">add_circle</div>
+            <div class="sheet-tab-container">
+                <div class="sheet-tab selected">Sheet1</div>
+            </div>
+            
+        </div>
+        <!-- <div class="sheet-modal-parent">
+            <div class="sheet-rename-modal">
+                <div class="sheet-modal-title">
+                    <span>Rename Sheet</span>
+                </div>
+                <div class="sheet-modal-input-container">
+                    <span class="sheet-modal-input-title">Rename Sheet to:</span>
+                    <input class="sheet-modal-input" type="text" />
+                </div>
+                <div class="sheet-modal-confirmation">
+                    <div class="button ok-button">OK</div>
+                    <div class="button cancel-button">Cancel</div>
+                </div>
+            </div>
+        </div> -->
+        <!-- <div class="sheet-modal-parent">
+            <div class="sheet-delete-modal">
+                <div class="sheet-modal-title">
+                    <span>Sheet Name</span>
+                </div>
+                <div class="sheet-modal-detail-container">
+                    <span class="sheet-modal-detail-title">Are you sure?</span>
+                </div>
+                <div class="sheet-modal-confirmation">
+                    <div class="button delete-button">
+                        <div class="material-icons delete-icon">delete</div>
+                        Delete
+                    </div>
+                    <div class="button cancel-button">Cancel</div>
+                </div>
+            </div>
+        </div> -->
+        <!-- <div class="sheet-modal-parent">
+            <div class="loading">Loading...</div>
+        </div> -->
+        <!-- <div class="file-modal">
+            <div class="file-options-modal">
+                <div class="close">
+                    <div class="material-icons close-icon">arrow_circle_down</div>
+                    <div>Close</div>
+                </div>
+                <div class="new">
+                    <div class="material-icons new-icon">insert_drive_file</div>
+                    <div>New</div>
+                </div>
+                <div class="open">
+                    <div class="material-icons open-icon">folder_open</div>
+                    <div>Open</div>
+                </div>
+                <div class="save">
+                    <div class="material-icons save-icon">save</div>
+                    <div>Save</div>
+                </div>
+            </div>
+            <div class="file-recent-modal">
+            </div>
+            <div class="file-transparent-modal"></div>
+        </div> -->
+    </div>
+    <script src="./Flat-HTML5-Palette-Color-Picker-For-jQuery-colorPick-js/src/colorPick.js"></script>
+    <script src="./perfect-scrollbar-1.4.0/dist/perfect-scrollbar.js"></script>
+    <script src="./script.js"></script>
+</body>
+
+</html>

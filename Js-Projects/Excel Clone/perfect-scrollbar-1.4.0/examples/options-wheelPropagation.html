@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../css/perfect-scrollbar.css" rel="stylesheet">
+    <script src="../dist/perfect-scrollbar.js"></script>
+    <style>
+    .container {
+      position: relative;
+      margin: 30px auto;
+      padding: 0px;
+      width: 600px;
+      height: 400px;
+      overflow: auto;
+    }
+    .container .content {
+      background-image: url('./assets/azusa.jpg');
+      width: 1280px;
+      height: 720px;
+      color: blue;
+      font-size: 20px;
+    }
+    .space {
+      padding: 150px 0;
+      text-align: center;
+    }
+    </style>
+  </head>
+  <body>
+    <div class="space">FOR SPACE</div>
+    <div class="container">
+      <div class="content">
+        default
+      </div>
+    </div>
+    <div class="space">FOR SPACE</div>
+    <div class="container">
+      <div class="content">
+        wheelPropagation: true
+      </div>
+    </div>
+    <div class="space">FOR SPACE</div>
+
+    <script>
+    var containers = document.querySelectorAll('.container');
+
+    new PerfectScrollbar(containers[0]);
+
+    new PerfectScrollbar(containers[1], {
+      wheelPropagation: true
+    });
+    </script>
+  </body>
+</html>
