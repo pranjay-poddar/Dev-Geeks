@@ -1,4 +1,4 @@
- A content-based movie recommender system uses the characteristics or features of movies to recommend similar movies to users. It analyzes the content of movies, such as genre, plot keywords, actors, directors, and other relevant attributes, to find patterns and similaritieS.Steps to do:-
+ A Content-based movie recommender system uses the characteristics or features of movies to recommend similar movies to users. It analyzes the content of movies, such as genre, plot keywords, actors, directors, and other relevant attributes, to find patterns and similaritieS.Steps to do:-
  
  1.DATA COLLECTION
  2.DATA CLEANING
