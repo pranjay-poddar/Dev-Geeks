@@ -1,7 +1,5 @@
 #INSTALL STREAMLIT
 #INSTALL REQUESTS
-
-
 import requests
 import streamlit as st
 import pickle
