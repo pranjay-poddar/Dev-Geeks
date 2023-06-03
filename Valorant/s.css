@@ -1,0 +1,43 @@
+div.button-box {
+    display: inline-block;
+    width: auto;
+    border: 1px solid rgba(15, 25, 35, 0.4);
+    padding: 6px;
+
+}
+.button-mask {
+        cursor: pointer;
+        position: relative;
+        bottom: -118px;
+        
+        padding: 18px 60px;
+        display: block;
+        overflow: hidden;
+        color: white;
+        background-color: red;
+    }
+
+    .button-mask:before {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0;
+        left: -5%;
+        width: 130%;
+        height: 100%;
+        background-color: black;
+        transform: translateX(-100%) skew(-15deg);
+        transition: transform 0.4s ease;
+    }
+
+    .button-mask:hover:before {
+        transform: translateX(0) skew(-15deg);
+    }
+
+    .button-mask span {
+        position: relative;
+        z-index: 1;
+    }
+
+    
+

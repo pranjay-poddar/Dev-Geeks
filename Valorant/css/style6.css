@@ -1,0 +1,249 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:20');
+@import url("http://allfont.net/allfont.css?fonts=agency-fb-bold")
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing:border-box;
+}
+body
+{
+  margin: 0;
+  padding: 0;
+  font-family: 'agencyFB' sans-serif;
+  box-sizing:border-box;
+  height: 1500px;
+  background-color: #f5f5e5;
+}
+
+.banner
+{
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.banner video
+{
+  position: absolute;
+  object-fit:cover;
+  width:100%;
+  height:100vh;
+  padding-top: 0;
+}
+
+ul{
+  position: absolute;
+  top:0;
+  right:0;
+  float:right;
+  padding:1rem;
+  list-style-type: none;
+  margin-top: 25px;
+  margin-right: 15px;
+}
+
+ul li{
+  display: inline-block;
+}
+
+ul li a{
+  text-decoration: none;
+  color: #fff;
+  padding: 5px 20px;
+  border: 1px solid #fff;
+  transition: 0.6s ease;
+}
+
+ul li a:hover{
+  background-color: #fff;
+  color: #000;
+}
+
+.logo img{
+  position: absolute;
+  top:0px;
+  left:0px;
+  float:left;
+  width: 300px;
+  height: auto;
+}
+
+.main{
+  max-width: 1600px;
+  z-index:1;
+  object-fit:cover;
+}
+
+.banner .content
+{
+  margin: 10px;
+  position:absolute;
+  top:33%;
+  left:auto;
+  right:auto;
+  bottom:0;
+  z-index: 1;
+  align-items: center;
+}
+
+.banner .content h2
+{
+  font-size: 1.1em;
+  color: #ffffff;
+}
+
+.title{
+  z-index: 1;
+  max-width:auto;
+  left: auto;
+  right: auto;
+  align-items: center;
+}
+
+a{
+  color: #333;
+  text-decoration: none;
+}
+
+.container{
+  max-width:1500px;
+  margin:30px auto;
+  overflow:hidden;
+  box-sizing:border-box;
+}
+
+.videowrapper{
+  position: relative;
+  padding-bottom: 56.25%;
+  padding-top: 25px;
+  height: 0px;
+}
+
+.videowrapper iframe{
+  position: absolute;
+  left: 0px;
+  right: 0px;
+  top:0px;
+  bottom:0px;
+  height: 100%;
+  width:100%;
+}
+
+img {
+  width:100%;
+}
+
+.card {
+  display: grid;
+  grid-template-columns: 1fr 1.25fr;
+  grid-gap: 2rem;
+  margin-bottom: 1.5rem;
+  border-top: 5px solid red;
+  padding-top: 25px;
+  border-bottom: 5px solid red;
+  border-bottom-left-radius: 100px 50px;
+  padding-bottom: 25px;
+  padding-left: 2.2rem;
+}
+
+.card h1{
+  font-size: 3rem;
+  font-family:serif;
+  color:#b50d10;
+  text-align: center;
+}
+
+.card h2{
+  font-size: 1.7rem;
+}
+
+.card p{
+  font-size:1.2rem;
+  text-align: center;
+  justify-content: center;
+}
+
+.card1 {
+  display: grid;
+  grid-template-columns: 1.6fr 1.2fr;
+  grid-gap: 2rem;
+  margin-bottom: 1.5rem;
+  background-color: #ff5757;
+  border-top: 5px solid black;
+  border-bottom: 5px solid black;
+  border-bottom-left-radius: 100px 50px;
+}
+
+.card1 h1{
+  font-size: 3rem;
+  font-family:serif;
+  color:#ffffff;
+  text-align: center;
+}
+
+.card1 h2{
+  font-size: 1.7rem;
+  color:#ffffff;
+}
+
+.card1 p{
+  font-size:1.2rem;
+  color:#ffffff;
+  text-align: center;
+  justify-content: center;
+}
+
+.card img{
+  height: 400px;
+}
+
+.card1 img{
+  height: 500px;
+  max-width: 800px;
+  background-color: #ff4545;
+}
+
+.card1 div{
+  padding: 2.2rem;
+}
+
+
+.card1 a{
+  display:inline-block;
+  background: #ffffff;
+  color:#000000;
+  padding:0.8rem 2rem;
+  cursor: pointer;
+  border: 2px solid black;
+  transition: 0.6s ease;
+}
+
+.card a{
+  display:inline-block;
+  background: #ff5757;
+  color:#ffffff;
+  padding:0.8rem 2rem;
+  cursor: pointer;
+  border: 2px solid black;
+  margin: 5px;
+  transition: 0.6s ease;
+}
+
+.btn:hover{
+  background-color: #000000;
+  color:#ffffff;
+  border: 2px solid white;
+}
+
+
+@media (max-width:800px){
+  .card {
+    display:block;
+  }
+  .card1 {
+    display:block;
+  }
+}

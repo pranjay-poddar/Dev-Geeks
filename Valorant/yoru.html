@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+    <title>Valorant Agent - YORU</title>
+    <link rel="icon" href="./img/logo.png" type="image/x-icon" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/v4-shims.css" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- NAVBAR -->
+    <nav class="navbar">
+      <a href="index.html" class="nav-logo"><img src="./img/logo.png" alt="" />.</a>
+      <ul class="nav-menu">
+        <li class="nav-item">
+          <a href="#" class="nav-link">Services</a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link">Blog</a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link">About</a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link">Contact</a>
+        </li>
+      </ul>
+      <div class="hamburger">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+    </nav>
+    <!-- END OF NAVBAR -->
+
+    <!-- HEADER -->
+    <header>
+      <video autoplay muted loop id="myVideo">
+        <source src="./video/agent-background-generic.mp4" type="video/mp4" />
+      </video>
+      <div class="sova-img-container">
+        <img src="https://images.contentstack.io/v3/assets/bltb6530b271fddd0b1/bltd4080f8efb365751/5ff5660bb47cdf7fc7d6c3dc/V_AGENTS_587x900_yoru.png" alt="sova-img" class="sova-img" />
+      </div>
+      <div class="header-text-container">
+        <h1 id="agent-name">YORU</h1>
+        <div class="desc-container">
+          <p>// Agent 05</p>
+          <h2><img src="https://images.contentstack.io/v3/assets/bltb6530b271fddd0b1/blt213441880cf2cdf5/5eaa06851b51e36d7c1b61d4/Duelist.png" alt="" /> DUELIST</h2>
+          <p>Japanese native, Yoru, rips holes straight through reality to infiltrate enemy lines unseen. Using deception and aggression in equal measure, he gets the drop on each target before they know where to look.</p>
+        </div>
+      </div>
+    </header>
+    <!-- END OF HEADER -->
+
+    <!-- SKILL -->
+    <section class="skill-container" id="skill">
+      <h1><span>//</span> SPECIAL ABILITIES</h1>
+      <div class="abilities-container">
+        <div class="abilities-button-text">
+          <div class="abilities-button">
+            <div class="radio-container">
+              <input type="radio" name="skill-btn" class="radio-btn" value="0" />
+              <input type="radio" name="skill-btn" class="radio-btn" value="1" />
+              <input type="radio" name="skill-btn" class="radio-btn" value="2" />
+              <input type="radio" name="skill-btn" class="radio-btn" value="3" />
+            </div>
+            <button class="abilities-ico" id="0" onclick="skillBtn(0)">
+              <img src="https://images.contentstack.io/v3/assets/bltb6530b271fddd0b1/blt54759b7874fbd40c/5ff5681bb47cdf7fc7d6c3e6/Yoru_Anility_Icons_512x512_Q.png" alt="" />
+            </button>
+            <button class="abilities-ico" id="1" onclick="skillBtn(1)">
+              <img src="https://images.contentstack.io/v3/assets/bltb6530b271fddd0b1/blt5427236bf8a82b05/5ff5685e1166ce7d2ed1bd5d/yoru_ability_icons_52x512_E.png" alt="" />
+            </button>
+            <button class="abilities-ico" id="2" onclick="skillBtn(2)">
+              <img src="https://images.contentstack.io/v3/assets/bltb6530b271fddd0b1/blt3ffa0e1858916cb8/5ff5689602fd0c7d345f45df/Yoru_Anility_Icons_512x512_C.png" alt="" />
+            </button>
+            <button class="abilities-ico" id="3" onclick="skillBtn(3)">
+              <img src="https://images.contentstack.io/v3/assets/bltb6530b271fddd0b1/bltceb6f71853fa7be7/5ff568b3396e65084a9e8c7c/Yoru_Anility_Icons_512x512_X.png" alt="" />
+            </button>
+          </div>
+          <br />
+          <div class="abilities-text">
+            <h2 id="abilities-text-head">Choose ability by pressing a button above</h2>
+            <br />
+            <p id="abilities-text-body"></p>
+          </div>
+          <br />
+        </div>
+        <video controls autoplay loop class="abilities-vid" id="abilities-src">
+          <source src="" type="video/mp4" />
+        </video>
+      </div>
+    </section>
+    <hr />
+    <br /><br /><br /><br /><br />
+    <!-- END OF SKILL -->
+
+    <!-- OTHER AGENTS -->
+    <section class="other-agents">
+      <h1><span>//</span> OTHER AGENTS</h1>
+      <div class="agents-container">
+        <a href="astra.html" class="agent" id="1"><img src="./img/agents/1;1/V_AGENTS_587x900_Astra.png" alt="" /></a>
+        <a href="breach.html" class="agent" id="2"><img src="./img/agents/1;1/V_AGENTS_587x900_Breach.png" alt="" /></a>
+        <a href="brim.html" class="agent" id="3"><img src="./img/agents/1;1/V_AGENTS_587x900_Brimstone.png" alt="" /></a>
+        <a href="cypher.html" class="agent" id="4"><img src="./img/agents/1;1/V_AGENTS_587x900_Cypher.png" alt="" /></a>
+        <a href="jett.html" class="agent pick" id="5"><img src="./img/agents/1;1/V_AGENTS_587x900_Jett.png" alt="" /></a>
+        <a href="KAYO.html" class="agent" id="6"><img src="./img/agents/1;1/KAYO_KeyArt_587x900.png" alt="" /></a>
+        <a href="killjoy.html" class="agent" id="7"><img src="./img/agents/1;1/V_AGENTS_587x900_KillJoy_.png" alt="" /></a>
+        <a href="omen.html" class="agent" id="8"><img src="./img/agents/1;1/V_AGENTS_587x900_Omen.png" alt="" /></a>
+        <a href="phoenix.html" class="agent" id="9"><img src="./img/agents/1;1/V_AGENTS_587x900_Phx.png" alt="" /></a>
+        <a href="raze.html" class="agent" id="10"><img src="./img/agents/1;1/V_AGENTS_587x900_ALL_Raze_2.png" alt="" /></a>
+        <a href="reyna.html" class="agent" id="11"><img src="./img/agents/1;1/V_AGENTS_587x900_Reyna.png" alt="" /></a>
+        <a href="sage.html" class="agent" id="12"><img src="./img/agents/1;1/V_AGENTS_587x900_sage.png" alt="" /></a>
+        <a href="skye.html" class="agent" id="13"><img src="./img/agents/1;1/V_AGENTS_587x900_ALL_Skye.png" alt="" /></a>
+        <a href="sova.html" class="agent" id="14"><img src="./img/agents/1;1/sova.png" alt="" /></a>
+        <a href="viper.html" class="agent" id="15"><img src="./img/agents/1;1/V_AGENTS_587x900_Viper.png" alt="" /></a>
+        <a href="yoru.html" class="agent" id="16"><img src="./img/agents/1;1/V_AGENTS_587x900_yoru.png" alt="" /></a>
+      </div>
+    </section>
+    <!-- END OF OTHER AGENTS -->
+
+    <!-- PLAY NOW -->
+    <section class="play-now" id="play-now">
+      <button>PLAY NOW</button>
+    </section>
+    <br /><br /><br /><br /><br />
+    <!-- END OF PLAY NOW -->
+
+    <!-- FOOTER -->
+    <footer>
+      <img src="https://cdn2.steamgriddb.com/file/sgdb-cdn/logo/4bcd537b6c034e297f0030cf08887426.png" alt="" />
+      <p><i class="fas fa-copyright"></i> 2021 Made with passion by erinoviandev</p>
+      <p class="p2">All images, videos, and contents are property of riot games</p>
+      <div class="social-media-container">
+        <a href="https://github.com/ega-erinovian/" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="https://app.netlify.com/teams/egaputra69/overview" target="_blank"><img src="https://cdn.freebiesupply.com/logos/thumbs/1x/netlify-logo.png" alt="" /></a>
+        <a href="https://www.instagram.com/egaerinovian/" target="_blank"><i class="fab fa-instagram"></i></a>
+      </div>
+    </footer>
+    <!-- END OF FOOTER -->
+
+    <!-- Scroll Reveal -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+    <!-- My JS -->
+    <script src="index.mjs"></script>
+    <script>
+      function skillBtn(n) {
+        skillRadio[n].checked = true;
+        if (skillRadio[n].checked == true) {
+          addBtn0(n);
+          abilitiesTextHead.innerHTML = abilities[15][n]["skill"];
+          abilitiesTextBody.innerHTML = abilities[15][n]["desc"];
+          abilitiesSrc.classList.add("show");
+          abilitiesSrc.src = abilities[15][n]["video"];
+        }
+      }
+    </script>
+  </body>
+</html>

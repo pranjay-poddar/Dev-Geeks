@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:20');
+@import url("http://allfont.net/allfont.css?fonts=agency-fb-bold")
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing:border-box;
+}
+body
+{
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins' sans-serif;
+  box-sizing:border-box;
+  height: 1500px;
+  background-color: #f5f5e5;
+}
+.banner
+{
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.banner video
+{
+  position: absolute;
+  object-fit:cover;
+  width:100%;
+  height:100vh;
+}
+.banner .content
+{
+  margin: 10px;
+  position:absolute;
+  top:33%;
+  left:auto;
+  right:auto;
+  bottom:0;
+  z-index: 1;
+  align-items: center;
+}
+
+.banner .content h2
+{
+  font-size: 1.1em;
+  color: #ffffff;
+}
+
+.title{
+  z-index: 1;
+  max-width:auto;
+  left: auto;
+  right: auto;
+  align-items: center;
+}
+
+a{
+  color: #333;
+  text-decoration: none;
+}
+
+.container{
+  max-width:1500px;
+  margin:30px auto;
+  overflow:hidden;
+  padding: 0 2rem;
+  box-sizing:border-box;
+}
+
+.videowrapper{
+  position: relative;
+  padding-bottom: 56.25%;
+  padding-top: 25px;
+  height: 0px;
+}
+
+.videowrapper iframe{
+  position: absolute;
+  left: 0px;
+  right: 0px;
+  top:0px;
+  bottom:0px;
+  height: 100%;
+  width:100%;
+}
+
+img {
+  width:100%;
+}
+
+.card {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.card h1{
+  font-size: 3rem;
+  font-family:serif;
+  color:#b50d10;
+  text-align: center;
+}
+
+.card h2{
+  font-size: 1.7rem;
+}
+
+.card p{
+  font-size:1.2rem;
+  text-align: center;
+}
+
+.card1 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 2rem;
+  margin-bottom: 1.5rem;
+  background-color: #ff5757;
+}
+
+.card1 h1{
+  font-size: 3rem;
+  font-family:serif;
+  color:#ffffff;
+  text-align: center;
+}
+
+.card1 h2{
+  font-size: 1.7rem;
+  color:#ffffff;
+}
+
+.card1 p{
+  font-size:1.2rem;
+  color:#ffffff;
+  text-align: center;
+}
+
+.card img{
+  height: 400px;
+}
+
+.card1 img{
+  height: 900px;
+}

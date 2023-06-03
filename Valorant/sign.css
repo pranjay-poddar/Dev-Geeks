@@ -1,0 +1,93 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    display: flex;
+    justify-content: center;
+    background-image:url("BG_valorant.jpg");
+    background-repeat:no-repeat;
+    background-size:100%;
+}
+.Netflix{
+    height: 520px;
+    padding: 20px 10px;
+    background-color: black;
+    margin-top: 100px;
+   opacity:0.8
+}
+h1 {
+    color: white;
+    font-size: 32px;
+    font-family: Arial, sans-serif;
+    margin-left: 20px;
+}
+.container .navbar .left{
+      height: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+   
+}
+.container .navbar .left img{
+        position: absolute;
+    left: 20px;
+    top: 0px;
+}
+
+
+.input{
+    width: 300px;
+    height: 44px;
+    margin: 10px;
+    border-color: #333333;
+    background-color: #333333;
+    color:silver;
+    padding-left: 20px;
+    border-radius: 5px;
+}
+.input{
+    outline: none;
+}
+
+#log {
+    width: 324px;
+    height: 48px;
+    margin: 10px;
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+#need {
+    text-decoration: none;
+    font-size: 13.1px;
+    color: silver;
+    margin-left:140px;
+}
+
+#new {
+    margin-left:
+        16px;
+    color: grey;
+    font-size: 13px;
+}
+
+#sign {
+    color: white;
+    font-size: 13px;
+    text-decoration: none;
+}
+
+#thispage {
+    color: silver;
+    font-size: 10px;
+    font-family:Arial;
+    margin-top: 10px;
+    margin-left: 16px;
+
+}
+#thispage a {
+    color: black;
+   opacity:0.3
+}
