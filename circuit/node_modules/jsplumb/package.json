@@ -1,0 +1,50 @@
+{
+  "name": "jsplumb",
+  "version": "2.15.6",
+  "description": "Visual connectivity for webapps",
+  "main": "dist/js/jsplumb.js",
+  "directories": {
+    "doc": "doc",
+    "test": "tests"
+  },
+  "files": [
+    "index.d.ts",
+    "dist/js/jsplumb.js",
+    "dist/js/jsplumb.min.js",
+    "css/jsplumbtoolkit-defaults.css"
+  ],
+  "types": "index",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "init": "node ./install.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/jsplumb/jsplumb.git"
+  },
+  "keywords": [
+    "javascript",
+    "svg",
+    "visual",
+    "connectivity"
+  ],
+  "author": "jsPlumb",
+  "license": "(MIT OR GPL-2.0)",
+  "devDependencies": {
+    "@jsplumb/katavorio": "^1.5.1",
+    "biltong": "^0.4.0",
+    "grunt": "~0.4.1",
+    "grunt-contrib-clean": "~0.5.0",
+    "grunt-contrib-concat": "~0.3.0",
+    "grunt-contrib-connect": "^0.11.2",
+    "grunt-contrib-copy": "~0.5.0",
+    "grunt-contrib-jshint": "~0.6.2",
+    "grunt-contrib-uglify": "~0.2.2",
+    "grunt-contrib-watch": "~0.5.3",
+    "grunt-exec": "^1.0.1",
+    "grunt-jekyll": "~0.4.2",
+    "jsbezier": "0.9.4",
+    "morgan": "1.8.0",
+    "mottle": "1.0.1"
+  }
+}
