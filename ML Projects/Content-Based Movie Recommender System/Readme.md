@@ -10,6 +10,16 @@
  - CHOOSING A MODEL
  - PREPARING A MODEL
  - DEPLOY IN WEBSITE
+
+## LIBRARIES NEEDED
+
+Libraries required:
+* Pandas
+* Numpy
+* Sckit-learn
+* Streamlit(Website)
+* Pickle
+* AST
  
  ## Model Use
   
