@@ -13,7 +13,7 @@ const KeyGenerator = ({callback, p1,q1,n1,phi1,e1,d1}) => {
   const [e, setE] = useState(e1)
   const [d, setD] = useState(d1)
 
-
+// checkprime - function to check if a number is prime
   function checkprime(n) {
     if (n === 2) {
       return true
@@ -40,18 +40,19 @@ const KeyGenerator = ({callback, p1,q1,n1,phi1,e1,d1}) => {
   }
 
 
+//  generateKeys - function to generate keys using p and q
   function generateKeys() {
     if(p && q){
     if (checkprime(p) && checkprime(q)) {
 
-      let nz = p*q
-      let phiz = (p - 1) * (q - 1)
+      let nz = p*q        // n = p*q
+      let phiz = (p - 1) * (q - 1)    // phi = (p-1)*(q-1)
       setN(nz)
       setPhi((p - 1) * (q - 1))
 
-      let ez = 2
+      let ez = 2       // e = 2
       while (ez < phiz) {
-        if (gcd(ez, phiz) === 1) {
+        if (gcd(ez, phiz) === 1) {        // e and phi must be coprime
           break
         } else {
           ez++
@@ -64,7 +65,7 @@ const KeyGenerator = ({callback, p1,q1,n1,phi1,e1,d1}) => {
 
       let dz = 1
       while (dz < phiz) {
-        if ((ez * dz) % phiz === 1) {
+        if ((ez * dz) % phiz === 1) {     // d = (1/e)mod(phi)
           break
         } else {
           dz++
@@ -72,7 +73,7 @@ const KeyGenerator = ({callback, p1,q1,n1,phi1,e1,d1}) => {
       }
       setD(dz)
 
-      callback(ez,dz,nz,phiz)
+      callback(ez,dz,nz,phiz)    // callback function to send the keys to parent component
     } else {
       alert('p and q must be prime')
     }}
@@ -115,6 +116,9 @@ const Encrypt = ({e,n}) => {
   const [m, setM] = useState(0)
   const [c, setC] = useState(0)
 
+
+  // binarymod - function to calculate (b^e)mod(m)
+
   function binarymod(b, e, m) {
     let r = 1
     b = b % m
@@ -127,6 +131,9 @@ const Encrypt = ({e,n}) => {
     }
     return r
   }
+
+
+  // encrypt - function to encrypt message
 
   function encrypt() {
     let c  = binarymod(m, e, n)
@@ -155,6 +162,9 @@ const Decrypt = ({d,n}) => {
   const [c, setC] = useState(0)
   const [m, setM] = useState(0)
 
+
+  // binarymod - function to calculate (b^e)mod(m)
+
   function binarymod(b, e, m) {
     let r = 1
     b = b % m
@@ -169,10 +179,10 @@ const Decrypt = ({d,n}) => {
   }
 
 
+  // decrypt - function to decrypt message
 
   function decrypt() {
 
-    console.log('cd = ', Math.pow(c, d))
 
     let m = binarymod(c, d, n)
     setM(m)
@@ -217,10 +227,6 @@ function App() {
   
 
   useEffect(() => {
-    console.log('e1 = ', e)
-    console.log('d1 = ', d)
-    console.log('n1 = ', n)
-    console.log('phi = ', phi)
   }, [e,d,n,phi])
 
 
@@ -233,7 +239,7 @@ function App() {
           </header>
           </div>
       
-      {count==0?<KeyGenerator callback={callback} p={p} e={e} n={n} phi={phi} d={d} q={q} />:count==1?<Encrypt e={e} n={n} />:<Decrypt d={d} n={n} />}
+      {count==0?<KeyGenerator callback={callback} />:count==1?<Encrypt e={e} n={n} />:<Decrypt d={d} n={n} />}
 
       <div className='flex justify-evenly p-[30px] text-[25px]'>
           <p className='inline-block ml-[30px] mr-[20px]'> public key: {"{ "+e+","+n+" }" } </p>
