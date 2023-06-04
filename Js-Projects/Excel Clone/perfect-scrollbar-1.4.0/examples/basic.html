@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../css/perfect-scrollbar.css" rel="stylesheet">
+    <script src="../dist/perfect-scrollbar.js"></script>
+    <style>
+    #container {
+      position: relative;
+      margin: 0px auto;
+      padding: 0px;
+      width: 600px;
+      height: 400px;
+      overflow: auto;
+    }
+    #container .content {
+      background-image: url('./assets/azusa.jpg');
+      width: 1280px;
+      height: 720px;
+    }
+    </style>
+  </head>
+  <body>
+    <div id="container">
+      <div class="content">
+      </div>
+    </div>
+
+    <p style='text-align: center'>
+      Width <input type='text' id='width' value='600'>
+      Height <input type='text' id='height' value='400'>
+      <button onclick='updateSize()'>Change!</button>
+    </p>
+
+    <script>
+    var $ = document.querySelector.bind(document);
+
+    var ps = new PerfectScrollbar('#container');
+
+    function updateSize() {
+      var width = parseInt($('#width').value, 10);
+      var height = parseInt($('#height').value, 10);
+
+      $('#container').style.width = width + 'px';
+      $('#container').style.height = height + 'px';
+
+      ps.update();
+    }
+    </script>
+  </body>
+</html>

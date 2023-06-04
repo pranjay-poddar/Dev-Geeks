@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../css/perfect-scrollbar.css" rel="stylesheet">
+    <script src="../dist/perfect-scrollbar.js"></script>
+    <style>
+    .container {
+      position: relative;
+      margin: 30px auto;
+      padding: 0px;
+      width: 600px;
+      height: 400px;
+      overflow: auto;
+    }
+    .container .content-x {
+      background-image: url('./assets/azusa.jpg');
+      width: 1280px;
+      height: 400px;
+      color: blue;
+      font-size: 20px;
+    }
+    .container .content-y {
+      background-image: url('./assets/azusa.jpg');
+      width: 600px;
+      height: 720px;
+      color: blue;
+      font-size: 20px;
+    }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="content-x">
+        useBothWheelAxes: x
+      </div>
+    </div>
+    <div class="container">
+      <div class="content-y">
+        useBothWheelAxes: y
+      </div>
+    </div>
+
+    <script>
+    var containers = document.querySelectorAll('.container');
+
+    new PerfectScrollbar(containers[0], {
+      useBothWheelAxes: true
+    });
+
+    new PerfectScrollbar(containers[1], {
+      useBothWheelAxes: true
+    });
+    </script>
+  </body>
+</html>

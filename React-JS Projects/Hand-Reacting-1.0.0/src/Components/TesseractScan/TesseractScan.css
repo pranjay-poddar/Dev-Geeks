@@ -1,0 +1,229 @@
+.tesseractScan {
+    margin-top: 6rem;
+    margin-bottom: 5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.textInfo {
+    max-width: 850px;
+    display: flex;
+    margin: 4rem;
+}
+
+.textLeft {
+    flex: 0.3;
+}
+
+.textLeft > img {
+    width: 400px;
+    display: block;
+    margin: auto;
+}
+
+.textRight {
+    flex: 0.7;
+}
+
+.textRight > p {
+    padding: 3rem;
+    font-size: 28px;
+    font-family: 'Caveat', cursive;
+    font-weight: 500;
+    
+}
+
+.tesseractScan > button {
+    color: #ffffff;
+    background-color: #ff4949;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.tesseractScan > button:hover {
+    color: #ff6161;
+    background-color: #ffffff;
+    font-weight: 600;
+    transition: 600ms ease-in-out;
+}
+
+.scanText {
+    padding: 6rem;
+}
+
+.scanContainer {
+    padding-top: 1.5rem;
+    padding-bottom: 7rem;
+    display: flex;
+    align-items: center;
+    background-color: #fbd0d0;
+}
+
+
+.scanContainer > button {
+    margin: 2rem;
+}
+
+
+.image_left {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    flex: 0.45;
+}
+
+input[type="file"] {
+    display: none;
+}
+
+.custom-file-upload {
+    display: inline-block;
+    padding: 0.75rem;
+    border-radius: 999px;
+    background-color: #ec4c4c;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    margin-top: 5rem;
+    margin-bottom: 3rem;
+}
+
+.helpText > .MuiSvgIcon-root {
+    position: relative ;
+    top: 5px;
+}
+
+.helpText {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-bottom: 0.125rem;
+    font-size: 1.25rem;
+    font-family: 'Lora', serif;
+}
+
+
+
+
+.image_left > img{
+    width: 500px;
+    margin-top: 2rem !important;
+}
+
+.buttonContainer {
+    flex: 0.1;
+}
+
+.buttonContainer > button {
+    color: #ffffff;
+    margin: 2rem;
+    background-color: #ff2b2b;
+    font-weight: 600;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    padding: 0.5rem 1.5rem;
+}
+
+.buttonContainer > button:hover {
+    background-color: #ffffff;
+    color: #ff5656;
+    transition: 300ms ease-in;
+}
+
+.image_right {
+    flex: 0.45;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.textPaper > .MuiIconButton-root {
+    position: relative;
+    float: right;
+    padding-left: 2rem;
+    padding-bottom: 1rem;
+    color: rgb(255, 101, 101);
+}
+
+.textPaper {
+    height: 500px;
+    width: 400px;
+    padding: 1rem;
+    margin-bottom: 2rem;
+}
+
+.textPaper > p {
+    padding-top: 1.5rem;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+
+
+
+
+
+
+@media screen and (max-width: 992px) {
+    .tesseractScan {
+        margin-top: 3.5rem;
+    }
+    .scanContainer {
+        flex-direction: column;
+    }
+    .image_left > img{
+        width: 400px;
+    }
+    .textPaper {
+        height: 500px;
+        width: 400px;
+    }
+    .custom-file-upload {
+        margin-top: 3rem;
+        margin-bottom: 2rem;
+    }
+    .scanContainer {
+        padding-bottom: 4rem;
+    }
+    .textInfo {
+        display: flex;
+        margin: 1rem;
+        flex-direction: column;
+    }
+
+  }
+
+  
+  @media screen and (max-width: 600px) {
+
+    .tesseractScan {
+        margin-top: 2rem;
+    }
+    .scanContainer {
+        flex-direction: column;
+    }
+    .image_left > img{
+        width: 320px;
+    }
+    .textPaper {
+        height: 400px;
+        width: 300px;
+    }
+    .custom-file-upload {
+        margin-top: 3rem;
+        margin-bottom: 1.5rem;
+    }
+    .scanContainer {
+        padding-bottom: 3rem;
+    }
+    .helpText {
+        font-size: 1rem;
+    }
+    .textInfo {
+        display: flex;
+        margin: 1rem;
+        flex-direction: column;
+    }
+    .textLeft {
+        display: none;
+    }
+  }

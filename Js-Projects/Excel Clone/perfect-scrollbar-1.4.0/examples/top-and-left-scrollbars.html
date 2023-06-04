@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../css/perfect-scrollbar.css" rel="stylesheet">
+    <script src="../dist/perfect-scrollbar.js"></script>
+    <style>
+    #container {
+      position: relative;
+      margin: 0px auto;
+      padding: 0px;
+      width: 600px;
+      height: 400px;
+      overflow: auto;
+    }
+    #container .content {
+      background-image: url('./assets/azusa.jpg');
+      width: 1280px;
+      height: 720px;
+    }
+
+    /* Change the alignment of scrollbars */
+    /* Recommendation: modify CSS directly */
+    .ps__rail-x {
+      top: 0px;
+      bottom: auto; /* If using `top`, there shouldn't be a `bottom`. */
+    }
+    .ps__rail-y {
+      left: 0px;
+      right: auto; /* If using `left`, there shouldn't be a `right`. */
+    }
+    .ps__thumb-x {
+      top: 2px;
+      bottom: auto; /* If using `top`, there shouldn't be a `bottom`. */
+    }
+    .ps__thumb-y {
+      left: 2px;
+      right: auto; /* If using `left`, there shouldn't be a `right`. */
+    }
+    </style>
+  </head>
+  <body>
+    <div id="container">
+      <div class="content">
+      </div>
+    </div>
+
+    <script>
+    new PerfectScrollbar('#container');
+    </script>
+  </body>
+</html>

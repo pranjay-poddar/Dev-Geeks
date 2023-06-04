@@ -1,0 +1,41 @@
+.header {
+    margin-bottom: 2rem;
+    padding-top: 1.5rem;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    background: #262626;
+    height: 60px;
+}
+
+.headerLeft > img {
+    position: absolute;
+    padding-left: 4rem;
+    top: 10px;
+    width: 70px;
+}
+
+.headerRight > a {
+    text-decoration: none;
+    color: white;
+}
+
+
+.headerRight > a > .MuiSvgIcon-root{
+    margin-top: 0.3rem;
+    font-size: 2rem;
+    padding-right: 2rem;
+}
+
+
+@media screen and (max-width: 992px) {
+    .headerLeft > img {
+        padding-left: 2rem;
+    }
+}
+  
+  @media screen and (max-width: 600px) {
+    .headerLeft > img {
+        padding-left: 2rem;
+    }
+  }
