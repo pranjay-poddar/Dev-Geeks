@@ -1,0 +1,106 @@
+* {
+    margin: 0;
+    padding: 0;
+    background-color: #6cFE;
+}
+
+.container {
+    position: absolute;
+    top: 10%;
+    left: 15%;
+    width: 70%;
+    height: 80%;
+    background-color: lightyellow;
+    border-radius: 1rem;
+}
+
+.header {
+    position: relative;
+    top: 5%;
+    left: 20%;
+    width: 60%;
+    height: 10%;
+    background-color: none;
+    border-radius: 0.5rem;
+}
+
+.heading {
+    text-align: center;
+    font-family: cursive;
+    color: white;
+    border-radius: 0.5rem;
+}
+
+/* CSS style of input box */
+.input {
+    position: relative;
+    top: 12%;
+    left: 5%;
+    width: 88%;
+    height: 33%;
+    background-color: lightyellow;
+    border-radius: 0.8rem;
+    display: flex;
+    justify-content: center;
+}
+
+.input-text {
+    position: absolute;
+    font-size: 2.4rem;
+    color: black;
+    background-color: lightyellow;
+    font-family: cursive;
+}
+
+#input-box {
+    padding: 8px;
+    position: relative;
+    top: 40%;
+    left: 1%;
+    height: 3rem;
+    width: 19rem;
+    border-radius: 0.6rem;
+    font-size: 2rem;
+    font-family: cursive;
+    border: 2px solid lightblack;
+}
+
+input,
+textarea {
+    background-color: lightyellow;
+}
+
+/* CSS style of Output box */
+.output {
+    position: relative;
+    top: 14%;
+    left: 5%;
+    width: 88%;
+    height: 33%;
+    background-color: lightyellow;
+    border-radius: 0.8rem;
+    display: flex;
+    justify-content: center;
+}
+
+.convert-text {
+    position: absolute;
+    font-size: 2.4rem;
+    color: black;
+    background-color: lightyellow;
+    font-family: cursive;
+}
+
+.output-box {
+    position: relative;
+    top: 40%;
+    height: 20%;
+    background-color: lightyellow;
+}
+
+p {
+    background-color: lightyellow;
+    font-family: cursive;
+    font-size: 2rem;
+    text-align: center;
+}
