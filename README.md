@@ -679,7 +679,17 @@ Happy Coding! -->
 
 </tr>
 
-<tr align="center">
+	
+<td align="center">
+<td align="center"> 228.</td>
+<td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Frontend-Projects/FIght%20Game"> Fight Game </a></td>
+<td align="center"> 229.</td>
+<td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Python%20Projects/Hangman-advanced"> Hangman-Advanced </a></td>	
+</tr>	
+	
+
+
+<td align="center">
 <td align="center"> 228.</td>
 <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Frontend-Projects/FIght%20Game"> Fight Game </a></td>
 <td align="center"> *</td>
@@ -688,12 +698,13 @@ Happy Coding! -->
 </tr>
 
 </tr>
-<tr align="center">
+<td align="center">
 <td align="center"> 229.</td>
 <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Node-JS%20Projects/Secrets"> Secrets </a></td>
 <td align="center"> 230.</td>
 <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/ReactJS%20Typescript%20Projects/Plankman"> Plankman </a></td>
 </tr>
+
 </table>
 Node-JS Projects\Secrets
 ## How to contribute:
