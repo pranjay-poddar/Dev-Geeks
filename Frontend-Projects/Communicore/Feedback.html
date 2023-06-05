@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CommuniCore Feedback</title>
+    <link rel="stylesheet" href="assets/css/feedback.css">
+    <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico">
+</head>
+<body>
+    <div class="container">
+        <header class="text-center">
+          <h1 id="title">CommuniCore Feedback Form</h1>
+          <p id="description" class="description">
+            <em>Thank you for taking the time to help us improve the platform</em>
+          </p>
+        </header>
+        <form name="google-sheet" action="#" id="survey-form" class="form-label">
+          <div class="form-group">
+            <label for="name" id="name-label">Name</label>
+            <input
+              type="text"
+              id="name"
+              name="Name"
+              class="form-control"
+              placeholder="Enter your name"
+              required
+            />
+          </div>
+    
+          <div class="form-group">
+            <label for="email" id="email-label">Email</label>
+            <input
+              type="email"
+              id="email"
+              name="Email"
+              class="form-control"
+              placeholder="Enter your Email"
+              required
+            />
+          </div>
+              
+          <div class="form-group">
+            <label for="dropdown"
+              >Which option best describes your current role?</label
+            >
+            <select name="Current Role" id="dropdown" class="form-control" required>
+              <option disabled selected>Select current role</option>
+              <option value="Student">Student</option>
+              <option value="Full Time Job">Full Time Job</option>
+              <option value="Full Time Learner">Full Time Learner</option>
+              <option value="Prefer not to say">Prefer not to say</option>
+              <option value="Other">Other</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="dropdown"
+              >Enter Your College Name (If student, otherwise mention NA)</label>
+              <input
+              type="college"
+              id="college"
+              class="form-control"
+              name="College"
+              placeholder="Enter your College Name"
+              required
+            />
+           
+          </div>
+          <div class="form-group">
+            <label for="dropdown"
+              >Enter Your Branch & Year (If student, otherwise mention NA)</label>
+              <input
+              type="Bname"
+              id="Bname"
+              name="Branch"
+              class="form-control"
+              placeholder="Enter your Branch-Year"
+              required
+            />
+           
+          </div>
+    
+          <div class="form-group">
+            <label for="favorite">
+              What is your favorite part of CommuniCore Website?
+            </label>
+            <select name="favorite" id="favorite" class="form-control" required>
+              <option disabled selected>Select an option</option>
+              <option value="User Interface">User Interface</option>
+              <option value="Courses">Courses</option>
+              <option value="Study Resources">Study Resources</option>
+              <option value="Cheatsheets"> Cheatsheets</option>
+              <option value="Gate PYQ papers">Gate PYQ papers</option>
+              <option value="Other">Other</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <p style="color: white;">Would you recommend CommuiCore Website to your friend?</p>
+            <p>
+              <label style="color: white;">
+                <input type="radio" name="answer" value="Definitely" id="definitely" checked />
+                Definitely
+              </label>
+            </p>
+            <p>
+              <label style="color: white;">
+                <input type="radio" value="Maybe" name="answer" id="maybe" />
+                Maybe
+              </label>
+            </p>
+            <p>
+              <label style="color: white;">
+                <input type="radio" value="Not Sure" name="answer" id="notsure" />
+                Not Sure
+              </label>
+            </p>
+          </div>
+
+          <div class="form-group">
+            <p style="color: white;">How's your experience ?</p>
+            <p>
+              <label style="color: white;">
+                <input type="radio" value="Poor" name="experience" id="definitely" />
+                Poor
+              </label>
+            </p>
+            <p>
+              <label style="color: white;">
+                <input type="radio" value="Needs Improvement" name="experience" id="maybe" />
+                Needs Improvement
+              </label>
+            </p>
+            <p>
+              <label style="color: white;">
+                <input type="radio" value="Meets Expectations" name="experience" id="notsure" />
+                Meets Expectations
+              </label>
+            </p>
+            <p>
+                <label style="color: white;">
+                  <input type="radio" value="Exceeds Expectations" name="experience" id="Exceeds Expectations" />
+                  Exceeds Expectations
+                </label>
+            </p>
+            <p>
+                <label style="color: white;">
+                  <input type="radio" value="Outstanding" name="experience" id="Outstanding"  checked />
+                  Outstanding
+                </label>
+            </p>
+          </div>
+            
+          <div class="form-group">
+            <p style="color: white;">Any comments or suggestions?</p>
+            <textarea
+              name="comment"
+              id="comment"
+              cols="50"
+              rows="6"
+              placeholder="Enter your comment here..."
+              required
+            ></textarea>
+          </div>
+    
+          <div  class="form-group">
+            <button type="submit" id="submit">Submit</button>
+          </div>
+        </form>
+      </div>
+
+      <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbzSPK5bLwyDBJ_HLxIX2Oyc7Ti5GP1eeIfcnoYcNWNlmkKebjKanBkJ2l6hdhNTJIjb-Q/exec'
+        const form = document.forms['google-sheet']
+      
+        form.addEventListener('submit', e => {
+          e.preventDefault()
+          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => alert("Thanks for Your Valuable Feedback..!! Have a good day..."))
+            .catch(error => console.error('Error!', error.message))
+            form.reset();
+
+        })
+        
+      </script>
+      
+
+
+</body>
+</html>

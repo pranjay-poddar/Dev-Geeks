@@ -1,0 +1,82 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color:#ede2d5;
+    border: solid 10px white;
+}
+.flex{
+    display: flex;
+    align-items: center;
+}
+ul{
+    list-style: none;
+}
+h1{
+    color: rgb(29, 7, 7);
+    font-size: 3rem;
+}
+.navbar{
+    justify-content: space-between;
+}
+.logo img{
+    width: 200px;
+    margin:20px;
+}
+.nav-links{
+    flex-basis: 1100px;
+}
+.nav-links ul{
+    justify-content: left;
+    gap: 50px;
+    font-size: 25px;
+}
+.nav-links button{
+    margin-left: 80px;
+    margin-top:20px ;
+    width: 150px;
+    height: 50px;
+    border-radius: 40px;
+    color: rgba(53, 53, 46, 0.422);
+}
+.nav-links button img{
+    margin-left: 20px;
+    margin-right: 5px;;
+    width :15px;
+    align-items: flex-start;
+}
+.header-left h1 {
+    margin-left:80px;
+    flex-wrap: wrap;
+    max-width:20vw;
+    align-items: left;
+    font-size: 5rem;
+}
+.header-left h2{
+    max-width: 35vw;
+    margin-left:80px;
+    margin-top: 20px;
+}
+.header-left h3{
+    margin-left: 80px;
+    margin-top:20px ;
+    font-size: 2.5rem;
+}
+.header-left button{
+    margin-left: 80px;
+    margin-top:20px ;
+    width: 150px;
+    height: 50px;
+    border-radius: 40px;
+    background-color: black;
+    color: white;
+}
+.header-mid img{
+    margin-top: 100px;
+    width: 900px;
+}
+img{
+    width:1420px;
+}
