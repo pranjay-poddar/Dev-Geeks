@@ -1,6 +1,6 @@
 # **Candy Crush**
 
----
+- Candy Crush Game
 
 <br>
 
@@ -25,7 +25,8 @@
 
 <br>
 
-![image](../../assets/images/candy_crush.png)
+![image](https://github.com/Roshnijeewani3457/Dev-Geeks/assets/89697445/b89037bd-4c19-43c9-b399-86f62a6fdf83)
+
 
 <br>
 
