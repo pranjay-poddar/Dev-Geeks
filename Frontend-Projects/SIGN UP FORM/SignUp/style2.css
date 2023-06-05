@@ -1,0 +1,172 @@
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    /*font-size: 10px;*/
+    /*10px /16px = 0.625 = 62.5%*/
+    /*Percentage of user's browser font-size setting*/
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Rubik", sans-serif;
+    line-height: 1;
+    font-weight: 400;
+    color: #555;
+}
+
+.signUp-Form{
+    margin: 13.2rem;
+}
+
+.signup_container{
+    max-width: 120rem;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    overflow: hidden;
+    box-shadow: 0px 0px 90px -3px rgba(0,0,0,0.1);
+    margin-bottom: 3.2rem;
+    border-radius: 2rem;
+}
+
+.Signup-Side{
+    min-width: 40rem;
+}
+
+.doddle-side{
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+css-doodle{
+   border-radius: 0 2rem 2rem 0;
+}
+
+.prim-signUp-heading{
+    text-align: center;
+    font-size: 5.2rem;
+    font-weight: 700;
+    font-family: Montserrat,Inter, "Sans Serif Collection";
+    color: #1B1B1B;
+    text-shadow: 0px 0px 5px rgba(0,0,0,0.5);
+}
+
+form{
+    padding: 3.2rem 4rem;
+    flex-direction: column;
+    row-gap: 2.4rem;
+    justify-items: center;
+    display: grid;
+}
+
+/* | Field & Icon |*/
+
+img{
+    height: 3.6rem;
+    filter: invert(21%) sepia(88%) saturate(6766%) hue-rotate(266deg) brightness(89%) contrast(105%) drop-shadow(-3px 2px 2.5px rgba(115, 27, 232, 0.4));
+    margin: 4px 8px 4px 16px;
+}
+
+.input-info{
+    display: flex;
+    flex-direction: column;
+    row-gap: 2.4rem;
+    border-radius: 50px;
+    width: 100%;
+    padding: 1.2rem;
+    font-size: 1.8rem;
+}
+
+.input-field{
+    display: flex;
+    align-content: center;
+    border-radius: 6rem;
+    box-shadow: 0 0 32px rgba(0,0,0,0.1);
+    border-radius: 6rem;
+    position: relative;
+}
+
+input[type="text"], input[type="email"], input[type="password"], textarea {
+    border: none;
+    outline: none;
+    font-size: 1.8rem;
+    font-weight: 500;
+    color: #555;
+    width: 100%;
+    padding: 1.2rem 2.4rem 1.2rem 1.2rem;
+    border-radius: 0 22px 22px 0px;
+}
+
+
+.submit-btn{
+    padding: 1rem 2rem;
+    font-size: 1.8rem;
+    color: #f4e8ff;
+    background-color: darkorchid;
+    border-radius: 0.4rem;
+    border: none;
+    transition: 0.3s ease all;
+}
+
+.submit-btn:hover{
+    background-color: #6314b3;
+}
+
+label{
+    display: flex;
+    align-items: center;
+    font-size: 1.2rem;
+}
+input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+p{
+    font-size: 1.4rem;
+    font-weight: 500;
+    color: #555;
+    text-align: center;
+}
+
+p a{
+    text-decoration: none;
+    font-weight: 700;
+    color: #af61ff;
+    transition: 0.3s ease all;
+}
+
+p a:active{
+    color: #af61ff;
+}
+
+p a:hover{
+    color: #6314b3;
+}
+
+.Footer{
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+.Footer a{
+    text-decoration: none;
+    font-weight: 700;
+    transition: 0.3s ease all;
+    /*font-size: 1.4;*/
+}
+.Footer a:active{
+    color: black;
+}
+
+.Footer a:hover{
+    color: #6314b3;
+}
+
