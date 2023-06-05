@@ -1,5 +1,6 @@
 * {
-  background-color: rgb(209, 234, 242);
+  background-color: rgb(227, 242, 209);
+
 }
 h1 {
   text-decoration: underline;
@@ -10,7 +11,7 @@ h1 {
 }
 h1:hover {
   font-family: "Courier New", Courier, monospace;
-  background-color: brown;
+  background-color: rgb(42, 165, 161);
   font-size: 40px;
 }
 p {
@@ -42,7 +43,7 @@ button {
   font-size: 25px;
   height: 50px;
   width: 150px;
-  background-color: crimson;
+  background-color: rgb(140, 20, 220);
   border-radius: 8px;
 }
 #gifty {
