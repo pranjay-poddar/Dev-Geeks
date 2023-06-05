@@ -682,6 +682,11 @@ Happy Coding! -->
 <tr align="center">
 <td align="center"> 228.</td>
 <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Frontend-Projects/FIght%20Game"> Fight Game </a></td>
+<td align="center"> *</td>
+<td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Js-Projects/Colovaria"> Colovaria </a></td>
+
+</tr>
+
 </tr>
 <tr align="center">
 <td align="center"> 229.</td>
