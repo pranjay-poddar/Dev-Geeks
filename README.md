@@ -694,7 +694,7 @@ Happy Coding! -->
 <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Frontend-Projects/FIght%20Game"> Fight Game </a></td>
 </tr>
 	
-<td align="center">
+<tr align="center">
 <td align="center"> 229.</td>
 <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Python%20Projects/Hangman-advanced"> Hangman-Advanced </a></td>	
 <td align="center"> 228.</td>
@@ -705,7 +705,7 @@ Happy Coding! -->
 <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/ReactJS%20Typescript%20Projects/Plankman"> Plankman </a></td>
 </tr>
 
-<td align="center">
+<tr align="center">
 <td align="center"> 231.</td>
 <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/ML%20Projects/Analysis%20of%20Fashion_dataset"> Amazing Snake Game </a></td>
 <td align="center"> 232</td>
