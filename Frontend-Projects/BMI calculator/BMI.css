@@ -9,7 +9,7 @@
     font-family: cursive;
     display: flex;
     justify-content: center;
-    background-image: url(images/maintaining-a-healthy-lifestyle.jpeg);
+    background-image: url(images/maintanence.jpg);
     opacity: 0.9;
     background-size: cover;
     background-repeat: no-repeat;
@@ -19,7 +19,7 @@
     
     height: 550px;
     width: 400px;
-    background-color: white;
+    background-color: lightblue;
     opacity: 0.9;
     margin: 100px;
     border: 1px solid black;
@@ -56,19 +56,19 @@ h2{
 .calculate_btn, .reset_btn{
     width: 110px;
     height: 40px;
-    background-color: skyblue;
+    background-color: lightcoral;
     font-size: 16px;
     font-weight: bold;
     border-radius:5px;
 }
 .calculate_btn:hover{
-   background-color: seagreen;
+   background-color: lightgoldenrodyellow;
 }
 .reset_btn:hover {
-    background-color: red;
+    background-color: lightgoldenrodyellow;
 }
 .chart-container {
-    background-color: coral;
+    background-color: rosybrown;
     width: 250px;
   height: 220px;
     border: black 2px solid;
