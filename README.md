@@ -687,6 +687,12 @@ Happy Coding! -->
 <td align="center"> 229.</td>
 <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Node-JS%20Projects/Secrets"> Secrets </a></td>
 </tr>
+<tr align="center">
+<td align="center"> 230.</td>
+<td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Pacman"> Pacman Game </a></td>
+</tr>
+
+   
 </table>
 Node-JS Projects\Secrets
 ## How to contribute:
