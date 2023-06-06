@@ -33,7 +33,8 @@
 </ol>
 
 # User 1: Mayank Chaudhary
-![Screenshot (18)](https://user-images.githubusercontent.com/49724597/87877500-56988880-c9fc-11ea-9e09-306a95deb2cb.png)
+![image](https://github.com/U-DAY-333/Dev-Geeks/assets/93582768/7e7cd94c-98b5-4652-8308-835661672c98)
 
 # User 2: Harry
-![Screenshot (19)](https://user-images.githubusercontent.com/49724597/87877502-57c9b580-c9fc-11ea-9ad4-fbe7aac19a47.png)
+![image](https://github.com/U-DAY-333/Dev-Geeks/assets/93582768/e8a8101e-89c6-4301-9a10-d7f3b1c54ef5)
+
