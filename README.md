@@ -718,6 +718,8 @@ Happy Coding! -->
 <tr align="center">
 <td align="center"> 233.</td>
 <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/ML%20Projects/Analysis%20of%20Fashion_dataset"> DuckHunt </a></td>
+<td align="center"> 234.</td>
+<td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/ML%20Projects/Analysis%20of%20Fashion_dataset"> FlipCard </a></td>
 </tr>
 
 </table>
