@@ -23,7 +23,7 @@
 
 # Process to run the app
 <ol>
-  <li> Install Node and run npm
+  <li> Install Node and run npm init
   <li> run <b>nodemon nodeserver/index.js</b>
   <li> Install the extension 'live server' for Vs Code. Extension Id - <b>ritwickdey.liveserver </b>
   <li> After the extension gets installed navigate to index.html and open it to edit.
