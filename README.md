@@ -16,7 +16,6 @@
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
 [![Open Source Love svg2](https://badges.frapsoft.com/os/v2/open-source.svg?v=103)](https://github.com/ellerbrock/open-source-badges/)
 
-
   <p align="center">
    <!--- <a href="https://github.com/pranjay-poddar"><img src="https://github.com/pranjay-poddar/Dev-Geeks/blob/main/Repository_images/hackclubrait-logo.png" width="200px" />   
     </a>
@@ -99,7 +98,6 @@ Happy Coding! -->
 <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/ML%20Projects/Brain%20Tumor%20Classifier">Brain Tumor Classifier</a></td>
 <td align="center"> 12.</td>
 <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/ML%20Projects/Browser"> Browser </a></td>
-
 </tr>
 
 <tr align="center">
@@ -115,7 +113,7 @@ Happy Coding! -->
 
 <tr align="center">
 <td align="center"> 17.</td>
-<td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Frontend-Projects/car%20company%20website">Car company website</a>  </td>
+<td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Frontend-Projects/car%20company%20website">Car company website</a></td>
 <td align="center"> 18.</td>
 <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Animations-CSS/card-flip%20animation">card-flip animation</a></td>
 <td align="center"> 19.</td>
@@ -495,41 +493,44 @@ Happy Coding! -->
 <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/.github/workflows">  workflows </a></td>
 <td align="center"> 155.</td>
 <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/ML%20Projects/Youtube-video-downloader"> Youtube-video-downloader </a></td>
-<td align="center"> 156.</td>
+<td align="center"> 156.</td>	
 <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/React-JS%20Projects/responsive-product-component">Reactive-Product-Component</a></td>
+</tr>
+	
+<tr align="center">	
 <td align="center"> 157.</td>
 <td align="center"> <a href="https://github.com/sumitkr2000/BMI_Calculator/tree/main/bmi-calculator">BMI Calculator</a></td>
-</tr>
-
-<tr align="center">
 <td align="center"> 158.</td>
 <td align="center"> <a href="https://github.com/Noothan-am/Dice-game-/tree/main/dicegame">  Dice game</a></td>
 <td align="center"> 159.</td>
 <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Js-Games/Typer">  Typing Game</a></td>
 <td align="center"> 160.</td>
 <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/blob/main/Python%20Projects/WarCardGame.py">  WAR Card Game</a></td>
+</tr>
+
+<tr align="center">
 <td align="center"> 161.</td>
 <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Js-Projects/3D_Sapes_Volume_Calculator">  ADDING 3D SHAPES VOLUME CALC</a></td>
 <td align="center"> 162.</td>
 <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/blob/d6d03a80bb2290e0ccc60f4a50bb5e1e20682f0c/Python%20Projects/Gif%20Creator/video-to-gif.py">  GIF Creator</a></td>
-</tr>
-
-<tr align="center">
 <td align="center"> 163.</td>
 <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Frontend-Projects/lorem%20ipsum%20website%20with%20custom%20scrollbar"> Loren Ipsum Website</a></td>
 <td align="center"> 164.</td>
 <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Animations-CSS/Countdown_Animation"> Project Countdown Animation</a></td>
+</tr>
+	
+<tr align="center">
 <td align="center"> 165.</td>
 <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Frontend-Projects/Hoverboard"> Project Hoverboard</a></td>
 <td align="center"> 166.</td>
 <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/ML%20Projects/Selfi-Capture"> Selfie capture</a></td>
 <td align="center"> 167.</td>
 <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Java%20Projects/Online%20Book%20Store"> Online book store</a></td>
-</tr>
-
-<tr align="center">
 <td align="center"> 168.</td>
 <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/ML%20Projects/Compress%20PDF'S"> PDF Compressor</a></td>
+</tr>
+	
+<tr align="center">
 <td align="center"> 169.</td>
 <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/ML%20Projects/Plagiarism%20Checker"> Plagiarism checker</a></td>
 <td align="center"> 170.</td>
@@ -549,38 +550,41 @@ Happy Coding! -->
 <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/ML%20Projects/Periodic%20Table"> Periodic Table</a></td>
 <td align="center"> 176.</td>
 <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Js-Games/Whack%20A%20Mole"> Whack A Mole</a></td>
-<td align="center"> 177.</td>
-<td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/commit/64aad56984f9f194c4ce6c0611a8f6eca2e6bea2"> Apple E-commerce Website</a></td>
 </tr>
 
-<tr align="center">
+<tr align="center">	
+<td align="center"> 177.</td>
+<td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/commit/64aad56984f9f194c4ce6c0611a8f6eca2e6bea2"> Apple E-commerce Website</a></td>
 <td align="center"> 178.</td>
 <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Js-Games/travel_game"> Travel Game</a></td>
 <td align="center"> 179.</td>
 <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Frontend-Projects/Gym%20website"> Apna gym</a></td>
 <td align="center"> 180.</td>
 <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Frontend-Projects/responsive%20navbar"> Responsive navbar</a></td>
+
+<tr align="center">	
 <td align="center"> 181.</td>
 <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/ML%20Projects/BMI%20CALCULATOR"> BMI CALCULATOR FILE</a></td>
 <td align="center"> 182.</td>
 <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/ML%20Projects/MATRIX%20CALCULATOR"> Matrix Calculator File</a></td>
-</tr>
-
-<tr align="center">
 <td align="center"> 183.</td>
 <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/ML%20Projects/EMI%20CALCULATOR"> EMI CALCULATOR FILE</a></td>
 <td align="center"> 184.</td>
 <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Frontend-Projects/game-survey%20form"> Gaming site</a></td>
+</tr>
+	
+<tr align="center">
 <td align="center"> 185.</td>
 <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/blob/main/Python%20Projects/Blackjack.py"> Blackjack python game</a></td>
 <td align="center"> 186.</td>
 <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Js-Projects/Converters"> Millimeter conversion</a></td>
 <td align="center"> 187.</td>
 <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Node-JS%20Projects/Tech-News%20API"> Tech-News API</a></td>
-</tr>
-
 <td align="center"> 188.</td>
 <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Js-Games/whack%20a%20mole%20game">  whack a mole game </a></td>
+</tr>
+	
+<tr align="center">
 <td align="center"> 189.</td>
 <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Js-Games/ballon%20splash%20game">  balloon splash game </a></td>
 <td align="center"> 190.</td>
@@ -591,6 +595,7 @@ Happy Coding! -->
 <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/React-JS%20Projects/Weather_App">  weather app </a></td>
 </tr>
 
+<tr align="center">
 <td align="center"> 193.</td>
 <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/7f1498861aa9a1e7e7da64c543711d1301547476/Js-Projects/age-calculator">  age calculator </a></td>
 <td align="center"> 194.</td>
@@ -599,36 +604,42 @@ Happy Coding! -->
 <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/341722375da9adc17134fdf8e21c8c83ba179be2/React-JS%20Projects/realestate-app">  Real Estate </a></td>
 <td align="center"> 196.</td>
 <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/122df5f779e1c75ba5cce92bfe071f9df9ffb52d/Frontend-Projects/Password%20Validator">  password validator </a></td>
-<td align="center"> 197.</td>
-<td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/5429911f3f3e915afdc761f95cde0a445a64f171/Frontend-Projects/Student%20enrollment%20form"> student enrollment </a></td>
 </tr>
 
+<tr align="center">
+<td align="center"> 197.</td>
+<td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/5429911f3f3e915afdc761f95cde0a445a64f171/Frontend-Projects/Student%20enrollment%20form"> student enrollment </a></td>
 <td align="center"> 198.</td>
 <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/0359d70abe7d09774bccb77f27b21a655788aed7/React-JS%20Projects/Mars-Rover"> Mars Rover </a></td>
 <td align="center"> 199.</td>
 <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/6605164a36c00589d2f3e9599ab92d85f9d5252e/Animations-CSS/Solar-System"> Solar System </a></td>
 <td align="center"> 200.</td>
 <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/08a7c8ae2052c8e243ac1c3c845d5ca72d8d6476/Frontend-Projects/TV%20Show%20Search%20WebApp"> TV SHOW </a></td>
+</tr>
+
+<tr align="center">
 <td align="center"> 201.</td>
 <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Js-Games/dicegame"> Dice Game </a></td>
 <td align="center"> 202.</td>
 <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/React-JS%20Projects/Music_App/my-app"> Music Player App </a></td>
-</tr>
-
 <td align="center"> 203.</td>
 <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Frontend-Projects/registration%20form"> Breaking Bad </a></td>
 <td align="center"> 204.</td>
 <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Js-Projects/Digital_Clock"> Digital Clock </a></td>
+</tr>
+	
+<tr align="center">
 <td align="center"> 205.</td>
 <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Js-Projects/AdBlocker"> Ad blocker </a></td>
 <td align="center"> 206.</td>
 <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Frontend-Projects/Prefix%20Postfix%20Calculator"> Prefix Postfix Calculator </a></td>
 <td align="center"> 207.</td>
 <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Frontend-Projects/Dinosaur%20game"> Dinosaur Game </a></td>
-</tr>
-
 <td align="center"> 208.</td>
 <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Frontend-Projects/Registration%20Form%20for%20Driving%20License"> Registration Form for Driver's License </a></td>
+</tr>
+	
+<tr align="center">
 <td align="center"> 209.</td>
 <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/ML%20Projects/Pose%20Classification"> Real-Time 3D Pose Classifier </a></td>
 <td align="center"> 210.</td>
@@ -639,6 +650,7 @@ Happy Coding! -->
 <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Animations-CSS/Curved%20Carousel"> Curved Carousel </a></td>
 </tr>
 
+<tr align="center">
 <td align="center"> 213.</td>
 <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/blob/main/Python%20Projects/dice_sim.py"> Dice Simulator </a></td>
 <td align="center"> 214.</td>
@@ -647,70 +659,95 @@ Happy Coding! -->
 <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Python%20Projects/Random%20Story%20Generator"> Random Story Generator </a></td>
 <td align="center"> 216.</td>
 <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Frontend-Projects/Jwellery%20website%20landing%20page"> Jewellery Website Landing Page </a></td>
+</tr>
+	
+<tr align="center">
 <td align="center"> 217.</td>
 <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/MERN/Exercise%20Tracker"> Exercise Tracker </a></td>
-</tr>
-
 <td align="center"> 218.</td>
 <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Js-Projects/Resume-Builder"> Resume Builder </a></td>
 <td align="center"> 219.</td>
 <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Frontend-Projects/Durga-puja"> Durga Puja Webpage </a></td>
 <td align="center"> 220.</td>
 <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Random%20Quote%20generator"> Random Quote Generator </a></td>
+</tr>
+
+<tr align="center">
 <td align="center"> 221.</td>
 <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Js-Projects/Neon%20number"> Neon Number Checker </a></td>
 <td align="center"> 222.</td>
 <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Python%20Projects/Timer"> Timer </a></td>
-</tr>
-
 <td align="center"> 223.</td>
 <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Frontend-Projects/Electronic%20Gadget"> Electronic Gadget </a></td>
 <td align="center"> 224.</td>
 <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/ML%20Projects/Analysis%20of%20Fashion_dataset"> Analysis_ of Fashion dataset </a></td>
+</tr>
+
+<tr align="center">
 <td align="center"> 225.</td>
-
 <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks-GSSOC/main/React-JS%20Projects/Restaurant-website"> Restaurant Website </a> </td>
-
-<td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/ML%20Projects/Analysis%20of%20Fashion_dataset"> Amazing Snake Game </a></td>
 <td align="center"> 226.</td>
 <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Animations-CSS/3D%20rotating%20cube"> 3D Rotating Cube </a></td>
 <td align="center"> 227.</td>
 <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/ReactJS%20Typescript%20Projects/typescript_todo"> Typescript React Todos </a></td>
-
-</tr>
-
-<tr align="center">
 <td align="center"> 228.</td>
 <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Frontend-Projects/FIght%20Game"> Fight Game </a></td>
 </tr>
+	
 <tr align="center">
 <td align="center"> 229.</td>
+<td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Python%20Projects/Hangman-advanced"> Hangman-Advanced </a></td>	
+<td align="center"> 228.</td>
+<td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Frontend-Projects/FIght%20Game"> Fight Game </a></td>
+<td align="center"> 229.</td>
 <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Node-JS%20Projects/Secrets"> Secrets </a></td>
+<td align="center"> 230.</td>
+<td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/ReactJS%20Typescript%20Projects/Plankman"> Plankman </a></td>
 </tr>
+
+<tr align="center">
+<td align="center"> 231.</td>
+<td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/ML%20Projects/Analysis%20of%20Fashion_dataset"> Amazing Snake Game </a></td>
+<td align="center"> 232</td>
+<td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Js-Projects/Colovaria"> Colovaria </a></td>
+</tr>
+
 </table>
 Node-JS Projects\Secrets
 ## How to contribute:
 
-- Drop a :star: on the Github repository (optional)<br/>
+-   Drop a :star: on the Github repository (optional)<br/>
 
-- Create an issue of the project or a feature you would like to add in the project and get the task assigned for youself. (issue can be any feature or project that you think you could contribute to).
+-   Create an issue of the project or a feature you would like to add in the project and get the task assigned for youself. (issue can be any feature or project that you think you could contribute to).
 
-- Fork the repo to your Github.<br/>
+-   Fork the repo to your Github.<br/>
 
-- Clone the Repo by going to your local Git Client in a particular local folder in your local machine by using this command with your forked repository link in place of below given link: <br/>
-  `git clone https://github.com/pranjay-poddar/Dev-Geeks`
-- Create a branch using below command.
-  `git branch <your branch name>`
-- Checkout to your branch.
-  `git checkout <your branch name>`
-- Add your code in your local machine folder.
-  `git add . `
-- Commit your changes.
-  `git commit -m"<add your message here>"`
-- Push your changes.
-  `git push --set-upstream origin <your branch name>`
-- Add your project name with the link in the readme in the desired format.
-- Make a pull request! (compare your branch with the owner main branch)
+-   Clone the Repo by going to your local Git Client in a particular local folder in your local machine by using this command with your forked repository link in place of below given link: <br/>
+    ```
+    git clone https://github.com/pranjay-poddar/Dev-Geeks
+    ```
+-   Create a branch using below command.
+    ```
+    git branch <your branch name>
+    ```
+-   Checkout to your branch.
+    ```
+    git checkout <your branch name>
+    ```
+-   Add your code in your local machine folder.
+    ```
+    git add .
+    ```
+-   Commit your changes.
+    ```
+    git commit -m"<add your message here>"
+    ```
+-   Push your changes.
+    ```
+    git push --set-upstream origin <your branch name>
+    ```
+-   Add your project name with the link in the readme in the desired format.
+-   Make a pull request! (compare your branch with the owner main branch)
 
 <br>
 <h1 align="center">
