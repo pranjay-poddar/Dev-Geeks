@@ -40,6 +40,7 @@ a {
 ul,
 li {
     list-style: none;
+    margin-left:-2%
 }
 
 h2,
@@ -75,16 +76,25 @@ h3 {
 
 .nav {
     padding: 1.6rem 0;
+    background-color:rgb(106, 10, 106);
+    color:white
+}
+a:hover{
+    background-color:rgb(206, 202, 206);
+    border-radius:13%;
+    height:-12%;
+    margin-top:5%;
+    color:rgb(106, 10, 106);
 }
 
 .logo h1 {
     font-size: 4rem;
 }
 
-.cart svg {
+/* .cart svg {
     width: 3rem;
     height: 3rem;
-}
+} */
 
 .hamburger {
     display: none;
@@ -102,15 +112,18 @@ h3 {
 
 .nav__menu {
     width: 50%;
+    color:white
 }
 
 .nav__list {
     display: flex;
     width: 70%;
+    color:white
 }
 
 .nav__item:last-child {
     margin-right: .5rem;
+    color:white
 }
 
 .button {
@@ -119,10 +132,14 @@ h3 {
     font-weight: 500;
 }
 
+
 .nav__link:link,
 .nav__link:visited {
-    color: var(--dark-color);
-    padding: 1rem;
+    /* color: var(--dark-color); */
+    padding: 2rem;
+    color:white;
+    font-size:160%;
+    margin-left:60%;
 }
 
 .cart {
@@ -151,7 +168,7 @@ h3 {
 
     .nav__item {
         width: 100%;
-        margin: 1rem 0;
+        margin: 0.5rem 0;
     }
 
     .nav__item:last-child {
