@@ -1,5 +1,5 @@
 <p> Calculator Dark Theme </p>
-<img src="Python Projects/Theme_Support_Calculator/Images/Calc_dark.png">
+![Calc_dark](https://github.com/LakshmanGamers/Dev-Geeks/assets/76223461/8091571c-cf06-4ce5-a113-cc735531cabc)
 
 <p> Calculator Light Theme </p>
-<img src="Python Projects/Theme_Support_Calculator/Images/calc_light.png">
+![calc_light](https://github.com/LakshmanGamers/Dev-Geeks/assets/76223461/da111c8c-7673-47b0-b7f7-9ca07cbc46b4)
