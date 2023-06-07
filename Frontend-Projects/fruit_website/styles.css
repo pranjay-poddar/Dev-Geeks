@@ -40,7 +40,7 @@ a {
 ul,
 li {
     list-style: none;
-    margin-left:-2%
+    padding: 5px;
 }
 
 h2,
@@ -139,7 +139,6 @@ a:hover{
     padding: 2rem;
     color:white;
     font-size:160%;
-    margin-left:60%;
 }
 
 .cart {
