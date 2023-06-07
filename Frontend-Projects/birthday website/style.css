@@ -32,14 +32,14 @@ div {
   font-family: "Times New Roman", Times, serif;
 }
 .my-button {
-  background-color:#FF597B; /* Set the background color */
-  color: #ffffff; /* Set the text color */
-  border: none; /* Remove default border */
-  padding: 10px 20px; /* Adjust the padding */
-  border-radius: 5px; /* Add rounded corners */
-  font-size: 16px; /* Adjust the font size */
-  cursor: pointer; /* Show pointer on hover */
-  transition: background-color 0.3s ease; /* Add smooth transition */
+  background-color:#FF597B;
+  color: #ffffff; 
+  border: none; 
+  padding: 10px 20px; 
+  border-radius: 5px; 
+  font-size: 16px; 
+  cursor: pointer; 
+  transition: background-color 0.3s ease; /*to add smooth transition
 }
 
 .my-button:hover {
