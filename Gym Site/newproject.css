@@ -1,0 +1,95 @@
+
+body, html{
+    height: 100%;
+    background-color: #000000;
+}
+*{
+    box-sizing: border-box;
+}
+.bg-image{
+    background-image: url(pic_3.jpg);
+
+    filter: blur(8px);
+    -webkit-filter: blur(8px);
+
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.bg-text{
+    background-color: rgb(0,0,0);
+    background-color:rgba(0,0,0, 0.4) ;
+    color: white;
+    font-weight: bold;
+    border: 3px solid #f1f1f1;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    width: 80%;
+    padding: 20px;
+    text-align: center;
+}
+.topnav{
+    size: 25px;
+    background-color: #000000;
+}
+.topnav a{
+    text-align: center;
+    padding: 20px 25px;
+    color: #ffffff;
+    font-size: 20px;
+
+}
+.topnav a:hover{
+    color: rgba(13, 157, 197, 0);
+    background: 
+      linear-gradient(90deg,#1095c1 50%,rgb(21, 172, 214) 0) 
+      var(--_p,100%)/200% no-repeat;
+    -webkit-background-clip: text;
+            background-clip: text;
+    transition: .4s;
+}
+.div1{
+    position: relative;
+    bottom: 250px;
+    
+}
+.para1{
+    text-align: center;
+     color: #fff;
+     font-size: medium;
+    text-shadow:
+      0 0 5px #1b83c8,
+      0 0 10px #1b83c8,
+      0 0 20px #1b83c8,
+      0 0 40px #0051ff,
+      0 0 80px #0051ff,
+      0 0 90px #0051ff,
+      0 0 100px #0051ff,
+      0 0 150px #0051ff;   
+}
+.fig1{
+    padding-bottom: 80px;
+}
+
+img{
+    display: inline;
+}
+
+p .para2{
+    display: inline;
+    position: absolute;
+    left: 30%;
+}
+
+.pic_bell{
+    display: inline-block;
+    height: 200px;
+    width: 250px;
+    margin-left: 12%;
+    margin-bottom: 3%;
+}
