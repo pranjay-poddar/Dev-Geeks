@@ -1,0 +1,108 @@
+<html>
+<head>
+<title>Login Page</title>
+<link rel="stylesheet" href="./assets/css/login.css">
+</head>
+
+<body>
+  
+<div id="login-box">
+  <div class="left">
+    <h1 id='status' style="text-align: center">Login</h1>
+  
+    <input type="text" id="username" name="username" placeholder="UserName" autocomplete="off"/>
+    <input type="text" id="email" name="email" placeholder="E-mail" autocomplete="off"/>
+    <input type="password" id="password" name="password" placeholder="Password" autocomplete="off"/>
+    <input type="submit" id='sighUp' name="signup_submit" value="Sign up" />
+    
+   
+  </div>
+  
+  
+</div>
+</body>
+
+<script type="module">
+  // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/9.21.0/firebase-app.js";
+  import { getDatabase, set, ref,update} from "https://www.gstatic.com/firebasejs/9.21.0/firebase-database.js";
+  import { getAuth, createUserWithEmailAndPassword , signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/9.21.0/firebase-auth.js";
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
+
+  // Your web app's Firebase configuration
+  const firebaseConfig = {
+    apiKey: "AIzaSyCdqZWNbLE2blkimCu-1bEYCNP-MBZCXCI",
+    authDomain: "glamfit-d724b.firebaseapp.com",
+    databaseURL: "https://glamfit-d724b-default-rtdb.firebaseio.com",
+    projectId: "glamfit-d724b",
+    storageBucket: "glamfit-d724b.appspot.com",
+    messagingSenderId: "898120410759",
+    appId: "1:898120410759:web:79790a312556bf6b88ba22"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  const database=getDatabase(app);
+  const auth = getAuth();
+  
+  
+  sighUp.addEventListener('click',(e) =>{
+    var username=document.getElementById('username').value;
+    var email=document.getElementById('email').value;
+    var password=document.getElementById('password').value;
+    createUserWithEmailAndPassword(auth, email, password)
+     .then((userCredential) => {
+    // Signed in 
+    const user = userCredential.user;
+    set(ref(database, 'users/' + user.uid),{
+      username: username,
+      email: email
+      
+    })
+    alert('user created! Now Login');
+   
+    
+    // ... 
+    })
+  .catch((error) => {
+    const errorCode = error.code;
+    const errorMessage = error.message;
+    // ..
+    alert(errorMessage);
+    });
+    sighUp.addEventListener('click',(e)=>{
+    
+    var email=document.getElementById('email').value;
+    var password=document.getElementById('password').value;
+     signInWithEmailAndPassword(auth, email, password)
+       .then((userCredential) => {
+       
+    // Signed in 
+      const user = userCredential.user;
+
+      const dt=new Date();
+        update(ref(database, 'users/' + user.uid),{
+        last_login:dt,
+    
+    
+  })
+   
+  window.location.href = 'index.html'; 
+})
+  .catch((error) => {
+    const errorCode = error.code;
+    const errorMessage = error.message;
+    alert(errorMessage);
+  });
+  });
+  const user = auth.currentUser;
+  
+
+  });
+  
+
+
+</script>
+
+</html>

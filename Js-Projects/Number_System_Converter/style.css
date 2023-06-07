@@ -1,0 +1,43 @@
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.block{
+    width: 80%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    justify-content: center;
+    border: 2px solid black;
+    display: block;
+    padding: 2rem;
+}
+
+.Brand{
+    padding: 20px;
+}
+.base{
+    margin:1rem;
+}
+
+.argument{
+    margin: 1rem;
+}
+
+.calculate{
+    margin-right: 10px;
+}
+
+.Buttons{
+    display: flex;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+@media screen and (max-width: 400px) {
+    .block {
+      width: 80%;
+      margin: 20px;
+    }
+  }
