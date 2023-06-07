@@ -1,4 +1,4 @@
-# Realtime-Sign-Language-System
+## Realtime-Sign-Language-System
 ![243702697-56d1b1cf-431d-4276-804b-0b993fac8517](https://github.com/Ashutosh0120/Dev-Geeks/assets/24804042/ae5096bd-c643-4676-997d-e64529abb1c3)
 
 Technologies: 
@@ -9,7 +9,7 @@ Technologies:
 
 Key Features:
 
-1) Task: Developed a model using Tensorflow and Python, which can
+1) This model using Tensorflow and Python, which can
 extract real-time video sequences, using OpenCV for Face and
 Sign Matching. <br>
 2) Action: This model can ease the method of communication, for those
