@@ -115,7 +115,7 @@ def ins(ele):
     db.delete(0, END)
     db.insert(0, s + ele)
 def edit():
-    #Editing the Expression
+    #Deleting the last number in the expression
     s = db.get()
     s=s[:len(s)-1]
     db.delete(0, END)
