@@ -1,6 +1,6 @@
 body {
   background-color: #FFAAC9;
-  background-image: url();
+  background-image: url("background.jpg");
 }
 h1 {
   text-decoration:wavy;
@@ -13,7 +13,6 @@ h1 {
 p {
   font-size: 20px;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-  text-align:
 }
 img {
   height: 300px;
@@ -149,11 +148,11 @@ body {
 .bottom-text{
   font-size: 5rem;
   margin-left: 10rem;
-
+  color:#333
 }
 .birthday-text{
-  margin-bottom: 20rem;
-  font-size: 5rem;
-  color:#FB2576
+  margin-bottom: 2rem;
+  font-size: 6rem; 
+  font-weight: 500;
 }
 
