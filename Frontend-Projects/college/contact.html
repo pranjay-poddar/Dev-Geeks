@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>University website</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+</head>
+<body>
+<section class="sub-header">
+<nav>
+<a href="index.html"><img src="images/logo.png"> </a>
+<div class="nav-links" id="navLinks">
+<i class="fas fa-times" onclick="hideMenu()"></i>
+<ul>
+<li><a href="index.html">HOME</a> </li>
+<li><a href="About.html">ABOUT</a> </li>
+<li><a href="Course.html">COURSE</a> </li>
+<li><a href="Blog.html">BLOG</a> </li>
+<li><a href="contact.html">CONTACT</a> </li>
+</ul>
+</div>
+<i class="fas fa-bars" onclick="showMenu()"></i>
+</nav>
+
+<h1>Contact Us</h1>
+</section>
+
+
+
+<!-------Contact Us---------->
+
+<section class="location">
+
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.041079784065!2d79.15116999678953!3d12.96922320000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bad479f0ccbe067%3A0xfef222e5f36ecdeb!2sVellore%20Institute%20of%20Technology!5e0!3m2!1sen!2sin!4v1684587009866!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+</section>
+
+<section class="contact-us">
+
+<div class="row">
+<div class="contact-col">
+<div>
+<i class="fa-solid fa-house-chimney"></i>
+<span>
+<h5>Vit University Campus Road, Vellore, Tamil Nadu 632014 ·</h5>
+<p>Vellore, Tamil Nadu</p>
+</span>
+</div>
+<div>
+<i class="fa-solid fa-phone"></i>
+<span>
+<h5>044 3993 1555</h5>
+<p>Monday to Saturday , 10AM to  6PM</p>
+</span>
+</div>
+<div>
+<i class="fa-solid fa-envelope"></i>
+<span>
+<h5>ugadmission@vit.ac.in</h5>
+<p>UG admisssion query</p>
+</span>
+</div>
+</div>
+
+<div class="contact-col">
+<form action="form-handler.php" method="post">
+<input type="text" name="name" placeholder="Enter your name" required>
+<input type="email" name="email" placeholder="Enter your email" required>
+<input type="text" name="subject" placeholder="Enter your subject" required>
+<textarea rows="8" name="Message" placeholder="Message" required></textarea>
+<button type="submit" class="hero-btn red-btn" href="mailto:aayushiojha13@gmail.com">Send Message</button>
+</form>
+</div>
+
+
+</section>
+
+
+<!----------Footer---------------->
+
+<section class="footer">
+<h4>About Us</h4>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum assumenda officia animi tempore <br> Lorem ipsum dolor sit amet.</p>
+<div class="icons">
+<i class="fa-brands fa-facebook"></i>
+<i class="fa-brands fa-twitter"></i>
+<i class="fa-brands fa-instagram"></i>
+<i class="fa-brands fa-linkedin"></i>
+
+</div>
+
+</section>
+
+
+
+<script>
+var navLinks= document.getElementById("navLinks");
+function showMenu(){
+    navLinks.style.right="0";
+}
+
+function hideMenu(){
+    navLinks.style.right="-200px";
+}
+
+</script>
+    
+</body>
+</html>
