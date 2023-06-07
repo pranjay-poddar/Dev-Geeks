@@ -2,7 +2,7 @@
 
 :root{
     --main-color:#d3ad7f;
-    --black:#13131a;
+    --black:--black;
     --bg:#010103;
     --border:.1rem solid rgba(255,255,255,.3);
 }
