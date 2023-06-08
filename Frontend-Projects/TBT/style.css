@@ -1,3 +1,7 @@
+/* CSS styles for the home page */
+
+/* Reset default styles */
+
 *{
     margin: 0;
     padding: 0;
@@ -5,6 +9,17 @@
     font-family: sans-serif;
 }
 
+
+body, h1, h2, h3, p, ul, li, blockquote, input, textarea, button {
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+  }
 .main{
     width: 100%;
     height: 100vh;
@@ -17,7 +32,7 @@
 }
 
 nav{
-    padding: 30px 20%;
+    padding: 20px 5%;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -29,8 +44,8 @@ nav{
 
 nav .logo{
     border-radius: 5px;
-    width: 60px;
-    height: 60px;
+    width: 45px;
+    height: 45px;
     background: scroll;
     background-color: beige;
 }
@@ -49,7 +64,7 @@ nav ul li{
 }
 
 nav ul li:hover{
-    -webkit-text-stroke: 1.5px rgb(0, 0, 0);
+    -webkit-text-stroke: 1px rgb(0, 0, 0);
     color:transparent ;
 }
 
@@ -84,26 +99,24 @@ nav ul li a:hover{
     color:transparent ;
     
 }
-
+.content h2{
+    font-size: 20px;
+    color: white;
+    margin-bottom: 40px;
+}
 .content a{
-    text-decoration: none;
     display: inline-block;
-    color: rgb(255, 255, 255);
-    font-size: 30px;
-    border: 2px solid rgb(252, 252, 252);
-    padding: 2px 40px;
-    border-radius: 50px;
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
     
 }
 
 .content a:hover{
-    text-decoration: none;
-    display: inline-block;
-    color: rgb(4, 4, 4);
-    font-size: 40px;
-    border: 4px solid rgb(0, 0, 0);
-    padding: 2px 40px;
-    border-radius: 40px;
+    background-color: #555;
     
 }
 
@@ -127,3 +140,471 @@ nav ul li a:hover{
     }
     
 }
+
+/* CSS styles for the destination section */
+
+#destinations {
+    padding: 50px 0;
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    animation: colorAnimation 5s infinite alternate;
+  }
+  
+  
+  @keyframes colorAnimation {
+    0% {
+      background-color: #ffcccc;
+    }
+    25% {
+      background-color: #ffd9b3;
+    }
+    50% {
+      background-color: #ffe6b3;
+    }
+    75% {
+      background-color: #fff2b3;
+    }
+    100% {
+      background-color: #ffffb3;
+    }
+  }
+  
+  
+  #destinations h2 {
+    font-size: 36px;
+    margin-bottom: 40px;
+    color: #333;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: bold;
+    
+  }
+  
+  .destination-card {
+    margin-bottom: 40px;
+    background-color: #fff;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    position: relative;
+    transition: transform 0.3s ease;
+  }
+  
+  .destination-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .destination-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.3;
+    background-image: linear-gradient(135deg, #FF8C00 0%, #FFCD00 100%);
+    z-index: -1;
+  }
+  
+  .destination-card img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    display: block;
+    border-radius: 4px 4px 0 0;
+  }
+  
+  .destination-card h3 {
+    font-size: 24px;
+    margin: 20px 0;
+    text-align: center;
+  }
+  
+  .destination-card p {
+    font-size: 16px;
+    margin: 0 20px 20px;
+  }
+  
+  @keyframes destination-card-animation {
+    0% {
+      opacity: 0;
+      transform: translateY(50px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .destination-card:nth-child(1) {
+    animation: destination-card-animation 0.5s ease-in-out;
+  }
+  
+  .destination-card:nth-child(2) {
+    animation: destination-card-animation 0.5s ease-in-out 0.2s;
+  }
+  
+  .destination-card:nth-child(3) {
+    animation: destination-card-animation 0.5s ease-in-out 0.4s;
+  }
+  
+  @media (min-width: 768px) {
+    .destination-card {
+      display: inline-block;
+      width: calc(25% - 40px);
+      margin: 20px;
+      vertical-align: top;
+      text-align: left;
+    }
+  }
+  
+
+  
+  /* CSS styles for the activities section */
+  #activities {
+    background-color: #f1f1f1;
+    padding: 50px 0;
+  }
+  
+  .container {
+    max-width: 960px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  h2 {
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 30px;
+  }
+  
+  .activity-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  .activity-list li {
+    position: relative;
+    margin: 20px;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+  
+  .activity-list li:hover {
+    transform: scale(1.1);
+  }
+  
+  .activity-list li img {
+    max-width: 200px;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  .activity-list li span {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+  }
+  
+  @media (max-width: 768px) {
+    .activity-list li {
+      margin: 10px;
+    }
+  }
+  
+/* CSS styles for the accommodations section */
+
+#accommodations {
+    padding: 80px 0;
+    background-color: #fdaeae;
+    text-align: center;
+  }
+  
+  #accommodations h2 {
+    font-size: 36px;
+    margin-bottom: 40px;
+    color: #333;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: bold;
+  }
+  
+  .accommodation-card {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 40px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+  }
+  
+  .accommodation-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .accommodation-card img {
+    width: 300px;
+    height: auto;
+    margin-right: 20px;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+  }
+  
+  .accommodation-card:hover img {
+    transform: scale(1.05);
+  }
+  
+  .accommodation-card h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #333;
+  }
+  
+  .accommodation-card p {
+    font-size: 16px;
+    margin-bottom: 0;
+    color: #666;
+  }
+  
+  /* Different Background and Animation */
+  
+  #accommodations {
+    background-color: #fdaeae;
+  }
+  
+  .accommodation-card {
+    background-color: #f9f7c7;
+  }
+  
+  .accommodation-card:hover {
+    transform: rotate(-2deg) scale(1.05);
+  }
+  
+  /* Animations */
+  
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  .accommodation-card {
+    animation: fadeIn 1s ease;
+  }
+  
+  /* Responsive Styles */
+  
+  @media (max-width: 768px) {
+    #accommodations h2 {
+      font-size: 24px;
+      margin-bottom: 30px;
+    }
+  
+    .accommodation-card {
+      padding: 15px;
+    }
+  
+    .accommodation-card h3 {
+      font-size: 20px;
+      margin-bottom: 8px;
+    }
+  
+    .accommodation-card p {
+      font-size: 14px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    #accommodations h2 {
+      font-size: 20px;
+      margin-bottom: 20px;
+    }
+  
+    .accommodation-card {
+      flex-direction: column;
+      align-items: center;
+      padding: 10px;
+    }
+  
+    .accommodation-card img {
+      margin-right: 0;
+      margin-bottom: 10px;
+    }
+  
+    .accommodation-card h3 {
+      font-size: 18px;
+      margin-bottom: 6px;
+    }
+  
+    .accommodation-card p {
+      font-size: 12px;
+    }
+  }
+  
+  
+  /* CSS styles for the testimonials section */
+
+#testimonials {
+    padding: 80px 0;
+    background-color: #f6fdc7;
+    text-align: center;
+  }
+  
+  #testimonials h2 {
+    font-size: 36px;
+    margin-bottom: 40px;
+    color: #333;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: bold;
+  }
+  
+  .testimonial {
+    position: relative;
+    display: inline-block;
+    max-width: 400px;
+    margin: 0 20px;
+    padding: 40px;
+    background-color: #c5f4f1;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+  }
+  
+  .testimonial:hover {
+    transform: translateY(-10px);
+  }
+  
+  .testimonial img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto 20px;
+    border-radius: 50%;
+  }
+  
+  .testimonial blockquote {
+    margin: 0;
+  }
+  
+  .testimonial p {
+    font-size: 16px;
+    margin-bottom: 20px;
+    line-height: 1.6;
+  }
+  
+  .testimonial cite {
+    font-size: 14px;
+    color: #777;
+  }
+  
+  @media (max-width: 768px) {
+    .testimonial {
+      display: block;
+      margin: 0 auto 40px;
+    }
+  }
+  
+
+
+
+
+
+
+/* CSS styles for the contact section */
+
+#contact {
+    padding: 80px 0;
+    background-color: #f2a7a7;
+    text-align: center;
+  }
+  
+  #contact h2 {
+    font-size: 36px;
+    margin-bottom: 40px;
+    color: #333;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: bold;
+  }
+  
+  #contact p {
+    font-size: 16px;
+    margin-bottom: 40px;
+    color: #666;
+  }
+  
+  form {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  input,
+  textarea {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  textarea {
+    resize: vertical;
+  }
+  
+  input:focus,
+  textarea:focus {
+    transform: scale(1.02);
+  }
+  
+  .btn {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: #333;
+    color: #fff;
+    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn:hover {
+    background-color: #555;
+    transform: translateY(-2px);
+  }
+  
+
+  /* CSS styles for the footer */
+  
+  footer {
+    padding: 20px 0;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+  }
+  
+  footer p {
+    font-size: 14px;
+    margin: 0;
+  }
+  
