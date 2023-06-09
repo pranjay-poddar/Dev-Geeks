@@ -2,7 +2,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
@@ -14,6 +13,77 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-
+  flex-direction: column;
+  gap: 25px;
   min-height: 100vh;
+}
+
+/* Default styles */
+.product {
+  background-color: #f1f1f1;
+  color: #000000;
+}
+
+.product .button {
+  background-color: #3498db;
+  color: #ffffff;
+}
+
+.product .button:hover {
+  background-color: #2980b9;
+}
+
+/* Dark mode styles */
+body.dark-mode {
+  background-color: #1a1a1a;
+  color: #ffffff;
+}
+
+body.dark-mode .product {
+  background-color: #333333;
+  color: #ffffff;
+}
+
+.dark-mode-toggle {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+
+.dark-mode-toggle .slider {
+  width: 50px;
+  height: 25px;
+  background-color: #ccc;
+  border-radius: 25px;
+  position: relative;
+  transition: background-color 0.2s;
+}
+
+.dark-mode-toggle .slider:before {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #fff;
+  top: 50%;
+  transform: translate(2px, -50%);
+  transition: transform 0.2s;
+}
+
+.dark-mode-toggle .slider.on {
+  background-color: #66bb6a;
+}
+
+.dark-mode-toggle .slider.on:before {
+  transform: translate(27px, -50%);
+}
+
+.dark-mode-toggle .slider.off {
+  background-color: #757575;
+}
+
+.dark-mode-toggle .slider.off:before {
+  transform: translate(2px, -50%);
 }
