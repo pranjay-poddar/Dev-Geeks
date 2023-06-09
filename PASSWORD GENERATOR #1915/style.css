@@ -1,0 +1,21 @@
+.container {
+    margin-top: 20px;
+  }
+  
+  label {
+    font-weight: bold;
+  }
+  
+  input[type="number"] {
+    width: 50px;
+  }
+  
+  button {
+    margin-left: 10px;
+  }
+  
+  #password {
+    margin-top: 10px;
+    font-weight: bold;
+  }
+  

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Password Generator</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+  <h1>Password Generator</h1>
+  <div class="container">
+    <label for="length">Password Length:</label>
+    <input type="number" id="length" min="4" max="20">
+    <button onclick="generatePassword()">Generate Password</button>
+    <p id="password"></p>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+.container {
+    margin-top: 20px;
+  }
+  
+  label {
+    font-weight: bold;
+  }
+  
+  input[type="number"] {
+    width: 50px;
+  }
+  
+  button {
+    margin-left: 10px;
+  }
+  
+  #password {
+    margin-top: 10px;
+    font-weight: bold;
+  }
