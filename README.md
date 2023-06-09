@@ -716,14 +716,12 @@ Happy Coding! -->
 <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Js-Projects/Colovaria"> Colovaria </a></td>
 <td align="center">235.</td>
 <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Node-JS%20Projects/Blog_website">Blog Website</a></td>
+<td align="center">236.</td>
+<td align="center"><a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Java%20Projects/Inventory%20Management%20System"> Inventory Management System </a></td>
 </tr>
 
 </table>
 
-
-
-
-</table>
 ## How to contribute:
 
 -   Drop a :star: on the Github repository (optional)<br/>
