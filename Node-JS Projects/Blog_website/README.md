@@ -25,12 +25,5 @@ To run this website, you need to have the following installed on your computer:
 - Compose Post Page: This page allows users to create new blog posts by filling in the titlea nd content of the post.
 - Contact Page: This page allows users to communicate with the owner.
 - About us Page: This page allows users to know about the owner.
-## Deployment:
-This website is deployed using Cyclic.sh, a cloud-based hosting platform. The deployment process involves the following steps:
-
-1. Create an account on Cyclic.sh.
-2. Connect your Github repository to Cyclic.sh.
-3. Choose the appropriate build settings and configure the deployment settings.
-4. Once the deployment is complete, your website will be accessible through the provided URL.
 ## Conclusion:
 This website is a basic example of a blog site that allows users to create and  read posts. It uses various web technologies such as HTML, CSS, Bootstrap, Node.js, EJS, and MongoDB. It is also deployed using Cyclic.sh, which provides a simple and efficient way to deploy web applications.
