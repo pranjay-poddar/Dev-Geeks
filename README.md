@@ -700,7 +700,6 @@ Happy Coding! -->
 
 <tr align="center">
 <td align="center"> 229.</td>
-<td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Frontend-Projects/FIght%20Game"> Fight Game </a></td>
 <td align="center"> 230.</td>
 <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Python%20Projects/Hangman-advanced"> Hangman-Advanced </a></td>
 <td align="center"> 231.</td>
@@ -714,13 +713,11 @@ Happy Coding! -->
 <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/ML%20Projects/Analysis%20of%20Fashion_dataset"> Amazing Snake Game </a></td>
 <td align="center">234.</td>
 <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Js-Projects/Colovaria"> Colovaria </a></td>
-<td align="center">235.</td>
-<td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Node-JS%20Projects/Blog_website">Blog Website</a></td>
-<td align="center">236.</td>
-<td align="center"><a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Java%20Projects/Inventory%20Management%20System"> Inventory Management System </a></td>
-</tr>
 
+</tr>
 </table>
+
+
 
 ## How to contribute:
 
