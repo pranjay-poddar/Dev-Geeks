@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currency Converter</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Realtime Currency Converter</h1>
+    <div class="container">
+        <!-- unit rate converted and printed -->
+        <div class="rate" id="rate"></div>
+        <div class="currency">
+            <input type="number" id="amount-one" value="1" placeholder="0">
+            <!-- first drop down for currency -->
+            <select id="currency-one">
+                <option value="AED">United Arab Emirates Dirham</option>
+                <option value="ARS">Argentine Peso</option>
+                <option value="AUD">Australian Dollar</option>
+                <option value="BGN">Bulgarian Lev</option>
+                <option value="BRL">Brazilian Real</option>
+                <option value="BSD">Bahamian Dollar</option>
+                <option value="CAD">Canadian Dollar</option>
+                <option value="CHF">Swiss Franc</option>
+                <option value="CLP">Chilean Peso</option>
+                <option value="CNY">Yuan Renminbi</option>
+                <option value="COP">Colombian Peso</option>
+                <option value="CZK">Czech Koruna</option>
+                <option value="DKK">Danish Krone</option>
+                <option value="DOP">Dominican Peso</option>
+                <option value="EGP">Egyptian Pound</option>
+                <option value="EUR">Euro</option>
+                <option value="FJD">Fiji Dollar</option>
+                <option value="GBP">Pound Sterling</option>
+                <option value="GTQ">Quetzal</option>
+                <option value="HKD">Hong Kong Dollar</option>
+                <option value="HRK">Croatian Kuna</option>
+                <option value="HUF">Hungarian Forint</option>
+                <option value="IDR">Indonesian Rupiah</option>
+                <option value="ILS">Israeli New Shekel</option>
+                <option value="INR">Indian Rupee</option>
+                <option value="ISK">Icelandic Króna</option>
+                <option value="JPY">Japanese Yen</option>
+                <!-- default value selected -->
+                <option value="USD" selected>US Dollar</option> 
+                <option value="UYU">Uruguayan Peso</option>
+                <option value="VND">Vietnamese dong</option>
+                <option value="ZAR">South African Rand</option>
+            </select>
+        </div>
+        <br>
+        <div class="currency">
+            <input type="number" id="amount-two"  placeholder="0">
+            <select id="currency-two">
+                <!-- first drop down for currency -->
+                <option value="AED">United Arab Emirates Dirham</option>
+                <option value="ARS">Argentine Peso</option>
+                <option value="AUD">Australian Dollar</option>
+                <option value="BGN">Bulgarian Lev</option>
+                <option value="BRL">Brazilian Real</option>
+                <option value="BSD">Bahamian Dollar</option>
+                <option value="CAD">Canadian Dollar</option>
+                <option value="CHF">Swiss Franc</option>
+                <option value="CLP">Chilean Peso</option>
+                <option value="CNY">Yuan Renminbi</option>
+                <option value="COP">Colombian Peso</option>
+                <option value="CZK">Czech Koruna</option>
+                <option value="DKK">Danish Krone</option>
+                <option value="DOP">Dominican Peso</option>
+                <option value="EGP">Egyptian Pound</option>
+                <option value="EUR">Euro</option>
+                <option value="FJD">Fiji Dollar</option>
+                <option value="GBP">Pound Sterling</option>
+                <option value="GTQ">Quetzal</option>
+                <option value="HKD">Hong Kong Dollar</option>
+                <option value="HRK">Croatian Kuna</option>
+                <option value="HUF">Hungarian Forint</option>
+                <option value="IDR">Indonesian Rupiah</option>
+                <option value="ILS">Israeli New Shekel</option>
+                <!-- default value selected -->
+                <option value="INR" selected>Indian Rupee</option>
+                <option value="ISK">Icelandic Króna</option>
+                <option value="JPY">Japanese Yen</option>
+                <option value="USD">US Dollar</option> 
+                <option value="UYU">Uruguayan Peso</option>
+                <option value="VND">Vietnamese dong</option>
+                <option value="ZAR">South African Rand</option>
+            </select>
+        </div>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>

@@ -15,15 +15,14 @@
   align-items: center;
   text-align: center;
 }
-
 .card{
-  background-color: whitesmoke;
-  width: 40%;
-  height: 20%;
+  width: 45%;
+  height: 30%;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  overflow: hidden;
   border-radius: 25%;
   padding: 2%;
   box-shadow: 10px 10px;
@@ -33,7 +32,7 @@
   display: flex;
   align-items: center;
   height: 580px;
-  font-family: 'Spartan', sans-serif;
+  font-size: xx-large;
 }
 
 .button {
@@ -49,25 +48,60 @@
   height: 200px;
   width: 210px;
   opacity: 1;
-  background-color: #ffffff;
+  background-image: linear-gradient(to right, #141e30, #243b55);
+  color: whitesmoke;
   border: 1px solid rgba(22, 76, 167, 0.6);
 }
   
 .button span {
-  color: #164ca7;
   font-size: 12px;
   font-weight: 500;
   letter-spacing: 0.7px;
 }
+
   
 .button:hover {
   animation: rotate 0.7s ease-in-out both;
+  background-image: radial-gradient( circle farthest-corner at 22.4% 21.7%, rgba(4,189,228,1) 0%, rgba(2,83,185,1) 100.2% );
+
+  color: whitesmoke;
 }
   
 .button:hover span {
   animation: storm 0.7s ease-in-out both;
   animation-delay: 0.06s;
 }
+
+.col1{
+  background-image: linear-gradient(to right top, #051937, #004d7a, #008793, #00bf72, #a8eb12);
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.col2{
+  background-image: linear-gradient(to right, #c6ffdd, #fbd786, #f7797d);
+  font-family: cursive;
+}
+
+.col3{
+  background-image: linear-gradient(-20deg, #00cdac 0%, #8ddad5 100%);
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.footer{
+  background-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding-top: 10px;
+  color: #c6ffdd;
+  font-size:large;
+  padding-bottom: 10px;
+}
+img{
+  height: 50px;
+  width:50px;
+}
+
   
 @keyframes rotate {
   0% {
@@ -105,9 +139,30 @@
   }
 }  
 
+@media only screen and (max-width: 1300px) and (min-width:600px) {
+  .card {
+      width: 80%;
+      height: 45%;
+  }
+  .heading{
+    font-size: x-large;
+    font-family: 'Spartan', sans-serif;
+  }
+}
+
 @media only screen and (max-width: 600px) {
   .card {
       width: 80%;
-      height: 30%;
+      height: 60%;
+  }
+  .heading{
+    font-size: large;
+    font-family: 'Spartan', sans-serif;
+  }
+  .button{
+    height:fit-content;
+    width: fit-content;
+    padding: 10px;
+    margin-bottom: 10%;
   }
 }
