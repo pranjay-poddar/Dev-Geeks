@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Student Page</title>
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    display: flex;
+}
+
+.container {
+  position: absolute;
+  top: 0;
+  right: 0;
+    width: 55%;
+    height: 75vh;
+    margin: 70px 50px 50px 0;;
+    padding: 20px;
+    background-color: #f7f7f7;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    
+}
+
+h2 {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+form div {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 25px;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+input[type="text"],
+select {
+    padding: 15px;
+    border-radius: 3px;
+    border: 1px solid #ddd;
+    width: 100%;
+}
+
+button[type="submit"] {
+    padding: 10px 20px;
+    background-color:#9b1c05;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    margin-top: 40px;
+}
+
+button[type="submit"]:hover {
+    background-color: #006a8c;
+}
+
+#notification {
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 20px;
+    background-color: #9b1c05;
+    color: #fff;
+    display: none;
+    font-size: 1.2rem;
+    text-align: center;
+    width: 100%;
+}
+/* Style the dropdown button */
+.dropbtn {
+  background-color:lightgrey;
+  color: black;
+  padding: 12px;
+  font-size: 25px;
+  border: none;
+  cursor: pointer;
+  margin-top: 5%;
+  position: absolute;
+  left: 0;
+  width:15% ;
+}
+
+
+/* Dropdown button on hover & focus */
+.dropbtn:hover, .dropbtn:focus {
+  background-color:#9b1c05;
+ 
+}
+
+/* Style the dropdown content */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  z-index: 1;
+  left: 0;
+  margin-top: 8.5%;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Style the links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 20px 18px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
+  background-color:rgb(236, 182, 193);
+}
+header {
+  background-color: #9b1c05;
+  color: white;
+  text-align: center;
+  padding: 2px;
+width: 100%;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 25px;
+  height: 50%;
+}
+
+
+
+
+
+
+</style>
+</head>
+<body>
+  
+  <header>
+    
+    <h1 style="text-align: center;">Student Page</h1>
+
+
+  </header>
+  
+  
+	<div class="container">
+		
+		<form action="#" method="post">
+			<div>
+				<label for="studentName">Student Name:</label>
+				<input type="text" id="studentName" name="studentName" required>
+			</div>
+			<div>
+				<label for="rollNo">Roll No:</label>
+				<input type="text" id="rollNo" name="rollNo" required>
+			</div>
+      <div>
+				<label for="add">ADDRESS:</label>
+				<input type="text" id="add" name="add" required>
+			</div>
+<!-- 			
+    <div>
+        <label for="busRouteDropdown"> NO.OF SEATS REQUIRED:</label>
+        <select id="busRouteDropdown" name="busRouteDropdown">
+            
+            <option value=" 1"> 1</option>
+            <option value=" 2"> 2</option>
+            <option value=" 3"> 3</option>
+        </select>
+    </div> -->
+    
+			
+			<div>
+				<button type="submit" id="bookBusBtn">Book a Bus</button>
+			
+      
+    </div>
+   
+		</form>
+  
+	</div>
+	<div id="notification"></div>
+ 
+  
+  <div class="dropdown">
+    <button class="dropbtn"> Account</button>
+    <div class="dropdown-content">
+      <a href="viewreservationnew.html"> VIEW RESERVATION</a>
+      <a href="#">CANCEL RESERVATION</a>
+      <a href="index.html">LOGOUT </a>
+     
+    </div>
+	<script>// Define the student and bus route arrays
+    // Define the student and bus route arrays
+var students = [];
+var busRoutes = [
+  {id: 1, name: ' 1'},
+  {id: 2, name: ' 2'},
+  {id: 3, name: ' 3'}
+];
+
+function submitForm(event) {
+  event.preventDefault(); // Prevent the default form submission behavior
+
+  // Get the student name and roll number from the form
+  var name = document.getElementById('studentName').value;
+  var rollNumber = document.getElementById('rollNo').value;
+
+  // Get the selected bus route from the dropdown
+  var busRouteDropdown = document.getElementById('busRouteDropdown');
+  var busRouteId = busRouteDropdown.options[busRouteDropdown.selectedIndex].value;
+  var busRouteName = busRouteDropdown.options[busRouteDropdown.selectedIndex].text;
+
+  // Check if all fields are filled out
+  if (name && rollNumber && busRouteId) {
+    // Add the student information to the students array
+    students.push({
+      name: name,
+      rollNumber: rollNumber,
+      busRouteId: busRouteId,
+      busRouteName: busRouteName
+    });
+
+    // Display a success message
+    var notification = document.getElementById('notification');
+    notification.innerHTML = 'Bus booked successfully!';
+    notification.style.display = 'block';
+
+    // Reset the form
+    document.getElementById('studentName').value = '';
+    document.getElementById('rollNo').value = '';
+    document.getElementById('add').value = '';
+    busRouteDropdown.selectedIndex = 0;
+
+
+    
+}}
+
+// Function to populate the bus route dropdown
+function populateBusRouteDropdown() {
+  var busRouteDropdown = document.getElementById('busRouteDropdown');
+  busRouteDropdown.innerHTML = '<option value="">NO.OF SEATS</option>';
+  busRoutes.forEach(busRoute => {
+    var option = document.createElement('option');
+    option.value = busRoute.id;
+    option.text = busRoute.name;
+    busRouteDropdown.add(option);
+  });
+}
+
+// Call the populateBusRouteDropdown function on page load
+populateBusRouteDropdown();
+
+// Add a click event listener to the "Book a Bus" button
+var bookBusBtn = document.getElementById('bookBusBtn');
+bookBusBtn.addEventListener('click', function() {
+  submitForm(event);
+  if (students.length > 0) {
+    window.location.href = 'final.html';
+  }
+});
+
+
+
+
+    </script>
+</body>
+</html>
