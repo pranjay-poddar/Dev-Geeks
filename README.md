@@ -713,9 +713,6 @@ Happy Coding! -->
 <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/ML%20Projects/Analysis%20of%20Fashion_dataset"> Amazing Snake Game </a></td>
 <td align="center">234.</td>
 <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Js-Projects/Colovaria"> Colovaria </a></td>
-<td align="center">235.</td>
-<td align="center"> <a href="https://github.com/SoarinSkySagar/Dev-Geeks-GSSoC23/tree/dadjokes/Frontend-Projects/dad-jokes-generator"> Dad Jokes Generator </a></td>
-</tr>
 </table>
 
 
