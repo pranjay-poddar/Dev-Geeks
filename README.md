@@ -2,12 +2,29 @@
 
 <div align="center">
 <br>
-<h2 align="center"> A collection of vibrant frontend projects, mini-projects, components, animations, games and much more!</h2>
+<h2 align="center"> A collection of vibrant <b>frontend</b> projects, <b>mini-projects, components, animations, games</b> and much more!</h2>
 
 <br>
 	<p text-align="center">For More Information log on to <a href="https://devgeeks-os.netlify.app/repository_web_page/" target="_blank">Dev-Geeks</a></p>
 <br>
-<p>The Dev-Geeks repository is a collection of projects. It contains a variety of projects, ranging from web development to machine learning.Each project is designed to help developers learn and improve their skills in a particular area. The projects are written in a variety of languages, including Python, JavaScript, and HTML.The repository also includes tutorials and resources to help developers get started with the projects. The tutorials provide step-by-step instructions on how to set up the projects and how to use them. The resources provide additional information on the topics covered in the projects. The Dev-Geeks repository is a great resource for developers who are looking to learn and improve their skills. It provides a variety of projects that can help developers learn and improve their skills in a particular area. The tutorials and resources provided in the repository make it easy for developers to get started with the projects.</p>
+<p><b>The Dev-Geeks</b> repository is a collection of projects.</p> 
+<br>
+<h2>Description : </h2>
+<div style="text-align: left">
+<ul style="text-align:left">
+<li>It contains a variety of <b>projects</b>, ranging from <b>web development</b> to <b>machine learning</b> .</li>
+<li>Each project is <b>designed</b> to help <b>developers</b> learn and improve their <b>skills</b> in a particular area.</li>
+<li>The projects are   written in a variety of languages,including <b>Python, JS, and HTML</b>.</li>
+ <li>The repository also includes <b>tutorials</b> and <b>resources</b> to help developers get started with the projects.</li>
+ <li> The tutorials provide step-by-step <b>instructions</b> on how to set up the projects and how to use them.</li>
+ <li> The resources provide additional <b>information</b> on the topics covered in the projects. </li>
+ <li><b>The Dev-Geeks</b> repository is a great resource for developers who are looking to learn and improve their skills. </li>
+ <li>It provides a variety of projects that can help <b>developers</b> learn and <b>improve</b> their skills in a particular area. </li>
+ <li>The tutorials and resources provided in the repository make it <b>easy</b> for developers to get started with the projects.</li>
+</ul>
+</div>
+
+<br>
 
 ![forthebadge](https://forthebadge.com/images/badges/uses-brains.svg)
 ![forthebadge](https://forthebadge.com/images/badges/check-it-out.svg)
@@ -30,6 +47,8 @@
             <td><b>🐛 Issues</b></td>
             <td><b>🔔 Open PRs</b></td>
             <td><b>🔕 Close PRs</b></td>
+            <td><b>🔨 Commit activity</b></td>
+            <td><b>⭐ Stars</b></td>            
         </tr>
      </thead>
     <tbody>
@@ -40,9 +59,12 @@
             <td><img alt="Issues" src="https://img.shields.io/github/issues/pranjay-poddar/Dev-Geeks?style=flat&logo=github"/></td>
             <td><img alt="Open Pull Requests" src="https://img.shields.io/github/issues-pr/pranjay-poddar/Dev-Geeks?style=flat&logo=github"/></td>
            <td><img alt="Close Pull Requests" src="https://img.shields.io/github/issues-pr-closed/pranjay-poddar/Dev-Geeks?style=flat&color=critical&logo=github"/></td>
+           <td><img alt="Commit activity" src="https://img.shields.io/github/commit-activity/m/pranjay-poddar/Dev-Geeks"/></td>
+           <td><img alt="Commit activity" src="https://img.shields.io/github/stars/pranjay-poddar/Dev-Geeks?style=social"/></td>
         </tr>
     </tbody>
 </table>
+
 </div>
 <br>
  <p align="center">
@@ -493,11 +515,11 @@ Happy Coding! -->
 <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/.github/workflows">  workflows </a></td>
 <td align="center"> 155.</td>
 <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/ML%20Projects/Youtube-video-downloader"> Youtube-video-downloader </a></td>
-<td align="center"> 156.</td>	
+<td align="center"> 156.</td>
 <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/React-JS%20Projects/responsive-product-component">Reactive-Product-Component</a></td>
 </tr>
-	
-<tr align="center">	
+
+<tr align="center">
 <td align="center"> 157.</td>
 <td align="center"> <a href="https://github.com/sumitkr2000/BMI_Calculator/tree/main/bmi-calculator">BMI Calculator</a></td>
 <td align="center"> 158.</td>
@@ -518,7 +540,7 @@ Happy Coding! -->
 <td align="center"> 164.</td>
 <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Animations-CSS/Countdown_Animation"> Project Countdown Animation</a></td>
 </tr>
-	
+
 <tr align="center">
 <td align="center"> 165.</td>
 <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Frontend-Projects/Hoverboard"> Project Hoverboard</a></td>
@@ -529,7 +551,7 @@ Happy Coding! -->
 <td align="center"> 168.</td>
 <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/ML%20Projects/Compress%20PDF'S"> PDF Compressor</a></td>
 </tr>
-	
+
 <tr align="center">
 <td align="center"> 169.</td>
 <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/ML%20Projects/Plagiarism%20Checker"> Plagiarism checker</a></td>
@@ -552,7 +574,7 @@ Happy Coding! -->
 <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Js-Games/Whack%20A%20Mole"> Whack A Mole</a></td>
 </tr>
 
-<tr align="center">	
+<tr align="center">
 <td align="center"> 177.</td>
 <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/commit/64aad56984f9f194c4ce6c0611a8f6eca2e6bea2"> Apple E-commerce Website</a></td>
 <td align="center"> 178.</td>
@@ -562,7 +584,7 @@ Happy Coding! -->
 <td align="center"> 180.</td>
 <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Frontend-Projects/responsive%20navbar"> Responsive navbar</a></td>
 
-<tr align="center">	
+<tr align="center">
 <td align="center"> 181.</td>
 <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/ML%20Projects/BMI%20CALCULATOR"> BMI CALCULATOR FILE</a></td>
 <td align="center"> 182.</td>
@@ -572,7 +594,7 @@ Happy Coding! -->
 <td align="center"> 184.</td>
 <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Frontend-Projects/game-survey%20form"> Gaming site</a></td>
 </tr>
-	
+
 <tr align="center">
 <td align="center"> 185.</td>
 <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/blob/main/Python%20Projects/Blackjack.py"> Blackjack python game</a></td>
@@ -583,7 +605,7 @@ Happy Coding! -->
 <td align="center"> 188.</td>
 <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Js-Games/whack%20a%20mole%20game">  whack a mole game </a></td>
 </tr>
-	
+
 <tr align="center">
 <td align="center"> 189.</td>
 <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Js-Games/ballon%20splash%20game">  balloon splash game </a></td>
@@ -627,7 +649,7 @@ Happy Coding! -->
 <td align="center"> 204.</td>
 <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Js-Projects/Digital_Clock"> Digital Clock </a></td>
 </tr>
-	
+
 <tr align="center">
 <td align="center"> 205.</td>
 <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Js-Projects/AdBlocker"> Ad blocker </a></td>
@@ -638,7 +660,7 @@ Happy Coding! -->
 <td align="center"> 208.</td>
 <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Frontend-Projects/Registration%20Form%20for%20Driving%20License"> Registration Form for Driver's License </a></td>
 </tr>
-	
+
 <tr align="center">
 <td align="center"> 209.</td>
 <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/ML%20Projects/Pose%20Classification"> Real-Time 3D Pose Classifier </a></td>
@@ -660,7 +682,7 @@ Happy Coding! -->
 <td align="center"> 216.</td>
 <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Frontend-Projects/Jwellery%20website%20landing%20page"> Jewellery Website Landing Page </a></td>
 </tr>
-	
+
 <tr align="center">
 <td align="center"> 217.</td>
 <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/MERN/Exercise%20Tracker"> Exercise Tracker </a></td>
@@ -693,47 +715,35 @@ Happy Coding! -->
 <td align="center"> 226.</td>
 <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Animations-CSS/3D%20rotating%20cube"> 3D Rotating Cube </a></td>
 <td align="center"> 227.</td>
-
 <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Python%20Projects/Text%20Editor"> Text Editor in Python </a></td>
-
+<td align="center"> 228.</td>
 <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/ReactJS%20Typescript%20Projects/typescript_todo"> Typescript React Todos </a></td>
 
 
-
-<td align="center"> 228.</td>
-<td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Frontend-Projects/FIght%20Game"> Fight Game </a></td>
-
-</tr>
-
-
-	
 <tr align="center">
 <td align="center"> 229.</td>
-<td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Python%20Projects/Hangman-advanced"> Hangman-Advanced </a></td>	
-<td align="center"> 228.</td>
-<td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Frontend-Projects/FIght%20Game"> Fight Game </a></td>
-
-</tr>	
-	
-
-</table>
-
-<td align="center"> 229.</td>
-<td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Node-JS%20Projects/Secrets"> Secrets </a></td>
 <td align="center"> 230.</td>
+<td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Python%20Projects/Hangman-advanced"> Hangman-Advanced </a></td>
+<td align="center"> 231.</td>
+<td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Node-JS%20Projects/Secrets"> Secrets </a></td>
+<td align="center"> 232.</td>
 <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/ReactJS%20Typescript%20Projects/Plankman"> Plankman </a></td>
 </tr>
 
 <tr align="center">
-<td align="center"> 231.</td>
+<td align="center"> 233.</td>
 <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/ML%20Projects/Analysis%20of%20Fashion_dataset"> Amazing Snake Game </a></td>
-<td align="center"> 232</td>
+<td align="center">234.</td>
 <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Js-Projects/Colovaria"> Colovaria </a></td>
+	
+<td align="center"> 233</td>
+<td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Js-Games/Pacman"> Pacman Game </a></td>
+
 </tr>
-
-
 </table>
-Node-JS Projects\Secrets
+
+
+
 ## How to contribute:
 
 -   Drop a :star: on the Github repository (optional)<br/>

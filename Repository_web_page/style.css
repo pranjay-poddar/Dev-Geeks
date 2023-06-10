@@ -195,6 +195,11 @@ body {
     width: 80%;
 }
 
+.btn{
+    margin-top: 1rem;
+    width: 70%;
+}
+
 .footer {
     text-align: center;
     background-color: black;
