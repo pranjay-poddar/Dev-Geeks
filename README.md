@@ -691,10 +691,6 @@ Happy Coding! -->
 <td align="center"> 227.</td>
 <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Python%20Projects/Text%20Editor"> Text Editor in Python </a></td>
 <td align="center"> 228.</td>
-
-<td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Frontend-Projects/FIght%20Game"> Fight Game </a></td>
-</tr>
-
 <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/ReactJS%20Typescript%20Projects/typescript_todo"> Typescript React Todos </a></td>
 
 
@@ -717,7 +713,9 @@ Happy Coding! -->
 <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Js-Projects/Colovaria"> Colovaria </a></td>
 <td align="center"> 235</td>
 <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Js-Games/Pacman"> Pacman Game </a></td>
-
+<td align="center"> 236.</td>
+<td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Frontend-Projects/FIght%20Game"> Fight Game </a></td>
+</tr>
 </tr>
 
 </table>
