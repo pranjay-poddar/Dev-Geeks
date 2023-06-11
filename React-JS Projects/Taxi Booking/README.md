@@ -30,3 +30,21 @@ You may also see any lint errors in the console.
 
 #### This code cheks the validity of the Date and Time. If the date is a past date then booking is prohibited if it is a past time even then booking is prohibited.
 
+
+### Here are some of the sample Screen shots of the project
+
+![image](https://github.com/Harikaraja/sample/assets/80022302/b79501e4-ee69-4086-9d89-966dc7587da0)
+
+### When Your Taxi is Booked successfully then the sucess message is shown as below
+
+
+![image](https://github.com/Harikaraja/sample/assets/80022302/f6f53214-66ad-483b-bd7c-886e5f4d5f9f)
+
+### When specified wrong time
+
+![image](https://github.com/Harikaraja/sample/assets/80022302/e2f83cb0-81ff-40ce-b9d0-22d87f825c9c)
+
+### When trying to Book a Taxi for Past time 
+
+![image](https://github.com/Harikaraja/sample/assets/80022302/7429374a-d3f6-43bf-8557-bcad2fc40c8c)
+
