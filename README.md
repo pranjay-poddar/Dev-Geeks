@@ -717,7 +717,15 @@ Happy Coding! -->
 <td align="center"> 227.</td>
 <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Python%20Projects/Text%20Editor"> Text Editor in Python </a></td>
 <td align="center"> 228.</td>
+
+<td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Frontend-Projects/FIght%20Game"> Fight Game </a></td>
+<td align="center"> 229.</td>
+<td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/pull/1907/commits/40e3f712bf926b9e6b5d8bff0a5d5cee8e123fdc"> custom javascript cursor </a></td>
+
+</tr>
+
 <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/ReactJS%20Typescript%20Projects/typescript_todo"> Typescript React Todos </a></td>
+
 
 
 <tr align="center">
