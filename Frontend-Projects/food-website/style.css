@@ -33,14 +33,19 @@ html{
 }
 
 #logo img{
-    margin: 3px 8px;
+    /* margin: 5px 8px; */
     height: 90px;
+    margin-top:13%;
     width: 117px;
     /* border-radius: 86% 43% 10% 85% / 37% 93% 0% 87%  ; */
 }
 
 #navbar ul{
     display: flex;
+     margin-left:45%;   
+     font-size:150%; 
+    
+
 }
 
 #navbar ul li{
@@ -52,7 +57,7 @@ html{
     display: block;
     text-decoration: none;
     padding: 10px 20px;
-    color: wheat;
+    color: rgb(221, 241, 162);
 }
 #navbar ul li a:hover{
     color: black;
@@ -167,10 +172,31 @@ section h1{
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color:rgb(66, 61, 66);
 }
 .clients img{
-    width: 130px;
-    height: 130px;
+    width: 90px;
+    height: 90px;
+}
+.clients img{
+    width: 90px;
+    height: 90px;
+}
+.client_item2 img{
+    width: 40px;
+    height: 40px;
+    margin-left:-33%;
+}
+.client_item1 img{
+    width: 40px;
+    height: 40px;
+    margin-left:-83%;
+}
+.client_item3 img{
+    width: 60px;
+    height: 60px;
+    margin-right:-63%;
+   
 }
 
 .client_item{

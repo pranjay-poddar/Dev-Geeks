@@ -17,6 +17,21 @@
                     }
             }
         </script>
+
+        <style>
+        .blur-border {
+            border: 2px solid transparent; /* Set initial transparent border */
+            border-radius: 10px; /* Optional: Set border radius */
+            outline: 2px solid transparent; /* Set initial transparent outline */
+            outline-offset: -2px; /* Offset outline to create blur effect */
+            box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.5); /* Apply a shadow effect for the blur */
+            transition: outline 0.3s ease-in-out; /* Add a smooth transition effect */
+        }
+
+        .blur-border:hover {
+            outline: 2px solid #00aaff; /* Change the outline color on hover */
+        }
+    </style>
     </head>
     <body>
         <nav>
@@ -25,8 +40,8 @@
                 <li><a href="#home">about</a></li>
                 <li><a href="#home">news</a></li>
                 <li><a href="#home">content</a></li>
-                <li class="topbar-right"><a href="#home">sign in</a></li>
-                <li class="topbar-right"><a href="#home">sign up</a></li>
+                <li class="topbar-right"><a href="signin.html">sign in</a></li>
+                <li class="topbar-right"><a href="signup.html">sign up</a></li>
                 <li class="dropdown"><a href="javascript:void(0);" onclick="dropdownmenu()">&#9776</a></li>
             </ul>
         </nav>
@@ -35,7 +50,7 @@
         
         <div class="contain first">
                     <div class="heading1">
-                        <h1 class="heading1">NEVER LET YOUR MEMORIES GREATER THAN YOUR DREAMS</h1>
+                        <h1 class="heading1">NEVER LET YOUR MEMORIES BE GREATER THAN YOUR DREAMS</h1>
                     </div>
         </div>
         <header>
@@ -47,7 +62,7 @@
                 <div class="col-4">
                     <div class="box">
                         <div class="imgresize">
-                            <img src="https://blogs.forbes.com/alexcapri/files/2018/09/Singapore.jpg"  class="imgatribute">
+                            <img src="https://www.nttdata.com/sg/en/-/media/nttdataapac/ndsg/about-us/aboutus-header-2732x1536.jpg?h=1536&iar=0&w=2732&rev=615bc45d9e914e6f87d35e88981b5943" class="imgatribute" height="770px">
                             <h1>SINGAPORE</h1>
                             <p>Glimpse a different Singapore. The personal connections made on this itinerary promise that no two travellers will bring home the same experience.</p>
                         </div>
@@ -65,8 +80,8 @@
                      <div class="col-4">
                     <div class="box">
                         <div class="imgresize">
-                            <img src="https://www.roughguides.com/wp-content/uploads/2012/11/amalfi-italy-shutterstock_759048709.jpg" class="imgatribute">     
-                            <h1>ITLAY</h1>
+                            <img src="https://lp-cms-production.imgix.net/features/2017/11/GettyRF_543346423-1-ab159824d5bd.jpg?auto=format&w=1440&h=810&fit=crop&q=75" class="imgatribute">     
+                            <h1>ITALY</h1>
                             <p>Where to go in Italy. Unless you're heading for a particular destination and staying put, you'll want to take some time to explore this alluring country.</p>
                         </div>
                     </div>
@@ -160,7 +175,5 @@
             <br>
         </footer>
 
-        
-        
     </body>
 </html>
