@@ -9,13 +9,13 @@ body {
 
 }
 :root{
-  --primary-color: grey;
+  --primary-color: rgb(186, 70, 70);
   --secondary-color: #d4d4d4;
-  --background--color:#202021;
+  --background--color:#242433;
   --bird-color: white;
 }
 .dark-theme{
-  --primary-color:black;
+  --primary-color:rgb(1, 142, 140);
   --secondary-color: black;
   --background--color: white;
   --bird-color: #1DA1F2;
@@ -30,14 +30,22 @@ body {
 }
 
 .box {
+  background-color: #0a1f2b;
   border: 0.01rem solid var(--primary-color);
-  width: 300px;
+  width: 400px;
+  height: 200px;
   margin: 1%;
   border-radius: 7px;
   padding: 1.2%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+}
+
+.box:hover{
+transform: translateY(30px);
+font-size: xx-large;
+  cursor: pointer;
 }
 
 .bar {
@@ -50,7 +58,8 @@ body {
 .text {
   color: var(--secondary-color);
   font-family: arial;
-  font-size: 16px;
+  font-size: 20px;
+  cursor: pointer;
 }
 
 .date {
@@ -241,3 +250,4 @@ svg{
 .active{
   display: block;
 }
+
