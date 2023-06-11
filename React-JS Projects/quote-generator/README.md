@@ -1,6 +1,16 @@
-# Getting Started with Create React App
+# Getting Started
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app). It is a random quote generator which generates different quotes on the bsais of button clicks.
+
+# Set-Up Guide
+
+* To set-up the project for working on it you need to fork the repository- "Dev-Geeks"
+* Next you need to clone it using the git clone command
+* After this type `cd "React-JS Projects"`
+* Then type `cd quote-generator`
+* `npm install`
+* You can start working on the project
+* Have a great time contributing
 
 ## Available Scripts
 
