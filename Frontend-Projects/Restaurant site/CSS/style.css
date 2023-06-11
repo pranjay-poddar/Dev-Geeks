@@ -94,6 +94,7 @@ margin: 0;
  }
  
 }
+
 .footer{
    padding: 10px;
    display: block;
@@ -167,8 +168,24 @@ margin: 0;
     color: #A76502;
 }
 .img1{
-    float: left;
+    border-radius: 50%;
 }
+.img2{
+    border-radius: 50%;
+}
+.img3{
+    border-radius: 50%;
+}
+.img4{
+    border-radius: 50%;
+}
+
+.column1 {
+    float: left;
+    width: 50%;
+    padding: 5px;
+}
+
 .container{
     background-color:#E0A54D;
 }
@@ -328,3 +345,4 @@ input[type=submit]:hover{
     }
    
 } 
+
