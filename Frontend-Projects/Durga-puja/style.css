@@ -13,7 +13,7 @@ body{
   }
 
 nav{
-   background-color: #A66CFF;
+   background-color: #31125f;
    height: 80px;
    width: 100%;
 }
@@ -38,25 +38,46 @@ nav ul li a{
    color: aliceblue;
    font-size: 17px;
    padding: 7px 13px;
+   text-decoration:none;
    border-radius: 3px;
    text-transform: uppercase;
 }
 a.active,a:hover{
-   background-color: #31087B;
+   background-color: #237f8f;
    transition: .5s;
    
+   
 }
-.checkbtn{
+nav ul li a:hover{
+   color: aliceblue;
+   font-size: 17px;
+   padding: 7px 13px;
+   text-decoration:none;
+   border-radius: 3px;
+   text-transform: uppercase;
+}
+/* a:hover{
+   background-color: #237f8f;
+   transition: .5s;
+   color:white;
+   
+} */
+/* .checkbtn{
    font-size: 30px;
    color: #fff;
    cursor: pointer;
    float: right;
    margin-right: 40px;
    line-height: 80px;
-}
+} */
 
 #check{
    display: none;
+color: #A66CFF;
+}
+.checkbtn{
+    display: none;
+color: #A66CFF;
 }
 
 @media (max-width: 952px){
@@ -114,3 +135,79 @@ a.active,a:hover{
 #g{
    width: 1300px;
 } */
+
+@media (max-width:1080px){
+.checkbtn{
+   font-size: 30px;
+   color: #fff;
+   cursor: pointer;
+   float: right;
+   margin-right: 40px;
+   line-height: 80px;
+}
+#check{
+   display: none;
+/* color: #A66CFF; */
+}
+.checkbtn{
+   display: block;
+}
+ul{
+   position: fixed;
+   width: 100%;
+   height: 100vh;
+   background: #2c3e50;
+   /* top: 80%; */
+   left:-100%;
+   text-align: center;
+   transition: all .5s;
+}
+nav ul li{
+   display: block;
+   margin: 50px 0;
+   line-height: 30px;
+}
+nav ul li a{
+   font-size: 20px;
+}
+a:hover , a.active{
+   background: none;
+   color: #0082e6;
+}
+#check:checked ~ ul{
+   left: 0;
+}
+}
+
+@media (max-width:780px){
+   img{
+margin-top:5%;
+   }
+}
+
+@media (max-width:475px){
+   label.logo{
+      margin-top:-55%;
+      
+   }
+}
+@media (max-width:410px){
+   label.logo{
+      font-size:130%;
+      margin-top:4%;
+      
+   }
+}
+@media (max-width:395px){
+   label.logo{
+      font-size:130%;
+      margin-top:-14%;
+      
+   }
+}
+@media (max-width:330px){
+   label.logo{
+      font-size:100%;
+      margin-top:-44%;
+      
+   }}
