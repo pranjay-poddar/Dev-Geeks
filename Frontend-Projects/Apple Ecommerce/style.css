@@ -65,8 +65,7 @@ html {
   text-transform: uppercase;
   display: inline-block;
   margin: 0 3rem;
-  font-weight: bolder;
-  color: var(--black-color);
+   color: var(--white-color);
   transition: transform 0.5s;
 }
 
