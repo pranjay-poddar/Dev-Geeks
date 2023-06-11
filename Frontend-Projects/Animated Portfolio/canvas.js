@@ -12,11 +12,6 @@ const colorsCombo2 = ['#e5243f','#f65c51','#f7b15c','#54c6be','#2f5755']; // mut
 const colors = ['#2185C5', '#7ECEFD', '#FFF6E5', '#FF7F66']; // other colors
 
 // Event Listeners
-
-// addEventListener('mousemove', (event) => {
-//     mouse.x = event.clientX;
-//     mouse.y = event.clientY;
-// })
 addEventListener('resize', () => {
     canvas.width = innerWidth;
     canvas.height = innerHeight;
@@ -45,8 +40,6 @@ class Particle {
         c.arc(this.x, this.y, this.radius, 0, Math.PI * 2, false);
         c.fillStyle = this.color;
         c.fill();
-        c.strokeStyle = this.color;
-        c.stroke();
         c.closePath();
     }
 
