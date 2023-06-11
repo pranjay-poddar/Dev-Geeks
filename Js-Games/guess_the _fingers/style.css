@@ -1,0 +1,151 @@
+body{
+    text-align: center;
+}
+ 
+ #game{
+    font-style: italic;
+    color: rgb(28, 47, 214);
+    padding: 20px 20px 20px 20px;
+}
+ #numberentre{
+    font-weight: bold;
+    /* padding: 50px 70px 50px 25px; */
+    padding-left:560px ;
+    padding-top: 50px;
+    margin-bottom: 20px;
+    }
+#fingersentred{
+    text-align: center;
+}
+#heading{
+    font-size: 50px;
+}
+
+/* background */
+html {
+    height:100%;
+  }
+  
+  body {
+    margin:0;
+  }
+  
+  .bg {
+    animation:slide 3s ease-in-out infinite alternate;
+    background-image: linear-gradient(-60deg, #6c3 50%, #09f 50%);
+    bottom:0;
+    left:-50%;
+    opacity:.5;
+    position:fixed;
+    right:-50%;
+    top:0;
+    z-index:-1;
+  }
+  
+  .bg2 {
+    animation-direction:alternate-reverse;
+    animation-duration:4s;
+  }
+  
+  .bg3 {
+    animation-duration:5s;
+  }
+  
+  .content {
+    background-color:rgba(255,255,255,.8);
+    border-radius:.25em;
+    box-shadow:0 0 .25em rgba(0,0,0,.25);
+    box-sizing:border-box;
+    left:50%;
+    padding:10vmin;
+    position:fixed;
+    text-align:center;
+    top:50%;
+    transform:translate(-50%, -50%);
+  }
+  
+  
+  
+  @keyframes slide {
+    0% {
+      transform:translateX(-25%);
+    }
+    100% {
+      transform:translateX(25%);
+    }
+  }
+
+  /* button */
+  .btn {
+	outline: none;
+	position: relative;
+	padding: 20px 50px;
+	display: block;
+	text-decoration: none;
+	text-transform: uppercase;
+	width: 250px;
+	overflow: hidden;
+	margin: 0 auto;
+	background-color: transparent;
+	border-radius: 60px;
+	border: none;
+	margin-top: 40px;
+	text-align: center;
+}
+
+button span {
+	position: relative;
+	right: 10px;
+	z-index: 1;
+	color: #ffffff;
+	font-size: 16px;
+	letter-spacing: 7px;
+}
+
+button .flow {
+	position: absolute;
+	left: 0;
+	top: -80px;
+	width: 250px;
+	height: 200px;
+	background: #0b9b42;
+	box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.5);
+	transition: 0.5s;
+}
+
+button:hover .flow {
+	top: -120px;
+}
+
+button .flow:before,
+button .flow:after {
+	content: '';
+	position: absolute;
+	width: 180%;
+	height: 200%;
+	top: 0;
+	left: 50%;
+	transform: translate(-50%, -75%);
+}
+
+button .flow:before {
+	border-radius: 45%;
+	background: rgb(201, 233, 21);
+	animation: swing 5s linear infinite;
+}
+
+button .flow:after {
+	border-radius: 40%;
+	background: rgba(187, 140, 10, 0.5);
+	animation: swing 10s linear infinite;
+}
+
+@keyframes swing {
+	0% {
+		transform: translate(-50%, -75%) rotate(0deg);
+	}
+
+	100% {
+		transform: translate(-50%, -75%) rotate(360deg);
+	}
+}
