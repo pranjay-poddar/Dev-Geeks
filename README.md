@@ -681,13 +681,9 @@ Happy Coding! -->
 <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Frontend-Projects/Electronic%20Gadget"> Electronic Gadget </a></td>
 <td align="center"> 224.</td>
 <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/ML%20Projects/Analysis%20of%20Fashion_dataset"> Analysis_ of Fashion dataset </a></td>
-
-
-
 </tr>
 
 <tr align="center">
-
 <td align="center"> 225.</td>
 <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks-GSSOC/main/React-JS%20Projects/Restaurant-website"> Restaurant Website </a> </td>
 <td align="center"> 226.</td>
@@ -697,9 +693,6 @@ Happy Coding! -->
 <td align="center"> 228.</td>
 
 <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Frontend-Projects/FIght%20Game"> Fight Game </a></td>
-<td align="center"> 229.</td>
-<td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/pull/1907/commits/40e3f712bf926b9e6b5d8bff0a5d5cee8e123fdc"> custom javascript cursor </a></td>
-
 </tr>
 
 <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/ReactJS%20Typescript%20Projects/typescript_todo"> Typescript React Todos </a></td>
@@ -708,6 +701,7 @@ Happy Coding! -->
 
 <tr align="center">
 <td align="center"> 229.</td>
+<td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/pull/1907/commits/40e3f712bf926b9e6b5d8bff0a5d5cee8e123fdc"> custom javascript cursor </a></td>
 <td align="center"> 230.</td>
 <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Python%20Projects/Hangman-advanced"> Hangman-Advanced </a></td>
 <td align="center"> 231.</td>
@@ -721,10 +715,7 @@ Happy Coding! -->
 <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/ML%20Projects/Analysis%20of%20Fashion_dataset"> Amazing Snake Game </a></td>
 <td align="center">234.</td>
 <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Js-Projects/Colovaria"> Colovaria </a></td>
-
-
-	
-<td align="center"> 233</td>
+<td align="center"> 235</td>
 <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Js-Games/Pacman"> Pacman Game </a></td>
 
 </tr>
