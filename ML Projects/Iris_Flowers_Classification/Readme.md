@@ -37,4 +37,4 @@ Feel free to modify the code, explore different machine learning algorithms, or 
 
 ## Resources
 
-- [Iris flower dataset on UCI Machine Learning Repository](https://www.kaggle.com/datasets/uciml/iris)
+- [Iris flower dataset](https://www.kaggle.com/datasets/uciml/iris)
