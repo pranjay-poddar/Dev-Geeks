@@ -1,0 +1,366 @@
+html {
+  scroll-behavior: smooth;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0px;
+  padding: 0px;
+  overflow: hidden;
+  width: 100%;
+  padding-top: 20px;
+  position: relative;
+  left: 430px;
+  margin-top: 3px;
+  font-size: 2.5rem;
+  font-weight: 600;
+
+}
+
+li {
+  /* float: left; */
+  display: inline;
+}
+
+li a {
+  /* display: block; */
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  padding-left: 5%;
+  padding-top: 2%;
+  padding-right: 5%;
+  padding-bottom: 2%;
+  font-size: 20px;
+  transition: 0.5s;
+}
+
+li a:hover {
+  text-shadow: 0 0 5px #ffa805b3, 0 0 15px #ffa600c4, 0 0 20px #ffa600d6, 0 0 40px #ffa600d5, 0 0 60px #ff0000d9, 0 0 10px #ff8c00d5, 0 0 98px #ff0000bc;
+  color: #fff6a9;
+  font-size: 1.4rem;
+}
+
+.gallery {
+  margin: 30px;
+  border: 6px solid #ccc;
+  float: left;
+  display: inline;
+  width: 19%;
+  height: 300px;
+  background-color: azure;
+  transition: 0.3s;
+}
+
+.gallery:hover {
+  border: 2px solid #777;
+  box-shadow: 4px 4px 10px black;
+
+}
+
+.gallery img {
+  width: 100%;
+  height: auto;
+  transition: 0.3s;
+
+}
+
+.desc {
+  padding: 15px;
+  text-align: center;
+  font-size: larger;
+  font-weight: bold;
+  background-color: azure;
+  font-family: 'Raleway', sans-serif;
+}
+
+.topphotos {
+  margin-top: 0;
+}
+
+body {
+  background: linear-gradient(#6441a5, #2a0845);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  margin: 0;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+.carzi {
+  font-size: calc(20px + 18vh);
+  line-height: calc(20px + 20vh);
+  /*   text-shadow: 0 0 5px #f562ff, 0 0 15px #f562ff, 0 0 25px #f562ff,
+    0 0 20px #f562ff, 0 0 30px #890092, 0 0 80px #890092, 0 0 80px #890092;
+  color: #fccaff; */
+  text-shadow: 0 0 5px #ffa805b3, 0 0 15px #ffa600c4, 0 0 20px #ffa600d6, 0 0 40px #ffa600d5, 0 0 60px #ff0000d9, 0 0 10px #ff8c00d5, 0 0 98px #ff0000bc;
+  color: #fff6a9;
+  font-family: 'Times New Roman', Times, serif;
+  text-align: center;
+  animation: blink 12s infinite;
+  -webkit-animation: blink 12s infinite;
+  margin-bottom: 20px;
+  transform: translateY(300px);
+}
+
+.quote {
+  text-align: center;
+  font-size: 30px;
+  text-shadow: 0 0 5px #ffa805b3, 0 0 15px #ffa600c4, 0 0 20px #ffa600d6, 0 0 40px #ffa600d5, 0 0 60px #ff0000d9, 0 0 10px #ff8c00d5, 0 0 98px #ff0000bc;
+  color: #fff6a9;
+  transform: translateY(300px);
+}
+
+.ourwork {
+  font-size: 3.5rem;
+  line-height: calc(20px + 20vh);
+  text-shadow: 0 0 5px #f562ff, 0 0 15px #f562ff, 0 0 25px #f562ff,
+    0 0 20px #f562ff, 0 0 30px #890092, 0 0 80px #890092, 0 0 80px #890092;
+  color: #fccaff;
+  text-shadow: 0 0 5px #ffa8059b, 0 0 15px #ffa600a5, 0 0 20px #ffa600c2, 0 0 40px #ffa600be, 0 0 60px #ff0000d0, 0 0 10px #ff8c00c6, 0 0 98px #ff0000bc;
+  color: #fff6a9;
+  font-family: 'Times New Roman', Times, serif;
+  text-align: center;
+  /* animation: blink 12s infinite;
+  -webkit-animation: blink 12s infinite; */
+  height: 50px;
+  width: 100%;
+  transform: translateY(-490px);
+  padding-top: 150px;
+
+
+}
+
+.videocontent {
+  transform: translateX(70px);
+  transform: translateY(-350px);
+
+}
+
+.navbar {
+  display: flex;
+  font-family: 'Raleway', sans-serif;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  position: relative;
+  top: 0px;
+  width: 100%;
+  height: 10px;
+  z-index: 1;
+}
+
+.vid {
+  transition: 0.2s;
+}
+
+.vid:hover {
+  height: 320px;
+  width: 370px;
+}
+
+.active {
+
+  text-shadow: 0 0 5px #ffa805b3, 0 0 15px #ffa600c4, 0 0 20px #ffa600d6, 0 0 40px #ffa600d5, 0 0 60px #ff0000d9, 0 0 10px #ff8c00d5, 0 0 98px #ff0000bc;
+  color: #fff6a9;
+  font-size: 1.4rem;
+
+}
+
+.logo {
+  width: 25%;
+
+}
+
+#slider {
+  position: relative;
+  bottom: 500px;
+  /* left: 110px; */
+  /* width: 1320px; */
+  height: 850px;
+
+  width: 100%;
+  overflow: hidden;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
+  transform: translateX(500px);
+  transform: translateY(150px);
+
+
+}
+
+#slider ul {
+  position: relative;
+  list-style: none;
+  height: 100%;
+  width: 10000%;
+  padding: 0;
+  margin: 0;
+  transition: all 750ms ease;
+  left: 0;
+}
+
+#slider ul li {
+  position: relative;
+  height: 100%;
+  float: left;
+}
+
+#slider ul li img {
+  width: 1585px;
+  height: 850px;
+}
+
+#slider #prev,
+#slider #next {
+  width: 50px;
+  line-height: 50px;
+  text-align: center;
+  color: white;
+  text-decoration: none;
+  position: absolute;
+  top: 50%;
+  border-radius: 50%;
+  font-size: 2rem;
+  text-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+  transform: translateY(-50%);
+  transition: all 150ms ease;
+  opacity: 0;
+}
+
+#slider #prev {
+  left: 10px;
+}
+
+#slider #next {
+  right: 10px;
+}
+
+#slider #prev:hover,
+#slider #next:hover {
+  background-color: rgba(0, 0, 0, 0.5);
+  text-shadow: 0;
+}
+
+.hashtext {
+  font-size: 100px;
+  background-color: rgba(32, 30, 30, 0.7);
+  color: white;
+  transform: translateY(-550px);
+  padding: 25px;
+  text-align: center;
+  padding-bottom: 80px;
+  padding-top: 70px;
+  z-index: 2;
+
+}
+
+.allphotos {
+  transform: translateY(-460px);
+}
+
+.footer a {
+  position: absolute;
+  right: 250px;
+  margin: 100px;
+
+}
+
+
+
+.footer {
+  transform: translateY(900px);
+  background-color: white;
+  height: 400px;
+  width: 100%;
+}
+
+
+.insta {
+  position: relative;
+  right: 70px;
+  top: 20px;
+  color: #6441a5;
+}
+
+.fb {
+  position: relative;
+  left: 70px;
+  top: 20px;
+  color: #6441a5;
+}
+
+.yt {
+  position: relative;
+  top: 20px;
+  color: #6441a5;
+
+}
+
+.contactinfo {
+  position: absolute;
+  right: 1200px;
+  top: 50px;
+  font-size: 1.4rem;
+  font-family: 'Raleway', sans-serif;
+  margin-left: 50px;
+
+
+}
+
+h3:nth-of-type(1) {
+  font-size: 2rem;
+  text-transform: capitalize;
+
+}
+
+h3:nth-of-type(2) {
+  text-transform: capitalize;
+}
+
+h3:nth-of-type(3) {
+  text-transform: capitalize;
+}
+
+.add {
+  font-weight: 400;
+  font-size: 1.2rem;
+  float: right;
+  position: relative;
+  bottom: 25px;
+  left: 120px;
+
+
+}
+
+.phn {
+  font-weight: 400;
+  font-size: 1.2rem;
+  float: right;
+  position: relative;
+
+
+
+}
+
+.fu {
+  font-family: 'Raleway', sans-serif;
+  position: absolute;
+  right: 300px;
+  top: 30px;
+
+}
+
+.yt:hover {
+  transform: scale(1.2);
+
+}
+
+.insta:hover {
+  transform: scale(1.2);
+
+}
+
+.fb:hover {
+  transform: scale(1.2);
+
+}

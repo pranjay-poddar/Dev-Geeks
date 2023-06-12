@@ -1,0 +1,49 @@
+* {
+    box-sizing: border-box;
+}
+
+.container {
+    height: 300px;
+    border: 4px solid red;
+    display: grid;
+    /* row-gap: 10px;
+    column-gap: 10px; */
+    gap: 10px;
+    /*row and column gap working together (align and justify working together in comaprison to flex)*/
+    grid-template-columns: repeat(2, 2fr) repeat(2, 1fr);
+    /*gives only the first 3 rows (or whatever number of inputs given) the values and puts the other with the minimum required space, without creating another column coz the instructions havent been given/
+    /grid-auto-rows: 150px;*/
+    /*gives all the other rows this value/
+    
+    /* align-content: center; */
+    /* align-items: center; */
+    justify-content: center;
+
+}
+
+.box {
+    background-color: aquamarine;
+    border: 3px solid black;
+}
+
+.one {
+    /* justify-self: end;
+    align-self: end; */
+    /* grid-column-start: 1;
+    grid-column-end: 3; */
+    grid-column: 1 / -2;
+    grid-row: 1 / span 3;
+    grid-area: 1 / 2 / 3 / 4;
+}
+
+/* .four{
+    /* grid-row-start: 2;
+    grid-row-end: 4; */
+/* grid-row: 2 / 4; */
+/*does the same as grid row start and end */
+
+@media screen and (orientation:landscape) and (min-width:400px) {
+    .box {
+        background-color: red;
+    }
+}
