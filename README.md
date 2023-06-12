@@ -718,7 +718,7 @@ Happy Coding! -->
 </tr>
 
 <tr align="center">	
-<td align="center"> 225.</td>
+<td align="center"> 337.</td>
 <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/MineSweeper%20game"> MineSweeper Game </a></td>
 </tr>
 </table>
