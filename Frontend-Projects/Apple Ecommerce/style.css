@@ -65,8 +65,8 @@ html {
   text-transform: uppercase;
   display: inline-block;
   margin: 0 3rem;
-  color: var(--white-color);
-  transition: all 0.2s ease;
+   color: var(--white-color);
+  transition: transform 0.5s;
 }
 
 .navbar-link:hover {
