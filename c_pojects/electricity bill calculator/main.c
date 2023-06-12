@@ -7,7 +7,6 @@ For units above 250 - Rs 1.50/unit */
 
 #include <stdio.h>
 #include <stdlib.h>
-#include <conio.h>
 
 int main()
 {
@@ -31,6 +30,5 @@ int main()
         bill = 220 + (unit - 250) * 1.50;
     }
     printf("\n Units consumed = %f .\n Electricity bill = %f", unit, bill);
-    getch;
     return 0;
 }
