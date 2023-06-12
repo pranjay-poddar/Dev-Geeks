@@ -720,6 +720,8 @@ Happy Coding! -->
 <tr align="center">	
 <td align="center"> 337.</td>
 <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/MineSweeper%20game"> MineSweeper Game </a></td>
+<td align="center"> 338.</td>
+<td align="center"> <a href="#"> Amazon Clone </a></td>
 </tr>
 </table>
 
