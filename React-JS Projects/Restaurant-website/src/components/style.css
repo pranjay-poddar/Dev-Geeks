@@ -1,0 +1,354 @@
+* {box-sizing: border-box}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+h1 {
+  padding-top: 60px;
+}
+
+button {
+  width: 100%;
+  display: block;
+}
+
+.page-container {
+  position: relative;
+  min-height: 100vh;
+}
+
+.content-wrap {
+  padding-bottom: 2.5rem;    /* Footer height */
+}
+
+/*Nav Bar*/
+/*basic design*/
+.nav {
+    height: 50px;
+    width: 100%;
+    background-color: #FFDE15;
+    position: fixed;
+    top: 0px;
+    padding-right: 20px;
+}
+    
+/*logo*/
+.nav > .nav-header {
+  display: inline;
+}
+    
+.nav > .nav-header > .nav-title {
+  display: inline-block;
+}
+    
+/*menu links*/
+.nav > .nav-links {
+  font-size: 20px;
+  display: inline;
+  float: right;
+  padding-right: 10px;
+}
+    
+.nav > .nav-links > ul li a{
+  color: rgb(99, 24, 7);
+  line-height: 40px;
+  font-size: 20px;
+  display: block;
+  padding: 0 12px;
+  text-decoration: none;
+}
+  
+.nav > .nav-links > ul{
+  list-style: none;
+  position: relative;
+  padding: 0;
+  margin-top: 5px;
+}
+  
+.nav > .nav-links > ul li{
+  display: inline-block;
+  background-color: rgb(255, 255, 230)ite;
+}
+    
+.nav > .nav-links > ul li:hover{
+  background-color: #cdab72b0;
+  border-radius: 5px;
+}
+    
+ /*toggle button for responsive*/
+.nav > .nav-btn {
+  display: none;
+}
+.nav > #nav-check {
+  display: none;
+}
+    
+    /*responsive navbutton*/
+@media (max-width:750px) {
+  .nav > .nav-btn {
+    display: inline-block;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+  }
+  .nav > .nav-btn > label {
+    height: 50px;
+    padding: 13px;
+    display: inline-block;
+    width: 50px;
+  }
+  .nav > .nav-btn > label:hover,.nav  #nav-check:checked ~ .nav-btn > label {
+    background-color: rgba(26, 100, 148, 0.477);
+  }
+  .nav > .nav-btn > label > span {
+    height: 10px;
+    border-top: 2px solid rgb(128, 92, 63);
+    display: block;
+    width: 25px;
+  }
+  .nav > .nav-links {
+    position: absolute;
+    height: 0px;
+    transition: all 0.3s ease-in;
+    overflow-y: hidden;
+    top: 50px;
+    display: block;
+    width: 100%;
+    background-color: rgb(235, 239, 113);
+    left: 0px;
+    z-index: 2;
+  }
+  .nav > .nav-links > ul li a {
+    display: block;
+    width: 100%;
+  }
+    
+  .nav > .nav-links > ul li{
+    padding: 0;
+    background-color: rgb(235, 239, 113);
+    display: block;
+    margin-bottom: 20px;
+    z-index: 2;
+  }
+  .nav > .nav-links > ul li a{
+    margin-left: 40%;
+  }
+  .nav .nav-links ul a.icon{
+    margin-left: 33%;
+  }
+    
+  .nav > #nav-check:not(:checked) ~ .nav-links {
+      height: 0px;
+  }
+  .nav > #nav-check:checked ~ .nav-links {
+    height: calc(100vh - 50px);
+    overflow-y: auto;
+    z-index: 1;
+  }
+}
+
+/*intro page*/
+.intro {
+  position: relative;
+  margin-top: 50px;
+  z-index: -1;
+}
+
+.intrologo {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  text-align: center;
+  color: white;
+}
+
+.text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/*About*/
+.aboutus {
+  text-align: center;
+  padding-top: 50px;
+}
+
+.privacy {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #717171;
+  margin-left: 700px;
+  text-decoration: none;
+}
+
+/*Chef*/
+.row {
+  text-align: center;
+  color: white;
+  background-color: red;
+}
+.column {
+  float: left;
+  width: 33.3%;
+  margin-bottom: 40px;
+  margin-top: 40px;
+  padding: 0 10px;
+  color: rgb(245, 239, 239);
+}
+
+@media screen and (max-width: 650px) {
+  .column {
+    width: 100%;
+    display: block;
+  }
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(234, 228, 228, 0.217);
+  background-color: rgba(229, 31, 31, 0.498);
+  text-align: center;
+}
+
+.container {
+  padding: 0 20px;
+}
+
+.container::after, .row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.title {
+  color: rgb(183, 163, 163);
+}
+
+/*social media button*/
+.fa {
+  padding: 20px;
+  font-size: 20px;
+  width: 55px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 50%;
+  z-index: -1;
+}
+
+.fa:hover {
+  opacity: 0.7;
+}
+
+
+/* Facebook */
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+
+/*insta*/
+.fa-instagram {
+  background: #820e8b;
+  color: white;
+}
+
+/*linkedin*/
+.fa-linkedin {
+  background: #165ba6;
+  color: white;
+}
+
+/*week special*/
+
+.tab {
+  overflow: hidden;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
+}
+
+.tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+}
+
+.tab button:hover {
+  background-color: #ddd;
+}
+
+.tab button.active {
+  background-color: rgb(157, 153, 153);
+}
+
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  border-top: none;
+  animation-name: fader;
+  animation-duration: 2s;
+}
+@keyframes fader {
+  from {opacity: 0.6}
+  to {opacity: 1}
+}
+
+/*Footer*/
+.footer{
+  position: relative;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 60px;
+  z-index: 0;
+}
+
+.socials{
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  margin: 1rem 0 3rem 0;
+}
+
+.socials li{
+  margin: 0 10px;
+}
+
+/*.socials a{
+  text-decoration: none;
+  color: #fff;
+  border: 1.1px solid white;
+  padding: 5px;
+  border-radius: 50%;
+}*/
+
+.socials a i{
+  font-size: 2rem;
+  width: 20px;
+  transition: color .4s ease;
+}
+
+.footer-menu{
+  float: right;
+}
+
+.footer-menu ul{
+  display: flex;
+}
+
+.footer-menu ul li{
+  padding-right: 10px;
+  display: block;
+}
+
+.footer-menu ul li a{
+  color: #7e8998;
+  text-decoration: none;
+}
