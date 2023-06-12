@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+    <div class="box1">
+        
+        <h1 id="heading">BASKETBALL SCORE CARD</h1>
+        <div class="box2">
+            <div class="home">
+                <h1>HOME</h1>
+            </div>
+            <div class="guest">
+                <h1>GUEST</h1>
+            </div>
+        </div>
+        <div class="box3">
+            <div class="score">
+                <h2 id="score_1">0</h2>
+            </div>
+            <div class="score">
+                <h2 id="score_2">0</h2>
+            </div>
+        </div>
+        <br><br>
+        <div class="box4">
+            <div class="box4-1">
+                <button class="inc" onclick="res1_1()" id="home_add-1">+1</button>
+                <button class="inc" onclick="res1_2()" id="home_add-2">+2</button>
+                <button class="inc" onclick="res1_3()" id="home_add-3">+3</button>
+            </div>
+            <div class="box4-2">
+                <button class="inc" onclick="res2_1()" id="guest_add-1">+1</button>
+                <button class="inc" onclick="res2_2()" id="guest_add-2">+2</button>
+                <button class="inc" onclick="res2_3()" id="guest_add-3">+3</button>
+            </div>
+        </div>
+      <button class="reset" onclick="reset()">RESET</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

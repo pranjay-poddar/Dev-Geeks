@@ -1,0 +1,157 @@
+/* This file is for your main application css. */
+
+/*
+ * Basic styling for elixircasts.io screencasts
+ */
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  background: #222E4D;
+  font-size: 14px;
+  line-height: 200px;
+  overflow-x: hidden;
+}
+
+::selection{
+  background-color: #FFEC6E;
+  color: #000;
+}
+
+::-moz-selection {
+  background: #46c2ca;
+  color: #000;
+}
+
+.container {
+	width: 75%;
+	height: 100%;
+  padding:20px;
+	background-color: #fff;
+	top: 100px;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin: auto;
+}
+
+hr {
+  border: 0;
+  height: 0;
+  border-top: 1px solid #CCC;
+}
+
+a {
+  color: rgb(0, 0, 238);
+  text-decoration: underline;
+}
+
+.alert:empty {
+  display:none;
+}
+
+p.alert.alert-info {
+  padding: 7px;
+  background: #DFF0D8;
+}
+
+p.alert.alert-danger {
+  padding: 7px;
+  background: #F2DEDE;
+}
+
+.flash-notice {
+  padding: 7px;
+  background: #D9EDF7;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+table, th, td {
+  text-align: left;
+  padding: 10px;
+  border: 1px solid black;
+}
+
+#chat-box {
+  border: 1px #000 solid;
+  padding: 0 0 0 5px;
+  min-height: 500px;
+  max-height: 800px;
+  overflow: scroll;
+}
+
+#chat-form {
+  width:250px;
+}
+
+#chat-form input[type="text"] {
+  width: 250px;
+  padding: 5px;
+  border: 1px solid #ccc;
+  margin-top: 5px;
+}
+
+#chat-form textarea {
+  width: 250px;
+  padding: 5px;
+  border: 1px solid #ccc;
+  margin-top: 5px;
+
+}
+
+.nav-header {
+  position: relative;
+  width: 100%;
+}
+
+.nav-h1 {
+  float: left;
+  clear:none;
+}
+
+.nav-header .nav-link {
+  float: right;
+  margin: -40px 10px 10px 10px;
+}
+
+.nav-header .nav-link a {
+  margin-left: 5px;
+}
+
+.elixircasts-form {
+  margin-bottom: 10px;
+}
+
+.elixircasts-form label {
+    display: block;
+    margin: 0px 0px 5px;
+}
+
+.elixircasts-form input[type="text"], .elixircasts-form input[type="email"], .elixircasts-form textarea, .elixircasts-form select{
+    border: 1px solid #000;
+    color: #000;
+    font-size: 14px;
+    height: 200px;
+    line-height:15px;
+    margin-bottom: 16px;
+    margin-right: 6px;
+    margin-top: 2px;
+    outline: 0 none;
+    padding: 5px 0px 5px 5px;
+    width: 70%;
+}
+
+.elixircasts-form .help-block {
+  background: #F2DEDE;
+}
+
+.elixircasts-form select {
+    height: 35px;
+}
+.elixircasts-form textarea{
+    height:100px;
+    padding: 5px 0px 0px 5px;
+}

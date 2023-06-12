@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins');
+/* Universal */
+body {
+    font-family: 'Poppins',sans-serif;
+    margin:0;
+    width:100%;
+    text-align: center;
+}
+
+.back-drop-effect {
+    background: linear-gradient(45deg,rgba(255, 255, 255, 0.147),rgba(165, 165, 255, 0.112));
+    box-shadow: 0 0 10px #000000dd;
+    backdrop-filter: blur(8px) hue-rotate(15deg);
+}
+
+canvas {
+    position:fixed;
+    left:0;
+    height:100vh;
+    width:100vw; 
+}
+
+span {
+    font-size:2rem;
+    padding:0;
+    margin: 0;
+}
+
+/* Navigation Bar */
+.nav {
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    position: fixed;
+    top:0;
+    left:0;
+    height:fit-content;
+    width:100vw;
+    /* padding: 1rem; */
+    color: aliceblue;
+    background: linear-gradient(45deg,
+    rgba(255, 255, 255, 0.147),
+    rgba(181, 181, 255, 0.311),
+    rgba(255, 255, 255, 0.147));
+}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+li {
+    /* display: block;
+    list-style-type:none;*/
+    padding-left: 1rem; 
+    float: left;
+}
+a {
+    text-decoration: none;
+    color: aliceblue;
+}
+input[type=submit] {
+    background-color: aliceblue;
+    border:none;
+    cursor: pointer;
+    border-radius: 0.25rem;
+}
+
+/* Content */
+#content {
+    padding: 1rem;
+    color:white;
+    text-align: center;
+    width: 70%;
+    margin:auto auto;
+    border-radius: 0.5rem;
+    position: absolute;
+    top:20vh;
+    left:12vw;
+    padding:1rem;
+    padding-bottom: 5rem;
+    /* margin-bottom: 500px; */
+}
+
+#avatar {
+    width:250px;
+    margin-right: 1rem;
+    margin-top: 1rem;
+    float: right;
+    shape-outside: circle(50% at 148px 156px);
+    padding: 1rem;
+}
+#name-avatar-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Skills */
+#skills {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* Projects */
+#projects > p {
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+}
+#projects > .project > a {
+    padding: 0.5rem;
+    background-color: aliceblue;
+    color:black;
+    border:2px solid transparent; 
+    border-radius:0.5rem;
+}
+#projects > .project > a:hover {
+    background-color: transparent;
+    color:aliceblue;
+    border:2px solid aliceblue;
+}
+
+.project-image {
+    width:300px;
+}
+#projects {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 1rem;
+}
+.project {
+    backdrop-filter: blur(30px) hue-rotate(15deg);
+    /* height:200px; */
+    /* width:200px; */
+    border: 2px solid white;
+    border-radius:1rem;
+    padding: 1rem;
+}
+/* Contacts */
+
+#contacts > a > svg {
+    margin: 5px;
+    height:30px;
+    fill: aliceblue;
+
+}
+
+/* footer */
+.footer { 
+    height:70px;
+    width:100vw;
+}

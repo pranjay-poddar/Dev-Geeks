@@ -1,0 +1,25 @@
+body
+{
+background-color: bisque;
+}
+h2{
+    text-align: center;
+    font-size: 40px;
+
+}
+#map-inner
+{
+ 
+    margin-top: 100px;
+   
+}
+@media screen and (min-width:600px)
+{
+    #map-inner{ margin-left: 400px;}
+   
+}
+@media screen and (max-width:600px)
+{
+    #map-inner{ margin-left: 10px;}
+   
+}

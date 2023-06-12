@@ -9,6 +9,7 @@ body {
 
 }
 :root{
+
   --primary-color: grey;
   --secondary-color: #d4d4d4;
   --background--color:#202021;
@@ -16,6 +17,7 @@ body {
 }
 .dark-theme{
   --primary-color:black;
+
   --secondary-color: black;
   --background--color: white;
   --bird-color: #1DA1F2;
@@ -30,6 +32,7 @@ body {
 }
 
 .box {
+
   border: 0.01rem solid var(--primary-color);
   width: 300px;
   margin: 1%;
@@ -38,6 +41,12 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+}
+
+.box:hover{
+transform: translateY(30px);
+font-size: xx-large;
+  cursor: pointer;
 }
 
 .bar {
@@ -50,7 +59,8 @@ body {
 .text {
   color: var(--secondary-color);
   font-family: arial;
-  font-size: 16px;
+  font-size: 20px;
+  cursor: pointer;
 }
 
 .date {
@@ -240,4 +250,5 @@ svg{
 }
 .active{
   display: block;
+ 
 }
