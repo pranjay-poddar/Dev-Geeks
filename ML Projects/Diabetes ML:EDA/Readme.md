@@ -37,7 +37,7 @@ For each model, we performed the following steps:
 
 ## Results
 
-After evaluating the models, we found that [mention the best-performing model] achieved the highest accuracy of [accuracy score]. It outperformed the other models in terms of precision, recall, and F1-score as well.
+After evaluating the models, we found that **XGBoost Classifier** achieved the highest accuracy of **90.9%** . It outperformed the other models in terms of precision, recall, and F1-score as well.
 
 ## Conclusion
 
