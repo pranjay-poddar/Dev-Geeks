@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Bus Reservation App - Student Dashboard</title>
+  <style>
+    /* Global styles */
+    .abcd {
+      margin: 10px;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    /* Header styles */
+    header {
+      background-color: #9b1c05;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 36px;
+    }
+
+    /* Login form styles */
+    form {
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+      margin-top: 30px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 10px;
+      font-size: 18px;
+    }
+
+    input[type="password"],
+    input[type="text"],
+    select {
+      width: 100%;
+      padding: 10px;
+      font-size: 15px;
+      margin-bottom: 10px;
+      height: 15px;
+      border: none;
+      border-radius: 5px;
+      background-color: #f2f2f2;
+    }
+
+    input[type="submit"] {
+      margin-top: 10px;
+      background-color: #9b1c05;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      padding: 10px 20px;
+      font-size: 18px;
+      cursor: pointer;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #9b1c05;
+    }
+
+    /* Bus list styles */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 30px;
+    }
+
+    table th,
+    table td {
+      padding: 10px;
+      text-align: left;
+      border: 1px solid #ddd;
+    }
+
+    table th {
+      background-color: #9b1c05;
+      color: #fff;
+      font-size: 18px;
+    }
+
+    table tr:nth-child(even) {
+      background-color: #f2f2f2;
+    }
+
+    table tr:hover {
+      background-color: #ddd;
+    }
+
+    .book-button {
+      display: block;
+      background-color: #9b1c05;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      padding: 10px 20px;
+      font-size: 18px;
+      margin-top: 10px;
+      cursor: pointer;
+    }
+
+    .book-button:hover {
+      background-color: #9b1c05;
+    }
+
+    .logout-button {
+      display: block;
+      background-color: rgb(224, 206, 206);
+      color: black;
+      border: none;
+      border-radius: 5px;
+      padding: 10px 20px;
+      font-size: 18px;
+      margin-top: 10px;
+      cursor: pointer;
+    }
+
+    .logout-button:hover {
+      background-color: rgb(224, 158, 158);
+    }
+
+    /* Responsive styles */
+    @media (max-width: 767px) {
+      form {
+        width: 100%;
+        padding: 10px;
+      }
+
+      input[type="text"],
+      input[type="password"],
+      select {
+        width: 100%;
+      }
+
+      table th,
+      table td {
+        font-size: 14px;
+        padding: 5px;
+      }
+
+      table th {
+        font-size: 16px;
+      }
+    }
+  </style>
+
+<body>
+  <header>
+    <h1>RouteEase</h1>
+    <nav>
+      <button class="logout-button" onclick="window.location.href='index.html'">Logout</button>
+    </nav>
+  </header>
+  <main class="abcd">
+    <h2>Available Buses</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Route Number</th>
+          <th>From-To</th>
+          <th>Availabe Seats</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>4</td>
+          <td>University to Sector 17, Chandigarh</td>
+          <td>50</td>
+          <td><button class="book-button" onclick="window.location.href='student1.html'">Book Now</button></td>
+
+        </tr>
+        <tr>
+          <td>6</td>
+          <td>University to Mohali Bus Stand</td>
+          <td>45</td>
+          <td><button class="book-button" onclick="window.location.href='student1.html'">Book Now</button></td>
+
+        </tr>
+        <tr>
+          <td>7</td>
+          <td>University to Panchkula Bus Stand</td>
+          <td>30</td>
+          <td><button class="book-button" onclick="window.location.href='student1.html'">Book Now</button></td>
+
+        </tr>
+        <tr>
+          <td>11</td>
+          <td>University to sec-22,Chandigarh</td>
+          <td>47</td>
+          <td><button class="book-button" onclick="window.location.href='student1.html'">Book Now</button></td>
+        </tr>
+      </tbody>
+    </table>
+  </main>
+</body>
+
+</html>

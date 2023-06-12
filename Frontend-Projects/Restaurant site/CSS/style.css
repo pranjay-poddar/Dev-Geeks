@@ -1,4 +1,4 @@
- body{
+body{
     margin: 0;
 }       
 .header{
@@ -7,8 +7,8 @@
    color: white;
 }
 .logo-image{
-   width: 100%;
-   height: 100%;
+   width: 10%;
+   height: 10%;
    float: left;
 }
 .name{
@@ -82,7 +82,7 @@ margin: 0;
  }
 }
 
- Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other 
+ /*Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other*/
 @media screen and (max-width: 400px) {
  .navbar a {
    float: none;
@@ -94,6 +94,7 @@ margin: 0;
  }
  
 }
+
 .footer{
    padding: 10px;
    display: block;
@@ -167,8 +168,24 @@ margin: 0;
     color: #A76502;
 }
 .img1{
-    float: left;
+    border-radius: 50%;
 }
+.img2{
+    border-radius: 50%;
+}
+.img3{
+    border-radius: 50%;
+}
+.img4{
+    border-radius: 50%;
+}
+
+.column1 {
+    float: left;
+    width: 50%;
+    padding: 5px;
+}
+
 .container{
     background-color:#E0A54D;
 }
@@ -328,3 +345,4 @@ input[type=submit]:hover{
     }
    
 } 
+
