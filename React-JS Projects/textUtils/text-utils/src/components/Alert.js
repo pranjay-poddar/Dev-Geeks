@@ -1,5 +1,7 @@
 import React from "react";
 
+// The display of alert messages on the web page is handled by the following code
+
 export default function Alert(props) {
   const capitalize = (word) => {
     const lower = word.toLowerCase();

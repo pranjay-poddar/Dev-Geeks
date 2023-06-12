@@ -68,3 +68,39 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+### About the project:-
+
+TextUtils is a user-friendly and feature-rich website designed to simplify text manipulation tasks. It offers a range of useful tools to enhance your text editing experience. Here's a rundown of its key features:
+
+1. _Word Counter_: Quickly determine the number of words in your text. Simply paste or type your text, and the Word Counter will provide an instant count.
+
+2. _Character Counter_: Need to know the character count? TextUtils has you covered. It efficiently calculates the number of characters in your text, including spaces and punctuation.
+
+3. _Lowercase to Uppercase_: Easily convert your text from lowercase to uppercase with a single click. This feature is particularly handy when you need to change the case of an entire block of text.
+
+4. _Uppercase to Lowercase_: Conversely, you can convert uppercase text to lowercase effortlessly. This tool comes in handy when you want to standardize the case of a text passage.
+
+5. _Text Slicing_: Extract a specific portion of your text using the Text Slicing feature. Define the starting and ending positions, and TextUtils will generate the sliced text for you.
+
+6. _Text Erase_: Remove specific sections of your text with ease. Specify the portion you want to delete, and TextUtils will eliminate it, providing you with the modified text.
+
+7. _Text Replace_: Replace occurrences of a particular word or phrase within your text. Specify the target term and the replacement, and TextUtils will perform the substitution efficiently.
+
+TextUtils also includes some special additional features to enhance user experience:
+
+1. _Favicon for the website_: The website has its own distinctive favicon, making it easily identifiable in browser tabs or bookmarks.
+
+2. _Alert messages for every action_: TextUtils provides informative alert messages to confirm the successful completion of each action, ensuring clarity and transparency.
+
+3. _Toggle button for enabling and disabling dark mode_: Users have the flexibility to switch between a light and dark mode theme, enhancing readability and reducing eye strain based on their preference.
+
+4. _Time taken to read the text being written_: TextUtils calculates the approximate time it would take to read the text in the text box, providing users with a valuable reference.
+
+5. _Preview section_: A live preview section displays the text being written in real-time, allowing users to view the output as they type or paste.
+
+6. _About page_: TextUtils includes an About page that provides a brief description and background information about the app, giving users a better understanding of its purpose and features.
+
+7. _Responsiveness of the website_: The website is designed to be responsive, ensuring a seamless experience across different devices and screen sizes.
+
+_With its array of features and thoughtful additions, TextUtils aims to be a reliable and efficient tool for all your text manipulation needs._

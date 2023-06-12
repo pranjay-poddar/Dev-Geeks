@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 
+// Features and operations of textUtils is taken care of by the following code
+
 export default function TextForms(props) {
   const handleUpClick = () => {
     console.log("Upper case was clicked " + text);
