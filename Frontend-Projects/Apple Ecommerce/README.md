@@ -34,3 +34,7 @@
 - Change Directory to 'Apple Ecommerce' By using:
      - ``` cd Apple Ecommerce ```
 - Run the index file and see the website. 😀
+
+# change 
+  I have changed the header portion making it sutable to look ,and changed some of the buttons style.
+  I will continue the work in it if o found something to be edited.
