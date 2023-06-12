@@ -40,6 +40,7 @@ a {
 ul,
 li {
     list-style: none;
+    padding: 5px;
 }
 
 h2,
@@ -75,16 +76,25 @@ h3 {
 
 .nav {
     padding: 1.6rem 0;
+    background-color:rgb(106, 10, 106);
+    color:white
+}
+a:hover{
+    background-color:rgb(206, 202, 206);
+    border-radius:13%;
+    height:-12%;
+    margin-top:5%;
+    color:rgb(106, 10, 106);
 }
 
 .logo h1 {
     font-size: 4rem;
 }
 
-.cart svg {
+/* .cart svg {
     width: 3rem;
     height: 3rem;
-}
+} */
 
 .hamburger {
     display: none;
@@ -102,27 +112,35 @@ h3 {
 
 .nav__menu {
     width: 50%;
+    color:white
 }
 
 .nav__list {
     display: flex;
     width: 70%;
+    color:white
 }
 
 .nav__item:last-child {
     margin-right: .5rem;
+    color:white
 }
 
-.button {
+/* .button {
     display: inline-block;
     font-size: 1.8rem;
     font-weight: 500;
-}
+} */
+
+
+
 
 .nav__link:link,
 .nav__link:visited {
-    color: var(--dark-color);
-    padding: 1rem;
+    /* color: var(--dark-color); */
+    padding: 2rem;
+    color:white;
+    font-size:160%;
 }
 
 .cart {
@@ -151,7 +169,7 @@ h3 {
 
     .nav__item {
         width: 100%;
-        margin: 1rem 0;
+        margin: 0.5rem 0;
     }
 
     .nav__item:last-child {
@@ -239,17 +257,60 @@ h3 {
     margin-bottom: 2.5rem;
 }
 
-.button {
+/* .button {
     display: inline-block;
     text-transform: uppercase;
     font-weight: 500;
-}
+} */
 
-.hero__btn {
+/* New Animated button */
+.btn {
+    padding: 1.1em 2em;
+    background: none;
+    border: 2px solid #fff;
+    font-size: 15px;
+    color: #131313;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s;
+    border-radius: 12px;
+    background-color: #ecd448;
+    font-weight: bolder;
+    box-shadow: 0 2px 0 2px #000;
+  }
+  .btn:before {
+    content: "";
+    position: absolute;
+    width: 100px;
+    height: 120px;
+    background-color: #ff6700;
+    top: 50%;
+    transform: skewX(30deg) translate(-150px, -50px);
+    transition: all 0.5s;
+  }
+  
+  .btn:hover {
+    background-color: #4cc9f0;
+    color: #fff;
+    box-shadow: 0 2px 0 2px #0d3b66;
+  }
+  
+  .btn:hover::before {
+    transform: skewX(30deg) translate(150%, -50%);
+    transition-delay: 0.1s;
+  }
+  
+  .btn:active {
+    transform: scale(0.9);
+  }
+  
+
+/* .hero__btn {
     color: var(--white);
     padding: 1.2rem 4rem;
     background-color: var(--default);
-}
+} */
 
 .go-down svg {
     width: 3rem;
@@ -329,10 +390,10 @@ h3 {
         font-size: 1.5rem;
     }
 
-    .hero__btn {
+    /* .hero__btn {
         font-size: 1.5rem;
         padding: .7rem 2rem;
-    }
+    } */
 
     .go-down {
         display: none;
