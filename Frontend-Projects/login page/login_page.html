@@ -1,51 +1,43 @@
 <!DOCTYPE html>
-<html>
-<head>
-	<title>Website</title>
-	<link rel="stylesheet" href="style.css">
-</head>
-<body>
-	<div class="full-page">
-		<!--Priyanshu Garg-->
-		<!--<button class="loginbtn" id="lgnbtn" onclick="document.getElementById('lgnbtn').style.top='-200px',
-			document.getElementById('login-form').style.display='block'"  
-			style="width: auto; position: absolute; transform: translate(600px,250px); ">Login</button>-->
-		<div class="navbar">
-			<div>
-				<a href="website.html">Priyanshu Garg</a>
-			</div>
-			<nav>
-				<ul id="MenuItems">
-					<li><a href="#">Home</a></li>
-					<li><a href="#">About</a></li>
-					<li><a href="#">Services</a></li>
-					<li><a href="#">Contact</a></li>
-					<li><button class='loginbtn' onclick="document.getElementById('login-form').style.display='block'" style="width:auto;">Login</button></li>
-				</ul>
-			</nav>
-		</div>
-		<div class="login">    
-			<form id="login" method="get" action="login.php">    
-				<label><b>User Name     
-				</b>    
-				</label>    
-				<input type="text" name="Uname" id="Uname" placeholder="Username">    
-				<br><br>    
-				<label><b>Password     
-				</b>    
-				</label>    
-				<input type="Password" name="Pass" id="Pass" placeholder="Password">    
-				<br><br>    
-				<input type="button" name="log" id="log" value="Log In Here">       
-				<br><br>    
-				<input type="checkbox" id="check">    
-				<span>Remember me</span>    
-				<br><br>    
-				Forgot <a href="#">Password</a>    
-			</form>     
-		</div> 
-	
-			
-		
-</body>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login Form</title>
+    <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon">
+    <script src="https://kit.fontawesome.com/d1c523657e.js" crossorigin="anonymous"></script>
+      <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <section>
+      <div class="login-box">
+        <form action="">
+          <h2>Login</h2>
+          <div class="input-box">
+            <span class="icon"><i class="bx bxs-envelope"></i></span>
+            <input type="email" required />
+            <label>Email</label>
+          </div>
+          <div class="input-box">
+            <span class="icon"><i class="bx bxs-lock-alt"></i></span>
+            <input type="password" required />
+            <label>Password</label>
+          </div>
+          <div class="remember-forget">
+            <label><input type="checkbox" />remember me</label>
+            <a href="#">Forget Password?</a>
+          </div>
+          <button type="submit">Login</button>
+          <div class="register-link">
+            <p>Don't have an account? <a href="signup.html">Register</a></p>
+          </div>
+        </form>
+      </div>
+    </section>
+  </body>
 </html>
