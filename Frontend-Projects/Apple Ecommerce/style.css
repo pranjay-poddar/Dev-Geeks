@@ -65,8 +65,8 @@ html {
   text-transform: uppercase;
   display: inline-block;
   margin: 0 3rem;
-  color: var(--white-color);
-  transition: all 0.2s ease;
+   color: var(--white-color);
+  transition: transform 0.5s;
 }
 
 .navbar-link:hover {
@@ -967,4 +967,116 @@ header{
   .icon-link img {
     width: 6rem;
   }
+}
+/*footer*/
+.ac-gf-footer {
+  background-color: #f5f5f5;
+  padding: 40px 0;
+  font-family: Arial, sans-serif;
+}
+
+.ac-gf-footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.ac-gf-footer-callout {
+  flex: 0 0 18%;
+  margin-bottom: 30px;
+}
+
+.ac-gf-footer-callout-title {
+  color: #666666;
+  font-size: 25px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.ac-gf-footer-callout-links {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.ac-gf-footer-callout-links li {
+  font-size: 15px;
+  margin-bottom: 5px;
+}
+
+.ac-gf-footer-callout-links li a {
+  color: #333;
+  text-decoration: none;
+}
+.ac-gf-footer-callout-links li a:hover{
+  color: #000000;
+  cursor: pointer;
+} 
+
+.ac-gf-footer-bottom {
+  background-color: #333;
+  padding: 20px 0;
+  color: #fff;
+}
+
+.ac-gf-footer-bottom-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.ac-gf-footer-bottom-left {
+  display: flex;
+  align-items: center;
+}
+
+.ac-gf-footer-bottom-left p {
+  margin: 0;
+}
+
+.ac-gf-footer-bottom-links {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.ac-gf-footer-bottom-links li {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.ac-gf-footer-bottom-links li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.ac-gf-footer-bottom-country {
+  margin-left: 10px;
+}
+
+.ac-gf-footer-bottom-right {
+  text-align: right;
+}
+
+.ac-gf-footer-bottom-icons {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.ac-gf-footer-bottom-icons li {
+  display: inline-block;
+  margin-left: 10px;
+}
+
+.ac-gf-footer-bottom-icons li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 20px;
 }

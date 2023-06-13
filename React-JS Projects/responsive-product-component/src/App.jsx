@@ -1,13 +1,17 @@
-import React, { useState } from "react";
+import React from "react";
 import "./App.css";
-
-import Product from "./component/product-view/index";
+import DarkModeButton from './component/product-view/Darkmode';
+import ProductViewComponent from "./component/product-view/product-view.component";
 import { data } from "./component/product-view/models/sampleSchema";
 
 function App() {
+  const quantity=1;
   return (
     <div className="App">
-      <Product product={data} />
+      <DarkModeButton />
+      {data.map((product) => (
+        <ProductViewComponent key={product.id} product={product} quantity={quantity} />
+      ))}
     </div>
   );
 }

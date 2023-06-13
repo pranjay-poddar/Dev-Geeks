@@ -1,0 +1,35 @@
+# Rock, Paper, Scissors Game
+
+This is a simple implementation of the classic game "Rock, Paper, Scissors" using Python.
+
+## How to Play
+
+1. Clone the repository or download the source code files.
+2. Make sure you have Python installed on your system.
+3. Open a terminal or command prompt and navigate to the project directory.
+
+### Running the Game
+
+4. Run the following command to start the game:
+
+     python main.py
+
+5. The game will prompt you to enter your choice (rock, paper, or scissors).
+6. Enter your choice by typing `0` for rock, `1` for paper, or `2` for scissors, and press Enter.
+7. The computer will randomly select its choice.
+8. The result of the game will be displayed, indicating whether you won, lost, or it was a tie.
+9. You can play again by following the prompts.
+
+## Requirements
+
+- Python 
+##Game Rules
+ Here are the rules for the game of Rock, Paper, Scissors:
+
+1.Rock beats Scissors: A player who chooses Rock wins against an opponent who chooses Scissors. Rock smashes Scissors.
+
+2.Paper beats Rock: A player who chooses Paper wins against an opponent who chooses Rock. Paper covers Rock.
+
+3.Scissors beat Paper: A player who chooses Scissors wins against an opponent who chooses Paper. Scissors cut Paper.
+
+4.If both players choose the same option, it's a tie, and the game is usually played again.

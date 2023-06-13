@@ -10,32 +10,33 @@
 </head>
 <body>
     <div class="content">
-        <h2>sidebar Menu <br> Using html and CSS</h2>
+        <h2>Sidebar Menu using html and css</h2>
     </div>
     <div class="open">
         <span class="fa fa-bars" onclick="openbar()"></span>
     </div>
     <div class="sidebar" id="sidebar">
-    <div class="close">
-        <span class="fa fa-times" onclick="closebar()"></span>
-    </div>
-    <div class="title"> sidebar</div>
-    <ul class="links">
-        <li><a href="#"><i class="fa fa-home"> <br> Home</i></a></li>
-        <li><a href="#"><i class="fa fa-qrcode"> <br>  Dashboard</i></a></li>
-        <li><a href="#"><i class="fa fa-user"> <br>  Profile</i></a></li>
-        <li><a href="#"><i class="fa fa-bell"> <br>  Notification</i></a></li>
-        <li><a href="#"><i class="fa fa-envelope"> <br>  Contact us</i></a></li>
-        <li><a href="#"><i class="fa fa-power-off"> <br>  Logout</i></a></li>
-    </ul>
-    <div class="social">
-        <i class="fa fa-instagram"></i>
-        <i class="fa fa-youtube-play"></i>
-        <i class="fa fa-facebook"></i>
-        <i class="fa fa-twitter"></i>
-    </div>
+        <div class="close" onclick="closebar()">
+            <span class="fa fa-times"></span>
+        </div>
+        <h1 class="title"> Sidebar</h1>
+        <div class="container">
+            <div class="links">
+                <i class="fa fa-home"><h2 class="link-title">Home</h2></i>
+                <i class="fa fa-qrcode"><h2 class="link-title">Dashboard</h2></i>
+                <i class="fa fa-user"><h2 class="link-title">Profile</h2></i>
+                <i class="fa fa-bell"><h2 class="link-title">Notification</h2></i>
+                <i class="fa fa-envelope"><h2 class="link-title">Contact US</h2></i>
+                <i class="fa fa-power-off"><h2 class="link-title">Logout</h2></i>
+            </div>
+            <div class="social">
+                <i class="fa fa-instagram instagram"></i>
+                <i class="fa fa-youtube-play youtube"></i>
+                <i class="fa fa-facebook facebook"></i>
+                <i class="fa fa-twitter twitter"></i>
+            </div>
+        </div>
     </div>
     <script src="script.js"></script>
-
 </body>
 </html>

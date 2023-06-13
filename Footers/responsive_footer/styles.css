@@ -215,3 +215,62 @@ footer{
 	}
 
 }
+
+
+
+  /* Hovering effect for footer-center icons */
+  .footer-center i {
+	color: #888;
+	font-size: 18px;
+	transition: color 0.3s ease;
+  }
+  
+  .footer-center i:hover {
+	color: blue;
+  }
+  
+  /* Hovering effect for footer-center links */
+  .footer-center a {
+	color: #888;
+	font-size: 14px;
+	text-decoration: none;
+	transition: color 0.3s ease;
+  }
+  
+  .footer-center a:hover {
+	color: blue;
+  }
+  
+
+/* Hovering effect for footer links */
+.footer-distributed .footer-links a:hover {
+	color: blue;
+	text-decoration: underline;
+  }
+  
+  /* Animation for footer company name */
+  .footer-distributed .footer-company-name {
+	animation-name: blink;
+	animation-duration: 1s;
+	animation-iteration-count: infinite;
+  }
+  
+  @keyframes blink {
+	0%, 100% { opacity: 1; }
+	50% { opacity: 0; }
+  }
+  
+  /* Hovering effect for footer icons */
+  .footer-distributed .footer-icons a {
+	display: inline-block;
+	margin: 0 5px;
+	color: #888;
+	font-size: 18px;
+	transform: scale(1);
+	transition: transform 0.3s ease;
+  }
+  
+  .footer-distributed .footer-icons a:hover {
+	transform: scale(1.2);
+  }
+  
