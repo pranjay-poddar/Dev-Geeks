@@ -2,7 +2,11 @@
 A customizable, modular, responsive, Image Gallery website.
 
 
-https://drive.google.com/file/d/1BNpE_z8WCi86R_eumocx3CIYYmkfnCwI/view?usp=drive_link
+
+
+https://github.com/Ash0807/Dev-Geeks/assets/93093775/d126e2b1-1ffc-479b-8dd3-dee5dea16bce
+
+
 
 
 
