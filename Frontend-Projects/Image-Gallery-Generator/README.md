@@ -2,7 +2,7 @@
 A customizable, modular, responsive, Image Gallery website.
 
 
-https://github.com/Ash0807/Image-Gallery/assets/93093775/cdd0e352-5497-4db8-8ad0-7a6a6b22f2d5
+https://drive.google.com/file/d/1BNpE_z8WCi86R_eumocx3CIYYmkfnCwI/view?usp=drive_link
 
 
 
