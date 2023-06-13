@@ -7,7 +7,7 @@ _______________________________________________________________________
 - This program can greetings to the people in the coding style.
 - Generated different emojis will give a very attractive and shiny look.
 - Playing song in the background will impress more and more.
-- You can as many songs in the directory **music** will automatically fetch by the program.
+- You can as many songs in the directory **Wishing Bot** will automatically fetch by the program.
 - After fetching program will give you a suggesion of playing songs.
 - Add more and more songs to expand this **Wishing bot model**
 

@@ -9,7 +9,7 @@ pygame.init()
 emojis = ['😃', '🐻‍❄️', '🐏', '🌲', '🎆', '❤️', '⛄', '🎮', '🔊', '⚙️', '😍', '😴', '🤑', '💀', '👻', '👽', '🐭', '🐸', '🐢', '🐬', '🧟', '🥷', '🎈', '🎉', '😷', '🕸️', '🎯', '🔒', '🔑', '🧲', '☎️', '🏧', '⏰', '🧭', '🏚️', '☢️', '📵', '🚓']
 
 # Fetching songs from the given directory
-musicDir = './Wishing Bot/musics'
+musicDir = './Wishing Bot'
 songs = os.listdir(musicDir)
 
 # Main function start the wishing model
