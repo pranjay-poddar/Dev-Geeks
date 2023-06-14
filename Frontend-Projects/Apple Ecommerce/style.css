@@ -39,32 +39,45 @@ html {
 }
 
 .logo {
-  position: absolute;
-  top: 3rem;
-  left: 3rem;
+  position : absolute;
+  top : 1rem;
 }
 
 .logo i {
-  font-size: 10rem;
-  color: rgba(0, 0, 0, 0.8);
+  font-size: 6rem;
+  color: rgba(255, 255, 255, 0.8);
+  transition: all 0.2s ease;
+}
+
+.logo i:hover{
+  scale : 1.1;
 }
 
 .navbar {
   position: absolute;
   top: 3rem;
-  right: 10%;
+  right: 5%;
+  padding : 0.2rem;
 }
 
 .navbar-link {
   font-size: 2rem;
+  text-transform: uppercase;
   display: inline-block;
   margin: 0 3rem;
-  color: var(--black-color);
+   color: var(--white-color);
   transition: transform 0.5s;
 }
 
 .navbar-link:hover {
-  transform: scale(1.5);
+  scale : 1.1;
+  font-weight : bold;
+  color :rgb(136, 222, 232);
+}
+
+header{
+  padding : 4rem;
+  background :var(--black-color);
 }
 
 .cube-wrapper {
@@ -380,40 +393,49 @@ html {
 }
 
 .iphone-btn {
-  width: 6rem;
-  height: 6rem;
+  width: 20rem;
+  height: 8rem;
   background-image: linear-gradient(to right,
       rgb(51, 51, 51) 60%,
       rgb(82, 82, 82));
   margin: 0 3rem;
-  border-radius: 50%;
+  border-radius: 2rem;
   position: relative;
+  transition: all 0.2s ease;
 }
 
 .iphone-btn::after {
   content: "";
-  width: 50%;
-  height: 50%;
+  width: 90%;
+  height: 70%;
   display: block;
   border: 0.1rem solid #6edae6;
-  border-radius: 1rem;
+  border-radius: 1.2rem;
+}
+
+.iphone-btn:hover::after{
+  border: 0.3rem solid #6edae6;
+}
+
+.iphone-btn:hover{
+  scale : 1.05;
 }
 
 .iphone-btn span {
   position: absolute;
-  top: -3rem;
-  font-size: 1.6rem;
+  /* top: -3rem; */
+  font-size: 2rem;
   font-weight: 400;
   text-transform: uppercase;
   letter-spacing: 0.1rem;
   color: var(--primary-color);
   width: max-content;
-  transform: scale(0);
-  transition: transform 0.5s;
+  transform: scale(1);
+  transition: transform 0.1s ease;
 }
 
 .iphone-btn:hover span {
-  transform: scale(1);
+  font-weight : bold;
 }
 
 .section-3 {
@@ -642,16 +664,23 @@ html {
   position: absolute;
   bottom: 30vh;
   right: 80%;
-  width: 10rem;
-  height: 3rem;
+  padding : 1.5rem 5rem;
   background-color: var(--black-color);
   color: var(--primary-color);
-  border: 0.1rem dashed var(--primary-color);
   border-radius: 4rem;
-  font-size: 1.6rem;
-  font-weight: 200;
+  font-size: 1.8rem;
+  font-weight: light;
   cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition : all 0.2s ease;
 }
+
+.watch-btn:hover{
+  border : 0.5rem solid var(--primary-color);
+}
+
 
 .section-5 {
   width: 100%;
@@ -938,4 +967,116 @@ html {
   .icon-link img {
     width: 6rem;
   }
+}
+/*footer*/
+.ac-gf-footer {
+  background-color: #f5f5f5;
+  padding: 40px 0;
+  font-family: Arial, sans-serif;
+}
+
+.ac-gf-footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.ac-gf-footer-callout {
+  flex: 0 0 18%;
+  margin-bottom: 30px;
+}
+
+.ac-gf-footer-callout-title {
+  color: #666666;
+  font-size: 25px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.ac-gf-footer-callout-links {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.ac-gf-footer-callout-links li {
+  font-size: 15px;
+  margin-bottom: 5px;
+}
+
+.ac-gf-footer-callout-links li a {
+  color: #333;
+  text-decoration: none;
+}
+.ac-gf-footer-callout-links li a:hover{
+  color: #000000;
+  cursor: pointer;
+} 
+
+.ac-gf-footer-bottom {
+  background-color: #333;
+  padding: 20px 0;
+  color: #fff;
+}
+
+.ac-gf-footer-bottom-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.ac-gf-footer-bottom-left {
+  display: flex;
+  align-items: center;
+}
+
+.ac-gf-footer-bottom-left p {
+  margin: 0;
+}
+
+.ac-gf-footer-bottom-links {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.ac-gf-footer-bottom-links li {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.ac-gf-footer-bottom-links li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.ac-gf-footer-bottom-country {
+  margin-left: 10px;
+}
+
+.ac-gf-footer-bottom-right {
+  text-align: right;
+}
+
+.ac-gf-footer-bottom-icons {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.ac-gf-footer-bottom-icons li {
+  display: inline-block;
+  margin-left: 10px;
+}
+
+.ac-gf-footer-bottom-icons li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 20px;
 }
