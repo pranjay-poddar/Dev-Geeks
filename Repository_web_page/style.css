@@ -349,7 +349,8 @@ body {
 }
 
 .about_repo li{
-    padding: 1rem 0;
+    line-height: 1.5;
+    padding-bottom: 1rem;
 }
 
 
