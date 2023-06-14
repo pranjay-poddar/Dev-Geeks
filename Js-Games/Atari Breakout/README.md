@@ -4,6 +4,10 @@ This project is an implementation of the classic Atari Breakout game using HTML5
 
 ## Demo
 
+
+https://github.com/amelia2802/Dev-Geeks/assets/49182604/35f5a084-49bb-4ed9-9038-3c796d8855c8
+
+
 ## How to Play
 - Move the paddle using the left and right arrow keys on your keyboard or by moving your mouse within the game area.
 - The objective is to break all the bricks by bouncing the ball off the paddle and hitting the bricks.
