@@ -1,0 +1,59 @@
+import { Message } from "./eventStream";
+import { HttpRequest } from "./http";
+export type DateInput = number | string | Date;
+export interface SigningArguments {
+  signingDate?: DateInput;
+  signingService?: string;
+  signingRegion?: string;
+}
+export interface RequestSigningArguments extends SigningArguments {
+  unsignableHeaders?: Set<string>;
+  signableHeaders?: Set<string>;
+}
+export interface RequestPresigningArguments extends RequestSigningArguments {
+  expiresIn?: number;
+  unhoistableHeaders?: Set<string>;
+}
+export interface EventSigningArguments extends SigningArguments {
+  priorSignature: string;
+}
+export interface RequestPresigner {
+  presign(
+    requestToSign: HttpRequest,
+    options?: RequestPresigningArguments
+  ): Promise<HttpRequest>;
+}
+export interface RequestSigner {
+  sign(
+    requestToSign: HttpRequest,
+    options?: RequestSigningArguments
+  ): Promise<HttpRequest>;
+}
+export interface StringSigner {
+  sign(stringToSign: string, options?: SigningArguments): Promise<string>;
+}
+export interface FormattedEvent {
+  headers: Uint8Array;
+  payload: Uint8Array;
+}
+export interface EventSigner {
+  sign(event: FormattedEvent, options: EventSigningArguments): Promise<string>;
+}
+export interface SignableMessage {
+  message: Message;
+  priorSignature: string;
+}
+export interface SignedMessage {
+  message: Message;
+  signature: string;
+}
+export interface MessageSigner {
+  signMessage(
+    message: SignableMessage,
+    args: SigningArguments
+  ): Promise<SignedMessage>;
+  sign(
+    event: SignableMessage,
+    options: SigningArguments
+  ): Promise<SignedMessage>;
+}

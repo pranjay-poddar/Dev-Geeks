@@ -1,0 +1,1 @@
+{"version":3,"file":"bson_value.d.ts","sourceRoot":"","sources":["../src/bson_value.ts"],"names":[],"mappings":"AAEA,cAAc;AACd,8BAAsB,SAAS;IAC7B,cAAc;IACd,aAAoB,SAAS,IAAI,MAAM,CAAC;IAOxC,cAAc;aACE,OAAO,IAAI,MAAM;IAEjC,gBAAgB;IAChB,QAAQ,CAAC,cAAc,IAAI,OAAO;CACnC"}
