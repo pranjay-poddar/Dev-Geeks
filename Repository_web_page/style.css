@@ -348,7 +348,9 @@ body {
   transition: all 0.3s ease;
 }
 
-
+.about_repo li{
+    padding: 1rem 0;
+}
 
 
 .logo {
