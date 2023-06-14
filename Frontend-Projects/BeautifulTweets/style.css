@@ -9,13 +9,15 @@ body {
 
 }
 :root{
-  --primary-color: rgb(186, 70, 70);
+
+  --primary-color: grey;
   --secondary-color: #d4d4d4;
-  --background--color:#242433;
+  --background--color:#202021;
   --bird-color: white;
 }
 .dark-theme{
-  --primary-color:rgb(1, 142, 140);
+  --primary-color:black;
+
   --secondary-color: black;
   --background--color: white;
   --bird-color: #1DA1F2;
@@ -30,10 +32,9 @@ body {
 }
 
 .box {
-  background-color: #0a1f2b;
+
   border: 0.01rem solid var(--primary-color);
-  width: 400px;
-  height: 200px;
+  width: 300px;
   margin: 1%;
   border-radius: 7px;
   padding: 1.2%;
@@ -249,5 +250,5 @@ svg{
 }
 .active{
   display: block;
+ 
 }
-
