@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Typing Speed Test</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: rgb(255, 0, 0);
+    }
+    
+    #container {
+      max-width: 600px;
+      margin: 0 auto;
+      text-align: center;
+      padding: 200px;
+    }
+    
+    #text {
+      font-size: 20px;
+      margin-bottom: 20px;
+    }
+    
+    #input {
+      width: 400px;
+      height: 40px;
+      font-size: 18px;
+      padding: 5px;
+      margin-bottom: 20px;
+      background-color: rgb(255, 255, 255);
+    }
+    
+    #result {
+      font-size: 18px;
+      margin-bottom: 20px;
+    }
+    
+    #startButton, #restartButton {
+      background-color: #eaff00;
+      color: rgb(0, 0, 0);
+      padding: 10px 20px;
+      border: none;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      margin: 10px;
+      cursor: pointer;
+      border-radius: 4px;
+    }
+    
+    #restartButton {
+      background-color: #2776fe;
+    }
+  </style>
+</head>
+<body>
+  <div id="container">
+    <h1>Typing Speed Test</h1>
+    <p id="text">Start typing and press enter once you complete.</p>
+    <input type="text" id="input" placeholder="Start typing here..." disabled>
+    <p id="result"></p>
+    <button id="startButton">Start Test</button>
+    <button id="restartButton" style="display: none;">Restart Test</button>
+  </div>
+
+  <script>
+    const textElement = document.getElementById('text');
+    const inputElement = document.getElementById('input');
+    const resultElement = document.getElementById('result');
+    const startButton = document.getElementById('startButton');
+    const restartButton = document.getElementById('restartButton');
+    let startTime, endTime;
+
+    function startTest() {
+      inputElement.value = '';
+      inputElement.disabled = false;
+      inputElement.focus();
+      startButton.style.display = 'none';
+      restartButton.style.display = 'none';
+      resultElement.innerText = '';
+      startTime = new Date();
+    }
+
+    function endTest() {
+      endTime = new Date();
+      const timeDiff = endTime - startTime;
+      const seconds = timeDiff / 1000;
+      const words = textElement.innerText.trim().split(' ').length;
+      const speed = Math.round((words / seconds) * 60);
+
+      resultElement.innerText = `Your typing speed: ${speed} words per minute`;
+      inputElement.disabled = true;
+      restartButton.style.display = 'inline-block';
+    }
+
+    startButton.addEventListener('click', startTest);
+    restartButton.addEventListener('click', startTest);
+    inputElement.addEventListener('keyup', function(e) {
+      if (e.key === 'Enter') {
+        endTest();
+      }
+    });
+  </script>
+</body>
+</html>
