@@ -728,6 +728,11 @@ Happy Coding! -->
 <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Frontend-Projects/RatingComponent"> RatingComponent </a></td>
 </tr>
 
+<tr align="center">	
+<td align="center"> 241.</td>
+<td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Frontend-Projects/ProductPreviewComponent"> ProductPreviewComponent </a></td>
+</tr>
+
 
 </table>
 
