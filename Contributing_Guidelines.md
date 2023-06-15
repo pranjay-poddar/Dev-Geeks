@@ -118,18 +118,27 @@ Usually, all repositories have a main branch that is regarded to be stable, and 
 `$ git checkout -b <feature-branch>`
 This will create a new branch out of master branch. Now start working on the problem and commit your changes.
 
-`$ git add --all`
-`$ git commit -m "<commit message>"`
-The first command adds all the files or you can add specific files by removing -a and adding the file names. The second command gives a message to your changes so you can know in future what changes this commit makes. If you are solving an issue on original repository, you should add the issue number like #35 to your commit message. This will show the reference to commits in the issue.
+`# Track the changes
+ git status`
 
+`git add . or git add <file_name>`
+Above commands will track and stage your changes.
+The first command adds all the files or you can add specific files by removing "." and adding the file names. 
+
+
+`git commit -m "Write a meaningful but small commit message"`
+
+This command gives a message to your changes so you can know in future what changes this commit makes. If you are solving an issue on original repository, you should add the issue number like #35 to your commit message. This will show the reference to commits in the issue.
 <br />
 
 ### Push code and create a pull request
 
 You now have a new branch containing the modifications you want in the project you forked. Now, push your new branch to your remote github fork.
 
-`$ git push origin <feature-branch>`
-Now you are ready to help the project by opening a pull request means you now tell the project managers to add the feature or bug fix to original repository. You can open a pull request by clicking on green icon -
+`$ git push -u origin <feature-branch>`
+Now you are ready to help the project by opening a pull request means you now tell the project managers to add the feature or bug fix to original repository. 
+Create a PR on Github. (Don't just hit the create a pull request button, you must write a PR message to clarify why and what are you contributing)
+You can open a pull request by clicking on green icon -
 
 <p align="center">  <img  src="https://i.imgur.com/aGaqAD5.png">  </p>
 
