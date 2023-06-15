@@ -17,15 +17,15 @@
       h1 {
         text-align: center;
         font-family: "georgia",garamond,serif;
+        font-style: oblique;
       }
       .navbar {
         display: flex;
-        border: 2px solid black;
-        border-radius: 10px;
+        
         margin: 10px;
         padding: 10px;
         padding-left: 1000px;
-        background-color: black;
+        
       }
       
       body {
@@ -34,30 +34,48 @@
             rgba(255, 255, 255, 0.5),
             rgba(255, 255, 255, 0.5)
           ),
-          url(backimage.jpg);
+          url(back_image4.jpg);
         height: 100%;
         background-size: cover;
         background-repeat: no-repeat;
         background-attachment: fixed;
         background-position: 50% 50%;
+
+        
       }
       a {
-        color: white;
+        color:rgb(12, 12, 12);
+        font-size: larger;
         font-family: "georgia",garamond,serif;
       }
       a:hover {
-        background-color: rgb(0, 255, 247);
-        border: 2px solid black;
+        background-color:cornsilk;
+        border: 2px solid bisque;
+        border-radius: 10px;
+        padding: 5px;
       }
       p {
         margin-left: 200px;
       }
-      
+      .form-action{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+  
+      }
+
       form {
-        padding-left: 200px;
+        padding-top: 30px;
+        padding-left: 70px;
+        padding-right: 70px;
         text-align: justify;
         float: top;
         font-size: 25px;
+        border: 1px solid black;
+        height: 650px;
+        width: 400px;
+        background-color:black;
+        color: aliceblue;
       }
       img {
         display: inline-block;
@@ -66,12 +84,13 @@
       }
       #para {
         font-size: 20px;
-        font-family: "Lucida Console", Courier, monospace;
+        font-family:cursive;
         font-weight: bold;
       }
       #para2 {
         font-size: 20px;
         font-family: "Lucida Console", Courier, monospace;
+        color: wheat;
       }
       #footer {
         font-size: 20px;
@@ -80,7 +99,7 @@
   </head>
   <body>
     <header>
-      <nav class="navbar">
+     <nav class="navbar">
         <a href="home.html">HOME 
         </a> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
         &nbsp &nbsp &nbsp &nbsp 
@@ -88,8 +107,10 @@
         </a> &nbsp &nbsp
         &nbsp &nbsp &nbsp &nbsp &nbsp
       </nav>
+      
     </header>
-    <h1><b>Welcome to Apna Gym</b></h1>
+    <hr>
+    <h1><b>WELCOME TO APNA GYM</b></h1>
 
     <p id="para">
       Apna Gym provides a personalized, accessible, and inclusive place for your
@@ -102,8 +123,8 @@
       full-body involvement, and quality form for optimal results.
     </p>
     <br />
-    <p id="para2">GIVE YOUR DETAILS TO GRAB THE MEMBERSHIP:-</p>
-    
+    <p id="para2"><b><u>GIVE YOUR DETAILS TO GRAB THE MEMBERSHIP:-</u></b></p>
+    <div class="form-action">
     <form action="">
       <label for="name" size="25">Name</label> <br />
       <input type="text" placeholder="Enter your name" size="25" required /><br />
@@ -124,10 +145,12 @@
       <input type="radio" id="eveningshift" name="shift" value="eveningshift" size="25" required/>
       <label for="eveningshift">Evening shift(4pm to 9pm)</label><br /><br />
       <input type="submit" style="height: 30px" size="25" required/><br />
+      
     </form>
+    </div>
     <hr />
     <div id="footer">
-      <p>Contact us:</p>
+      <p><b>Contact us:</b></p>
       <p>7/A Amber Street , Kolkata-700098</p>
       <p>Contact number - 033-12345678/9876543210</p>
     </div>

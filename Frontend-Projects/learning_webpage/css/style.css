@@ -30,3 +30,13 @@ body {
   font-size: 60px;
   margin: 20px;
 }
+
+.card-body.text-center:hover {
+  border: 1px solid #007bff;
+  background: #c2c1ed0e;
+  padding: 15px !important;
+}
+button.btn.btn-outline-priamry:hover {
+  background: #007bff;
+  color: white;
+}
