@@ -1,0 +1,138 @@
+body {
+    
+    background-image: 
+      url('img1.jpg');
+    
+    height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: 50% 50%;
+    font-family: 'Geologica', sans-serif;
+  }
+   
+   body {
+    font-family: 'Baloo Bhai', cursive;
+    color: white;
+    margin: 0px;
+    padding: 0px;
+    background: url('http://drive.google.com/uc?export=view&id=11N_24lrG24VqCeGv2e3MLro-0scfq2dr'); 
+}
+
+.form {
+    font-family: 'Montserrat', sans-serif;
+}
+
+p {
+    font-size: 17px;
+    color: b;
+}
+
+.left {
+    display: inline-block;
+    /* border: 2px solid red; */
+    position: absolute;
+    left: 60px;
+    top: 20px;
+}
+
+.left img {
+    width: 136px;
+    filter: invert(100%);
+}
+
+.left div {
+    line-height: 19px;
+    font-size: 23px;
+    text-align: center;
+}
+
+
+.right {
+    position: absolute;
+    right: 34px;
+    top: 43px;
+
+}
+
+.navbar {
+    display: inline-block;
+}
+
+.navbar li {
+    display: inline-block;
+    font-size: 25px;
+}
+
+.navbar li a {
+    color: white;
+    text-decoration: none;
+    padding: 34px 23px;
+
+}
+
+.navbar li a:hover,
+.navbar li a.active {
+    text-decoration: underline;
+    color: grey;
+
+}
+
+.btn {
+    font-family: 'Baloo Bhai', cursive;
+    margin: 0px 9px;
+    background-color: black;
+    color: white;
+    padding: 4px 14px;
+    border: 2px solid grey;
+    border-radius: 10px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: rgb(31, 30, 30);
+}
+
+.container {
+    border: 2px solid white;
+    margin: 106px 80px;
+    padding: 75px;
+    width: 33%;
+    border-radius: 28px;
+}
+
+.right-container {
+    border: 2px solid white;
+    margin: 350px 450px;
+    padding: 75px;
+    left: 10px;
+    width: 36%;
+    height: 500px;
+    border-radius: 28px;
+    font-size: 20px;
+    align-items: left 60px;
+}
+
+
+.form-group input {
+    font-family: 'Baloo Bhai', cursive;
+    text-align: center;
+    display: block;
+    width: 508px;
+    padding: 1px;
+    border: 2px solid black;
+    margin: 11px auto;
+    font-size: 25px;
+    border-radius: 8px;
+}
+
+.container h1 {
+    text-align: center;
+}
+
+.container button {
+    display: block;
+    width: 74%;
+    margin: 20px auto;
+}
