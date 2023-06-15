@@ -722,6 +722,8 @@ Happy Coding! -->
 <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/MineSweeper%20game"> MineSweeper Game </a></td>
 <td align="center"> 338.</td>
 <td align="center"> <a href="#"> Amazon Clone </a></td>
+<td align="center"> 339.</td>
+<td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Frontend-Projects/NFTCardComponent"> NFTCardComponent </a></td>
 </tr>
 </table>
 
