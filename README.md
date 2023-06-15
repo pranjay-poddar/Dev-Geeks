@@ -731,6 +731,8 @@ Happy Coding! -->
 <tr align="center">	
 <td align="center"> 241.</td>
 <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Frontend-Projects/ProductPreviewComponent"> ProductPreviewComponent </a></td>
+<td align="center"> 242.</td>
+<td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Frontend-Projects/TestimonialGridSection"> TestimonialGridSection </a></td>
 </tr>
 
 
