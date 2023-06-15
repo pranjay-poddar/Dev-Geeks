@@ -733,6 +733,8 @@ Happy Coding! -->
 <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Frontend-Projects/ProductPreviewComponent"> ProductPreviewComponent </a></td>
 <td align="center"> 242.</td>
 <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Frontend-Projects/TestimonialGridSection"> TestimonialGridSection </a></td>
+<td align="center"> 242.</td>
+<td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Java%20Projects/LibraryManagement"> LibraryManagement </a></td>
 </tr>
 
 
