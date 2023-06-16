@@ -41,7 +41,7 @@
 ## **Preview**
 
 <div align='center'>
-<img src='./design/preview.webp' alt='Clipboard Landing Page solution preview image'>
+<img src='https://github.com/0xabdulkhalid/clipboard-landing-page/blob/main/design/preview.webp' alt='Clipboard Landing Page solution preview image'>
 </div>
 
 
@@ -63,7 +63,7 @@
   | :-----: |
   |  <b>Overall score 98% for Both Mobile & Desktop</b> |
   | |
-  | <img src='./images/pagespeed-insights-score.svg' alt='Scoreboard'> |
+  | <img src='https://github.com/0xabdulkhalid/clipboard-landing-page/blob/main/images/pagespeed-insights-score.svg' alt='Scoreboard'> |
   | |
   | Check out [**Pagespeed Insights**](https://pagespeed.web.dev/analysis/https-0xabdulkhalid-github-io-clipboard-landing-page/mmcr0olqn7?form_factor=mobile) to get live score |
   ||
