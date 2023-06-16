@@ -10,6 +10,8 @@ header {
     background: black;
     clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 80% 80%, 0% 100%);
 }
+
+/* //navbar secyion css */
 nav {
     width: 100%;
     height: 100px;
@@ -29,6 +31,8 @@ nav {
 .menu a:first-child {
     border-bottom: 2px solid rgb(118, 113, 112);
 }
+
+/* HOme section css */
 .container {
     width: 100%;
     display: flex;
@@ -69,6 +73,8 @@ h1 {
     font-family: "georgia", garamond, serif;
 
 }
+
+/* About section css */
 #about{
   padding: 50px 0px;
 }
@@ -120,6 +126,8 @@ margin: 3px;
 .icon img {
     width: 35px;
 }
+
+/* services section css */
 #services{
   padding: 50px 0px;
 }
@@ -144,6 +152,8 @@ padding-top: 15px;
   background-color: rgb(255, 203, 202) ;
   text-align: center;
 }
+
+/* client section css */
 #client{
   padding: 100px;
   background: url('./images/fitness-icon.png');
@@ -168,6 +178,8 @@ padding-top: 15px;
   width: 5%;
   height:5%;
 }
+
+/* contact section css */
 .contact-right img{
   width: 35px;
 }
@@ -213,6 +225,8 @@ textarea{
   margin-top: 10px;
   margin-bottom: 20px;
 }
+
+/* footer css */
 #footer{
   display: flex;
   justify-content: space-around;
