@@ -15,7 +15,7 @@
 
 ## **About us Page**
 <div align='center'>
-<img src='About%20us.png' alt='FAQ Accordion Card solution desktop preview image'>
+<img src='About us.png' alt='FAQ Accordion Card solution desktop preview image'>
 </div>
 
 
@@ -37,7 +37,7 @@
 
 ## **Contact Page**
 <div align='center'>
-<img src='Contact%20us.png' alt='FAQ Accordion Card solution desktop preview image'>
+<img src='Contact us.png' alt='FAQ Accordion Card solution desktop preview image'>
 </div>
 
 ## **Blogs Page**
