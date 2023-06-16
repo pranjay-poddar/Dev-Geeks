@@ -8,7 +8,23 @@
 	<p text-align="center">For More Information log on to <a href="https://devgeeks-os.netlify.app/repository_web_page/" target="_blank">Dev-Geeks</a></p>
 <br>
 <p>The Dev-Geeks repository is a collection of projects. It contains a variety of projects, ranging from web development to machine learning.Each project is designed to help developers learn and improve their skills in a particular area. The projects are written in a variety of languages, including Python, JavaScript, and HTML.The repository also includes tutorials and resources to help developers get started with the projects. The tutorials provide step-by-step instructions on how to set up the projects and how to use them. The resources provide additional information on the topics covered in the projects. The Dev-Geeks repository is a great resource for developers who are looking to learn and improve their skills. It provides a variety of projects that can help developers learn and improve their skills in a particular area. The tutorials and resources provided in the repository make it easy for developers to get started with the projects.</p>
+<div align="center">
 
+<img src="https://forthebadge.com/images/badges/open-source.svg" />
+<img src="https://forthebadge.com/images/badges/powered-by-coffee.svg" />
+<img src="https://forthebadge.com/images/badges/built-by-developers.svg" />
+  <br>
+  <img src="https://img.shields.io/github/contributors/pranjay-poddar/Dev-Geeks?style=for-the-badge" />
+  <img src="https://img.shields.io/github/last-commit/pranjay-poddar/Dev-Geeks?style=for-the-badge" />
+  <img src="https://img.shields.io/github/issues-pr-closed/pranjay-poddar/Dev-Geeks?style=for-the-badge" />
+  <img src="https://img.shields.io/github/issues-raw/pranjay-poddar/Dev-Geeks?style=for-the-badge" />
+  <img src="https://img.shields.io/github/stars/pranjay-poddar/Dev-Geeks?style=for-the-badge" />
+  <img src="https://img.shields.io/github/repo-size/pranjay-poddar/Dev-Geeks?style=for-the-badge" />
+  <img src="https://img.shields.io/github/issues-closed-raw/pranjay-poddar/Dev-Geeks?style=for-the-badge" />
+  <img src="https://img.shields.io/github/issues-pr-closed-raw/spranjay-poddar/Dev-Geeks?style=for-the-badge" />
+  <img src="https://img.shields.io/github/forks/pranjay-poddar/Dev-Geeks?style=for-the-badge" />
+
+ </div> 
 ![forthebadge](https://forthebadge.com/images/badges/uses-brains.svg)
 ![forthebadge](https://forthebadge.com/images/badges/check-it-out.svg)
 <br>
