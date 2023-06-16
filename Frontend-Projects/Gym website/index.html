@@ -6,153 +6,51 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Apna Gym</title>
-    
-    <style>
-      
-      body {
-        background-color: rgb(106, 102, 102);
-        font-family: "georgia",garamond,serif;
-
-      }
-      h1 {
-        text-align: center;
-        font-family: "georgia",garamond,serif;
-        font-style: oblique;
-      }
-      .navbar {
-        display: flex;
-        
-        margin: 10px;
-        padding: 10px;
-        padding-left: 1000px;
-        
-      }
-      
-      body {
-        
-        background-image: linear-gradient(
-            rgba(255, 255, 255, 0.5),
-            rgba(255, 255, 255, 0.5)
-          ),
-          url(back_image4.jpg);
-        height: 100%;
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-attachment: fixed;
-        background-position: 50% 50%;
-
-        
-      }
-      a {
-        color:rgb(12, 12, 12);
-        font-size: larger;
-        font-family: "georgia",garamond,serif;
-      }
-      a:hover {
-        background-color:cornsilk;
-        border: 2px solid bisque;
-        border-radius: 10px;
-        padding: 5px;
-      }
-      p {
-        margin-left: 200px;
-      }
-      .form-action{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-  
-      }
-
-      form {
-        padding-top: 30px;
-        padding-left: 70px;
-        padding-right: 70px;
-        text-align: justify;
-        float: top;
-        font-size: 25px;
-        border: 1px solid black;
-        height: 650px;
-        width: 400px;
-        background-color:black;
-        color: aliceblue;
-      }
-      img {
-        display: inline-block;
-        position: fixed;
-        right: 8px;
-      }
-      #para {
-        font-size: 20px;
-        font-family:cursive;
-        font-weight: bold;
-      }
-      #para2 {
-        font-size: 20px;
-        font-family: "Lucida Console", Courier, monospace;
-        color: wheat;
-      }
-      #footer {
-        font-size: 20px;
-      }
-    </style>
+   <link rel="stylesheet" href="style.css">
+   <link rel="icon" type="image/x-icon" href="favicon.png">
   </head>
   <body>
-    <header>
-     <nav class="navbar">
-        <a href="home.html">HOME 
-        </a> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
-        &nbsp &nbsp &nbsp &nbsp 
-        <a href="aboutus.html">ABOUT US
-        </a> &nbsp &nbsp
-        &nbsp &nbsp &nbsp &nbsp &nbsp
-      </nav>
-      
-    </header>
-    <hr>
-    <h1><b>WELCOME TO APNA GYM</b></h1>
+    <header class="header">
+     
+      <div class="left">
+          <img src="apnagymlogo.jpg" alt=""> 
+          <div><h2>Apna GYM</h2></div>
+      </div>
+     
+      <div class="right">
+        <ul class="navbar">
+          <li><a href="#">Home</a></li>
+          <li><a href="aboutus.html">About Us</a></li>
+          <li><a href="#">Fitness Tracker</a></li>
+          <li><a href="contactus.html">Contact Us</a></li>
+      </ul>
+      </div>
+  </header>
 
+   <div class="right-container">
+     <h1><b>Welcome to Apna Gym</b></h1>
+     <div>
     <p id="para">
-      Apna Gym provides a personalized, accessible, and inclusive place for your
+     <li> Apna Gym provides a personalized, accessible, and inclusive place for your
       workout! Achieve your individual fitness goals under the supervision of
-      certified trainers. Get added benefits of feature-loaded AF workouts App
-      absolutely free with your membership.The best of time-tested fitness
-      essentials combined with cutting-edge modern exercise science. Our
-      workouts are effective, safe, dynamic and fun. They do not make you feel
-      bored and monotonous unlike conventional gyms. We emphasize on movement,
+      certified trainers. <br>
+    <li>Get added benefits of feature-loaded AF workouts App
+      absolutely free with your membership.<br>
+     <li>The best of time-tested fitness
+      essentials combined with cutting-edge modern exercise science.<br>
+      <li>Our workouts are effective, safe, dynamic and fun.
+      <li> They do not make you feel bored and monotonous unlike conventional gyms.
+      <li> We emphasize on movement,
       full-body involvement, and quality form for optimal results.
     </p>
-    <br />
-    <p id="para2"><b><u>GIVE YOUR DETAILS TO GRAB THE MEMBERSHIP:-</u></b></p>
-    <div class="form-action">
-    <form action="">
-      <label for="name" size="25">Name</label> <br />
-      <input type="text" placeholder="Enter your name" size="25" required /><br />
-      <br />
-      <label for="age">Age</label><br />
-      <input type="text" placeholder="Enter your age" size="25" required/> <br />
-      <br />
-      <label for="email">Email </label><br />
-      <input type="email" placeholder="Enter your email" size="25" required/> <br />
-      <br />
-      <label for="phone">Phone number</label><br />
-      <input type="text" placeholder="Enter your phone number" size="25" required/> <br /><br />
-      <label for="location">Location</label><br />
-      <input type="text" placeholder="Enter your location" size="25" required/> <br /><br />
-      <label for="shift">Which shift do you prefer</label><br />
-      <input type="radio" id="morningshift" name="shift" value="morningshift" size="25" required/>
-      <label for="morningshift">Morning shift(8am to 11:30am)</label><br />
-      <input type="radio" id="eveningshift" name="shift" value="eveningshift" size="25" required/>
-      <label for="eveningshift">Evening shift(4pm to 9pm)</label><br /><br />
-      <input type="submit" style="height: 30px" size="25" required/><br />
-      
-    </form>
-    </div>
-    <hr />
-    <div id="footer">
-      <p><b>Contact us:</b></p>
-      <p>7/A Amber Street , Kolkata-700098</p>
-      <p>Contact number - 033-12345678/9876543210</p>
-    </div>
+    <br /> 
+  </div>
+    
+</div>   
   </body>
 </html>
+
+
+
+
+
