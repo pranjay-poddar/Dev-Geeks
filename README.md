@@ -724,12 +724,20 @@ Happy Coding! -->
 <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/MineSweeper%20game"> MineSweeper Game </a></td>
 <td align="center"> 239.</td>
 <td align="center"> <a href="#"> Amazon Clone </a></td>
+
 <td align="center"> 239.</td>
 <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Frontend-Projects/NFTCardComponent"> NFTCardComponent </a></td>
 <td align="center"> 240.</td>
 <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Frontend-Projects/RatingComponent"> RatingComponent </a></td>
+
+
+<td align="center"> 239.</td>
+<td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Frontend-Projects/NFTCardComponent"> NFTCardComponent </a></td>
+
+
 <td align="center">240.</td>
 <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Js-Games/Atari%20Breakout"> Atari Breakout </a></td>
+
 </tr>
 
 <tr align="center">	
