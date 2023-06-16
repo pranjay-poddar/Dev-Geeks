@@ -41,7 +41,7 @@
 ## **Preview**
 
 <div align='center'>
-<img src='./design/preview.webp' alt='Article Preview Component solution preview image'>
+<img src='https://raw.githubusercontent.com/0xabdulkhalid/article-preview-component/main/design/preview.webp' alt='Article Preview Component solution preview image'>
 </div>
 
 
@@ -64,7 +64,7 @@
   | :-----: |
   |  <b>Overall score 98.65% for Both Mobile & Desktop</b> |
   | |
-  | <img src='./images/pagespeed-insights-score.svg' alt='Scoreboard'> |
+  | <img src='https://raw.githubusercontent.com/0xabdulkhalid/article-preview-component/main/images/pagespeed-insights-score.svg' alt='Scoreboard'> |
   | |
   | Check out [**Pagespeed Insights**](https://pagespeed.web.dev/analysis/https-0xabdulkhalid-github-io-article-preview-component/beah7hxkpp?form_factor=mobile) to get live score |
   ||
