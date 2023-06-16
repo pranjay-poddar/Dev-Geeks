@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Article Preview Component Solution by 0xabdulkhalid for FrontendMentor.io"
+    />
+    <meta
+      name="keywords"
+      content="Frontend Mentor, Article Preview Component Challenge, 0xabdulkhalid"
+    />
+    <meta
+      property="og:title"
+      content="Article Preview Component - Frontend Mentor"
+    />
+    <meta
+      property="og:description"
+      content="Article Preview Component Solution by 0xabdulkhalid for FrontendMentor.io"
+    />
+    <title>Article preview component | Frontend Mentor</title>
+    <link rel="stylesheet" href="./styles.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="preload"
+      as="style"
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&display=swap"
+      media="print"
+      onload="this.media='all'"
+    />
+    <noscript>
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&display=swap"
+      />
+    </noscript>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="https://raw.githubusercontent.com/0xabdulkhalid/article-preview-component/main/images/favicon-32x32.png"
+    />
+  </head>
+  <body>
+    <main>
+      <h1 class="main__sr-only">Article preview component</h1>
+
+      <article>
+        <img
+          src="https://raw.githubusercontent.com/0xabdulkhalid/article-preview-component/main/images/drawers.webp"
+          alt=""
+          width="660"
+          height="528"
+          class="main__illustration-image"
+        />
+
+        <div class="main__text-section">
+          <h2 class="main__heading">
+            Shift the overall look and feel by adding these wonderful touches to
+            furniture in your home
+          </h2>
+
+          <p class="main__description">
+            Ever been in a room and felt like something was missing? Perhaps it
+            felt slightly bare and uninviting. I’ve got some simple tips to help
+            you make any room feel complete.
+          </p>
+
+          <div class="main__article-author">
+            <figure>
+              <img
+                src="https://raw.githubusercontent.com/0xabdulkhalid/article-preview-component/main/images/avatar-michelle.webp"
+                alt=""
+                width="175"
+                height="175"
+                class="main__author-avatar"
+              />
+
+              <figcaption class="main__figcaption">
+                <p class="main__author-name">Michelle Appleton</p>
+                <time datetime="2020-06-28">28 Jun 2020</time>
+              </figcaption>
+            </figure>
+
+            <button
+              class="main__share-btn"
+              type="button"
+              aria-haspopup="true"
+              aria-expanded="false"
+              aria-controls="share"
+            >
+              <img
+                src="https://raw.githubusercontent.com/0xabdulkhalid/article-preview-component/main/images/icon-share.svg"
+                alt="Share"
+                width="15"
+                height="13"
+              />
+            </button>
+
+            <div class="main__tooltip-section" id="share">
+              <h2 class="main__tooltip-heading">Share</h2>
+
+              <ul class="main__links-section" role="list">
+                <li role="listitem">
+                  <a href="#" aria-label="Share via Facebook">
+                    <img
+                      src="https://raw.githubusercontent.com/0xabdulkhalid/article-preview-component/main/images/icon-facebook.svg"
+                      alt=""
+                      width="20"
+                      height="20"
+                    />
+                  </a>
+                </li>
+                <li role="listitem">
+                  <a href="#" aria-label="Share via Twitter">
+                    <img
+                      src="https://raw.githubusercontent.com/0xabdulkhalid/article-preview-component/main/images/icon-twitter.svg"
+                      alt=""
+                      width="20"
+                      height="17"
+                    />
+                  </a>
+                </li>
+                <li role="listitem">
+                  <a href="#" aria-label="Share via Pinterest">
+                    <img
+                      src="https://raw.githubusercontent.com/0xabdulkhalid/article-preview-component/main/images/icon-pinterest.svg"
+                      alt=""
+                      width="20"
+                      height="20"
+                    />
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </article>
+    </main>
+
+    <footer class="attribution">
+      Challenge by
+      <a
+        class="attribution__link"
+        href="https://www.frontendmentor.io/"
+        target="_blank"
+        aria-describedby="Frontend Mentor Website"
+        >Frontend Mentor</a
+      >, Coded by
+      <a
+        class="attribution__link"
+        href="https://github.com/0xabdulkhalid"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-describedby="Abdul khalid's Github profile"
+        >0xabdulkhalid</a
+      >
+    </footer>
+
+    <script src="./index.js" defer></script>
+  </body>
+</html>
