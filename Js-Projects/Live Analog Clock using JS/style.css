@@ -1,0 +1,75 @@
+/* 
+background: url() NOT WORKING
+Soln: Generally, you should have some content within the section tag or you can set in .pic1 class */
+
+
+/* The background-size property specifies the size of the background images. */
+
+/* BE CAREFUL TO CHECK RESPONSIVITY of the webpage after all changes */
+
+/* function func() {
+    console.log("Ran")
+}
+
+setInterval(func, 1000) //Runs the "func" function every second */
+
+#clockContainer{
+    /* hands position adjust relative to the position of the clock */
+    position: relative;
+
+    /* to get idea of the adjusments */
+    /* border: 2px solid red; */
+
+    /*center karne ke liye*/
+    margin:auto;    
+
+    /* to fill content so that clockContainer is functional*/
+    height: 100vw;
+    width: 100vw;
+
+    /* adding image of clock template*/
+    background: url("clock.jpg") no-repeat;
+    background-size: 98%;
+}
+
+#hour, #minute, #seconds{
+    position: absolute;
+    background: black;
+    border-radius: 10px;
+
+
+    /* The transform-origin property allows you to change the position of transformed elements. 2D transformations can change the x - and y - axis of an element. 3D transformations can also change the z - axis of an element. */
+    transform-origin: bottom;
+}
+
+#hour {
+    width: 2%;
+    height: 20%;
+    left: 48.30%;
+    top: 30%;
+    background-color: red;
+
+    /* to switch on and off the properties */
+    /* display: none; */
+}
+
+#minute {
+    width: 2%;
+    height: 30%;
+    left: 48.30%;
+    top: 19.5%;
+    background-color: greenyellow;
+    /* to switch on and off the properties */
+    /* display: none; */
+}
+
+#seconds {
+    width: 2%;
+    height: 40%;
+    left: 48.35%;
+    top: 10%;
+    background-color: blue;
+
+    /* to switch on and off the properties */
+    /* display: none; */
+}  
