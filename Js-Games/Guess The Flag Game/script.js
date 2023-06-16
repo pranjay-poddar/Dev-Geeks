@@ -31,6 +31,30 @@ const data = [
 	"wales",
 ];
 
+// Data keys from google drive
+const dataKeys = [
+	'https://drive.google.com/uc?export=view&id=1_CkXcFAYkIVqHHv2ttYhQxBZSZff3Q_W',
+	'https://drive.google.com/uc?export=view&id=1H7FyMYqeEYi9RKx0FUWMKq6FRY3lgSvn',
+	'https://drive.google.com/uc?export=view&id=13-sAz6JVkBvQh4db227HYdTTYJh2ca51',
+	'https://drive.google.com/uc?export=view&id=1DCrkxUy5yvG9L3ZdqzGrrQOtF2U5M9rn',
+	'https://drive.google.com/uc?export=view&id=1oVXpDNN1QiB18in4L-IG9744uaat9aq6',
+	'https://drive.google.com/uc?export=view&id=1U6XguYxSyhxB9B7zf5Sk2uuyM-YAsIx_',
+	'https://drive.google.com/uc?export=view&id=12XEp-MdQvs7MW_eh-GKD89MQD3Cm7cju',
+	'https://drive.google.com/uc?export=view&id=1_rKOSzv6d3B5LUxdBo730pwlG22BnQ_4',
+	'https://drive.google.com/uc?export=view&id=1Y1o3PzkHNoVd-ZmtOCKQ6swDqZbiR0E_',
+	'https://drive.google.com/uc?export=view&id=1T6A7-Qm5rHqUdL1-SqIccgXVDX7KP_v3',
+	'https://drive.google.com/uc?export=view&id=1TbgXbDZSeuHOGBcWrSUmveHQmgHz4zgw',
+	'https://drive.google.com/uc?export=view&id=1xwRs1Ahsc6ATp1B1t5myAG8QhzDElv5h',
+	'https://drive.google.com/uc?export=view&id=1Oi0N9OGn9AVGtfNVh1FZlKqCrNa_GESA',
+	'https://drive.google.com/uc?export=view&id=1y-8mF4oOwoaNLsR_J-EUVs11XNro0esZ',
+	'https://drive.google.com/uc?export=view&id=1Ml0-wrArYyJd0Mk1ZXmN_Gp9PnntSLAT',
+	'https://drive.google.com/uc?export=view&id=1C0uP2mCR4d9x1DeMpWJdQFrUSOYDWwqV',
+	'https://drive.google.com/uc?export=view&id=15seW5u7_ITNVA4417kQTHHT3q6yTf0Q4',
+	'https://drive.google.com/uc?export=view&id=1L2n2w_LVAaYumgiNi1S1ZtMgjgfmDMuO',
+	'https://drive.google.com/uc?export=view&id=171ezM11DpauSrQOCylnZf6UWz9HgZe57',
+	'https://drive.google.com/uc?export=view&id=1xDAFnznSPMMBGZDz0VeLoYuZSPbTCTEt',
+];
+
 // global variables
 let deviceType = "";
 let initialX = 0, initialY = 0;
@@ -141,7 +165,7 @@ const drop = (e) => {
 			// Insert new img element
 			currentDrop.insertAdjacentHTML(
 				"afterbegin",
-				`<img src= "./images/${currentElement.id}.png">`
+				`<img src= "${dataKeys[data.indexOf(currentElement.id)]}">`
 			);
 			count += 1;
 		} else {
@@ -165,7 +189,7 @@ const drop = (e) => {
 			// insert new img
 			e.target.insertAdjacentHTML(
 				"afterbegin",
-				`<img src="./images/${draggedElementData}.png">`
+				`<img src="${dataKeys[data.indexOf(draggedElementData)]}">`
 			);
 			count += 1;
 		} else {
@@ -204,7 +228,7 @@ const creator = () => {
 		if (isTouchDevice()) {
 			flagDiv.style.position = "absolute";
 		}
-		flagDiv.innerHTML = `<img src="./images/${i}.png" id="${i}">`;
+		flagDiv.innerHTML = `<img src="${dataKeys[data.indexOf(i)]}" id="${i}">`;
 		dragContainer.appendChild(flagDiv);
 	}
 	// Sort the array randomly before creating country divs
