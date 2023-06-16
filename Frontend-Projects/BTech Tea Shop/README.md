@@ -1,0 +1,72 @@
+<h2 align="center">Summary on B.Tech Tea shop Site</h2>
+
+<br />
+<br />
+
+
+
+## **Preview Home Page**
+
+
+<div align='center'>
+<img src='HOME.png' alt='FAQ Accordion Card solution desktop preview image'>
+</div>
+
+
+## **About us Page**
+<div align='center'>
+<img src='About%20us.png' alt='FAQ Accordion Card solution desktop preview image'>
+</div>
+
+
+## **Menu Page**
+
+<div align='center'>
+<img src='Menu.png' alt='FAQ Accordion Card solution desktop preview image'>
+</div>
+
+## **Products Page**
+<div align='center'>
+<img src='Products.png' alt='FAQ Accordion Card solution desktop preview image'>
+</div>
+
+## **Review Page**
+<div align='center'>
+<img src='Review.png' alt='FAQ Accordion Card solution desktop preview image'>
+</div>
+
+## **Contact Page**
+<div align='center'>
+<img src='Contact%20us.png' alt='FAQ Accordion Card solution desktop preview image'>
+</div>
+
+## **Blogs Page**
+<div align='center'>
+<img src='Blogs.png' alt='FAQ Accordion Card solution desktop preview image'>
+</div>
+ 
+
+
+
+
+
+
+
+
+## **Built With**
+
+- ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)   
+- ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white) 
+- ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)  
+
+
+<br>
+
+## **Tools Used**
+
+- ![Google](https://img.shields.io/badge/google-DA4437?style=for-the-badge&logo=google&logoColor=white)
+- ![GitHub](https://img.shields.io/badge/github-0D1117.svg?style=for-the-badge&logo=github&logoColor=white)  
+- ![Visual Studio Code](https://img.shields.io/badge/Visual%20Studio%20Code-0078d7.svg?style=for-the-badge&logo=visual-studio-code&logoColor=white)   
+
+
+<br>
