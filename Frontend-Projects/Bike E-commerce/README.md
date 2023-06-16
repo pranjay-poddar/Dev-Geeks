@@ -14,13 +14,13 @@
 </div>
 
 
-## **About us Page**
+## **Product2 Page**
 <div align='center'>
 <img src='Product2.png' alt='FAQ Accordion Card solution desktop preview image'>
 </div>
 
 
-## **Menu Page**
+## **Product3 Page**
 
 <div align='center'>
 <img src='Product3.png' alt='FAQ Accordion Card solution desktop preview image'>
