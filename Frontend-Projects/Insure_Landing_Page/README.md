@@ -41,7 +41,7 @@
 ## **Preview**
 
 <div align='center'>
-<img src='./design/preview.webp' alt='Insure Landing Page solution preview image'>
+<img src='https://raw.githubusercontent.com/0xabdulkhalid/insure-landing-page/main/design/preview.webp' alt='Insure Landing Page solution preview image'>
 </div>
 
 
@@ -63,7 +63,7 @@
   | :-----: |
   |  <b>Overall score 99% for Both Mobile & Desktop</b><br>(Below score is for mobile devices) |
   | |
-  | <img src='./images/pagespeed-insights-score.svg' alt='Scoreboard'> |
+  | <img src='https://raw.githubusercontent.com/0xabdulkhalid/insure-landing-page/main/images/pagespeed-insights-score.svg' alt='Scoreboard'> |
   | |
   | Check out [**Pagespeed Insights**](https://pagespeed.web.dev/analysis/https-0xabdulkhalid-github-io-insure-landing-page/ineiixnem7?form_factor=mobile) to get live score |
   ||
