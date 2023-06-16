@@ -21,7 +21,7 @@
 
 ## **Screenshots 📸**
 
-![image](./Screenshot.png)
+![Screenshot](https://github.com/pranjay-poddar/Dev-Geeks/assets/114330097/84c2203c-5557-4b1f-bc2f-0473e57a0b84)
 
 <br>
 

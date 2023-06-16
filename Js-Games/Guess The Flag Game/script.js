@@ -38,11 +38,20 @@ let currentElement = "";
 let moveElement = false;
 
 // Audio variables
-const bgMusic = new Audio('./sounds/bgMusic.mp3');
-const correctAns = new Audio('./sounds/correct.mp3');
-const gameOver = new Audio('./sounds/gameOver.wav');
-const move = new Audio('./sounds/move.mp3');
-const wrongAns = new Audio('./sounds/wrong.mp3');
+const bgMusic = new Audio();
+bgMusic.src = 'https://drive.google.com/uc?export=download&id=1RZrEjs6-lZK3B9uu20qW-sbruxjwScSi';
+
+const correctAns = new Audio();
+correctAns.src = 'https://drive.google.com/uc?export=download&id=1zZHbTCgTHG_wGYk6ir_Rc4An-vL70ubd';
+
+const gameOver = new Audio();
+gameOver.src = 'https://drive.google.com/uc?export=download&id=1F0dr1NTXDF-J_rJvNPUa_T8DPuuv4a7a';
+
+const move = new Audio();
+move.src = 'https://drive.google.com/uc?export=download&id=1RpeMfpkAAE8vFLAc3saTE2hN_xv8-1pM';
+
+const wrongAns = new Audio();
+wrongAns.src = 'https://drive.google.com/uc?export=download&id=1hI9DPEwRic_zQOxaknoffAHR4Qg27EyI';
 
 // Detect touch device
 const isTouchDevice = () => {
