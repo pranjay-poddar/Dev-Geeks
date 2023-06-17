@@ -1,0 +1,121 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: hsl(0, 0%, 81%);    margin: 1rem;
+    font-family: 'Barlow Semi Condensed';
+}
+
+.container {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: 1fr;
+    margin-bottom: 1rem;
+}
+
+.card {
+    color: hsl(0, 0%, 100%);
+    padding: 2rem;
+    border-radius: .625rem;
+    position: relative;
+    box-shadow: 1px 2px 3px rgba(0,0,0,.1);
+}
+
+.violet {
+    background-color: hsl(263, 55%, 52%);
+}
+
+.blue {
+    background-color: hsl(217, 19%, 35%);
+}
+
+.blackish-blue {
+    background-color: hsl(219, 29%, 14%);
+}
+
+.white {
+    background-color: hsl(0, 0%, 100%);
+    color: hsl(0, 4%, 37%);
+}
+
+img.quote {
+    position: absolute;
+    top: 0;
+    right: 2rem;
+    height: 6rem;
+    opacity: .8;
+}
+
+.card .image {
+    display: flex;
+    align-items: center;
+}
+
+.card .image small {
+    opacity: 50%;
+}
+
+q {
+    opacity: 70%;
+    line-height: 1.6;
+}
+
+.card .image img {
+    width: 40px;
+    border-radius: 50%;
+    margin-right: .7rem;
+}
+
+.card h3 {
+    margin: 1rem 0 1.2rem;
+    z-index: 5;
+    font-size: 1.7rem;
+}
+
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+//Responsiveness
+@media screen and (min-width: 740px) {
+    .container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (min-width: 1080px) {
+    body{
+        margin: 6rem;
+        
+    }
+    .container {
+        grid-template-columns: repeat(4, 1fr);
+        margin: auto;
+    }
+
+    .violet {
+        grid-column: 1/3;
+    }
+
+    .last {
+        grid-column: 4;
+        grid-row: 1/3;
+    }
+
+    .blackish-blue{
+        grid-column: 2/4;
+    }
+}
