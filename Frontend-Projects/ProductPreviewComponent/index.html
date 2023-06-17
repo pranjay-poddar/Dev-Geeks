@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+
+  <title>Product preview card component</title>
+  <link rel="stylesheet" href="styles.css">
+  
+  <!-- Feel free to remove these styles or customise in your own stylesheet -->
+  <style>
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
+  </style>
+</head>
+
+<body>
+  <main>
+    <div class="container">
+      <div class="image">
+        <picture>
+          <source media="(min-width:700px)" class="desktopImage" srcset="images/image-product-desktop.jpg">
+          <img src="images/image-product-mobile.jpg" alt="">
+        </picture>
+      </div>
+      <div class="text">
+        <span class="perfume">PERFUME</span>
+        <h1>
+          Gabrielle Essence Eau De Parfum
+        </h1>
+        <p>
+          A floral, solar and voluptuous interpretation composed by Olivier Polge,
+          Perfumer-Creator for the House of CHANEL.
+        </p>
+        <div class="price">
+          <span class="price">$149.99</span>
+          <span class="smallPrice">$169.99</span>
+        </div>
+        <button>
+          <img class="cart" src="images/icon-cart.svg" alt="">
+          Add to Cart
+        </button>
+      </div>
+    </div>
+  </main>
+  
+  <footer>
+    <div class="attribution">
+      Coded by <a href="https://app.netlify.com/teams/mistermickey">Master Mickey</a>.
+    </div>
+  </footer>
+  
+</body>
+
+</html>
