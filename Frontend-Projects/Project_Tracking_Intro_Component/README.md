@@ -41,7 +41,7 @@
 ## **Preview**
 
 <div align='center'>
-<img src='./design/preview.webp' alt='Project Tracking Intro Component solution preview image'>
+<img src='https://raw.githubusercontent.com/0xabdulkhalid/project-tracking-intro-component/main/design/preview.webp' alt='Project Tracking Intro Component solution preview image'>
 </div>
 
 
@@ -64,7 +64,7 @@
   | :-----: |
   |  <b>Overall score 98.4% for Both Mobile & Desktop</b> |
   | |
-  | <img src='./images/pagespeed-insights-score.svg' alt='Scoreboard'> |
+  | <img src='https://raw.githubusercontent.com/0xabdulkhalid/project-tracking-intro-component/main/images/pagespeed-insights-score.svg' alt='Scoreboard'> |
   | |
   | Check out [**Pagespeed Insights**](https://pagespeed.web.dev/analysis/https-0xabdulkhalid-github-io-project-tracking-intro-component/li89ws3uir?form_factor=mobile) to get live score |
   ||
