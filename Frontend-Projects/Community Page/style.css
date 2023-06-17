@@ -141,29 +141,4 @@ body {
     padding: 10px 70px;
   }
 }
-/* Youtube link */
-.link {
-  position: fixed;
-  background-color: #d12322;
-  padding: 23px 40px;
-  right: -100px;
-  border-radius: 5px;
-  top: 50%;
-  transform: translateY(-50%);
-  transform: rotate(-90deg);
-  font-size: 18px;
-  font-weight: 500;
-  color: #fff;
-  text-decoration: none;
-  text-transform: capitalize;
-  transition: all 0.1s ease-in-out;
-}
 
-.link i {
-  padding-left: 7px;
-}
-
-.link:hover {
-  text-decoration: underline;
-  background-color: black;
-}
