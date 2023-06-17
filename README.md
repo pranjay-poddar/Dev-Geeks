@@ -710,7 +710,7 @@ Happy Coding! -->
 <td align="center"> 233.</td>
 <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/ML%20Projects/Analysis%20of%20Fashion_dataset"> Amazing Snake Game </a></td>
 <td align="center">234.</td>
-<td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Js-Projects/Colovaria"> Colovaria </a></td>
+<td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/MineSweeper%20game"> Colovaria </a></td>
 <td align="center"> 235</td>
 <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Js-Games/Pacman"> Pacman Game </a></td>
 <td align="center"> 236.</td>
@@ -722,6 +722,9 @@ Happy Coding! -->
 <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/MineSweeper%20game"> MineSweeper Game </a></td>
 <td align="center"> 338.</td>
 <td align="center"> <a href="#"> Amazon Clone </a></td>
+</tr>
+<td align="center"> 339.</td>
+<td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/Js-Games/Blackjack"> BlackJack Game </a></td>
 </tr>
 </table>
 
