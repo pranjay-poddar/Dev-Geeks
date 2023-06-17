@@ -748,7 +748,7 @@ Happy Coding! -->
 
 <td align="center"> 244.</td>
 <td align="center"><a href="https://github.com/Swapnil-2503/Dev-Geeks/tree/guiTicTacToe/Java%20Projects/Gui%20TocTacToe">GUI TicTacToe</a></td>
-  </tr>
+</tr>
 
 </table>
 
