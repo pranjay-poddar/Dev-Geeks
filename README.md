@@ -711,18 +711,41 @@ Happy Coding! -->
 <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/ML%20Projects/Analysis%20of%20Fashion_dataset"> Amazing Snake Game </a></td>
 <td align="center">234.</td>
 <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Js-Projects/Colovaria"> Colovaria </a></td>
-<td align="center"> 235</td>
+<td align="center">235.</td>
+<td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Java%20Projects/Inventory%20Management%20System">Inventory Management System</a></td>
+<td align="center"> 236</td>
 <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Js-Games/Pacman"> Pacman Game </a></td>
-<td align="center"> 236.</td>
-<td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Frontend-Projects/FIght%20Game"> Fight Game </a></td>
 </tr>
 
 <tr align="center">	
-<td align="center"> 337.</td>
+<td align="center"> 237.</td>
+<td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Frontend-Projects/FIght%20Game"> Fight Game </a></td>
+<td align="center"> 238.</td>
 <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/MineSweeper%20game"> MineSweeper Game </a></td>
-<td align="center"> 338.</td>
+<td align="center"> 239.</td>
 <td align="center"> <a href="#"> Amazon Clone </a></td>
+<td align="center"> 240.</td>
+<td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Frontend-Projects/NFTCardComponent"> NFTCardComponent </a></td>
 </tr>
+<tr align="center">	
+<td align="center"> 241.</td>
+<td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Frontend-Projects/RatingComponent"> RatingComponent </a></td>
+<td align="center"> 242.</td>
+<td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Frontend-Projects/RatingComponent"> RatingComponent </a></td>
+<td align="center">243.</td>
+<td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Js-Games/Atari%20Breakout"> Atari Breakout </a></td>	
+<td align="center"> 244.</td>
+<td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Frontend-Projects/ProductPreviewComponent"> ProductPreviewComponent </a></td>
+</tr>
+<tr align="center">
+<td align="center"> 245.</td>
+<td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Frontend-Projects/TestimonialGridSection"> TestimonialGridSection </a></td>
+<td align="center"> 246.</td>
+<td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Java%20Projects/LibraryManagement"> LibraryManagement </a></td>
+<td align="center"> 247.</td>
+<td align="center"><a href="https://github.com/Swapnil-2503/Dev-Geeks/tree/guiTicTacToe/Java%20Projects/Gui%20TocTacToe">GUI TicTacToe</a></td>
+  </tr>
+
 </table>
 
 
