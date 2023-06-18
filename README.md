@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <h1 align="center"> Dev-Geeks </h1>
 
 <div align="center">
@@ -808,3 +809,16 @@ Happy Coding! -->
   <a href="mailto:pranjaypoddar@gmail.com?subject=Hello,%20From%20Github"><img src="https://img.shields.io/badge/gmail-%23D14836.svg?&style=for-the-badge&logo=gmail&logoColor=white" /></a>&nbsp;&nbsp;&nbsp;&nbsp;
   <a href="https://www.instagram.com/pranjay_poddar/"><img src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white" /></a>&nbsp;&nbsp;&nbsp;&nbsp;
 </p>
+=======
+# modern-restaurant-website
+
+
+## TechStack
+ # HTML
+ # CSS
+ # ReactJs
+
+# To run the project:
+1. Run - npm install
+2. Run - npm start
+>>>>>>> BhartiNagpure
