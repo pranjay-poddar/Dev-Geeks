@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a29e1c22-c574-49a8-a42e-e2283aba3625" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Js-Games/Car Racing Game/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Js-Games/Car Racing Game/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -17,6 +15,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="CSS File" />
         <option value="HTML File" />
       </list>
     </option>
@@ -55,6 +54,7 @@
       <option name="presentableId" value="Default" />
       <updated>1687087149051</updated>
       <workItem from="1687087152784" duration="1478000" />
+      <workItem from="1687111815855" duration="837000" />
     </task>
     <servers />
   </component>
