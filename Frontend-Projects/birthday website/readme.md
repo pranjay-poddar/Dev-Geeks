@@ -4,4 +4,5 @@
 
 -html
 -css
-I have updated the UI of the website by adding the background and changing the font of the text. I have updated the text by  including it in the envelope and add transitions in the text.
+
+I have updated the entire UI of the website. I have added an entirely new gift page in which if u hover over the gifts you can see some amazing gifs.

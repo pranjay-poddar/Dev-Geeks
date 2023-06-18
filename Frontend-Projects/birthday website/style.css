@@ -1,6 +1,5 @@
 body {
-  background-color: #FFAAC9;
-  background-image: url("background.jpg");
+  background: linear-gradient(#FF597B, white);
 }
 h1 {
   text-decoration:wavy;
@@ -13,6 +12,7 @@ h1 {
 p {
   font-size: 20px;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: bold;
 }
 img {
   height: 300px;
@@ -28,43 +28,47 @@ img {
 }
 div {
   text-align: center;
-  font-size: 35px;
-  font-family: "Times New Roman", Times, serif;
+  font-family: 'Happy Monkey', cursive;
+  /* font-size: 2rem; */
+  /* font-family: "Times New Roman", Times, serif; */
 }
 .my-button {
   background-color:#FF597B;
   color: #ffffff; 
   border: none; 
+  margin: 2rem;
   padding: 10px 20px; 
   border-radius: 5px; 
-  font-size: 16px; 
+  font-size: 1.2rem; 
+  font-weight: bold;
   cursor: pointer; 
-  transition: background-color 0.3s ease; /*to add smooth transition
+  /* transition: background-color 0.3s ease;  */
 }
 
 .my-button:hover {
-  background-color: #FB2576; /* Change background color on hover */
+  box-shadow: 0 0 0.5rem rgb(80, 79, 79);
+  text-shadow: 0 0 0.1rem black;
 }
 
-#gifty {
+/* #gifty {
   padding-top: 25px;
 }
 .gif {
   margin-left: 550px;
   margin-top: 50px;
-}
+} */
 .container {
   display: flex;
   justify-content: flex-start;
-  align-items: center;
+  /* align-items: center; */
   height: 100vh;
-  padding-left:0%;
+  /* padding-left:0%; */
 
 }
 .envelope {
   position: relative;
-  width: 700px;
-  height: 820px;
+  width: 52vw;
+  height: 50vw;
   background-color:#FFEEEE;
   border: 1px solid #ccc;
   border-radius: 10px;
@@ -112,6 +116,7 @@ h2 {
   color: #333;
   text-align: center;
   text-transform: uppercase;
+  font-weight: bold;
 }
 
 p.typing-text {
@@ -125,7 +130,7 @@ p.typing-text {
   display: block;
   overflow: hidden;
   animation: typing 2s linear alternate both;
-  animation-delay: calc(var(--delay) * 0.4s);
+  animation-delay: calc(var(--delay) * 0.2s);
 }
 
 @keyframes typing {
@@ -144,15 +149,18 @@ body {
   align-items: center;
   height: 100vh;
   margin: 0;
+
 }
 .bottom-text{
-  font-size: 5rem;
-  margin-left: 10rem;
-  color:#333
+  font-size: 2rem;
+  margin-left: 5rem;
+  color: black;
+  text-shadow: 0 0 0.1rem black;
 }
 .birthday-text{
   margin-bottom: 2rem;
   font-size: 6rem; 
-  font-weight: 500;
+  font-weight: bold;
+  text-shadow: 0 0 0.2rem black;
 }
 
