@@ -1,10 +1,182 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+  <title>
+    The Muscle Factory
+  </title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Arima:wght@100&family=Baloo+Bhai+2:wght@600&display=swap"
+        rel="stylesheet">
+  <style>
+    body {
+      color: white;
+      font-family: 'Baloo Bhai 2', cursive;
+      margin: 0px;
+      padding: 0px;
+      background-size: 700 400px;
+      background: url(people-2572265_1920.jpg);
+      /* background-repeat: no-repeat; */
+      height: 1000px;
+    }
+
+    .left {
+      color: whitesmoke;
+      /* border: 2px solid red; */
+      display: inline-block;
+      position: absolute;
+      left: 34px;
+      top: 12px;
+    }
+
+    .left img {
+      width: 75px;
+      border-radius: 30%;
+    }
+
+    .left div {
+      text-align: center;
+    }
+
+    .mid {
+      color: white;
+      /* border: 2px solid green; */
+      display: block;
+      margin: 12px auto;
+      /* margin : Top (x-axis)*/
+      width: 47%;
+    }
+
+    .right {
+      display: inline-block;
+      position: absolute;
+      right: 34px;
+      top: 20px;
+      color: white;
+      /* border: 2px solid yellowgreen; */
+
+    }
+
+    .btn {
+      font-family: 'Baloo Bhai 2', cursive;
+
+      background-color: black;
+      color: white;
+      margin: 4px;
+      padding: 4px 14px;
+      border: 2px solid grey;
+      border-radius: 8px;
+      font-size: 15px;
+      cursor: pointer;
+    }
+
+    .btn:hover {
+      background-color: rgb(74, 59, 59);
+    }
+
+    .navbar {}
+
+    .navbar li {
+      font-size: 25px;
+      display: inline-block;
+    }
+
+    .navbar li a {
+      color: white;
+      text-decoration: none;
+      padding: 34px 23px;
+    }
+
+    .navbar li a:hover {
+      text-decoration: underline;
+      color: slategrey;
+    }
+
+    .container {
+      border: 2px solid white;
+      margin: 106px 80px;
+      padding: 21px;
+      width: 29%;
+      border-radius: 10px;
+    }
+
+    .form input {
+      font-family: 'Baloo Bhai 2', cursive;
+      text-align: center;
+      margin: 11px auto;
+      border-radius: 6px;
+      display: block;
+      width: 369px;
+      font-size: 20px;
+      /* padding: 2px 2px; */
+      border: black;
+
+    }
+
+    .container h1 {
+      text-align: center;
+    }
+
+    .container button {
+      display: block;
+      margin: 10px auto;
+      width: 200px;
+
+    }
+  </style>
 </head>
+
 <body>
-$END$
+<header class="header">
+  <!-- Left box for logo -->
+  <div class="left">
+    <img src="YG_Logo.jpg" alt="">
+    <div>
+      Yash Gupta
+    </div>
+  </div>
+  <!-- Mid bx for Navigation -->
+  <div class="mid">
+    <ul class="navbar">
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Fitness calculator</a></li>
+      <li><a href="#">Contact Us</a></li>
+    </ul>
+  </div>
+  <!-- right box for button -->
+  <div class="right">
+    <button class="btn">Call Us Now</button><button class="btn">Email Us</button>
+  </div>
+
+</header>
+<div class="container">
+  <h1>Join The Best Jym Of Delhi Now</h1>
+  <form action="noaction.php" target="_blank">
+    <div class="backImg"></div>
+    <div class="form">
+      <input type="text" name="" placeholder="Enter your name">
+    </div>
+    <div class="form">
+      <input type="text" name="" placeholder="Enter your Age">
+    </div>
+    <div class="form">
+      <input type="text" name="" placeholder="Enter your Gender">
+    </div>
+    <div class="form">
+      <input type="text" name="" placeholder="Enter your Locality">
+    </div>
+    <div class="form">
+      <input type="text" name="" placeholder="Enter your Email Id">
+    </div>
+    <div class="form">
+      <input type="text" name="" placeholder="Enter your Phone Number">
+    </div>
+    <button class="btn">Submit</button>
+  </form>
+</div>
+
 </body>
+
 </html>
