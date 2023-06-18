@@ -45,9 +45,10 @@ div {
   /* transition: background-color 0.3s ease;  */
 }
 
+/* when we click the button the box will have a shadow behind it and also the text will have a shadow */
 .my-button:hover {
   box-shadow: 0 0 0.5rem rgb(80, 79, 79);
-  text-shadow: 0 0 0.1rem black;
+  text-shadow: 0 0 0.1rem black;    
 }
 
 /* #gifty {

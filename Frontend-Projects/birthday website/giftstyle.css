@@ -44,9 +44,11 @@ h1, h2, h3, h4, p {
     background-size: cover;
 }
 
+/* when we hover over the gifts, we can see these gifs */
+
 #gift-img-happy:hover {
     background-image: url("happy.gif");
-    transform: scale(1.05);
+    transform: scale(1.05);  /* gifts will zoom out */
 }
 
 #gift-img-genius:hover {
