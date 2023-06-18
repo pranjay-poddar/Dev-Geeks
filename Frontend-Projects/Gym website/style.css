@@ -1,138 +1,256 @@
-body {
-    
-    background-image: 
-      url('img1.jpg');
-    
-    height: 100%;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: 50% 50%;
-    font-family: 'Geologica', sans-serif;
-  }
-   
-   body {
-    font-family: 'Baloo Bhai', cursive;
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+header {
+    width: 100%;
+    height: 100vh;
+    background: black;
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 80% 80%, 0% 100%);
+}
+
+/* //navbar secyion css */
+nav {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
     color: white;
-    margin: 0px;
-    padding: 0px;
-    background: url('http://drive.google.com/uc?export=view&id=11N_24lrG24VqCeGv2e3MLro-0scfq2dr'); 
 }
-
-.form {
-    font-family: 'Montserrat', sans-serif;
-}
-
-p {
-    font-size: 17px;
-    color: b;
-}
-
-.left {
-    display: inline-block;
-    /* border: 2px solid red; */
-    position: absolute;
-    left: 60px;
-    top: 20px;
-}
-
-.left img {
-    width: 136px;
-    filter: invert(100%);
-}
-
-.left div {
-    line-height: 19px;
-    font-size: 23px;
-    text-align: center;
-}
-
-
-.right {
-    position: absolute;
-    right: 34px;
-    top: 43px;
-
-}
-
-.navbar {
-    display: inline-block;
-}
-
-.navbar li {
-    display: inline-block;
-    font-size: 25px;
-}
-
-.navbar li a {
-    color: white;
+.menu a {
     text-decoration: none;
-    padding: 34px 23px;
-
-}
-
-.navbar li a:hover,
-.navbar li a.active {
-    text-decoration: underline;
-    color: grey;
-
-}
-
-.btn {
-    font-family: 'Baloo Bhai', cursive;
-    margin: 0px 9px;
-    background-color: black;
     color: white;
-    padding: 4px 14px;
-    border: 2px solid grey;
-    border-radius: 10px;
+    padding: 10px;
+    margin: 10px;
+    font-weight: bold;
     font-size: 20px;
-    cursor: pointer;
+}
+.menu a:first-child {
+    border-bottom: 2px solid rgb(118, 113, 112);
 }
 
-.btn:hover {
-    background-color: rgb(31, 30, 30);
-}
-
+/* HOme section css */
 .container {
-    border: 2px solid white;
-    margin: 106px 80px;
-    padding: 75px;
-    width: 33%;
-    border-radius: 28px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    color: white;
+}
+.left img {
+    width: 100%;
+    flex-basis: 50%;
+    margin-right: 100px;
+}
+.container:hover .left img{
+  transform: scale(1.2);
+}
+.left-about{
+  max-width: 500px;
+  flex-basis: 50%;
+ margin: auto;
+}
+.right-about img{
+  width: 80%;
+  flex-basis: 50%;
+  text-align: center;
+}
+.right-about:hover img{
+  transform: scale(1.2);
+}
+.right-about {
+    flex-basis: 50%;
+    max-width: 400px;
+}
+.right p {
+    font-size: 18px;
+    margin: 10px 60px 0px 0px;
+    color: rgb(118, 113, 112);
+    padding: 0px 30px 0px 0px;
+}
+h1 {
+    font-size: 40px;
+    color: rgb(118, 113, 112);
+}
+.Ag {
+    color: rgb(209, 6, 3);
+    font-family: "georgia", garamond, serif;
+
 }
 
-.right-container {
-    border: 2px solid white;
-    margin: 350px 450px;
-    padding: 75px;
-    left: 10px;
-    width: 36%;
-    height: 500px;
-    border-radius: 28px;
-    font-size: 20px;
-    align-items: left 60px;
+/* About section css */
+#about{
+  padding: 50px 0px;
+}
+.about-row{
+  width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.left-about p{
+    font-size: 18px;
+  margin-top: 15px;
+  text-align: justify;
+}
+.k-btn{
+  margin: 10px 0px;
+  padding: 10px;
+  color: white;
+  border: none;
+  background: rgb(209, 6, 3);
+  font-weight: 700;
+  border-end-end-radius:20px;
+}
+#form{
+  display: flex;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding-top: 20px;
+  padding-bottom: 60px;
+  background: rgba(0,0,0,0.05);
+   clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 80% 80%, 0% 100%);
+}
+#form input{
+display: flex;
+padding:2px;
+width:100%;
+margin: 3px;
+}
+#title{
+  font-weight: bold;
+  color: rgb(209, 6, 3);
+}
+.logo img {
+    padding: 10px;
+    width: 100px;
+    border-radius: 50%;
+}
+.icon img {
+    width: 35px;
 }
 
-
-.form-group input {
-    font-family: 'Baloo Bhai', cursive;
-    text-align: center;
-    display: block;
-    width: 508px;
-    padding: 1px;
-    border: 2px solid black;
-    margin: 11px auto;
-    font-size: 25px;
-    border-radius: 8px;
+/* services section css */
+#services{
+  padding: 50px 0px;
+}
+.services-info{
+  text-align: center;
+}
+.services-info p{
+font-size: 25px;
+font-weight: bold;
+}
+.services-row{
+  display: grid;
+  grid-template-columns: repeat(3, 250px);
+grid-auto-rows: minmax(150px auto);
+grid-gap: 3em;
+justify-content: center;
+padding-top: 15px;
+}
+.services-box{
+  box-shadow: 2px 3px 5px grey;
+  padding: 15px;
+  background-color: rgb(255, 203, 202) ;
+  text-align: center;
+}
+.services-box:hover{
+  transform: scale(1.2);
+}
+/* client section css */
+#client{
+  padding: 100px;
+  background: url('./images/fitness-icon.png');
+  background-repeat: no-repeat;
+  background-size: 35% 35%;
+  background-position: top right; 
+}
+.member-card img{
+  width: 120px;
+  height: 130px;
+}
+.member-card{
+  padding-top: 50px;
+  width: 50%;
+  margin: auto;
+  text-align: center;
+}
+.member-card p, h2{
+  margin: 20px 0px;
+}
+.member-card .icon img{
+  width: 5%;
+  height:5%;
 }
 
-.container h1 {
-    text-align: center;
+/* contact section css */
+.contact-right img{
+  width: 35px;
+}
+.contact-right h3{
+  padding: 10px;
+}
+#contact{
+  padding: 30px 0px;
+}
+.contact-row{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.contact-left{
+  flex-basis: 50%;
+  padding-top: 50px;
+}
+.contact-right{
+  flex-basis: 50%;
+  margin: auto;
+  max-width: 450px;
+}
+.contact-form{
+  width: 70%;
+  text-align: center;
+  margin: auto;
+}
+.contact-form input[type="text"]{
+  width: 70%;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+textarea{
+  width: 70%;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+.contact-form .k-btn{
+  width: 200px;
+}
+.contact-form p{
+  margin-top: 10px;
+  margin-bottom: 20px;
 }
 
-.container button {
-    display: block;
-    width: 74%;
-    margin: 20px auto;
+/* footer css */
+#footer{
+  display: flex;
+  justify-content: space-around;
+  background: black;
+  padding: 10px;
+  color: white;
+  align-items: center;
+}
+.footer-menu a{
+  padding:0.4rem 0.9rem;
+  color: white;
+  border:0.2rem solid rgb(48, 48, 48);
+  text-decoration: none;
+}
+.footer-div p{
+  padding-top: 1.2rem;
+  text-align: center;
 }
