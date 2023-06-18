@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Camera Shutter</title>
+    <style>
+        html {
+            height: 100%;
+            overflow: hidden;
+        }
+
+        body {
+            min-height: 100%;
+        }
+
+        .container {
+            cursor: pointer;
+            background-position: center center;
+            background-size: cover;
+            background-image: url("https://library.sportingnews.com/2022-12/Lionel%20Messi%20Argentina%20kiss%20World%20Cup%20trophy%20121822.jpg");
+            width: 100vw;
+            height: 100vh;
+            position: relative;
+        }
+
+        .container:focus {
+            display: none;
+        }
+
+        .flap {
+            width: 150vmax;
+            height: 150vmax;
+            position: absolute;
+            bottom: 50%;
+            right: 50%;
+            pointer-events: none;
+            will-change: transform;
+            background: hsl(calc(1turn * var(--p)), 80%, 80%);
+            background: linear-gradient(35deg, #555, black);
+            border: solid 4px #999;
+            --p: calc(var(--i) / var(--flaps));
+            animation: click 0.9s cubic-bezier(0.5, 0, 0.5, 1) 0.1s;
+            transform-origin: bottom right;
+            transform: rotate(-0.5turn) rotate(calc(1turn * var(--p))) skewX(30deg) translateX(-100%) translateY(90%);
+        }
+
+        @keyframes click {
+
+            48%,
+            52% {
+                transform: rotate(-0.25turn) rotate(calc(1turn * var(--p))) skewX(30deg) translateX(0%) translateY(0%);
+            }
+        }
+
+        .photo {
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-position: center center;
+            background-size: cover;
+            box-shadow: 0 10px 40px #000;
+            margin: -1rem;
+            margin-bottom: -5rem;
+            border: solid 1rem #fff;
+            border-bottom-width: 5rem;
+            animation: photo 5s cubic-bezier(0.5, 0, 0.5, 1) 0.9s both;
+        }
+
+        @keyframes photo {
+
+            30%,
+            60%,
+            70% {
+                filter: sepia(30%) saturate(140%) contrast(120%);
+                transform: scale(0.5) rotate(-4deg);
+            }
+
+            61% {
+                opacity: 1;
+            }
+
+            71% {
+                opacity: 0;
+                transform: none;
+            }
+
+            100% {
+                filter: none;
+                opacity: 1;
+            }
+        }
+
+        .instructions {
+            position: absolute;
+            top: 0;
+            right: 0;
+            left: 0;
+            padding: 1rem;
+            font-family: monospace;
+            text-transform: uppercase;
+            text-shadow: 0 1px 8px #fff;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container" tabIndex="0">
+
+        <div class="photo"
+            style="
+        background-image: url('https://icdn.psgtalk.com/wp-content/uploads/2022/12/lionel-messi-argentina-v-france-world-cup-2022-2.jpg');">
+        </div>
+
+        <div class="instructions">Click to take picture</div>
+
+        <div class="shutter" style="--flaps: 6">
+
+            <div class="flap" style="--i: 0"></div>
+            <div class="flap" style="--i: 1"></div>
+            <div class="flap" style="--i: 2"></div>
+            <div class="flap" style="--i: 3"></div>
+            <div class="flap" style="--i: 4"></div>
+            <div class="flap" style="--i: 5"></div>
+
+        </div>
+
+    </div>
+</body>
+
+</html>
