@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="theme-color" content="#000000"/>
+  <meta name="Description" content="Responsive Resume">
+  <meta name="Author" content="Jacinto Wong">
+  <title>Responsive Resume</title>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+  <link rel="shortcut icon" href="./img/favicon.ico">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Navigation ------------------------------------------------------------>
+  <div class="navbar-background">
+    <a href="#about">
+      <span class="title nav-title">Jacinto 
+      <span class="dark-red">Design</span></span>
+    </a>
+    <div class="menu-bars" onClick="Toggle()">
+      <i class="fab fa-bars fa"></i>
+    </div>
+  </div>
+  
+  <nav class="nav" id="nav">
+    <ul>
+      <li class="display-picture">
+        <a href="#about">
+          <img class="rounded-img" src="./img/red-logo.jpg" alt="Jacinto Design Logo" />
+        </a>
+      </li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#interests">Interests</a></li>
+      <li><a href="#awards">Awards</a></li>
+    </ul>
+  </nav>
+  <!-- About ----------------------------------------------------------------->
+  <section id="about">
+    <div class="content-top content-padding about-content-top">
+      <h1 class="title main-title">Your
+        <span class="red">Name</span>
+      </h1>
+      <div class="title sub-title">Location · Country · <br>
+        <a href="mailto:contact@jacinto.design" class="red">contact@your email</a>
+      </div>
+      <p class="main">I am currently working here and there. Add in details  
+      </p>
+      <ul class="social-icons">
+        <li class="icons no-margin-left">
+          <a href="https://github.com" target="_blank" rel="noopener" title="Github">
+            <span class="fa-layers fa-fw">
+              <i class="fas fa-circle circle red"></i>
+              <i class="fab fa-github fa-inverse social-icon"></i>
+            <span>
+          </a>
+        </li>
+        <li class="icons">
+          <a href="https://codepen.io/" target="_blank" rel="noopener" title="Codepen">
+            <span class="fa-layers fa-fw">
+              <i class="fas fa-circle circle red"></i>
+              <i class="fab fa-codepen fa-inverse social-icon"></i>
+            <span>
+          </a>
+        </li>
+        <li class="icons">
+          <a href="https://www.linkedin.com/" target="_blank" rel="noopener" title="Linkedin">
+            <span class="fa-layers fa-fw">
+              <i class="fas fa-circle circle red"></i>
+              <i class="fab fa-linkedin-in fa-inverse social-icon" id="linkedin"></i>
+            <span>
+          </a>
+        </li>
+        <li class="icons">
+          <a href="https://medium.com/" target="_blank" rel="noopener" title="Medium">
+            <span class="fa-layers fa-fw">
+              <i class="fas fa-circle circle red"></i>
+              <i class="fab fa-medium-m fa-inverse social-icon"></i>
+            <span>
+          </a>
+        </li>
+        <li class="icons">
+          <a href="https://www.instagram.com/" target="_blank" rel="noopener" title="Instagram">
+            <span class="fa-layers fa-fw">
+              <i class="fas fa-circle circle red"></i>
+              <i class="fab fa-instagram fa-inverse social-icon" id="instagram"></i>
+            <span>
+          </a>
+        </li>
+        <li class="icons">
+          <a href="https://www.youtube.com" target="_blank" rel="noopener" title="Youtube">
+            <span class="fa-layers fa-fw">
+              <i class="fas fa-circle circle red"></i>
+              <i class="fab fa-youtube fa-inverse social-icon" id="youtube"></i>
+            <span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </section>
+  <!-- Experience  ------------------------------------------------------------>
+  <section id="experience">
+    <div class="experience-content-top content-padding">
+      <h2 class="title section-title">Experience</h2>
+  
+      <div class="item-wrapper">
+        <div class="item">
+          <h3 class="title item-title">Senior Developer</h3>
+          <h4 class="title item-subtitle">XYZ Corporation (XYX)</h4>
+          <p class="main">Working on internal web applications, Write more of what you do in details.</p>
+        </div>
+        <div class="item-right">
+          <p class="main item-date red align">June 2018 - Present</p>
+        </div>
+      </div>
+  
+      <div class="item-wrapper">
+        <div class="item">
+          <h3 class="title item-title">Designer/Developer</h3>
+          <h4 class="title item-subtitle">Your Name and Work</h4>
+          <p class="main">Learning and expanding my skills in web development, I have made several projects and websites. I am comfortable with new technologies and am able to learn very efficiently. My most recent project was a full-stack application that I created using React.js, Node.js, and PostgreSQL.</p>
+        </div>
+        <div class="item-right">
+          <p class="main item-date red align">January 2018 - Present</p>
+        </div>
+      </div>
+  
+      <div class="item-wrapper">
+        <div class="item">
+          <h3 class="title item-title">Designation</h3>
+          <h4 class="title item-subtitle">Institution</h4>
+          <p class="main">I taught English, Music, and Communications Technology at a private high school in Toronto where I helped students write and record their own songs, make short films, create video games, and discover the city through urban photography. My biggest contribution was the design and production of two yearbooks.</p>
+        </div>
+        <div class="item-right">
+          <p class="main item-date red align">January 2016 - August 2017</p>
+        </div>
+      </div>
+  
+      <div class="item-wrapper">
+        <div class="item">
+          <h3 class="title item-title">Project Coordinator</h3>
+          <h4 class="title item-subtitle">Namsan High School</h4>
+          <p class="main">During my time living and working in South Korea, I led an advanced English class focused on writing and conversation, which culminated in the creation and design of Evergreen Magazine. One thousand copies were printed and it helped boost student engagement with English.</p>
+        </div>
+        <div class="item-right">
+          <p class="main item-date red align">April 2014 - April 2015</p>
+        </div>
+      </div>
+  
+      <div class="item-wrapper">
+        <div class="item">
+          <h3 class="title item-title">E.P.I.K. Teacher</h3>
+          <h4 class="title item-subtitle">Dogye Middle School</h4>
+          <p class="main">I worked at middle schools in Changwon through the government-led English Program in Korea. I expanded my horizons and learned to become a more flexible and resourceful individual. I taught over 2000 students and provided engaging material to all levels of English.</p>
+        </div>
+        <div class="item-right">
+          <p class="main item-date red align">January 2013 - April 2015</p>
+        </div>
+      </div>
+  
+      <div class="item-wrapper">
+        <div class="item">
+          <h3 class="title item-title">Graphic Designer/Editor</h3>
+          <h4 class="title item-subtitle">York University</h4>
+          <p class="main">I coordinated with a team of other editors and designers to create the monthly edition of Pro Tem at Glendon College. I consistently met deadlines with attention to detail while seamlessly combining content and form. Additionally, I went on to create Pandora magazine in 2008.</p>
+        </div>
+        <div class="item-right">
+          <p class="main item-date red align">September 2006 - April 2009</p>
+        </div>
+      </div>
+  
+    </div>
+  </section>
+  <!-- Education ------------------------------------------------------------->
+  <section id="education">
+    <div class="content-top content-padding">
+      <h2 class="title section-title">Education</h2>
+  
+      <div class="item-wrapper">
+        <div class="item">
+          <h3 class="title item-title">York University</h3>
+          <h4 class="title item-subtitle">Bachelor of Education</h4>
+          <p class="main small-text">English, Geography, Communications Technology</p>
+        </div>
+        <div class="item-right">
+          <p class="main item-date red align">September 2007 - June 2011</p>
+        </div>
+      </div>
+  
+      <div class="item-wrapper">
+        <div class="item">
+          <h3 class="title item-title">York University</h3>
+          <h4 class="title item-subtitle">Bachelor of Arts</h4>
+          <p class="main small-text">Graduated with Honours - Geography, Philosophy</p>
+        </div>
+        <div class="item-right">
+          <p class="main item-date red align">September 20XX - June 20XX</p>
+        </div>
+      </div>
+  
+    </div>
+  
+  </section>
+  <!-- Skills ------------------------------------------------------------------>
+  <section id="skills">
+    <div class="content-top content-padding">
+      <h2 class="title section-title">Skills</h2>
+      <ul class="skill-icons red">
+        <li class="icons no-margin-left">
+          <i class="far fa-gem skill-icon" id="diamond" title="Sketch"></i>
+        </li>
+        <li class="icons">     
+          <i class="fab fa-html5 skill-icon" title="HTML"></i>
+        </li>
+        <li class="icons">
+          <i class="fab fa-css3-alt skill-icon" title="CSS"></i>
+        </li>
+        <li class="icons">
+          <i class="fab fa-js-square skill-icon" title="Javascript"></i>
+        </li>
+        <li class="icons">  
+          <i class="fab fa-angular skill-icon" title="Angular"></i>
+        </li>
+        <li class="icons">
+          <i class="fab fa-react skill-icon" title="React"></i>
+        </li>
+      </ul>
+  
+      <h4 class="title item-subtitle">Specializations</h4>
+      <div class="list">
+        <div class="list-item">
+          <i class="fas fa-certificate grey"></i>
+          <p class="main indent">Adobe Creative Suite & Sketch</p>
+        </div>
+        <div class="list-item">
+          <i class="fas fa-certificate grey"></i>
+          <p class="main indent">Responsive Design & Advanced CSS</p>
+        </div>
+        <div class="list-item">
+          <i class="fas fa-certificate grey"></i>
+          <p class="main indent">Progressive Web App Development</p>
+        </div>
+        <div class="list-item">
+          <i class="fas fa-certificate grey"></i>
+          <p class="main indent">Visual Studio/Visual Studio Code</p>
+        </div>
+      </div>
+  
+    </div>
+  </section>
+  <!-- Interests -------------------------------------------------------------->
+  <section id="interests">
+    <div class="content-top content-padding">
+      <h2 class="title section-title">Interests</h2>
+      <p class="main">Outside of my work I have many other passions and hobbies. I have been writing and recording music for 15 years, which is a very rewarding outlet. I've also played hockey since I was 8 years old, including two years playing for Changwon City, South Korea. I have written, directed, and acted in film and theatre, including original works featured at both York University theatres.</p>
+      <p class="main">I loved playing video games from an early age and I indulge in my free time thanks to a custom gaming PC I built in 2017. I am very interested in science fiction and am always reading up on the latest technological advancements. I hope to work in the field of virtual reality later in my career.</p>
+    </div>
+  </section>
+  <!-- Awards ----------------------------------------------------------------->
+  <section id="awards">
+    <div class="content-top content-padding">
+      <h2 class="title section-title line-height">Awards & Certifications</h2>
+      <div class="list">
+        <div class="list-item">
+          <i class="fas fa-trophy grey"></i>
+          <p class="main indent small-text">ZTM - Coding Challenge #3 Winner</p>
+        </div>
+        <div class="list-item">
+          <i class="fas fa-trophy grey"></i>
+          <p class="main indent small-text">Udemy - ZTM Full-Stack Development</p>
+        </div>
+        <div class="list-item">
+          <i class="fas fa-trophy grey"></i>
+          <p class="main indent small-text">FreeCodeCamp - Front End Development</p>
+        </div>
+        <div class="list-item">
+          <i class="fas fa-trophy grey"></i>
+          <p class="main indent small-text">Dunbarton H.S. - Web Design Proficiency</p>
+        </div>
+        <div class="list-item">
+          <i class="fas fa-trophy grey"></i>
+          <p class="main indent small-text">Dunbarton H.S. - Yearbook Proficiency</p>
+        </div>
+        <div class="list-item">
+          <i class="fas fa-trophy grey"></i>
+          <p class="main indent small-text">Dunbarton H.S. - Journalism Award</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Javascript -->
+  <script>
+  function Toggle() {
+  var x = document.getElementById("nav");
+  if (x.className === "nav") {
+      x.className += " nav-expand";
+  } else {
+      x.className = "nav";
+    }
+  } 
+  </script>
+</body>
+</html>
