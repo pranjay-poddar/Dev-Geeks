@@ -6,4 +6,4 @@
 
 ## Video
 
-![This is the ultimate outcome](".\assets\circle.mp4")
+[This is the ultimate outcome](./assets/circle.mp4)
