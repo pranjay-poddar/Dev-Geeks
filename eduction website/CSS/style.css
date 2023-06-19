@@ -1,0 +1,183 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Cormorant Garamond', serif;
+}
+html{
+    font-family: "Baloo Bhai 2", cursive;
+    font-size: 62.5%;
+    /* color: white; */
+}
+
+:root{
+    --blue:#7630e0;
+    --lightbackground: #f9f9ff;
+}
+
+/* ----------header----------------------------- */
+
+main{
+    /* background: url(/image/main\ image.jpg); */
+    /* background-repeat: no-repeat; */
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+}
+main::before {
+    content: "";
+    background: url("/image/main\ image.jpg") no-repeat center center/cover;
+    position: absolute;
+    height: 100%;
+   width:  100%;
+    z-index: -1;
+    opacity: 0.6;
+    top: 0px;
+    left: 0px;
+  }
+
+header{
+    font-size: 3rem;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 2rem;
+    background-color: var(--blue);
+    color:white;
+    /* font-family: cursive !important;  */
+    width: 100%;
+}
+
+.intro{
+    /* background-color: rgba(15, 13, 13, 0.2); */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    padding-top: 10rem;
+    padding-left: 4rem;
+    width:100%;
+    /* height: 80%; */
+}
+
+.introline{
+    font-size: 2rem;
+    text-transform: uppercase;
+    color: black;
+    font-weight: bold;
+    
+}
+.mainheading{
+    font-size: 6rem;
+    font-weight: bold;
+    color: var(--blue);
+    font-weight: bold;
+    /* font-family: cursive; */
+}
+
+.bottomtext{
+    font-size: 2rem;
+    color:black;
+    font-weight: bold;
+}
+/* =-----------------------------semselection part------------------------------ */
+.select{
+    text-align: center;
+    font-size: 4rem;
+    color: white;
+    /* font-family: cursive; */
+    padding:2rem ;
+    background-color: var(--blue);
+}
+.semselect{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    font-size: 3rem;
+    justify-content: center;
+    align-items: center;
+    padding: 3rem;
+    background-color: var(--lightbackground);
+    /* background:url(/image/selectimage3.jpg) no-repeat ; */
+    background-size: 100%;
+    
+}
+
+
+
+.firstrow{
+    padding:2rem ;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    align-items: center;
+    
+}
+.secondrow{
+    padding:2rem ;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-around;
+}
+.thirdrow{
+    padding:2rem ;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.row{
+    margin: 2rem;
+}
+
+
+.semcontainer{
+    border: 2px solid var(--blue);
+    border-radius: 1rem;
+    padding: 2rem;
+    text-align: center;
+    width: 20%;
+    color: white;
+    text-decoration: none;
+    background-color: var(--blue);
+} 
+
+.semcontainer:hover{
+    color: var(--blue);
+    background-color: white;
+}
+/* -----------------------footer--------------------------- */
+
+footer{
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    background-color: #EEEEEE;
+    gap: 10%;
+    flex-wrap: wrap;
+}
+.contact span{
+    font-weight: bold;
+}
+
+.copyright{
+    /* margin-left: 10rem;
+    margin-right: 10rem; */
+}
+
+.socialsites{
+    display: flex;
+    flex-wrap: wrap;
+}
+.icon{
+    margin: 1rem;
+}
+.icon img{
+    width: 2rem;
+}
