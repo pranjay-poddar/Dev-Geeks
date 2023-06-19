@@ -17,5 +17,7 @@ The game is designed for one player only, so you'll be playing against the compu
 - Click on the destination square to complete your move. The computer will respond with its move.
 - Keep playing until one player's king is checkmated, and the other player emerges victorious!
 
+## Screenshot 📷
+<img width="676" alt="image" src="https://github.com/AnkitaBarbora/Dev-Geeks/assets/101138526/17704b29-7428-4e9f-bc27-882652834476">
 
 <br>
