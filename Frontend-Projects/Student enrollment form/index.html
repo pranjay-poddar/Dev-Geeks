@@ -15,26 +15,32 @@
     </header>
     <div class="main">
         <form id="student-enrollment-form">
-            <div class="name-email">
+            <div class="first-last">
                 <div class="name-box">
-                    <div><label for="name">Name</label></div>
-                    <input type="text" name="name" id="name">
+                    <div><label for="name"> First Name</label></div>
+                    <input type="text" name="name" id="name" placeholder="John">
                 </div>
+                <div class="name-box">
+                    <div><label for="name">Last Name</label></div>
+                    <input type="text" name="name" id="name" placeholder="Doe">
+                </div>
+            </div>
             
-                <div class="email-box">
-                    <div><label for="email">Email</label></div>
+            <div>
+                <div class="email-link">
+                    <div><label for="email">Email. <ion-icon name="mail"></ion-icon></label></div>
                     <input type="email" name="email" id="email">
                 </div>
+
+                <div class="website-link">
+                     <div><label for="website">Social handles  <ion-icon name="logo-github"></ion-icon></label></div>
+                     <input type="git" name="website" id="website">
+                </div>
             </div>
 
-            <div class="website-link">
-                <div><label for="website">website</label></div>
-                <input type="url" name="website" id="website">
-            </div>
-
-            <div class="image-link">
-                <div><label for="image">Image Link</label></div>
-                <input type="text" name="image" id="image">
+            <div class="discord">
+                <div><label for="name">Discord username  <ion-icon name="person"></ion-icon></label></div>
+                <input type="text" name="name" id="namee">
             </div>
 
             <div class="gender">
@@ -49,13 +55,13 @@
 
             <div class="skill">
                 <span>Skills</span>
-                <input type="radio" id="java" name="option" value="java">
+                <input type="checkbox" id="java" name="option" value="java">
                 <label for="java">Java</label>
 
-                <input type="radio" id="HTML" name="option" value="HTML">
+                <input type="checkbox" id="HTML" name="option" value="HTML">
                 <label for="HTML">HTML</label>
 
-                <input type="radio" id="CSS" name="option" value="CSS">
+                <input type="checkbox" id="CSS" name="option" value="CSS">
                 <label for="HTML">CSS</label>
 
             </div>
