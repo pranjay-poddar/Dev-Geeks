@@ -29,8 +29,7 @@
 ## **Screenshots 📸**
 
 <br>
-
-![image](../../assets/images/Crossword_Game.png)
+![image](https://github.com/pranjay-poddar/Dev-Geeks/assets/95160083/489fec9c-341d-4629-8874-ff8ed7661951)
 
 <br>
 
