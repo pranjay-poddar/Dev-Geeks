@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon">
+    <title>Morse Code Convertor</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Main Heading -->
+    <h1>Morse Code Convertor</h1>
+
+    <!-- Whole Box -->
+    <div class="wrapper">
+        <!-- Loading Page -->
+        <div id="loadingPage">
+            <button class="inp-btn" id="ttm" value="1">Text To Morse Code</button>
+            <button class="inp-btn" id="mtt" value="2">Morse Code To Text</button>
+        </div>
+
+        <!-- Starting Page -->
+        <div id="startPage" style="display: none;">
+            <div class="search-box">
+                <input type="text" placeholder="Type Here.." id="inp-word" />
+                <button id="convert-btn">Convert</button>
+            </div>
+
+            <div class="info" id="res">
+                <div class="word">
+                    <h3>MORSE CODE CONVERTOR</h3>
+                </div>
+                <p class="word-mean">
+                    This is Application is made using JavaScript. Type anything, in input box, you want to convert into
+                    <strong><span id="text"></span></strong>.
+                </p>
+                <p class="example">
+                    Made by <a target="_blank" href="https://github.com/Avdhesh-Varshney">Avdhesh Varshney</a>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript File -->
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,169 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  body {
+    height: fit-content;
+    font-family: sans-serif;
+    background: linear-gradient(90deg, #3F2B96 0%, #A8C0FF 100%);
+  }
+  .container {
+    padding: 2rem;
+    background: linear-gradient(90deg, #3F2B96 0%, #A8C0FF 100%);
+    color: #ffffff;
+    min-height: 100vh;
+  }
+  
+  .description {
+    margin: 1rem 0;
+    font-size: 1rem;
+  }
+  
+  /* profession section style---------------------------- */
+  .profession-section {
+    margin: 2rem 0;
+  }
+  
+  .profession-section .filters #profession {
+    margin: 1rem 0;
+    padding: 0.5rem;
+    background: none;
+    color: #ffffff;
+    border: 1px solid #ffffff;
+  }
+  #profession option {
+    color: #150f0f;
+    background-color:#ffffff70;
+  }
+  
+  .filters #byname{
+  margin: 1rem 0;
+  padding: 0.5rem;
+  background: none;
+  color: #ffffff;
+  border: 1px solid #ffffff;
+  width: 123px;
+  }
+  
+   ::placeholder{
+    color:#ffffff;
+  }
+  
+  
+  .profession-section .filter-ui {
+    max-height: 223px;
+    overflow-y: scroll;
+    min-height: 180px;
+  }
+  
+  ::-webkit-scrollbar{
+    width:0px;
+    background: transparent;
+  }
+  .profession-section .filter-ui .cards {
+    border: 1px solid #ffffff;
+    border-radius: 7px;
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+    margin: 0.8rem 0;
+    line-height: 1.5;
+    background-color: #87ca13ad;
+    transition:all 1s ease-in-out;
+  }
+  .cards:hover{
+    box-shadow:2px 2px 10px 5px rgb(218, 202, 222);
+    transform:scale(1.0009);
+    cursor: pointer;
+  }
+  .cards span {
+    margin: 0.5rem;
+  }
+  
+  .profession-section #filter {
+    padding: 0.2rem;
+    line-height: 2;
+    text-align: center;
+    width: 140px;
+    background-color: #ffffff;
+    color: #000000;
+    font-size: 1rem;
+    cursor: pointer;
+  }
+  
+  #filter:active{
+    background-color:crimson;
+  }
+  /* add-user section -----------*/
+  .add-user {
+    margin-top: 3rem;
+  }
+  .add-user p {
+    margin: 2rem 0;
+    font-size: 2rem;
+  }
+  form .inputs {
+    display: flex;
+    justify-content: space-between;
+    margin: 1rem 0;
+  }
+  form .inputs section {
+    width: 30%;
+    /* border: 1px solid white; */
+  }
+  .inputs section input {
+    width: 100%;
+    line-height: 2.5;
+    background: none;
+    color: #ffffff;
+    margin-top: 10px;
+    border: 1px solid #ffffff;
+    border-radius: 3px;
+  }
+  .inputs section select{
+    width: 100%;
+    line-height: 2.5;
+    background: none;
+    color: #ffffff;
+    margin-top: 10px;
+    border: 1px solid #ffffff;
+    border-radius: 3px;
+    padding: 0.5rem;
+  }
+  .inputs select option {
+    color: #150f0f;
+    background-color:#ffffff70;
+  }
+  .add-user #add {
+    padding: 0.2rem;
+    line-height: 2;
+    text-align: center;
+    width: 130px;
+    color: #000000;
+    background-color: #ffffff;
+    cursor: pointer;
+  }
+  
+  #add:active{
+    background-color:crimson;
+  }
+  
+  @media screen and (max-width: 870px) {
+    .profession-section .filter-ui .cards {
+      width: 60%;
+    }
+  }
+  @media screen and (max-width: 800px) {
+    .profession-section .filter-ui .cards {
+      width: 80%;
+    }
+  }
+  @media screen and (max-width: 500px) {
+    body {
+      font-size: 0.7rem;
+    }
+    .profession-section .filter-ui .cards {
+      width: 100%;
+    }
+  }

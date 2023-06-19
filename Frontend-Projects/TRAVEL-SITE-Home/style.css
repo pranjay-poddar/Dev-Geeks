@@ -1,6 +1,72 @@
+
+.search-container{
+    width:100%;
+    padding:5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin:30px 0;
+    
+}
+.search-heading{
+    color:gray;
+    text-transform: capitalize;
+    font-weight: 400;
+    background-image: linear-gradient(to right,#28b485, #ffb900);
+    color: transparent;
+    -webkit-background-clip: text;
+    transition: all .5s;
+}
+.search-heading:hover{
+    background-image: linear-gradient(to right,#b44228, #0080ff);
+    color: transparent;
+    -webkit-background-clip: text;
+}
+.search-bar{
+    width:100%;
+    max-width:800px;
+    background: rgba(227,242,253, 0.7);
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    border-radius: 60px;
+}
+.search-bar input{
+    background: transparent;
+    flex: 1;
+    border:none;
+    outline:none;
+    padding: 15px 24px;
+}
+::placeholder{
+    color:rgba(128, 152, 177, 0.929);
+}
+.search-bar button img{
+    width: 30px;
+}
+.search-bar button{
+    border-radius: 50%;
+    height: 50px;
+    width:50px;
+    background: transparent ;
+    cursor: pointer;
+    border: none;
+}
 .jumbotron{
     text-align: center;
     background: none;
+}
+.heading{
+    margin-bottom: 30px;
+    font-weight: 500;
+    background-image: linear-gradient(to right, #28b485, #ffb900);
+    color: transparent;
+    -webkit-background-clip: text;
+    transition: all .2s;
+}
+.heading:hover{
+    transform: skewX(15deg) skewY(2deg);
+    text-shadow: 10px 20px 20px rgba(0,0,0,.2);
 }
 .about{
     display: block;
@@ -9,8 +75,14 @@
     text-align: center;
 }
 .festivetext{
+    padding-top:20px;
+    padding-bottom: 20px;
     text-align: center;
 }
+.img-container{
+    margin-top: 20px;
+    margin-bottom: 30px;
+    
 .box{
     padding: 10px;
 }
@@ -18,7 +90,22 @@
 .imgatribute{
     width: 100%;
     height: 200px; 
+    transform:scale(1);
+    outline-offset: 5px;
+    transition:all .2s;
+    
+   
 }
+.imgatribute:hover{
+    transform: scale(1.5);
+    outline:5px solid rgb(89, 63, 113);
+    transform: translateY(4px);
+   
+  
+}
+}
+
+
 .modaltitlem{
     display: block;
     margin: auto;
@@ -33,6 +120,10 @@
 .snaphead{
     padding: 8px;
     margin: auto;
+}
+
+.snapshots{
+    padding:2px;
 }
 .snapshots i{
     display: inline-block;
@@ -62,4 +153,5 @@
 .snapshots i:hover{
     background-color: white;
     color: skyblue;
+    border: 1px solid #640c0cb7;
 }

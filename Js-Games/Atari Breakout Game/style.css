@@ -1,0 +1,43 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+body {
+    text-align: center;
+    background-color: #191825;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    height: 100vh;
+}
+
+h1 {
+    font-family: 'Press Start 2P', cursive;
+    color: #865DFF;
+    font-size: 3rem;
+}
+
+#board {
+    background-color: black;
+    border: 5px solid #0F6292;
+    overflow: hidden;
+    height: 600px;
+    width: 600px;
+}
+
+a {
+    color: red;
+    font-weight: 400;
+}
+
+p {
+    margin: 0;
+    padding: 0;
+    word-spacing: 2px;
+    letter-spacing: 1px;
+    font-size: 1rem;
+    color: aquamarine;
+}
