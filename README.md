@@ -448,7 +448,7 @@ Happy Coding! -->
 <td align="center"> 138.</td>
 <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Js-Projects/Text%20to%20speech"> Text to speech  </a></td>
 <td align="center"> 139.</td>
-<td align="center"> <a href="https://github.com/iamvittaln/Dev-Geeks/blob/main/Python%20Projects/Tic%20Tac%20toe/Tic%20Tac%20Toe.py"> Tic Tac Toe.py </a></td>
+<td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/blob/main/Python%20Projects/Tic%20Tac%20Toe.py"> Tic Tac Toe.py </a></td>
 <td align="center"> 140.</td>
 <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Js-Games/Tic-Tac-Toe">  Tic-Tac-Toe </a></td>
 </tr>
