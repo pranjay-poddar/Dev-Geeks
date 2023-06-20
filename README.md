@@ -752,6 +752,9 @@ Happy Coding! -->
 <tr align="center">
 <td align="center"> 249.</td>
 <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Frontend-Projects/VegetableMarketplace"> VegetableMarketplace </a></td>
+<td align="center"> 250.</td>
+<td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Frontend-Projects/ApppleClone"> Apple Clone </a></td>
+
 </tr>
 
 </table>
