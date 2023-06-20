@@ -12,6 +12,12 @@ This is a simple Xylophone app built with Flutter. It allows users to play music
 
 <img src="xylophone-img.jpg" height="400px">
 
+## Screen-recording
+
+<video height="400px" controls>
+  <source src="xylophone_vid.mp4" type="video/mp4">
+</video>
+
 ## Getting Started
 
 To get started with this project, follow these steps:
