@@ -24,14 +24,14 @@ body {
 .logo {
 
     width: 40%;
-    height: 150px;
+    height: 200px;
     display: flex;
     transform: translateX(500px);
 
 }
 
 .parallax1 {
-    background-image: url("./5.jpeg");
+    background-image: url('https://drive.google.com/uc?id=1UwRfS4MprdN7grzV24ZHVkbOfAQiR2Y-');
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
@@ -101,9 +101,11 @@ a:hover {
     bottom: 400px;
 
 }
-
+/* https: //drive.google.com/file/d/1UwRfS4MprdN7grzV24ZHVkbOfAQiR2Y-/view?usp=drive_link
+https: //drive.google.com/uc?id=1UwRfS4MprdN7grzV24ZHVkbOfAQiR2Y- */
+/* 10WlcKzXrdqLc_wJFJ4_hwgnlZ-ZXYP0H */
 .parallax2 {
-    background-image: url("./4.jpeg");
+    background-image: url('https://drive.google.com/uc?id=10WlcKzXrdqLc_wJFJ4_hwgnlZ-ZXYP0H');
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
@@ -143,9 +145,9 @@ a:hover {
     border-radius: 20px 20px;
     transition: 0.2s;
 }
-
+/* https://drive.google.com/file/d/1ptpx0ssSZvFcIUc8KduIP34nF5ZhDqLp/view?usp=sharing */
 .parallax3 {
-    background-image: url("./3.jpeg");
+    background-image: url('https://drive.google.com/uc?id=1ptpx0ssSZvFcIUc8KduIP34nF5ZhDqLp');
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
