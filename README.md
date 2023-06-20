@@ -737,6 +737,7 @@ Happy Coding! -->
 <td align="center"> 244.</td>
 <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Frontend-Projects/ProductPreviewComponent"> ProductPreviewComponent </a></td>
 </tr>
+
 <tr align="center">
 <td align="center"> 245.</td>
 <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Frontend-Projects/TestimonialGridSection"> TestimonialGridSection </a></td>
@@ -746,7 +747,12 @@ Happy Coding! -->
 <td align="center"><a href="https://github.com/Swapnil-2503/Dev-Geeks/tree/guiTicTacToe/Java%20Projects/Gui%20TocTacToe">GUI TicTacToe</a></td>
 <td align="center"> 248.</td>
 <td align="center"><a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Js-Games/ChessGrand">ChessGrand</a></td>
-  </tr>
+</tr>
+
+<tr align="center">
+<td align="center"> 249.</td>
+<td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Frontend-Projects/VegetableMarketplace"> VegetableMarketplace </a></td>
+</tr>
 
 </table>
 
