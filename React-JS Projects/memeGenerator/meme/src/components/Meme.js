@@ -1,5 +1,6 @@
 import React from "react";
 
+//controls the flow of dynmaic meme functionality in the project.
 export default function Meme() {
   const [meme, setMeme] = React.useState({
     topText: "",

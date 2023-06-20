@@ -1,5 +1,6 @@
 import React from "react";
 
+//controls the functionality of the header section of the project
 export default function Header() {
   return (
     <header className="header">
