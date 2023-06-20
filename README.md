@@ -744,7 +744,9 @@ Happy Coding! -->
 <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Java%20Projects/LibraryManagement"> LibraryManagement </a></td>
 <td align="center"> 247.</td>
 <td align="center"><a href="https://github.com/Swapnil-2503/Dev-Geeks/tree/guiTicTacToe/Java%20Projects/Gui%20TocTacToe">GUI TicTacToe</a></td>
-  </tr>
+<td align="center"> 248.</td>
+<td align="center"><a href="https://github.com/Swapnil-2503/Dev-Geeks/tree/guiTicTacToe/Java%20Projects/Number%20Guesssing%20Game%20Gui">Number Guessing Game Gui</a></td>
+</tr>
 
 </table>
 
