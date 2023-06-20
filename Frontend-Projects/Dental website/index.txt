@@ -1,0 +1,216 @@
+Dentelo - We Are Best Dental Service
+
+
+
+#---------- HEADER ----------#
+
+<ion-icon name="mail-outline"></ion-icon>
+info@example.com
+
+<ion-icon name="call-outline"></ion-icon>
++91-7052-101-786
+
+<ion-icon name="logo-facebook"></ion-icon>
+<ion-icon name="logo-instagram"></ion-icon>
+<ion-icon name="logo-twitter"></ion-icon>
+<ion-icon name="logo-youtube"></ion-icon>
+
+Dentelo.
+
+Home
+Services
+About Us
+Blog
+Contact
+
+Book appointment
+
+aria-label = Toggle menu
+
+<ion-icon name="menu-sharp" aria-hidden="true" class="menu-icon"></ion-icon>
+<ion-icon name="close-sharp" aria-hidden="true" class="close-icon"></ion-icon>
+
+
+
+#---------- HERO ----------#
+
+Welcome To Dentelo
+
+We Are Best Dental Service
+
+Donec vitae libero non enim placerat eleifend aliquam erat volutpat. Curabitur diam ex, dapibus purus sapien, cursus sed nisl tristique, commodo gravida lectus non.
+
+aria-label = email
+
+placeholder = Your Email Address...
+
+Get Call Back
+
+alt = hero banner
+
+
+
+#---------- SERVICE ----------#
+
+Our Services
+
+What We Provide
+
+alt = service icon
+
+Root Canal
+
+Aenean eleifend turpis tellus, nec laoreet metus elementum ac.
+
+Alignment Teeth
+
+Cosmetic Teeth
+
+alt = service banner
+
+Oral Hygiene
+
+Live Advisory
+
+Cavity Inspection
+
+
+
+#---------- ABOUT ----------#
+
+alt = about banner
+
+About Us
+
+We Care For Your Dental Health
+
+Aliquam ac sem et diam iaculis efficitur. Morbi in enim odio. Nullam quis volutpat est, sed dapibus sapien. Cras condimentum eu velit id tempor. Curabitur purus sapien, cursus sed nisl tristique, commodo vehicula arcu.
+
+Aliquam erat volutpat. Aliquam enim massa, sagittis blandit ex mattis, ultricies posuere sapien. Morbi a dignissim enim. Fusce elementum, augue in elementum porta, sapien nunc volutpat ex, a accumsan nunc lectus eu lectus.
+
+Read more
+
+
+
+#---------- DOCTOR ----------#
+
+Our Doctor
+
+Best Expert Dentist
+
+alt = Howard Holmes
+
+Howard Holmes
+Dentist
+
+<ion-icon name="logo-facebook"></ion-icon>
+<ion-icon name="logo-twitter"></ion-icon>
+<ion-icon name="logo-instagram"></ion-icon>
+
+alt = Ella Thompson
+Ella Thompson
+
+alt = Vincent Cooper
+Vincent Cooper
+
+alt = Danielle Bryant
+Danielle Bryant
+
+
+
+#---------- CTA ----------#
+
+alt = cta banner
+
+Book Dentail Appointment
+
+We Are open And Welcoming Patients
+
+Book appointment
+
+
+
+#---------- BLOG ----------#
+
+Our Blog
+
+Latest Blog & News
+
+alt = Cras accumsan nulla nec lacus ultricies placerat.
+
+<ion-icon name="calendar-outline"></ion-icon>
+
+24th March 2022
+
+Cras accumsan nulla nec lacus ultricies placerat.
+
+Curabitur sagittis libero tincidunt tempor finibus. Mauris at dignissim ligula, nec tristique orci.
+
+Read More
+
+Dras accumsan nulla nec lacus ultricies placerat.
+
+Seas accumsan nulla nec lacus ultricies placerat.
+
+
+
+#---------- FOOTER ----------#
+
+Dentelo.
+
+Mauris non nisi semper, lacinia neque in, dapibus leo. Curabitur sagittis libero tincidunt tempor finibus. Mauris at dignissim ligula, nec tristique orci.Quisque vitae metus.
+
+<ion-icon name="time-outline"></ion-icon>
+
+Monday - Saturday:
+9:00am - 10:00Pm
+
+Other Links
+
+<ion-icon name="add-outline"></ion-icon>
+Home
+About Us
+Services
+Project
+Our Team
+Latest Blog
+
+
+Our Services
+
+Root Canal
+Alignment Teeth
+Cosmetic Teeth
+Oral Hygiene
+Live Advisory
+Cavity Inspection
+
+
+Contact Us
+
+<ion-icon name="location-outline"></ion-icon>
+1247/Plot No. 39, 15th Phase,
+LHB Colony, Kanpur
+
+<ion-icon name="call-outline"></ion-icon>
++91-7052-101-786
+
+<ion-icon name="mail-outline"></ion-icon>
+help@example.com
+
+
+&copy; 2022 All Rights Reserved by codewithsadee.
+
+<ion-icon name="logo-facebook"></ion-icon>
+<ion-icon name="logo-instagram"></ion-icon>
+<ion-icon name="logo-twitter"></ion-icon>
+  
+
+
+
+
+#---------- BACK TO TOP ----------#
+
+aria-label = back to top
+
+<ion-icon name="caret-up" aria-hidden="true"></ion-icon>
