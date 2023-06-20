@@ -1,0 +1,32 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+footer {
+    background: black;
+    color: white;
+    padding: 50px 15px;
+    width: 100%;
+    margin-bottom: 0%;
+    margin-top: 100%;
+}
+.center {
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+
+
+
+@media only screen and (max-width:579px) {
+    
+    footer {
+       
+        margin-bottom: 0%;
+        margin-top: 100%;
+        padding: 197px 15px;
+    }
+
+}
