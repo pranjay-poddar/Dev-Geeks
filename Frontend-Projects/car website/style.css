@@ -1,0 +1,393 @@
+@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&family=Caveat:wght@400;700&family=Lobster&family=Monoton&family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display+SC:ital,wght@0,400;0,700;1,700&family=Playfair+Display:ital,wght@0,400;0,700;1,700&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&family=Source+Sans+Pro:ital,wght@0,400;0,700;1,700&family=Work+Sans:ital,wght@0,400;0,700;1,700&display=swap');
+
+body {
+    margin: 0px;
+    padding: 0px;
+}
+
+* {
+    box-sizing: border-box;
+    font-family: "Roboto";
+}
+
+/* li {
+    color: blue;
+} */
+
+.web-title {
+    background-color: #161B21;
+    color: #F4A950;
+    font-size: 15px;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+.DDN {
+    background-color: #e74c3c;
+    font-weight: 400;
+}
+
+
+form {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 10px;
+}
+.flex{
+    display: flex;
+    align-items: center;
+}
+ul{
+    list-style: none;
+}
+h1{
+    color: rgb(29, 7, 7);
+    font-size: 2rem;
+}
+
+.navbar{
+    justify-content: space-between;
+}
+.logo{
+    width: 50px;
+}
+.nav-links{
+    flex-basis: 1100px;
+}
+.nav-links ul{
+    justify-content: left;
+    gap: 50px;
+    font-size: 25px;
+}
+.nav-links button{
+    margin-left: 80px;
+    margin-top:10px ;
+    width: 150px;
+    height: 50px;
+    border-radius: 40px;
+    color: rgba(53, 53, 46, 0.422);
+}
+.nav-links button img{
+    margin-left: 20px;
+    margin-right: 5px;;
+    width :15px;
+    align-items: flex-start;
+}
+/* Landing Page */
+.landing {
+    /* background-image: url("https://img.freepik.com/free-photo/bright-pop-landscape-road_23-2149213454.jpg?size=626&ext=jpg"); */
+    display: flex;
+    flex-direction:row;
+    justify-content: space-between;
+    gap:20px;
+    align-items: center; 
+    min-height: 40vh;
+}
+
+.land-head {
+    font-weight: bold;
+    color: white;
+}
+.lp-left{
+    margin-left:100px;
+    max-width: 350px;
+    max-height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 20px;
+}
+.lp-left h1{
+    color: rgb(23, 162, 184);
+}
+.lp-left h4{
+    color: grey;
+}
+
+.landingBtn {
+    border-width: 0px;
+    height: 50px;
+    width: 200px;
+    font-weight: bold;
+    border-radius: 10px;
+    margin-top: 10px;
+    background-color: rgb(23, 162, 184);
+    color: white;
+}
+.bg-img{
+    justify-content: space-between;
+    gap: 10px;
+    width: 800px;
+}
+.hero{
+    margin-top: 20px;
+    max-width: 100vw;
+}
+.bg {
+    padding: 40px;
+    /* background-image: url("https://img.freepik.com/free-vector/taxi-app-interface-concept_23-2148496176.jpg?size=626&ext=jpg"); */
+    background-image: url("https://img.freepik.com/free-photo/road-city-view_1417-1478.jpg?size=626&ext=jpg");
+    /* background-color: lightgreen; */
+    background-size: cover;
+}
+.bg2 {
+    padding: 40px;
+    /* background-color: lightgreen; */
+    /* background-image: url("https://img.freepik.com/free-vector/happy-woman-buying-new-car-automobile-store_74855-14072.jpg?size=626&ext=jpg"); */
+    background-image: url(https://drive.google.com/uc?export=view&id=1JcvZyQ0Qc9PTsg0V3e7labZAGL4R4nDB);
+    background-repeat: no-repeat;
+    background-size: 720px,10px;
+    background-position: right;
+    background-color:#bbdefb
+}
+
+.bg3 {
+    padding: 40px;
+    background-color: lightgreen;
+    background-image: url("https://img.freepik.com/premium-vector/group-business-people-silhouette-businesspeople-walk-step-forward-abstract-background_48369-16064.jpg?size=626&ext=jpg");
+    background-size: cover;
+}
+
+.parabtus {
+    text-align: justify;
+    font-weight: 500;
+    font-size: 20px;
+}
+
+
+
+.formi {
+    width: 100%;
+}
+
+@media (min-width:768px) {
+    .formi {
+        width: 50%;
+    }
+}
+
+.button1 {
+    height: 36px;
+    width: 136px;
+    font-weight: bold;
+}
+
+.main-heading {
+    text-align: center;
+    font-weight: bold;
+    color: #323f4b;
+}
+
+.image {
+    width: 150px;
+    height: 100px;
+}
+
+/* How it works */
+.features {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.feature-img {
+    width: 250px;
+    height: 200px;
+}
+
+.feature-item {
+    padding: 20px;
+    background-color: white;
+    border-radius: 15px;
+    margin: 10px;
+    height: 520px;
+    max-width: 300px;
+    text-align: center;
+}
+
+.hiwh {
+    font-weight: bold;
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+.hiwp {
+    font-size: 15px;
+    text-align: justify;
+}
+
+.howitworks {
+    padding: 20px;
+    /* background-image: linear-gradient(135deg, #FD6E6A 10%, #FFC600 100%); */
+    background-image: linear-gradient(135deg, #014f86 10%, #89c2d9 100%);
+    margin-bottom: 0px;
+}
+
+@media (min-width:768px) {
+    .feature-img {
+        max-width: 350px;
+    }
+
+    .feature-item {
+        max-width: 350px;
+    }
+
+    .hiwh {
+        font-size: 36px;
+    }
+
+    .hiwp {
+        font-size: 18px;
+    }
+}
+
+
+.errMsg {
+    color: #dc3545;
+    font-weight: 500;
+    font-size: 14px;
+}
+
+/* Safety Guidelines */
+.safetyguidelines {
+    /* background-image: linear-gradient( 135deg, #FFA8A8 10%, #FCFF00 100%); */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    font-family: "Roboto";
+    font-weight: 500;
+    padding: 20px;
+}
+
+h4 {
+    font-size: 20px;
+    color: #0077b6;
+    font-weight: bold;
+}
+
+.sgp {
+    font-size: 15px;
+    text-align: justify;
+    color: black;
+}
+
+.sgimage {
+    width: 100%;
+    height: 500px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+@media (min-width:768px) {
+    .sg1 {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        width: 90%;
+        margin-bottom: 15px;
+    }
+
+    .sg1sub {
+        max-width: 600px;
+        flex-grow: 1;
+    }
+
+    .sgimage {
+        max-height: 400px;
+        max-width: 400px;
+        flex-grow: 1;
+        margin-right: 15px;
+    }
+
+    .sgimg1 {
+        max-width: 400px;
+        margin-left: 15px;
+        order: 1;
+    }
+}
+
+/* FAQs section */
+.faq {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* background-image: url("https://img.freepik.com/free-vector/question-mark-sign-glowing-digital-style-background_1017-23982.jpg?size=626&ext=jpg"); */
+    background-color: hsla(188, 29%, 38%, 1);
+    background-size: cover;
+    min-height: 100vh;
+    padding: 20px;
+    text-align: justify;
+    color: #f8f4f3;
+}
+
+.question {
+    width: 90%;
+    border: 2px solid white;
+    padding: 14px;
+    border-radius: 15px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    font-weight: 500;
+}
+
+/*Footer*/
+.bg1 {
+    padding: 20px;
+    /* background-image: url("https://img.freepik.com/premium-photo/front-sports-car_44622-1710.jpg?size=626&ext=jpg"); */
+    background-color: rgb(23, 162, 184);
+    background-size: cover;
+}
+
+.icons {
+    background-color: transparent;
+    color: white;
+}
+
+.image4 {
+    height: 60px;
+    width: 180px;
+}
+
+.h {
+    color: white;
+    font-family: "roboto";
+    font-weight: bold;
+}
+
+.pe {
+    color: white;
+    font-family: "roboto";
+    font-size: 15px;
+}
+
+@media (min-width:768px) {
+    .pe {
+        font-size: 18px;
+    }
+}
+
+.line2 {
+    border-style: solid;
+    border-color: #5a7184;
+    width: 100%;
+}
+
+.logo {
+    color: white;
+    border-radius: 400px;
+}
+.logo1{
+    max-width: 100px;
+    border-radius:400px;
+    margin-left:50px ;
+    margin-bottom: 20px;
+}
