@@ -1,0 +1,48 @@
+.banner {
+    /* center background horizontally and vertically , so center center is being used*/
+    background: url("https://media.cntraveler.com/photos/5db1d0dd11c1e500092e7133/master/pass/airbnb-ski-aspen-28328347.jpg") center center; 
+    height: 50vh;
+    position: relative;
+}
+
+.banner__info {
+    background-color: black;
+    color: white;
+    padding-top: 8vh;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-bottom: 40px;
+    width: 300px;
+}
+
+/* MUI Button inside div expand to full width, This is because, by default, flex items in a column layout stretch to fill the available width. */
+.banner__search {
+    display: flex;
+    flex-direction: column;
+}
+
+/* for mui button !important is necessary to override the default */
+.banner__searchButton {
+    background-color: white !important;
+    font-weight: 900 !important;
+    text-transform: inherit !important;
+    color: #ff7779 !important;
+    outline: black !important;
+}
+
+.banner__info > button {
+    background-color: #ff7779;
+    color: white;
+    text-transform: inherit;
+    margin-top: 20px;
+    font-weight: 600;
+}
+
+.banner__info > button:hover {
+    background-color: white;
+    color: #ff7779;
+}
+
+.banner__info > h5 {
+    margin-top: 10px;
+}
