@@ -760,6 +760,8 @@ Happy Coding! -->
 <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Frontend-Projects/VegetableMarketplace"> VegetableMarketplace </a></td>
 <td align="center"> 250.</td>
 <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Frontend-Projects/QrComponent"> QrComponent </a></td>
+<td align="center"> 251. </td>
+<td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Js-Games/Etch-a-Sketch"> Etch-a-Sketch </a> </td>
 </tr>
 </table>
 
