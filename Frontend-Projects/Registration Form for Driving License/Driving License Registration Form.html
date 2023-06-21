@@ -36,19 +36,22 @@
       }
     }
   </script>
+  <link rel="stylesheet" href="index.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body style="background-image:url('https://img.freepik.com/free-vector/white-background-with-3d-hexagonal-pattern-design_1017-28443.jpg?w=2000');">
   <hr size="5" style="background-color:black;" />
-  <img style="float:left;" src="https://upload.wikimedia.org/wikipedia/commons/5/55/Emblem_of_India.svg" alt="GOI Symbol" height=140px>
+  <img style="float:left;" src="https://qph.cf2.quoracdn.net/main-qimg-7cd236aca29f03acc26c70d907f8adc9-lq" alt="GOI Symbol" height=140px>
+  <img style="float:right;" src="https://qph.cf2.quoracdn.net/main-qimg-7cd236aca29f03acc26c70d907f8adc9-lq" alt="GOI Symbol" height=140px>
   <!-- <center>  -->
-  <h1 style="padding-left:120px;margin:25 0 20 0;">Government of India</h1>
+  <h1 style="padding-left:120px;margin:25 0 20 0; text-align: center;">Government of India</h1>
   <!-- </center>  -->
   <!--<center>  -->
-  <h1 style="padding-left:120px;margin:25 0 25 0;">Ministry of Road Transport and Highways</h1>
+  <h1 style="padding-left:120px;margin:25 0 25 0; text-align: center;">Ministry of Road Transport and Highways</h1>
   <!-- </center>  -->
   <hr size="5" style="background-color:black;" />
-  <h2>To Apply for Driving License, please input all the fields correctly -</h2>
+  <h2 style="color: blue;">To Apply for Driving License, please input all the fields correctly </h2>
   <center>
     <form action="" onsubmit="return validateForm()" method="post">
       <table cellspacing="40">
@@ -57,19 +60,37 @@
             <table cellspacing="10">
               <tr>
                 <td>
-                  <h2>Personal Details:</h2>
+                  <h2>Personal Details: <i class="fa-solid fa-user"></i></h2>
                 </td>
               </tr>
               <tr>
-                <td>Full Name: <input type="text" name="name"></td>
-                <td>Contact Number:<input type="tel" name="phno" pattern="[6789][0-9]{9}" title="Please enter valid phone number"></td>
+                <td>First Name 
+                  <br><input type="text" name="name" placeholder="John" ></td>
+                  <td>Last Name 
+                  <br><input type="text" name="name" placeholder="Doe" ></td>
+                
               </tr>
               <tr>
-                <td>Email: <input type="email" name="email" pattern="/^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/"></td>
-                <td>Date of Birth: <input type="date" name="dob"></td>
+                <td >Age 
+                  <br>
+                  <input type="number" name="age" placeholder="How old are you"></td>
+                <td>Gender 
+                  <br>
+                  <input type="radio" name="test"> <label> Male</label>
+                  <input type="radio" name="test"> <label> Female</label></td>
               </tr>
               <tr>
-                <td>Aadhar: <input type="number" min="100000000000" max="999999999999" name="aadhar"></td>
+                <td>Contact Number <i class="fa-solid fa-phone"></i>
+                  <br><input type="tel" name="phno" pattern="[6789][0-9]{9}" title="Please enter valid phone number"></td>
+                <td>Email <i class="fa-solid fa-envelope"></i>
+                  <br><input type="email" name="email" pattern="/^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/"></td>
+                
+              </tr>
+              <tr>
+                <td>Date of Birth <i class="fa-solid fa-calendar-days"></i>
+                  <br><input type="date" name="dob"></td>
+                <td>Aadhar
+                  <br> <input type="number" min="100000000000" max="999999999999" name="aadhar"></td>
               </tr>
             </table>
           </td>
@@ -77,20 +98,67 @@
             <table cellspacing="10">
               <tr>
                 <td>
-                  <h2>Address Details:</h2>
+                  <h2>Address Details : <i class="fa-solid fa-map-location-dot"></i></h2>
                 </td>
               </tr>
               <tr>
-                <td>Wing, Flat Number:<input type="text" name="flat"></td>
-                <td>Society Name:<input type="text" name="society"></td>
+                <td>Wing, Flat Number
+                  <br><input type="text" name="flat"></td>
+                <td>Society Name
+                  <br><input type="text" name="society"></td>
               </tr>
               <tr>
-                <td>Area/Locality:<input type="text" name="area"></td>
-                <td>Landmark:<input type="text" name="landmark"></td>
+                <td>Area/Locality
+                  <br><input type="text" name="area"></td>
+                <td>Landmark
+                  <br><input type="text" name="landmark"></td>
               </tr>
               <tr>
-                <td>City:<input type="text" name="city"></td>
-                <td>State:<input type="text" name="State"></td>
+                <td>City
+                  <br><input type="text" name="city"></td>
+                <td>State
+                  <br>
+                  <!--- India states -->
+                  <select id="country-state" name="country-state">
+                    <option value="">Select state</option>
+                    <option value="AN">Andaman and Nicobar Islands</option>
+                    <option value="AP">Andhra Pradesh</option>
+                    <option value="AR">Arunachal Pradesh</option>
+                    <option value="AS">Assam</option>
+                    <option value="BR">Bihar</option>
+                    <option value="CH">Chandigarh</option>
+                    <option value="CT">Chhattisgarh</option>
+                    <option value="DN">Dadra and Nagar Haveli</option>
+                    <option value="DD">Daman and Diu</option>
+                    <option value="DL">Delhi</option>
+                    <option value="GA">Goa</option>
+                    <option value="GJ">Gujarat</option>
+                    <option value="HR">Haryana</option>
+                    <option value="HP">Himachal Pradesh</option>
+                    <option value="JK">Jammu and Kashmir</option>
+                    <option value="JH">Jharkhand</option>
+                    <option value="KA">Karnataka</option>
+                    <option value="KL">Kerala</option>
+                    <option value="LA">Ladakh</option>
+                    <option value="LD">Lakshadweep</option>
+                    <option value="MP">Madhya Pradesh</option>
+                    <option value="MH">Maharashtra</option>
+                    <option value="MN">Manipur</option>
+                    <option value="ML">Meghalaya</option>
+                    <option value="MZ">Mizoram</option>
+                    <option value="NL">Nagaland</option>
+                    <option value="OR">Odisha</option>
+                    <option value="PY">Puducherry</option>
+                    <option value="PB">Punjab</option>
+                    <option value="RJ">Rajasthan</option>
+                    <option value="SK">Sikkim</option>
+                    <option value="TN">Tamil Nadu</option>
+                    <option value="TG">Telangana</option>
+                    <option value="TR">Tripura</option>
+                    <option value="UP">Uttar Pradesh</option>
+                    <option value="UT">Uttarakhand</option>
+                    <option value="WB">West Bengal</option>
+                </select></td>
               </tr>
             </table>
           </td>
@@ -103,11 +171,14 @@
                   <h2>Additional Details:</h2>
                 </td>
               <tr>
-                <td>Learner License ID:<input type="text" name="LLID"></td>
-                <td>PAN NUMBER:<input type="text" name="PAN"></td>
+                <td>Learner License ID <i class="fa-solid fa-id-card"></i>
+                  <br><input type="text" name="LLID"></td>
+                <td>PAN NUMBER
+                  <br><input type="text" name="PAN" placeholder="Enter your PAN number"></td>
               </tr>
               <tr>
-                <td>Possible Day of Test:<input type="date" name="testdate"></td>
+                <td>Possible Day of Test <i class="fa-solid fa-calendar-days"></i>
+                  <br><input type="date" name="testdate"></td>
               </tr>
             </table>
           </td>
@@ -121,7 +192,7 @@
         <input type="checkbox" name="tandc">
         <label for="tandc">I accept all the Terms and Conditions.</label>
         <br>
-        <input type="submit" name="">
+        <input type="submit"  class="submit" name="">
       </center>
     </form>
   </center>
