@@ -1,0 +1,300 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/* Custom Classes */
+.nunito{
+    font-family: 'Nunito', sans-serif, Arial;
+}
+
+.flex-center{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.flex{
+    display: flex;
+}
+
+.justify{
+    justify-content: center;
+}
+
+.align{
+    align-items: center;
+}
+
+.text-align{
+    text-align: center;
+}
+
+.bg-color{
+    background-color: #84c225;
+}
+
+.pointer{
+    cursor: pointer;
+}
+
+
+
+
+
+
+/* Navbar section */
+ul{
+    list-style: none;
+}
+
+/* Logo and Searchbar */
+div.logo-searchBar{
+    width: 75vw;
+    height: 10rem;
+}
+
+div.logoImage{
+    width: 16rem;
+    height: 10rem;
+}
+
+img.logo{
+    float: left;
+    height: 9rem;
+    border-radius: 50%;
+}
+
+span.logoText{
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+    text-align: right;    
+}
+
+div.searchBar{
+    width: 45rem;
+}
+
+input.searchBar{
+    margin-left: 1rem;
+    font-size: 1rem;
+    width: 40rem;
+    padding: 0.5rem 0 0.5rem 0.5rem;
+    border: 1px solid grey;
+    display: inline;
+}
+
+div.searchButton{
+    width: 4rem;
+}
+
+.fa-magnifying-glass{
+    font-size: 1.5rem;
+    color: #fff;
+}
+
+div.cart{
+    margin-left: 2.45rem;
+    padding: 0.5rem;
+    background-color: #f2f2f2;
+}
+
+
+.fa-basket-shopping{
+    font-size: 2.5rem;
+    color: #da251d;
+}
+
+
+span.cart1{
+    margin-left: 0.7rem;
+    text-align: right;
+}
+
+
+/* dropDown and Offers  */
+div.navContainer{
+    width: 75vw;
+}
+
+div.dropDown{
+    width: 16rem;
+    height: 2.6rem;
+}
+
+p.dropDown{
+    font-family:  'Montserrat',sans-serif;
+    margin-left: 1rem;
+    font-weight: bold;
+    color: #fff;
+}
+
+.fa-caret-down{
+    color: #fff;
+    position: relative;
+    left: 2rem;
+    font-size: 1.2rem;
+}
+
+div.offers{
+    width: 10rem;
+}
+
+.fa-location-pin{
+    font-size: 1.2rem;
+    margin: 0 0.3rem 0 1rem;
+    color: #da251d;
+}
+
+span.offers{
+    font-family: 'Poppins',sans-serif;
+    color: black;
+}
+
+a.offers{
+    text-decoration: none;
+}
+
+/* Main Section */
+
+div.mainContent{
+    width: 75vw;
+}
+
+/* Section intro Video */
+section.introVid{
+    border: 2px solid grey;
+    border-bottom: 0;
+    border-right: 0;
+}
+
+div.introVid{
+    width: 75vw;
+    height: 60vh; /* Aspect Ratio*/
+    background-color: #000;
+}
+
+video{
+    width: 75vw;
+    height: 60vh;
+}
+
+
+/* Veg Cards Section  */
+div.vegCards{
+    width: inherit;
+    border: 1px solid black;
+    height: 125vh;
+}
+
+div.vegCard{
+    width: inherit;
+    height: 60vh;
+    display: flex;
+}
+
+div.card{
+    width: 14vw;
+    margin-left: 0.7rem;
+    margin-top: 1rem;
+}
+
+div.vegImagePart{
+    width: 14vw;
+    height: 15rem;
+}
+
+img.vegetable{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+div.vegDetails{
+    width: inherit;
+    height: 12rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Poppins', 'Nunito', sans-serif;
+    background-color:#f2f2f2;
+}
+
+h4.vegDetails{
+    font-size: 2.5rem;
+    width: 100%;
+    text-align: center;
+}
+
+p.vegDetails{
+    color: #000;
+    width: 100%;
+    text-align: center;
+    font-size: 1.5rem;
+    background-color: #CFD2CF;
+}
+
+span.vegAvailable{
+    color: #D36B00;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+span.vegDetails{
+    width: 100%;
+    text-align: center;
+    font-weight: 600;
+    letter-spacing: 2px;
+    margin-top: 0.5rem;
+}
+
+button.vegDetails{
+    padding: 0.5rem 1.5rem;
+    border-radius: 5%;
+    font-size: 1.3rem;
+    background-color: #84c225;
+    text-align: center;
+    margin-top: 0.7rem;
+    font-family: 'Nunito', sans-serif;
+    cursor: pointer;
+}
+
+button.vegDetails:hover{
+    background-color: #66ff00;
+    transform: scale(1.1,1.1);
+    transition: .4s;
+}
+
+
+
+/* Footer  */
+footer{
+    flex-direction: column;
+}
+
+div.footer{
+    border: .0001px solid black;
+    height: 5rem;
+    width: 75vw;
+    justify-content: space-evenly;
+}
+
+div.footer i{
+    font-size: 2rem;
+}
+
+div.footer span{
+    font-size: 1rem;
+    margin-left: 0.5rem;
+    letter-spacing: 1.5px;
+}
+
+div.credit{
+    background-color: #000;
+}
+p.footer{
+    font-size: 1.5rem;
+    margin-left: 0.5rem;
+    letter-spacing: 5px;
+    color: #84c225;
+}
