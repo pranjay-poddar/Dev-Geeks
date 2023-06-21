@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
+
+body {
+    margin: 0;
+}
+
+.header {
+    margin: 0;
+    padding: 0;
+    padding-left: 10px;
+    background-color: black;
+    display: flex;
+}
+
+.header .logo {
+    padding-top: 17px;
+}
+
+.header .details .proj-name {
+    padding-top: 10px;
+    padding-left: 8px;
+    padding-bottom: 10px;
+    
+
+}
+
+.expand-collapse-btn{
+    margin-left: .5rem;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+.editor-container.collapsed {
+    flex-grow: 0;
+}
+
+.editor-container.collapsed .CodeMirror-scroll {
+    position: absolute;
+}
+
+.top-pane {
+    background-color: hsl(225, 6%, 25%);
+    display: flex;
+}
+
+.pane {
+    height: 1000vh;
+    display: flex;
+}
+
+.editor-container {
+    flex-grow: 1;
+    flex-basis: 0;
+    display: flex;
+    flex-direction: column;
+    padding: .1rem .5rem .9rem;
+    background-color: hsl(225, 6%, 25%);
+    font-size: 20px;
+}
+
+.editor-name {
+    justify-content: space-between;
+    display: flex;
+    background-color: black;
+    color: lightgrey;
+    padding: .8rem .5rem .5rem 1rem;
+}
+
+.code-mirror-wrapper {
+    flex-grow: 1;
+    overflow: hidden;
+    
+}
+
+h1{
+    color: white;
+    font-size: 20px;
+}
+
+
+.details{
+    white-space: nowrap;
+    display: inline;
+    flex-shrink: 1;
+    flex-grow: 1;
+    
+    
+}
+
