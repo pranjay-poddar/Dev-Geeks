@@ -804,8 +804,12 @@ Happy Coding! -->
 <!-- &max={number} -->
   <br>
   <h4 align="center">
-   <a target="_blank"href="https://www.linkedin.com/in/pranjay-poddar/"><img src="https://forthebadge.com/images/badges/built-with-love.svg" alt="Built with love" /></a><br>
-  By<a href="https://github.com/pranjay-poddar"> Pranjay Poddar </a>&copy; MIT License</h4>
+   <a target="_blank"href="https://www.linkedin.com/in/pranjay-poddar/"><img src="https://forthebadge.com/images/badges/built-with-love.svg" alt="Built with love" />
+   </a>
+   <br>
+   By
+   <a href="https://github.com/pranjay-poddar"> Pranjay Poddar </a>&copy; MIT License
+   </h4>
 	<br>
 
 <h4 align="center">Connect Project Admin </h4>
@@ -820,6 +824,6 @@ Happy Coding! -->
 
 
  
-[(Back to Top)](https://github.com/arcVaishali/Dev-Geeks/tree/backToTop#-dev-geeks-)
+![(Back to Top)](https://img.shields.io/badge/back%20to%20top-8A2BE2)(https://github.com/arcVaishali/Dev-Geeks/tree/backToTop#-dev-geeks-)
  
  
