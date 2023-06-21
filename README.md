@@ -817,8 +817,10 @@ Happy Coding! -->
   <a href="https://www.instagram.com/pranjay_poddar/"><img src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white" /></a>&nbsp;&nbsp;&nbsp;&nbsp;
 </p>
 
-<div > 
+----------------------------------------------------------------------------------
+
+<h6> 
 
   [Back to Top](https://github.com/arcVaishali/Dev-Geeks/tree/main#-dev-geeks-)
  
- </div>
+ </h6>
