@@ -11,4 +11,5 @@ One of the classic games made using Java.
 
 # Preview
 
+![brick](https://github.com/5h0ov/Dev-Geeks/assets/83227649/7bd71a4b-88f2-4329-90d8-4a9367a6531c)
 
