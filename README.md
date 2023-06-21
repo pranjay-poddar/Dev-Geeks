@@ -823,7 +823,6 @@ Happy Coding! -->
 
 
 
- 
-![(Back to Top)](https://img.shields.io/badge/back%20to%20top-8A2BE2)(https://github.com/arcVaishali/Dev-Geeks/tree/backToTop#-dev-geeks-)
- 
+ <object src="https://img.shields.io/badge/Back_To_Top-lightblue-[#top]">
+<a href = "#top"> Back to top </a>
  
