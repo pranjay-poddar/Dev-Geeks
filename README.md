@@ -823,6 +823,6 @@ Happy Coding! -->
 
 
 
- <img href = "#top" src="https://img.shields.io/badge/Back_To_Top-blue">
-<!-- <a href = "#top"> Back to top </a> -->
+ 
+<a href = "#top"><h6> Back to top 🔝 </h6></a>
  
