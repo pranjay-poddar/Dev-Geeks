@@ -84,7 +84,26 @@ form{
     margin-top: 120px;
     /* margin-right: 45px; */
 }
-#enroll-btn{
+.container{
+    border: transparent;
+     color: white;
+     border-radius: 5px;
+     font-size: 18px;
+     font-weight: bolder;
+     margin-right: 12px;
+}
+.btn{
+     padding: 10px 60px;
+     background:#0147FF;
+     border: 0;
+     outline: none;
+     cursor: pointer;
+     color: #fff;
+     font-size: 22px;
+     font-weight: 500;
+     border-radius: 30px;
+ }
+/*#enroll-btn{
     height:40px;
     width: 120px;
     background-color: #0147FF;
@@ -106,7 +125,7 @@ form{
     font-size: 18px;
     font-weight: bolder;
 
-}
+}*/
 .image-container{
     margin-top: 60px;
 }
