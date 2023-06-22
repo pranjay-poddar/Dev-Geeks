@@ -1,0 +1,17 @@
+name: example
+description: Example.
+version: 1.0.0
+publish_to: none
+
+environment:
+  sdk: '>=2.18.0 <3.0.0'
+
+dependencies:
+  mno_opds:
+    path: ../
+  mno_shared:
+    path: ../../shared
+  universal_io: ^2.0.4
+
+dev_dependencies:
+  lints: ^2.0.1
