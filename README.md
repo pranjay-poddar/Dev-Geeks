@@ -825,7 +825,8 @@ Happy Coding! -->
 
 <div align="center">
  <a style="text-decoration:none;" href="#top">
- Back to top 🔝
+  <h1>🔝</h1>
+  Back to top
  </a> 
 </div>
 
