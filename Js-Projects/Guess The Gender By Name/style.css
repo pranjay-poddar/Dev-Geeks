@@ -1,0 +1,126 @@
+/* Default settings */
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	font-family: "Poppins", sans-serif;
+	text-decoration: none;
+}
+
+body {
+	background-color: #7e5eff;
+}
+
+/* Syling of the main box */
+.container {
+	position: absolute;
+	background-color: #ffffff;
+	width: 90%;
+	max-width: 31.25em;
+	transform: translate(-50%, -50%);
+	top: 50%;
+	left: 50%;
+	padding: 3em 2em;
+	border-radius: 0.5em;
+}
+
+/* Logo of the website */
+.app-logo {
+	width: 10%;
+	height: 10%;
+	position: inherit;
+}
+
+/* Title of the website */
+.app-title {
+	font-weight: 400;
+	text-transform: uppercase;
+	text-align: center;
+	width: 80%;
+	position: relative;
+	margin: auto;
+	color: #020332;
+	letter-spacing: 0.2em;
+}
+
+/* Styling of the creator heading of the website */
+.app-creator {
+	font-weight: 300;
+	margin-top: 10px;
+	text-align: center;
+	color: #7e5eff;
+}
+
+/* Styling the input box */
+.input-wrapper {
+	display: grid;
+	grid-template-columns: 9fr 3fr;
+	gap: 1em;
+	margin: 2.5em 0;
+}
+
+#name,
+#submit {
+	font-size: 1em;
+}
+
+#name {
+	padding: 0.8em 0.5em;
+	border: 1px solid #020332;
+	border-radius: 0.5em;
+}
+
+/* Submit button styling */
+#submit {
+	background-color: #7e5eff;
+	color: #ffffff;
+	border: none;
+	border-radius: 0.5em;
+}
+
+.female {
+	background-color: #ff5f96;
+}
+
+.male {
+	background-color: #5a72e9;
+}
+
+/* Styling of the showing information */
+#info {
+	padding: 2em 1em;
+	text-align: center;
+	border-radius: 0.9em;
+}
+
+#result-name {
+	text-transform: capitalize;
+	font-weight: 500;
+	color: #edecec;
+}
+
+#gender-icon {
+	display: block;
+	width: 5em;
+	position: relative;
+	margin: 2em auto 1em auto;
+}
+
+#gender {
+	color: #ffffff;
+	font-weight: 400;
+	text-transform: uppercase;
+	letter-spacing: 0.2em;
+}
+
+#prob {
+	letter-spacing: 0.2em;
+	font-weight: 500;
+	color: #edecec;
+}
+
+/* Styling of the error pop-up */
+#error {
+	color: salmon;
+	text-align: center;
+}
