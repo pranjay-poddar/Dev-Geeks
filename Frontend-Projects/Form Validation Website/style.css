@@ -1,0 +1,66 @@
+body {
+    background-image: url(back2.jfif);
+    background-size: cover;
+    font-family: Arial, sans-serif;
+  }
+  h1 {
+    text-align: center;
+    margin-top: 50px;
+  }
+  form {
+    max-width: 526px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    opacity: 0.85;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  }
+  label {
+    display: block;
+    margin-bottom: 10px;
+  }
+  input[type="text"],
+  input[type="tel"] {
+    padding: 10px;
+    width: 100%;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+  }
+  input[type="submit"] {
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  input[type="submit"]:hover {
+    background-color: #45a049;
+  }
+  a{
+    text-decoration: none;
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+}
+
+.resetbtn {
+  color: #f8f9fa;
+  background-color: #f91b1b;
+  border-color: #6c757d;
+  border-radius: 4px;
+  padding: 4px 8px;
+  border: none;
+  cursor: pointer;
+}
+
+.resetbtn :hover{
+  background-color: aqua;
+}
