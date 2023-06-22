@@ -1,0 +1,261 @@
+/*
+    IMPORTING FONT FROM GOOFLE-FONT
+*/
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500;600&display=swap');
+
+
+/*
+    ROOT-VARIABLE DECLARATIONS
+*/
+:root {
+    --desaturated-red: hsl(0, 36%, 70%);
+    --soft-red: hsl(0, 93%, 68%);
+    --dark-greyish-red: hsl(0, 6%, 24%);
+    --soft-linear: linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%));
+    --btn-linear: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+}
+
+
+/*
+    COMMON STYLES
+*/
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Josefin Sans';
+}
+
+
+/*
+    MAIN SECTION  ( BASE APPAREL COMING SOON PAGE )
+*/
+main {
+    display: grid;
+    grid-template-columns: 55% 1fr;
+    height: 100vh;
+    background-image: var(--soft-linear);
+}
+.aside {
+    display: grid;
+    place-items: center;
+}
+.aside,
+.welcoming-page{
+    background-image: url('../images/bg-pattern-desktop.svg');
+    background-size: cover;
+}
+.aside-content {
+    display: grid;
+    grid-template-rows: 90px 30px 1fr;
+    width: 60%;
+}
+.branding {
+    display: flex;
+    align-items: flex-start;
+}
+.branding > img {
+    width: 120px;
+}
+.hero-content {
+    display: grid;
+    grid-template-rows: 195px 70px 90px 30px;
+}
+.hero-text,
+.brand-name {
+    color: var(--dark-greyish-red);
+    text-transform: uppercase;
+}
+.hero-text {
+    font-size: 55px;
+    letter-spacing: .15em;
+}
+.hero-highlighted {
+    color: var(--desaturated-red);
+    font-weight: 300;
+}
+.main-text {
+    color: var(--desaturated-red);
+    font-size: 15px;
+    width: 90%;
+    display: grid;
+    place-items: center;
+    padding-left: 3px;
+    line-height: 1.5em;
+}
+form {
+    display: flex;
+    align-items: center;
+}
+.banner {
+    background-image: url('../images/desktop-1.jpg');
+    background-size: cover;
+}
+
+
+/*
+    FORM SECTION
+*/
+input:focus {
+    outline: none;
+    box-shadow: 0 5px 15px hsla(0, 36%, 70%, 0.3);
+}
+#email {
+    height: 43px;
+    border-radius: 30px;
+    width: 370px;
+    padding-left: 20px;
+    border: 1px solid var(--desaturated-red);
+    color: var(--dark-greyish-red);
+    font-size: 15px;
+}
+.mail-container {
+    position: relative;
+    width: 400px;
+}
+label {
+    display: none;
+}
+.error-sign {
+    position: absolute;
+    right: 0;
+    margin-top: 12px;
+    margin-right: 82px;
+    width: 20px;
+    display: none;
+}
+.error-prompter{
+    font-size: 14px;
+    color: var(--desaturated-red);
+    padding: 5px 0 0 20px;
+    margin-top: -16px;
+}
+[type=submit]{
+    outline: none;
+    width: 70px;
+    height: 46px;
+    border-radius: 30px;
+    background-image: var(--btn-linear);
+    position: absolute;
+    right: 0;
+    border: 1px solid var(--desaturated-red);
+    color: white;
+    font-size: 19px;
+    box-shadow: 0 6px 30px hsla(0, 36%, 70%, 0.4);
+}
+
+
+/*
+    WELCOMING PAGE (SHOWS AFTER PROVIDING EMAIL)
+*/
+.welcoming-page {
+    height: 100vh;
+}
+.welcoming-page,
+.greeting {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.greeting {
+    flex-direction: column;
+    gap: 40px;
+    text-align: center;
+}
+.greeting-text {
+    font-size: 20px;
+}
+.greeting-main-text {
+    font-size: 16px;
+    width: 100%;
+}
+.disabled {
+    display: none;
+}
+
+
+/*
+	SHAKE ANIMATION
+ */
+@keyframes shake {
+  0% {
+    transform: translate(0);
+  }
+  20% {
+    transform: translate(2em);
+  }
+  40% {
+    transform: translate(-2em);
+  }
+  60% {
+    transform: translate(2em);
+  }
+  80% {
+    transform: translate(-2em);
+  }
+  100% {
+    transform: translate(0);
+  }
+}
+.shake {
+    animation: shake 0.5s;
+}
+
+
+/*
+    AUTHOR LINK
+*/
+.author-link{
+    position: fixed;
+    bottom: 0;
+    padding-bottom: 10px;
+    z-index: 1;
+}
+.author-link > .bar {
+    margin: 0 4px 0 4px;
+}
+.author-link,
+a {
+    text-decoration: none;
+    color: var(--dark-greyish-red);
+    transition: .3s ease-out;
+}
+.author-link > a:hover {
+    color: var(--desaturated-red);
+}
+
+
+/*
+    MEDIA QUERIES
+*/
+@media only screen and (max-width: 440px) {
+    /* For mobile phones: */
+    main {
+        grid-template-columns: none;
+        width: 100%;
+    }
+    .branding {
+        align-items: center;
+        padding-left: 20px;
+    }
+    .aside-content {
+        width: 100%;
+        grid-template-rows: 100px 270px auto;
+        height: 100%;
+    }
+    .mobile-banner {
+        background-image: url('../images/mobile-1.jpg');
+        background-size: cover;
+    }
+    .hero-section {
+        display: grid;
+        place-items: center;
+        text-align: center;
+    }
+    .hero-content {
+        transform: scale(.9);
+        place-items: center;
+    }
+    .banner {
+        display: none;
+    }
+}
