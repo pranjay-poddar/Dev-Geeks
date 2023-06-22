@@ -1,6 +1,9 @@
 As we know , there is a huge population of people who have special needs and their way of communication is through sign language 
 Therefore ,In this project - we have created an Indian Sign Language Detection Model using OpenCV and Deep Learning modules Tensorflow & Keras 
 
+Dataset Link :- https://www.kaggle.com/datasets/vaishnaviasonawane/indian-sign-language-dataset
+
+
 Libraries Used :-
 1.Numpy
 2.OpenCV
