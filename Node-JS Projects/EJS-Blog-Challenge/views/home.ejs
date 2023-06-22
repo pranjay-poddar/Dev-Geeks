@@ -1,0 +1,17 @@
+<%-include('partials/header');-%>
+<h1>Home</h1>
+<p><%= content %> </p>
+<% for( let i = 0; i < postContent.length; i ++){ %>
+    <h1><%=postContent[i].title %></h1>
+    <% if( postContent[i].post.length < 200) { %>
+        <p><%=postContent[i].post %></p>
+    <% } else { %>
+        <p>
+            <%=postContent[i].post.slice(0, 199)%>
+            <a href="/posts/<%=convertToKebabCase(postContent[i].title)%>" >
+                Read More
+            </a>
+        </p>
+    <% } %>
+<%}%>
+<%-include('partials/footer');-%>
