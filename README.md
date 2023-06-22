@@ -825,5 +825,7 @@ Happy Coding! -->
 
  <p>
  
- [Back to top 🔝](https://github.com/arcVaishali/Dev-Geeks/tree/backToTop#-dev-geeks-)
+ <a href="#top">Back to top </a>
+
+ <!-- [Back to top 🔝](https://github.com/arcVaishali/Dev-Geeks/tree/backToTop#-dev-geeks-) -->
  </p>
