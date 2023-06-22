@@ -178,10 +178,10 @@ body{
 
 .filter-options{
     flex: 0 0 auto;
-    padding: 10px 20px;
-    border-radius: 50px;
+    padding: 8px 16px;
+    border-radius: 10px;
     background: #f0f0f0;
-    border: 1px solid #dbdbdb;
+    border: none;
     text-transform: capitalize;
     margin-right: 10px;
     color: #242424;
