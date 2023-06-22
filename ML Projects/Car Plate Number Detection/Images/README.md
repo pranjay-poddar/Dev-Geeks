@@ -1,8 +1,8 @@
-This folder contains a set of input images that can be used as input for the car plate number detection model. 
+### **This folder contains a set of input images that can be used as input for the car plate number detection model.** 
 
-The images have been stored in Imgur
+### The images have been stored in Imgur
 
-The links for the images is -
+The links for the images are -
 
 https://imgur.com/p25Olqx
 
