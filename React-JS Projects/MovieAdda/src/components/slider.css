@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&display=swap');
+.slider{
+    font-family: sans-serif !important;
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    justify-content: center;
+    height: max-content;
+    overflow: hidden;
+    color:white;
+    margin-top: 50px;
+  }
+  .slider h1{
+    margin-left: 100px;
+    font-family: 'Playfair Display', serif;
+    color: rgb(255, 0, 0);
+    background-color: aliceblue;
+    width: max-content;
+    padding: 0px 15px;
+    border-radius: 20px 0px;
+  }
+  .rec.rec-dot {
+    display: none;
+  }
+  .rec.rec-dot_active {
+    display: none;
+  }
+  @media screen and (max-width:770px) {
+    .slider{
+      align-items: center;
+    }
+    .slider h1{
+      margin-left: 0;
+    }
+  }
