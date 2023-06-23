@@ -1,0 +1,84 @@
+{
+  "id": "8ad5351c-3762-4baf-aa1d-0facc9191811",
+  "name": "1(home remedies)-yes with improvement",
+  "auto": true,
+  "condition": "",
+  "conditionalFollowupEvents": [],
+  "conditionalResponses": [],
+  "context": [
+    "Conversation3-1coldcoughandfever-yes-1-3DaysHigh-followup"
+  ],
+  "contexts": [
+    "Conversation3-1coldcoughandfever-yes-1-3DaysHigh-followup"
+  ],
+  "endInteraction": false,
+  "events": [],
+  "fallbackIntent": false,
+  "liveAgentHandoff": false,
+  "parentId": "2229edb9-9161-477b-97e0-42f40839411b",
+  "followUpIntents": [],
+  "priority": 500000,
+  "responses": [
+    {
+      "action": "Conversation3.Conversation3-custom.Conversation3-1coldcoughandfever-custom.Conversation3-1coldcoughandfever-yes-custom-2.Conversation3-1coldcoughandfever-yes-1-3Days-custom.Conversation3-1coldcoughandfever-yes-1-3DaysHigh-custom",
+      "affectedContexts": [
+        {
+          "name": "Conversation3-1coldcoughandfever-yes-1-3DaysHigh-homeremediesyes-followup",
+          "lifespan": 2
+        },
+        {
+          "name": "Conversation3-1homeremediesyes-followup",
+          "lifespan": 2
+        },
+        {
+          "name": "1homeremediesyes-followup",
+          "lifespan": 2
+        },
+        {
+          "name": "1homeremedies-yeswithimprovement-followup",
+          "lifespan": 2
+        }
+      ],
+      "parameters": [],
+      "defaultResponsePlatforms": {},
+      "messages": [
+        {
+          "type": "message",
+          "condition": "",
+          "speech": [
+            "Okay then, follow up your medicine and remind me after 3 days."
+          ]
+        },
+        {
+          "type": "message",
+          "condition": "",
+          "speech": []
+        },
+        {
+          "type": "message",
+          "condition": "",
+          "speech": []
+        }
+      ],
+      "resetContexts": false
+    }
+  ],
+  "rootParentId": "4ff6d6f4-51ce-40cc-bea4-977e35b5b1e4",
+  "templates": [],
+  "userSays": [
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "1",
+          "userDefined": false
+        }
+      ],
+      "count": 0,
+      "id": "a9142b20-b3cd-4011-a6b9-c5ef98fd924b",
+      "updated": null
+    }
+  ],
+  "webhookForSlotFilling": false,
+  "webhookUsed": false
+}
