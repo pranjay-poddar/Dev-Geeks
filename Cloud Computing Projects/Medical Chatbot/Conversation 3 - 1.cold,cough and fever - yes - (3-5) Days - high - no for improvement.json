@@ -1,0 +1,85 @@
+{
+  "id": "ea393c56-496c-4387-bd57-efbb67d18bf3",
+  "name": "Conversation 3 - 1.cold,cough and fever - yes - (3-5) Days - high - no for improvement",
+  "auto": true,
+  "condition": "",
+  "conditionalFollowupEvents": [],
+  "conditionalResponses": [],
+  "context": [
+    "Conversation3-1coldcoughandfever-yes-3-5Days-high-followup"
+  ],
+  "contexts": [
+    "Conversation3-1coldcoughandfever-yes-3-5Days-high-followup"
+  ],
+  "endInteraction": false,
+  "events": [],
+  "fallbackIntent": false,
+  "liveAgentHandoff": false,
+  "parentId": "3868ec42-f53c-4f2b-b937-80fdeae50e55",
+  "followUpIntents": [],
+  "priority": 500000,
+  "responses": [
+    {
+      "action": "Conversation3.Conversation3-custom.Conversation3-1coldcoughandfever-custom.Conversation3-1coldcoughandfever-yes-custom.Conversation3-1coldcoughandfever-yes-3-5Days-custom.Conversation3-1coldcoughandfever-yes-3-5Days-high-custom-2",
+      "affectedContexts": [],
+      "parameters": [],
+      "defaultResponsePlatforms": {},
+      "messages": [
+        {
+          "type": "message",
+          "condition": "",
+          "speech": [
+            "Okay then follow the medicines as per the below."
+          ]
+        },
+        {
+          "type": "message",
+          "condition": "",
+          "speech": [
+            "1.Diominic BCA [1] tablets per day for cold, cough and fever."
+          ]
+        },
+        {
+          "type": "message",
+          "condition": "",
+          "speech": [
+            "2.If you have high cold and cough then for cough use Astakaam Dx(Syrup) - 3 spoon per day and for cold use (Diomeric/Dio - one) - 2 tablets per day."
+          ]
+        },
+        {
+          "type": "message",
+          "condition": "",
+          "speech": [
+            "Below course for the medicine is for 3 days so kindly contact me after 3 days."
+          ]
+        },
+        {
+          "type": "message",
+          "condition": "",
+          "speech": [
+            "If there is any improvement seen then contact me after 3 days else consult doctor."
+          ]
+        }
+      ],
+      "resetContexts": false
+    }
+  ],
+  "rootParentId": "4ff6d6f4-51ce-40cc-bea4-977e35b5b1e4",
+  "templates": [],
+  "userSays": [
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "2",
+          "userDefined": false
+        }
+      ],
+      "count": 0,
+      "id": "e02bb3ac-a2b4-42ae-9cf7-48f42ccf2be8",
+      "updated": null
+    }
+  ],
+  "webhookForSlotFilling": false,
+  "webhookUsed": false
+}
