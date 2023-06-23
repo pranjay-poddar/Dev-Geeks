@@ -1,0 +1,307 @@
+html {
+  scroll-behavior: smooth;
+}
+/* Team Members */
+h1 {
+  margin-top: -32px;
+  margin-bottom: 25px;
+}
+ul {
+  font-size: 20px;
+  margin-top: 5px;
+  margin-left: -178px;
+}
+#cnt {
+  color: green;
+}
+#Project:hover {
+  color: crimson;
+}
+#Contact_Us {
+  margin-top: 15px;
+}
+#Contact_Us:hover {
+  color: crimson;
+}
+#Our_Team {
+  margin-top: -25vh;
+}
+#Our_Team:hover {
+  color: crimson;
+}
+#teams {
+  margin-top: -90px;
+}
+/* Hover effect on theTeam Members */
+h5:hover {
+  transform: scale(1.5);
+  transition: transform 1.2s;
+  color: #43a047;
+}
+/* Hover Effect on Team Images */
+img:hover {
+  border-style: solid;
+  border-width: 2px;
+  border-color: blue;
+}
+.social-link {
+  width: 30px;
+  height: 30px;
+  border: 1px solid #ddd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #666;
+  border-radius: 50%;
+  transition: all 0.3s;
+  font-size: 0.9rem;
+}
+
+.social-link:hover,
+.social-link:focus {
+  background: #ddd;
+  text-decoration: none;
+  color: #555;
+}
+
+#home:hover,
+#contact:hover,
+#Team:hover,
+#about:hover {
+  font-size: 25px;
+  /* background-color:    ; */
+  border-radius: 20px;
+  color: crimson;
+  text-decoration: underline;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+strong:hover {
+  font-size: 40px;
+  color: crimson;
+  transform: rotate(360deg);
+  transition: transform 2s;
+  text-decoration: underline;
+}
+
+#about_project {
+  text-align: justify;
+  width: 600px;
+}
+
+#about_project:hover {
+  background-color: cadetblue;
+  padding-top: 20px;
+  padding-right: 20px;
+  /* padding-bottom: 20px; */
+  padding-left: 20px;
+  border-radius: 20px;
+  border: #555 solid 5px;
+  font-size: 23px;
+  /* opacity: 0.4; */
+  width: 1300px;
+  height: 510px;
+  position: relative;
+  display: inline-block;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.img-fluid {
+  width: 55vw;
+  height: 55vh;
+}
+.CityTrack {
+  text-align: center;
+  margin-left: 100px;
+  font-size: larger;
+}
+/* Forms Starting */
+.allmain {
+  /* margin-left: 40vw;
+     background-color:darkgray;
+     border: 2px solid black;
+     border-radius: 30px; */
+  margin-left: 40vw;
+  display: block;
+  justify-content: center;
+}
+
+.contact {
+  text-align: center;
+}
+.contact:hover {
+  font-size: 50px;
+  text-decoration: underline;
+}
+.allcontact {
+  margin-top: -100px;
+  text-align: center;
+}
+.form {
+  background-color: blanchedalmond;
+  display: inline-block;
+  height: 590px;
+  width: 450px;
+  margin-left: 33vw;
+  border-radius: 10px;
+  padding: 20px;
+  border: 2px solid black;
+}
+.mainform {
+  text-align: center;
+}
+#address {
+  text-align: left;
+  margin-left: 79px;
+}
+#First:hover,
+#Second:hover,
+#Last:hover,
+#Phone:hover,
+#Address:hover {
+  font-size: 20px;
+}
+#button {
+  border-radius: 10px;
+  width: 100px;
+  height: 40px;
+}
+#button:hover {
+  font-size: large;
+}
+#Dishant {
+  width: 300px;
+  height: 100px;
+}
+button {
+  height: 40px;
+  width: 100px;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+/* Contact Us Form */
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,300,600,400italic);
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-font-smoothing: antialiased;
+  -o-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+#contact input[type="text"],
+#contact input[type="email"],
+#contact input[type="tel"],
+#contact input[type="url"],
+#contact textarea,
+#contact button[type="submit"] {
+  font: 400 12px/16px "Roboto", Helvetica, Arial, sans-serif;
+}
+
+#contacts {
+  background: #f9f9f9;
+  padding: 25px;
+  margin: -45px 0;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+.ck {
+  margin-left: 700px;
+}
+.ck:hover {
+  text-decoration: underline;
+  font-weight: 600;
+  font-size: 60px;
+  color: crimson;
+  transition: 2s;
+}
+
+fieldset {
+  border: medium none !important;
+  margin: 0 0 10px;
+  min-width: 100%;
+  padding: 0;
+  width: 100%;
+}
+
+#contacts input[type="text"],
+#contacts input[type="email"],
+#contacts input[type="tel"],
+#contacts input[type="url"],
+#contacts textarea {
+  width: 100%;
+  border: 1px solid #ccc;
+  background: #fff;
+  margin: 0 0 5px;
+  padding: 10px;
+}
+
+#contacts input[type="text"]:hover,
+#contacts input[type="email"]:hover,
+#contacts input[type="tel"]:hover,
+#contacts input[type="url"]:hover,
+#contacts textarea:hover {
+  -webkit-transition: border-color 0.3s ease-in-out;
+  -moz-transition: border-color 0.3s ease-in-out;
+  transition: border-color 0.3s ease-in-out;
+  border: 1px solid #aaa;
+}
+
+#contacts textarea {
+  height: 100px;
+  max-width: 100%;
+  resize: none;
+}
+
+#contacts button[type="submit"] {
+  cursor: pointer;
+  width: 100%;
+  border: none;
+  background: #4caf50;
+  color: #fff;
+  margin: 0 0 5px;
+  padding: 10px;
+  font-size: 15px;
+}
+
+#contacts button[type="submit"]:hover {
+  background: #43a047;
+  -webkit-transition: background 0.3s ease-in-out;
+  -moz-transition: background 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out;
+}
+
+#contacts button[type="submit"]:active {
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.copyright {
+  text-align: center;
+}
+
+#contacts input:focus,
+#contacts textarea:focus {
+  outline: 0;
+  border: 1px solid #aaa;
+}
+
+::-webkit-input-placeholder {
+  color: #888;
+}
+
+:-moz-placeholder {
+  color: #888;
+}
+
+::-moz-placeholder {
+  color: #888;
+}
+
+:-ms-input-placeholder {
+  color: #888;
+}
