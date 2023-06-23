@@ -1,0 +1,58 @@
+.navbar{
+    height: 50px;
+    background-color: lightseagreen;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: #fff;
+    position: relative;
+}
+.logo{
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+.icons{
+    align-items: center;
+    display: flex;
+}
+.icon {
+    color: #fff;
+    cursor: pointer;
+    font-size: 1.3rem;
+    margin-left: 1.3rem;
+    position: relative;
+}
+.counter{
+    width:0.5rem;
+    height: 0.5rem;
+    background-color: red;
+    border-radius: 50%;
+    padding:0.3rem ;
+    display: flex;
+    font-size:0.7rem;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: -0.3rem;
+    right: -0.4rem;
+}
+.notifications{
+    position: absolute;
+    top: 50px;
+    right: 0;
+    background-color: #fff;
+    color: black;
+    font-weight: 300;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+}
+.notification{
+    padding: 5px;
+    font-size: 14px;
+}
+.n-btn{
+    width: 80%;
+    padding: 5px;
+    margin-top: 10px;
+}

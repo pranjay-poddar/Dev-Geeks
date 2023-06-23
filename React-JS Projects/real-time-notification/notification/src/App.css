@@ -1,0 +1,40 @@
+
+body{
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+.App{
+  width: 50vh;
+  border-radius: 0.2rem;
+  border: 0.1rem solid lightseagreen;
+}
+.login{
+  height: 50vh;
+  display: flex;
+  flex-direction:column;
+  justify-content: center;
+  align-items: center;
+}
+input{
+  width: 50%;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+}
+button{
+  width: 5rem;
+  padding: 0.5rem;
+   background-color:rgb(6, 166, 97);
+   cursor: pointer;
+   border: none;
+   color: white;
+   border-radius: 0.3rem;
+}
+.username{
+  font-weight: bold;
+  position: absolute;
+  top: 1rem;
+  right: 3rem;
+  color: lightseagreen;
+}
