@@ -380,7 +380,7 @@ const projects = [
         "title":"Adventure Awaits",
         "tags":["HTML" , "CSS" , "JS" ,"Front End Web Dev"],
         "description":"This is Adventure Awaits Project using Front End Web Technologies",
-        "github-link": "https://github.com/",
+        "github-link": "https://github.com/arcVaishali/Dev-Geeks/blob/search-bar/Frontend-Projects/AdventureAwaits/index.html",
         "project-link":"Frontend-Projects/AdventureAwaits/index.html"
     },
     {
@@ -388,7 +388,7 @@ const projects = [
         "title":"Advice Generator",
         "tags":["HTML" , "CSS" , "JS" ,"Front End Web Dev"],
         "description":"This is Advice Generator Project using Front End Web Technologies",
-        "github-link": "https://github.com/",
+        "github-link": "https://github.com/arcVaishali/Dev-Geeks/blob/search-bar/Frontend-Projects/Advice_Generator/index.html",
         "project-link":"Frontend-Projects/Advice_Generator/index.html"
     },
     {
@@ -396,7 +396,7 @@ const projects = [
         "title":"Agoda Clone",
         "tags":["HTML" , "CSS" , "JS" ,"Front End Web Dev"],
         "description":"This is Agoda Clone Project using Front End Web Technologies",
-        "github-link": "https://github.com/",
+        "github-link": "https://github.com/arcVaishali/Dev-Geeks/blob/search-bar/Frontend-Projects/agoda%20clone/index.html",
         "project-link":"Frontend-Projects/agoda clone/index.html"
     },
     {
@@ -404,7 +404,7 @@ const projects = [
         "title":"Amazon Clone",
         "tags":["HTML" , "CSS" , "JS" ,"Front End Web Dev"],
         "description":"This is Amazon Clone Project using Front End Web Technologies",
-        "github-link": "https://github.com/",
+        "github-link": "https://github.com/arcVaishali/Dev-Geeks/blob/search-bar/Frontend-Projects/AmazonClone/index.html",
         "project-link":"Frontend-Projects/AmazonClone/index.html"
     },
     {
@@ -435,7 +435,7 @@ const projects = [
         // APPAREL COMING SOON PAGE
         "title":"Apparel Coming Soon Page",
         "tags":["HTML" , "CSS" , "JS" ,"Front End Web Dev"],
-        "description":"This is Apparel Coming soon page Project using Feonr End Web Technologies",
+        "description":"This is Apparel Coming soon page Project using Front End Web Technologies",
         "github-link": "https://github.com/arcVaishali/Dev-Geeks/blob/main/Frontend-Projects/Apparel_Coming_Soon_Page/index.html",
         "project-link":"Frontend-Projects/Apparel_Coming_Soon_Page/index.html"
     },
@@ -480,6 +480,14 @@ const projects = [
         "project-link":"Frontend-Projects/Bike E-commerce/index.html"
     },
     {
+        // BIRTHDAY WEBSITE
+        "title":"Birthday Website",
+        "tags":["HTML" , "CSS" , "JS" ,"Front End Web Dev"],
+        "description":"This is Birthday Website Project using Front End Web Technologies",
+        "github-link": "https://github.com/arcVaishali/Dev-Geeks/blob/search-bar/Frontend-Projects/birthday%20website/index.html",
+        "project-link":"Frontend-Projects/birthday website/index.html"
+    },
+    {
         // BMI CALCULATOR
         "title":"BMI Calculator",
         "tags":["HTML" , "CSS" , "JS" ,"Front End Web Dev"],
@@ -492,16 +500,36 @@ const projects = [
         "title":"BTech Chai Wala",
         "tags":["HTML" , "CSS" , "JS" ,"Front End Web Dev"],
         "description":"This is BTech Chai Wala Project using Feonr End Web Technologies",
-        "github-link": "https://github.com/arcVaishali/Dev-Geeks/blob/search-bar/Frontend-Projects/BTech%20Tea%20Shop/index.html",
-        "project-link":"Frontend-Projects/AdventureAwaits/index.html"
+        "github-link": "https://github.com/arcVaishali/Dev-Geeks/tree/search-bar/Frontend-Projects/btech%20chai%20wala",
+        // "project-link":"Frontend-Projects/AdventureAwaits/index.html"
     },
-
+    {
+        // BTECH TEA SHOP
+        "title":"BTech Tea Shop",
+        "tags":["HTML" , "CSS" , "JS" ,"Front End Web Dev"],
+        "description":"This is BTech Tea Shop Project using Front End Web Technologies",
+        "github-link": "https://github.com/arcVaishali/Dev-Geeks/blob/search-bar/Frontend-Projects/BTech%20Tea%20Shop/index.html",
+        "project-link":"Frontend-Projects/BTech Tea Shop/index.html"
+    },
+    {
+        // BUS ROUTE BOOKING SYSTEM
+        "title":"Bus Route Booking System",
+        "tags":["HTML" , "CSS" , "JS" ,"Front End Web Dev"],
+        "description":"This is Bus Routing Booking System Project using Front End Web Technologies",
+        "github-link": "https://github.com/arcVaishali/Dev-Geeks/blob/search-bar/Frontend-Projects/Bus%20route%20booking%20system/index.html",
+        "project-link":"Frontend-Projects/Bus route booking system/index.html"
+    },
+    {
+        // BUSINESS HEADER
+        "title":"Business header",
+        "tags":["HTML" , "CSS" , "JS" ,"Front End Web Dev"],
+        "description":"This is Business Header Project using Front End Web Technologies",
+        "github-link": "https://github.com/arcVaishali/Dev-Geeks/blob/search-bar/Frontend-Projects/business%20header/index.html",
+        "project-link":"Frontend-Projects/business header/index.html"
+    },
+   
 
         
-
-
-
-
 ]
 
 
