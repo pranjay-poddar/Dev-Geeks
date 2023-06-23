@@ -3,30 +3,61 @@
     padding: 0;
 }
 
-footer {
-    background: black;
-    color: white;
-    padding: 50px 15px;
-    width: 100%;
-    margin-bottom: 0%;
-    margin-top: 100%;
+img {
+    width: 31px;
+    height: 20px;
+    margin-top: 5px;
 }
+
+button {
+    border-radius: 42px;
+    border: 7px solid black;
+
+}
+
+h1 {
+    margin-left: 234px;
+    margin-top: 47px;
+    color: #29193b;
+    font-size: 61px;
+}
+
+.search-bar {
+    margin-top: 81px;
+    margin-left: 73px;
+}
+
+.box {
+    height: 61px;
+    width: 298px;
+    border-radius: 83px;
+    border: 8px solid black;
+    padding: 14px;
+}
+
+.proj-list {
+    margin-top: 84px;
+    margin-left: 44px;
+    font-size: 43px;
+    padding: 21px;
+    color: #29193b;
+}
+
+.items {
+    padding: 20px;
+}
+
+body {
+    background-color: #CE93D8;
+}
+
 .center {
-    align-items: center;
-    justify-content: center;
     text-align: center;
 }
 
-
-
-
-@media only screen and (max-width:579px) {
-    
-    footer {
-       
-        margin-bottom: 0%;
-        margin-top: 100%;
-        padding: 197px 15px;
-    }
-
+footer {
+    background: black;
+    color: white;
+    padding: 9px 20px;
+    width: 100%;
 }
