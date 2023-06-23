@@ -1,0 +1,168 @@
+#root, html, body{
+  margin: 0;
+  padding:0 ;
+  height: 100vh;
+  box-sizing: border-box;
+}
+
+.app{
+  height: 100%;
+  background: linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3) ), url('./images/city.jpg');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.card{
+  width: 45%;
+  height: 30%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  overflow: hidden;
+  border-radius: 25%;
+  padding: 2%;
+  box-shadow: 10px 10px;
+}
+
+.heading{
+  display: flex;
+  align-items: center;
+  height: 580px;
+  font-size: xx-large;
+}
+
+.button {
+  position: relative;
+  outline: none;
+  text-decoration: none;
+  border-radius: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  text-transform: uppercase;
+  height: 200px;
+  width: 210px;
+  opacity: 1;
+  background-image: linear-gradient(to right, #141e30, #243b55);
+  color: whitesmoke;
+  border: 1px solid rgba(22, 76, 167, 0.6);
+}
+  
+.button span {
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.7px;
+}
+
+  
+.button:hover {
+  animation: rotate 0.7s ease-in-out both;
+  background-image: radial-gradient( circle farthest-corner at 22.4% 21.7%, rgba(4,189,228,1) 0%, rgba(2,83,185,1) 100.2% );
+
+  color: whitesmoke;
+}
+  
+.button:hover span {
+  animation: storm 0.7s ease-in-out both;
+  animation-delay: 0.06s;
+}
+
+.col1{
+  background-image: linear-gradient(to right top, #051937, #004d7a, #008793, #00bf72, #a8eb12);
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.col2{
+  background-image: linear-gradient(to right, #c6ffdd, #fbd786, #f7797d);
+  font-family: cursive;
+}
+
+.col3{
+  background-image: linear-gradient(-20deg, #00cdac 0%, #8ddad5 100%);
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.footer{
+  background-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding-top: 10px;
+  color: #c6ffdd;
+  font-size:large;
+  padding-bottom: 10px;
+}
+img{
+  height: 50px;
+  width:50px;
+}
+
+  
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg) translate3d(0, 0, 0);
+  }
+  25% {
+    transform: rotate(3deg) translate3d(0, 0, 0);
+  }
+  50% {
+    transform: rotate(-3deg) translate3d(0, 0, 0);
+  }
+  75% {
+    transform: rotate(1deg) translate3d(0, 0, 0);
+  }
+  100% {
+    transform: rotate(0deg) translate3d(0, 0, 0);
+  }
+}
+  
+@keyframes storm {
+  0% {
+    transform: translate3d(0, 0, 0) translateZ(0);
+  }
+  25% {
+    transform: translate3d(4px, 0, 0) translateZ(0);
+  }
+  50% {
+    transform: translate3d(-3px, 0, 0) translateZ(0);
+  }
+  75% {
+    transform: translate3d(2px, 0, 0) translateZ(0);
+  }
+  100% {
+    transform: translate3d(0, 0, 0) translateZ(0);
+  }
+}  
+
+@media only screen and (max-width: 1300px) and (min-width:600px) {
+  .card {
+      width: 80%;
+      height: 45%;
+  }
+  .heading{
+    font-size: x-large;
+    font-family: 'Spartan', sans-serif;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .card {
+      width: 80%;
+      height: 60%;
+  }
+  .heading{
+    font-size: large;
+    font-family: 'Spartan', sans-serif;
+  }
+  .button{
+    height:fit-content;
+    width: fit-content;
+    padding: 10px;
+    margin-bottom: 10%;
+  }
+}

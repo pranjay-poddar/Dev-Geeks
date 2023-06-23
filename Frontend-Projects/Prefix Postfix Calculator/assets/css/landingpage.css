@@ -1,0 +1,111 @@
+.main-content{
+    /* display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center; */
+    position: relative;
+}
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 520px;
+    height: 320px;
+    border-radius: 7px;
+    background: rgb(255, 255, 255);
+    padding: 25px 28px 25px;
+    box-shadow: 7px 7px 20px rgb(0 0 0 / 5%);
+}
+h1{
+    text-align: center;
+    color: black;
+    font-family: 'Roboto Mono';
+}
+table{
+    justify-content: center;
+    align-items: center;
+}
+.Calculators{
+    /* display: flex; */
+    justify-content: center;
+    position: relative;
+    margin: 35px 0 18px;
+}
+.buttons{
+    border-radius: 5px;
+    padding: 8px;
+    margin: 5px;
+    border: 2px solid  rgb(175, 218, 225);
+    background-color: white;
+
+}
+.buttons:hover {
+    background-color: rgb(94, 169, 224);
+}
+@media (max-width: 576px){
+    .container{
+        width: 440px;
+    }
+}
+@media (max-width: 476px){
+    .container{
+        width: 330px;
+    }
+}
+
+
+
+/* Animated Text  */
+
+.wrapper{
+    display: inline-flex;
+    justify-content: center;
+}
+
+.wrapper .dynamic-texts{
+    line-height: 20px;
+    height: 19px;
+    overflow: hidden;
+}
+
+.dynamic-texts li{
+    list-style: none;
+    font-size: 1rem;
+    font-weight: 400;
+    color: #000;
+    position: relative;
+    top: 0;
+    animation: slide 6s steps(4) infinite;
+}
+
+@keyframes slide {
+    100% {
+        top: -83px;
+    }
+}
+
+.dynamic-texts li span{
+    position: relative;
+}
+.dynamic-texts li span::after {
+    content: "";    
+    position: absolute;
+    left: 0;
+    height: 100%; 
+    width: 100%;
+    background-color: #fff;
+    border-left: 1px solid #000; 
+    animation: typing 1.5s steps(12) infinite;
+}
+
+@keyframes typing {
+    100% {
+        left: 100%;
+    }
+}

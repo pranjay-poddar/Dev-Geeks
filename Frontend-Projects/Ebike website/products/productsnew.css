@@ -1,0 +1,180 @@
+body {
+    background-color: rgb(56, 54, 54);
+}
+html{
+    scroll-behavior: smooth;
+}
+
+
+
+/*-- navigation bar--*/
+nav{
+    background-color: rgb(91, 90, 90);
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+    border-radius: 2vw;
+}
+nav div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+nav a{
+    text-decoration: none;
+    color: white;
+}
+
+
+
+/*--logo--*/
+#logo img{
+    width: 5.4vw;
+    border-radius:1.5vw;
+    margin: 0.4vw 1vw 0.4vw 1.5vw;
+    
+}
+
+
+
+/*--sitename--*/
+#sitename{
+    font-size: 2vw;
+    justify-content: flex-start;
+    flex-grow: 10;
+}
+#sitename h1{
+    background-color: black;
+    padding: 0.5vw;
+    border-radius: 1vw;
+    border: 0.25vw solid white;
+    margin: 0;
+}
+#sitename a{
+    border-bottom: 0.1vw solid white;
+}
+
+
+/*--navigation list--*/
+#navlist{
+    margin-right: 3vw;
+    font-size: 1.6vw;
+}
+#navlist li{
+    margin: 1.2vw 1.2vw;   
+}
+#navlist ul{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    list-style: none;
+    justify-content: space-around;
+    border-radius: 1.7vw;
+}
+#navlist a{
+    color: white;
+    font-weight: bold;
+    transition: all 0.4s;
+    padding: 0.6vw;
+    border-radius: 0.6vw;
+}
+#navlist a:hover{
+    color: white;
+    border-bottom: 0.1vw solid white;
+    background-color: black;
+    text-decoration: underline;
+}
+section h1{
+    text-align: center;
+    width: 45vw;
+    background-color: grey;
+    margin: 2vw auto;
+    font-size: 2.5vw;
+    border-radius: 1vw;
+}
+#productscontainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.productbox{
+    border: 0.3vw solid white;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: 1vw;
+    border-radius: 2vw;
+    width: 72vw;
+    font-size: 2vw;
+    background-color: rgb(107, 107, 107);
+    transition: all 0.4s;
+}
+.productbox:hover{
+    background-color: black;
+    color: white;
+}
+.productbox img{
+    width: 35vw;
+    margin: 2vw;
+    border-radius: 2vw;
+}
+.productbox span{
+    border-bottom: 0.2vw solid white;
+    display: block;
+    text-align: center;
+    width: 27vw;
+    font-size: 3vw;
+}
+.productbox p{
+    width: 30vw;
+}
+
+
+/*--- coontact us----*/
+#contactus{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+#logo2 img{
+    width: 7vw;
+    margin: 3vw 0vw;
+    padding: 0.5vw;
+    background-color: black;
+    border-radius: 2vw;
+    border: 0.3vw solid grey;
+}
+#logo2{
+    width: 30vw;
+    display: flex;
+    justify-content: center;
+}
+#contact{
+    background-color: rgb(101, 99, 99);
+    padding: 1vw;
+    font-size: 1.7vw;
+    width: 50vw;
+    position: relative;
+    right: 11vw;
+    border-radius: 3vw;
+    margin-top: 3vw;
+    border: 0.3vw solid white;
+    /* flex-basis: 5; */
+    /* flex-grow: 10; */
+}
+.msg{
+    display: block;
+    text-align: center;
+    text-decoration: underline;
+}
+#contact span{
+    font-size: 1.8vw;
+    font-weight: bold;
+}
+footer{
+    text-align: center;
+    font-size: 1.2vw;
+    background-color: black;
+    color: white;
+}

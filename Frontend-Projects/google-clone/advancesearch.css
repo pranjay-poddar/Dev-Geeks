@@ -1,0 +1,190 @@
+.container {
+    position: relative;
+}
+
+body {
+    font-family: arial, sans-serif;
+}
+
+.innerform-heading {
+    display: inline-block;
+    font-size: 13px;
+    vertical-align: middle;
+    width: 50%;
+}
+
+.innerform {
+    display: inline-block;
+    vertical-align: middle;
+    width: 40%;
+    margin-left: 10px;
+    font-size: 13px;
+}
+
+.top-right {
+    position: fixed;
+    top: 25px;
+    right: 20px;
+}
+
+.form-details {
+    margin-top: 3%;
+    margin-left: 3%;
+    float: left;
+}
+
+.top-left {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+}
+
+.head-title {
+    color: #d93025;
+    position: relative;
+    border-bottom: 1px solid #ebebeb;
+    margin-top: 10vh;
+    margin-bottom: 1%;
+}
+
+.head-title label {
+    margin-left: 2%;
+    margin-bottom: 1%;
+    font-size: 16%;
+    padding: 10px;
+    border: 0;
+    font-weight: inherit;
+    font-style: inherit;
+    font-size: 130%;
+    vertical-align: baseline;
+    text-decoration: none;
+}
+
+.textinput {
+    padding: 8px 15px;
+    width: 400%;
+    font-size: 15px;
+    margin-top: 1%;
+    display: inline-block;
+    border-radius: 1px;
+    border: 1px solid #d9d9d9;
+    border-top: 1px solid #c0c0c0;
+    font-size: 13px;
+    height: 25px;
+    padding: 1px 8px;
+}
+
+.textinput:hover {
+    border: 1px solid #00aeff;
+    border-top: 1px solid #00aeff;
+}
+
+#heading-logo {
+    width: 15vh;
+    position: fixed;
+}
+
+#header-grey {
+    background: #f1f1f1;
+    position: absolute;
+    height: 60px;
+    width: 100vw;
+    display: block;
+    top: 0;
+    left: 0;
+}
+
+#search-button {
+    padding: 1px;
+    width: 120px;
+    margin: 2vw 1vw;
+    height: 35px;
+    border-radius: 2px;
+    background-color: #0275d8;
+    font-weight: bold;
+    font-size: 70%;
+    color: white;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    float: right;
+}
+
+#button-container {
+    width: 62vw;
+    clear: both;
+    background: red;
+}
+
+#search-button:hover {
+    background-color: #034c8b;
+}
+
+#images,
+#advance-search {
+    padding: 2px;
+    height: 35px;
+    border-radius: 2px;
+    background-color: #f1f1f1;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    color: black;
+    text-align: right;
+}
+
+#images:hover,
+#advance-search:hover {
+    text-decoration: underline;
+}
+
+
+/* For small screens */
+
+@media screen and (max-width: 810px) {
+    .textinput {
+        padding: 8px 15px;
+        width: 210%;
+        font-size: 15px;
+        margin-top: 1%;
+        font-size: 13px;
+        height: 25px;
+        padding: 1px 8px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .innerform-heading {
+        display: inline-block;
+        font-size: 13px;
+        vertical-align: middle;
+        width: 50%;
+    }
+    .innerform {
+        display: inline-block;
+        vertical-align: middle;
+        width: 50%;
+        margin-top: 5%;
+        margin-left: 10px;
+        font-size: 13px;
+    }
+    .textinput {
+        padding: 8px 15px;
+        width: 170%;
+        font-size: 15px;
+        margin-top: 5%;
+        font-size: 13px;
+        height: 25px;
+        padding: 1px 8px;
+    }
+    #images,
+    #advance-search {
+        font-size: 15px;
+    }
+    #heading-logo {
+        width: 13vh;
+        position: fixed;
+    }
+}

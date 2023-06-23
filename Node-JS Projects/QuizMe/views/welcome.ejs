@@ -1,0 +1,35 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/welcome.css">
+    <title>QuizME - Welcome</title>
+</head>
+<body>
+    <div class="container">
+        <img src="images/logo.png" alt="logo">
+        
+         <p class="quiz_name"> <%= quiz_name %>  </p>
+
+        <div class="row">
+            <input type="text" name="username" placeholder="Enter your name">
+            <button onclick="navigate()">Start Quiz</button>
+        </div>
+       
+        <label>Created by Aditya Kumar Gupta - 21BCS6904</label>
+    </div>
+
+    <script>
+        var btn = document.getElementsByTagName('button')[0]
+
+
+        function navigate(){
+            var quiz = document.getElementsByTagName('p')[0]
+            var user = document.getElementsByTagName('input')[0]
+            window.location.replace('/home?quiz='+quiz.innerText+'&username='+user.value)
+        }
+
+    </script>
+</body>
+</html>

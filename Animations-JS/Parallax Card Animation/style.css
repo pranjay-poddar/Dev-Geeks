@@ -1,0 +1,119 @@
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background: #30336b;
+}
+
+.instruction {
+  font-family: 'Montserrat';
+  font-size: 0.75em;
+  font-weight: bold;
+  position: absolute;
+  top: 5%;
+  width: 100%;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  text-align: center;
+  color: white;
+  user-select: none;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  -webkit-transform: perspective(800px);
+  transform: perspective(800px);
+}
+
+.card {
+  width: 450px;
+  height: 300px;
+  border-radius: 10px;
+  box-shadow: 20px 20px 75px rgba(0, 0, 0, 0.5);
+  background: linear-gradient(
+    121deg,
+    #fed330 0%,
+    #fd9644 34%,
+    #fa4e8b 64%,
+    #e84393 94%
+  );
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  -webkit-transition: 0.1s;
+  transition: 0.1s;
+}
+
+.card .card__gloss {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  transform: translateZ(1px);
+  z-index: 2;
+}
+
+.card .card__content {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+
+.card .card__content > * {
+  transform: translateZ(75px);
+  color: white;
+}
+
+.card .card__content .card__image {
+  width: 150px;
+  height: 150px;
+  border: 5px solid #fff;
+  border-radius: 50%;
+  margin: 40px auto 0 auto;
+  background-size: 190%;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQ9B021iQDwanw748r0Sfrvj37BGT7_TDtmEjT0OqIhqVG77wLA');
+}
+
+.card .card__content .card__name {
+  font-family: 'Arial';
+  font-weight: bold;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.card .card__name__image {
+  position: absolute;
+  top: 11.5%;
+  left: 31.5%;
+  width: 170px;
+  height: 170px;
+  border-radius: 50%;
+  transform: translateZ(1px);
+  background: rgba(0, 0, 0, 0.15);
+  -webkit-filter: blur(3px);
+  filter: blur(3px);
+}
+
+.card .card__name__shadow {
+  position: absolute;
+  bottom: 14%;
+  left: 30%;
+  font-family: 'Arial';
+  font-weight: bold;
+  letter-spacing: 3.4px;
+  text-transform: uppercase;
+  transform: translateZ(1px);
+  color: transparent;
+  text-shadow: 0 0 4px rgba(0, 0, 0, 0.15);
+}

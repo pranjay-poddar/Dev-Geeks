@@ -1,0 +1,89 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Rubik", sans-serif;
+    }
+    body {
+    height: 100vh;
+    background: rgb(245, 239, 66);
+    }
+    .container {
+    width: 70vw;
+    max-width: 37.5em;
+    background-color: #f6f9fa;
+    padding: 3em 1em;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    border-radius: 2rem;
+    }
+    .heading{
+    background: rgb(18, 128, 207);
+    color: white;
+    margin: -48px -16px 50px -16px;
+    font-size: 23px;
+    padding: 5px;
+    text-align: center;
+    }
+    .inp-wrapper {
+    display: flex;
+    justify-content: space-around;
+    gap: 1.2em;
+    }
+    label {
+    color: #0f1e32;
+    display: block;
+    font-weight: 600;
+    }
+    input[type="date"] {
+    font-size: 16px;
+    padding: 1em;
+    color: #242831;
+    border: 2px solid rgb(7, 108, 147);
+    outline: none;
+    border-radius: 0.2em;
+    margin-top: 0.6em;
+    }
+    ::-webkit-calendar-picker-indicator {
+    background-color: #7eceee;
+    padding: 0.2em;
+    cursor: pointer;
+    border-radius: 0.1em;
+    }
+    button {
+    display: block;
+    background-color: #1a78db;
+    color: #ffffff;
+    font-size: 18px;
+    margin: 2.2em auto 2em auto;
+    border: none;
+    padding: 0.7em 2em;
+    border-radius: 0.3em;
+    font-weight: 500;
+    }
+    
+    #output {
+    background-color: rgba(255, 255, 255, 0.15);
+    text-align: center;
+    padding: 1em;
+    margin: 0px 30px 0px 30px;
+    color: #0a49c7;
+    font-size: 1.2em;
+    letter-spacing: 0.05em;
+    box-shadow: 0 0 20px rgba(0,139,253,0.45);
+    }
+    #output span {
+    color: #18f08b;
+    font-size: 1.4em;
+    font-weight: 600;
+    }
+    .inp-wrapper {
+      flex-direction: column;
+    }
+    .date-wrapper {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+    }

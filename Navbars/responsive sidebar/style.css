@@ -1,0 +1,157 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+
+.content{
+    position: absolute;
+    top: 300px;
+    left: 400px;
+}
+
+.content h2{
+    text-align: center;
+    font-size: 40px;
+    border: 2px solid;
+    padding: 50px;
+}
+
+.open{
+    position: relative;
+    left: 0;
+}
+
+.open span{
+    position: absolute;
+    top: 20px;
+    left: 35px;
+    font-size: 30px;
+    line-height: 35px;
+    padding: 6px 10px;
+    color: white;
+    background: #333;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.sidebar{
+    width: 250px;
+    position: absolute;
+    left: -250px;
+    top: 0;
+    height: 100%;
+    background: #242423;
+    transition: all 0.5s ease;
+}
+
+.title {
+    font-size: 24px;
+    letter-spacing: 1px;
+    font-weight: 300;
+    color: white;
+    border-bottom: 1px solid #ced4da;
+    padding: 20px;
+    text-align: center;
+}
+
+.close{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 7px;
+    color: white;
+    cursor: pointer;
+    height: 35px;
+    width: 35px;
+    text-align: center;
+    background: black;
+    border: 2px solid white;
+    border-radius: 25px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    transition: all 0.5s ease;
+}
+
+.close:hover {
+    background: white;
+    color: black;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.links {
+    height: 80vh;
+    width: 225px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    margin: 10px;
+}
+
+.links i {
+    flex: 1;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid #ced4da;
+    width: 100%;
+    cursor: pointer;
+}
+
+.link-title {
+    margin: 5px;
+    font-size: 22px;
+}
+
+.links i:hover {
+    background: white;
+    color: black;
+}
+
+.social i{
+    color: white;
+    font-size: 22px;
+    width: 45px;
+    border-radius: 50%;
+    padding: 10px;
+    text-align: center;
+    cursor: pointer;
+    margin: 2px;
+}
+
+.social i:hover {
+    transition: all 0.5s ease;
+    transform: scale(1.1);
+}
+.instagram {
+    background: rgb(236, 9, 149);
+}
+
+.youtube {
+    background: red;
+}
+
+.facebook {
+    background: rgba(68, 137, 216, 0.789);
+}
+
+.twitter {
+    background: skyblue;
+}

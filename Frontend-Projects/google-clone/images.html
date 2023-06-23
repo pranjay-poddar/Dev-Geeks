@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Google Images</title>
+    <link rel="stylesheet" href="./images.css">
+    <link rel="icon" href="./images/favicon.png" type="image/x-icon" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+    <div class="container">
+        <div class="top-right">
+            <a id="images" href="./index.html">Search</a>
+            <a id="advance-search" href="./advancesearch.html">Advance Search</a>
+        </div>
+        <center><img id="heading" src="./images/gimage.png"></center>
+        <center>
+            <form action="https://google.com/search">
+                <input autofocus id="search-field" type="text" name="q">
+                <input id="search-field" name="tbm" type="hidden" value="isch">
+                <br>
+                <input id="search-button" type="submit" value="Search">
+            </form>
+        </center>
+    </div>
+</body>
+
+</html>

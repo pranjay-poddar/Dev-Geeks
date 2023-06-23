@@ -1,0 +1,108 @@
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  place-items: center;
+  /* font-family: "Orbitron"; */
+}
+.container {
+  min-width: 300px;
+  width: 40%;
+  height: 35%;
+  padding: 2rem;
+  background-color: black;
+  border-radius: 15px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#place {
+  display: block;
+  position: absolute;
+  top: -10%;
+  left: 50%;
+  transform: translateX(-50%);
+  /* bottom: 10px; */
+  width: 70%;
+  height: 30%;
+  text-align: center;
+  /* line-height: 3; */
+  background-color: white;
+  /* border: 1px solid; */
+  border-radius: 15px;
+  font-size: larger;
+  display: grid;
+  place-items: center;
+}
+#date {
+  width: 70%;
+  height: 30%;
+  display: block;
+  position: absolute;
+  background-color: white;
+  text-align: center;
+  font-size: large;
+  line-height: 2.5;
+  bottom: -10%;
+  left: 50%;
+  transform: translate(-50%);
+  border-radius: 15px;
+  font-family: "Orbitron";
+  /* display: grid; */
+  /* place-items: top; */
+}
+.clock {
+  width: 100%;
+  text-align: center;
+  font-size: 2.5rem;
+  font-family: "Orbitron", sans-serif;
+  color: white;
+  background-color: red;
+}
+
+.format-12,
+.format-24 {
+  color: black;
+  min-width: 1.6rem;
+  line-height: 4;
+  width: 4.5rem;
+  height: 4.5rem;
+  position: absolute;
+  border: 1px solid black;
+  background-color: hsla(0, 0%, 100%, 0.697);
+  transform: translateY(-50%);
+  text-align: center;
+  border-radius: 15px 15px;
+  font-family: "Orbitron", sans-serif;
+  /* z-index: -1; */
+}
+.format-12 {
+  left: -70px;
+  top: 50%;
+  transform: tra;
+  border-bottom-left-radius: 15px;
+  margin-left: 2px;
+  /* border-right: none; */
+}
+.format-24 {
+  right: -70px;
+  top: 50%;
+  border-bottom-right-radius: 15px;
+  margin-right: 2px;
+}
+.format-12:hover,
+.format-24:hover {
+  border: 3px solid black;
+}
+.active {
+  border: 3px solid black;
+  background-color: red;
+}

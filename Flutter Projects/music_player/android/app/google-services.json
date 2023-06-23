@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "677790494540",
+    "project_id": "music-player-9b54b",
+    "storage_bucket": "music-player-9b54b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:677790494540:android:efae439dbf5aa23744e9e9",
+        "android_client_info": {
+          "package_name": "com.faizan.music_player"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "677790494540-4j6t11fss025rj0ks3b0ubp406oqvl9a.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBDZcfyoVIT1khavqvz1Rf0mVcoiT1CWaQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "677790494540-4j6t11fss025rj0ks3b0ubp406oqvl9a.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

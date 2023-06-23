@@ -1,0 +1,35 @@
+li :hover {
+    background-color: #d9fff3 !important;
+    border-radius: 4px;
+    transition: 0.1s ease;
+}
+
+.bg-light {
+    background-color: #3baf8a !important;
+}
+
+.itemActive {
+    background-color: #59ffcb !important;
+    border-radius: 4px;
+    transition: 0.1s ease;
+}
+
+.nav-link {
+    color: black !important;
+    font-weight: 500;
+    font-size: 118%;
+    margin-left: 5px;
+    justify-content: center;
+    text-align: center;
+}
+
+button.navbar-toggler {
+    border: 0;
+}
+
+.navbar-toggler:focus,
+.navbar-toggler:active,
+.navbar-toggler-icon:focus {
+    outline: none;
+    box-shadow: none;
+}

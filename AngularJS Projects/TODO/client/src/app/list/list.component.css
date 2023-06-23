@@ -1,0 +1,118 @@
+body {
+  position: absolute;
+  top: 50px;
+  width: 100%;
+  height: 100vh;
+  bottom: 0px;
+  display: block;
+  overflow: auto;
+  background-color: rgb(24, 24, 32);
+}
+
+.list-container {
+  margin-top: 5%;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+.back {
+  background-color: rgb(33, 33, 43);
+  border: 0;
+  height: 35px;
+  width: 35px;
+  border-radius: 10px;
+  margin-right: 20px;
+  color: white;
+  margin-bottom: 10px;
+}
+
+.back:hover {
+  background-color: rgb(39, 39, 50);
+}
+
+.heading-container {
+  margin-left:auto;
+  display: flex;
+}
+
+.heading {
+  font-family: Inter, sans-serif;
+  color: white;
+  font-weight: 800;
+  font-size: 25px;
+}
+
+.container {
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.responsive-table li {
+  border-radius: 3px;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 25px;
+  text-align: center;
+}
+.table-header {
+  font-family: Inter, sans-serif;
+  color: white;
+  background-color: rgb(39, 39, 50);
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+.table-row {
+  font-family: Inter, sans-serif;
+  color: white;
+  background-color: rgb(33, 33, 43);
+  box-shadow: 0px 0px 9px 0px rgba(0, 0, 0, 0.1);
+}
+.col-1 {
+  flex-basis: 10%;
+}
+.col-2 {
+  flex-basis: 40%;
+}
+.col-3 {
+  flex-basis: 25%;
+}
+.col-4 {
+  flex-basis: 25%;
+}
+
+.footer-button{
+    margin-left: 5%;
+    margin-right: 5%;
+    border-width: 2;
+    border-style: solid;
+    border-radius: 5px;
+    width:120px;
+    height:35px;
+    border-color: rgba(48,48,61);
+    background-color: transparent;
+    font-family: Inter, sans-serif;
+    color: white;
+    transition-property: all;
+    transition-timing-function: cubic-bezier(.4,0,.2,1);
+    transition-duration: .15s;
+    --tw-translate-x: 0;
+    --tw-translate-y: 0;
+    --tw-rotate: 0;
+    --tw-skew-x: 0;
+    --tw-skew-y: 0;
+    --tw-scale-x: 1;
+    --tw-scale-y: 1;
+    transform: translateX(var(--tw-translate-x)) translateY(var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.footer-button:hover{
+    transform: translateY(-5px);
+}
+.footer{
+    text-align:center;
+}

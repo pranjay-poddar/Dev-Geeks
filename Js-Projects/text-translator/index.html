@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/45741b528e.js" crossorigin="anonymous"></script>
+    <title>translator app</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="data:image/x-icon;base64,AAABAAEAEBAQAAEABAAoAQAAFgAAACgAAAAQAAAAIAAAAAEABAAAAAAAgAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA/4QAABISEQCDUegAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAiIgAAAAAAAiEyIAAAAAACETMgAAAAAAIRMyAAAAAAAhEzIAAAAAACETMgAAAAAAIRMyAAAAAAAhEzIAAAAAACETMgAAAAACIRMyIAAAIiIREzMiIgAhERETMzMyACERERMzMzIAIiIiIiIiIgAAAAAAAAAAD//wAA/D8AAPgfAAD4HwAA+B8AAPgfAAD4HwAA+B8AAPgfAAD4HwAA8A8AAIABAACAAQAAgAEAAIABAAD//wAA" rel="icon" type="image/x-icon" /></head>
+<body>
+     <div class="container">
+        <div class="wrapper">
+            <div class="text-input">
+                <textarea class="from-text" placeholder="Enter text"></textarea>
+                <textarea class="to-text" placeholder="translated text" readonly disabled></textarea>
+            </div>
+            <ul class="controls">
+                <li class="row from">
+                    <div class="icons">
+                        <i id="from" class="fas fa-volume-up"></i>
+                        <i id="from" class="fas fa-copy"></i>
+                        
+                    </div>
+                    <select ></select>
+
+                </li>
+                <li class="exchange"><i class="fas fa-exchange-alt"></i></li>
+                <li class="row to">
+                    <select></select>
+                    <div class="icons">
+                        <i id="to" class="fas fa-volume-up"></i>
+                        <i id="to" class="fas fa-copy"></i>
+                        
+                    </div>
+
+                </li>
+            </ul>
+
+        </div>
+        <button>Translate text</button>
+     </div>
+     <script src="countries.js"></script>
+     <script src="script.js"></script>
+</body>
+</html>

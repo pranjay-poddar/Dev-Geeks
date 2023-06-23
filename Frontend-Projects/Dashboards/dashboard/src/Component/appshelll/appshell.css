@@ -1,0 +1,29 @@
+.logo{
+    height: 50px;
+  width: 50px;
+  background-image: linear-gradient(to bottom right, #FF0000
+  , #7329C6);
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 1rem;
+}
+
+.tabledes{
+    position: relative;
+    /* left: 18px; */
+    margin-right: 8rem;
+    /* overflow-x: hidden; */
+}
+
+.appshellheader{
+    display: flex;
+    flex-basis: 100%;
+
+    align-items: center;
+    /* flex-direction: ; */
+    justify-content: space-between;
+}
+
+.btn{
+    padding: 1rem;
+}

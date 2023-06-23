@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <title>Document</title>
+</head>
+<body>
+    <header id="main-header" class="bg-success text-white p-4 mb-3">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6">
+                <h1 id="header-title">Item Lister</h1>
+            </div>
+            <div class="col-md-6 align-self-center">
+                <input type="text" class="form-control" id="filter" placeholder="Search Items...">
+            </div>
+          </div>
+        </div>
+    </header>
+    <div class="container">
+       <div id="main" class="card card-body">
+        <h2 class="title">Add Items</h2>
+        <form id="addForm" class="form-inline mb-3">
+          <input type="text" class="form-control mr-2" id="item">
+          <input type="submit" class="btn btn-dark" value="Submit">
+        </form>
+        <div id="alert"></div>
+        <h2 class="title">Items</h2>
+        <ul id="items" class="list-group">
+          <li class="list-group-item">BAT<button class="btn btn-danger btn-sm float-right delete">X</button></li>
+          <li class="list-group-item">BALL<button class="btn btn-danger btn-sm float-right delete">X</button></li>
+          <li class="list-group-item">BASKETBALL<button class="btn btn-danger btn-sm float-right delete">X</button></li>
+          <li class="list-group-item">BASEBALL BAT<button class="btn btn-danger btn-sm float-right delete">X</button></li>
+        </ul>
+       </div>
+    </div>
+    <script src="./main.js"></script>
+</body>
+</html>

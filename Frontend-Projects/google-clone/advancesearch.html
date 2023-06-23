@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Google Advanced Search</title>
+    <link rel="stylesheet" href="./advancesearch.css">
+    <link rel="icon" href="./images/favicon.png" type="image/x-icon" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<div id="header-grey">
+    <div class="top-left">
+        <img id="heading-logo" src="./images/google.png">
+    </div>
+    <div class="top-right">
+        <a id="images" href="./index.html">Search</a>
+        <a id="advance-search" href="./images.html">Images Search</a>
+    </div>
+</div>
+
+<body>
+
+    <div class="container">
+
+        <div class="head-title">
+            <br>
+            <label>Advanced Search</label>
+            <br><br>
+        </div>
+        <div class="form-details">
+            <p>Find pages with...</p>
+            <form action="https://google.com/search" name="f">
+                <div class="field">
+                    <div class="innerform-heading">
+                        <label for="field1">all these words:</label>
+                    </div>
+                    <div class="innerform">
+                        <input type="text" autofocus class="textinput" id="field1" value="" name="as_q">
+                    </div>
+                </div>
+                <br>
+                <div class="field">
+                    <div class="innerform-heading">
+                        <label for="field2">this exact word or phrase: </label>
+                    </div>
+                    <div class="innerform">
+                        <input type="text" class="textinput" id="field2" value="" name="as_epq">
+                    </div>
+                </div>
+                <br>
+                <div class="field">
+                    <div class="innerform-heading">
+                        <label for="field3">any of this words: </label>
+                    </div>
+                    <div class="innerform">
+                        <input type="text" class="textinput" id="field3" value="" name="as_oq">
+                    </div>
+                </div>
+                <br>
+                <div class="field">
+                    <div class="innerform-heading">
+                        <label for="field4">none of these words: </label>
+                    </div>
+                    <div class="innerform">
+                        <input type="text" class="textinput" id="field4" value="" name="as_eq">
+                    </div>
+                </div>
+                <br>
+        </div>
+        <div id="button-container">
+            <input id="search-button" type="submit" value="Advanced Search">
+        </div>
+        </form>
+
+
+    </div>
+</body>
+
+</html>

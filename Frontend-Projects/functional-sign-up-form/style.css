@@ -1,0 +1,396 @@
+*{
+    box-sizing: border-box;
+}        
+/*big screen devices ---*/
+@media screen and (min-width: 540px){
+        html{
+            color: white;
+            font-weight: 600;
+            font-family: sans-serif;
+            justify-content: center;
+            min-width: 100px;
+        }
+
+        /*invalid inputs  #6c64ed*/
+        input{
+            border: 2px solid gray;
+            margin-bottom: 0.3rem;
+            outline: none;
+            border-radius: 5px;
+        }
+
+
+        input:focus{
+            border: 2px solid #6c64ed;
+            outline: none;
+        }
+
+        /*background----*/
+        body{
+            margin: 0px;
+            background-image: linear-gradient(rgba(205, 216, 170, 0.02),rgba(194, 195, 192, 0.06)),url(img/hero.jpg);
+            height: 100vh;
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center;
+
+        }
+
+        /*---------------------header------------------------------------------*/
+        header {
+            background-color: black;
+            opacity: 0.6;
+            text-align: center;
+            padding: 10px 10px 20px 10px;
+            margin-bottom: 0px;
+            margin-top: 0px;
+        }
+        /*---------------------input fields--------------------------------------*/
+
+
+        label {
+            display: inline-block;
+            margin-bottom: 0.3rem;
+        }
+
+        /*margin for radio btn--*/
+
+        .radio-btn {
+            margin-bottom: 0.2rem;
+        }
+
+
+        #page {
+            margin: 1.1% 25% 01% 25%;
+            height: 98%;
+            width: auto;
+            border: 1px solid rgba(0,0,0,0.5);
+            border-radius: 10px;
+            background: rgb(19 16 16 / 78%);
+            background-attachment: fixed;
+            box-shadow: inset -20px 17px 14px 5px rgba(0,0,0,0.6), inset -2px 2px 6px rgba(255,255,255,0.7), inset -16px 6px 6px rgba(255,255,255,0.7), inset -19px 17px 20px rgba(255,255,255,0.7), inset -20px -5px 14px hsl(9deg 23% 38%);
+            padding-bottom: 3%;
+
+
+
+        }
+
+        #fields {
+            margin-top: 6.5%;
+        }
+
+        h1 {
+            color : white;
+        }
+
+        #btn {
+            padding: 0.3rem;
+            border-radius: 12%;
+            background-color: #00000085;
+            color: white;
+            border: none;
+            text-decoration: none;
+
+        }
+        #btn:hover{
+            background-color: black;
+
+        }
+
+        td:focus{
+            outline-width: 0px;
+        }
+
+
+        #fav_food{
+            outline: none;
+            border: 2px solid gray;
+            max-height: 100px;
+            max-width: 300px;
+            min-width: 150px;
+            min-height: 40px;
+        }
+        #fav_food:focus {
+            outline: none;
+            border: 2px solid #6c64ed;
+
+        }
+        .error-banner{
+            background-color: #ff3600a6;
+            color : black;
+            display: none;
+            padding: 5px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        .message {display: inline-block;}
+
+       .cross {
+        display: inline-block;
+        position: absolute;
+        right: 5px;
+        background-color: #80000008;
+        cursor: pointer;
+    }
+}
+
+/*small screen devices---------*/
+@media screen and (max-width:540px){
+    html{
+            color: white;
+            font-weight: 600;
+            font-family: sans-serif;
+            justify-content: center;
+            min-width: 100px;
+        }
+
+        /*invalid inputs  #6c64ed*/
+        input{
+            border: 2px solid gray;
+            margin-bottom: 0.3rem;
+            outline: none;
+            border-radius: 5px;
+            display: block;
+        }
+
+
+        input:focus{
+            border: 2px solid #6c64ed;
+            outline: none;
+        }
+
+        /*background----*/
+        body{
+            margin: 0px;
+            background-image: linear-gradient(rgba(205, 216, 170, 0.02),rgba(194, 195, 192, 0.06)),url(img/hero.jpg);
+            height: 100vh;
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center;
+
+        }
+
+        /*---------------------header------------------------------------------*/
+        header {
+            background-color: black;
+            opacity: 0.6;
+            text-align: center;
+            padding: 10px 10px 20px 10px;
+            margin-bottom: 0px;
+            margin-top: 0px;
+        }
+        /*---------------------input fields--------------------------------------*/
+
+
+        label {
+            display: inline-block;
+            margin-bottom: 0.3rem;
+        }
+
+        /*margin for radio btn--*/
+
+        .radio-btn {
+            margin-bottom: 0.2rem;
+        }
+    #page{
+            margin: 3.1% 8% 1% 10%;
+            height: 98%;
+            width: auto;
+            border: 1px solid rgba(0,0,0,0.5);
+            border-radius: 10px;
+            background: rgb(19 16 16 / 78%);
+            background-attachment: fixed;
+            box-shadow: inset -20px 17px 14px 5px rgba(0,0,0,0.6), inset -2px 2px 6px rgba(255,255,255,0.7), inset -16px 6px 6px rgba(255,255,255,0.7), inset -19px 17px 20px rgba(255,255,255,0.7), inset -20px -5px 14px hsl(9deg 23% 38%);
+            padding-bottom: 3%;
+        
+       }
+    
+        #fields {
+            margin-top: 6.5%;
+        }
+
+        h1 {
+            color : white;
+        }
+
+        #btn {
+            padding: 0.3rem;
+            border-radius: 12%;
+            background-color: #00000085;
+            color: white;
+            border: none;
+            text-decoration: none;
+
+        }
+        #btn:hover{
+            background-color: black;
+
+        }
+
+        td:focus{
+            outline-width: 0px;
+        }
+
+
+        #fav_food{
+            outline: none;
+            border: 2px solid gray;
+            max-height: 100px;
+            max-width: 300px;
+            min-width: 150px;
+            min-height: 40px;
+        }
+        #fav_food:focus {
+            outline: none;
+            border: 2px solid #6c64ed;
+
+        }
+        .error-banner{
+            background-color: #ff3600a6;
+            color : black;
+            display: none;
+            padding: 5px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        .message {display: inline-block;}
+
+       .cross {
+        display: inline-block;
+        position: absolute;
+        right: 5px;
+        background-color: #80000008;
+        cursor: pointer;
+    }
+}
+
+
+
+
+/*screens below 350px---*/
+
+@media screen and (max-width:350px){
+    html{
+            color: white;
+            font-weight: 600;
+            font-family: sans-serif;
+            justify-content: center;
+            min-width: 100px;
+        }
+
+        /*invalid inputs  #6c64ed*/
+        input{
+            border: 2px solid gray;
+            margin-bottom: 0.3rem;
+            outline: none;
+            border-radius: 5px;
+            display: block;
+        }
+
+
+        input:focus{
+            border: 2px solid #6c64ed;
+            outline: none;
+        }
+
+        /*background----*/
+        body{
+            margin: 0px;
+            background-image: linear-gradient(rgba(205, 216, 170, 0.02),rgba(194, 195, 192, 0.06)),url(img/hero.jpg);
+            height: 100vh;
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center;
+
+        }
+
+        /*---------------------header------------------------------------------*/
+        header {
+            background-color: black;
+            opacity: 0.6;
+            text-align: center;
+            padding: 10px 10px 20px 10px;
+            margin-bottom: 0px;
+            margin-top: 0px;
+        }
+        /*---------------------input fields--------------------------------------*/
+
+
+        label {
+            display: inline-block;
+            margin-bottom: 0.3rem;
+        }
+
+        /*margin for radio btn--*/
+
+        .radio-btn {
+            margin-bottom: 0.2rem;
+        }
+    #page{
+            margin: 3.1% 0% 1% 0%;
+            height: 98%;
+            width: auto;
+            border: 1px solid rgba(0,0,0,0.5);
+            border-radius: 10px;
+            background: rgb(19 16 16 / 78%);
+            background-attachment: fixed;
+            box-shadow: inset -20px 17px 14px 5px rgba(0,0,0,0.6), inset -2px 2px 6px rgba(255,255,255,0.7), inset -16px 6px 6px rgba(255,255,255,0.7), inset -19px 17px 20px rgba(255,255,255,0.7), inset -20px -5px 14px hsl(9deg 23% 38%);
+            padding-bottom: 3%;
+        
+       }
+    
+        #fields {
+            margin-top: 6.5%;
+        }
+
+        h1 {
+            color : white;
+        }
+
+        #btn {
+            padding: 0.3rem;
+            border-radius: 12%;
+            background-color: #00000085;
+            color: white;
+            border: none;
+            text-decoration: none;
+
+        }
+        #btn:hover{
+            background-color: black;
+
+        }
+
+        td:focus{
+            outline-width: 0px;
+        }
+
+
+        #fav_food{
+            outline: none;
+            border: 2px solid gray;
+            max-height: 100px;
+            max-width: 300px;
+            min-width: 150px;
+            min-height: 40px;
+        }
+        #fav_food:focus {
+            outline: none;
+            border: 2px solid #6c64ed;
+
+        }
+        .error-banner{
+            background-color: #ff3600a6;
+            color : black;
+            display: none;
+            padding: 5px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        .message {display: inline-block;}
+
+       .cross {
+        display: inline-block;
+        position: absolute;
+        right: 5px;
+        background-color: #80000008;
+        cursor: pointer;
+    }
+}

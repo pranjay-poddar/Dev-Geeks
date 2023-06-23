@@ -1,0 +1,55 @@
+#data, #intro, #types {
+  font-size: 20px;
+  font-family: Comic Sans MS,sans-serif; }
+
+@media (min-width: 900px) {
+  #data {
+    width: 70%;
+    margin: 20px;
+    padding: 20px; } }
+@media (max-width: 899px) {
+  #data {
+    width: 90%;
+    margin: 10px;
+    padding: 10px; }
+  }
+body {
+  background-image: url("https://i.redd.it/5qpnyajv5j721.jpg")};
+p {
+  text-align: center;
+  color: rgb(118, 104, 151);
+  padding: 10px;
+  font-size: 20px;
+}
+h1 {
+  text-align: center;
+  color: red; }
+
+h2 {
+  text-align: initial;
+  font-size: 25px;
+  font-family: cursive;
+  margin: 10px;
+  color: red; }
+
+#data {
+  align-items: center;
+  border: 2px solid brown;
+  border-collapse: collapse;}
+  #data th, #data td {
+    padding: 10px;
+    text-align: center;
+    border: 2px solid beige;
+    color: darkgreen; }
+  #data th {
+    background-color: gold; }
+  #data td {
+    background-color: lightblue; }
+
+#intro {
+  color: grey; }
+
+#types {
+  color: green; }
+
+/*# sourceMappingURL=gamestyle.css.map */

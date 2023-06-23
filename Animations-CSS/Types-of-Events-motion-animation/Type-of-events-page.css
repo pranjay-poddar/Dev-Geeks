@@ -1,0 +1,288 @@
+body {
+    background-color: #194350 !important;
+    color: #fae4e4;
+    font-family: primary-font, Verdana, Geneva, Tahoma, sans-serif !important;
+    margin: 0px;
+}
+a:link {
+    text-decoration: none;
+    color: black;
+}
+  
+a:visited {
+    text-decoration: none;
+    color: black;
+}
+  
+a:hover {
+    text-decoration: none !important;
+    color: black !important;
+}
+  
+a:active {
+    text-decoration: none;
+    color: black;
+}
+@font-face {
+    font-family : primary-font;
+    src: url(fonts/Poppins-Regular.ttf);
+}
+/* ///////////////////////////// Navbar ///////////////////////////////////////////////////////////// */
+nav{
+    position: fixed;
+    bottom: 0vh;
+    right: 0vw;
+    width: fit-content;
+    z-index: 696969696969696969;
+}
+.navbar{
+    display: flex;
+    width: 20vw;
+    padding: 10px 10px;
+    justify-content: space-between;
+    border-radius: 69vw;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    background-color:  #194350;
+}
+.navbar div{
+    background-color: var(--lightPink);
+    border-radius: 69vw;
+    width: clamp(35px, 5vw, 50px);
+    height: clamp(35px, 5vw, 50px);
+}
+.navbar > div:hover{
+    background-color: whitesmoke;
+    transition-duration: 0.35s;
+}
+.navbar a{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.navbar img{
+    width: clamp(20px, 3.5vw, 30px);
+    height: clamp(20px, 3.5vw, 30px);
+}
+.superContainer{
+    display: flex;
+    flex-direction: column;
+}
+
+.type-of-event-text{
+    display: flex;
+    height: 40%;
+    width: 100%;
+    padding-top: 120px;
+    justify-content: center;
+}
+
+.type-of-event-text h1{
+    margin: 0px;
+    font-size: 5vw;
+    color: whitesmoke;
+}
+
+.type-of-event-text-cards{
+    display: flex;
+    justify-content: center;
+    gap:50px;
+    padding-top:40px;
+    flex-wrap: wrap;
+}
+
+
+  
+
+
+.type-of-event-text-cards .worshops-card{
+    display: none;
+    display: flex;
+    height: 400px;
+    min-width: 400px;
+    flex-direction: column;
+}
+
+.type-of-event-text-cards .worshops-card .worshop-cicle-area{
+    background-color: #ff8882;
+    border-radius: 100%;
+    text-align: center;
+    width:50%;
+    height:50%;
+    margin: auto;
+    line-height: 12;
+}
+
+
+
+  
+.type-of-event-text-cards .worshops-card .description-box{
+    background-color: #fff;
+    height: 180px;
+    width: 100%;
+    border-radius: 2%;
+    outline: 2px solid #ffc2b4;
+    outline-offset: -5px ;
+    padding-left: 20px;
+    padding-top: 20px;
+
+}
+
+.type-of-event-text-cards .competitions-card{
+    display: flex;
+    height: 400px;
+    width: 400px;
+    flex-direction: column;
+}
+
+.type-of-event-text-cards .competitions-card .competitions-cicle-area{
+    background-color: #9dbeb9;
+    border-radius: 100%;
+    text-align: center;
+    width:50%;
+    height:50%;
+    margin: auto;
+    line-height: 12;
+}
+
+.type-of-event-text-cards .competitions-card .description-box{
+    background-color:#fff;
+    height: 180px;
+    width: 100%;
+    border-radius: 2%;
+    outline: 2px solid #9dbeb9;
+    outline-offset: -5px ;
+    padding-left: 20px;
+    padding-top: 20px;
+
+}
+
+.type-of-event-text-cards .guest-lectures-card{
+    display: flex;
+    height: 400px;
+    min-width: 400px;
+    flex-direction: column;
+}
+
+.type-of-event-text-cards .guest-lectures-card .guest-lectures-cicle-area{
+    background-color: #ffc2b4;
+    border-radius: 100%;
+    text-align: center;
+    width:50%;
+    height:50%;
+    margin: auto;
+    line-height: 12;
+}
+.type-of-event-text-cards .guest-lectures-card .description-box{
+    background-color:#fff;
+    height: 180px;
+    width: 100%;
+    border-radius: 2%;
+    outline: 2px solid #ffc2b4;
+    outline-offset: -5px ;
+    padding-left: 20px;
+    padding-top: 20px;
+
+    
+}
+.type-of-event-text-cards > div > div > a{
+    height: 100%;
+    width: 100%;
+    border-radius: 696969px;
+    display: inline-block;
+}
+/*//////////////////////////ANIMATION////////////////////////*/
+
+
+
+
+ .navbar {
+     animation: fadeUp 1000ms forwards;
+     opacity: 0;
+     animation-delay:800ms;
+ }
+ 
+ @keyframes fadeUp {
+     from{
+         opacity: 0;
+         transform: translateY(+20px);
+     }
+
+     to{
+         opacity: 1;
+         transform: translateY(0);
+     }
+ } 
+
+
+ .type-of-event-text {
+    animation: fadeRight 1000ms forwards;
+    opacity: 0;
+}
+
+@keyframes fadeRight {
+    from{
+        opacity: 0;
+        transform: translateX(+20px);
+    }
+
+    to{
+        opacity: 1;
+        transform: translateX(0);
+    }
+} 
+
+
+.type-of-event-text-cards .worshops-card .worshop-cicle-area {
+    animation: fadeLeft 1000ms forwards;
+    opacity: 0;
+}
+
+@keyframes fadeLeft {
+    from{
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+
+    to{
+        opacity: 1;
+        transform: translateX(0);
+    }
+} 
+
+
+.type-of-event-text-cards .competitions-card .competitions-cicle-area {
+    animation: fadeDown 1000ms forwards;
+    opacity: 0;
+}
+
+@keyframes fadeDown {
+    from{
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+} 
+
+.type-of-event-text-cards .guest-lectures-card .guest-lectures-cicle-area {
+    animation: fadeRight 1000ms forwards;
+    opacity: 0;
+}
+
+@keyframes fadeRight {
+    from{
+        opacity: 0;
+        transform: translateX(+20px);
+    }
+
+    to{
+        opacity: 1;
+        transform: translateX(0);
+    }
+} 

@@ -1,0 +1,12 @@
+.contact-form-container{
+    width: 60vw;
+    color:  rgb(49, 147, 49)
+    
+}
+
+/*Until teh screen size is reached 768px keep applying below styling*/
+@media(max-width: 768px){
+    .contact-form-container{
+        width: 88vw;
+    }
+}

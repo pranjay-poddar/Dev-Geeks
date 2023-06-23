@@ -1,0 +1,229 @@
+html{
+    scroll-behavior: smooth;
+}
+body{
+    background-color:rgb(56,54,54);
+    
+}
+
+/* navigation bar */
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: rgb(95, 93, 93);
+    border-radius: 3vw;
+}
+#logo{
+    margin-top: 2vw;
+}
+#logo img{
+    border-radius: 2vw;
+    width: 13vw;
+}
+#navlist{
+    margin-bottom: 1vw;
+    border-radius: 2vw;
+}
+#navlist ul{
+    display: flex;
+    list-style: none;
+    text-align: center;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+    /* flex-wrap: wrap; */
+}
+#navlist li{
+    margin: 0vw 1vw;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+#navlist a{
+    text-decoration: none;
+    color: white;
+    font-size: 3.75vw;
+    margin: 1vw 0vw;
+    background-color: rgb(41, 40, 40);
+    padding: 4px 2px;
+    border-bottom: 1px solid white;
+    border-radius: 1vw;
+}
+#sitename a{
+    text-decoration: none;
+    color: white;
+    
+}
+#sitename h1{
+    background-color: black;
+    border-radius: 2vw;
+    padding: 2vw;
+    margin: 1vw;
+    font-size: 11vw;
+    border-bottom: 0.3vw solid white;
+
+}
+/* end of navigation bar */
+
+.headimg img{
+    border-radius: 8vw;
+    opacity: 0.3;
+    width: 90vw;
+    height: 30vw;
+    margin-top: 3vw;
+}
+.headimg{
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+}
+.head{
+    position: relative;
+    bottom: 23vw;
+    /* border-bottom: 1vw solid black; */
+}
+#h{
+    position: relative;
+    bottom: 5vw;
+}
+.head h1{
+    color: white;
+    font-size: 9vw;
+    border-bottom: 0.5vw solid black;
+    margin: 0;
+}
+.aboutus{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+}
+#text2{
+    background-color: rgb(240, 240, 174);
+}
+.text{
+    background-color: rgb(187, 133, 133);
+    text-align: justify;
+    padding: 2vw;
+    font-size: 4vw;
+    width: 85vw;
+    border: 0.3vw solid red;
+    border-bottom-right-radius: 8vw;
+    border-top-left-radius: 8vw;
+    margin: 1vw;
+}
+#text1{
+    order: 1;
+}
+#pic1{
+    order: 2;
+}
+#text2{
+    order: 3;
+}
+#pic2{
+    order: 4;
+}
+.pic img{
+    border-bottom-left-radius: 8vw;
+    border-top-right-radius: 8vw;
+    border: 0.3vw solid red;
+    margin: 1vw;
+width: 85vw;
+}
+.features{
+    width: 80vw;
+    margin: auto;
+    background-color: grey;
+border-radius: 2vw;
+padding: 1vw;
+margin-bottom: 2vw;
+margin-top: 2vw;
+}
+.features h1{
+    background-color: rgb(23, 23, 23);
+    color: white;
+    font-size: 5vw;
+    border-radius: 1vw;
+width: 65vw;
+margin:2vw auto;
+text-align: center;
+
+}
+.mainbox{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+.featurebox{
+    width: 70vw;
+    font-size: 4vw;
+    text-align: justify;
+    margin: 2vw;
+    background-color: rgb(237, 144, 144);
+    border: 0.3vw solid red;
+    border-radius: 2vw;
+    
+    padding: 1vw;
+    transition: all 1s;
+}
+#featurebox2{
+    transition: all 1s;
+    background-color: rgb(234, 238, 177);
+    border: 0.3vw solid rgb(35, 34, 34);
+}
+.featurebox:hover{
+    background-color: rgb(234, 238, 177);
+    border: 0.3vw solid rgb(35, 34, 34);
+}
+#featurebox2:hover{
+    background-color: rgb(237, 144, 144);
+    border: 0.3vw solid red;
+}
+
+
+
+
+
+#contactus{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+#logo2 img{
+    width: 18vw;
+    margin-top: 5vw;
+    border-radius: 3vw;
+    padding: 2vw;
+    background-color: rgb(24, 24, 24);
+    border: 1vw solid rgb(159, 159, 159);
+}
+#contact{
+    background-color: rgb(35, 35, 35);
+    font-size: 5vw;
+    border-radius: 3vw;
+    padding:3vw ;
+    color: rgb(202, 197, 197);
+}
+#contact span{
+    font-weight: bold;
+    font-size: 5.5vw;
+    /* margin: 1vw; */
+}
+.msg{
+    display: block;
+    margin: auto;
+    text-align: center;
+}
+footer{
+    text-align: center;
+    color: white;
+    background-color: black;
+    font-size: 3vw;
+}

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Particle</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="particles-js">
+        <div id="login">
+            <form action="">
+                <p> Your Name : 
+                    <input type="text" name="name2" required placeholder="Your Full Name">
+                </p> 
+                <br>
+                <p> Your Phone-Number :
+                    <input type="number" name="phnumber" placeholder="Your Phone number">
+                </p>
+                <br>
+                <p> Your Email : 
+                    <input type="email" name="email1" placeholder="Enter Valid Email Address" required>
+                </p>
+                <br>
+                <p> Your Adress :
+                    <textarea name="address1" id="" cols="40" rows="3"  required > </textarea>
+                </p>
+                <br>
+                <p>
+                    <input type="submit" value="CONFIRM" name="submit" id="submit">
+                </p>
+            </form>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script>
+        particlesJS.load('particles-js','particles.json', function(){
+            console.log('particles.json loaded...');
+        });
+    </script>
+</body>
+</html>

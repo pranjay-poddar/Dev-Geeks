@@ -1,0 +1,288 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+*{
+    padding:0;
+    margin:0;
+    font-family: 'Roboto', sans-serif;
+    color: white;
+}
+.parent-container{
+    display:grid;
+    grid-template-rows: repeat(5,1fr);
+   
+}
+.top{
+  background-color: #1f543a; 
+  grid-row: 1/2;
+}
+.bottom{
+    grid-row:2/5;
+    background-color: #1F1A1E;
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap:4em;
+}
+.grid-1{
+    display:grid;
+    grid-template-rows: repeat(4,1fr);
+}
+.grid-1 img{
+    
+    height:10rem;
+    width:30rem;
+    margin-left:2em;
+    margin-top:2em;
+    grid-row:1/3;
+}
+.grid-1 p{
+    color: white;
+    font-size:1.2rem;
+    margin-left:3em;
+    /* margin-top:2em; */
+    grid-row:3/4;
+}
+/*#FFD5EF*/
+.grid-2{
+    display:grid;
+    grid-template-rows: repeat(4,1fr);
+    
+}
+.grid-2 p{
+    grid-row: 3/4;
+    font-size:1.2rem;
+
+}
+.grid-2 form{
+    grid-row-start: 4;  
+}
+.grid-2 input{
+    
+    width:15em;
+    height:auto;
+    padding:1.2em;
+    background-color: #1F1A1E;
+    border:2px solid #FFD5EF;
+}
+.grid-2 button{
+    background-color: #f3b7dc;
+    color:white;
+    font-size:1.2rem;
+    grid-row-start:4;
+    width:6em;
+    /* height: auto;  */
+     padding:0.5em;
+    display:block;
+    height:3.0em;
+    margin-left: 2em;
+    border:1px solid #f3b7dc;
+}
+.grid-3,.grid-4{
+    display: grid;
+    grid-template-rows: repeat(4,1fr);
+
+}
+.grid-3 p{
+    grid-row:3/4;
+    font-size:1.5rem;
+}
+.icons {
+    grid-row:4/5; 
+}
+.fab{
+    color:white;
+    font-size:1.5rem;
+    /* display: block; */
+    margin-bottom: 1em;
+}
+.grid-4 h4{
+    grid-row:4/5;
+    font-size:1.5rem;
+}
+.grid-4 p{
+    grid-row:3/4;
+    font-size:1.5rem;
+    grid-row-gap: -2em;
+}
+hr{
+    display:none;
+}
+@media (min-width:1200px)
+{
+    .fab{
+        margin-right:0.2em;
+    }
+}
+
+@media (min-width: 960px) and (max-width: 1200px){
+    .bottom{
+        grid-template-rows: repeat(3.1fr);
+        
+    }
+    .icons{
+        grid-row:2/3;
+        font-size:1.2rem;
+    }
+    .grid-3 p{
+        grid-row:2/3;
+        font-size:1.2rem;
+    }
+    .grid-4 h4{
+        grid-row:2/3;
+        display:block;
+        font-size:1.2rem;
+    }
+    .grid-4 p{
+        grid-row:2/3;
+        font-size:1.2rem;
+    }
+    .bottom{
+        grid-gap:0em;
+    }
+    .grid-2 p{
+        grid-row: 2/3;
+        font-size:1.2rem;
+    
+    }
+    .grid-2 form{
+        grid-row:3/4;
+    }
+    .grid-2 button{
+        grid-row-start:3;
+        font-size:1rem;
+        height:3.5em;
+        padding:1.1em;
+        text-align: center;
+        margin-left:2em;
+    }
+    .grid-4{
+        font-size:1rem;
+    }
+    .grid-3{
+        font-size:1rem;
+    }
+    .grid-1 img{
+        grid-row:1/2;
+        height:5rem;
+        width:15rem;
+        padding:0.2em;    
+    }
+    .grid-1 ,.grid-2 p{
+        font-size:1em;
+    }
+    .grid-1 p{
+        grid-row: 2/3;
+        font-size:1rem;
+    }
+    .icons{
+        display:block;
+    }
+}
+@media (max-width:959px){
+    .bottom{
+        grid-template-rows: repeat(2,1fr);
+        grid-template-columns: repeat(2,1fr);
+    }
+    .grid-1{
+        grid-row-start: 1;
+    }
+    .grid-2{
+        grid-row-start: 2;
+        grid-column: 1/3;
+        margin-left:3em;
+        grid-template-rows: repeat(1,12em);
+        margin-top:-10em;
+
+    }
+    .grid-3{
+        grid-row-start:2;
+        grid-column-start: 1;
+        margin-left:3em;
+    }
+    .grid-4{
+        grid-row-start: 2;
+        grid-column-start: 1;
+        margin-left:3em;
+        grid-template-rows: repeat(1,fr);
+    }
+    .grid-1 p{
+        margin-bottom: 0em;
+    }
+    .grid-2 p{
+        grid-row:1/2;
+    }
+    .grid-2 form{
+        grid-row-start:1;
+    }
+    .grid-2 button{
+        grid-row-start:1;
+        margin-right:auto;
+    }
+    .grid-3 p{
+        grid-row-start: 1;
+    }
+    .icons{
+        grid-row-start:1;
+        
+    }
+    .fab{
+        display:inline;
+        margin-right:2em;
+    }
+   .grid-4 p{
+       grid-row-start:2;
+   }
+   .grid-4 h4{
+       grid-row-start:2;
+   }
+   .grid-1 img{
+       margin-left:1em;
+   }
+   .grid-1 p{
+       margin-left:2.6em;
+   }
+}
+
+
+/*Mobile design done*/
+
+@media (max-width: 500px) {
+
+    .grid-1 img{
+        height: 9rem;
+        width: 25rem;
+    }
+
+    .grid-1 p{
+        font-size: 13px;
+        max-width: 300px;
+    }
+
+    .grid-2{
+        margin-right: 2rem;
+    }
+
+    .grid-2 p{
+        font-size: 13px;
+        max-width: 60px;
+    }
+
+    .grid-2 form input{
+        font-size: 9px;
+    }
+
+    .grid-2 button{
+        margin: 0;
+        font-size: 12px;
+    }
+
+    .grid-3 p, .grid-4 p{
+        font-size: 15px;
+    }
+
+    .fab{
+        font-size: 20px;
+    }
+
+    .grid-4 h4{
+        font-size: 15px;
+    }
+}

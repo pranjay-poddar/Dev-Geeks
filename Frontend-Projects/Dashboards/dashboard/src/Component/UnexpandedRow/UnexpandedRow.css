@@ -1,0 +1,27 @@
+.header-space {
+  margin-right: 1.4rem;
+}
+
+.unexpandedrow {
+  display: flex;
+  flex-direction: row;
+}
+.access {
+  min-width: 14.5rem;
+  text-align: left;
+}
+.MAX {
+  width: 14.5rem;
+  text-align: center;
+}
+
+.row-content {
+  display: flex;
+  flex-direction: row;
+
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+.switch {
+  margin-left: 2rem;
+}

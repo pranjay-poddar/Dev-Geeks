@@ -1,0 +1,73 @@
+.body {
+    background-color: rgb(24, 24, 32);
+    position: absolute;
+    top:50px;
+    width:100%;
+    height:100vh;
+    bottom:0px;
+    display: block;
+  overflow: auto;
+}
+
+
+.main-container{
+    margin-top : 150px;
+    padding-left: 20%;
+    padding-right: 20%;
+}
+
+.main-header{
+    display: flex;
+    justify-content: space-between;
+}
+
+.header{
+    font-family: Inter, sans-serif;
+    font-weight : 800;
+    color:white;
+    font-size:30px;
+}
+
+.all-tasks{
+    font-family: Inter;
+    font-weight: 500;
+    color:white;
+    font-size:16px;
+    border-width: 0px;
+    border-style: solid;
+    box-sizing: border-box;
+    border-radius: 5px;
+    width:120px;
+    height:35px;
+
+    --tw-shadow: inset 0 -4px 0px 0 rgba(0,0,0,0.25);
+    box-shadow: var(--tw-ring-offset-shadow,0 0 transparent),var(--tw-ring-shadow,0 0 transparent),var(--tw-shadow);
+
+    --tw-gradient-from: #bb3fdd;
+    --tw-gradient-stops: var(--tw-gradient-from),var(--tw-gradient-to,rgba(187,63,221,0));
+
+    background-image: linear-gradient(to top right,var(--tw-gradient-stops));
+
+    --tw-gradient-to: #ff9f7c;
+
+    transition-duration: .2s;
+}
+
+.all-tasks:hover{
+    transform: translateY(-5px);
+}
+
+.task-container{
+    --tw-bg-opacity: 1;
+    background-color: rgba(33,33,43,var(--tw-bg-opacity));
+    border-radius: 1rem;
+    margin:2em;
+    padding:1em;
+    font-family: Inter, sans-serif;
+    color: whitesmoke;
+    padding-left: 10px;
+}
+
+.task-container span{
+    margin-left : 1em;
+}

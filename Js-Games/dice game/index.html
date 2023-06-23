@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Dice</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1>🔃Refresh Me!!</h1>
+        <div class="dice">
+
+            <p>Player 1</p>
+            <img class="img1" src="./dice1.png">
+        </div>
+        <div class="dice">
+            <p>Player 2</p>
+            <img class="img2" src="dice2.png">
+        </div>
+        <div>
+            <button onclick="refreshPage()" class="button-64" role="button"><span class="text">Click To Play</span></button>
+
+        </div>
+    </div>
+    <script>
+        function refreshPage(){
+            location.reload();
+        }
+    </script>
+    <script src="script.js"></script>
+</body>
+<footer>
+    Enjoy The Game
+</footer>
+
+</html>

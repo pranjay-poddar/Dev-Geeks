@@ -1,0 +1,218 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/home.css">
+    <title>QuizME - Home</title>
+</head>
+<body onload="showGameArea()">
+    <div class="container">
+        <div class="progress_bar">
+            <div class="progress_pointer"></div>
+        </div>
+         
+        <div class="loading">
+            <label>Quiz is loading...</label>
+        </div>
+        
+
+        <div class="game_area">
+
+            <audio src="sounds/click.wav" id="click_sound"></audio>
+
+            <div class="info_bar">
+                <label class="time_label">Time Left :</label>
+                <label class="question_label">Question</label>
+            </div>
+
+
+            <div class="current_question active">
+
+            <div class="question_box">
+                <label class="question active_question" >
+                    Who is the Prime Minister of India?
+                    asdasd dhajskh  dksajkdjas dksajdkas jklsjakldjaskl
+                    dksahdks jksajkdjask jdklasjkldjas djkasjdkal
+                </label>
+            </div>
+
+           <div class="options_box">
+
+               <div class="options_row options_row_a">
+                <button onclick="select_<%=positions[0]%>()" class="option active_option<%=positions[0]%>" onclick="playClickSound()">Option One</button>
+                <button onclick="select_<%=positions[1]%>()" class="option active_option<%=positions[1]%>" onclick="playClickSound()">Option Two</button>
+               </div>
+
+               <div class="options_row options_row_b">
+                <button onclick="select_<%=positions[2]%>()" class="option active_option<%=positions[2]%>" onclick="playClickSound()">Option Three</button>
+                <button onclick="select_<%=positions[3]%>()" class="option active_option<%=positions[3]%>" onclick="playClickSound()">Option Four</button>
+               </div>
+               
+           </div>
+
+        </div>
+
+           <div class="skip">
+               <h3 onclick="skip()">Skip Question ></h3>
+           </div>
+           
+           <form action="/save_response" method="post">
+
+                   <input type="hidden" name="quiz" value="<%= quiz_name %>">
+                   <input type="hidden" name="username" value="<%= username %>">
+                   <input type="hidden" name="answers">
+
+           </form>
+
+        </div>
+    </div>
+
+    <script>
+
+        function showGameArea(){
+            document.getElementsByClassName('loading')[0].style.display = 'none';
+            document.getElementsByClassName('game_area')[0].style.display = 'block';
+        }
+
+        function playClickSound(){
+            document.getElementById('click_sound').play()
+        }
+
+        var questions = <%-JSON.stringify(all_questions) %>
+
+        var question = document.getElementsByClassName('active_question')[0]
+        var option1 = document.getElementsByClassName('active_option1')[0]
+        var option2 = document.getElementsByClassName('active_option2')[0]
+        var option3 = document.getElementsByClassName('active_option3')[0]
+        var option4 = document.getElementsByClassName('active_option4')[0]
+        var question_label = document.getElementsByClassName('question_label')[0]
+        var time_label = document.getElementsByClassName('time_label')[0]
+
+        
+
+        var curr_question = 0
+        var answers = []
+        var selected_option = 0
+
+        function select_1(){
+            selected_option = 1
+            answers.push(option1.innerText.replace(',' , '<seperation>'))
+            next_question()
+        }
+
+        function select_2(){
+            selected_option = 2
+            answers.push(option2.innerText.replace(',' , '<seperation>'))
+            next_question()
+        }
+
+        function select_3(){
+            selected_option = 3
+            answers.push(option3.innerText.replace(',' , '<seperation>'))
+            next_question()
+        }
+
+        function select_4(){
+            selected_option = 4
+            answers.push(option4.innerText.replace(',' , '<seperation>'))
+            next_question()
+        }
+        
+        function skip(){
+            selected_option = 0
+            answers.push(selected_option)
+            next_question()
+        }
+
+        
+        function shuffle(){
+            var a = document.getElementsByClassName('options_row_a')[0]
+            var b = document.getElementsByClassName('options_row_b')[0]
+
+            var x = Math.floor(Math.random() * 100)
+            console.log(x);
+
+            if(x>=50){
+                var temp;
+                temp = a.innerHTML
+                a.innerHTML = b.innerHTML
+                b.innerHTML = temp
+                console.log(temp);
+            }
+            else{
+
+            }
+
+
+        }
+
+        function next_question(){
+
+            if(curr_question)
+            playClickSound()
+            
+            if(curr_question < questions.length){
+            
+           // if(!curr_question)
+    
+            question.innerText = questions[curr_question].question_text
+            option1.innerText = questions[curr_question].option1
+            option2.innerText = questions[curr_question].option2
+            option3.innerText = questions[curr_question].option3
+            option4.innerText = questions[curr_question].option4
+            question_label.innerText = 'Question '+(curr_question+1)+' of  '+ questions.length
+
+           // shuffle()
+
+            curr_question++
+            selected_option = 0
+            }
+            else{
+                document.getElementsByName('answers')[0].value = answers
+                document.getElementsByTagName('form')[0].submit()
+            }
+        }
+
+        next_question()
+
+
+        var time = [ <%=time%> ,0]
+        var total_seconds = (time[0]*60)+time[1]
+
+
+        var timer = setInterval(changeTime, 1000)
+        
+        function changeTime(){
+
+            
+            if(time[1]!=0){
+                time[1] = time[1] - 1
+            }
+            else if(time[0]!=0){
+                time[1] = 59
+                time[0] = time[0] - 1
+            }
+            else{
+
+                clearInterval(timer)
+                document.getElementsByName('answers')[0].value = answers
+                document.getElementsByTagName('form')[0].submit()
+                
+            }
+
+            time_label.innerText = 'Time left - '+time[0]+' : '+time[1]
+            var curr_seconds = (time[0]*60)+time[1]
+            var progress_pointer = document.getElementsByClassName('progress_pointer')[0]
+            var time_percentage = 100 - ((curr_seconds/total_seconds)*100)
+            progress_pointer.style.width = time_percentage+'%'
+        }
+
+
+
+        
+
+
+    </script>
+</body>
+</html>

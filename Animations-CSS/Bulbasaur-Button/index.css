@@ -1,0 +1,218 @@
+* {
+    margin: 0;
+    padding: 0;
+  }
+  body {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #fee8b8;
+  }
+  .bulba:hover {
+    border: none;
+    transform: translatey(1vmin);
+    cursor: pointer;
+  }
+  
+  .bulba {
+    position: relative;
+    height: 50vmin;
+    width: 50vmin;
+    background: #93ccb3;
+    border: none;
+    border-radius: 10%;
+    border-bottom: 4vmin solid #378e8e;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .bulba::after {
+    content: '';
+    position: absolute;
+    background: white;
+    height: 14vmin;
+    width: 10vmin;
+    border-radius: 80% 80% 40% 40%;
+    
+    top: 18vmin;
+    left: 9vmin;
+    
+    box-shadow: 23vmin 0 white;
+  }
+  .bulba:before {
+    content: '';
+    position: absolute;
+    background: white;
+    height: 5vmin;
+    width: 3vmin;
+    border-radius: 50%;
+    z-index: 2;
+    top: 21vmin;
+    left: 14vmin;
+    box-shadow: 23vmin 0 white;
+  }
+  .eyeballs {
+    position: relative;
+    background: #ff6666;
+    height: 8vmin;
+    width: 3vmin;
+    border-radius: 60% 60% 90% 90%;
+    
+    border-bottom: 2vmin solid red;
+    border-left: 1.8vmin solid #e60000;
+    border-right: 1.8vmin solid #e60000;
+    
+    z-index: 1;
+    left: -10.4vmin;
+    top: 7.5vmin;
+  }
+  .eyeballs::after {
+    content: '';
+    position: absolute;
+    background: #ff6666;
+    height: 8vmin;
+    width: 3vmin;
+    border-radius: 60% 60% 90% 90%;
+    
+    border-bottom: 2vmin solid red;
+    border-left: 1.8vmin solid #e60000;
+    border-right: 1.8vmin solid #e60000;
+    
+    z-index: 1;
+    left: 21.2vmin;
+  }
+  .leaf {
+    position: relative;
+    background: #477f6b;
+    height: 5vmin;
+    width: 12vmin;
+    border-radius: 4vmin 18vmin 1vmin 8vmin;
+    top: 14.5vmin;
+    left: -19vmin;
+  }
+  
+  .leaf::before {
+    content: '';
+    position: absolute;
+    background: #477f6b;
+    height: 5vmin;
+    width: 12vmin;
+    border-radius: 18vmin 4vmin 8vmin 1vmin;
+    
+    left: 38.1vmin;
+  }
+  
+  .nose {
+    position: relative;
+    background: #142d24;
+    height: 3vmin;
+    width: 1vmin;
+    border-radius: 50%;
+    top: 6.5vmin;
+    left: -3.4vmin;
+    transform: rotate(-20deg);
+  }
+  .nose::after {
+    content: '';
+    position: absolute;
+    background: #142d24;
+    height: 3vmin;
+    width: 1vmin;
+    border-radius: 50%;
+    transform: rotate(40deg);
+    
+    left: 6vmin;
+    top: 2.25vmin;  
+  }
+  
+  #mouth
+  {
+    position: relative;
+    z-index:2;
+  }
+  
+  .mouth-brace:before,
+  .mouth-brace:after
+  {
+    content: "";
+    width: 30%;
+    height: 1.3vmin;
+    position: absolute;
+    display: block;
+    z-index:2;
+  }
+  
+  #mouth-left:before
+  {  
+    border-bottom: 0.7vmin solid #142d24;  
+    border-bottom-left-radius: 20px;
+    margin-left: -40%;
+    margin-top: 20.5vmin;
+    z-index:2;
+  }
+  
+  #mouth-left:after
+  {
+    border-top: 0.7vmin solid #142d24;
+    border-top-right-radius: 20px;
+    margin-left: -30%;
+    margin-top:21.9vmin;    
+  }
+  
+  #mouth-right:before
+  {
+    border-top: 0.7vmin solid #142d24;
+    border-top-left-radius: 20px;
+    margin-left: 0%;
+    margin-top: 21.9vmin;
+  }
+  
+  #mouth-right:after
+  {
+    border-bottom: 0.7vmin solid #142d24;
+    border-bottom-right-radius: 20px;
+    margin-left: 10%;
+    margin-top: 20.5vmin;
+  }
+  .eyebrow {
+    position: relative;
+    background: #33715a;
+    height: 3vmin;
+    width: 2.5vmin;
+    border-radius: 30% 40% 60% 20%;
+    top: -11.5vmin;
+    left: -6.4vmin;
+    transform: rotate(-20deg);
+  }
+  .eyebrow::after {
+    content: '';
+    position: absolute;
+    background: #33715a;
+    height: 15vmin;
+    width:10vmin;
+    border-radius: 30% 50% 40% 60%;
+    transform: rotate(40deg);
+    
+    left: 10vmin;
+    top: -5vmin;  
+  }
+  .eyebrow::before {
+    content: '';
+    position: absolute;
+    background: #33715a;
+    height: 7vmin;
+    width:5vmin;
+    border-radius: 200% 30% 50% 60%;
+    transform: rotate(40deg);
+    
+    left: 4vmin;
+    top: -8vmin;  
+  }
+  .bulba:hover {
+    border: none;
+    transform: translatey(1vmin);
+    cursor: pointer;
+  }

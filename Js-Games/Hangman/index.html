@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Hangman</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+    <link rel="shortcut icon" type="image/x-icon" href="./images/hangman.png">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="row text-center d-flex justify-content-center">
+            <div classs="col-12">
+                <h1>Hangman <img height=50px width=50px class="grow" src="./images/hangman.png" /></h1>
+                <h1 class="badge1">Use the alphabet below to guess the word, or click hint to get a clue </h1>
+            </div>
+        </div>
+
+        <div class="wrapper row">
+            <div class="col-12">
+                <p class="badge4">The Chosen Category Is:</p>
+                <p id="catagoryName" class=" badge grow badge2"></p>
+                <div id="hold">
+                </div>
+                <div class="col-12 col-sm-12 col-md-12 d-flex justify-content-center">
+                    <p class="badge3 text-center" id="mylives"></p>
+                </div>
+
+                <canvas id="stickman">This Text will show if the Browser does NOT support HTML5 Canvas tag</canvas>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-4 col-sm-4 col-md-4 ">
+                            <div id="hint" class="btn  btn-lg grow">Hint</div>
+                        </div>
+                        <div class="col-4 col-sm-4 col-md-4 d-flex justify-content-center">
+                            <p id="clue"></p>
+                        </div>
+                        <div class="grow col-4 col-sm-4 col-md-4 ">
+                            <div id="reset" class="btn btn-lg">Play Again</div>
+                        </div>
+                    </div>
+                    <div class="btn1">
+                        <div id="buttons">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <p class="text-center rights">© 2021 <a href="https://github.com/pranjay-poddar">Pranjay-Poddar</a></p>
+    <audio id="myAudio">
+        <source src="./click.mp3" type="audio/ogg">
+      </audio>
+    <audio id="win">
+        <source src="./win.wav" type="audio/ogg">
+      </audio>
+    <audio id="lost">
+        <source src="./lost.wav" type="audio/ogg">
+      </audio>
+    <script src="./index.js"></script>
+    <script src='https://img1.wsimg.com/tcc/tcc_l.combined.1.0.6.min.js'></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+</body>
+<script>
+    'undefined' === typeof _trfq || (window._trfq = []);
+    'undefined' === typeof _trfd && (window._trfd = []), _trfd.push({
+            'tccl.baseHost': 'secureserver.net'
+        }), _trfd.push({
+            'ap': 'cpsh'
+        }, {
+            'server': 'a2plcpnl0301'
+        }) // Monitoring performance to make your website faster. If you want to opt-out, please contact web hosting support.
+</script>
+
+
+</html>

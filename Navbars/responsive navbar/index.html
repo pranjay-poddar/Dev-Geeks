@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navbar</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+</head>
+<body>
+    <nav>
+        <h1>HACKTOBERFEST</h1>
+        <ul class="navigation">
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#skills" class="nav-link">Admin</a></li>
+          <li><a href="#projects" class="nav-link">Repository</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+        <button class="burger-menu" id="burger-menu">
+          <ion-icon class="bars" name="menu-outline"></ion-icon>
+        </button>
+    </nav>
+    <script>
+        // Nav hamburgerburger selections
+        const burger = document.querySelector("#burger-menu");
+        const ul = document.querySelector("nav ul");
+        const nav = document.querySelector("nav");
+
+        burger.addEventListener("click", () => {
+        ul.classList.toggle("show");
+        });
+
+        // Close hamburger menu when a link is clicked
+        // Select nav links
+        const navLink = document.querySelectorAll(".nav-link");
+
+        navLink.forEach((link) =>
+        link.addEventListener("click", () => {
+            ul.classList.remove("show");
+          })
+        );
+
+    </script>
+
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+</html>

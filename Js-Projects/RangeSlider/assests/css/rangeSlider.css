@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Arvo&family=Rajdhani:wght@300;500&family=Signika+Negative&display=swap');
+
+body {
+    background-color: aliceblue;
+    margin: 0;
+}
+
+
+
+/* --------------------------------background area----------------------------------- */
+.bgimg {
+    width: 100%;
+    height: 100vh;
+    box-sizing: border-box;
+    max-height: max-content !important;
+    background: linear-gradient(-90deg, rgb(41, 1, 49) 70%, #02364a 70%);
+
+    background-color: #05daf6;
+    /* background-image: radial-gradient(#dcd322 0.5px, #001317 0.5px); */
+    background-size: 1px 100px;
+}
+
+/* ----------------------------------------------------------------- */
+
+
+/* -----------------------------------------centered container area------ ---------------------------------------- */
+
+.center {
+    text-align: center;
+}
+
+#parent {
+    display: inline-flex;
+    grid-template-columns: 40% 60%;
+}
+
+.container {
+    padding: 0px !important;
+}
+
+.cal {
+    margin: auto;
+    width: 60% !important;
+    height: max-content;
+    box-sizing: border-box;
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.619);
+
+    background-color: #fbfbfbb4;
+}
+
+@media (max-width: 576px) {
+    .header img {
+        height: 40px;
+        width: 270px;
+    }
+}
+
+
+/*  ---------------------------------------- forms----------------------------------------------- */
+h3 {
+    padding-bottom: 5px;
+    margin-top: 10px !important;
+    text-decoration: underline;
+    font-family: 'Arvo', serif;
+    font-family: 'Rajdhani', sans-serif;
+    font-family: 'Signika Negative', sans-serif;
+    color: #00100e !important;
+}
+
+.questions {
+    width: 100%;
+    padding: 10px;
+}
+
+
+/* ---------------------------------------- ---------------------------------------- */
+
+
+/* ------------------------------------slider area-------------------------------------------*/
+@import url("https://fonts.googleapis.com/css?family=Lato&display=swap");
+
+
+input {
+    border-radius: 25px !important;
+    background-color: #fbfbfb !important;
+    color: rgb(0, 0, 0) !important;
+}
+
+.rangeSlider {
+    display: flex;
+    justify-content: center;
+}
+
+.range-container {
+    width: 100%;
+}
+
+input[type='range'] {
+    width: 60%;
+    margin: 18px 0;
+    -webkit-appearance: none;
+}
+
+input[type='range']:focus {
+    outline: none;
+}
+
+input[type='range']+label {
+    background-color: #fff;
+    width: 57px;
+    padding: 1px 5px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    font-size: 15px !important;
+    color: #00100e;
+
+}
+
+/* slider bar */
+input[type='range']::-webkit-slider-runnable-track {
+    /* background-color: rgb(108, 254, 92); */
+    background-color: #53046a;
+    box-shadow: 1px 2px 1px #4b177674;
+    border-radius: 4px;
+    width: 60%;
+    height: 4px;
+    cursor: pointer;
+}
+
+input[type='range']::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    height: 14px;
+    width: 14px;
+    background: #fff;
+    border-radius: 50%;
+    border: 1px solid rgb(32, 27, 65);
+    margin-top: -7px;
+    cursor: pointer;
+}
+
+/* --------------------------------------------------------------------------------------------------- */

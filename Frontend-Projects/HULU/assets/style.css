@@ -1,0 +1,451 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Rubik', sans-serif;
+}
+header{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-bottom: 50px;
+    background-image: url("images/header.jpg");
+    background-repeat: no-repeat; 
+    background-size: cover; 
+    max-width: 100vw;  
+    box-sizing: border-box;
+}
+header::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 150px;
+    z-index: 1;
+    background: linear-gradient(
+        180deg,
+        rgba(0,0,0,0.76) 15.54%,
+        rgba(0,0,0,0.192) 60.23%
+    );
+}
+.login{
+    display: flex;
+    justify-content: end;
+    cursor: pointer;
+    padding: 15px;
+    font-size: 12px;
+    font-weight: 900; 
+    color: #fff;
+    z-index: 2;
+}
+
+.content{
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 15px;
+    color: #fff;
+}
+
+.title{
+    color: #00ed82;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 13px;
+    padding: 10px;
+}
+
+.logo{
+    width: 35%;
+    padding-bottom: 10px;
+}
+
+.heading1{
+    font-weight: bolder;
+    font-size: 20px;
+}
+.btn{
+    padding: 15px 20px;
+    border-radius: 5px;
+    border: none;
+    text-transform: uppercase;
+    outline: none;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+    font-size: 14px;
+    cursor: pointer;
+    color: #333;
+}
+.btn:hover{
+    opacity: 0.8;
+}
+.small{
+    font-size: 8px;
+}
+
+.one{
+    display: grid;
+    grid-template-columns: 2fr 4fr 2fr;
+    background-image: linear-gradient(to right, #0a232e , #1f4757);
+    gap: 30px;
+    color: #ccc;
+    align-items: center;
+    padding: 30px 40px;
+}
+.one img{
+    width: 100%;
+}
+.desc{
+    line-height: 25px;
+}
+.line1{
+    color: #00ed82;
+    font-size: 12px;
+    font-weight: bold;
+}
+.line2{
+    font-size: 24px;
+}
+.line3{
+    font-size: 10px;
+    text-decoration: underline;
+    color: #ccc;
+}
+.button{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    margin-left: auto;
+}
+.btn2{
+    padding: 10px 20px;
+    font-weight: bold;
+    background: none;
+    border-radius: 5px;
+    border: 2px solid white;
+    color: #fff;
+    width: 120px;
+    cursor: pointer;
+}
+.btn2:hover{
+    border-color: rgb(183, 181, 181);
+}
+.btndesc{
+    font-size: 10px;
+    text-decoration: underline;
+}
+.two{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #fff;
+    background-color: black;
+    padding: 30px;
+    /* gap: 15px; */
+}
+.twoHeading{
+    color: #00ed82;
+    font-size: 12px;
+    font-weight: 900;
+    padding-bottom: 10px;
+}
+.two h1{
+    font-size: 70px;
+    font-weight: bolder;
+    padding-bottom: 15px;
+    text-align: center;
+}
+.para1,.para2{
+    line-height: 24px;
+    font-weight: bold;
+}
+.para2{
+    padding-bottom: 15px;
+}
+.photos{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+.image{
+    padding : 20px;
+    position: relative;
+}
+.first,.second,.third,.fourth{
+    opacity: 0.5;
+    width: 100%;
+}
+.imgdesc{
+    position: absolute;
+    padding: 15px;
+    top: 5%;
+    z-index: 20;
+    font-weight: bolder;
+    font-size: 14px;
+}
+.big{
+    position: absolute;
+    padding: 15px;
+    top: 10%;
+    font-size: 24px;
+}
+
+.three{
+    background-color:  #151516;
+    color: #fff;
+    padding: 30px;
+}
+.wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px;
+    border: 5px solid #00ed82;
+    gap: 25px;
+}
+.three1{
+    font-size: 12px;
+    font-weight: bolder;
+    color: #00ed82;
+}
+.three2{
+    font-size: 70px;
+    font-weight: bolder;
+}
+.threedesc{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-weight: bold;
+    line-height: 30px;
+    font-size: 20px;
+}
+.three4{
+    text-transform: uppercase;
+    text-decoration: underline;
+    font-weight: bold;
+}
+.four{
+    background: url(images/live-sports.jpg) no-repeat center center / cover;
+    color: #fff;
+    position: relative;
+    height: 800px;
+}
+.fourwrapper{
+    position: absolute;
+    top: 190px;
+    left: 100px;
+    max-width: 550px;
+}
+.fourHeading{
+    font-weight: bolder;
+    font-size: 70px;
+    padding-bottom: 25px;
+}
+.fourdesc{
+    font-size: 16px;
+    line-height: 25px;
+    font-weight: bold;
+    padding-bottom: 20px;
+}
+.sportslogo{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 300px;
+}
+.sportlogo{
+    display: flex;
+    background-image: url(images/network-logo-bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 60px;
+    height: 60px;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+.sportlogo img{
+    width: 45px;
+}
+.references{
+    background-color:#ebedf2;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    gap: 25px;
+    padding: 40px 100px;
+    max-width: 1100px;
+    margin: auto;
+}
+.row1{
+    display: flex;
+    justify-content: space-between;
+}
+.brheading{
+    font-weight: bolder;
+    text-transform: uppercase;
+    padding-bottom: 10px;
+}
+.brdesc{
+    font-size: 14px;
+    line-height: 1.5;
+    color: #303030
+}
+.footerlogos{
+    display: flex;
+    justify-content: start;
+    gap: 25px;
+}
+.login2{
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(0,0,0,0.5);
+    z-index: 1;
+    height: 100%;
+    width: 100%;
+}
+.loginbox{
+    margin: 15% auto;
+    width: 400px;
+    height: 450px;
+    background: #fff;
+    color: #333;
+    position: relative;
+}
+.loginbody{
+    padding: 50px;
+}
+.loginheading{
+    font-weight: bold;
+    font-size: 26px;
+    padding-bottom: 15px;
+}
+.btn3{
+    margin-top: 40px;
+    background: #000;
+    color: white;
+    padding: 15px;
+    text-align: center;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    cursor:pointer;
+    width: 100%;
+}
+.loginfooter{
+    background-color: #f7f7f9;
+    color: #333;
+    padding: 20px 0;
+    border-top: 1px solid #eee;
+    text-align: center;
+}
+.loginfooter a{
+    color: steelblue;
+}
+.close{
+    position: absolute;
+    top:20px;
+    right:20px;
+    cursor:pointer;
+}
+.form1,.form2{
+    margin: 20px 0;
+}
+label{
+    display: block;
+    text-transform: uppercase;
+}
+input{
+    padding: 5px;
+    width: 100%;
+    height: 40px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+
+}
+
+@media (max-width: 1000px)
+{
+    .two .photos{
+        grid-template-columns: 1fr 1fr;
+    }
+    .one{
+        padding: 10px 20px;
+    }
+    .three2{
+        text-align: center;
+    }
+    .threedesc{
+        text-align: center;
+    }
+}
+
+
+@media (max-width : 700px)
+{
+    .content{
+        padding: 20px;
+    }
+    .content .para{
+        line-height: 1.5;
+    }
+    .one{
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 20px;
+    }
+    .one img{
+        width: 300px;
+        margin: auto;
+    }
+    .button{
+        justify-content: center;
+        margin: auto;
+    }
+    .two .wrap h1{
+        font-size: 50px;
+        text-align: center;
+    }
+    .two .para1, .two .para2{
+        font-size: 13px;
+    }
+    .two .photos{
+        grid-template-columns: 1fr;
+    }
+    .three2{
+        font-size: 40px;
+        text-align: center;
+    }
+    .threedesc{
+        font-size: 16px;
+    }
+    .threedesc p{
+        text-align: center;
+    }
+    .four{
+        background: url(images/live-sports-small.jpg) no-repeat center 
+        center;
+        background-size: cover;
+    }
+    .fourwrapper{
+        top: 50px;
+        left: 50px;
+        margin-top: 50px;
+    }
+    .references{
+        padding: 30px;
+    }
+    .row1{
+        flex-direction: column;
+    }
+    .brheading{
+        padding-top: 10px;
+    }
+}

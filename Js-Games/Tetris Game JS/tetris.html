@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+
+        content="Tetris Javascript | An ode to gaming nostalgia, falling tetriminos and that catchy theme tune.">
+
+    <meta name="keywords" content="tetris, javascript, tetriminos, game, gaming, nostalgia">
+
+    <link rel="stylesheet" href="style.css">
+
+    <title>Tetris</title>
+
+</head>
+
+
+
+<body >
+
+    <!-- navigation elements for User to access instruction, rules and scores-->
+
+    <nav class="navbar">
+
+        <div class="brand-logo">
+
+            <a href="index.html" aria-label="returns the user to the top of the home page">
+
+                <h2>Tetris </h2>
+
+            </a>
+
+        </div>
+
+        <a href="#" class="toggle-btn">
+
+            <span class="line"></span>
+
+            <span class="line"></span>
+
+            <span class="line"></span>
+
+        </a>
+
+        <div class="navbar-links">
+
+            <ul>
+
+                <li> <a href="index.html">Home</a></li>
+
+                <li> <a href="instructions.html">Instructions</a></li>
+
+                <li> <a class="active" href="tetris.html">Play Tetris</a></li>
+
+            </ul>
+
+        </div>
+
+    </nav>
+
+
+
+
+
+    <section class="gameArea">
+
+        <h2 hidden>main game grid area</h2>
+
+        <div class="panels">
+
+            <div class="box sidebox1">
+
+                <div class="box-content">
+
+                    <div class="score un-btn">Score : <span id="score">0</span> </div>
+
+                    <div class="score un-btn">Lines : <span id="lines">0</span> </div>
+
+                    <div class="score un-btn">Level : <span id="levels">0</span> </div>
+
+                    <button id="play" class=" score btn">Music Off </button>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="box">
+
+                <div class="box-content">
+
+                    <!-- manually creating tetris grid -->
+
+                    <div class="grid">
+
+                        <div></div>
+
+                        <div></div>
+
+                        <div></div>
+
+                        <div></div>
+
+                        <div></div>
+
+                        <div></div>
+
+                        <div></div>
+
+                        <div></div>
+
+                        <div></div>
+
+                        <div></div>
+
+                        <div></div>
+
+                        <div></div>
+
+                        <div></div>
+
+                        <div></div>
+
+                        <div></div>
+
+                        <div></div>
+
+                        <div></div>
+
+                        <div></div>
+
+                        <div></div>
+
+                        <div></div>
+
+                        <div></div>
+
+                        <div></div>
+
+                        <div></div>
+
+                        <div></div>
+
+                        <div></div>
+
+                        <div></div>
+
+                        <div></div>
+
+                        <div></div>
+
+                        <div></div>
+
+                        <div></div>
+
+                        <div></div>
+
+                        <div></div>
+
+                        <div></div>
+
+                        <div></div>
+
+                        <div></div>
+
+                        <div></div>
+
+                        <div></div>
+
+                        <div></div>
+
+                        <div></div>
+
+                        <div></div>
+
+                        <div></div>
+
+                        <div></div>
+
+                        <div></div>
+
+                        <div></div>
+
+                        <div></div>
+
+                        <div></div>
+
+                        <div></div>
+
+                        <div></div>
+
+                        <div></div>
+
+                        <div></div>
+
+                        <div></div>
+
+                        <div></div>
+
+                        <div></div>
+
+                        <div></div>
+
+                        <div></div>
+
+                        <div></div>
+
+                        <div></div>
+
+                        <div></div>
+
+                        <div></div>
+
+                        <div></div>
+
+                        <div></div>
+
+                        <div></div>
+
+                        <div></div>
+
+                        <div></div>
+
+                        <div></div>
+
+                        <div></div>
+
+                        <div></div>
+
+                        <div></div>
+
+                        <div></div>
+
+                        <div></div>
+
+                        <div></div>
+
+                        <div></div>
+
+                        <div></div>
+
+                        <div></div>
+
+                        <div></div>
+
+                        <div></div>
+
+                        <div></div>
+
+                        <div></div>
+
+                        <div></div>
+
+                        <div></div>
+
+                        <div></div>
+
+                        <div></div>
+
+                        <div></div>
+
+                        <div></div>
+
+                        <div></div>
+
+                        <div></div>
+
+                        <div></div>
+
+                        <div></div>
+
+                        <div></div>
+
+                        <div></div>
+
+                        <div></div>
+
+                        <div></div>
+
+                        <div></div>
+
+                        <div></div>
+
+                        <div></div>
+
+                        <div></div>
+
+                        <div></div>
+
+                        <div></div>
+
+                        <div></div>
+
+                        <div></div>
+
+                        <div></div>
+
+                        <div></div>
+
+                        <div></div>
+
+                        <div></div>
+
+                        <div></div>
+
+                        <div></div>
+
+                        <div></div>
+
+                        <div></div>
+
+                        <div></div>
+
+                        <div></div>
+
+                        <div></div>
+
+                        <div></div>
+
+                        <div></div>
+
+                        <div></div>
+
+                        <div></div>
+
+                        <div></div>
+
+                        <div></div>
+
+                        <div></div>
+
+                        <div></div>
+
+                        <div></div>
+
+                        <div></div>
+
+                        <div></div>
+
+                        <div></div>
+
+                        <div></div>
+
+                        <div></div>
+
+                        <div></div>
+
+                        <div></div>
+
+                        <div></div>
+
+                        <div></div>
+
+                        <div></div>
+
+                        <div></div>
+
+                        <div></div>
+
+                        <div></div>
+
+                        <div></div>
+
+                        <div></div>
+
+                        <div></div>
+
+                        <div></div>
+
+                        <div></div>
+
+                        <div></div>
+
+                        <div></div>
+
+                        <div></div>
+
+                        <div></div>
+
+                        <div></div>
+
+                        <div></div>
+
+                        <div></div>
+
+                        <div></div>
+
+                        <div></div>
+
+                        <div></div>
+
+                        <div></div>
+
+                        <div></div>
+
+                        <div></div>
+
+                        <div></div>
+
+                        <div></div>
+
+                        <div></div>
+
+                        <div></div>
+
+                        <div></div>
+
+                        <div></div>
+
+                        <div></div>
+
+                        <div></div>
+
+                        <div></div>
+
+                        <div></div>
+
+                        <div></div>
+
+                        <div></div>
+
+                        <div></div>
+
+                        <div></div>
+
+                        <div></div>
+
+                        <div></div>
+
+                        <div></div>
+
+                        <div></div>
+
+                        <div></div>
+
+                        <div></div>
+
+                        <div></div>
+
+                        <div></div>
+
+                        <div></div>
+
+                        <div></div>
+
+                        <div></div>
+
+                        <div></div>
+
+                        <div></div>
+
+                        <div></div>
+
+                        <div></div>
+
+                        <div></div>
+
+                        <div></div>
+
+                        <div></div>
+
+                        <div></div>
+
+                        <div></div>
+
+                        <div></div>
+
+                        <div></div>
+
+                        <div></div>
+
+                        <div></div>
+
+                        <div></div>
+
+                        <div></div>
+
+                        <div></div>
+
+                        <div></div>
+
+                        <div></div>
+
+                        <div></div>
+
+                        <div></div>
+
+                        <div></div>
+
+                        <div></div>
+
+                        <div></div>
+
+                        <div></div>
+
+                        <div class="taken"></div>
+
+                        <div class="taken"></div>
+
+                        <div class="taken"></div>
+
+                        <div class="taken"></div>
+
+                        <div class="taken"></div>
+
+                        <div class="taken"></div>
+
+                        <div class="taken"></div>
+
+                        <div class="taken"></div>
+
+                        <div class="taken"></div>
+
+                        <div class="taken"></div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="box sidebox2">
+
+                <div class="box-content">
+
+                    <div class="controls">
+
+
+
+                        <span class="keys"><button id="rotate" class="control-btn "
+
+                                aria-label="this button will Rotate the Tetrimino by 90 degrees">Rotate</button></span>
+
+
+
+
+
+                        <span class="keys"><button id="left" class="control-btn "
+
+                                aria-label="this button will move the Tetrimino to the Left">Left</button></span>
+
+                        <span class="keys"><button id="right" class="control-btn "
+
+                                aria-label="this button will move the Tetrimino to the Right">Right</button></span>
+
+
+
+
+
+                        <span class="keys"><button id="down" class="control-btn "
+
+                                aria-label="this button is will move the Tetrimino Down the game grid">Down</button></span>
+
+                    </div>
+
+                    <button id="start-button" class="btn " aria-label="this button will start and pause the game">Start
+
+                        Game</button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+
+
+
+     <!-- audio files and scripts for js and fontawesome -->
+
+    <audio src="assets/audio/Tetris-99-Main-Theme.mp3" id="music"
+
+        aria-label="theme song for the classic gameboy Tetris game">If you are seeing this, it is because your browser
+
+        does not support this audio element</audio>
+
+    <script src="script.js"></script>
+
+    <script src="https://kit.fontawesome.com/0fb38816a1.js" crossorigin="anonymous"></script>
+
+</body>
+
+
+
+</html>

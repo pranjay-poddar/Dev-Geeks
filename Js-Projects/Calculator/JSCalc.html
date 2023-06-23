@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Scientific Calculator </title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <link rel="stylesheet" href="JSCalc.css">
+
+</head>
+
+<body>
+
+    <div id="app">
+        <div class="calculator">
+            <button @click="changeModeEvent" class="toggle-button">
+            <div class="results">
+                <input class="input" v-model="current" />
+            </div>
+            <div class="mode" v-else>
+            <button class="button" @click="press">sin</button>
+            <button class="button" @click="press">cos</button>
+            <button class="button" @click="press">tan</button>
+            <button class="button" @click="press">C</button>
+            <button class="button" @click="press">DEL</button>
+            <button class="button" @click="press">x^</button>
+            <button class="button" @click="press">log</button>
+            <button class="button" @click="press">ln</button>
+            <button class="button" @click="press">e</button>
+            <button class="button" @click="press">rad</button>
+            <button class="button" @click="press">√</button>
+            <button class="button" @click="press">/</button>
+            <button class="button" @click="press">x²</button>
+            <button class="button" @click="press">x!</button>
+            <button class="button" @click="press">.</button>
+            <button class="button" @click="press">-</button>
+            <button class="button" @click="press">+</button>
+            <button class="button" @click="press">7</button>
+            <button class="button" @click="press">8</button>
+            <button class="button" @click="press">9</button>
+            <button class="button" @click="press">(</button>
+            <button class="button" @click="press">)</button>
+            <button class="button" @click="press">6</button>
+            <button class="button" @click="press">5</button>
+            <button class="button" @click="press">4</button>
+            <button class="button" @click="press">*</button>
+            <button class="button" @click="press">&#x003C0;</button>
+            <button class="button" @click="press">1</button>
+            <button class="button" @click="press">2</button>
+            <button class="button" @click="press">3</button>
+            <button class="button" @click="press">%</button>
+            <button class="button" @click="press">±</button>
+            <button class="button" @click="press">0</button>
+            <button class="button equal-sign" @click="press">=</button>
+        </div>
+    </div>
+    </div>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.3.4/vue.min.js'></script>
+    <script src="JSCalc.js"></script>
+
+</body>
+
+</html>

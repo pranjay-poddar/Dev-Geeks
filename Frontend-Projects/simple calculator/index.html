@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Simple Calculator</h1>
+    <div class="container">
+        <table border="1" cellspacing="0">
+            <tr>
+                <td colspan="4" id="inputLabel">0</td>
+            </tr>
+            <tr>
+                <td colspan="3"><button onclick="pushBtn(this);">AC</button></td>
+                <td><button class="key" data-key="111" onclick="pushBtn(this);">/</button></td>
+            </tr>
+            <tr>
+                <td><button class="key" data-key="103" data-key1="55" onclick="pushBtn(this);">7</button></td>
+                <td><button class="key" data-key="104" data-key1="56" onclick="pushBtn(this);">8</button></td>
+                <td><button class="key" data-key="105" data-key1="57" onclick="pushBtn(this);">9</button></td>
+                <td><button class="key" data-key="106" data-operator="*" onclick="pushBtn(this);">*</button></td>
+            </tr>
+            <tr>
+                <td><button class="key" data-key="100" data-key1="52" onclick="pushBtn(this);">4</button></td>
+                <td><button class="key" data-key="101" data-key1="53"  onclick="pushBtn(this);">5</button></td>
+                <td><button class="key" data-key="102" data-key1="54" onclick="pushBtn(this);">6</button></td>
+                <td><button class="key" data-key="109" data-operator="-" onclick="pushBtn(this);">-</button></td>
+            </tr>
+            <tr>
+                <td><button class="key" data-key="97" data-key1="49" onclick="pushBtn(this);">1</button></td>
+                <td><button class="key" data-key="98" data-key1="50" onclick="pushBtn(this);">2</button></td>
+                <td><button class="key" data-key="99" data-key1="51" onclick="pushBtn(this);">3</button></td>
+                <td><button class="key" data-key="107" data-operator="+" onclick="pushBtn(this);">+</button></td>
+            </tr>
+            <tr>
+                <td colspan="2"><button class="key" data-key="96" data-key1="48" onclick="pushBtn(this);">0</button></td>
+                <td><button class="key" data-key="110" data-operator="." onclick="pushBtn(this);">.</button></td>
+                <td><button class="key" data-key="13" onclick="pushBtn(this);">=</button></td>
+            </tr>
+        </table>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
