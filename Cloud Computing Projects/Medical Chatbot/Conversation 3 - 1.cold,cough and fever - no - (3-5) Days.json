@@ -1,0 +1,83 @@
+{
+  "id": "0908f4a2-880c-44c6-85c9-90466e6e1f7a",
+  "name": "Conversation 3 - 1.cold,cough and fever - no - (3-5) Days",
+  "auto": true,
+  "condition": "",
+  "conditionalFollowupEvents": [],
+  "conditionalResponses": [],
+  "context": [
+    "Conversation3-1coldcoughandfever-no-followup"
+  ],
+  "contexts": [
+    "Conversation3-1coldcoughandfever-no-followup"
+  ],
+  "endInteraction": false,
+  "events": [],
+  "fallbackIntent": false,
+  "liveAgentHandoff": false,
+  "parentId": "b484f591-8be2-44fe-9e7c-f4b0659b252d",
+  "followUpIntents": [],
+  "priority": 500000,
+  "responses": [
+    {
+      "action": "Conversation3.Conversation3-custom.Conversation3-1coldcoughandfever-custom-2.Conversation3-1coldcoughandfever-no-custom",
+      "affectedContexts": [
+        {
+          "name": "Conversation3-1coldcoughandfever-no-3-5Days-followup",
+          "lifespan": 2
+        }
+      ],
+      "parameters": [],
+      "defaultResponsePlatforms": {},
+      "messages": [
+        {
+          "type": "message",
+          "condition": "",
+          "speech": [
+            "Select the level of your fever"
+          ]
+        },
+        {
+          "type": "message",
+          "condition": "",
+          "speech": [
+            "1.High"
+          ]
+        },
+        {
+          "type": "message",
+          "condition": "",
+          "speech": [
+            "2.Mid"
+          ]
+        },
+        {
+          "type": "message",
+          "condition": "",
+          "speech": [
+            "3.Low"
+          ]
+        }
+      ],
+      "resetContexts": false
+    }
+  ],
+  "rootParentId": "4ff6d6f4-51ce-40cc-bea4-977e35b5b1e4",
+  "templates": [],
+  "userSays": [
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "2",
+          "userDefined": false
+        }
+      ],
+      "count": 0,
+      "id": "d3b96708-1b66-4552-b45a-64078f66f6b4",
+      "updated": null
+    }
+  ],
+  "webhookForSlotFilling": false,
+  "webhookUsed": false
+}

@@ -1,0 +1,71 @@
+{
+  "id": "f0265a0f-e446-41fb-a411-0f6ac3da5da6",
+  "name": "Conversation 3 - 6.Only Headache",
+  "auto": true,
+  "condition": "",
+  "conditionalFollowupEvents": [],
+  "conditionalResponses": [],
+  "context": [
+    "Conversation3-followup"
+  ],
+  "contexts": [
+    "Conversation3-followup"
+  ],
+  "endInteraction": false,
+  "events": [],
+  "fallbackIntent": false,
+  "liveAgentHandoff": false,
+  "parentId": "4ff6d6f4-51ce-40cc-bea4-977e35b5b1e4",
+  "followUpIntents": [],
+  "priority": 500000,
+  "responses": [
+    {
+      "action": "Conversation3.Conversation3-custom",
+      "affectedContexts": [],
+      "parameters": [],
+      "defaultResponsePlatforms": {},
+      "messages": [
+        {
+          "type": "message",
+          "condition": "",
+          "speech": [
+            "Please take the medicines which i have mentioned."
+          ]
+        },
+        {
+          "type": "message",
+          "condition": "",
+          "speech": [
+            "1.NarcoginFotan (1-dose per day)."
+          ]
+        },
+        {
+          "type": "message",
+          "condition": "",
+          "speech": [
+            "After taking these medicines if you are still having headache then please consult to your doctor."
+          ]
+        }
+      ],
+      "resetContexts": false
+    }
+  ],
+  "rootParentId": "4ff6d6f4-51ce-40cc-bea4-977e35b5b1e4",
+  "templates": [],
+  "userSays": [
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "6",
+          "userDefined": false
+        }
+      ],
+      "count": 0,
+      "id": "169af551-78c8-490a-b93e-c83aac3f7ff3",
+      "updated": null
+    }
+  ],
+  "webhookForSlotFilling": false,
+  "webhookUsed": false
+}
