@@ -769,6 +769,7 @@ Happy Coding! -->
 <td align="center"> 254.</td>
 <td align="center"><a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Js-Games/Mexico Escape">Mexico Escape</a></td>
 <td align="center"><a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Js-Games/Spider_Man_Go">Spider Man Go</a></td>
+<td align="center"><a href="https://github.com/pranjay-poddar/Dev-Geeks/Repository_web_page/Linkedin_Clone">Linkedin Clone</a></td>
 </tr>
 </table>
 
