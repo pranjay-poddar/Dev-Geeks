@@ -1,0 +1,79 @@
+{
+  "id": "2bcd6cce-3847-4997-8ed8-0bfd43620662",
+  "name": "Conversation 3 - 2.only loose motion - yes",
+  "auto": true,
+  "condition": "",
+  "conditionalFollowupEvents": [],
+  "conditionalResponses": [],
+  "context": [
+    "Conversation3-2onlyloosemotion-followup"
+  ],
+  "contexts": [
+    "Conversation3-2onlyloosemotion-followup"
+  ],
+  "endInteraction": false,
+  "events": [],
+  "fallbackIntent": false,
+  "liveAgentHandoff": false,
+  "parentId": "a9f18bac-da08-4ee3-9832-fbf49c8c6dc5",
+  "followUpIntents": [],
+  "priority": 500000,
+  "responses": [
+    {
+      "action": "Conversation3.Conversation3-custom.Conversation3-2onlyloosemotion-custom",
+      "affectedContexts": [],
+      "parameters": [],
+      "defaultResponsePlatforms": {},
+      "messages": [
+        {
+          "type": "message",
+          "condition": "",
+          "speech": [
+            "Okay I have found that your suffering from loose motion frequently."
+          ]
+        },
+        {
+          "type": "message",
+          "condition": "",
+          "speech": [
+            "Please take the medicines which i have mentioned below.",
+            "1.DX Entraquinol - 1 dose per day"
+          ]
+        },
+        {
+          "type": "message",
+          "condition": "",
+          "speech": [
+            "Above medicine course is for 2 days and please avoid eating junk food and oily food and drink more water in a day to avoid dehydration."
+          ]
+        },
+        {
+          "type": "message",
+          "condition": "",
+          "speech": [
+            "If any improvement is not seen then please consult the doctor."
+          ]
+        }
+      ],
+      "resetContexts": false
+    }
+  ],
+  "rootParentId": "4ff6d6f4-51ce-40cc-bea4-977e35b5b1e4",
+  "templates": [],
+  "userSays": [
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "1",
+          "userDefined": false
+        }
+      ],
+      "count": 0,
+      "id": "da659a12-8eec-42fc-9d7e-12eada20069f",
+      "updated": null
+    }
+  ],
+  "webhookForSlotFilling": false,
+  "webhookUsed": false
+}
