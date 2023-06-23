@@ -448,7 +448,7 @@ Happy Coding! -->
 <td align="center"> 138.</td>
 <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Js-Projects/Text%20to%20speech"> Text to speech  </a></td>
 <td align="center"> 139.</td>
-<td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/blob/main/Python%20Projects/Tic%20Tac%20Toe.py"> Tic Tac Toe.py </a></td>
+<td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/blob/main/Python%20Projects/Tic%20Tac%20toe/Tic%20Tac%20Toe.py"> Tic Tac Toe.py </a></td>
 <td align="center"> 140.</td>
 <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Js-Games/Tic-Tac-Toe">  Tic-Tac-Toe </a></td>
 </tr>
@@ -501,7 +501,7 @@ Happy Coding! -->
 <td align="center"> 157.</td>
 <td align="center"> <a href="https://github.com/sumitkr2000/BMI_Calculator/tree/main/bmi-calculator">BMI Calculator</a></td>
 <td align="center"> 158.</td>
-<td align="center"> <a href="https://github.com/Noothan-am/Dice-game-/tree/main/dicegame">  Dice game</a></td>
+<td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Js-Games/dice%20game">  Dice game</a></td>
 <td align="center"> 159.</td>
 <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Js-Games/Typer">  Typing Game</a></td>
 <td align="center"> 160.</td>
@@ -619,7 +619,7 @@ Happy Coding! -->
 
 <tr align="center">
 <td align="center"> 201.</td>
-<td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Js-Games/dicegame"> Dice Game </a></td>
+<td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Js-Games/dice%20game"> Dice Game </a></td>
 <td align="center"> 202.</td>
 <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/React-JS%20Projects/Music_App/my-app"> Music Player App </a></td>
 <td align="center"> 203.</td>
@@ -753,7 +753,7 @@ Happy Coding! -->
 <td align="center"><a href="https://github.com/Swapnil-2503/Dev-Geeks/tree/guiTicTacToe/Java%20Projects/Gui%20TocTacToe">GUI TicTacToe</a></td>
 <td align="center"> 248.</td>
 <td align="center"><a href="https://github.com/Swapnil-2503/Dev-Geeks/tree/guiTicTacToe/Java%20Projects/Number%20Guesssing%20Game%20Gui">Number Guessing Game Gui</a></td>
-  <td align="center"> 249.</td>
+<td align="center"> 249.</td>
 <td align="center"><a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Js-Games/ChessGrand">ChessGrand</a></td>
 </tr>
 
@@ -761,7 +761,13 @@ Happy Coding! -->
 <td align="center"> 250.</td>
 <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Frontend-Projects/VegetableMarketplace"> VegetableMarketplace </a></td>
 <td align="center"> 251.</td>
+<td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Frontend-Projects/Hyundai_Clone"> Hyundai Clone </a></td>
+<td align="center"> 252.</td>
+<td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Frontend-Projects/VegetableMarketplace"> VegetableMarketplace </a></td>
+<td align="center"> 253.</td>
 <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Frontend-Projects/QrComponent"> QrComponent </a></td>
+<td align="center"> 254.</td>
+<td align="center"><a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Js-Games/Mexico Escape">Mexico Escape</a></td>
 </tr>
 </table>
 

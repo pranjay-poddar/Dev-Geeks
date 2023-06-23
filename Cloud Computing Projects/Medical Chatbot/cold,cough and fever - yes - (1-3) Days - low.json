@@ -1,0 +1,108 @@
+{
+  "id": "cb15beca-c259-4929-8660-a99677e2eb1d",
+  "name": "cold,cough and fever - yes - (1-3) Days - low",
+  "auto": true,
+  "condition": "",
+  "conditionalFollowupEvents": [],
+  "conditionalResponses": [],
+  "context": [
+    "Conversation3-1coldcoughandfever-yes-1-3Days-followup",
+    "coldcoughandfever-yes-1-3Days-followup"
+  ],
+  "contexts": [
+    "Conversation3-1coldcoughandfever-yes-1-3Days-followup",
+    "coldcoughandfever-yes-1-3Days-followup"
+  ],
+  "endInteraction": false,
+  "events": [],
+  "fallbackIntent": false,
+  "liveAgentHandoff": false,
+  "parentId": "42fdf8c9-6831-4fdf-96d2-a17f20fd42b5",
+  "followUpIntents": [],
+  "priority": 500000,
+  "responses": [
+    {
+      "action": "Conversation3.Conversation3-custom.Conversation3-1coldcoughandfever-custom.Conversation3-1coldcoughandfever-yes-custom-2.coldcoughandfever-yes-1-3Days-custom-2",
+      "affectedContexts": [],
+      "parameters": [],
+      "defaultResponsePlatforms": {},
+      "messages": [
+        {
+          "type": "message",
+          "condition": "",
+          "speech": [
+            "As you have low fever we suggest you to follow up the home remedies instead of using medicines."
+          ]
+        },
+        {
+          "type": "message",
+          "condition": "",
+          "speech": [
+            "1.Avoid consuming oily food and junk food."
+          ]
+        },
+        {
+          "type": "message",
+          "condition": "",
+          "speech": [
+            "2.Drink and gargle with hot water."
+          ]
+        },
+        {
+          "type": "message",
+          "condition": "",
+          "speech": [
+            "3.Avoid sugar in your meal."
+          ]
+        },
+        {
+          "type": "message",
+          "condition": "",
+          "speech": [
+            "4.Have enough sleep."
+          ]
+        },
+        {
+          "type": "message",
+          "condition": "",
+          "speech": [
+            "5.Consume healthy food, green vegetables and fruits such as Apple, banana etc."
+          ]
+        },
+        {
+          "type": "message",
+          "condition": "",
+          "speech": [
+            "6.Do regular exercise and perform yoga."
+          ]
+        },
+        {
+          "type": "message",
+          "condition": "",
+          "speech": [
+            "If you find any improvement then contact me after 2-3 days."
+          ]
+        }
+      ],
+      "resetContexts": false
+    }
+  ],
+  "rootParentId": "4ff6d6f4-51ce-40cc-bea4-977e35b5b1e4",
+  "templates": [],
+  "userSays": [
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "3",
+          "userDefined": false
+        }
+      ],
+      "count": 0,
+      "id": "e45378c3-8c5d-498c-a56b-d76cf8241f51",
+      "updated": null
+    }
+  ],
+  "webhookForSlotFilling": false,
+  "webhookUsed": false
+}

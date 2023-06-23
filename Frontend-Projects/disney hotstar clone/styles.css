@@ -368,7 +368,7 @@ body {
 .login_form input {
   padding: 12px;
   margin-bottom: 25px;
-  width: 100%;
+  width:100%;
   border: none;
   border-radius: 8px;
   box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset,
@@ -393,7 +393,8 @@ body {
   box-shadow: inset -3px -3px 9px rgba(255, 255, 255, 0.25),
     2px 19px 31px rgba(0, 0, 0, 0.2);
   border-radius: 14px;
-  margin-left: 130px;
+  margin-left: 140px;
+  margin-top: 11px;
   font-weight: bold;
   font-size: 16px;
   border: 0;
@@ -408,4 +409,35 @@ body {
     rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px,
     rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px,
     rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+
+/* ....................................SignUp page css .................................... */
+.signUp-form{
+  color: #fff;
+  height: 500px;
+  width: 600px;
+  box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px,
+    rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px,
+    rgba(0, 0, 0, 0.09) 0px 32px 16px;
+  background-color: #4f6789;
+  border-radius: 10px;
+  background: linear-gradient(130deg, #27374d, #4f6789, #475c79, #475c7a);
+
+}
+.form-group{
+  margin-left: 100px;
+  margin-right: 100px;
+}
+.form-group input {
+  padding: 12px;
+  margin-bottom: 10px;
+  width: 100%;
+  border: none;
+  border-radius: 8px;
+  box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset,
+    rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
+}
+.redirect_signup{
+  margin-left: 150px;
+  padding: 30px;
 }
