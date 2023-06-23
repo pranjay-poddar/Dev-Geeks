@@ -1,0 +1,343 @@
+{
+  "id": "3bd0a371-2f2f-4f1a-a340-9be03b316247",
+  "name": "Conversation 1",
+  "auto": true,
+  "condition": "",
+  "conditionalFollowupEvents": [],
+  "conditionalResponses": [],
+  "context": [],
+  "contexts": [],
+  "endInteraction": false,
+  "events": [],
+  "fallbackIntent": false,
+  "liveAgentHandoff": false,
+  "parentId": null,
+  "followUpIntents": [],
+  "priority": 500000,
+  "responses": [
+    {
+      "action": "",
+      "affectedContexts": [
+        {
+          "name": "Conversation1-followup",
+          "lifespan": 2
+        },
+        {
+          "name": "Conversation1-followup-2",
+          "lifespan": 2
+        }
+      ],
+      "parameters": [
+        {
+          "noInputPromptMessages": [],
+          "noMatchPromptMessages": [],
+          "promptMessages": [],
+          "defaultValue": "",
+          "name": "health",
+          "dataType": "@Health",
+          "isList": false,
+          "required": false,
+          "prompts": [],
+          "value": "$health",
+          "outputDialogContexts": []
+        },
+        {
+          "noInputPromptMessages": [],
+          "noMatchPromptMessages": [],
+          "promptMessages": [],
+          "defaultValue": "",
+          "name": "hp",
+          "dataType": "@hp",
+          "isList": false,
+          "required": false,
+          "prompts": [],
+          "value": "$hp",
+          "outputDialogContexts": []
+        },
+        {
+          "noInputPromptMessages": [],
+          "noMatchPromptMessages": [],
+          "promptMessages": [],
+          "defaultValue": "",
+          "name": "hp2",
+          "dataType": "@hp2",
+          "isList": false,
+          "required": false,
+          "prompts": [],
+          "value": "$hp2",
+          "outputDialogContexts": []
+        },
+        {
+          "noInputPromptMessages": [],
+          "noMatchPromptMessages": [],
+          "promptMessages": [],
+          "defaultValue": "",
+          "name": "Positive",
+          "dataType": "@Positive",
+          "isList": false,
+          "required": false,
+          "prompts": [],
+          "value": "$Positive",
+          "outputDialogContexts": []
+        }
+      ],
+      "defaultResponsePlatforms": {},
+      "messages": [
+        {
+          "type": "message",
+          "condition": "",
+          "speech": [
+            "okay!! so i am confirmed that you are $health",
+            "okay!! so i am confirmed that you are $hp",
+            "Alright! so i am confirmed that you are having $hp2",
+            "Okay i am happy that you are $Positive so stay healthy and eat healthy and have a nice day."
+          ]
+        },
+        {
+          "type": "message",
+          "condition": "",
+          "speech": [
+            "If you are facing any issue in your conversation then you can restart the conversation by sending \"hi\" to the bot."
+          ]
+        },
+        {
+          "type": "message",
+          "condition": "",
+          "speech": [
+            "Please answer the question."
+          ]
+        },
+        {
+          "type": "message",
+          "condition": "",
+          "speech": [
+            "From what diseases are you suffering?"
+          ]
+        }
+      ],
+      "resetContexts": false
+    }
+  ],
+  "rootParentId": null,
+  "templates": [],
+  "userSays": [
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "not well",
+          "userDefined": true,
+          "alias": "health",
+          "meta": "@Health"
+        }
+      ],
+      "count": 0,
+      "id": "23a2a6c3-b976-4306-98bc-4ebac5603d3f",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "well",
+          "userDefined": true,
+          "alias": "Positive",
+          "meta": "@Positive"
+        }
+      ],
+      "count": 0,
+      "id": "a1ed40a6-1eb2-40d5-8cee-6e52e90ce8ee",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "very well",
+          "userDefined": true,
+          "alias": "Positive",
+          "meta": "@Positive"
+        }
+      ],
+      "count": 0,
+      "id": "8e17378d-a622-4a4d-9abf-6e194abc4ac2",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "healthy",
+          "userDefined": true,
+          "alias": "Positive",
+          "meta": "@Positive"
+        }
+      ],
+      "count": 0,
+      "id": "94d40934-6fb7-4422-a0a5-19cd346ba9d7",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "very good",
+          "userDefined": true,
+          "alias": "Positive",
+          "meta": "@Positive"
+        }
+      ],
+      "count": 0,
+      "id": "ae25503c-ed54-4df8-8276-c5b9c4b26d7c",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "good",
+          "userDefined": true,
+          "alias": "Positive",
+          "meta": "@Positive"
+        }
+      ],
+      "count": 0,
+      "id": "51ae85cb-1b03-4df7-b9f5-a663926a7a47",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "fine",
+          "userDefined": true,
+          "alias": "Positive",
+          "meta": "@Positive"
+        }
+      ],
+      "count": 0,
+      "id": "72801e56-ff47-4053-9bcb-3213e2180da2",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "unwell",
+          "userDefined": false,
+          "alias": "health",
+          "meta": "@Health"
+        }
+      ],
+      "count": 0,
+      "id": "390c0621-a2cf-4a45-a529-6479a540ec2d",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "i am having ",
+          "userDefined": false
+        },
+        {
+          "text": "sickness",
+          "userDefined": false,
+          "alias": "hp2",
+          "meta": "@hp2"
+        }
+      ],
+      "count": 0,
+      "id": "94bb03c3-8616-4720-8e39-bc7e3d57f0f4",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "i am having ",
+          "userDefined": false
+        },
+        {
+          "text": "weakness",
+          "userDefined": false,
+          "alias": "hp2",
+          "meta": "@hp2"
+        }
+      ],
+      "count": 0,
+      "id": "c07ac517-d647-46c7-8e88-a839a843df79",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "i am ",
+          "userDefined": false
+        },
+        {
+          "text": "not feeling good",
+          "userDefined": false,
+          "alias": "hp",
+          "meta": "@hp"
+        }
+      ],
+      "count": 0,
+      "id": "9a47240f-9ab1-4a8c-8a4b-384b1b353ae6",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "weakness",
+          "userDefined": false,
+          "alias": "hp2",
+          "meta": "@hp2"
+        }
+      ],
+      "count": 0,
+      "id": "5eacbb4f-bf1e-47a5-a3ef-bb6ecaac2923",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "i am ",
+          "userDefined": false
+        },
+        {
+          "text": "weak",
+          "userDefined": false,
+          "alias": "health",
+          "meta": "@Health"
+        }
+      ],
+      "count": 0,
+      "id": "967df1e5-809b-4500-911e-c4d20009bc12",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "i am ",
+          "userDefined": false
+        },
+        {
+          "text": "sick",
+          "userDefined": true,
+          "alias": "health",
+          "meta": "@Health"
+        }
+      ],
+      "count": 0,
+      "id": "9e47d377-c080-4602-96e6-bea794f29442",
+      "updated": null
+    }
+  ],
+  "webhookForSlotFilling": false,
+  "webhookUsed": false
+}
