@@ -50,6 +50,7 @@
         //If no errors are present, proceed further to retrieve the data from database!
         if(empty($emailErr) && empty($pwdErr))
         {
+            //user_details is the table name
             $sql = sprintf("SELECT * FROM user_details WHERE email = '%s'", $mysqli->real_escape_string($email));
 
             //query the database
