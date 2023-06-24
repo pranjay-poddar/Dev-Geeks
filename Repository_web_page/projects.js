@@ -1,10 +1,13 @@
 const projects = [
+    // ========================================
+    // ===========ANGULAR JS PROJECTS==========
+    // ========================================
     {
         // ANGULAR ROUTE
         "title":"angular-route",
         "tags":["AngularJS" , "CSS" , "JavaScript" ],
         "description":"This is a simple angular route, an implementation of AngularJS",
-        "github-link": "https://github.com/",
+        "github-link": "https://github.com/arcVaishali/Dev-Geeks/tree/search-bar/AngularJS%20Projects/angular-route",
         "project-link":"AngularJS Projects/angular-route"
     },
     {
@@ -12,7 +15,7 @@ const projects = [
         "title":"TODO",
         "tags":["AngularJS" , "HTML" ,"CSS" , "JavaScript" ],
         "description":"This is a simple TODO, an implementation of AngularJS",
-        "github-link": "https://github.com/",
+        "github-link": "https://github.com/arcVaishali/Dev-Geeks/tree/search-bar/AngularJS%20Projects/TODO",
         "project-link":"AngularJS Projects/TODO"
     },
     {
@@ -20,15 +23,18 @@ const projects = [
         "title":"todo-list",
         "tags":["AngularJS" , "HTML" ,"CSS" , "JavaScript" ],
         "description":"This is a simple todo-list, an implementation of AngularJS",
-        "github-link": "https://github.com/",
+        "github-link": "https://github.com/arcVaishali/Dev-Geeks/tree/search-bar/AngularJS%20Projects/todo-list",
         "project-link":"AngularJS Projects/todo-list"
     },
+    // ==============================================
+    // ============== ANIMATIONS CSS ================
+    // ==============================================
     {
         // 3D ROTATING CUBE
         "title":"3D Rotating Cube",
         "tags":["animations-CSS" , "HTML" ,"CSS" , "JavaScript" ],
         "description":"This is a simple 3d Roatating Cube, an implementation of AngularJS",
-        "github-link": "https://github.com/",
+        "github-link": "https://github.com/arcVaishali/Dev-Geeks/tree/search-bar/Animations-CSS/3D%20rotating%20cube",
         "project-link":"Animations-CSS/3D rotating cube/index.html"
     },
     {
@@ -36,7 +42,7 @@ const projects = [
         "title":"Animated Coffee Machine",
         "tags":["Animations-CSS" , "HTML" ,"CSS" , "JavaScript" ],
         "description":"This is a simple TODO, an implementation of Animations CSS",
-        "github-link": "https://github.com/",
+        "github-link": "https://github.com/arcVaishali/Dev-Geeks/tree/search-bar/Animations-CSS/3D%20rotating%20cube",
         "project-link":"Animations-CSS/Aimated_Coffe_Machine/index.html"
     },
     {
@@ -44,7 +50,7 @@ const projects = [
         "title":"Bulbasaur Button",
         "tags":["Animations-CSS" , "HTML" ,"CSS" , "JavaScript" ],
         "description":"This is a simple Bulbasaur Button, an implementation of Animations CSS",
-        "github-link": "https://github.com/",
+        "github-link": "https://github.com/arcVaishali/Dev-Geeks/tree/search-bar/Animations-CSS/Animated_Coffee_Machine",
         "project-link":"Animations-CSS/Bulbasaur-Button/index.html"
     },
     {
@@ -52,7 +58,7 @@ const projects = [
         "title":"Camera Shuuter",
         "tags":["Animations-CSS" , "HTML" ,"CSS" , "JavaScript" ],
         "description":"This is a simple TODO, an implementation of AngularJS",
-        "github-link": "https://github.com/",
+        "github-link": "https://github.com/arcVaishali/Dev-Geeks/tree/search-bar/Animations-CSS/Camera%20Shutter",
         "project-link":"Animations-CSS/Camera Shutter/camera.html"
     },
     {
@@ -60,7 +66,7 @@ const projects = [
         "title":"Card Flip Animation",
         "tags":["Animations-CSS" , "HTML" ,"CSS" , "JavaScript" ],
         "description":"This is a simple TODO, an implementation of Animations-CSS",
-        "github-link": "https://github.com/",
+        "github-link": "https://github.com/arcVaishali/Dev-Geeks/tree/search-bar/Animations-CSS/card-flip%20animation",
         "project-link":"Animations-CSS/card-flip animation/index.html"
     },
     {
@@ -68,7 +74,7 @@ const projects = [
         "title":"Carousel",
         "tags":["Animations-CSS" , "HTML" ,"CSS" , "JavaScript" ],
         "description":"This is a simple TODO, an implementation of Animations-CSS",
-        "github-link": "https://github.com/",
+        "github-link": "https://github.com/arcVaishali/Dev-Geeks/tree/search-bar/Animations-CSS/carousel",
         "project-link":"Animations-CSS/carousel/carousel.html"
     },
     {
@@ -76,7 +82,7 @@ const projects = [
         "title":"Countdown Animations",
         "tags":["Animations-CSS" , "HTML" ,"CSS" , "JavaScript" ],
         "description":"This is a simple TODO, an implementation of Animations-CSS",
-        "github-link": "https://github.com/",
+        "github-link": "https://github.com/arcVaishali/Dev-Geeks/tree/search-bar/Animations-CSS/Countdown_Animation",
         "project-link":"Animations-CSS/Countdown_Animation/index.html"
     },
     {
@@ -84,7 +90,7 @@ const projects = [
         "title":"CSS Heart Beating Animation",
         "tags":["Animations-CSS" , "HTML" ,"CSS" , "JavaScript" ],
         "description":"This is a simple Heart beating animation, an implementation of Animations-CSS",
-        "github-link": "https://github.com/",
+        "github-link": "https://github.com/arcVaishali/Dev-Geeks/tree/search-bar/Animations-CSS/css-heart-beating-animation",
         "project-link":"Animations-CSS/css-heart-beating-animation/index.html"
     },
     {
@@ -92,7 +98,7 @@ const projects = [
         "title":"Curved Carousel",
         "tags":["Animations-CSS" , "HTML" ,"CSS" , "JavaScript" ],
         "description":"This is an implementation of Curved Carousel",
-        "github-link": "https://github.com/",
+        "github-link": "https://github.com/arcVaishali/Dev-Geeks/tree/search-bar/Animations-CSS/Curved%20Carousel",
         "project-link":"Animations-CSS/Curved Carousel/index.html"
     },
     {
@@ -100,7 +106,7 @@ const projects = [
         "title":"Distortion",
         "tags":["Animations-CSS" , "HTML" ,"CSS" , "JavaScript" ],
         "description":"This is an implementation of Animations-CSS",
-        "github-link": "https://github.com/",
+        "github-link": "https://github.com/arcVaishali/Dev-Geeks/tree/search-bar/Animations-CSS/Distortion",
         "project-link":"Animations-CSS/Distortion/index.html"
     },
     {
@@ -108,7 +114,7 @@ const projects = [
         "title":"Fingerprint Scanning Animation",
         "tags":["Animations-CSS" , "HTML" ,"CSS" , "JavaScript" ],
         "description":"This is a simple fingerprint scanning animation, an implementation of Animations-CSS",
-        "github-link": "https://github.com/",
+        "github-link": "https://github.com/arcVaishali/Dev-Geeks/tree/search-bar/Animations-CSS/fingerprint%20scanning%20animation",
         "project-link":"Animations-CSS/fingerprint scanning animation/index.html"
     },
     {
@@ -116,7 +122,7 @@ const projects = [
         "title":"Glowing Text Animation",
         "tags":["Animations-CSS" , "HTML" ,"CSS" , "JavaScript" ],
         "description":"This is a simple Glowing Text animation, an implementation of Animations-CSS",
-        "github-link": "https://github.com/",
+        "github-link": "https://github.com/arcVaishali/Dev-Geeks/tree/search-bar/Animations-CSS/glowing-text-animation",
         "project-link":"Animations-CSS/glowing-text-animation/index.html"
     },
     {
@@ -124,7 +130,7 @@ const projects = [
         "title":"Graduient Change Animation",
         "tags":["Animations-CSS" , "HTML" ,"CSS" , "JavaScript" ],
         "description":"This is a simple Gradient Change animation, an implementation of Animations-CSS",
-        "github-link": "https://github.com/",
+        "github-link": "https://github.com/arcVaishali/Dev-Geeks/tree/search-bar/Animations-CSS/Gradient-change",
         "project-link":"Animations-CSS/Gradient-change/index.html"
     },
     {
@@ -132,7 +138,7 @@ const projects = [
         "title":"Image Overlay Animation",
         "tags":["Animations-CSS" , "HTML" ,"CSS" , "JavaScript" ],
         "description":"This is a simple Image Overlay animation, an implementation of Animations-CSS",
-        "github-link": "https://github.com/",
+        "github-link": "https://github.com/arcVaishali/Dev-Geeks/tree/search-bar/Animations-CSS/image-overlay-animation",
         "project-link":"Animations-CSS/image-overlay-animation/index.html"
     },
     {
@@ -140,7 +146,7 @@ const projects = [
         "title":"Newton Bulb Animation",
         "tags":["Animations-CSS" , "HTML" ,"CSS" , "JavaScript" ],
         "description":"This is a simple Newton Bulb animation, an implementation of Animations-CSS",
-        "github-link": "https://github.com/",
+        "github-link": "https://github.com/arcVaishali/Dev-Geeks/tree/search-bar/Animations-CSS/Newtons-Bulb-Animation",
         "project-link":"Animations-CSS/Newtons-Bulb-Animation/index.html"
     },
     {
@@ -148,7 +154,7 @@ const projects = [
         "title":"Overlay Animation On Image",
         "tags":["Animations-CSS" , "HTML" ,"CSS" , "JavaScript" ],
         "description":"This is a simple Overlay animaion on Image, an implementation of Animations-CSS",
-        "github-link": "https://github.com/",
+        "github-link": "https://github.com/arcVaishali/Dev-Geeks/tree/search-bar/Animations-CSS/Overlay_animation_on_Image",
         "project-link":"Animations-CSS/Overlay_animation_on_Image/index.html"
     },
     {
@@ -156,7 +162,7 @@ const projects = [
         "title":"Overlay Animation Humaira",
         "tags":["Animations-CSS" , "HTML" ,"CSS" , "JavaScript" ],
         "description":"This is a simple Overlay Animation Humaira, an implementation of Animations-CSS",
-        "github-link": "https://github.com/",
+        "github-link": "https://github.com/arcVaishali/Dev-Geeks/tree/search-bar/Animations-CSS/OverlayAnimation-Humaira",
         "project-link":"Animations-CSS/OverlayAnimation-Humaira/index.html"
     },
     {
@@ -164,7 +170,7 @@ const projects = [
         "title":"PAC-MAN",
         "tags":["Animations-CSS" , "HTML" ,"CSS" , "JavaScript" ],
         "description":"This is a simple pac-man animation, an implementation of Animations-CSS",
-        "github-link": "https://github.com/",
+        "github-link": "https://github.com/arcVaishali/Dev-Geeks/tree/search-bar/Animations-CSS/Pac_Man",
         "project-link":"Animations-CSS/Pac_Man/index.html"
     },
     {
@@ -172,7 +178,7 @@ const projects = [
         "title":"Ripple Effect",
         "tags":["Animations-CSS" , "HTML" ,"CSS" , "JavaScript" ],
         "description":"This is a simple Ripple Effect animation, an implementation of Animations-CSS",
-        "github-link": "https://github.com/",
+        "github-link": "https://github.com/arcVaishali/Dev-Geeks/tree/search-bar/Animations-CSS/rippleEffect",
         "project-link":"Animations-CSS/rippleEffect/index.html"
     },
     {
@@ -180,7 +186,7 @@ const projects = [
         "title":"Search Toggle",
         "tags":["Animations-CSS" , "HTML" ,"CSS" , "JavaScript" ],
         "description":"This is a simple Search Toggle animation, an implementation of Animations-CSS",
-        "github-link": "https://github.com/",
+        "github-link": "https://github.com/arcVaishali/Dev-Geeks/tree/search-bar/Animations-CSS/search-toggle",
         "project-link":"Animations-CSS/search-toggle/index.html"
     },
     {
@@ -188,7 +194,7 @@ const projects = [
         "title":"Shop Load Animation",
         "tags":["Animations-CSS" , "HTML" ,"CSS" , "JavaScript" ],
         "description":"This is a simple Shop Load animation, an implementation of Animations-CSS",
-        "github-link": "https://github.com/",
+        "github-link": "https://github.com/arcVaishali/Dev-Geeks/tree/search-bar/Animations-CSS/shop%20load%20animation",
         "project-link":"Animations-CSS/shop load animation/index.html"
     },
     {
@@ -196,7 +202,7 @@ const projects = [
         "title":"Solar System",
         "tags":["Animations-CSS" , "HTML" ,"CSS" , "JavaScript" ],
         "description":"This is a simple Solar System animation, an implementation of Animations-CSS",
-        "github-link": "https://github.com/",
+        "github-link": "https://github.com/arcVaishali/Dev-Geeks/tree/search-bar/Animations-CSS/Solar-System",
         "project-link":"Animations-CSS/Solar-System/index.html"
     },
     {
@@ -204,7 +210,7 @@ const projects = [
         "title":"Text Glitch Effect",
         "tags":["Animations-CSS" , "HTML" ,"CSS" , "JavaScript" ],
         "description":"This is a simple Text Glitch Animation animation, an implementation of Animations-CSS",
-        "github-link": "https://github.com/",
+        "github-link": "https://github.com/arcVaishali/Dev-Geeks/tree/search-bar/Animations-CSS/text-glitch-effect",
         "project-link":"Animations-CSS/text-glitch-effect/index.html"
     },
     {
@@ -212,7 +218,7 @@ const projects = [
         "title":"Tilts & Dots",
         "tags":["Animations-CSS" , "HTML" ,"CSS" , "JavaScript" ],
         "description":"This is a simple Tilt's Dots Animation, an implementation of Animations-CSS",
-        "github-link": "https://github.com/",
+        "github-link": "https://github.com/arcVaishali/Dev-Geeks/tree/search-bar/Animations-CSS/Tilt-%26-Dots",
         "project-link":"Animations-CSS/Tilt-&-Dots/index.html"
     },
     {
@@ -220,15 +226,18 @@ const projects = [
         "title":"Types of Events Motion Animation",
         "tags":["Animations-CSS" , "HTML" ,"CSS" , "JavaScript" ],
         "description":"This is a simple Events Motion animation, an implementation of Animations-CSS",
-        "github-link": "https://github.com/",
-        "project-link":"Animations-CSS\Types-of-Events-motion-animation\Type-of-events-page.html"
+        "github-link": "https://github.com/arcVaishali/Dev-Geeks/tree/search-bar/Animations-CSS/Types-of-Events-motion-animation",
+        "project-link":"Animations-CSS/Types-of-Events-motion-animation/Type-of-events-page.html"
     },
+    // ===========================================
+    // ============ANIMATIONS JS =================
+    // ===========================================
     {
         // HINDI PARTICLES
         "title":"Hindi Particles",
         "tags":["Animations-JS" , "HTML" ,"CSS" , "JavaScript" ],
         "description":"This is a simple Hindi Particles animation, an implementation of Animations-JS",
-        "github-link": "https://github.com/",
+        "github-link": "https://github.com/https://github.com/arcVaishali/Dev-Geeks/blob/search-bar/Animations-JS/Hindi_Particles",
         "project-link":"Animations-JS/Hindi_Particles/index.html"
     },
     {
@@ -236,7 +245,7 @@ const projects = [
         "title":"Hoverboard Effect",
         "tags":["Animations-JS" , "HTML" ,"CSS" , "JavaScript" ],
         "description":"This is a simple Hoverboard effect animation, an implementation of Animations-JS",
-        "github-link": "https://github.com/",
+        "github-link": "https://github.com/arcVaishali/Dev-Geeks/tree/search-bar/Animations-JS/HoverBoard%20Effect",
         "project-link":"Animations-JS/HoverBoard Effect/index.html"
     },
     {
@@ -244,7 +253,7 @@ const projects = [
         "title":"Parallax Card Animation",
         "tags":["Animations-JS" , "HTML" ,"CSS" , "JavaScript" ],
         "description":"This is a simple Parallax Card Animation, an implementation of Animations-JS",
-        "github-link": "https://github.com/",
+        "github-link": "https://github.com/arcVaishali/Dev-Geeks/tree/search-bar/Animations-JS/Parallax%20Card%20Animation",
         "project-link":"Animations-JS/Parallax Card Animation/index.html"
     },
     {
@@ -252,15 +261,36 @@ const projects = [
         "title":"Snow Background Animation",
         "tags":["Animations-JS" , "HTML" ,"CSS" , "JavaScript" ],
         "description":"This is a simple snow background animation, an implementation of Animations-JS",
-        "github-link": "https://github.com/",
+        "github-link": "https://github.com/arcVaishali/Dev-Geeks/tree/search-bar/Animations-JS/Snow%20Background%20Animation",
         "project-link":"Animations-JS/Snow Background Animation/index.html"
     },
+    {
+        // CLOUD COMPUTING PROJECT
+        "title":"Cloud Computing Projects",
+        "tags":["Cloud" , "Medicine Bots" , "Easy" ],
+        "description":"This is a simple cloud computing project using Cloud Technology",
+        "github-link": "https://github.com/arcVaishali/Dev-Geeks/tree/search-bar/Cloud%20Computing%20Projects/Medical%20Chatbot",
+        "project-link":"Cloud Computing Projects"
+
+    },
+    {
+        // DATA ANALYTICS PROJECTS
+        "title":"Data Analytics Project",
+        "tags":["Data Analytics" , "Pythin" , "Jupyter Notebook" ],
+        "description":"This is a Data Analaytics Project",
+        "github-link": "https://github.com/arcVaishali/Dev-Geeks/tree/search-bar/Data%20Analytics%20Projects/Netflix%20Data%20Analytics",
+        "project-link":"Data Analytics Projects"
+
+    },
+    // ========================================
+    // ============ C PROJECTS ================
+    // ========================================
     {
         // CALCULATOR MENU
         "title":"Calculator Menu",
         "tags":["C" , "Calculator" , "Easy" ],
         "description":"This is a simple calculator using C language",
-        "github-link": "https://github.com/",
+        "github-link": "https://github.com/arcVaishali/Dev-Geeks/tree/search-bar/c_projects/calculatorMenu",
         "project-link":"c_projects/calculatorMenu/main.c"
     },
     {
@@ -268,15 +298,26 @@ const projects = [
         "title":"Electricity Bill Calculator",
         "tags":["C" , "Calculator" , "Easy" ],
         "description":"This is a simple electricity bill calculator using C language",
-        "github-link": "https://github.com/",
+        "github-link": "https://github.com/arcVaishali/Dev-Geeks/tree/search-bar/c_projects/electricity%20bill%20calculator",
         "project-link":"c_projects/electricity bill calculator/main.c"
     },
+    // ===================================
+    // =========== CPP ROJECTS ===========
+    // ===================================
     {
         // CONTACT MANAGEMENT SYSTEM
         "title":"Contact Management System",
         "tags":["C++" , "Conatct Management" , "Basic" ],
         "description":"This is a simple contact manangement system using C++ language",
-        "github-link": "https://github.com/",
+        "github-link": "https://github.com/arcVaishali/Dev-Geeks/tree/search-bar/cpp-projects/Contact-Management-System",
+        "project-link":"cpp-projects/Contact-Management-System/contactManagementSystem.cpp"
+    },
+    {
+        // ATM PROJECT
+        "title":"ATM Project",
+        "tags":["C++" , "ATM Project Management" , "Basic" ],
+        "description":"This is a simple ATM Project system using C++ language",
+        "github-link": "https://github.com/arcVaishali/Dev-Geeks/tree/search-bar/cpp-projects/ATM_Project",
         "project-link":"cpp-projects/Contact-Management-System/contactManagementSystem.cpp"
     },
     {
@@ -284,15 +325,18 @@ const projects = [
         "title":"Custom Error Page ",
         "tags":["Javascript" , "Typescript" , "Error Page" ],
         "description":"This is a simple Custom Error Page",
-        "github-link": "https://github.com/",
+        "github-link": "https://github.com/arcVaishali/Dev-Geeks/tree/search-bar/Custom%20Error%20Page/Error%20Page",
         "project-link":"Custom Error Page"
     },
+    // ==========================================
+    // =========== FLUTTER PROJECTS =============
+    // ==========================================
     {
         // E-COMMERCE TEMPLATE
         "title":"E-commerce Template",
         "tags":["Flutter" , "Android" , "E-commerce"],
         "description":"This is a simple E-Commerce Template using Flutter",
-        "github-link": "https://github.com/",
+        "github-link": "https://github.com/arcVaishali/Dev-Geeks/tree/search-bar/Flutter%20Projects/E-Commerce%20Template",
         "project-link":"Flutter Projects/E-Commerce Template/android/app/src/main/kotlin/com/example/marketky/MainActivity.kt"
     },
     {
@@ -300,7 +344,7 @@ const projects = [
         "title":"EBook App",
         "tags":["Flutter" , "Android" , "E-book"],
         "description":"This is a simple E-book App using Flutter",
-        "github-link": "https://github.com/",
+        "github-link": "https://github.com/arcVaishali/Dev-Geeks/tree/search-bar/Flutter%20Projects/Ebook_App",
         "project-link":"Flutter Projects/Ebook_App/android/app/src/main/kotlin/dev/jideguru/flutter_ebook_app/MainActivity.kt"
     },
     {
@@ -308,7 +352,7 @@ const projects = [
         "title":"Music Player",
         "tags":["Flutter" , "Android" , "Music Player"],
         "description":"This is a simple Music Player using Flutter",
-        "github-link": "https://github.com/",
+        "github-link": "https://github.com/arcVaishali/Dev-Geeks/tree/search-bar/Flutter%20Projects/music_player",
         "project-link":"Flutter Projects/music_player/android/app/src/main/kotlin/com/example/music_player/MainActivity.kt"
     },
     {
@@ -316,7 +360,7 @@ const projects = [
         "title":"Quiz App",
         "tags":["Flutter" , "Android" , "Quix App"],
         "description":"This is a simple Quiz App using Flutter",
-        "github-link": "https://github.com/",
+        "github-link": "https://github.com/arcVaishali/Dev-Geeks/tree/search-bar/Flutter%20Projects/quiz_app",
         "project-link":"Flutter Projects/quiz_app/android/app/src/main/kotlin/com/example/quizzler/MainActivity.kt"
     },
     {
@@ -324,15 +368,18 @@ const projects = [
         "title":"Streaming App",
         "tags":["Flutter" , "Android" , "Streaming App"],
         "description":"This is a simple Streaming App using Flutter",
-        "github-link": "https://github.com/",
+        "github-link": "https://github.com/arcVaishali/Dev-Geeks/tree/search-bar/Flutter%20Projects/StreamingApp_UI",
         "project-link":"Flutter Projects/StreamingApp_UI/android/app/src/main/kotlin/com/example/flutter_streaming_ui/MainActivity.kt"
     },
+    // =============================
+    // ============FOOTERS==========
+    // =============================
     {
         // CONTENT FOOTERS
         "title":"Content Footers",
         "tags":["HTML" , "CSS" , "Web Dev"],
         "description":"This is a simple Content Footer using Web Development",
-        "github-link": "https://github.com/",
+        "github-link": "https://github.com/arcVaishali/Dev-Geeks/tree/search-bar/Footers/content-footer",
         "project-link":"Footers/content-footer/index.html"
     },
     {
@@ -340,7 +387,7 @@ const projects = [
         "title":"Footers",
         "tags":["HTML" , "CSS" , "Web Dev"],
         "description":"This is a simple Footer using Web Development",
-        "github-link": "https://github.com/",
+        "github-link": "https://github.com/arcVaishali/Dev-Geeks/tree/search-bar/Footers/footer",
         "project-link":"Footers/footer/index.html"
     },
     {
@@ -348,7 +395,7 @@ const projects = [
         "title":"Footer New Design ",
         "tags":["HTML" , "CSS" , "Web Dev"],
         "description":"This is a new Footer design using Web Development",
-        "github-link": "https://github.com/",
+        "github-link": "https://github.com/arcVaishali/Dev-Geeks/tree/search-bar/Footers/footer_new",
         "project-link":"Footers/footer_new/index.html"
     },
     {
@@ -356,7 +403,7 @@ const projects = [
         "title":"Footer RES ",
         "tags":["HTML" , "CSS" , "Web Dev"],
         "description":"This is a new Footer res design using Web Development",
-        "github-link": "https://github.com/",
+        "github-link": "https://github.com/arcVaishali/Dev-Geeks/tree/search-bar/Footers/footer-res",
         "project-link":"Footers/footer-res/index.html"
     },
     {
@@ -364,7 +411,7 @@ const projects = [
         "title":"Responsive Footer",
         "tags":["HTML" , "CSS" , "Web Dev"],
         "description":"This is a new Footer design using Web Development",
-        "github-link": "https://github.com/",
+        "github-link": "https://github.com/arcVaishali/Dev-Geeks/tree/search-bar/Footers/responsive_footer",
         "project-link":"Footers/responsive_footer/index.html"
     },
     {
@@ -372,9 +419,12 @@ const projects = [
         "title":"Social Footer",
         "tags":["HTML" , "CSS" , "Web Dev"],
         "description":"This is a Social Footer design using Web Development",
-        "github-link": "https://github.com/",
+        "github-link": "https://github.com/arcVaishali/Dev-Geeks/tree/search-bar/Footers/social-footer",
         "project-link":"Footers/social-footer/index.html"
     },
+    // =====================================
+    // ======= FRONT END PROJECTS ==========
+    // =====================================
     {
         // ADVENTURE AWAITS
         "title":"Adventure Awaits",
@@ -501,7 +551,7 @@ const projects = [
         "tags":["HTML" , "CSS" , "JS" ,"Front End Web Dev"],
         "description":"This is BTech Chai Wala Project using Feonr End Web Technologies",
         "github-link": "https://github.com/arcVaishali/Dev-Geeks/tree/search-bar/Frontend-Projects/btech%20chai%20wala",
-        // "project-link":"Frontend-Projects/AdventureAwaits/index.html"
+        "project-link":"Frontend-Projects/btech chai wala"
     },
     {
         // BTECH TEA SHOP
