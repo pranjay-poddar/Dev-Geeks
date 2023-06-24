@@ -1,0 +1,33 @@
+##################################################### Telegram Automation ###################################################
+################################################## Made By Avdhesh Varshney #################################################
+############################################ (https://github.com/Avdhesh-Varshney) ##########################################
+
+1. This program is related to controls the working behaviour of the Telegram Desktop application.
+
+2. This program can controls varieties of tasks like, 
+    (i) Display the chat history of any account
+    (ii) Open the chat of any person or any group
+    (iii) Arrange a video call/ voice call
+    (iv) Create a video chat on the group
+    (v) Send the message
+    (vi) Send messages in a bulk or do Spam, etc.
+
+3. To use this program first install the PYTHON 3.7 or above on your system.
+
+4. Then, install all the dependecies related to this project which are written in the ```requirements.txt``` file.
+
+5. To install all the dependecies on your system. Follow the below steps:
+    (i) Open terminal on this folder where ```requirements.txt``` file is kept.
+    (ii) You can either open terminal or powershell or command prompt.
+    (iii) To open the command prompt just write ```cmd``` in the address bar.
+    (iv) Now, Write the command to install all the dependecies ```pip install -r requirements.txt```
+    (v) This command will automatically install all the dependecies on your system.
+
+6. After the successful installation of all the dependecies on your system.
+
+7. Now you are ready to Start the Program.
+
+8. Press just enter on the file to start the program.
+
+
+Thanks for using this program !
