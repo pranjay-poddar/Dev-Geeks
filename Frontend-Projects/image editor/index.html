@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>image editor</title>
+		<link rel="stylesheet" type="text/css" href="css/style.css" />
+		<link
+			href="https://fonts.googleapis.com/icon?family=Material+Icons"
+			rel="stylesheet"
+		/>
+		<link rel="shortcut icon" type="x-icon" href="favicon.jpg" />
+	</head>
+	<body>
+		<section class="edtr_section">
+			<header class="edtr_header">
+				<p>image editor</p>
+			</header>
+			<div class="edtr_body">
+				<div class="edtr_options">
+					<div class="filter">
+						<p>filters</p>
+						<div class="filter_options">
+							<button id="brightness" class="active">brightness</button>
+							<button id="saturation">saturation</button>
+							<button id="inversion">inversion</button>
+							<button id="grayscale">grayscale</button>
+							<button id="blur">blur</button>
+							<button id="sepia">sepia</button>
+							<button id="hue rotate">hue rotate</button>
+							<button id="contrast">contrast</button>
+						</div>
+					</div>
+					<div class="saturation">
+						<div class="sat_header">
+							<p class="filter_name">brightness</p>
+							<p class="slider_value">100%</p>
+						</div>
+						<div class="sat_value">
+							<input type="range" max="200" min="0" value="100" />
+						</div>
+					</div>
+
+					<div class="rotation">
+						<p>rotate & left</p>
+						<div class="icons">
+							<i id="left" class="material-icons">rotate_left</i>
+							<i id="right" class="material-icons">rotate_right</i>
+							<i id="horizontal" class="material-icons">flip</i>
+							<i
+								id="vertical"
+								class="material-icons"
+								style="transform: scale(-1, -1)"
+								>flip</i
+							>
+						</div>
+					</div>
+				</div>
+				<div class="edtr_output">
+					<img alt="" title="image-editing" src="" />
+				</div>
+			</div>
+			<footer class="edtr_footer">
+				<div class="edtr_reset">
+					<button>reset filter</button>
+				</div>
+				<div class="edtr_choose">
+					<input type="file" class="file_input" accept="image/*" hidden />
+					<button class="choose_img">choose image</button>
+					<button class="save_img">save image</button>
+				</div>
+			</footer>
+		</section>
+		<script type="text/javascript" src="js/script.js"></script>
+	</body>
+</html>
