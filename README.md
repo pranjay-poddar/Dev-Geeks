@@ -768,6 +768,9 @@ Happy Coding! -->
 <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Frontend-Projects/QrComponent"> QrComponent </a></td>
 <td align="center"> 254.</td>
 <td align="center"><a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Js-Games/Mexico Escape">Mexico Escape</a></td>
+
+<td align="center"> 255.</td>
+<td align="center"><a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Js-Games/Quiz_Game">Quiz_GAme</a></td>
 </tr>
 </table>
 
