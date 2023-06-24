@@ -98,7 +98,7 @@
             //Hashing the password using the default algorithm
             $hash_pass=password_hash($pwd,PASSWORD_DEFAULT);
 
-            //SQL statement to insert values into the users table
+            //SQL statement to insert values into the users_details table
             $sql="INSERT INTO user_details (FName,LName,Email,Password) VALUES (?,?,?,?)";
 
             //Initializing the statement

@@ -1,10 +1,10 @@
 <?php
 
     //Connection details
-    $host="localhost";
-    $db_name="signup_login";
-    $username="root";
-    $password="";
+    $host="localhost"; //hostname, by default localhost
+    $db_name="signup_login"; //database name
+    $username="root"; //user, generally root
+    $password=""; //Password generally empty
 
     $mysqli=new mysqli($host,$username,$password,$db_name); //new mysqli object
 
