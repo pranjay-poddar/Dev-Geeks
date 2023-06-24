@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Jumble Word Game</title>
+  <link rel="stylesheet" type="text/css" href="/styles.css">
+</head>
+<body>
+  <h1><br><br>Jumble Word Game</h1>
+  <div id="game-container">
+    <div id="word-container"></div>
+    <input type="text" id="guess-input" placeholder="Enter your guess">
+    <div id="message"></div>
+    <div id="hint"></div>
+    <div id="button-container">
+      <button id="refresh-button">Refresh</button>
+      <button id="submit-button">Submit</button>
+    </div>
+    <div id="timer">Time: <span id="time-remaining"></span></div>
+  </div>
+  <div id="leaderboard-container">
+    <h2>Leaderboard</h2>
+    <ol id="leaderboard-list"></ol>
+  </div>
+  <script src="/script.js"></script>
+</body>
+</html>
