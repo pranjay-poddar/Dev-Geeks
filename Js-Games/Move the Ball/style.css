@@ -1,0 +1,11 @@
+body {
+	margin: 0px;
+}
+#ball {
+	width: 200px;
+	height: 200px;
+	background-color: red;
+    border-radius: 50%;
+    position:absolute;
+    box-sizing: border-box;
+}
