@@ -501,7 +501,7 @@ Happy Coding! -->
 <td align="center"> 157.</td>
 <td align="center"> <a href="https://github.com/sumitkr2000/BMI_Calculator/tree/main/bmi-calculator">BMI Calculator</a></td>
 <td align="center"> 158.</td>
-<td align="center"> <a href="https://github.com/Noothan-am/Dice-game-/tree/main/dicegame">  Dice game</a></td>
+<td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Js-Games/dice%20game">  Dice game</a></td>
 <td align="center"> 159.</td>
 <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Js-Games/Typer">  Typing Game</a></td>
 <td align="center"> 160.</td>
@@ -619,7 +619,7 @@ Happy Coding! -->
 
 <tr align="center">
 <td align="center"> 201.</td>
-<td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Js-Games/dicegame"> Dice Game </a></td>
+<td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Js-Games/dice%20game"> Dice Game </a></td>
 <td align="center"> 202.</td>
 <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/React-JS%20Projects/Music_App/my-app"> Music Player App </a></td>
 <td align="center"> 203.</td>
