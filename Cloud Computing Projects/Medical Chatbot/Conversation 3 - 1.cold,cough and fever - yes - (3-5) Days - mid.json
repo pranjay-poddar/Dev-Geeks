@@ -1,0 +1,76 @@
+{
+  "id": "a419b8b3-49d4-46a5-a1b1-ab3009f41ca5",
+  "name": "Conversation 3 - 1.cold,cough and fever - yes - (3-5) Days - mid",
+  "auto": true,
+  "condition": "",
+  "conditionalFollowupEvents": [],
+  "conditionalResponses": [],
+  "context": [
+    "Conversation3-1coldcoughandfever-yes-3-5Days-followup"
+  ],
+  "contexts": [
+    "Conversation3-1coldcoughandfever-yes-3-5Days-followup"
+  ],
+  "endInteraction": false,
+  "events": [],
+  "fallbackIntent": false,
+  "liveAgentHandoff": false,
+  "parentId": "0991ca9e-d21d-41fb-8900-d6a34c323310",
+  "followUpIntents": [],
+  "priority": 500000,
+  "responses": [
+    {
+      "action": "Conversation3.Conversation3-custom.Conversation3-1coldcoughandfever-custom.Conversation3-1coldcoughandfever-yes-custom.Conversation3-1coldcoughandfever-yes-3-5Days-custom-3",
+      "affectedContexts": [
+        {
+          "name": "Conversation3-1coldcoughandfever-yes-3-5Days-mid-followup",
+          "lifespan": 2
+        }
+      ],
+      "parameters": [],
+      "defaultResponsePlatforms": {},
+      "messages": [
+        {
+          "type": "message",
+          "condition": "",
+          "speech": [
+            "Have you tried any home remedies or any other medicine?"
+          ]
+        },
+        {
+          "type": "message",
+          "condition": "",
+          "speech": [
+            "1.Yes with improvement"
+          ]
+        },
+        {
+          "type": "message",
+          "condition": "",
+          "speech": [
+            "2.No"
+          ]
+        }
+      ],
+      "resetContexts": false
+    }
+  ],
+  "rootParentId": "4ff6d6f4-51ce-40cc-bea4-977e35b5b1e4",
+  "templates": [],
+  "userSays": [
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "2",
+          "userDefined": false
+        }
+      ],
+      "count": 0,
+      "id": "3db52db2-c06a-4390-8ddd-f27c64580c10",
+      "updated": null
+    }
+  ],
+  "webhookForSlotFilling": false,
+  "webhookUsed": false
+}
