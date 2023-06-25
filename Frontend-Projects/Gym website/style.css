@@ -39,23 +39,25 @@ nav {
     align-items: center;
     color: white;
 }
-.left img {
-    width: 100%;
-    flex-basis: 50%;
-    margin-right: 100px;
-}
-.container:hover .left img{
-  transform: scale(1.2);
+.right{
+  position: absolute;
+  max-width: 60vw;
+  margin: 5%;
+  padding-right: 30%;
+  top: 5rem
+
 }
 .left-about{
   max-width: 500px;
   flex-basis: 50%;
- margin: auto;
+ margin: auto 5rem ;
 }
 .right-about img{
-  width: 80%;
-  flex-basis: 50%;
-  text-align: center;
+  
+  width: 120%;
+  /* flex-basis: 50%; */
+  /* text-align: center; */
+  
 }
 .right-about:hover img{
   transform: scale(1.2);
@@ -105,6 +107,7 @@ h1 {
   border-end-end-radius:20px;
 }
 #form{
+  
   display: flex;
   width: 100%;
   display: flex;
@@ -115,7 +118,16 @@ h1 {
   background: rgba(0,0,0,0.05);
    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 80% 80%, 0% 100%);
 }
+#form img{
+  position: relative;
+    width: 80%;
+    top: -20px;
+}
+.formAction{
+  margin-right: 150px;
+}
 #form input{
+
 display: flex;
 padding:2px;
 width:100%;
@@ -125,13 +137,17 @@ margin: 3px;
   font-weight: bold;
   color: rgb(209, 6, 3);
 }
-.logo img {
+.logo  {
     padding: 10px;
     width: 100px;
     border-radius: 50%;
+    font-size: 50px;
 }
 .icon img {
     width: 35px;
+}
+.iconbrand{
+  margin-right: 15px;
 }
 
 /* services section css */
