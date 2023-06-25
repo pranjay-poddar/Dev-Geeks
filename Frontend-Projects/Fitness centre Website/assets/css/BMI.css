@@ -84,9 +84,11 @@
         cursor: pointer;
         
     }
+
 body {
-    background-color: #eee;
+    background: linear-gradient(to right, silver, dimgray);
     text-align: center;
+    font-size: larger;
 }
 
 button {
@@ -105,11 +107,16 @@ h2 {
     margin-top: 20px;
     width:50%;
     display: block;
-    padding: 5px;
     height:25px;
     color:black;
     background-color: orange;
+    font-family:cursive;
+    font-size:large;
 
+}
+
+.text-center{
+    font-size: larger;
 }
 
 input {
@@ -121,9 +128,14 @@ input {
     outline: none;
     color: #fff;
     font-size: 14px;
-    
 }
 
+#height{
+    border-radius: 15px; 
+}
+#weight{
+    border-radius: 15px; 
+}
 input:focus {
     border: 2px solid rgba(0,0,0,.4);
     background-color: rgb(60,60,60);
@@ -136,6 +148,8 @@ form {
     box-shadow: 0 2px 4px 0 rgba(0,0,0,.4);
     margin:20px;
     height:300px;
+    border: 5px solid gray;
+    border-radius: 20px;
     
 }
 
