@@ -1,0 +1,69 @@
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: bold;
+    background-image: url(https://th.bing.com/th/id/R.05b469b208d4e41fe24192fd96c8e4ae?rik=JXeLjcb8OzGWZQ&riu=http%3a%2f%2fd2nxmoss2b81ug.cloudfront.net%2fwp-content%2fuploads%2f2017%2f12%2f26231354%2fTF_McDs_HydePark_London_0041-1024x731.jpg&ehk=IbciQjZdD3Ia%2fgGAruEmFGUnrSU6VviaRUTyrXa3z0U%3d&risl=&pid=ImgRaw&r=0);
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+}
+
+h1 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+h2 {
+    font-size: 50px;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+h3 {
+    color: rgb(0, 0, 0);
+    font-size: 30px;
+}
+
+p {
+    margin: 30px;
+}
+
+input {
+    border: none;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: white;
+    font-weight: bold;
+    width: 200px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+}
+
+#increment-btn {
+    background: darkred;
+}
+
+/* #increment-btn:focus {
+    background: darkgreen;
+} */
+
+#save-btn {
+    background: darkgreen;
+}
+
+/* #save-btn:focus {
+    background: darkred;
+} */
+
+.container {
+    position: relative;
+    top: 100px;
+    left: 35%;
+    background-color: rgb(241, 152, 35);
+    height: 520px;
+    width: 520px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: transparent;
+}
