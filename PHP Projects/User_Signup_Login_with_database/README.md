@@ -30,4 +30,7 @@ database.php - Contains the required credentials to connect to the database.
   
 * Go to index.php by navigating to localhost/index.php and view the project!  
   
-* Please refer to the demo video in case of any doubts !
+# Demo Video:
+
+### https://drive.google.com/file/d/1oOXLx-AFC6dZXicR0jtkYijwDYHEbdnd/view?usp=sharing  
+Please refer to the above video in case of any doubts !
