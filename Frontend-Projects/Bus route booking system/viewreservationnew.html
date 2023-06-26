@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>View Reservation</title>
+  <!-- <link rel="stylesheet" href="styles.css"> -->
+  <style>
+    body {
+  background-color: #ffffff;
+}
+    .profile-container {
+      background-color: #ffffff;
+      border-radius: 5px;
+      padding: 20px;
+      box-shadow: 0px 0px 10px #dcdcdc;
+      max-width: 800px;
+      height: 500px;
+      margin: 0 auto;
+      margin-top: 50px;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    }
+    h1 {
+      color: #9c0404;
+      margin-top: 0px;
+      margin-bottom: 20px;
+      font-size: 36px;
+      text-align: center;
+    }
+    .profile-field {
+      margin-bottom: 40px;
+    }
+    label {
+      font-size: 18px;
+      color: #1f1d1d;
+    }
+    span {
+      font-size: 20px;
+      margin-left: 20px;
+    }
+    .ticket__subtitle {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+        .ticket__header {
+            text-align: center;
+            margin-bottom: 60px;
+        } 
+        .ticket__section {
+            margin-bottom: 20px;
+            font-size: 19px;
+        }
+
+        .ticket__section-title {
+            margin-bottom: 35px;
+            font-size: 20px;
+        }
+  </style>
+</head>
+<body>
+  <div class="profile-container">
+    <div class="ticket__header">
+      <h1 class="ticket__title">Reservation Details</h1>
+      <p class="ticket__subtitle">Please review your reservation information below.</p>
+  </div>
+    <div class="profile-field">
+      <label>Student Name:</label>
+      <span>Manya </span>
+    </div>
+    <div class="profile-field">
+      <label>Roll No:</label>
+      <span>123456</span>
+    </div>
+    <div class="profile-field">
+      <label>Address:</label>
+      <span>12,  Dhakoli, Zirakpur</span>
+    </div>
+    <div class="ticket__section">
+      <h2 class="ticket__section-title">Route Information</h2>
+      <div class="ticket__info">
+          <p class="ticket__label">Route:   3</p>
+          <p class="ticket__value" id="route"></p>
+      </div>
+  
+    <div class="ticket__info">
+      <p class="ticket__label">Time:  7:40 am</p>
+      <p class="ticket__value" id="time"></p>
+    </div>
+    </div>
+  </div>
+</body>
+</html>

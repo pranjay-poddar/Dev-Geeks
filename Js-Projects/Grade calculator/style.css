@@ -1,0 +1,75 @@
+
+.entry{
+    margin-left: 50px;
+    margin-top: 70px;
+    padding: 80px;
+}
+.sub1 {
+    font-size: 40px;
+    padding: 20px;
+    color: orangered;
+}
+.sub2 {
+    font-size: 40px;
+    padding: 20px;
+    color: orangered;
+}
+.sub3 {
+    font-size: 40px;
+    padding: 20px;
+    color: orangered;
+    
+}
+.sub4 {
+    font-size: 40px;
+    padding: 20px;
+    color: orangered;
+    
+}
+.sub5 {
+    font-size: 40px;
+    padding: 20px;
+    color: orangered;
+    
+}
+#m1{
+    font-size: 25px;
+    padding: 10px;
+}
+#m2{
+    font-size: 25px;
+    padding: 10px;
+}
+#m3{
+    font-size: 25px;
+    padding: 10px;
+}
+#m4{
+    font-size: 25px;
+    padding: 10px;
+}
+#m5{
+    font-size: 25px;
+    padding: 10px;
+}
+#btn{
+   height: 60px;
+   width: 180px;
+   font-size: 25px;
+   margin-left: 165px;
+   margin-bottom: 100px;
+   background-color: blueviolet;
+   color: white;
+}
+#result{
+    margin-top: -650px;
+    margin-left: 900px;
+}
+.one{
+    font-size: 35px;
+    padding: 15px;
+    color:blueviolet;
+}.two{
+    font-size: 35px;
+    color: orangered;
+}

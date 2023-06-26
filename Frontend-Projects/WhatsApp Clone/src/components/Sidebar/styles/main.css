@@ -1,0 +1,227 @@
+@import url(./darktheme.css);
+.sidebar {
+    min-width: 300px;
+    flex: 40%;
+    border-right: 1px solid #DADADA;
+    display: flex;
+    flex-direction: column;
+}
+
+/*  Sidebar Header */
+
+.sidebar__avatar-wrapper {
+    width: 40px;
+    height: 40px;
+}
+
+.sidebar__actions {
+    margin-right: 20px;
+}
+
+.sidebar__actions>* {
+    display: inline-block;
+    margin-left: 25px;
+    cursor: pointer;
+}
+
+.sidebar__action-icon {
+    color: rgb(145, 145, 145);
+}
+
+/* End Sidebar Header */
+
+/*  Sidebar Alert */
+
+.sidebar__alert {
+    min-height: 85px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.sidebar__alert--warning {
+    background: #FED859;
+}
+
+.sidebar__alert--info {
+    background: #9DE1FE;
+}
+
+.sidebar__alert--danger {
+    background: #F3645B;
+}
+
+.sidebar__alert-icon-wrapper {
+    margin-right: 10px;
+}
+
+.sidebar__alert-icon {
+    color: white;
+}
+
+.sidebar__alert-texts {
+    flex: 1;
+}
+
+.sidebar__alert-text:first-of-type {
+    font-size: 1rem;
+    margin-bottom: 5px;
+    color: #343738;
+}
+
+.sidebar__alert-text:last-of-type {
+    font-size: 0.85rem;
+    color: #414A4E;
+    line-height: 17px;
+}
+
+.sidebar__alert--danger .sidebar__alert-text:first-of-type, .sidebar__alert--danger .sidebar__alert-text:last-of-type {
+    color: white;
+}
+
+/* End Sidebar Alert */
+
+/*  Sidebar Search */
+
+.sidebar__search-wrapper {
+    padding: 7px 10px;
+    height: 50px;
+    background: #F6F6F6;
+    position: relative;
+}
+
+/* End Sidebar Search */
+
+/*  Sidebar Contact List */
+
+.sidebar__contacts {
+    flex: 1;
+    overflow-y: scroll;
+    background: #F5F5F5;
+    border-top: 1px solid #DADADA;
+}
+
+.sidebar-contact {
+    height: 72px;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #EBEBEB;
+    cursor: pointer;
+}
+
+.sidebar-contact:hover {
+    background-color: #EBEBEB;
+}
+
+.sidebar-contact__avatar-wrapper {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+}
+
+.sidebar-contact__content {
+    overflow: hidden;
+    flex: 1;
+}
+
+.sidebar-contact__top-content, .sidebar-contact__bottom-content, .sidebar-contact__message-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.sidebar-contact__name, .sidebar-contact__message {
+    flex: 1;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.sidebar-contact__top-content {
+    margin-bottom: 2px;
+}
+
+.sidebar-contact__name {
+    color: #000000;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.sidebar-contact__time {
+    font-size: 0.7rem;
+    color: rgba(0, 0, 0, 0.45);
+}
+
+.sidebar-contact__message-wrapper {
+    color: #00000099;
+    font-size: 0.85rem;
+    margin-right: 3px;
+    overflow: hidden;
+}
+
+.sidebar-contact__message-icon {
+    color: #B3B3B3;
+    margin-right: 3px;
+}
+
+.sidebar-contact__message-icon--blue {
+    color: #0DA9E5;
+}
+
+.sidebar-contact__message--unread {
+    color: #000000;
+    font-weight: 500;
+}
+
+.sidebar-contact__icons, .sidebar-contact:not(:focus) .sidebar-contact__icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateX(24px);
+    transition: transform 0.5s ease;
+}
+
+.sidebar-contact:hover .sidebar-contact__icons {
+    transform: translateX(0);
+}
+
+.sidebar-contact__icons>* {
+    margin-left: 8px;
+    color: #B3B3B3;
+}
+
+.sidebar-contact__unread {
+    display: inline-block;
+    color: white;
+    background-color: rgb(6, 215, 85);
+    border-radius: 18px;
+    min-width: 18px;
+    height: 18px;
+    padding: 0 3px;
+    line-height: 18px;
+    vertical-align: middle;
+    text-align: center;
+    font-size: 0.75rem;
+    font-weight: 500;
+}
+
+/*  End Sidebar Contact List */
+
+@media screen and (min-width: 1000px) and (max-width: 1300px) {
+    .sidebar {
+        flex: 35%;
+    }
+    .sidebar~div {
+        flex: 65%;
+    }
+}
+
+@media screen and (min-width: 1301px) {
+    .sidebar {
+        flex: 30%;
+    }
+    .sidebar~div {
+        flex: 70%;
+    }
+}

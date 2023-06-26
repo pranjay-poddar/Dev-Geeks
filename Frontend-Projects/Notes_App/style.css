@@ -10,7 +10,7 @@ body{
   background: rgb(27, 27, 27);
   height: 900px;
   width: 100%;
-
+  
  
 }
 ::selection{
@@ -28,6 +28,8 @@ body{
   border-radius: 9px;
   padding: 20px 20px 20px;
   background: rgb(7, 7, 7);
+  background-size: cover;
+ background-image: url(https://static.vecteezy.com/system/resources/previews/007/450/998/non_2x/hand-drawn-paper-note-isolated-on-a-pink-texture-background-design-free-vector.jpg);
 }
 .add-box, .icon, .bottom-content, 
 .popup, header, .settings .menu li{
@@ -43,21 +45,22 @@ body{
 .add-box .icon{
   height: 100px;
   width: 100px;
-  color: #d2ab1dae;
+  color: black;
   font-size: 80px;
   justify-content: center;
   
 }
 .add-box p{
-  color: #d2ab1dae;
+  color: purple;
   font-weight: 900;
   margin-top: 30px;
 }
 .note{
   display: flex;
-  color: #d2ab1dae;
+  color: black;
   flex-direction: column;
   justify-content: space-between;
+  
 }
 
 
