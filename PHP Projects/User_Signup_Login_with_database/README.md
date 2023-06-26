@@ -28,4 +28,6 @@ database.php - Contains the required credentials to connect to the database.
   
 * Import / create the required tables.
   
-* Go to index.php by navigating to localhost/index.php and view the project!
+* Go to index.php by navigating to localhost/index.php and view the project!  
+  
+* Please refer to the demo video in case of any doubts !
