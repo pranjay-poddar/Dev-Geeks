@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>E-Commerce</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css"
+        integrity="sha512-PgQMlq+nqFLV4ylk1gwUOgm6CtIIXkKwaIHp/PAIWHzig/lKZSEGKEysh0TCVbHJXCLN7WetD8TFecIky75ZfQ=="
+        crossorigin="anonymous" />
+<script>
+function myFunction() {
+  alert("You Have Succesfully Log-out");
+}
+</script>
+
+</head>
+
+<body id="top">
+    <!-- ==============header menu section starts here============== -->
+    <section class="header_menu_class" id="header_menu_class">
+        <div class="container-fluid px-0 shadow">
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark py-3  ">
+                <a class="navbar-brand pl-25" href="javascript:;" id="logoout">
+                    <img src="assets\images\background-removebg-preview.png" class="img img-fluid" width="120px" alt="logo">
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse"
+                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mx-auto">
+                        <li class="nav-item" >
+                            <a class="nav-link" href="index.html">Home <span class="sr-only"></span></a>
+                        </li>
+                        <li class="nav-item" >
+                            <a class="nav-link" href="product.html">Product</a>
+                        </li>
+                        <li class="nav-item" >
+                            <a class="nav-link" href="category.html">Category</a>
+                        </li>
+                        <li class="nav-item" >
+                            <a class="nav-link" href="about.html">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html">Contact Us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#Logout.html">Log-out</a>
+                        </li>
+                    </ul>
+                    <div class="search mr-3">
+                        <a href="search.html" class="btn btn-sm btn-outline-primary">Search</a>
+                    </div>
+                    <div class="cart">
+                        <a href="cart.html">
+                            <i class="fas fa-shopping-cart fa-2x"></i>
+                            <span class="badge badge-pill badge-primary">2</span>
+                        </a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </section>
+    <!-- ==============header menu section ends here============== -->
+
+    <!-- ==============contact starts here============== -->
+    <section class="contact py-5 my-5" id="contact">
+        <div class="container ">
+            <div class="section_title text-center mb-5">
+                <h1 class="text-capitalize">Contact Us</h1>
+            </div>
+            <div class="row mb-5">
+                <div class="col-md-4 col-12" id="hilight1">
+                    <div class="border border-success rounded shadow text-center pt-5">
+                        <div class="mb-4">
+                            <i class="fas fa-phone-alt fa-3x"></i>
+                        </div>
+                        <div>
+                            <h3>Let's Talk</h3>
+                            <p><b>Phone:</b> <a href="tel:+91-7583064835">+91-7583064835</a></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-12" id="hilight1">
+                    <div class="border border-success rounded shadow text-center pt-5">
+                        <div class="mb-4">
+                            <i class="fas fa-envelope-open fa-3x"></i>
+                        </div>
+                        <div>
+                            <h3>Drop a Mail! to us</h3>
+                            <p><b>Email:</b> <a href="mailto:gulshanjakhon@gmail.com">Gulshan Jakhon</a></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-12" id="hilight1">
+                    <div class="border border-success rounded shadow text-center pt-5">
+                        <div class="mb-4">
+                            <i class="far fa-life-ring fa-3x"></i>
+                        </div>
+                        <div>
+                            <h3>Support(24x7)</h3>
+                            <p><b>Customer:</b> <a href="tel:+91-180030000123">1800-3000-123</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row" >
+                <div class="col-md-8 col-10 mx-auto mb-3 my-5 py-5 border shadow" id="row1">
+                    <h3 class="text-center mb-3">-:<b style="text-decoration: underline;">Query Form </b>:-</h3>
+                    <form action="contact.html" method="POST" id="form" onsubmit="return formValidation();">
+                        <div class="form-group">
+                            <label>Name :</label>
+                            <input name="name" id="name" type="text" placeholder="Name" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label>Mobile no. :</label>
+                            <input name="email" id="email" type="number" placeholder="Email" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label>Email :</label>
+                            <input name="email" id="email" type="email" placeholder="Email" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label>Message :</label>
+                            <textarea name="msg" id="msg" class="form-control" placeholder="Message"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-block"><b>Submit</b></button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==============contact ends here============== -->
+
+    <!-- ==============footer starts here============== -->
+    <section class="footer_section pt-5 pb-2" id="footer_section">
+        <footer>
+          <div class="container-fluid">
+            <div class="row" id="row" id="equal">
+              <div class="col-md-3 col-6 pl-5 pl-small-15" class="flexing">
+                <div class="footer_title">
+                  <a href="index.html"><img src="assets\images\background-removebg-preview.png" width="150px" class="img img-fluid" alt="logo"></a>
+                </div>
+                <div>
+                  Shop Karo, India’s no. 1 online fashion destination justifies its 
+    fashion relevance by bringing something new and chic to the table on the daily. Fashion trends seem to change at lightning speed, 
+    yet the Shop Karo shopping app has managed to keep up without any hiccups.
+                </div>
+              </div>
+              <div class="col-md-3 col-12" class="flexing">
+                <div class="footer_title pt-3 mb-3">
+                  <h3  class="headings">Quick Links</h3>
+                </div>
+                <div class="footer_links">
+                  <ul>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="javascript:;">Offers & Discounts</a></li>
+                    <li><a href="javascript:;">Promo-Code</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-md-3 col-12" class="flexing">
+                <div class="footer_title pt-3 mb-3">
+                  <h3  class="headings">New Products</h3>
+                </div>
+                <div class="footer_links">
+                  <ul>
+                    <li><a href="javascript:;">Mobile Accessories</a></li>
+                    <li><a href="javascript:;">Electronics Accessories</a></li>
+                    <li><a href="javascript:;">Man's Fashion</a></li>
+                    <li><a href="javascript:;">Women's Fashion</a></li>
+                    <li><a href="javascript:;">Watches</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-md-3 col-12" class="flexing">
+                <div class="footer_title pt-3 mb-3">
+                  <h3 class="headings">Support <b>(24*7)</b> </h3>
+                </div>
+                <div class="footer_links">
+                  <ul>
+                    <li><a href="javascript:;">Frequently Asked Questions</a></li>
+                    <li><a href="javascript:;">Terms & Conditions</a></li>
+                    <li><a href="javascript:;">Privacy Policy</a></li>
+                    <li><a href="javascript:;">Report a Payment Issue</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="help">
+                <div style="text-align: center;"><p>EXPERIENCE OUR APP ON MOBILE <br>Get it On </p>
+                <p><a href="#"><img src="assets\images\80cc455a-92d2-4b5c-a038-7da0d92af33f1539674178924-google_play.png" width="100px" height="50px" alt="Google-play"></a><a href="#"><img src="assets\images\bc5e11ad-0250-420a-ac71-115a57ca35d51539674178941-apple_store.png" width="100px" height="50px" alt="Apple-store"></a></p>
+              </div>
+              </div>
+            </div>
+          </div>
+          <div class="border-top">
+            <h6 class="text-center mt-3">Copyright ©2021 All rights reserved by <b>Gulshan Kumr Jakhon</b>
+            </h6>
+          </div>
+        </footer>
+      </section>
+      <div class="backtop">
+        <a id="button" href="#top" class="btn btn-lg btn-outline-danger" role="button">
+          <i class="fas fa-chevron-up text-dark"></i>
+        </a>
+      </div>
+    <!-- ==============footer ends here============== -->
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script> -->
+
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
+<script>
+
+    //form validation with javascript
+    function formValidation()
+    {
+        //Get Value
+        var name = document.getElementById('name').value.trim();
+        var email = document.getElementById('email').value.trim();
+        var msg = document.getElementById('msg').value.trim();
+
+        var isValidForm = true;       
+
+        //Validation Conditions here
+        if (name.length < 1) {
+            alert("Name is Required!");
+            var isValidForm = false;
+        }       
+        else if (email.length < 1) {
+            alert("Email is Required!");
+            var isValidForm = false;
+        } 
+        else if (msg.length < 1) {
+            alert("Message is Required!");
+            var isValidForm = false;
+        }
+        else
+        {
+            isValidForm = true;
+        }
+
+        return isValidForm;  //if isValidForm is true then form submits else submission is stopped
+        
+    }
+
+
+
+</script>
