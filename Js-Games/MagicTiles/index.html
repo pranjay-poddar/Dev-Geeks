@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<title>PianoTiles In JavaScript</title>
+	<head>
+    	<script src="js/jquery.js"></script>
+		<script src="js/keys1.js"></script>
+		<script src="js/keys2.js"></script>
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+	</head>
+	<body>
+		<script type="text/javascript" src="js/gamescript.js"></script>
+		<br>
+		<div class="container-fluid">
+			<div class="row-fluid">
+				<div class="span1"></div>
+				<div class="span5">
+					<canvas id="mycanvas" style="border:2px solid #000;"></canvas>
+				</div>
+				<div class="span6">
+					<br><h1>PIANO TILES GAME</h1> <br><h2>IN JAVASCRIPT<br></h2><br>
+					<font size="+2"><span>Your Score:&nbsp; </span><span id="score"></span></font><br><br>
+					<font size="+2"><span>Time Elapsed:&nbsp; </span><span id="time"></span></font><br><br>
+					<input class="span4" type="text" placeholder="Time Limit in Seconds" id="tl">
+					<button class="span3 btn btn-success" onclick="loadcanvas();">Start Game</button><br><br>
+					<div><b><u>Game Instructions</u>:</b><br>
+						Input the number of seconds you want the timer to run for and click on Start Game.<br>
+						Leave blank for 10 seconds.<br><br>
+						Keys '1', '2', '3' and '4' on your keyboard are to be used to tap the tiles.<br>
+						Note the black tile in the last row (row 4) and press accordingly.<br>
+						1 for the leftmost, 2 for the second one, 3 for the third one and 4 for the rightmost.<br><br>
+						Check your reflexes!<br><br><br><br>
+						<i>Created by: 
+							Ayishik<br>
+							
+						</i>
+					</div><br>
+					<audio id="sample" src="resources/furelise.mp3" preload></audio>
+				</div>
+			</div>
+		</div>
+	</body>			
+</html>
