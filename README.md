@@ -774,6 +774,10 @@ Happy Coding! -->
 <td align="center"> 255.</td>
 <td align="center"><a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Js-Games/Mexico Escape">Mexico Escape</a></td>
 </tr>
+<tr align="center">	
+<td align="center"> 339.</td>
+<td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Js-Projects/PassengerCounter">Passenger Counter </a></td>
+<td align="center">340.</td> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Js-Games/blackjack">blackjack </a></td>	
 </table>
 
 
