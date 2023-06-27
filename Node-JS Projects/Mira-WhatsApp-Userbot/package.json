@@ -1,0 +1,36 @@
+{
+  "name": "Mira",
+  "version": "1.0.0",
+  "description": "Mira will be your virtual assistant. She will help you to get most out of the whatsApp",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/github.com/ManavMalhotra.git"
+  },
+  "keywords": [
+    "whatsapp"
+  ],
+  "author": "Manav Malhotra",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/github.com/ManavMalhotra/issues"
+  },
+  "homepage": "https://github.com/github.com/ManavMalhotra#readme",
+  "dependencies": {
+    "@killovsky/gtts": "^1.0.0",
+    "@whiskeysockets/baileys": "^6.2.1",
+    "axios": "^1.4.0",
+    "cheerio": "^1.0.0-rc.12",
+    "dotenv": "^16.0.3",
+    "pino": "^8.6.1",
+    "qrcode-terminal": "^0.12.0",
+    "readline": "^1.3.0",
+    "request": "^2.88.2",
+    "sharp": "^0.30.7",
+    "yt-search": "^2.10.3",
+    "ytdl-core": "^4.11.2"
+  }
+}

@@ -1,0 +1,5 @@
+node_modules
+baileys_auth_info
+baileys_store.json
+test.js
+tempStorage/*
