@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Url Shortner</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+
+	<link type="text/css" href="/stylesheet.css" rel="stylesheet">
+
+</head>
+<body>
+		<h1 class="display-1">URL SHORTNER</h1>
+		<div class="mb-3">
+		<form action="/shorturl" method="post">
+			<div class="input-group mb-3">
+
+				<span class="input-group-text" id="basic-addon3">https://</span>
+
+				<input placeholder="Enter your url here" type="text" name="fullUrl" id="basic-url" aria-describedby="basic-addon3" class="form-control">
+			</div>
+
+			<button type="submit" name="submit" class="btn btn-success">Generate Short Url</button>
+		</form>
+		</div>
+
+
+		<div class="table-responsive">
+		<table class="table table-dark table-striped table-bordered border border-light table-hover">
+			<tr class="table-group-divider border border-light">
+				<th>Full URL</th>
+				<th>Short URL</th>
+				<th>CLicks</th>
+			</tr>
+			<% shorturls.forEach((shorturl)=>{ %>
+			<tr>
+				<td><a href="<%= shorturl.fullUrl %>" ><%= shorturl.fullUrl %></a></td>
+				<td><a href="/<%= shorturl.shortUrl %>"><%= shorturl.shortUrl %></a></td>
+				<td><%= shorturl.clicks %></td>
+			</tr>
+
+			<% }) %>
+		</table>
+		</div>
+
+	</div>
+
+</body>
+<footer><p>Made by Manav</p> </footer>
+</html>
