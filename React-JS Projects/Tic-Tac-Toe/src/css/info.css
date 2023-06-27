@@ -1,0 +1,52 @@
+.info {
+	width: 30vw;
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+	color: whitesmoke;
+}
+
+.player {
+	border: 2px solid #008080;
+	border-radius: 5px;
+	padding: .5rem 0;
+	display: flex;
+	font-size: 1.5rem;
+	justify-content: center;
+	align-items: center;
+	width: 12vw;
+	cursor: default;
+}
+
+@media screen and (max-width: 950px) {
+	.info {
+		width: 60vw;
+	}
+
+	.player {
+		width: 25vw;
+	}
+}
+
+
+@media screen and (max-width: 550px) {
+	.info {
+		width: 80vw;
+	}
+
+	.player {
+		width: 35vw;
+		font-size: 1rem;
+	}
+}
+
+@media screen and (max-width: 255px) {
+	.info {
+		width: 90vw;
+	}
+
+	.player {
+		width: 40vw;
+		font-size: 0.8rem;
+	}
+}

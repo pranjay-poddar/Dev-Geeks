@@ -1,0 +1,98 @@
+:root {
+  --board-background: none;
+  --border-color: #008080;
+  --border-thickness: 5px;
+}
+
+.board {
+  width: 30vw;
+  height: 50%;
+  background-color: var(--board-background);
+  display: flex;
+  align-items: flex-start;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.input {
+  height: 33.33%;
+  width: 33.33%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: whitesmoke;
+  /* font-family: 'Bellefair', serif; */
+  /* font-style: italic; */
+  font-weight: 400;
+  font-size: 5rem;
+}
+
+.input-1 {
+  border-right: var(--border-thickness) dashed var(--border-color);
+  border-bottom: var(--border-thickness) dashed var(--border-color);
+}
+
+.input-2 {
+  border-right: var(--border-thickness) dashed var(--border-color);
+  border-bottom: var(--border-thickness) dashed var(--border-color);
+}
+
+.input-3 {
+  border-bottom: var(--border-thickness) dashed var(--border-color);
+}
+
+.input-4 {
+  border-right: var(--border-thickness) dashed var(--border-color);
+  border-bottom: var(--border-thickness) dashed var(--border-color);
+}
+
+.input-5 {
+  border-right: var(--border-thickness) dashed var(--border-color);
+  border-bottom: var(--border-thickness) dashed var(--border-color);
+}
+
+.input-6 {
+  border-bottom: var(--border-thickness) dashed var(--border-color);
+}
+
+.input-7 {
+  border-right: var(--border-thickness) dashed var(--border-color);
+}
+
+.input-8 {
+  border-right: var(--border-thickness) dashed var(--border-color);
+}
+
+
+@media screen and (max-width: 950px) {
+  :root {
+    --border-thickness: 4px;
+  }
+
+  .board {
+    width: 50vw;
+    height: 45%;
+  }
+
+  .input {
+    font-weight: 400;
+    font-size: 4rem;
+  }
+}
+
+
+@media screen and (max-width: 550px) {
+  :root {
+    --border-thickness: 3.4px;
+  }
+
+  .board {
+    width: 70vw;
+    height: 40%;
+  }
+
+  .input {
+    font-weight: 350;
+    font-size: 3rem;
+  }
+}

@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Bellefair&display=swap');
+
+.App {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 5vh;
+    backdrop-filter: 5px;
+    background-color: #101010;
+}
+
+.heading {
+    color: white;
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.winner {
+    transition: all ease-in .3s;
+    display: flex;
+    opacity: 1;
+    font-size: 1.5rem;
+    font-weight: 600;
+    gap: 1vh;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 20vw;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -70%);
+    background-color: #1e6e6e;
+    backdrop-filter: 5px;
+    padding: .5rem;
+    padding-bottom: 1rem;
+    border-radius: 10%;
+}
+
+.winner-text {
+    padding: .3em 1em .25em;
+    font-weight: 600;
+    font-size: 2.5rem;
+    color: white;
+    /* font-family: 'Bellefair', serif; */
+    position: relative;
+    text-align: center;
+    line-height: 1.3;
+}
+
+.shrink {
+    transform: scale(.1);
+    opacity: 0;
+}
+
+button {
+    background-color: #111827;
+    border: 1px solid transparent;
+    border-radius: .75rem;
+    box-sizing: border-box;
+    color: #FFFFFF;
+    cursor: pointer;
+    flex: 0 0 auto;
+    font-family: "Inter var";
+    font-size: 1.125rem;
+    font-weight: 600;
+    line-height: 1.5rem;
+    padding: .75rem 1.2rem;
+    text-align: center;
+    text-decoration: none #6B7280 solid;
+    text-decoration-thickness: auto;
+    transition-duration: .2s;
+    transition-property: background-color, border-color,
+        color, fill, stroke;
+    transition-timing-function: cubic-bezier(.4, 0, 0.2, 1);
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    width: auto;
+}
+
+button:hover {
+    background-color: #374151;
+}
+
+button:focus {
+    box-shadow: none;
+    outline: 2px solid transparent;
+    outline-offset: 2px;
+}
+
+/* Responsive */
+
+@media screen and (max-width: 950px) {
+    .winner {
+        width: 30vw;
+        border-radius: 6%;
+    }
+
+    .winner-text {
+        font-weight: 500;
+        font-size: 2rem;
+    }
+
+    .heading{
+        font-size: 1.6rem;
+        font-weight: 500;
+    }
+
+    button {
+        padding: .75rem 1.5rem;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .winner {
+        width: 40vw;
+        border-radius: 6%;
+    }
+
+    .winner-text {
+        font-weight: 500;
+        font-size: 1.6rem;
+    }
+
+    .heading {
+        font-size: 1.5rem;
+        font-weight: 400;
+    }
+}
+
+@media screen and (max-width: 388px) {
+    .winner {
+        width: 60vw;
+        border-radius: 6%;
+    }
+
+    .winner-text {
+        font-weight: 500;
+        font-size: 1.4rem;
+    }
+
+    .heading{
+        font-size: 1.1rem;
+        font-weight: 250;
+    }
+
+}
