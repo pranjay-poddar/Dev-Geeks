@@ -1,0 +1,17 @@
+{
+  "name": "project0",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.4.0",
+    "dotenv": "^16.1.4",
+    "nodemon": "^2.0.22",
+    "telegraf": "^4.12.2"
+  }
+}
