@@ -1,2 +1,2 @@
-Button Animation
+# Button Animation
 An animated Light/Dark mode button.
