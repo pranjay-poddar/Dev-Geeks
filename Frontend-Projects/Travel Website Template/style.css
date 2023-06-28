@@ -57,11 +57,12 @@ main {
   color: white;
 }
 
-section h3 {
+section h2 {
   font-size: 35px;
   font-weight: 200;
   letter-spacing: 3px;
   text-shadow: 1px 1px 2px black;
+  color: #B31312;
 }
 
 section h1 {
