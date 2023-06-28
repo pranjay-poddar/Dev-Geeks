@@ -6,9 +6,9 @@
 
 # Screenshots
 
-<p align="center">
-  <img src=".images/github search.png" width="1000" >
-</p>
+![](<images/github search.png>)
+
+
 
 
 
