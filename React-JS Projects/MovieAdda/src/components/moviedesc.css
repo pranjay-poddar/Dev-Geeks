@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+.maindiv{
+    /* position:absolute; */
+    width:800px;
+    margin:30vh auto;
+    background-color:black;
+    height:max-content;
+    display:flex;
+    flex-direction:row;
+    color:white;
+    padding:20px;
+    border-radius:20px;
+    font-family: 'Playfair Display', serif;
+  }
+  
+  .maindiv img{
+    width:300px;
+    border-radius: 20px;
+  }
+  
+  .maindiv div{
+    margin:0 20px;
+    font-size:17px;
+    text-align: justify;
+  }
+  .maindiv h2{
+    font-size:30px;
+    padding:3px 20px;
+    background-color:rgb(230, 15, 0);
+    color:rgb(255, 255, 255);
+    width:max-content;
+    margin-bottom: 40px;
+  }
+  
+  .maindiv div a{
+    background-color: rgb(255, 255, 255);
+    padding: 3px 10px;
+    text-decoration:none;
+    color:rgb(188, 0, 0);
+    border-radius: 10px;
+    float:right;
+  }
+
+  @media screen and (max-width:860px) {
+    .maindiv{
+        width:600px;
+    }
+    .maindiv img{
+        width:230px;
+    }
+  }
+  @media screen and (max-width:600px) {
+    .maindiv{
+        width:90vw;
+        flex-direction: column;
+        align-items: center;
+    }
+    .maindiv img{
+        width:230px;
+        margin-bottom: 30px;
+    }
+  }
