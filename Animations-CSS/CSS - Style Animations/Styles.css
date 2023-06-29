@@ -1,0 +1,19 @@
+div{
+	height: 100px;
+	width: 100px;
+	background-color: cyan;
+	top: 15%;
+	left: 15%;
+	position: absolute;
+/*	transform: translate(100px);*/
+
+/*transition: height 1s ease-in-out 0.5s;*/
+transition: 1s ease-in-out;
+/*transition: 1s steps(4,end);*/
+}
+
+div:hover{
+/*	height: 400px;*/
+/*	width: 400px;*/
+transform: scale(1.5) translate(150px);
+}
