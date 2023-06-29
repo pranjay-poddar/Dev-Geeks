@@ -23,7 +23,7 @@ html::-webkit-scrollbar {
 }
 
 html::-webkit-scrollbar-track {
-  background: #eee;
+  background: #af9696;
 }
 
 html::-webkit-scrollbar-thumb {
@@ -32,7 +32,7 @@ html::-webkit-scrollbar-thumb {
 }
 
 body {
-  background: #eee;
+  background: #9a8181;
 }
 
 section {
@@ -47,7 +47,7 @@ section {
 }
 
 .heading span {
-  color: #030203;
+  color: #580058;
 }
 
 .btn {
@@ -62,7 +62,7 @@ section {
 }
 
 .btn:hover {
-  background: #333;
+  background: #ff0000;
 }
 
 @-webkit-keyframes fadeIn {
@@ -103,7 +103,7 @@ section {
 
 .header .logo {
   font-size: 2.5rem;
-  color: #fff;
+  color: #be5151;
   font-weight: bolder;
 }
 
@@ -153,7 +153,7 @@ section {
 
 .header .icons a:hover,
 .header .icons div:hover {
-  color: gold;
+  color: rgb(164, 62, 62);
 }
 
 #search-btn {
@@ -1079,6 +1079,39 @@ section {
 
 .shopping-cart .cart-total h3 span {
   color: #0984e3;
+}
+
+.footer {
+  background-color: #333;
+  color: #ffffff;
+  padding: 20px 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  text-align: center;
+}
+
+.footer p {
+  margin: 0;
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin-top: 10px;
+}
+
+.footer-links li {
+  display: inline;
+  margin-right: 10px;
+}
+
+.footer-links li a {
+  color: #fff;
+  text-decoration: none;
 }
 
 .quick-links {
