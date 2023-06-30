@@ -25,4 +25,4 @@ If the player answers a question correctly, they will advance to the next prize 
 
 Good luck and have fun playing Kaun Banega Crorepati!
 
-Make with :heavy_heart_exclamation: by soubhik
+Make with :heavy_heart_exclamation: by Soubhik
