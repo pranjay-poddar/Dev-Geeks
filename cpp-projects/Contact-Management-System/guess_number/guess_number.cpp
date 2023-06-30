@@ -20,8 +20,11 @@ bool compareByScore(const Player &player1, const Player &player2)
     return player1.score < player2.score;
 }
 
-void displayLeaderboard(const Player leaderboard[], int size)
+void displayLeaderboard(Player leaderboard[], int size)
 {
+    // Sort the leaderboard based on score in ascending order
+    sort(leaderboard, leaderboard + size, compareByScore);
+
     cout << "------ Leaderboard ------" << endl;
     cout << "Rank\tName\tScore" << endl;
 
@@ -101,13 +104,6 @@ int main()
 {
     Player leaderboard[MAX_PLAYERS];
 
-    // Initialize leaderboard with default values
-    for (int i = 0; i < MAX_PLAYERS; ++i)
-    {
-        leaderboard[i].name = "N/A";
-        leaderboard[i].score = 0;
-    }
-
     // Load previous leaderboard from file
     loadLeaderboard(leaderboard);
 
@@ -121,11 +117,29 @@ int main()
 
     currentPlayer.score = playGame();
 
-    if (currentPlayer.score > leaderboard[MAX_PLAYERS - 1].score)
+    int index = -1;  // Index to track the position of the currentPlayer
+
+    // Check if currentPlayer's score is greater than any existing player's score
+    for (int i = 0; i < MAX_PLAYERS; ++i)
     {
-        leaderboard[MAX_PLAYERS - 1] = currentPlayer;
-        // Sort the leaderboard based on score in ascending order
-        sort(leaderboard, leaderboard + MAX_PLAYERS, compareByScore);
+        if (currentPlayer.score > leaderboard[i].score)
+        {
+            index = i;
+            break;
+        }
+    }
+
+    // If currentPlayer's score is higher, update the leaderboard
+    if (index != -1)
+    {
+        // Shift the leaderboard entries to make space for currentPlayer
+        for (int i = MAX_PLAYERS - 1; i > index; --i)
+        {
+            leaderboard[i] = leaderboard[i - 1];
+        }
+
+        // Insert currentPlayer at the correct position
+        leaderboard[index] = currentPlayer;
     }
 
     cout << "\nUpdated leaderboard:" << endl;
