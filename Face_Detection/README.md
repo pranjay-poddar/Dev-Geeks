@@ -4,8 +4,6 @@ Protect your Computer against strangers ! If foreigners want to log in to your c
 
 Face Recognition in Live Camera
 
-![github-small](36f0e3f0-13cb-11e7-8258-4d0c9ce1e419.gif)
-
 
 ## Installation
 ### Requirements
