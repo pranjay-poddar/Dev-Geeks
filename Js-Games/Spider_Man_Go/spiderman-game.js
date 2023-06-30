@@ -24,26 +24,26 @@ document.head.appendChild(link);
 
 
 var RESOURCES = {
-	"JUMP"               : "images/jump.png",
-	"RUNNING_CHANGE_STEP": "images/running-change-step.png",
-	"RUNNING_LEFT_STEP"  : "images/running-left-step.png",
-	"RUNNING_RIGHT_STEP" : "images/running-right-step.png",
-	"SHOOT_CHANGE_STEP"  : "images/shoot-change-step.png",
-	"SHOOT_JUMP"         : "images/shoot-jump.png",
-	"SHOOT_LEFT-STEP"    : "images/shoot-left-step.png",
-	"SHOOT_RIGHT-STEP"   : "images/shoot-right-step.png",
-	"SHOOT"              : "images/shoot.png",
-	"SLIDE"              : "images/slide.png",
-	"STANDING"           : "images/standing.png",
-	"WEB_PROJECTILE"     : "images/web.png",
-	"BACKGROUND"         : "images/background.jpg",
-	"ROOF"               : "images/wall.jpg",
-	"BUILDING"           : "images/building.png",
-	"SPIDER_HEAD"        : "images/spider-head.png",
-	"HEART"              : "images/heart.png",
-	"VENOM"              : "images/venom.png",
-	"THUG"               : "images/thug.png",
-	"KNIFE"              : "images/knife.png",
+	"JUMP"               : "https://drive.google.com/file/d/1zVHdbvhIjnjkeJKNRwGfZpgUuwwORwbA/view?usp=drive_link",
+	"RUNNING_CHANGE_STEP": "https://drive.google.com/file/d/14CEu1thkdA2ZYcUGtPUa9oS4zBoqZq2y/view?usp=drive_link",
+	"RUNNING_LEFT_STEP"  : "https://drive.google.com/file/d/1E1vMySjNKdPYija2RHrLiqfNiiSgj8fu/view?usp=drive_link",
+	"RUNNING_RIGHT_STEP" : "https://drive.google.com/file/d/13Ypp9np7gSOsHJThkaeiXIK1y1eT6JT7/view?usp=drive_link",
+	"SHOOT_CHANGE_STEP"  : "https://drive.google.com/file/d/1zvF8bVqrRg_HGf7xj2XoZNg00saONkzY/view?usp=drive_link",
+	"SHOOT_JUMP"         : "https://drive.google.com/file/d/1v4PE0KNUC3wsQSkeuoCgxJuVvs_eXqbg/view?usp=drive_link",
+	"SHOOT_LEFT-STEP"    : "https://drive.google.com/file/d/1E1vMySjNKdPYija2RHrLiqfNiiSgj8fu/view?usp=drive_link",
+	"SHOOT_RIGHT-STEP"   : "https://drive.google.com/file/d/13Ypp9np7gSOsHJThkaeiXIK1y1eT6JT7/view?usp=drive_link",
+	"SHOOT"              : "https://drive.google.com/file/d/1UAWsnCDF4jfJ_yz5tvi974NoW2r6qN7Q/view?usp=drive_link",
+	"SLIDE"              : "https://drive.google.com/file/d/1E0Uc4AR-COQywOjPeU3Pn_6L5NfhtxA_/view?usp=drive_link",
+	"STANDING"           : "https://drive.google.com/file/d/1LCJWBdpPqHrEmPUf7B2-41CglV553HKU/view?usp=drive_link",
+	"WEB_PROJECTILE"     : "https://drive.google.com/file/d/1CpfyCxa2d9X-X1wayLfhGngJ_1akPH_q/view?usp=drive_link",
+	"BACKGROUND"         : "https://drive.google.com/file/d/13IMu8f1W1kbd19BtRepcYTB9ZJ9DtIfJ/view?usp=drive_link",
+	"ROOF"               : "https://drive.google.com/file/d/1onPOJI6IXU4Va9X6yM-dcIy-yWGC-wJK/view?usp=drive_link",
+	"BUILDING"           : "https://drive.google.com/file/d/1VfLUeamdnlZZ3LpBmuKfP-eQ-8ih3dPN/view?usp=drive_link",
+	"SPIDER_HEAD"        : "https://drive.google.com/file/d/1Cus7fUF7cxanBuQy2E0LUXSroR6USjOp/view?usp=drive_link",
+	"HEART"              : "https://drive.google.com/file/d/1ZNsc--2aLTbaL78XaZ2upirFgEaH8pm1/view?usp=drive_link",
+	"VENOM"              : "https://drive.google.com/file/d/1DEfWeXyzKh-VqGDt2CMuAR0QeabNvpxm/view?usp=drive_link",
+	"THUG"               : "https://drive.google.com/file/d/1XKmrzuNMspZylcAUoe8mRLg4xMKoSJ-G/view?usp=drive_link",
+	"KNIFE"              : "https://drive.google.com/file/d/1sRKS_DZGazhN0dDJ0jmbHXplpPjbWDxl/view?usp=drive_link",
 };
 
 var AUDIO_RESOURCES = {
@@ -1104,5 +1104,4 @@ window.Projectile    = Projectile;
 window.SpiderMan     = SpiderMan;
 window.Enemy         = Enemy;
 window.Roof          = Roof;
-
 })(window, document);
