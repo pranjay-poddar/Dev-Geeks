@@ -11,7 +11,7 @@ Face Recognition in Live Camera
 
 • macOS or Linux (Windows not officially supported, but might work)
 
-• For Install "face_recognition and dlib" : [Click Here!](https://github.com/ageitgey/face_recognition)
+• For Install "face_recognition and dlib" 
 
 • Chrome Driver : https://chromedriver.chromium.org/downloads
 
