@@ -1,0 +1,85 @@
+html {
+    height: 100%;
+    width: 100%;
+  }
+  
+  body {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-image: url('https://www.shutterstock.com/image-photo/wooden-english-letters-background-copy-260nw-705986707.jpg');
+    background-repeat: no-repeat;
+    background-size: 100% 664px;
+  
+  
+  }
+  
+  
+  .wrapper {
+    width: 490px;
+    background-color: #fff;
+    border-radius: 20px;
+  }
+  
+  .wrapper h1 {
+    font-size: 3rem;
+    padding: 25px 44px;
+    border-bottom: 1px solid gray;
+  }
+  
+  .wrapper .content {
+    margin: 25px 25px 35px;
+  }
+  
+  .content .inputs {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .content .typing-input {
+    z-index: -999;
+    position: absolute;
+    opacity: 0;
+  }
+  
+  .inputs input {
+    height: 56px;
+    width: 59px;
+    margin: 4px;
+    border: 1px solid grey;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 2rem;
+    color: #1791ce;
+    text-transform: uppercase;
+  
+  }
+  
+  .inputs input:first-child {
+    margin-left: 0px;
+  }
+  
+  .content .details {
+    margin: 25px 0px 35px;
+  }
+  
+  .details {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+  
+  .content .reset-btn {
+    width: 100%;
+    cursor: pointer;
+    outline: none;
+    color: #fff;
+    font-size: 1.5rem;
+    border: none;
+    border-radius: 20px;
+    background-color: #1cbddf;
+    padding: 15px 0px;
+  
+  }
