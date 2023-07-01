@@ -7,10 +7,11 @@
           box-sizing: border-box;
   outline: none;
   border: none;
-  text-decoration: none;
+  text-decoration: none; 
   -webkit-transition: all .2s linear;
   transition: all .2s linear;
 }
+
 
 img {
   -webkit-user-select: none;
@@ -323,6 +324,7 @@ section {
   -ms-grid-columns: (minmax(16rem, 1fr))[auto-fit];
       grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
   gap: 2rem;
+
 }
 
 .subjects .box-container .box {
@@ -331,6 +333,7 @@ section {
   border: 0.1rem solid #0eb582;
   background: #f0fdfa;
   cursor: pointer;
+
 }
 
 .subjects .box-container .box:hover {
