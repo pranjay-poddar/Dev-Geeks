@@ -713,11 +713,8 @@ Happy Coding! -->
 <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Js-Projects/Colovaria"> Colovaria </a></td>
 <td align="center">235.</td>
 <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Java%20Projects/Inventory%20Management%20System">Inventory Management System</a></td>
-<td align="center"> 236</td>
+<td align="center">236.</td>
 <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Js-Games/Pacman"> Pacman Game </a></td>
-
-<td align="center"> 236.</td>
-<td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Frontend-Projects/FIght%20Game"> Fight Game </a></td>
 </tr>	
 
 
@@ -773,10 +770,19 @@ Happy Coding! -->
 <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Frontend-Projects/QrComponent"> QrComponent </a></td>
 <td align="center"> 255.</td>
 <td align="center"><a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Js-Games/Mexico Escape">Mexico Escape</a></td>
-<td align="center"> 255.</td>
-<td align="center"><a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Js-Games/Quiz_Game">Quiz_GAme</a></td>
 <td align="center"> 256.</td>
 <td align="center"><a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Js-Games/Spider_Man_Go">Spider Man Go</a></td>
+</tr>
+
+<tr align="center">
+  <td align="center"> 257.</td>
+  <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Frontend-Projects/FIght%20Game"> Fight Game </a></td>
+
+  <td align="center"> 258.</td>
+  <td align="center"><a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Js-Games/Quiz_Game">Quiz_Game</a></td>
+
+  <td align="center"> 259.</td>
+  <td align="center"><a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/PHP%20Projects/User_Signup_Login_with_database">PHP-Signup-Login</a></td>
 </tr>
 </table>
 
