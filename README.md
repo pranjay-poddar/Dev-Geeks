@@ -778,6 +778,11 @@ Happy Coding! -->
 <td align="center"> 256.</td>
 <td align="center"><a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Js-Games/Spider_Man_Go">Spider Man Go</a></td>
 </tr>
+
+<tr align="center">
+<td align="center"> 257.</td>
+<td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Flutter Projects/Instagram Clone"> Flutter Instagram Clone </a></td>
+</tr>
 </table>
 
 
