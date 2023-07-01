@@ -4,10 +4,10 @@
 
 <br>
 
-## **Description 📃**
+## **Description 🚩**
 ATLAS is a country name game where players take turns naming countries based on the last letter of the previously named country. The game is played between the player and the computer. The goal is to come up with valid country names and earn points for each correct guess.
 
-## **functionalities 🎮**
+## **Functionalities ✨**
 - Input a country name and check if it is valid.
 - Validate if the country name starts with the correct letter based on the previous country.
 - Generate a random valid country name for the computer.
@@ -16,7 +16,7 @@ ATLAS is a country name game where players take turns naming countries based on 
 - End the game when the maximum number of incorrect attempts or passes is reached, or when there are no more countries left. 
 <br>
 
-## **How to play? 🕹️**
+## **How to play? ▶️**
 - Enter a country name in the input field.
 - Click the "Play" button or press Enter to submit your answer.
 - The computer will respond with its country name.
@@ -31,8 +31,7 @@ Your final score will be displayed at the end of the game.
 ## **Screenshots 📸**
 
 <br>
-
+<img width="726" alt="Atlas" src="https://github.com/AnkitaBarbora/Dev-Geeks/assets/101138526/9f11dd64-ef7b-484a-9717-025f60d0dfaa">
 
 <br>
 
-## **Working video 📹**
