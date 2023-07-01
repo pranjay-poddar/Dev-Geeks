@@ -1,9 +1,5 @@
 # **ATLAS** 
 
----
-
-<br>
-
 ## **Description 🚩**
 ATLAS is a country name game where players take turns naming countries based on the last letter of the previously named country. The game is played between the player and the computer. The goal is to come up with valid country names and earn points for each correct guess.
 
