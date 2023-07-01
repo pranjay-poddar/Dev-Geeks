@@ -77,7 +77,7 @@ body{
 .user-profile{
     width: 22px;
     border-radius: 50%;
-    background-image: url(img/profile-pic.png);
+    background-image: url(https://ik.imagekit.io/m28ienqgh/Instagram/profile-pic.png);
     background-size: cover;
 }
 .main{
