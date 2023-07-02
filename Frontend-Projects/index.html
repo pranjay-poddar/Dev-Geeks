@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+            *{
+                background-color:rgb(45, 43, 43) ;
+            }
+            #weekforcast{
+                width: 100%;
+                margin: auto;
+                height: 250px;
+                border: 1px solid white;
+                display: grid;
+                grid-template-columns: repeat(5,1fr);
+                grid-template-rows: repeat(1,250px);
+                gap: 20px;
+                background-color: rgb(31, 76, 123);
+
+            }
+            #weekforcast>div{
+                border: 1px solid;
+                margin-left: 10%;
+                margin-top: 5%;
+                margin-bottom: 5%;
+                margin-right: 10%;
+                color: black;
+                background-color: rgb(186, 221, 243);
+                /* background-color: transparent; */
+            }
+            #weekforcast>div>h3{
+                text-align: center;
+                margin-top: 5%;
+                color: white;
+                background-color: rgb(186, 221, 243);
+                color: black;
+                font-family: 'Poppins', sans-serif;
+                background-color: rgb(186, 221, 243);
+            }
+            #weekforcast>div>img{
+                margin-left: 30%;
+                background-color: rgb(186, 221, 243);
+            }
+            #citymap>div{
+                background-color:rgb(0, 162, 255) ;
+            }
+            #citymap{
+
+                width: 100%;
+                margin: auto;
+                display: grid;
+                grid-template-columns: repeat(2,1fr);
+                grid-template-rows: repeat(1,390px);
+                gap: 10px;
+            }
+            iframe{
+                height: 390px;
+                border: 0px;
+            }
+            #container{
+                border: 0px solid;
+
+            }
+            /* #container>div>h3{
+                font-size: 300%;
+                margin-left: 5%;
+                font-family: 'Poppins', sans-serif;
+                color: white;
+                background-color:rgb(0, 162, 255)
+            }
+            #container>div>p{
+                font-size: 150%;
+                margin-left: 5%;
+                font-family: 'Poppins', sans-serif;
+                color: white;
+                background-color:rgb(0, 162, 255) */
+
+
+            /* } */
+            #weekforcast>div{
+                border: 0px solid;
+
+            }
+            input{
+                margin-left: 1%;
+                margin-top: 1%;
+                margin-bottom: 1%;
+                margin-right: 1%;
+                padding: 10px 40px 10px 40px;
+                border-top: none;
+                border-right: none;
+                border-left:none;
+                color: white;
+                font-size: 20px;
+                font-family: 'Poppins', sans-serif;
+
+            }
+            button{
+                padding: 10px 40px 10px 40px;
+                color: white;
+                background-color: rgb(46, 199, 97);
+                border-radius: 20px;
+            }
+            #container{
+                display: grid;
+                grid-template-columns: repeat(2,1fr);
+                grid-template-rows: repeat(1,300px);
+            }
+            #container>div{
+                background-color:rgb(0, 162, 255)
+            }
+            /* #card2{
+                border: 1px solid;
+                padding-top: 5%;
+            }
+            #card1{
+                border: 1px solid;
+            } */
+            #card1>h3{
+                color: white;
+                background-color:rgb(0, 162, 255);
+                font-size: 50px;
+                margin-left: 5%;
+                font-family: 'Poppins', sans-serif;
+            }
+            #card2>h2{
+                background-color:rgb(0, 162, 255);
+                font-size: 30px;
+                color: white;
+                font-family: 'Poppins', sans-serif;
+
+            }
+            #card2>img{
+                background-color:rgb(0, 162, 255);
+                margin-left: 5%;
+            }
+            #card2>h3{
+                color: white;
+                background-color:rgb(0, 162, 255);
+                font-size: 20px;
+                font-family: 'Poppins', sans-serif;
+                margin-left: 5%;
+            }
+            #card1>p{
+                color: white;
+                background-color:rgb(0, 162, 255);
+                margin-left: 5%;
+                font-family: 'Poppins', sans-serif;
+            }
+        </style>
+</head>
+
+<body>
+<input type="text" id="city" placeholder="Enter City">
+<button onClick="getData(),getData2(),getData3()">Search Wheather</button>
+<div id="citymap">
+    <div id="container">
+        <div id="card1"></div>
+        <div id="card2"></div>
+    </div>
+
+    <div class="mapouter" >
+        <div class="gmap_canvas " ><iframe  style="background-color:rgb(0, 162, 255) ;" width="800" height="500" id="gmap_canvas"
+                                            frameborder="0"
+                                            scrolling="no" marginheight="0" marginwidth="0"></iframe>
+        </div>
+    </div>
+</div>
+<div id="weekforcast" >
+
+
+</div>
+
+</body>
+
+</html>
+<script src="main.js"></script>
