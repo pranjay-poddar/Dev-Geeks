@@ -1,0 +1,273 @@
+//issue #2882 solved
+//Html code
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>To Do List</title>
+
+	<link rel="stylesheet" href="main.css" />
+	<style>
+#grad1 {
+  height: 100px;
+  background-color: red; /* For browsers that do not support gradients */
+  background-image: repeating-linear-gradient(red, yellow 10%, green 20%);
+}
+</style>
+</head>
+<body>
+	<div id="grad1"></div>
+	<header>
+        <h3>To Do List</h3>
+		<form id="new-task-form">
+			<input 
+				type="text" 
+				name="new-task-input" 
+				id="new-task-input" 
+				placeholder="Come and talk to the listening bank..."/>
+			<input 
+				type="Submit"
+				id="new-task-submit" 
+				value="Add" />
+		</form>
+	</header>
+	<main>
+		<section class="task-list">
+			<h2>Tasks to perform:-</h2>
+			<div id="tasks">
+			</div>
+		</section>
+	</main>
+
+	<script src="main.js"></script>
+	<div id="grad1"></div>
+</body>
+</html>
+--------------------------------------------------------------------------------------------------------------------------
+//CSS Code
+:root {
+	--blue: #00ccff;
+	--darkest: #000000;
+	--darker: #111827;
+	--darkest: #010611;
+	--pink: #006eff;
+	--purple: #ff0000ca;
+	--light: rgb(255, 255, 255);
+}
+
+* {
+	margin: 0;
+	box-sizing: border-box;
+	font-family: "Fira sans", sans-serif;
+}
+
+body {
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+	color: rgb(0, 0, 0);
+	background-color: var(--dark);
+}
+
+header {
+	padding: 6rem 1rem;
+	max-width: 800px;
+	width: 100%;
+	margin: 0 auto;
+}
+
+header h1{ 
+	font-size: 5rem;
+	font-weight: 300;
+	color: var(--grey);
+	margin-bottom:5rem;
+}
+
+#new-task-form {
+	display: flex;;
+}
+
+input, button {
+	appearance: none;
+	border: none;
+	outline: none;
+	background: none;
+}
+
+#new-task-input {
+	flex: 1 1 0%;
+	background-color: var(--darker);
+	padding: 1rem;
+	border-radius: 5rem;
+	margin-right: 1rem;
+	color: var(--light);
+	font-size: 1.25rem;
+}
+
+#new-task-input::placeholder {
+	color: var(--grey);
+}
+
+#new-task-submit {
+	color: var(--pink);
+	font-size: 1.5rem;
+	font-weight: 700;
+	background-image: linear-gradient(to right, var(--pink), var(--purple));
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	cursor: pointer;
+	transition: 0.4s;
+}
+
+
+#new-task-submit:hover {
+	opacity: 0.8;
+}
+
+#new-task-submit:active {
+	opacity: 0.6;
+}
+
+main {
+	flex: 1 1 0%;
+	max-width: 800px;
+	width: 100%;
+	margin: 0 auto;
+}
+
+.task-list {
+	padding: 1rem;
+}
+
+.task-list h2 {
+	font-size: 2rem;
+	font-weight: 300;
+	color: var(--grey);
+	margin-bottom: 1rem;
+}
+
+#tasks .task {
+	display: flex;
+	justify-content: space-between;
+	background-color: var(--darkest);
+	padding: 1rem;
+	border-radius: 5rem;
+	margin-bottom: 1rem;
+}
+
+.task .content {
+	flex: 1 1 0%;
+}
+
+.task .content .text {
+	color: var(--light);
+	font-size: 1.125rem;
+	width: 100%;
+	display: block;
+	transition: 0.4s;
+}
+
+.task .content .text:not(:read-only) {
+	color: var(--pink);
+}
+
+.task .actions {
+	display: flex;
+	margin: 0 1rem;
+}
+
+.task .actions button {
+	cursor: pointer;
+	margin: 0 1rem;
+	font-size: 1.125rem;
+	font-weight: 700;
+	text-transform: uppercase;
+	transition: 0.4s;
+}
+
+.task .actions button:hover {
+	opacity: 0.8;
+}
+
+.task .actions button:active {
+	opacity: 0.6;
+}
+
+.task .actions .edit {
+	background-image: linear-gradient(to right, var(--pink), var(--purple));
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+.task .actions .delete {
+	color: rgb(255, 0, 0);
+}
+
+-----------------------------------------------------------------------------------------------------------------
+//JavaScript Code
+
+window.addEventListener('load', () => {
+	const form = document.querySelector("#new-task-form");
+	const input = document.querySelector("#new-task-input");
+	const list_el = document.querySelector("#tasks");
+
+	form.addEventListener('submit', (e) => {
+		e.preventDefault();
+
+		const task = input.value;
+
+		const task_el = document.createElement('div');
+		task_el.classList.add('task');
+
+		const task_content_el = document.createElement('div');
+		task_content_el.classList.add('content');
+
+		task_el.appendChild(task_content_el);
+
+		const task_input_el = document.createElement('input');
+		task_input_el.classList.add('text');
+		task_input_el.type = 'text';
+		task_input_el.value = task;
+		task_input_el.setAttribute('readonly', 'readonly');
+
+		task_content_el.appendChild(task_input_el);
+
+		const task_actions_el = document.createElement('div');
+		task_actions_el.classList.add('actions');
+		
+		const task_edit_el = document.createElement('button');
+		task_edit_el.classList.add('edit');
+		task_edit_el.innerText = 'Edit';
+
+		const task_delete_el = document.createElement('button');
+		task_delete_el.classList.add('delete');
+		task_delete_el.innerText = 'Delete';
+
+		task_actions_el.appendChild(task_edit_el);
+		task_actions_el.appendChild(task_delete_el);
+
+		task_el.appendChild(task_actions_el);
+
+		list_el.appendChild(task_el);
+
+		input.value = '';
+
+		task_edit_el.addEventListener('click', (e) => {
+			if (task_edit_el.innerText.toLowerCase() == "edit") {
+				task_edit_el.innerText = "Save";
+				task_input_el.removeAttribute("readonly");
+				task_input_el.focus();
+			} else {
+				task_edit_el.innerText = "Edit";
+				task_input_el.setAttribute("readonly", "readonly");
+			}
+		});
+
+		task_delete_el.addEventListener('click', (e) => {
+			list_el.removeChild(task_el);
+		});
+	});
+});
