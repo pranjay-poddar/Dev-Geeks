@@ -60,7 +60,7 @@ vector<vector<string>> options = {
     {"A) 6", "B) 5", "C) 10", "D) Garbage value"},
     {"A) <string>", "B) <cstring>", "C) <iostream>", "D) <string.h>"}
 };
-vector<int> correctAnswers = {4, 1, 1, 1, 1, 2, 1, 1, 2, 1};
+vector<int> correctAnswers = {4, 2, 1, 1, 1, 2, 1, 1, 2, 1};
 
     cout << "Welcome to the C++ Quiz Game!" << endl;
     cout << "---------------------------------" << endl;
