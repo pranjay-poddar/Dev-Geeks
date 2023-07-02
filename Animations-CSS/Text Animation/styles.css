@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    font-family: 'Lato', sans-serif;
+}
+
+
+.container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container span {
+    font-size: 50px;
+    font-weight: bold;
+    color: #348c04;
+    animation: left-to-right .5s forwards;
+    opacity: 0;
+}
+
+@keyframes left-to-right {
+    0% {
+        transform: translateX(-150px) scale(0.5);
+        opacity: 0;
+        color: #348c04;
+    }
+
+    30% {
+        transform: translateX(150px) scale(0.8);
+        opacity: 1;
+        color: #348c04;
+    }
+
+    60% {
+        transform: translateX(0) scale(2);
+        opacity: 0;
+        color: blue;
+    }
+
+    70% {
+        color: #348c04;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.container span:nth-of-type(1) {
+    animation-delay: 0s;
+}
+
+.container span:nth-of-type(2) {
+    animation-delay: 0.05s;
+}
+
+.container span:nth-of-type(3) {
+    animation-delay: 0.1s;
+}
+
+.container span:nth-of-type(4) {
+    animation-delay: 0.15s;
+}
+
+.container span:nth-of-type(5) {
+    animation-delay: 0.2s;
+}
+
+.container span:nth-of-type(6) {
+    animation-delay: 0.25s;
+}
+
+.container span:nth-of-type(7) {
+    animation-delay: 0.30s;
+}
+
+.container span:nth-of-type(8) {
+    animation-delay: 0.35s;
+}
+
+.container span:nth-of-type(9) {
+    animation-delay: 0.40s;
+}
+
+.container span:nth-of-type(10) {
+    animation-delay: 0.45s;
+}
+
+.container span:nth-of-type(11) {
+    animation-delay: 0.5s;
+}
+
+.container span:nth-of-type(12) {
+    animation-delay: 0.55s;
+}
+
+.container span:nth-of-type(13) {
+    animation-delay: 0.6s;
+}
+
+.container span:nth-of-type(14) {
+    animation-delay: 0.65s;
+}
+
+.container span:nth-of-type(15) {
+    animation-delay: 0.7s;
+}

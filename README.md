@@ -448,7 +448,7 @@ Happy Coding! -->
 <td align="center"> 138.</td>
 <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Js-Projects/Text%20to%20speech"> Text to speech  </a></td>
 <td align="center"> 139.</td>
-<td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/blob/main/Python%20Projects/Tic%20Tac%20Toe.py"> Tic Tac Toe.py </a></td>
+<td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/blob/main/Python%20Projects/Tic%20Tac%20toe/Tic%20Tac%20Toe.py"> Tic Tac Toe.py </a></td>
 <td align="center"> 140.</td>
 <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Js-Games/Tic-Tac-Toe">  Tic-Tac-Toe </a></td>
 </tr>
@@ -493,15 +493,15 @@ Happy Coding! -->
 <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/.github/workflows">  workflows </a></td>
 <td align="center"> 155.</td>
 <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/ML%20Projects/Youtube-video-downloader"> Youtube-video-downloader </a></td>
-<td align="center"> 156.</td>	
+<td align="center"> 156.</td>
 <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/React-JS%20Projects/responsive-product-component">Reactive-Product-Component</a></td>
 </tr>
-	
-<tr align="center">	
+
+<tr align="center">
 <td align="center"> 157.</td>
 <td align="center"> <a href="https://github.com/sumitkr2000/BMI_Calculator/tree/main/bmi-calculator">BMI Calculator</a></td>
 <td align="center"> 158.</td>
-<td align="center"> <a href="https://github.com/Noothan-am/Dice-game-/tree/main/dicegame">  Dice game</a></td>
+<td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Js-Games/dice%20game">  Dice game</a></td>
 <td align="center"> 159.</td>
 <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Js-Games/Typer">  Typing Game</a></td>
 <td align="center"> 160.</td>
@@ -518,7 +518,7 @@ Happy Coding! -->
 <td align="center"> 164.</td>
 <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Animations-CSS/Countdown_Animation"> Project Countdown Animation</a></td>
 </tr>
-	
+
 <tr align="center">
 <td align="center"> 165.</td>
 <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Frontend-Projects/Hoverboard"> Project Hoverboard</a></td>
@@ -529,7 +529,7 @@ Happy Coding! -->
 <td align="center"> 168.</td>
 <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/ML%20Projects/Compress%20PDF'S"> PDF Compressor</a></td>
 </tr>
-	
+
 <tr align="center">
 <td align="center"> 169.</td>
 <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/ML%20Projects/Plagiarism%20Checker"> Plagiarism checker</a></td>
@@ -552,7 +552,7 @@ Happy Coding! -->
 <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Js-Games/Whack%20A%20Mole"> Whack A Mole</a></td>
 </tr>
 
-<tr align="center">	
+<tr align="center">
 <td align="center"> 177.</td>
 <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/commit/64aad56984f9f194c4ce6c0611a8f6eca2e6bea2"> Apple E-commerce Website</a></td>
 <td align="center"> 178.</td>
@@ -562,7 +562,7 @@ Happy Coding! -->
 <td align="center"> 180.</td>
 <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Frontend-Projects/responsive%20navbar"> Responsive navbar</a></td>
 
-<tr align="center">	
+<tr align="center">
 <td align="center"> 181.</td>
 <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/ML%20Projects/BMI%20CALCULATOR"> BMI CALCULATOR FILE</a></td>
 <td align="center"> 182.</td>
@@ -572,7 +572,7 @@ Happy Coding! -->
 <td align="center"> 184.</td>
 <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Frontend-Projects/game-survey%20form"> Gaming site</a></td>
 </tr>
-	
+
 <tr align="center">
 <td align="center"> 185.</td>
 <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/blob/main/Python%20Projects/Blackjack.py"> Blackjack python game</a></td>
@@ -583,7 +583,7 @@ Happy Coding! -->
 <td align="center"> 188.</td>
 <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Js-Games/whack%20a%20mole%20game">  whack a mole game </a></td>
 </tr>
-	
+
 <tr align="center">
 <td align="center"> 189.</td>
 <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Js-Games/ballon%20splash%20game">  balloon splash game </a></td>
@@ -619,7 +619,7 @@ Happy Coding! -->
 
 <tr align="center">
 <td align="center"> 201.</td>
-<td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Js-Games/dicegame"> Dice Game </a></td>
+<td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Js-Games/dice%20game"> Dice Game </a></td>
 <td align="center"> 202.</td>
 <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/React-JS%20Projects/Music_App/my-app"> Music Player App </a></td>
 <td align="center"> 203.</td>
@@ -627,7 +627,7 @@ Happy Coding! -->
 <td align="center"> 204.</td>
 <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Js-Projects/Digital_Clock"> Digital Clock </a></td>
 </tr>
-	
+
 <tr align="center">
 <td align="center"> 205.</td>
 <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Js-Projects/AdBlocker"> Ad blocker </a></td>
@@ -638,7 +638,7 @@ Happy Coding! -->
 <td align="center"> 208.</td>
 <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Frontend-Projects/Registration%20Form%20for%20Driving%20License"> Registration Form for Driver's License </a></td>
 </tr>
-	
+
 <tr align="center">
 <td align="center"> 209.</td>
 <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/ML%20Projects/Pose%20Classification"> Real-Time 3D Pose Classifier </a></td>
@@ -660,7 +660,7 @@ Happy Coding! -->
 <td align="center"> 216.</td>
 <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Frontend-Projects/Jwellery%20website%20landing%20page"> Jewellery Website Landing Page </a></td>
 </tr>
-	
+
 <tr align="center">
 <td align="center"> 217.</td>
 <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/MERN/Exercise%20Tracker"> Exercise Tracker </a></td>
@@ -681,59 +681,116 @@ Happy Coding! -->
 <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Frontend-Projects/Electronic%20Gadget"> Electronic Gadget </a></td>
 <td align="center"> 224.</td>
 <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/ML%20Projects/Analysis%20of%20Fashion_dataset"> Analysis_ of Fashion dataset </a></td>
-
-
-
 </tr>
 
 <tr align="center">
-
 <td align="center"> 225.</td>
 <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks-GSSOC/main/React-JS%20Projects/Restaurant-website"> Restaurant Website </a> </td>
 <td align="center"> 226.</td>
 <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Animations-CSS/3D%20rotating%20cube"> 3D Rotating Cube </a></td>
 <td align="center"> 227.</td>
-
 <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Python%20Projects/Text%20Editor"> Text Editor in Python </a></td>
-
+<td align="center"> 228.</td>
 <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/ReactJS%20Typescript%20Projects/typescript_todo"> Typescript React Todos </a></td>
 
 
 
-<td align="center"> 228.</td>
-<td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Frontend-Projects/FIght%20Game"> Fight Game </a></td>
-
-</tr>
-
-
-	
 <tr align="center">
 <td align="center"> 229.</td>
-<td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Python%20Projects/Hangman-advanced"> Hangman-Advanced </a></td>	
-<td align="center"> 228.</td>
-<td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Frontend-Projects/FIght%20Game"> Fight Game </a></td>
-
-</tr>	
-	
-
-</table>
-
-<td align="center"> 229.</td>
-<td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Node-JS%20Projects/Secrets"> Secrets </a></td>
+<td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/pull/1907/commits/40e3f712bf926b9e6b5d8bff0a5d5cee8e123fdc"> custom javascript cursor </a></td>
 <td align="center"> 230.</td>
+<td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Python%20Projects/Hangman-advanced"> Hangman-Advanced </a></td>
+<td align="center"> 231.</td>
+<td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Node-JS%20Projects/Secrets"> Secrets </a></td>
+<td align="center"> 232.</td>
 <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/ReactJS%20Typescript%20Projects/Plankman"> Plankman </a></td>
 </tr>
 
 <tr align="center">
-<td align="center"> 231.</td>
+<td align="center"> 233.</td>
 <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/ML%20Projects/Analysis%20of%20Fashion_dataset"> Amazing Snake Game </a></td>
-<td align="center"> 232</td>
+<td align="center">234.</td>
 <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Js-Projects/Colovaria"> Colovaria </a></td>
+<td align="center">235.</td>
+<td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Java%20Projects/Inventory%20Management%20System">Inventory Management System</a></td>
+<td align="center">236.</td>
+<td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Js-Games/Pacman"> Pacman Game </a></td>
+</tr>	
+
+
+<tr align="center">	
+<td align="center"> 237.</td>
+<td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Frontend-Projects/FIght%20Game"> Fight Game </a></td>
+<td align="center"> 238.</td>
+<td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/MineSweeper%20game"> MineSweeper Game </a></td>
+<td align="center"> 239.</td>
+<td align="center"> <a href="#"> Amazon Clone </a></td>
+<td align="center"> 240.</td>
+<td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Frontend-Projects/NFTCardComponent"> NFTCardComponent </a></td>
 </tr>
 
 
+<tr align="center">	
+<td align="center"> 241.</td>
+<td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Frontend-Projects/RatingComponent"> RatingComponent </a></td>
+<td align="center"> 242.</td>
+<td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Frontend-Projects/RatingComponent"> RatingComponent </a></td>
+<td align="center">243.</td>
+<td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Js-Games/Atari%20Breakout"> Atari Breakout </a></td>	
+<td align="center"> 244.</td>
+<td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Frontend-Projects/ProductPreviewComponent"> ProductPreviewComponent </a></td>
+</tr>
+
+<tr align="center">
+<td align="center"> 245.</td>
+<td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Frontend-Projects/TestimonialGridSection"> TestimonialGridSection </a></td>
+<td align="center"> 246.</td>
+<td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Java%20Projects/LibraryManagement"> LibraryManagement </a></td>
+<td align="center"> 247.</td>
+<td align="center"><a href="https://github.com/Swapnil-2503/Dev-Geeks/tree/guiTicTacToe/Java%20Projects/Gui%20TocTacToe">GUI TicTacToe</a></td>
+<td align="center"> 248.</td>
+<td align="center"><a href="https://github.com/Sriparno08/Dev-Geeks/tree/add-project/Animations-CSS/Text%20Animation">Text Animation</a></td>
+</tr>
+
+<tr align="center">
+<td align="center"> 249.</td>
+<td align="center"><a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Js-Games/ChessGrand">ChessGrand</a></td>
+<td align="center"> 250.</td>
+<td align="center"><a href="https://github.com/Swapnil-2503/Dev-Geeks/tree/guiTicTacToe/Java%20Projects/Number%20Guesssing%20Game%20Gui">Number Guessing Game Gui</a></td>
+<td align="center"> 251.</td>
+<td align="center"><a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Js-Games/ChessGrand">ChessGrand</a></td>
+<td align="center"> 252.</td>
+<td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Frontend-Projects/VegetableMarketplace"> VegetableMarketplace </a></td>
+</tr>
+
+<tr align="center">
+<td align="center"> 253.</td>
+<td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Frontend-Projects/Hyundai_Clone"> Hyundai Clone </a></td>
+<td align="center"> 254.</td>
+<td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Frontend-Projects/QrComponent"> QrComponent </a></td>
+<td align="center"> 255.</td>
+<td align="center"><a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Js-Games/Mexico Escape">Mexico Escape</a></td>
+<td align="center"> 256.</td>
+<td align="center"><a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Js-Games/Spider_Man_Go">Spider Man Go</a></td>
+</tr>
+
+<tr align="center">
+  <td align="center"> 257.</td>
+  <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Frontend-Projects/FIght%20Game"> Fight Game </a></td>
+
+  <td align="center"> 258.</td>
+  <td align="center"><a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Js-Games/Quiz_Game">Quiz_Game</a></td>
+
+  <td align="center"> 259.</td>
+  <td align="center"><a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/PHP%20Projects/User_Signup_Login_with_database">PHP-Signup-Login</a></td>
+
+  <td align="center"> 260.</td>
+<td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Flutter Projects/Instagram Clone"> Flutter Instagram Clone </a></td>
+</tr>
 </table>
-Node-JS Projects\Secrets
+
+
+
 ## How to contribute:
 
 -   Drop a :star: on the Github repository (optional)<br/>
