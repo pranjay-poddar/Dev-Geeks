@@ -1,0 +1,16 @@
+public class ABC  
+{  
+public static void main( String args[] )   
+{  
+int mn = 300;  
+int mx = 600;  
+//Generate random double value from range  300 to 600   
+System.out.println("Random value of type double between "+mn+" to "+mx+ ":");  
+double a = Math.random()*(mx-mn+1)+mn;   
+System.out.println(a);  
+//Generate random int value from range 300 to 600   
+System.out.println("Random value of type int between "+mn+" to "+mx+ ":");  
+int p = (int)(Math.random()*(mx-mn+1)+mn);  
+System.out.println(p);  
+}  
+}  
