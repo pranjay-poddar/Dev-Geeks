@@ -1,0 +1,42 @@
+
+.card{
+    height: 20rem
+}
+.info{
+    display: flex;
+    align-items: center;
+    padding:0.5rem;
+    font-weight: 500;
+    font-size: 1rem;
+}
+.userImg{
+    width: 2.2rem;
+    height: 2.2rem;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 1rem;
+}
+.postImg{
+    width: 100%;
+    height:14.5rem;
+    object-fit: cover;
+}
+.interaction{
+  display: flex;  
+  align-items: center;
+  padding: 0.4rem;
+  position: relative;
+}
+.cardIcon{
+    cursor: pointer;
+    font-size: 1.2rem;
+    margin-right: 1rem;
+}
+.infoIcon{
+    position: absolute;
+    right: 0;
+    font-size: 1rem;
+}
+.color{
+    color: red;
+}
