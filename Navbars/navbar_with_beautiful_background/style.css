@@ -6,9 +6,12 @@
 }
 body{
     min-height: 100vh;
-   background: url("./image3.jpg") no-repeat;
-   background-size: cover;
-   background-position: center;
+
+}
+a img{
+    height:1000px; 
+    background-color: red;
+    overflow:hidden
 }
 .header{
     position: fixed;
