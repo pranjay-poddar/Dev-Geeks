@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>guess_word</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <h1>Guess The Word</h1>
+    <div class="content">
+      <input type="text" class="typing-input" maxlength="1">
+      <div class="inputs">
+      </div>
+      <div class="details">
+        <p class="hint">Hint: <span></span></p>
+        <p class="guess-left">Remaining Guesses: <span>10</span></p>
+        <p class="wrong-letter">Wrong Guesses: <span></span></p>
+      </div>
+      <button class="reset-btn">Restart Game</button>
+    </div>
+  </div>
+  <script src="words.js"></script>
+  <script src="script.js"></script>
+
+</body>
+
+</html>
