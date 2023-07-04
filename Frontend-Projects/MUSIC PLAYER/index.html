@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Personal spotify</title>
+		<link rel="stylesheet" type="text/css" href="style.css" />
+		<link
+			rel="stylesheet"
+			type="text/css"
+			href="https://fonts.googleapis.com/icon?family=Material+Icons"
+		/>
+	</head>
+	<body>
+		<div class="wrapper">
+			<div class="top-bar">
+				<i id="expand" class="material-icons">expand_more</i>
+				<p>now playing</p>
+				<i class="material-icons" id="download">download</i>
+			</div>
+			<div class="img-area">
+				<img src="" alt="error loading image" title="" draggable="false" />
+			</div>
+			<div class="song-details">
+				<p class="name"></p>
+				<p class="artist"></p>
+			</div>
+			<div class="progress-area">
+				<div class="progress-bar"></div>
+				<div class="timer">
+					<span class="current">0:00</span>
+					<span class="duration"></span>
+				</div>
+			</div>
+			<audio id="audio" src=""></audio>
+			<div class="controls">
+				<i id="repeat" class="material-icons ctrl_icon">repeat</i>
+				<i id="prev" class="material-icons ctrl_icon">skip_previous</i>
+				<div class="play-pause">
+					<i class="material-icons play_icon">play_arrow</i>
+				</div>
+				<i id="next" class="material-icons ctrl_icon">skip_next</i>
+				<i id="queue" class="material-icons ctrl_icon">queue_music</i>
+			</div>
+
+			<div class="music-list">
+				<div class="l-header">
+					<div class="row">
+						<i class="material-icons">queue_music</i>
+						<p>music list</p>
+					</div>
+					<i class="material-icons cross">close</i>
+				</div>
+				<ul></ul>
+			</div>
+		</div>
+		<script type="text/javascript" src="script.js"></script>
+	</body>
+</html>

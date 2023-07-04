@@ -1,12 +1,14 @@
 body {
   font-family: "Source Serif Pro", serif;
 }
+
 .header {
   height: 90vh;
   width: 100%;
-  background: linear-gradient(to right, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.5)),
-    url(https://images.pexels.com/photos/3861961/pexels-photo-3861961.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260);
+  background: linear-gradient(to right, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.5)), url(https://images.pexels.com/photos/3861961/pexels-photo-3861961.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260);
   color: white;
+  background-attachment: fixed;
+  background-size: cover;
 }
 
 .h-100 {
@@ -29,4 +31,14 @@ body {
 .icon {
   font-size: 60px;
   margin: 20px;
+}
+
+.card-body.text-center:hover {
+  border: 1px solid #007bff;
+  background: #c2c1ed0e;
+  padding: 15px !important;
+}
+button.btn.btn-outline-priamry:hover {
+  background: #007bff;
+  color: white;
 }

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Project World Countries Data - Day 26 of 30DaysOfJavaScript</title>
+	<link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+	<main>
+		<div class="main__hero-section">
+			<h1>World Countries Data</h1>
+			<p>Total Number of Countries: <span id="countries-count" class="main__highlighted">250</span></p>
+			<div class="main__button-container">
+				    <label>
+						starting word
+						<input type="radio" name="filter" value="starts-with">
+					</label>
+					<label>
+						search with any word
+						<input type="radio" name="filter" value="search">
+					</label>
+					<label>
+						Sort Z-A
+						<input type="checkbox" name="sort">
+					</label>
+			</div>
+			<div class="main__input-container">
+					<input type="text" placeholder="Search country">
+			</div>
+			<p class="main__query-feedback"></p>
+		</div>
+		<div class="main__countries-wrapper">
+			<div class="get-started">
+				<p>Select any one of the filter and start searching the countries</p>
+			</div>
+		</div>
+	</main>
+
+	<footer class="attribution">
+		<p>
+			Challenge by <a href="https://www.github.com/asabeneh/" target="_blank" rel="noopener">Asabeneh Yetayeh</a>, 
+			Coded by <a href="https://github.com/0xabdulkhalid" target="_blank" rel="noopener">0xabdulkhalid</a>.
+		</p>
+	</footer>
+	<script src="./data/countries.js" defer></script>
+	<script src="./data/generatedColors.js"></script>
+	<script src="./scripts/main.js" defer></script>
+</body>
+
+</html>
