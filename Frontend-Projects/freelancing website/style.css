@@ -1,27 +1,40 @@
-h1 {
+/* display background color black on navbar scroll */
+.navbarScroll.navbarDark {
+  background-color: black;
+}
+
+/* hero background image */
+.bgimage {
+  height:100vh;
+  background: url('images/heroImage.jpeg');
+  background-size:cover;
+  position:relative;
+}
+/* text css above hero image*/
+.hero_title {
+  font-size: 4.5rem;
+}
+.hero_desc {
+  font-size: 2rem;
+}
+.hero-text {
   text-align: center;
-  margin-top: 30px;
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-  text-decoration: underline;
-  font-style: italic;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
 }
-.main {
-  margin-left: 140px;
-  width: 900px;
-  font-size: 25px;
-  font-family: "Courier New", Courier, monospace;
-  background-color: lightgray;
+
+/* spacing on all sections */
+/* #about, #services, #portfolio, #contact {
+  margin-top: 4rem;
+  padding-top: 4rem;
+} */
+#contact {
+  padding-bottom: 4rem;
 }
-.container {
-  margin-left: 150px;
-  font-style: italic;
-  font-size: 25px;
-  font-weight: bold;
-}
-body {
-  background-color: rgb(246, 217, 217);
-}
-img {
-  height: 300px;
-  float: right;
+/* about section image css */
+.imageAboutPage {
+  width: 100%;
 }
