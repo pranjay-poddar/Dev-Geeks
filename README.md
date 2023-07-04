@@ -751,7 +751,7 @@ Happy Coding! -->
 <td align="center"> 248.</td>
 <td align="center"><a href="https://github.com/Sriparno08/Dev-Geeks/tree/add-project/Animations-CSS/Text%20Animation">Text Animation</a></td>
 </tr>
-  
+
 <tr align="center">
 <td align="center"> 249.</td>
 <td align="center"><a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Js-Games/ChessGrand">ChessGrand</a></td>
@@ -789,11 +789,6 @@ Happy Coding! -->
   <td align="center"> 260.</td>
 <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Flutter Projects/Instagram Clone"> Flutter Instagram Clone </a></td>
 </tr>
-  
-<tr align="center">
-<td align="center"> 255.</td>  
-<td align="center"><a href="./Python Projects/Circle using Turtle">Circle using Turtle</a></td>
-</tr>  
 </table>
 
 
