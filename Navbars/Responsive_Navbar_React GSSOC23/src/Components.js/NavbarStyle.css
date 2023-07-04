@@ -1,0 +1,130 @@
+#nav {
+    display: flex;
+    color: aliceblue;
+    height: 100%;
+    width: 100%;
+    min-height: 48px;
+    padding: 1vw;
+    box-shadow: 0px -3px 20px 0px black;
+}
+
+#nav ul {
+    display: flex;
+    align-self: center;
+    height: 100%;
+    width: 100%;
+    max-width: 50vw;
+    justify-content: space-around;
+}
+
+#nav li {
+    list-style: none;
+}
+
+#nav ul li a {
+    text-decoration: none;
+    color: aliceblue;
+}
+
+.logo{
+    font-size: 1.8rem;
+    /* text-decoration: dotted; */
+}
+
+#nav>ul>li{
+    text-align: center;
+}
+
+#nav>ul>li>a:hover{
+    color:rgb(255, 255, 0) ;
+}
+
+.navContainer {
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: auto;
+    font-weight: 600;
+    color:rgb(255, 255, 0);
+    min-height: 55px;
+}
+
+.navButton {
+    align-self: center;
+}
+.navButton>button:hover{
+    background-color:rgb(255, 255, 0) ;
+    border-radius: 25px;
+    color: black;
+}
+.navButton button {
+    border: 2px solid rgb(255, 255, 0);
+    background-color: transparent;
+    color: aliceblue;
+    font-weight: bolder;
+    border-radius: 25px;
+    padding: 1vh 1vw;
+}
+
+#dropDown{
+    display: none;
+    align-items: center;
+}
+
+.display-none{
+    display: none;
+}
+.display-block{
+    display: block;
+}
+
+@media screen and (max-width:760px) {
+    .logo {
+        margin-right: 0;
+    }
+    #nav ul{
+        margin: 0 auto;
+        max-width: 60vw;
+        justify-content: space-between;
+    }
+}
+@media screen and (max-width:560px) {
+    #border-bottom{
+        border-bottom: 2px solid rgba(107, 107, 107, 0.306);
+    }
+    .navContainer{
+        padding: 0 4px;
+    }
+    #dropDown{
+        display: flex;
+    }
+    #nav ul{
+        display: block;
+    }
+    .logo{
+        margin: auto;
+    }
+    #dropDownImg{
+        height: 100%;
+        width: 100%;
+        max-width: 23px;
+    }
+    .navButton{
+        display: none;
+    }
+    #nav{
+        display: block;
+
+    }
+    #nav ul li{
+        padding: 1vh;
+        font-size: 1.2rem;
+        min-height: 42px;
+        /* display: none; */
+    }
+    #nav>ul>li:hover {
+        transition: 0.2s;
+        border-bottom: 2px solid black ;
+    }
+}
