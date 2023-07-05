@@ -1,0 +1,246 @@
+@font-face {
+    font-family: "KumbhSans Regular";
+    src: url('https://raw.githubusercontent.com/0xabdulkhalid/profile-card-component-remastered/main/assets/KumbhSans-Regular.ttf');
+  }
+@font-face {
+    font-family: "KumbhSans Bold";
+    src: url('https://raw.githubusercontent.com/0xabdulkhalid/profile-card-component-remastered/main/assets/KumbhSans-Bold.ttf');
+  }
+
+:root {
+    --very-dark-desaturated-blue: hsl(229, 23%, 23%);
+    --dark-grayish-blue: hsl(227, 10%, 46%);
+    --dark-grey: hsl(0, 0%, 59%);
+    --ff-regular: "KumbhSans Regular";
+    --ff-bold: "KumbhSans Bold";
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ 
+body {
+    min-height: 100vh;
+    background: url(https://raw.githubusercontent.com/0xabdulkhalid/profile-card-component-remastered/main/images/mobile-bg.svg);
+    background-size: cover;
+    display: grid;
+    place-items: center;
+    font-family: var(--ff-regular), sans-serif;
+}
+
+h1, h2 { font-family: var(--ff-bold); font-weight: 500;}
+
+.profile-card {
+    width: 85%;
+    height: 26em;
+    display: grid;
+    grid-template-rows: minmax(0, .5fr) 1fr;
+    background: #f7f7f7;
+    color: var(--dark-grayish-blue);
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 30px 70px rgba(0,0,0,.4);
+    text-rendering: optimizeSpeed;
+}
+
+.profile-card__banner-section {
+    overflow: hidden;
+    background: #9E9E9E;
+}
+
+.profile-card__banner {
+    width: 100%;
+    transition: .7s ease;
+    filter: brightness(1.4);
+}
+
+.profile-card__profile {
+    display: grid;
+    position: relative;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr 100px;
+}
+
+.profile-card__avatar {
+    position: absolute;
+    top: -50px;
+    border: 3px solid #f7f7f7;
+    border-radius: 50%;
+    place-self: center;
+    transition: .7s ease;
+    width: 100px;
+    height: 100px;
+    background-image: url("https://raw.githubusercontent.com/0xabdulkhalid/profile-card-component-remastered/main/images/avatar.webp");
+    background-size: 100%;
+    box-shadow: inset 0 0 5px white;
+}
+
+.profile-card__bio {
+    grid-column: 1/-1;
+    place-self: center;
+    margin-top: 30px;
+    text-transform: capitalize;
+    position: relative;
+}
+
+.profile-card__profile-name {
+    overflow: hidden;
+    transition: all .7s ease;
+    letter-spacing: .01em;
+}
+
+.profile-card__profile-profession {
+    margin-top: 15px;
+    display: block;
+    text-align: center;
+    font-size: .7rem;
+    letter-spacing: .1em;
+    word-spacing: .1em;
+    text-transform: uppercase;
+    transition: all .7s ease-in-out;
+}
+
+.profile-card__profile-name-secondary { display: none; }
+
+.profile-card__profile-profession-secondary {display: none;}
+
+.profile-card__limestones {
+    text-align: center;
+    height: 100%;
+    border-top: 1px solid #dddddd;
+    display: grid;
+    place-items: center;
+    align-content: center;
+    gap: 5px;
+    letter-spacing: 0.1em;
+    font-size: .8rem;
+}
+
+.profile-card__limestones:nth-last-child(1){ padding-right: 30px;}
+
+.profile-card__limestones:nth-child(3){ padding-left: 30px;}
+
+.profile-card__profile-name,
+.profile-card__limestone-count {
+    color: var(--very-dark-desaturated-blue);
+    font-size: 1.3rem;
+}
+
+.profile-card__limestone-count{letter-spacing: normal;}
+
+/*
+    AUTHOR LINK
+*/
+.author-link{
+    position: fixed;
+    bottom: 0;
+    padding-bottom: 15px;
+    z-index: 1;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.author-link > * {
+    color: #f7f7f7;
+    font-weight: 400;
+}
+
+.author-link > span:first-child {
+    transform: scale(1.3) translateY(-2px);
+}
+
+.author-link > .bar {
+    transform: scale(1.4);
+}
+
+.author-link, a {
+    text-decoration: none;
+    transition: .3s ease-out;
+}
+
+.author-link > .link:hover {
+    color: #c4c4c4;
+} 
+
+/*
+    MEDIA QUERIES SECTION ( INCLUDES TABLET & DESKTOP )
+*/
+
+@media (min-width: 35em) {  /* FOR TABLET  */
+    .profile-card {
+        width: 23em;
+    }
+}
+
+@media (min-width: 56.25em) {    /* FOR DESKTOP */
+
+    body {
+        background: url(https://raw.githubusercontent.com/0xabdulkhalid/profile-card-component-remastered/main/images/desktop-bg.svg);
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    .profile-card__banner {
+        transform: translateY(-15px) scale(1.01);
+    }
+
+    /*
+        ANIMATABLE ELEMENTS INSIDE PROFILE CARD
+    */
+    .profile-card__profile-name-secondary {
+        display: block;
+        transform: scale(.1) translateX(-15px);
+        position: absolute;
+        top: 0;
+        opacity: 0;
+        width: max-content;
+    }
+    .profile-card__profile-profession-secondary {
+        display: block;
+        position: absolute;
+        bottom: 0;
+        transform: translateX(20px) translateY(40px) scale(1.5);
+        opacity: 0;
+    }
+
+    /*
+        HOVER EFFECTS
+    */
+    .profile-card:hover > .profile-card__banner-section > 
+    .profile-card__banner{
+        transform: scale(1.4) translateY(-140px);
+        filter: brightness(1);
+    }
+    .profile-card:hover > .profile-card__profile > 
+    .profile-card__avatar {
+        transform: scale(1.25);
+        background: url(https://raw.githubusercontent.com/0xabdulkhalid/profile-card-component-remastered/main/images/alhamdullilah.gif) ;
+        background-size: 100%, 100%;
+        box-shadow: inset 0 0 10px white;
+    }
+    .profile-card:hover > .profile-card__profile >
+    .profile-card__bio > .profile-card__profile-name:not(.profile-card__profile-name-secondary) {
+        transform: scale(1.8);
+        opacity: 0;
+    }
+    .profile-card:hover > .profile-card__profile >
+    .profile-card__bio > .profile-card__profile-name-secondary {
+        transform: scale(1) translateX(-15px);
+        opacity: 1;
+    }
+    .profile-card:hover > .profile-card__profile >
+    .profile-card__bio > .profile-card__profile-profession-secondary {
+        transform: translateX(20px) translateY(8px) scale(1);
+        opacity: 1;
+    }
+    .profile-card:hover > .profile-card__profile >
+    .profile-card__bio > .profile-card__profile-profession:not(.profile-card__profile-profession-secondary){
+        transform: translateY(10px) scale(1.2);
+        opacity: 0;
+    }
+}
