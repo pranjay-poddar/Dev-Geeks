@@ -21,9 +21,4 @@ To run the project, follow these steps:
 2. Run `npm run dev` to start the development server
 3. Open your browser and go to `http://localhost:3000` to view the website
 
-## Screenshots
-
-Here are some screenshots of the website:
-
-![Screenshot 1](pomtasker.png)
-![Screenshot 2](pomtasker2.png)
+[Live Deployment](https://pom-tasker.netlify.app/)
