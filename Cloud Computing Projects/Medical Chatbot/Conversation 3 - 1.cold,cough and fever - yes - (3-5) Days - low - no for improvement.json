@@ -1,0 +1,106 @@
+{
+  "id": "0789d90e-f17f-4f46-9e2f-26ceb203f13a",
+  "name": "Conversation 3 - 1.cold,cough and fever - yes - (3-5) Days - low - no for improvement",
+  "auto": true,
+  "condition": "",
+  "conditionalFollowupEvents": [],
+  "conditionalResponses": [],
+  "context": [
+    "Conversation3-1coldcoughandfever-yes-3-5Days-low-followup"
+  ],
+  "contexts": [
+    "Conversation3-1coldcoughandfever-yes-3-5Days-low-followup"
+  ],
+  "endInteraction": false,
+  "events": [],
+  "fallbackIntent": false,
+  "liveAgentHandoff": false,
+  "parentId": "a8811ef0-183b-480e-a7c0-c06d4794c191",
+  "followUpIntents": [],
+  "priority": 500000,
+  "responses": [
+    {
+      "action": "Conversation3.Conversation3-custom.Conversation3-1coldcoughandfever-custom.Conversation3-1coldcoughandfever-yes-custom.Conversation3-1coldcoughandfever-yes-3-5Days-custom-2.Conversation3-1coldcoughandfever-yes-3-5Days-low-custom-2",
+      "affectedContexts": [],
+      "parameters": [],
+      "defaultResponsePlatforms": {},
+      "messages": [
+        {
+          "type": "message",
+          "condition": "",
+          "speech": [
+            "Okay then follow the medicines as per the below."
+          ]
+        },
+        {
+          "type": "message",
+          "condition": "",
+          "speech": [
+            "1.Diominic BCA [1] tablets per day for cold, cough and fever."
+          ]
+        },
+        {
+          "type": "message",
+          "condition": "",
+          "speech": [
+            "2.If you have high cold and cough then for cough use Astakaam DxISyrup) - 1 spoon per day and for cold use (Diometric/Dio-one) - 1 tablet per day."
+          ]
+        },
+        {
+          "type": "message",
+          "condition": "",
+          "speech": [
+            "Also follow some home remedies such as..."
+          ]
+        },
+        {
+          "type": "message",
+          "condition": "",
+          "speech": [
+            "1.Drink and gargle hot water"
+          ]
+        },
+        {
+          "type": "message",
+          "condition": "",
+          "speech": [
+            "2.Avoid junk and oily food"
+          ]
+        },
+        {
+          "type": "message",
+          "condition": "",
+          "speech": [
+            "3.Eat healthy food"
+          ]
+        },
+        {
+          "type": "message",
+          "condition": "",
+          "speech": [
+            "4.Do exercise and perform yogas"
+          ]
+        }
+      ],
+      "resetContexts": false
+    }
+  ],
+  "rootParentId": "4ff6d6f4-51ce-40cc-bea4-977e35b5b1e4",
+  "templates": [],
+  "userSays": [
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "2",
+          "userDefined": false
+        }
+      ],
+      "count": 0,
+      "id": "0305f3b2-24fe-48c7-aa40-9bbc71ba2815",
+      "updated": null
+    }
+  ],
+  "webhookForSlotFilling": false,
+  "webhookUsed": false
+}
