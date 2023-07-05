@@ -1,0 +1,153 @@
+/*
+    Apologizing for using bad naming conventions of css selectors.
+    Probably i use bem but i had no enough time to focus on these things
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    overflow-x: hidden;
+}
+
+body {
+    text-align: center;
+    font-family: sans-serif;
+    min-height: 100vh;
+    color: #252525;
+    background: #eee;
+    padding-bottom: 4em;
+}
+
+h1 {
+    font-size: 2.1rem;
+    text-transform: uppercase;
+    letter-spacing: .02em;
+    color: #FFA500;
+    margin-bottom: .35em;
+}
+
+
+.place-center {
+    display: grid;
+    place-items: center;
+}
+
+
+.btn--clicked {
+    transform: scale(.99) translateY(15px);
+    box-shadow: unset;
+}
+
+.wrapper {
+    font-size: 1.3rem;
+    width: 100%;
+    padding: 1.4em 0;
+    display: grid;
+    gap: 1em;
+}
+
+progress {
+    -webkit-appearance: none;
+    appearance: none;
+    color: #f2f2f2;
+    width: 45%;
+    border: unset;
+    height: 2em;
+    margin-left: 2em;
+}
+
+
+progress::-moz-progress-bar {
+    background: #FFA500;
+}
+  
+progress::-webkit-progress-value {
+    background: #FFA500;
+}
+  
+progress::-webkit-progress-bar {
+    background: #f2f2f2;
+}
+
+button {
+    all: unset;
+    padding: 15px 10px;
+    color: #252525;
+    width: 12em;
+    transition: .4s ease;
+    box-shadow: 0 5px 10px #f2f2f2;
+    margin-left: 1em;
+    background: #FFA500;
+    text-transform: uppercase;
+    border-radius: 5px;
+}
+
+button:active {
+    transform: scale(.98) translateY(15px);
+    box-shadow: 0 0 0 rgba(0,0,0,0);
+}
+
+.input-container {
+    background: #f9f9f9;
+    width: 100%;
+    padding: 1em;
+}
+
+.brief, button {
+    margin-top: 1em;
+}
+
+.component {
+    display: flex;
+    justify-content: center;
+}
+
+.description {
+    width: 8em;
+    font-size: 1.2rem;
+    text-align: left;
+}
+
+.get-started {
+    margin-top: 3em;
+    background: #f2f2f2;
+    padding: 2em;
+}
+
+.count {
+    width: 7em;
+}
+
+input:focus {
+    border-width: 3px;
+}
+
+.attribution {
+    border-top: 1px solid #aaa;
+    width: 100%;
+    text-align: center;
+    margin-top: 1em;
+    padding: 1em 0;
+    position: fixed;
+    bottom: 0;
+    background: rgba(0,0,0,.01);
+    backdrop-filter: blur(5px);
+    transition: .5s ease;
+}
+
+header {
+    padding: 20px;
+}
+
+.attribution, a {
+    color: #232323;
+}
+.attribution:hover {
+    background: rgba(0,0,0,.3);
+}
+.attribution:hover a {
+    color: #eee;
+}
