@@ -1,0 +1,72 @@
+body {
+  background-color: black;
+  align-items: center;
+  margin-top: 15%;
+  margin-left:40%;
+}
+
+.loader {
+  position: relative;
+  width: 240px;
+  height: 46px;
+  border-radius: 10px;
+  border: 1px solid #d3d3d3;
+  padding: 15px;
+  background-color: #e3e3e3;
+  overflow: hidden;
+}
+
+.loader input {
+  position: relative;
+  width: 140px;
+  height: 14px;
+  border-radius: 10px;
+  border: 1px solid #d3d3d3;
+  padding: 15px;
+  background-color: #e3e3e3;
+  overflow: hidden;
+}
+
+.loader .container > div {
+  background-color: #aacaca;
+}
+
+.loader .circle {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.loader .line {
+  position: absolute;
+  top: 18px;
+  left: 78px;
+  height: 45px;
+  width: 170px;
+  border-radius: 8px;
+}
+
+
+.shimmer {
+  background-image: linear-gradient(
+    105deg,
+    #eeeeee 0%,
+    #eeeeee 40%,
+    #dddddd 50%,
+    #dddddd 55%,
+    #eeeeee 65%,
+    #eeeeee 100%
+  );
+  background-size: 400%;
+  animation: shimmer 2s infinite;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: 100% 100%;
+  }
+
+  100% {
+    background-position: 0 0;
+  }
+}
