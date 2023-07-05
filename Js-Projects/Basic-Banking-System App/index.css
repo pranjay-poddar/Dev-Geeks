@@ -1,0 +1,110 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+}
+
+/* Styles for the Bank-section container */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url(Assets/img/Background.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+  }
+  
+  .Bank-section {
+    display: flex; 
+    justify-content: space-around;
+    align-items: center;
+    width: 95%;
+    /* background-color: #fff; */
+    /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); */
+
+    padding: 30px;
+    gap: 30px;
+  }
+  
+  /* Styles for the left side of the Bank-section */
+  .left {
+    flex: 1;
+    text-align: center;
+  }
+  
+  .left h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #f2f2f2;
+  }
+  
+  .left p {
+    font-size: 1.2rem;
+    color: #f2f2f2;
+    margin-bottom: 30px;
+  }
+  
+  button {
+    border: none;
+    background-color: #007bff;
+    color: #fff;
+    font-size: 1.2rem;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+  }
+
+  button a{
+    text-decoration: none;
+    color: #f2f2f2;
+  }
+  
+  button:hover {
+    background-color: #0069d9;
+  }
+  
+  /* Styles for the right side of the Bank-section */
+  .right {
+    flex: 1;
+  }
+  
+  .left-img img {
+    width: 85%;
+    height: auto;
+  }
+  
+  /* Media query for smaller screens */
+  @media screen and (max-width: 768px) {
+    .Bank-section {
+      flex-direction: column;
+      width: 90%;
+    }
+    
+    .left, .right {
+      flex: auto;
+      width: 100%;
+    }
+    
+    .left p {
+      font-size: 1rem;
+    }
+    
+    .left h1 {
+      font-size: 2rem;
+    }
+    
+    .left-img img {
+      margin-top: 30px;
+    }
+  }
+  
+
+  
