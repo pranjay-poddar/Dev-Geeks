@@ -19,3 +19,29 @@ let calcScrollValue = () => {
   
   window.onscroll = calcScrollValue;
   window.onload = calcScrollValue;
+  
+    const dark = document.getElementById('checkbox');
+    const body = document.querySelector('body');
+    const admin = document.getElementById('adminID');
+    const para1= document.getElementById('para1');
+    const para2= document.getElementById('para2');
+    const para3= document.getElementById('para3');
+    const para4= document.getElementById('para4');
+    
+  
+   
+
+   
+    dark.addEventListener('change',()=>{
+      body.classList.toggle('darkMode');
+      admin.classList.toggle('bg-dark');
+      para1.classList.toggle('para-dark');
+      para2.classList.toggle('para-dark');
+      para3.classList.toggle('para-dark');
+      para4.classList.toggle('para-dark');
+      
+      
+      
+    });
+  
+  

@@ -25,6 +25,10 @@
   html {
     scroll-behavior: smooth;
   }
+  :root{
+    --bg-main:#ffffff;
+    --bg-dark:#000000;
+  }
 body {
     font-family: Poppins, sans-serif;
     background: #E5E1E6;
@@ -36,6 +40,7 @@ body {
     padding-left: 0px;
     padding-right: 0px;
     scroll-behavior: smooth;
+    transition: background 0.3s ease;
 }
 
 ::-webkit-scrollbar {
@@ -412,4 +417,64 @@ body {
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
   }
   
+
+  /***********************
+          dark mode 
+   ************************/
+
+body.darkMode{
+  background: #090909;
+  color:#ffffff;
+}
+ .dark-label{
+  width: 6rem;
+  height: 4rem;
+  background: #e5e8ed;
+
+  display:inline-block;
+  border-radius: 10rem;
+  scale: 0.5;
+  position: relative;
+  bottom: -6px;
+
+ }
+
+ #checkbox{
+  visibility: hidden;
+ }
+ .toggle-ui{
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  background-color: var(--bg-main);
+  display: inline-block;
+  position: absolute;
+  left:5px;
+  top:6px;
+  transition: all 0.2s linear;
+  
+ }
+ #checkbox:checked + .dark-label .toggle-ui{
+  transform: translateX(36px);
+ }
+
+ #checkbox:checked +.dark-label{
+  background-color: #0a0b0b;
+ }
+.admin-dark{
+  background-color: black !important;
+}
+
+/***************
+paragraph styles
+ ***************/
+
+ .para{
+  border: 3px solid rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  background-color: white;
  
+ }
+ .para-dark{
+  background-color: #090909;
+ }
