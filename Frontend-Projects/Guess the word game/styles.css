@@ -1,0 +1,34 @@
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  height: 100vh;
+  background-image: linear-gradient(rgb(255, 102, 209),rgb(255, 104, 187) ,rgb(128, 0, 255));
+}
+    
+h1 {
+  margin: 150px 0px 50px;
+  font-size: 80px;
+  color: #ffffff;
+  font-family: 'Comic Neue', cursive;
+}
+
+p{
+  font-family: 'Comic Neue', cursive;
+}
+
+button {
+  font-size: 20px;
+  padding: 10px;
+  margin: 5px;
+}
+
+#result {
+  margin-top: 10px;
+  font-size: x-large;
+  color: #ffffff;
+}
+
+#chances, #wordDisplay {
+  margin: 20px;
+  color: #ffffff;
+}
