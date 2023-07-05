@@ -1,0 +1,335 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;500;700&display=swap');
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", Helvetica, Arial, sans-serif;
+  font-weight: 500;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  color: black;
+}
+
+.dark-mode body {
+  background-color: black;
+  color: white;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
+  background-color: rgb(99, 11, 215);
+  color: mintcream;
+  width: 100%;
+}
+
+.mode-btn {
+  background-color: black;
+  border: none;
+  border-radius: 20px;
+  margin-right: 50px;
+  color: mintcream;
+  font-size: 1em;
+  cursor: pointer;
+}
+
+.mode-btn:hover{
+  color:rgb(81, 229, 248);
+}
+
+.brand{
+  padding-left: 50px;
+  font-weight: bolder;
+  font-style: italic;
+}
+
+.mode-btn:focus {
+  outline: none;
+}
+
+.keyboard {
+  display: flex;
+  flex-direction: column;
+  margin-top: 2em;
+}
+
+.row {
+  list-style: none;
+  display: flex;
+}
+
+li {
+  height: 3em;
+  width: 3em;
+  color: rgba(0, 0, 0, 0.7);
+  border-radius: 0.4em;
+  line-height: 3em;
+  letter-spacing: 1px;
+  margin: 0.4em;
+  transition: 0.3s;
+  text-align: center;
+  font-size: 1em;
+}
+
+.dark-mode li {
+  color: white;
+}
+
+.title {
+  color: rgb(99, 11, 215);
+  text-transform: uppercase;
+  margin-top: 3em;
+  margin-bottom: 3em;
+  font-size: 1em;
+  letter-spacing: 0.3em;
+}
+
+.dark-mode .title {
+  color: mintcream;
+}
+
+#tab {
+  width: 5em;
+}
+
+#caps {
+  width: 6em;
+}
+
+#left-shift {
+  width: 8em;
+}
+
+#enter {
+  width: 6em;
+}
+
+#right-shift {
+  width: 8em;
+}
+
+#back {
+  width: 5em;
+}
+
+.pinky {
+  background-color: rgb(99, 11, 215);
+  border: 2px solid rgb(99, 11, 215);
+}
+
+.dark-mode .pinky {
+  background-color: rgb(26, 38, 152);
+  border: 2px solid rgb(26, 38, 152);
+}
+
+.pinky.selected {
+  color: rgb(99, 11, 215);
+}
+
+.dark-mode .pinky.selected {
+  color: rgb(26, 38, 152);
+}
+
+.ring {
+  background-color: rgb(81, 229, 248);
+  border: 2px solid rgb(81, 229, 248);
+}
+
+.dark-mode .ring {
+  background-color: rgb(140, 155, 255);
+  border: 2px solid rgb(140, 155, 255);
+}
+
+.ring.selected {
+  color: rgb(81, 229, 248);
+}
+
+.dark-mode .ring.selected {
+  color: rgb(140, 155, 255);
+}
+
+.middle {
+  background-color: rgb(140, 155, 255);
+  border: 2px solid rgb(140, 155, 255);
+}
+
+.dark-mode .middle {
+  background-color: rgb(99, 11, 215);
+  border: 2px solid rgb(99, 11, 215);
+}
+
+.middle.selected {
+  color: rgb(140, 155, 255);
+}
+
+.dark-mode .middle.selected {
+  color: rgb(99, 11, 215);
+}
+
+.pointer1st {
+  background-color: rgb(137, 87, 255);
+  border: 2px solid rgb(137, 87, 255);
+}
+
+.dark-mode .pointer1st {
+  background-color: rgb(81, 229, 248);
+  border: 2px solid rgb(81, 229, 248);
+}
+
+.pointer1st.selected {
+  color: rgb(137, 87, 255);
+}
+
+.dark-mode .pointer1st.selected {
+  color: rgb(81, 229, 248);
+}
+
+.pointer2nd {
+  background-color: rgb(26, 38, 152);
+  border: 2px solid rgb(26, 38, 152);
+}
+
+.dark-mode .pointer2nd {
+  background-color: rgb(137, 87, 255);
+  border: 2px solid rgb(137, 87, 255);
+}
+
+.pointer2nd.selected {
+  color: rgb(26, 38, 152);
+}
+
+.dark-mode .pointer2nd.selected {
+  color: rgb(137, 87, 255);
+}
+
+.fill-out-key {
+  background-color: slategrey;
+  border: 2px solid slategrey;
+}
+
+.selected {
+  background-color: transparent;
+  -webkit-animation: vibrate-1 0.3s linear infinite both;
+  animation: vibrate-1 0.3s linear infinite both;
+}
+
+.hit {
+  -webkit-animation: hit 0.3s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+  animation: hit 0.3s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
+
+@-webkit-keyframes hit {
+  0% {
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
+@keyframes hit {
+  0% {
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
+@-webkit-keyframes vibrate-1 {
+  0% {
+    -webkit-transform: translate(0);
+    transform: translate(0);
+  }
+  20% {
+    -webkit-transform: translate(-2px, 2px);
+    transform: translate(-2px, 2px);
+  }
+  40% {
+    -webkit-transform: translate(-2px, -2px);
+    transform: translate(-2px, -2px);
+  }
+  60% {
+    -webkit-transform: translate(2px, 2px);
+    transform: translate(2px, 2px);
+  }
+  80% {
+    -webkit-transform: translate(2px, -2px);
+    transform: translate(2px, -2px);
+  }
+  100% {
+    -webkit-transform: translate(0);
+    transform: translate(0);
+  }
+}
+
+@keyframes vibrate-1 {
+  0% {
+    -webkit-transform: translate(0);
+    transform: translate(0);
+  }
+  20% {
+    -webkit-transform: translate(-2px, 2px);
+    transform: translate(-2px, 2px);
+  }
+  40% {
+    -webkit-transform: translate(-2px, -2px);
+    transform: translate(-2px, -2px);
+  }
+  60% {
+    -webkit-transform: translate(2px, 2px);
+    transform: translate(2px, 2px);
+  }
+  80% {
+    -webkit-transform: translate(2px, -2px);
+    transform: translate(2px, -2px);
+  }
+  100% {
+    -webkit-transform: translate(0);
+    transform: translate(0);
+  }
+}
+
+.light-mode {
+  background-color: white;
+  color: black;
+}
+
+.light-mode .dark-mode {
+  background-color: black;
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    height: auto;
+  }
+  
+  .keyboard {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .row {
+    margin: 0.2em;
+  }
+  
+  li {
+    width: 2em;
+    height: 2em;
+    line-height: 2em;
+    font-size: 0.8em;
+  }
+}
