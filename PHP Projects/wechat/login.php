@@ -6,7 +6,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="stylesheet" type="text/css" href="css/style.css" />
 		<link rel="stylesheet" type="text/css" href="css/all.css" />
-		<link rel="shortcut icon" type="images/x-icon" href="favicon.png" />
+		<link rel="shortcut icon" type="images/x-icon" href="https://drive.google.com/file/d/1nVMGh6ZOE5SvNnyPr6WRI7whEYn7KdwL/view?usp=drive_link" />
 		<title>We chat</title>
 	</head>
 
