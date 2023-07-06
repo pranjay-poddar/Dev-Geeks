@@ -1,0 +1,234 @@
+/* Resetting default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Styling for the body */
+body {
+    background-color: rgba(0, 0, 0, 0.9);
+    color: #fff;
+    transition: all 0.25s ease-in-out;
+    align-items: center;
+    text-align: center;
+}
+
+/* Styling for the main container */
+#main-container {
+    width: 130vh;
+    height: 90vh;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(255, 255, 255, 0.03);
+    border: none;
+    border-radius: 0.8rem;
+}
+
+/* Styling for the bot controls and navbar */
+#bot-controls,
+#navbar {
+    width: 100vh;
+    height: 10vh;
+    position: fixed;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    border-radius: 2rem;
+    box-shadow: 14px 14px 24px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-wrap: wrap;
+    user-select: none;
+}
+
+/* Styling for the navbar */
+#navbar {
+    top: 50%;
+    z-index: 999;
+}
+
+/* Styling for the navbar image */
+#navbar img {
+    flex: 1 1 2%;
+    width: 2%;
+    height: 85%;
+    margin-left: 1rem;
+    margin-top: 4px;
+}
+
+/* Styling for the navbar heading */
+#navbar h1 {
+    flex: 1 1 40%;
+    text-align: start;
+    margin-left: 1rem;
+}
+
+/* Styling for the bot controls */
+#bot-controls {
+    bottom: 0%;
+}
+
+/* Styling for the dropdown */
+#dropdown {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    padding: 6px;
+    text-align: center;
+    border: none;
+    font-size: 1.6rem;
+    outline: none;
+    background: transparent;
+    color: #fff;
+    text-transform: uppercase;
+    flex: 1 1 12%;
+    user-select: none;
+}
+
+/* Styling for the dropdown options */
+#dropdown option {
+    background-color: black;
+    outline: none;
+    border: none;
+    padding: 15px 0;
+    box-shadow: 0 8px 32px 0 rgba(22, 22, 23, 0.37);
+    backdrop-filter: blur(4px);
+}
+
+/* Styling for the bot controls and navbar inputs */
+#bot-controls input,
+#navbar input {
+    font-size: 1.4rem;
+    background-color: transparent;
+    color: white;
+    outline: none;
+    border: none;
+    border-radius: 30px;
+    padding: 12px;
+}
+
+/* Styling for the bot controls input */
+#bot-controls input {
+    width: 495px;
+    flex: 1 1 70%;
+}
+
+/* Styling for the voice button */
+#bot-controls #voice {
+    flex: 1 1 70%;
+}
+
+/* Styling for the navbar input */
+#navbar input {
+    width: 270px;
+    flex: 1 1 auto;
+    margin-top: -5px;
+}
+
+/* Styling for the bot controls button */
+#bot-controls button {
+    width: 60px;
+    font-size: 2.4rem;
+    background: transparent;
+    color: white;
+    border: none;
+    outline: none;
+    flex: 1 1 10%;
+    margin-top: -6px;
+}
+
+/* Styling for the bot controls button on hover */
+#bot-controls button:hover {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+/* Styling for the message box */
+#msg-box {
+    width: 100%;
+    height: 82%;
+    border: none;
+    border-radius: 1rem;
+    position: relative;
+    top: 1%;
+    left: 1%;
+    background: transparent;
+    color: #fff;
+    padding: 10px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-end;
+}
+
+/* Styling for the message box scrollbar */
+#msg-box::-webkit-scrollbar {
+    display: none;
+    /* Hide scrollbar */
+}
+
+/* Styling for each message in the message box */
+#msg-box .message {
+    font-size: 0.9rem;
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    max-width: 91%;
+}
+
+/* Styling for the message box images */
+#msg-box .message img {
+    width: 30px;
+    height: 30px;
+}
+
+/* Styling for the user messages */
+.user {
+    align-self: flex-end;
+    text-align: end;
+    user-select: none;
+    margin: 0 1rem;
+}
+
+/* Styling for the bot messages */
+.bot {
+    align-self: flex-start;
+    color: rgba(255, 255, 255, 0.5);
+    text-align: start;
+    text-decoration: none;
+    font-weight: 400;
+}
+
+/* Styling for the message box images */
+#msg-box .message img {
+    width: 30px;
+    height: 30px;
+    margin: 0 1rem;
+}
+
+/* Styling for the voice start button */
+#voice #start-btn {
+    margin-top: 0.4rem;
+    text-align: center;
+}
+
+/* Styling the creator's link */
+.creator {
+    font-size: 1.4rem;
+    position: absolute;
+    top: 175%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.creator a {
+    text-decoration: none;
+    color: white;
+}
+
+.creator a:hover {
+    text-decoration: underline;
+}
