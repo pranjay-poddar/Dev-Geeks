@@ -1,0 +1,67 @@
+body {
+    /* color: rgb(255, 119, 78); */
+    height: 90vh;
+    background-image: linear-gradient(to bottom right, #FCEDDA, #EE4E34);
+    text-align: center;
+    margin-top: 100px;
+    font-family: 'Comic Neue', cursive;
+}
+
+h1 {
+    color: #EE4E34;
+    font-family:header;
+    font-size: 75px;
+    font-family: 'Comic Neue', cursive;
+}
+p{
+    color: rgb(255, 243, 222);
+    font-weight: bolder;
+
+}
+
+#game {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 50px;
+    margin-top: 50px;
+}
+
+#userPanel,
+#computerPanel {
+    flex: 1;
+}
+
+#userPanel p,
+#computerPanel p {
+    font-size: 18px;
+}
+
+.emojiButton {
+    height: 100px;
+    width: 100px;
+    font-size: 75px;
+}
+
+button{
+    border: 0px;
+    align-items: center;
+    background-color: #EE4E34;
+}
+
+#computerEmoji {
+    font-size: 100px;
+}
+
+#resultPanel {
+    flex: 1;
+}
+
+#resultText {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+#scoreText {
+    font-size: 18px;
+}
