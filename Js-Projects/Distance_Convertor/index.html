@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Logo -->
+    <link rel="shortcut icon" href="https://aumasdegaret.com/wp-content/uploads/2018/11/logo-distance.png"
+        type="image/x-icon">
+
+    <!-- Title -->
+    <title>Distance Converter</title>
+
+    <!-- Main stylesheet -->
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <!-- Main container -->
+    <div class="tool-container">
+        <!-- Main Heading -->
+        <h1>Distance Converter</h1>
+        <div id="lengthInput" class="tool-container-feild-group">
+            <div class="tool-container-feild">
+                <!-- Options for the 'FROM' -->
+                <div class="tool-input-group">
+                    <div class="tool-input-label">
+                        <label for="fromUnit">From:</label>
+                    </div>
+                    <select class="tool-select-group" id="fromUnit">
+                        <option selected value="Millimeter">Millimeter</option>
+                        <option value="Centimeter">Centimeter</option>
+                        <option value="Decimeter">Decimeter</option>
+                        <option value="Meter">Meter</option>
+                        <option value="Kilometer">Kilometer</option>
+                        <option value="Foot">Foot</option>
+                        <option value="Inch">Inch</option>
+                        <option value="Mile">Mile</option>
+                        <option value="Yard">Yard</option>
+                    </select>
+                    <input placeholder="Input Length" id="fromLength" type="number" name="from-length" min="0"
+                        class="tool-input-feild">
+                </div>
+
+                <!-- Options for the 'TO' -->
+                <div class="tool-input-group">
+                    <div class="tool-input-label">
+                        <label for="toUnit">To:</label>
+                    </div>
+                    <select class="tool-select-group" id="toUnit">
+                        <option value="Millimeter">Millimeter</option>
+                        <option selected value="Centimeter">Centimeter</option>
+                        <option value="Decimeter">Decimeter</option>
+                        <option value="Meter">Meter</option>
+                        <option value="Kilometer">Kilometer</option>
+                        <option value="Foot">Foot</option>
+                        <option value="Inch">Inch</option>
+                        <option value="Mile">Mile</option>
+                        <option value="Yard">Yard</option>
+                    </select>
+                    <input readonly placeholder="Output" id="outputLength" type="number" name="to-temperature" min="0"
+                        class="tool-input-feild readonly-background">
+                </div>
+
+                <!-- RESET and CALCULATE buttons -->
+                <div class="tool-input-group">
+                    <button onclick="RestLengthConverter()" class="tool-btn tool-btn-reset">Reset</button>
+                    <button onclick="CalculateLength()" class="tool-btn tool-btn-calculate">Calculate</button>
+                </div>
+            </div>
+
+            <div class="tool-container-feild">
+                <!-- Details providing box to the user -->
+                <div id="OutputInfo" class="tool-output-information tool-output-box">
+                    <h2>Basic Information</h2>
+                    <ul>
+                        <li>1 millimeter (mm) = 1 millimeter (mm)</li>
+                        <li>10 millimeters (mm) = 1 centimeter (cm)</li>
+                        <li>100 millimeters (mm) = 1 decimeter (dm)</li>
+                        <li>1000 millimeters (mm) = 1 meter (m)</li>
+                        <li>1000000 millimeters (mm) = 1 kilometer (km)</li>
+                        <li>304.8 millimeters (mm) = 1 foot (ft)</li>
+                        <li>25.4 millimeters (mm) = 1 inch (in)</li>
+                        <li>1609344 millimeters (mm) = 1 mile (mi)</li>
+                        <li>914.4 millimeters (mm) = 1 yard (yd)</li>
+                    </ul>
+                </div>
+
+                <!-- Result showing box to the user -->
+                <div id="OutputResult" class="tool-output-results tool-output-box">
+                    <h2>Result</h2>
+                    <p id="lengthResult"></p>
+                    <p><b>Formula:</b> <span id="lengthFormula"></span></p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Intro to the developer -->
+        <div class="tool-author-intro">
+            <p>Developed By <i><a href="https://github.com/Avdhesh-Varshney" target="_blank">Avdhesh Varshney</a></i>
+        </div>
+    </div>
+
+    <!-- Javascript files -->
+    <script src="./formula.js"></script>
+    <script src="./error.js"></script>
+    
+    <!-- Main javascript files -->
+    <script src="./script.js"></script>
+</body>
+
+</html>

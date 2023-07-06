@@ -1,0 +1,268 @@
+Piyushi|64|Cold Sore|AB-
+Pranjal|32|Flu|O-
+Harshit|18|Cold |O+
+Shreya|46|Flu|AB+
+Tushar|19|Sore Throat|O-
+Prerna|61|Stomach Bug|AB+
+Ekta|26|Sore Throat|B-
+Akansha|62|Sore Throat|O-
+Tanvi|46|Sore Throat|B+
+Sukriti|58|No|O+
+Divyanshu|21|Stomach Bug|B-
+Ayush|42|Stomach Bug|AB+
+Kirtika|25|Cold Sore|O+
+Sneha|28|Flu|O+
+Kirti|50|Sore Throat|AB-
+Nikhil|33|Cold Sore|O+
+Dev|18|Stomach Bug|AB+
+Sourabh|59|Stomach Bug|A+
+Sajal|27|No|O+
+Krishna|41|No|O+
+Anshul|30|No|A+
+Sneha|42|Stomach Bug|O-
+Akshita|38|Stomach Bug|O-
+Sweety|61|No|AB+
+Amaan|21|No|B-
+Ashutosh|41|Stomach Bug|A+
+Deblina|24|No|AB+
+Abhay|48|No|B+
+Ajay|32|Sore Throat|A+
+Ananya|20|Cold Sore|O-
+Anay|40|Cold |AB+
+Anmol|55|Cold Sore|AB-
+Anubhav|20|Cold |B-
+Anuj|47|No|AB-
+Aryan|48|Cold Sore|B-
+Aryan|37|No|O-
+Ayush|19|Stomach Bug|O-
+Daksh|49|No|O-
+Deepinder|43|Cold Sore|A+
+Dishant|44|No|O+
+Divye|37|Stomach Bug|O+
+Duiena|25|Cold Sore|A+
+Garvesh|26|No|O+
+Garvit|30|No|AB-
+Gaurav|53|Flu|O-
+Hardik|10|Stomach Bug|A+
+Hardik|14|Stomach Bug|AB-
+Harshit|36|Sore Throat|B+
+Hemant|36|No|AB+
+Himanshi|50|No|O+
+Ishit|57|Stomach Bug|AB-
+Ishita|31|Cold |AB+
+Kaustubh|25|No|B-
+Khushi|12|Flu|A+
+Khyati|25|Sore Throat|O+
+Manthan|59|Stomach Bug|O-
+Mohit|23|Cold |A+
+Mohit|59|No|AB+
+Nabanita|16|No|O+
+Nakul|49|Cold Sore|O-
+Nalin|65|Flu|A+
+Navneet|59|Cold Sore|O-
+Neeyati|30|No|O-
+Nikhil|14|Cold |B+
+Nikunj|33|No|A+
+Paridhi|43|Sore Throat|AB+
+Parth|15|Stomach Bug|O-
+Vaibhav|23|Flu|AB+
+Avni|54|Flu|A+
+Sameer|29|No|AB+
+Aryan|53|Cold |O+
+Aryan|41|Stomach Bug|A+
+Deepesh|26|No|AB+
+Adit|40|No|AB+
+Anurag|17|No|O+
+Prince|17|Sore Throat|AB-
+Harsh|20|No|AB+
+Sumit|34|Cold |A+
+Aditya|45|No|A+
+Bhavya|15|Flu|O+
+Sehaj|10|Stomach Bug|AB-
+Tanu|36|No|B-
+Aadit|21|Cold Sore|AB-
+Shaan|49|Cold Sore|AB-
+Yajin|11|Stomach Bug|A+
+Yatin|30|Stomach Bug|O+
+Athulya|55|Stomach Bug|O+
+Krishna|17|No|O-
+Love|32|No|O+
+Sounak|32|Stomach Bug|A+
+Athar|41|No|O-
+Divyanshu|55|Cold Sore|O+
+Varun|41|Stomach Bug|B+
+Anubhav|36|Cold |AB-
+Sarthak|60|Cold Sore|AB+
+Yogesh|42|No|A+
+Pooja|64|Cold |AB+
+Chirag|30|No|AB-
+Sparsh|12|No|A+
+Yash|48|No|O-
+Tanishq|65|Cold |O+
+Aman|42|Cold |A+
+Tushar|62|No|O+
+Kunal|62|Flu|O+
+Rohit|62|No|O+
+Pratham|56|No|A+
+Pratham|35|Cold Sore|B+
+Hemung|24|Flu|A+
+Anirudh|39|Cold |O-
+Manoj|57|Flu|A+
+Rohit|57|Sore Throat|A+
+Madhav|46|Flu|AB-
+Tanisha|49|Stomach Bug|O-
+Pranav|62|No|B+
+Hemangi|59|No|B+
+Anjali|44|Sore Throat|AB+
+Saatvik|19|Sore Throat|B+
+Vidhi|23|Sore Throat|B-
+Divyanshi|20|Sore Throat|O+
+Shweta|18|No|B-
+Yana|35|No|AB+
+Kavya|47|Sore Throat|O-
+Lokik|19|Cold |A+
+Vanshika|60|Cold Sore|B+
+Yash|44|Cold Sore|O+
+Priyanshu|53|No|B+
+Harshita|53|Flu|AB+
+Royal|31|No|B-
+Dhruv|19|No|B+
+Charu|43|Cold |AB-
+Satvik|35|Flu|B-
+Muskaan|32|Cold |O+
+Arpan|50|Cold Sore|AB-
+Neha|63|Cold |AB+
+Kanak|11|Stomach Bug|B-
+Ashu|39|No|AB-
+Charu|30|Stomach Bug|B-
+Nikita|13|Stomach Bug|O+
+Pratyush|48|Cold Sore|O+
+Jeevesh|36|No|AB-
+Rashi|16|Sore Throat|B+
+Ozing|31|Stomach Bug|O+
+Sareena|46|No|A+
+Kanak|16|Stomach Bug|AB-
+Aditya|24|Cold Sore|A+
+Sanjana|57|Sore Throat|B+
+Kabir|62|Cold |B-
+Aryan|57|Sore Throat|B-
+Abhipraya|49|Cold |A+
+Kriti|34|Cold Sore|O+
+Zubeda|44|No|O+
+Mudit|44|Sore Throat|B+
+Eeshan|55|Flu|A+
+Nitya|26|Cold Sore|B+
+Snigdha|52|Cold Sore|AB-
+Devraj|17|Cold Sore|A+
+Ishika|32|Cold |B-
+Arshi|36|No|O+
+Simran|11|Cold |B+
+Riya|20|Cold |AB+
+Joeell|51|Flu|O+
+Ansh|61|No|A+
+Purva|27|Cold |O+
+Amiesha|39|No|A+
+Tonu|33|No|B-
+Devanshi|29|Cold Sore|B+
+Kireet|10|Flu|AB-
+Pooja|13|No|AB+
+Suhani|15|Sore Throat|O-
+Siddhant|26|Cold Sore|A+
+Anushka|56|Cold Sore|AB+
+Harshita|22|Stomach Bug|AB-
+Amit|28|Stomach Bug|B-
+Swati|34|Cold |AB+
+Ritanshi|51|Stomach Bug|AB+
+Varsha|61|Flu|O-
+Swati|51|Cold Sore|O-
+Sanya|47|No|AB+
+Neha|58|Sore Throat|AB+
+Shashank|16|Sore Throat|O-
+Sanyam|48|Cold |B+
+Ishu|46|Stomach Bug|A+
+Anannya|12|No|B+
+Prachi|63|Stomach Bug|AB+
+Akshay|31|Flu|B-
+Mohit|49|No|O+
+Abhay|20|Flu|AB-
+Akash|34|Cold Sore|A+
+Ashish|39|Stomach Bug|O-
+Bhumika|35|Sore Throat|AB+
+Chaitanya|45|Stomach Bug|B+
+Dev|31|Sore Throat|AB-
+Diksha|47|Sore Throat|B+
+Dishant|34|Cold Sore|O+
+Kanan|65|Stomach Bug|AB+
+Keshav|58|Cold |O+
+Krit|49|No|AB-
+Lalit|56|No|A+
+Lokesh|17|Flu|A+
+Akash|41|No|A+
+Divyansh|27|Cold |A+
+Ashutosh|49|No|AB-
+Mohit|46|No|AB-
+Saksham|32|Cold |B+
+Yug|64|No|AB-
+Anubhav|56|Cold |O-
+Aryan|19|Flu|O+
+Tanya|20|No|O-
+Sourabh|39|No|O-
+Abhishek|42|Stomach Bug|A+
+Dhruv|24|Cold Sore|O+
+Saiyam|53|Cold |O-
+Ronak|10|No|AB-
+Ayushman|46|No|AB-
+Himanshu|63|Sore Throat|B-
+Ritika|62|No|O+
+Aaryan|10|Cold |O-
+Deepak|22|Cold |AB-
+Abhishek|63|Cold |AB+
+Anirudh|34|Cold |O-
+Sidharth|15|Cold |B+
+Ashish|23|Cold |O+
+Meehul|35|Stomach Bug|AB+
+Sandeepti|31|No|AB-
+Khushi|12|Cold Sore|AB-
+Vidhi|59|Sore Throat|B+
+Saransh|28|Cold Sore|O-
+Laksh|59|Stomach Bug|O-
+Divyanshu|25|Sore Throat|O-
+Neeraj|39|Stomach Bug|B+
+Deepak|61|Flu|O-
+Sohani|46|Cold |AB+
+Divyanshu|31|No|AB-
+Himansh|29|No|O+
+Bhavishya|54|Sore Throat|B+
+Kamal|15|No|O+
+Sameer|39|Flu|B-
+Yash|26|No|AB-
+Raghav|61|Sore Throat|AB+
+Saurabh|20|Stomach Bug|B-
+Chaitanya|20|Cold |O-
+Saksham|29|Cold |O-
+Daiwik|12|No|AB+
+Harshita|18|Cold |B+
+Gaurika|60|Stomach Bug|AB-
+Dhairya|33|Stomach Bug|B+
+Dheeraj|14|No|AB-
+Unnati|46|Sore Throat|O-
+Piyush|61|Cold |B+
+Tushar|12|Sore Throat|B-
+Bhavya|22|Flu|B+
+Yash|10|Sore Throat|B+
+Anshul|36|Cold Sore|O-
+Lakshit|37|No|A+
+Tarun|50|Cold |AB-
+Aman|46|Flu|O-
+Gourav|17|No|AB+
+Tushaar|58|Sore Throat|AB-
+Bharat|38|No|AB-
+Abhay|19|Flu|AB+
+Mohit|35|Flu|B-
+Ashish|25|Cold |O-
+Sidhit|43|Flu|O+
+Riya|21|No|A+
+Gagan|64|Sore Throat|A+
+Piyush|20|No |B+
+Madhav|24|No|O+
+mok|78|ewsd|u
