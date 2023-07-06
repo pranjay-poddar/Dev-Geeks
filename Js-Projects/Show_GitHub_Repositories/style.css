@@ -1,0 +1,106 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Tahoma, Arial;
+}
+
+/* Container for repositories */
+.repos-container {
+    width: 800px;
+    background-color: #f6f6f6;
+    margin: auto;
+}
+
+/* Container for input and button */
+.repos-container .get-repos {
+    padding: 20px;
+    display: flex;
+    background-color: #eee;
+}
+
+/* Input field for GitHub username */
+.repos-container .get-repos input {
+    width: 100%;
+    padding: 15px 20px;
+    border: none;
+    font-size: 20px;
+    height: 54px;
+}
+
+/* Styling when input field is focused */
+.repos-container .get-repos input:focus {
+    outline: 2px solid #f44336;
+}
+
+/* Button to fetch repositories */
+.repos-container .get-repos .get-button {
+    width: 140px;
+    margin-left: 10px;
+    height: 54px;
+    background-color: #f44336;
+    color: #fff;
+    line-height: 54px;
+    text-align: center;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Container to display repositories */
+.repos-container .show-data {
+    padding: 20px;
+    background-color: #e0e0e0;
+}
+
+/* Individual repository box */
+.repos-container .show-data .repo-box {
+    background-color: #fff;
+    padding: 15px;
+}
+
+/* Margin bottom for all repository boxes except the last one */
+.repos-container .show-data .repo-box:not(:last-child) {
+    margin-bottom: 5px;
+}
+
+/* Styling for anchor tag within a repository box */
+.repos-container .show-data .repo-box a,
+.repos-container .show-data .repo-box span {
+    float: right;
+    margin-left: 4px;
+    border-radius: 4px;
+    color: #fff;
+    font-size: 12px;
+    width: 90px;
+    text-align: center;
+    padding: 4px;
+}
+
+/* Styling for anchor tag within a repository box */
+.repos-container .show-data .repo-box a {
+    text-decoration: none;
+    background-color: #e91e63;
+}
+
+/* Styling for span within a repository box */
+.repos-container .show-data .repo-box span {
+    background-color: #009688;
+}
+
+/* Footer section of the project */
+footer {
+    text-align: center;
+    margin: 2rem 0 1.5rem 0;
+    color: #009688;
+}
+
+a {
+    text-decoration: none;
+    color: #009688;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: #e91e63;
+}
