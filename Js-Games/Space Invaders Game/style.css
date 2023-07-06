@@ -1,0 +1,61 @@
+*{
+	margin: 0;
+}
+
+#levelid{
+	text-align: center;
+	padding-top: 17px;
+}
+
+h1,h2{
+	padding-left: 24px;
+	color: rgb(234, 234, 99);
+}
+
+body{
+    /* background:url("backimg.png"); */
+    background:url("https://i.ibb.co/G2yS5N8/parallax-background.gif");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+.grid {
+	width: 555px;
+	height: 555px;
+	border: solid rgb(236, 153, 29) 7px;
+	display: flex;
+	flex-wrap: wrap;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.grid div {
+	width: 37px;
+	height: 37px;
+}
+
+.invader {
+	background-image: url("https://i.ibb.co/TPrs4Gt/aliens-image.png");
+	/* border-radius: 10px; */
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+}
+
+.shooter {
+	background-image: url("https://i.ibb.co/6JWhDRK/spaceship.png");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+}
+
+.laser {
+	background-color: orange;
+}
+
+.boom {
+	background-color: red;
+}
