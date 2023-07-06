@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Logo of the website -->
+    <link rel="shortcut icon"
+        href="https://github.com/pranjay-poddar/Dev-Geeks/assets/114330097/ce9f7cdf-c11b-4f5b-b169-83d9997465dc"
+        type="image/x-icon">
+
+    <!-- Title of the project -->
+    <title>Time Watcher</title>
+
+    <!-- Adding stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Main container of the project -->
+    <div id="container">
+        <!-- Header of the project -->
+        <div id="header">
+            <img src="https://github.com/pranjay-poddar/Dev-Geeks/assets/114330097/11b8443e-1661-45b4-9781-f9da97ff14fd"
+                alt="Logo" width="10%" class="logo">
+            <h1 id="main-heading">Time Watcher</h1>
+        </div>
+
+        <!-- Created by -->
+        <p id="creator">Created By <a href="https://github.com/Avdhesh-Varshney">Avdhesh Varshney</a></p>
+
+        <!-- Input Section -->
+        <div id="take-input">
+            <h2 id="input-heading">Enter Data</h2>
+
+            <!-- Input fields -->
+            <div id="input">
+                <input type="number" placeholder="Day" min="1" max="31" id="day" />
+                <input type="number" placeholder="Month" min="1" max="12" id="month" />
+                <input type="number" placeholder="Year" min="100" id="year" />
+                <input type="number" placeholder="Hour" min="0" max="23" id="hour" />
+                <input type="number" placeholder="Minute" min="0" max="59" id="minute" />
+                <input type="number" placeholder="Second" min="0" max="59" id="second" />
+                <input type="number" placeholder="Milli-Second" min="0" max="999" id="milli" />
+            </div>
+        </div>
+
+        <!-- Output section -->
+        <div id="show-output">
+            <h2 id="output-heading">Result</h2>
+
+            <!-- Output fields -->
+            <div id="output">
+                <fieldset>
+                    <legend>Years</legend>
+                    <div class="val" id="years">----</div>
+                </fieldset>
+                <fieldset>
+                    <legend>Months</legend>
+                    <div class="val" id="months">--</div>
+                </fieldset>
+                <fieldset>
+                    <legend>Days</legend>
+                    <div class="val" id="days">--</div>
+                </fieldset>
+                <fieldset>
+                    <legend>Hours</legend>
+                    <div class="val" id="hours">--</div>
+                </fieldset>
+                <fieldset>
+                    <legend>Minutes</legend>
+                    <div class="val" id="minutes">--</div>
+                </fieldset>
+                <fieldset>
+                    <legend>Seconds</legend>
+                    <div class="val" id="seconds">--</div>
+                </fieldset>
+                <fieldset>
+                    <legend>Milli-Seconds</legend>
+                    <div class="val" id="milli-seconds">---</div>
+                </fieldset>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Adding Javascript -->
+    <script src="./script.js"></script>
+</body>
+
+</html>
