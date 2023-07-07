@@ -799,8 +799,10 @@ Happy Coding! -->
 </tr>
   
 <tr align="center">
-<td align="center"> 255.</td>  
+<td align="center"> 261.</td>  
 <td align="center"><a href="./Python Projects/Circle using Turtle">Circle using Turtle</a></td>
+<td align="center"> 262.</td>
+<td align="center"><a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Js-Games/Rabbit_Rush">Rabbit Rush</a></td>
 </tr>  
 </table>
 
