@@ -1,0 +1,52 @@
+body {
+    background-color: #222;
+    color: #fff;
+    font-family: Arial, sans-serif;
+    text-align: center;
+  }
+
+  h1 {
+    margin-top: 50px;
+  }
+
+  .dice {
+    display: inline-block;
+    height: 150px;
+    width: 150px;
+    margin: 20px;
+    animation-name: roll;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+    animation-play-state: paused; 
+  }
+
+  @keyframes roll {
+    0% { transform: rotate(0); }
+    20% { transform: rotate(-20deg); }
+    40% { transform: rotate(20deg); }
+    60% { transform: rotate(-20deg); }
+    80% { transform: rotate(20deg); }
+    100% { transform: rotate(0); }
+  }
+
+  .button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 15px 20px;
+    background-color: #007bff;
+    color: #fff;
+    font-size: 22px;
+    font-weight: bold;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s, border-radius 0.6s;
+  }
+
+  .button:hover {
+    background-color: #fff;
+    color: #007bff;
+    border-radius: 20px;
+  }
