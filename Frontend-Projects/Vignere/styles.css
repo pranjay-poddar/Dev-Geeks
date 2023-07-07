@@ -167,8 +167,8 @@ body {
   transition: .5s;
   margin-top: 40px;
   letter-spacing: 4px;
-  justify-content: center;
   display: flex;
+  justify-content: center;
 }
 
 .login-box a:hover {
