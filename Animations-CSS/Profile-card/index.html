@@ -17,7 +17,7 @@
       box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
       padding: 20px;
       text-align: center;
-      animation: slideIn 0.5s ease-in-out;
+      animation: moveIn 2s infinite alternate;
     }
     
     .profile-picture {
@@ -69,14 +69,15 @@
     }
   
     /* Animation Keyframes */
-    @keyframes slideIn {
-      from {
-        opacity: 0;
-        transform: translateY(-50px);
+    @keyframes moveIn {
+      0% {
+        transform: translateX(0);
       }
-      to {
-        opacity: 1;
-        transform: translateY(0);
+      50% {
+        transform: translateX(20px);
+      }
+      100% {
+        transform: translateX(0);
       }
     }
   </style>
