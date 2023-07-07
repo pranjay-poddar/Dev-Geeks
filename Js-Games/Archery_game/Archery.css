@@ -1,0 +1,129 @@
+body {
+    background-color: coral;
+    margin: 0;
+    font-family:monospace;
+    text-align:center;
+    height: 100vh;
+    width: 100vw;
+}
+
+#mainContainer {
+    transform-origin:0% 0%;
+    position:absolute;
+    width:100%;
+    top:0;
+    left:0;
+}
+
+#score {
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    text-align:center;
+    font-size:60px;
+    font-weight:900;
+    color:#45f;
+}
+
+#showPoint {
+    position:absolute;
+    top:0;
+    left:0;
+    background:transparent;
+    margin:0;
+}
+
+#showPoint .u{
+    position:absolute;
+    display:inline-block;
+    top:50%;
+    left:70%;
+    font-size:30px;
+    font-family:arial;
+    opacity:0;
+    transition:top 0.1s linear,left 0.1s linear
+}
+
+#animCanvas {
+    position:absolute;
+    top:0;
+    left:0;
+    z-index:100;
+    border-bottom:1px solid blue;
+}
+
+#arrs {
+    font-size:30px;
+    text-align:left;
+    position:absolute;
+    margin:0;
+    top:0;
+    color: blueviolet;
+    padding-left:10px;
+}
+
+#startMenu {
+    position:absolute;
+    top:0;
+    left:0;
+    background:rgb(117, 205, 228);
+    z-index:1000;
+    width:100%;
+    height:100%;
+}
+
+#startMenu h1 {
+    font-size:50px;
+    text-shadow:2px 3px #aaa;
+    font-weight:900;
+}
+
+#startMenu button {
+    font-size:22px;
+    background:none;
+    border:none;
+    border-top:3px solid rgb(245, 241, 6);
+    border-bottom:3px solid rgb(11, 218, 138);
+    padding:10px 30px 5px;
+    line-height:20px;
+    outline:none;
+}
+
+#startMenu h2 {
+    font-size:25px;
+}
+
+#timerDiv {
+   height:8px;
+   padding:0px;
+   border:2px solid blue;
+   width:50%;
+   position:absolute;
+   bottom:20px;
+   left:25%;
+   border-radius:20px;
+}
+           
+.timer {
+   height:8px;
+   width:0%;
+   background:red;
+   animation: countTime 4.5s linear 1;
+   animation-delay:0.5s;
+   border-radius:20px;
+}
+           
+@keyframes countTime {
+   0% {
+       width: 100%;
+       background-color: lime;
+   }
+   50% {
+       background-color:yellow;
+   }
+   100% {
+       width: 0%;
+       background-color: red;
+   }
+}
