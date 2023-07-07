@@ -13,8 +13,8 @@ body
 {
     position: relative;
     margin: 5% auto;
-    height: 400px;
-    width: 600px;
+    height: 800px;
+    width: 800px;
     background: #fff;
     box-shadow: 0 4px 6px rgb(0.1, 0, 0.2);
 
@@ -28,8 +28,16 @@ body
     left: 0;
     box-sizing: border-box;
     padding: 40px;
-    width: 300px;
-    height: 400px;
+    width: 400px;
+    height: 800px;
+    padding:100px;
+}
+
+.left-box input{
+    margin-bottom: 3rem;
+    border-radius: 5px;
+    height:40px;
+    width:200px;
 }
 
 h1
@@ -79,27 +87,35 @@ input[type="submit"]:focus
     top: 0;
     right: 0;
     box-sizing: border-box;
-    padding: 40px;
-    width: 300px;
-    height: 400px;
+    padding: 100px;
+    width: 400px;
+    height: 800px;
     background-image: url(img.jpg.jpg);
     background-size: cover;
     background-position: center;
+
+}
+.right-box .social {
+    margin-bottom:100px;
 }
 
 .or
 {
     position: absolute;
-    top: 180px;
-    left: 280px;
-    width: 40px;
-    height: 40px;
+    top:400px;
+    left:360px;
+    padding:10px;
+    width:80px;
+    height: 80px;
     color: #000;
-    background: rgb(136, 53, 53);
+    background: #F5F5F5;
     border-radius: 50%;
     box-shadow: 0 2px 4px rgba(0,0,0.6);
-    line-height: 40px;
+    line-height: 80px;
     text-align: center;
+    font-size: 2rem;
+    border-style:outset;
+    text-decoration:underline;
 
 }
 
@@ -126,35 +142,90 @@ button.social
     transition: all 1s ease;
     cursor: pointer;
     animation: down-bump 4s ease;
+    
 }
 
-button.social:hover
-{
-    background-color: rgb(235, 68, 68);
-    color: black;
-    border-radius: 60px;
-    border-color: beige;
-    background-position: 100% 100%;
-    animation: up-bump 1s ease-in-out;
-}
+
 .facebook
 {
-    background: #32508e;
+    background:#4E4FEB;
     color: #ffffff;
+    margin:auto;
+    font-size:15px;
 }
 
 .instagram
 {
     color: #ffffff;
-    background: #dd51aa;
+    background: #FF6666;
+    margin:auto;
+    font-size:15px;
 }
 .google
 {
-    background:rgb(48, 217, 33);
+    background:#0F9D58;
     color: #fff;
+    margin:auto;
+    font-size:15px;
 }
 .about-us{
     background-color: black;
     color: #c9e5e5;
     
 }
+.fa-facebook{
+    margin-right: 20px;
+    font-size:20px;
+
+}
+.fa-google{
+    margin-right: 20px;
+    font-size:20px;
+}
+
+.fa-square-instagram{
+    margin-right: 20px;
+    font-size:20px;
+}
+
+  
+  button.social.facebook:hover {
+    background-color: #32508e;
+    transform: translateY(-3px);
+  }
+  
+  button.social.facebook:active {
+    transform: translateY(0);
+  }
+
+  button.social.instagram:hover {
+    background-color: red;
+    transform: translateY(-3px);
+  }
+  
+  button.social:active {
+    transform: translateY(0);
+  }
+  
+  button.social:hover {
+    background-color: #1A5D1A;
+    transform: translateY(-3px);
+  }
+  
+  button.social:active {
+    transform: translateY(0);
+  }
+
+  .box::placeholder{
+    text-align:center;
+  }
+  #about-us{
+    text-align:center;
+}
+.about{
+    color:black;
+    font-size:20px;
+    text-decoration: none;
+}
+
+
