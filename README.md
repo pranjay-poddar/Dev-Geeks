@@ -801,6 +801,8 @@ Happy Coding! -->
 <tr align="center">
 <td align="center"> 255.</td>  
 <td align="center"><a href="./Python Projects/Circle using Turtle">Circle using Turtle</a></td>
+<td align="center"> 262.</td>  
+<td align="center"><a href="./Python Projects/SMTP mailing">SMTP mailing</a></td>
 </tr>  
 </table>
 
