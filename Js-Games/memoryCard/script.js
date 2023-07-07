@@ -1,15 +1,15 @@
 // Array to store the image URLs
 var images = [
-    'images/img1.png',
-    'images/img2.png',
-    'images/img3.png',
-    'images/img4.png',
-    'images/img5.png',
-    'images/img6.png',
-    'images/img7.png',
-    'images/img8.png',
-    'images/img9.png',
-    'images/img10.png',
+    'https://drive.google.com/uc?id=1xGrP2zL1bWsQwrbJLs17WQcsaYmGN6xr',
+    'https://drive.google.com/uc?id=1UKful43LrWn6QnWNYwmu6169sn3jNtIt',
+    'https://drive.google.com/uc?id=1Q5ZbWUATjjblErH3W57_9rv5FxD1ynbU',
+    'https://drive.google.com/uc?id=1QcQgP_4U06aeDEHOS4ARtI9nASVpy3-a',
+    'https://drive.google.com/uc?id=1IPaW6DtZErS3BZE-MREsTE72U3DAo141',
+    'https://drive.google.com/uc?id=1xcNrFp-1NwdQbbylK4bv8QohO8Y6FnNJ',
+    'https://drive.google.com/uc?id=11Ok_WemH_ZUxLAWVFmFtiTiWf3d0xYTC',
+    'https://drive.google.com/uc?id=1dnOFD39sx_edpGrrf7fnCdqPo1pcGyPt',
+    'https://drive.google.com/uc?id=1k5kz2QkemXx1eILqDsESmGtbagSYvrWb',
+    'https://drive.google.com/uc?id=1zsAEmLOJNa4x3RzuBLasPNctxWRW_1eV',
 ];
 
 // Array to store the cards
