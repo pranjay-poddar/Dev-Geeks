@@ -94,3 +94,74 @@ h1{
     text-decoration: underline;
     font-family:Verdana, Geneva, Tahoma, sans-serif;
 }
+.footer{
+  background-color: #9e580d;
+  text-align: center;
+  
+  
+}
+.footer .share{
+  display: flex;
+  padding-top: 3rem;
+  gap: 1.25rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.btn{
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+  background: #5f2f02;
+  width: 160px;
+  padding: 20px;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #fff;
+  border-radius: 20px;
+  cursor: pointer;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: box-shadow, transform;
+  transition-property: box-shadow, transform;
+}
+.btn:hover, .btn:focus, .btn:active{
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+  color: #fff;
+}
+
+.footer .note{ 
+  display: flex;
+  padding: 1rem 5rem;
+  gap: 10rem;
+  justify-content: left;
+  flex-wrap: wrap;
+}
+
+.footer .note .contactUs{
+  text-align: left;
+  padding-left: 40px;
+  padding-top: 25px;
+  font-size: 25px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: rgb(243, 152, 16);
+}
+
+.footer .note .aboutUs{
+  text-align: left;
+  padding-left: 40px;
+  padding-top: 25px;
+  font-size: 25px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: rgb(243, 152, 16);
+}
+
+.footer .credit {
+  padding: 2.5rem 1rem;
+  color: #fff;
+  font-weight: normal;
+  font-size: 15px;
+}
