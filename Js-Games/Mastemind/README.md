@@ -38,12 +38,6 @@ To play the Mastermind game, follow these steps:
 
 <br>
 
-## **Screenshots 📸**
-
-<br>
-<img src="Screenshots/Mastermind.png" alt="Mastemind Game Screenshot">
-
-
 
 <br>
 
