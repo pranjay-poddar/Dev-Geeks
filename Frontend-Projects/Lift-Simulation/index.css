@@ -1,0 +1,117 @@
+.container{
+    /* background-color: #4498d1; */
+    
+    
+}
+.input {
+  
+    border: none;
+    background-color: lightgray;
+    padding: 5px;
+    justify-content: space-around;
+  }
+  
+  .input-section {
+    
+    transition: 0.3s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .next {
+    justify-content: center space-around;
+    text-align: center;
+    border-radius: 5px;
+    background-color: rgb(65, 170, 196);
+    cursor: pointer;
+  }
+  
+  /* lift style contenet */
+  
+  .floor-container {
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+  }
+  
+  .floor {
+    display: flex;
+    align-items: flex-end;
+    height: 100px;
+    width: 100vw;
+    border-bottom: 2px solid rgb(112, 108, 103);
+    border-radius: 5px;
+    }
+
+    @media (min-width:800px), (min-height:400px) {
+      .floor, .floor-container{
+          width: 1200px;
+      }
+  }
+  
+  .ground-floor-container {
+    height: 100%;
+    display: flex;
+  }
+  
+  
+  .button-container {
+    display: flex;
+    align-items: center;
+    align-content: center;
+    flex-direction: column;
+    justify-content: space-evenly;
+    flex: content;
+  }
+  
+  .btn-move {
+    padding: 2px;
+    height: 2rem;
+    width: 3rem;
+    border: black;
+    border-width: 1px;
+    border-radius: 5px;
+    text-decoration: rgb(12, 32, 50);
+  }
+  
+
+  
+  .lift {
+    border: 5px solid rgb(92, 88, 88);
+    height: 80px;
+    top: 15px;
+    width: 66px;
+    margin-left: 20px;
+    position: relative;
+    display: inline-flex;
+    background-color: transparent;
+    transition: 2s ease-in;
+  }
+  
+  .right-door {
+    height: 100%;
+    width: 50%;
+    background-color: rgb(129, 133, 138);
+    justify-content: space-between;
+    transition-duration: 2.5s;
+  }
+  
+  .move-right {
+    transform: translate(100%);
+    transition-duration: 2.5s;
+  }
+  
+  .left-door {
+    height: 100%;
+    width: 50%;
+    background-color: rgb(171, 174, 179);
+    justify-content: space-between;
+    transition-duration: 2.5s;
+  }
+  
+  .move-left {
+    transform: translate(-100%);
+    transition-duration: 2.5s;
+  }
+  
