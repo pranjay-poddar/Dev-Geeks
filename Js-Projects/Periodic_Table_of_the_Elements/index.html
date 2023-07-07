@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Logo of the website -->
+    <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
+
+    <!-- Title of the website -->
+    <title>Periodic Table of the Elements</title>
+
+    <!-- Sytlesheet -->
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <!-- Full page of the periodic table -->
+    <div id="app">
+
+        <!-- Main container of the periodic table -->
+        <div class="ptable-container">
+            <header>
+                Periodic Table of the Elements
+                <p class="creator">
+                    Created by <a href="https://github.com/Avdhesh-Varshney">Avdhesh Varshney</a>
+                </p>
+            </header>
+
+            <pt-element v-for="element in elements" :key="element.number" :number="element.number"
+                @mouseover="updateDetails"></pt-element>
+        </div>
+
+        <!-- Showing information about the periodic table of the elements -->
+        <div class="element-details">
+            <h1 class="symbol" :style="{ 'color': selected.color }">{{ selected.symbol }}</h1>
+
+            <h2>{{ selected.name }}</h2>
+
+            <div class="atomic-number">{{ selected.number }}</div>
+
+            <div>
+                <strong class="font-medium">Mass</strong>
+                <div class="mass-number">{{ selected.mass | massFormat }}</div>
+            </div>
+
+            <div class="dot" :style="{ '--color': selected.color }"></div>
+
+            <div class="category">{{ selected.category | capitalize }}</div>
+
+        </div>
+
+    </div>
+
+    <!-- Adding Javascript -->
+    <script type="text/x-template" id="element-template">
+        <div class="element" :style="{ '--xpos': xpos, '--ypos': ypos, '--color': color }" :id="`element-${number}`" @mouseover="emitMouseover">
+            <span class="atomic-number">{{ number }}</span>
+    
+            <h1 class="symbol">{{ symbol }}</h1>
+    
+            <span class="name">{{ name }}</span><br>
+    
+            <span class="mass">{{ mass | massFormat }}</span>
+        </div>
+    </script>
+
+    <!-- Using Vue Javascript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/numeral.js/2.0.6/numeral.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+    <!-- Main javascript file -->
+    <script src="./script.js"></script>
+</body>
+
+</html>
