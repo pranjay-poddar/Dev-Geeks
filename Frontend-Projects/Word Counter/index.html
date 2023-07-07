@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="style.css">
+	<title>Word Counter</title>
+</head>
+<body>
+	<div class="ui-input-container">
+		<h1> <center>Word Counter</center> </h1>
+		<label class="ui-form-input-container">
+			<textarea class="ui-form-input" id="word-count-input" placeholder="Enter your message here.."></textarea>
+		</label>
+	</div>
+    <h3> <center> <button class="clear" onclick="reset()">  Clear Message </button> </center></h3>
+	<div class="output">
+		<div class="counts">
+			<p id="word-count">0</p>
+			<p id="character-count">0</p>
+			<p id="alphabets">0</p>
+			<p id="numbers">0</p>
+			<p id="white-space">0</p>
+			<p id="special-character">0</p>
+		</div>
+		<div class="names">
+			<p>Words</p>
+			<p>Characters</p>
+			<p>Alphabets</p>
+			<p>Numbers</p>
+			<p>White Space</p>
+			<p>Special Character</p>
+		</div>
+	</div>
+	<script src="script.js"></script>
+</body>
+</html>

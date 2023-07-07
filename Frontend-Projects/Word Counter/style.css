@@ -1,0 +1,135 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+  }
+  body{
+    background-color: lightblue;
+  }
+  .ui-input-container {
+    box-sizing: border-box;
+    background-color: #fff;
+    padding: 2rem 0;
+    border-radius: 4px;
+    width: 50%;
+    margin: 0 auto;
+    background-color: lightblue;
+  }
+  .ui-input-container h1 {
+    font-family: sans-serif;
+    margin-bottom: 20px;
+    font-weight: 700;
+    text-transform: capitalize;
+  }
+  .ui-form-input-container {
+    position: relative;
+    font-size: 1rem;
+    display: block;
+  }
+  .ui-form-input {
+    padding: 13px 15px;
+    border-radius: 8px;
+    border: 2px solid #1a73e8;
+    outline: 0;
+    width: 100%;
+    font-size: 16px;
+  }
+  .form-input-label {
+    position: absolute;
+    top: -7px;
+    left: 10px;
+    color: #1a73e8;
+    font-size: 0.85rem;
+    padding-right: 0.33rem;
+    padding-left: 0.33rem;
+    background: #fff;
+    font-family: sans-serif;
+    text-transform: capitalize;
+  }
+  h1{
+    text-align:center;
+    background-color: #0067B0 ;
+    margin:0;
+    padding:10px;
+    color:white;
+  }
+  textarea {
+    min-height: 30vh;
+    resize: none;
+  }
+  p {
+    margin-top: 20px;
+  }
+  .output {
+    display: flex;
+    justify-content: center;
+    width: 40%;
+    height: 50vh;
+    margin: 0 auto;
+    font-size: 22px;
+    font-weight: 700;
+  }
+  .clear{
+    color:white;
+    background:red;
+    font-size:1.2rem;
+    width:13%;
+    justify-content: center;
+    text-align: center;
+    cursor:pointer;
+    display: flex;
+  }
+  .counts {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 20%;
+    height: 100%;
+  }
+  .names {
+    display: flex;
+    flex-direction: column;
+    float: left;
+    height: 100%;
+    width: 80%;
+  }
+  @media screen and (max-width: 650px) {
+  
+    .ui-input-container{
+        width: 80%;
+    }
+    .clear{
+      width:25%;
+    }
+  
+    .output {
+        width: 70%;
+        font-size: 20px;
+    }
+  
+    .counts {
+        width: 20%;
+        font-size: 20px;
+    }
+  }
+  @media screen and (max-width: 310px) {
+  
+    .output {
+        width: 90%;
+    }
+    .clear{
+      width:35%;
+    }
+    .counts {
+        min-width: 20%;
+        width:fit-content;
+        font-size: 18px;
+    }
+  
+    .names {
+        width: 100%;
+        font-size: 18px;
+    }
+  }
+  
