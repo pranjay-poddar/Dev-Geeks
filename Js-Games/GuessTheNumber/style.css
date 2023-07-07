@@ -1,0 +1,498 @@
+* {
+      margin: 0;
+      padding: 0;
+
+}
+
+@font-face {
+      font-family: game-font;
+      src: url(fonts/Gameplay.ttf);
+
+}
+
+@font-face {
+      font-family: debug-font;
+      src: url(fonts/DEBUG-FREE-TRIAL.ttf);
+}
+
+body {
+      margin: 0;
+      padding: 0;
+      background-color: white;
+      color: black;
+      font-size: 1rem;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+header {
+      margin: 0;
+      padding: 0;
+      background-color: rgba(120, 1, 120, 0.899);
+      color: rgb(176, 224, 80);
+      text-shadow: 2px 2px 3px rgb(130, 130, 130);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 1em;
+}
+
+header img {
+      width: 80px;
+      height: 15vh;
+}
+
+header p {
+      font-family: 'Permanent Marker', cursive;
+      font-size: 1.8rem;
+      /* font-weight: 800; */
+}
+
+.game-over {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%)scale(0);
+      transition: 200ms ease-in-out;
+      border-radius: 10px;
+      z-index: 10;
+      border: none;
+      background-color:
+            #212550;
+      width: 450px;
+      max-width: 80%;
+      box-shadow: rgba(117, 117, 194, 0.253) 0px 7px 20px 0px;
+      padding: 1em 2em;
+      text-align: center;
+}
+
+.game-over-active {
+      transform: translate(-50%, -50%)scale(1);
+}
+
+.game-over .title {
+      font-size: 4rem;
+      font-weight: 500;
+      color: #fefe00;
+      font-family: debug-font;
+      margin-bottom: 0;
+      text-shadow: 5px 4px 11px rgba(154, 145, 81, 0.894), 0 2px 5px rgba(143, 142, 96, 0.93);
+}
+
+.content {
+      color: white;
+      padding: 0.8em 0;
+}
+
+.content img {
+      width: 120px;
+      height: 120px;
+}
+
+.question {
+      margin-top: 1em;
+      font-family: Georgia, 'Times New Roman', Times, serif;
+      color: #00d0ff;
+}
+
+.result {
+      display: block;
+      margin: auto;
+      text-align: center;
+      width: 50%;
+      padding: 1em;
+      margin-top: 1em;
+      font-size: 0.9rem;
+      font-family: game-font;
+      background-color: gold;
+      color: gold;
+}
+
+.result:hover {
+      color: white;
+}
+
+.footer #playagin {
+      color: #2ae7bd;
+      font-size: 1rem;
+      font-weight: 600;
+      margin-top:1em;
+      margin-bottom:0.7em;
+}
+
+.button-y-n {
+      display: flex;
+      gap: 1em;
+      align-items: center;
+      justify-content: center;
+}
+
+.button-y-n button {
+      padding: 0.8em 2em;
+
+      border: none;
+      border-radius: 30px;
+      background-color: #e32262;
+      color: rgb(191, 190, 190);
+      font-size: 0.8rem;
+      font-weight: 600;
+      box-shadow: 0 3px 2px 2px rgb(78, 68, 87);
+}
+
+.button-y-n button:hover {
+      background-color: #d70f52;
+      color: white;
+}
+
+.congratulation {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%)scale(0);
+      transition: 200ms ease-in-out;
+      border-radius: 10px;
+      z-index: 10;
+      border: none;
+      background-image: url('images/congrats_bg.gif');
+      background-position: center center;
+      background-repeat: no-repeat;
+      width: 450px;
+      max-width: 80%;
+      box-shadow: rgba(210, 206, 129, 0.482) 0px 7px 28px 0px;
+      padding: 1em 2em;
+      text-align: center;
+}
+
+.congrats-active {
+      transform: translate(-50%, -50%)scale(1);
+}
+
+.congratulation .image img {
+      width: 120px;
+      height: 120px;
+      background-color: #847bc3;
+      border-radius: 50%;
+      padding: 0;
+      box-shadow: 0px 10px 20px 0px rgba(14, 14, 14, 0.627);
+}
+
+.final-score {
+      font-family: 'Goldman', cursive;
+      font-size: 2rem;
+}
+
+.congratulation .comment {
+      font-size: 1rem;
+      font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+      font-weight: 800;
+      color: #3f57ae;
+      margin:1em 0;
+}
+
+.warning {
+      position: fixed;
+      vertical-align: top;
+      margin-top: 2em;
+      left: 50%;
+      transform: translate(-50%, -50%) scale(0);
+
+      transition: all 200ms ease-out;
+      border-radius: 10px;
+      z-index: 10;
+      border: none;
+      background-color:
+            #efefef;
+      width: 450px;
+      max-width: 70%;
+      box-shadow: rgba(0, 0, 0, 0.253) 0px 7px 20px 0px;
+      padding: 0.5em 0.9em;
+
+}
+
+.warn {
+      display: flex;
+      /* gap: 0.2em; */
+      justify-content: center;
+      align-items: center;
+}
+
+.warning img {
+
+      width: 80px;
+      height: 80px;
+      margin-bottom: 1em;
+}
+
+.warn h2 {
+      font-family: 'Times New Roman', Times, serif;
+      font-weight: 600;
+      color: #000000;
+}
+
+.number-error {
+      text-align: center;
+      font-family: Arial, Helvetica, sans-serif;
+      color: red;
+      font-weight: 450;
+      padding-bottom: 1em;
+      margin-bottom: 1em;
+      border-bottom: 1px solid rgb(60, 60, 60);
+}
+
+.warning #warning-ok {
+      float: right;
+      text-align: center;
+      border: 2px solid gray;
+      border-radius: 5px;
+      font-size: 1rem;
+      color: rgb(2, 175, 255);
+      background-color: #ffffff;
+      padding: 0.3em 1.5em;
+}
+
+.warning #warning-ok:hover {
+      background-color: #0077b5;
+      color: white;
+      border-color: #0077b5;
+}
+
+.warning-active {
+      transform: translate(-50%, -50%) scale(1);
+}
+
+.overlay {
+      position: fixed;
+      opacity: 0;
+      transition: 200ms ease-in-out;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: rgba(0, 0, 0, 0.705);
+      pointer-events: none;
+}
+
+.overlay-active {
+      opacity: 1;
+      pointer-events: all;
+}
+
+h4 {
+      color: rgb(94, 94, 94);
+      text-align: center;
+      margin: 1em;
+}
+
+h3 {
+      padding: 0.5em;
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      color: rgb(255, 255, 255);
+      font-weight: 700;
+}
+
+
+
+h2 {
+      font-size: 2rem;
+      color: rgba(255, 166, 0, 0.931);
+      font-weight: 500;
+      font-family: game-font;
+      text-shadow: -1px 2px 1px rgb(131, 115, 147);
+}
+
+.container {
+      display: flex;
+      flex-direction: column;
+      background-color: rgb(110, 64, 196);
+      width: 100%;
+      height: 80vh;
+}
+
+.container .head {
+      display: flex;
+      justify-content: space-between;
+}
+
+.gussing-part {
+      margin-top: 0.5em;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 1.5em;
+}
+
+.gussing-part input {
+      width: 250px;
+      padding: 1em;
+      border: 2px solid whitesmoke;
+      border-radius: 10px;
+      background-color: whitesmoke;
+      text-align: center;
+      font-family: game-font;
+      color: black;
+      font-size: 1rem;
+      font-weight: 400;
+
+}
+
+input:hover {
+      background-color: white;
+      border: 2px solid whitesmoke;
+}
+
+.alert {
+      margin: 0;
+      padding: 0;
+      color: rgb(202, 3, 3);
+      content-visibility: hidden;
+}
+
+.alert-active {
+      content-visibility: visible;
+}
+
+.gussing-part .btn {
+      width: 100px;
+      border: none;
+      border-radius: 8px;
+      background-color: #f0dc23;
+      padding: 1em;
+      color: #000000;
+      font-family: game-font;
+      font-weight: 900;
+      font-size: 1rem;
+      box-shadow: 0 5px rgb(144, 141, 147);
+}
+
+.gussing-part .btn:hover {
+      background-color: #ffe600;
+      /* color: white; */
+}
+
+.btn:active {
+      background-color: #f2df3e;
+      box-shadow: 0 1px rgb(144, 141, 147);
+      transform: translateY(4px);
+}
+
+.hint-box {
+      text-align: center;
+      width: 40%;
+      min-width: 350px;
+      padding: 0.5em 0;
+      opacity: 0;
+      font-size: 1.2rem;
+      font-weight: 600;
+      transition: all 1s ease-in;
+      font-family: Arial, Helvetica, sans-serif;
+      color: #000000;
+      background-color: #EDC2B7;
+      /* visibility: hidden; */
+      border-radius: 10px;
+      display: block;
+      margin: auto;
+      /* margin-bottom: 1em; */
+      box-shadow: rgba(75, 75, 75, 0.76) 0px 2px 3px 0px, rgba(77, 77, 77, 0.83) 0px 1px 3px 1px;
+}
+
+.wrong {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      /* gap: 0.1em; */
+}
+
+.wrong img {
+      width: 60px;
+      height: 60px;
+}
+
+.wrong h3 {
+      font-size: 2rem;
+      font-weight: 600;
+      color: rgba(2, 2, 38, 0.928);
+      padding: 0;
+}
+
+.hint {
+      text-align: center;
+      color: rgba(32, 32, 32, 0.754);
+}
+
+.hint-box-active {
+      opacity: 1;
+      transition: opacity 1.5s ease-out;
+}
+
+.hint-box-deactive {
+      opacity: 0;
+      transition-delay: 5s;
+}
+
+@media (min-width:200px) and (max-width:450px) {
+      header {
+            flex-direction: column;
+            gap: 0em;
+            padding-bottom: 0.6em;
+      }
+
+      header img {
+            width: 70px;
+            height: 15vh;
+      }
+
+      h2 {
+            font-size: 1.8rem;
+      }
+}
+
+footer {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 0.5em;
+      font-size: 1.2rem;
+      font-weight: 500;
+      background-color: rgb(40, 40, 40);
+      color: rgb(193, 191, 191);
+      padding: 0.5em;
+      /* text-align: center; */
+}
+
+.social-btn {
+      display: flex;
+      gap: 1em;
+
+}
+
+footer .fa {
+      padding: 0.6em;
+      font-size: 1.2rem;
+      height: 16px;
+      width: 16px;
+      text-align: center;
+      color: rgb(20, 20, 20);
+      background-color: rgba(188, 188, 188, 0.904);
+      border-radius: 50%;
+      box-shadow: 0px 0px 10px rgb(116, 116, 116);
+}
+
+.fa-github:hover {
+      background-color: rgba(255, 255, 255, 0.904);
+      color: #4078c0;
+      box-shadow: 0px 0px 10px #4078c0;
+}
+
+.fa-linkedin-square:hover {
+      background-color: rgba(255, 255, 255, 0.904);
+      color: #0077b5;
+      box-shadow: 0px 0px 10px #0077b5;
+}
+
+.fa-instagram:hover {
+      color: rgb(255, 106, 0);
+      background-color: rgba(255, 255, 255, 0.904);
+      box-shadow: 0px 0px 10px rgb(255, 106, 0);
+      
+}

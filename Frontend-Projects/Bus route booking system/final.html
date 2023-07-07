@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Bus Booked</title>
+	<style>* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+  }
+  
+  .header {
+    background-color:#9b1c05;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .confirmation {
+    margin: 60px auto;
+    width: 400px;
+    text-align: center;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px #888888;
+  }
+  
+  .tick {
+    height: 100px;
+    width: 100px;
+    margin-bottom: 20px;
+    animation: tick 1s ease-in-out;
+  }
+  
+  @keyframes tick {
+    0% {
+      transform: scale(0);
+    }
+    50% {
+      transform: scale(1);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  
+  h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+    color:#9b1c05;
+  }
+  
+  p {
+    font-size: 20px;
+    color: #333;
+  }
+  
+  .footer {
+    background-color:#9b1c05;
+    color: #ffffff;
+    text-align: center;
+    padding: 10px;
+    position:sticky;
+    bottom: 0;
+    width: 100%;
+  }
+  
+  .profile-container {
+      background-color: #ffffff;
+      border-radius: 5px;
+      padding: 20px;
+      box-shadow: 0px 0px 10px #dcdcdc;
+      max-width: 800px;
+      height: 330px;
+      margin: 0 auto;
+      margin-bottom: 50px;
+    }
+  
+    .Ticket {
+      margin-top: 0px;
+      margin-bottom: 20px;
+      font-size: 36px;
+      text-align: center;
+    }
+    
+  
+    .profile-field {
+      margin-bottom: 40px;
+    }
+    label {
+      font-size: 18px;
+      color:#9b1c05;
+    }
+    span {
+      font-size: 20px;
+      margin-left: 20px;
+    }</style>
+</head>
+<body>
+	<header class="header">
+		<h1>Bus Booked Successfully!!</h1>
+	</header>
+
+	<div class="confirmation">
+		<img src="tick.png" alt="Confirmation Tick" class="tick">
+		<h2>Thank You For Booking!</h2>
+		<p>Your bus has been booked. Please find your ticket below.</p>
+	</div>
+
+    <div class="profile-container">
+        <h1 class="Ticket">Your Ticket</h1>
+        <div class="profile-field">
+          <label>Name:</label>
+          <span>John Doe</span>
+        </div>
+        <div class="profile-field">
+          <label>Roll No:</label>
+          <span>123456</span>
+        </div>
+        <div class="profile-field">
+          <label>Address:</label>
+          <span>1234 Main St, Anytown USA</span>
+        </div>
+        <div class="profile-field">
+          <label>Route Number:</label>
+          <span>4</span>
+        </div>
+      </div>
+
+	<footer class="footer">
+		<p>&copy; Bus Reservation</p>
+	</footer>
+
+</body>
+</html>

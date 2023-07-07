@@ -1,0 +1,28 @@
+Tic Tac Toe Game:
+This project is a simple implementation of the Tic Tac Toe game in Python.
+
+Description
+The Tic Tac Toe.py project provides a command-line version of the classic Tic Tac Toe game. It allows two players to take turns entering their moves on a 3x3 grid until one player wins or the game ends in a draw.
+
+Features
+Two-player gameplay
+Interactive command-line interface
+Error handling for invalid inputs
+Detection of winning moves
+Display of the final result (winner or draw)
+Option to play again
+
+Getting Started:
+Prerequisites
+To run the Tic Tac Toe game, make sure you have Python installed on your system.
+
+Clone the repository:
+
+git clone https://github.com/pranjay-poddar/Dev-Geeks.git
+Navigate to the "Python Projects" folder:
+cd Dev-Geeks/Python Projects
+Run the game:
+python Tic Tac Toe.py
+
+Enjoy the game....
+

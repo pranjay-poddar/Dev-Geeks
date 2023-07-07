@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>Any Query</title>
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            background: linear-gradient(to right, #cccccc, #333333);
+        }
+        div.main{
+            width: 400px;
+            margin: 100px auto 0px auto;
+        }
+        h2{
+            text-align: center;
+            padding: 20px;
+            font-family: sans-serif;
+        }
+        div.register{
+            background-color: rgba(0, 0, 0, 0.5);
+            width: 100%;
+            font-size: 18px;
+            border-radius: 10px;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            box-shadow: 2px 2px 15px
+            rgba(0, 0, 0, 0.3);
+            color: #fff;
+        }
+        form#register{
+            margin: 40px;
+        }
+        label{
+            font-family: sans-serif;
+            font-size: 18px;
+            font-style: italic;
+        }
+        input#name{
+            width: 300px;
+            border: 2px solid #ddd;
+            border-radius: 3px;
+            outline: 0;
+            padding: 7px;
+            background-color: #fff;
+            box-shadow: inset 1px 1px 5px
+            rgba(0, 0, 0, 0.3);
+        }
+        input#submit{
+            width: 200px;
+            padding: 7px;
+            font-size: 16px;
+            font-family: sans-serif;
+            font-weight: 600;
+            border-radius: 3px;
+            background-color: rgba(250, 100, 0, 0.8);
+            color: #fff;
+            cursor: pointer;
+            border: 1px solid
+            rgba(255, 255, 255, 0.3);
+            box-shadow: 1px 1px 5px
+            rgba(0, 0, 0, 0.3);
+            margin-bottom: 20px;
+        }
+        label,span,h2{
+            text-shadow: 1px 1px 5px
+            rgba(0, 0, 0, 0.3);
+
+        }
+        #msgContent{
+            width: 315px;
+        }
+        
+
+    </style>
+</head>
+<body>
+
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">F2F</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#about-us">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="membership.html">Membership</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="BMI.html">BMI</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="blog latest.html">Blogs</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Centers</a>
+                </li>
+            </ul>
+
+        </div>
+        
+    </nav>
+    
+
+
+
+    <div class="main">
+        <div class="register">
+            <h2>WRITE YOUR QUERY HERE:-</h2>
+            <form id="register" method="post">
+                <label>First name: </label>
+                <br>
+                <input type="text" name="fname" 
+                id="name" placeholder="Enter your first name">
+                <br><br>
+
+                <label>Last name: </label>
+                <br>
+                <input type="text" name="lname" 
+                id="name" placeholder="Enter your last name">
+                <br><br>
+
+                <label>Email: </label>
+                <br>
+                <input type="email" name="email" id="name" placeholder="Enter your email">
+                <br><br>
+
+                <textarea id="msgContent" cols="30" rows="10" placeholder="Message"></textarea>
+                <br><br>
+                <input type="submit" value="submit" id="submit">
+                
+            </form>
+        </div>
+
+    </div>
+</body>
+</html>
