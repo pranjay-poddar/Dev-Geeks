@@ -1,0 +1,116 @@
+/* Default settings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    overflow: hidden;
+    animation: shakeBody linear 3s infinite;
+}
+
+/* Styling the sky */
+.sky {
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+    background-image: url('https://github.com/pranjay-poddar/Dev-Geeks/assets/114330097/e2f9a15a-628f-40b2-8449-b9ae8e899c56');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* Styling the land */
+.land {
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+    background-image: url('https://github.com/pranjay-poddar/Dev-Geeks/assets/114330097/642db812-e074-4b41-9fda-cfd50ce87e1f');
+    background-size: cover;
+    top: -21vh;
+}
+
+/* Styling the road */
+.road {
+    height: 50vh;
+    width: 600vw;
+    position: absolute;
+    background-image: url('https://github.com/pranjay-poddar/Dev-Geeks/assets/114330097/3389a38a-2d7c-43f3-93d8-70d919a9ed9e');
+    top: 70vh;
+    background-repeat: repeat-x;
+    animation: carMove linear 6s infinite;
+}
+
+/* Styling the car */
+.car {
+    height: 27vh;
+    width: 42vw;
+    background-image: url('https://github.com/pranjay-poddar/Dev-Geeks/assets/114330097/224d0e28-bdda-473f-86c5-e7d85993eac5');
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute;
+    left: 27vw;
+    bottom: 20vh;
+    animation: shake linear 2s infinite;
+}
+
+/* Styling the wheels */
+.wheel1 img {
+    width: 8.5vw;
+    position: relative;
+    top: 20vh;
+    left: 4.5vw;
+    animation: wheelRotation linear 0.4s infinite;
+}
+
+.wheel2 img {
+    width: 8.5vw;
+    position: relative;
+    top: 1vh;
+    left: 29.2vw;
+    animation: wheelRotation linear 0.4s infinite;
+}
+
+/* Wheel rotation animation */
+@keyframes wheelRotation {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Car moving animation */
+@keyframes carMove {
+    100% {
+        transform: translateX(-500vw);
+    }
+}
+
+/* Shaking animation to the car */
+@keyframes shake {
+    0% {
+        transform: translateY(-3px);
+    }
+
+    50% {
+        transform: translateY(3px);
+    }
+
+    100% {
+        transform: translateY(-3px);
+    }
+}
+
+/* Movement of the car body */
+@keyframes shakeBody {
+    0% {
+        transform: translateY(-10px);
+    }
+
+    50% {
+        transform: translateY(0px);
+    }
+
+    100% {
+        transform: translateY(-10px);
+    }
+}
