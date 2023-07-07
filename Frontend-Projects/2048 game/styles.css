@@ -1,0 +1,116 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    background-color: #36154a;
+    color: whitesmoke;
+}
+
+.main{
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    justify-content: center;
+}
+
+.left, .right{
+    width: 50%;
+    justify-content: center;
+    margin-top: 10%;
+}
+
+h1{
+    margin: 50px 0px;
+    font-size: 100px;
+}
+
+h2{
+    font-size: 50px;
+}
+
+#board {
+    width: 400px;
+    height: 400px;
+    background-image: linear-gradient(rgb(255, 108, 203), rgb(255, 137, 255));
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.tile {
+    width: 90px;
+    height: 90px;
+    border: 5px solid #b300ff;
+    font-size: 40px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* colored tiles */
+
+.x2 {
+    background-color: #e4b6ff;
+    color: #727371;
+}
+
+.x4 {
+    background-color: #dda3ff;
+    color: #727371;
+}
+
+.x8 {
+    background-color: #d690ff;
+    color: white;
+}
+
+.x16{
+    background-color: #cf7cff;
+    color: white;
+}
+
+.x32{
+    background-color: #c25ffc;
+    color: white;
+}
+
+.x64{
+    background-color: #b947fc;
+    color: white;
+}
+
+.x128{
+    background-color: #b330ff;
+    color: white;
+}
+
+.x256{
+    background-color: #aa17ff;
+    color: white;
+}
+
+.x512{
+    background-color: #a200ff;
+    color: white;
+}
+
+.x1024{
+    background-color: #9717ff;
+    color: white;
+}
+
+.x2048{
+    background-color: #8c00ff;
+    color: white;
+}
+
+.x4096 {
+    background-color: #7800db;
+    color: white;
+}
+
+.x8192 {
+    background-color: #4300f9;
+    color: white;
+}
