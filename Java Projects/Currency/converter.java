@@ -9,7 +9,7 @@ public class converter {
 
 		
 		JFrame f = new JFrame("CONVERTER");
-
+        
 		
 		JLabel l12, l22;
 
@@ -37,25 +37,21 @@ public class converter {
 		b22 = new JButton("Dollar");
 		b22.setBounds(190, 80, 60, 15);
 		b32 = new JButton("close");
-		b32.setBounds(150, 150, 60, 30);
-
+		b32.setBounds(150, 150, 60, 30); 
 		// Adding action listener
 		b12.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e)
-			{
-				
-				double d
-					= Double.parseDouble(t12.getText());
-
-				
-				double d1 = (d / 79.58);
-
-				
-				String str1 = String.valueOf(d1);
-
-				
-				t22.setText(str1);
+			public void actionPerformed(ActionEvent e) {
+				try {
+					double d = Double.parseDouble(t12.getText());
+					double d1 = d / 79.58;
+			
+					String str1 = String.format("%.2f", d1);
+					t22.setText(str1);
+				} catch (NumberFormatException ex) {
+					JOptionPane.showMessageDialog(f, "Invalid input!");
+				}
 			}
+			
 		});
 
 		// Adding action listener
