@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins');
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height:100vh;
+    width:100vw;
+    overflow: hidden;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    background-color: crimson;
+}
+
+#container {
+    background-color: aliceblue;
+    padding: 0px 20px 10px 20px;
+    border-radius: 0.5rem;
+    box-shadow: 1px 1px 15px rgb(101, 9, 27);
+}
+
+#container span {
+    font-size: 10px;
+    font-weight: 500;
+    color: #555;
+}
+
+textarea {
+    font-family: "Poppins",sans-serif;
+    font-size:15px;
+}
+
+input[type=radio] {
+    accent-color: crimson;
+}
+
+button {
+    background-color:crimson;
+    color: white;
+    border-radius: 0.2rem;
+    padding: 0.5rem;
+    border: 2px solid transparent;
+}
+
+button:hover {
+    border: 2px solid crimson;
+    background-color: white;
+    color:crimson;
+}
