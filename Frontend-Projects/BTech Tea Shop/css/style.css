@@ -566,7 +566,10 @@ section{
     height: 40px;
     border-radius: 50%;
     border: 1px solid white;
+    font-size: 20px;
     display: flex;
+    justify-content: center;
+    align-items: center;
     text-decoration: none;
     color: #1f1f1f;
     opacity: 0;
