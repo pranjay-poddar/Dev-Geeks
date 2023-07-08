@@ -2,9 +2,6 @@
 
 A simple dice game built with HTML, CSS, and JavaScript.
 
-
-![Dice Game Demo](https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExYjAwYjIwN2EyNTVmNmExM2I1ZjMwNzc5NjA4OWNhZjQ0ODZhNGE1NyZlcD12MV9pbnRlcm5hbF9naWZzX2dpZklkJmN0PWc/rdB5aMtyOSgFFrSMZF/giphy.gif)
-
 ## How to Play
 
 1. Open the `index.html` file in a web browser.
