@@ -1,0 +1,93 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background: rgb(236, 236, 171) !important;
+    padding: 0 16px;
+}
+Header{
+    background:rgb(236, 199, 76) !important;
+    margin:auto -16px;
+    padding:16px  32px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+}
+
+Header h1{
+    color: white;
+    font-family:"Mclaren",cursive;
+}
+
+footer {
+    position: absolute;
+    text-align: center;
+    bottom: 0;
+    width: 98%;
+    height: 2.5rem;
+}
+footer p{
+    color:#ccc;
+    border-top: 1px solid ;
+}
+
+.note{
+    background:white;
+    border-radius: 7px;
+    box-shadow: 0 2px 5px #ccc ;
+    padding: 10px;
+    width: 240px;
+    margin: 16px;
+    float: left;
+    word-wrap: break-word;
+    text-transform: uppercase;
+}
+.note h1{
+    margin-bottom: 7px;
+}
+
+button{
+    float: right;
+    background:rgb(207, 244, 60);
+    color:rgb(255, 255, 255);
+    border: 1px solid greenyellow;
+    padding: 5px;
+    cursor: pointer;
+}
+
+form button{
+    position: relative;
+    float: right;
+    background:rgb(207, 244, 60);
+    color:rgb(255, 255, 255);
+    border: 1px solid greenyellow;
+    width: 40px;
+    border-radius:50%;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+    bottom: -35px;
+    cursor: pointer;
+}
+
+
+
+.noteblock{
+    display: flex;
+    flex-direction: column;
+    background:white;
+    border-radius: 7px;
+    box-shadow: 0 2px 5px #ccc ;
+    padding: 25px;
+    width: 50%;
+    margin:30px auto 20px auto;
+}
+
+form input,textarea{
+    display: flex;
+    flex-direction: column;
+    border:none;
+    width:100%;
+    font-size:16px;
+    resize:none;
+    padding: 9px;
+}
+
