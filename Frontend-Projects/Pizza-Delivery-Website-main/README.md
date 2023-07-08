@@ -1,5 +1,4 @@
-# <p align="center">🍕 Pizza Delivery / OIBSIP 🍕</p>
-![Screenshot (36)](https://github.com/Ash0807/Pizza-Delivery-Website/assets/93093775/5f45b684-f255-4f94-8f8c-3a7389da387d)
+# <p align="center">🍕 Pizza Delivery Website 🍕</p>
 
 <p align="center">✨🚀<em>Pizza delivery website allows customers to order pizzas online. The application also allows customers to manage their profile, view their orders history and shipping addresses. It is built using modern web technologies and provides an intuitive and easy-to-use interface for customers to order their favorite pizzas and other food items also.</p>
 
