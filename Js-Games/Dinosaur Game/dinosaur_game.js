@@ -22,25 +22,27 @@
     attachTo: function() {
       this.cv = document.querySelector("#" + this.canvasId);
       this.ctx = this.cv.getContext("2d");
+
       this.cv.width = this.width;
-      this.cv.height = this.height;  
-    }, 
-  
+      this.cv.height = this.height;
+    },
     clear: function() {
-      this.ctx.clearRect(0, 0, this.width, this.height); // Clear the canvas
+      this.ctx.fillStyle = "#5873fd";
+      this.ctx.fillRect(0, 0, this.width, this.height);
+      this.ctx.clearRect(0, 0, this.width, this.height);
+
+      // Clear the canvas
     // Draw the background image
     var backgroundImage = new Image();
-    backgroundImage.src = "https://i.pinimg.com/736x/c1/4a/78/c14a7805afd655e7ecdf68c86784c326.jpg";
+    backgroundImage.src = "\image.jpg";
     this.ctx.drawImage(backgroundImage, 0, 0, this.width, this.height);
-
     },
-
-    drawMessage: function(text="") {
+    drawMessage: function(text) {
       this.ctx.fillStyle = "#000";
-      this.ctx.font = "40px Roboto";
+      this.ctx.font = "36px Roboto";
       this.ctx.fillText(text, 10, this.height / 2);
     },
-    drawScore: function(score=0) {
+    drawScore: function(score) {
       this.ctx.fillStyle = "#ffffff";
       this.ctx.font = "15px Roboto";
       this.ctx.fillText('Score: ' + score, this.width - 150, 20);
@@ -56,7 +58,6 @@
       this.ctx.lineTo(xp, yp);
       this.ctx.stroke();
     },
-
     drawDinosaur: function(x, y) {
       var dino = [this.dinosaurWidth, this.dinosaurHeight, "#0039e6"];
       this.ctx.fillStyle = dino[2];
@@ -65,7 +66,6 @@
       this.ctx.arc(x, y, 5, 0,2*Math.PI);
       this.ctx.stroke();
     },
-
     drawObstacle: function(x, y) {
       var obs = [this.obstacleWidth, this.obstacleHeight, "#ff1a66"];
       this.ctx.fillStyle = obs[2];
@@ -74,7 +74,6 @@
       this.ctx.arc(x, y, 5, 0,2*Math.PI);
       this.ctx.stroke();
     },
-    
     onUpArrow: function(fun) {
       window.addEventListener('keydown', function(evt) {
         if (evt.which === 38 || evt.keyCode === 38) {
