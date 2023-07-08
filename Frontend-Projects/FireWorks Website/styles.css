@@ -1,0 +1,10 @@
+
+/* basic styles for black background and pointer cursor */
+body {
+	margin: 0;
+}
+
+canvas {
+    cursor: pointer;
+    position: absolute;
+}
