@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navbar</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+<div class = "main-container">
+    <div class="wave">
+    </div>
+  </div>
+  <div class="blue-head"></div>
+  <!--     <img src="https://res.cloudinary.com/dhvkfxxvo/image/upload/v1687763206/Drop_qktdjz.svg" alt="sélécteur" /> -->
+    </div>
+  </div>
+  
+  <body>
+    <div class="navcontainer">
+      <div class="navbody">
+        <div class="navigation">
+          <ul>
+            <li class="list">
+              <a routerLink="/accueil"
+                ><span class="text">HOME</span>
+                <span class="icon">
+                  <img src="https://res.cloudinary.com/dhvkfxxvo/image/upload/v1687763208/accueil_cpyvmd.svg" alt="icone accueil" />
+                </span>
+              </a>
+            </li>
+            <li class="list">
+              <a routerLink="/catalogue">
+                <span class="text">Activities</span>
+                <span class="icon">
+                  <img
+                    src="https://res.cloudinary.com/dhvkfxxvo/image/upload/v1687763206/Catalogue_cpu1ic.svg"
+                    alt="icone catalogue"
+                  />
+                </span>
+              </a>
+            </li>
+            <li class="list">
+              <a routerLink="/commandes"
+                ><span class="text">Services</span>
+                <span class="icon">
+                  <img
+                    src="https://res.cloudinary.com/dhvkfxxvo/image/upload/v1687763206/Commandes_ndbsqf.svg"
+                    alt="icone Commandes"
+                  />
+                </span>
+              </a>
+            </li>
+            <li class="list">
+              <a routerLink="/favoris"
+                ><span class="text">Testimonials</span>
+                <span class="icon">
+                  <img src="https://res.cloudinary.com/dhvkfxxvo/image/upload/v1687763206/Favoris_gw2ufa.svg" alt="icone favoris" />
+                </span>
+              </a>
+            </li>
+            <li class="list">
+              <a routerLink="/profile"
+                ><span class="text">Profile</span>
+                <span class="icon">
+                  <img src="https://res.cloudinary.com/dhvkfxxvo/image/upload/v1687763206/Profil_bwgkos.svg" alt="icone Profil" />
+                </span>
+              </a>
+            </li>
+            <li class="list">
+              <a routerLink="/panier"
+                ><span class="text">Contact</span>
+                <span class="icon">
+                  <img src="https://res.cloudinary.com/dhvkfxxvo/image/upload/v1687763206/Panier_rovwtp.svg" alt="icone Panier" />
+                </span>
+              </a>
+            </li>
+            <div class="indicator-container">
+              <div class="indicator">
+                <img src="https://res.cloudinary.com/dhvkfxxvo/image/upload/v1687773223/Drop_hnlj5i.png" alt="selecteur d'onglet" />
+              </div>
+            </div>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </body>
+  </div>
+  
+  <script>
+    class NavbarHeaderComponent {
+  constructor() {
+    this.navLinks = null;
+    this.indicator = null;
+  }
+
+  ngOnInit() {
+    this.navLinks = document.querySelectorAll('.list > a');
+    this.indicator = document.querySelector('.indicator');
+
+    const indicatorPosition = localStorage.getItem('indicatorPosition');
+    if (indicatorPosition) {
+      this.indicator.style.transform = `translateX(${indicatorPosition}px)`;
+    }
+
+    this.navLinks.forEach((link) => {
+      link.addEventListener('click', this.moveIndicator.bind(this));
+    });
+  }
+
+  moveIndicator(event) {
+    const link = event.currentTarget;
+    const parent = link.parentElement;
+    const linkRect = link.getBoundingClientRect();
+    const parentRect = parent.getBoundingClientRect();
+    const indicator = this.indicator;
+    const offsetLeft = linkRect.left - parentRect.left;
+
+    localStorage.setItem('indicatorPosition', parent.offsetLeft.toString());
+
+    indicator.style.transform = `translateX(${parent.offsetLeft}px)`;
+    localStorage.setItem('activeTabIndex', parent.dataset.tabIndex);
+  }
+}
+
+const navbarHeaderComponent = new NavbarHeaderComponent();
+navbarHeaderComponent.ngOnInit();
+
+  </script>
+</body>
+</html>
