@@ -48,13 +48,13 @@ var scores = {
 var bullet = { height: 5, width: 15 };
 
 //Loading images of different elements
-ship.img.src = "Sprites/ship_blue.png";
-heart.imgFull.src = "Sprites/heart_1.png";
-heart.imgEmpty.src = "Sprites/heart_2.png";
-enemy.img1.src = "Sprites/enemy_white1.png";
-enemy.img2.src = "Sprites/enemy_white2.png";
-boss.img1.src = "Sprites/swoop01.png";
-boss.img2.src = "Sprites/swoop02.png";
+ship.img.src = "https://i.postimg.cc/zfp544h6/ship-blue.png";
+heart.imgFull.src = "https://i.postimg.cc/Kj32kzWh/heart-1.png";
+heart.imgEmpty.src = "https://i.postimg.cc/Dz7nj7S1/heart-2.png";
+enemy.img1.src = "https://i.postimg.cc/VdgQQbJn/enemy-white1.png";
+enemy.img2.src = "https://i.postimg.cc/bJJ8PLHJ/enemy-white2.png";
+boss.img1.src = "https://i.postimg.cc/nVWVF8Wt/swoop01.png";
+boss.img2.src = "https://i.postimg.cc/JzNR5sz1/swoop02.png";
 
 //Defining UI Height
 var UIHeight = 50;
