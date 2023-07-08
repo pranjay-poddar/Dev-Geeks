@@ -768,6 +768,7 @@ Happy Coding! -->
 <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Frontend-Projects/Hyundai_Clone"> Hyundai Clone </a></td>
 <td align="center"> 254.</td>
 <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Frontend-Projects/QrComponent"> QrComponent </a></td>
+  
 <td align="center"> 255.</td>
 <td align="center"><a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Js-Games/Mexico Escape">Mexico Escape</a></td>
 
@@ -796,13 +797,17 @@ Happy Coding! -->
 <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Js-Projects/Facebook%20Clone"> Facebook Clone </a></td>
   
 
+  <td align="center"> 261. </td>
+<td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Js-Games/Etch-a-Sketch"> Etch-a-Sketch </a> </td>
 </tr>
   
 <tr align="center">
 <td align="center"> 261.</td>  
-<td align="center"><a href="./Python Projects/Circle using Turtle">Circle using Turtle</a></td>
+  <td align="center"><a href="./Python Projects/Circle using Turtle">Circle using Turtle</a></td>
 <td align="center"> 263.</td>
 <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Js-Games/Alien Shooting">Alien Shooting</a></td>
+<td align="center"> 264.</td>
+<td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Js-Games/Platform_Game">Platform Game</a></td>
 </tr>  
 </table>
 
