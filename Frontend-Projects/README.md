@@ -1,8 +1,3 @@
- # Dev-Geeks
-#### This folder is a collection of all projects related to Frontend ie. HTML5, CSS3 & Javascript.
-## Steps To Follow:
-
-1) Make a folder with relevant name of your project inside this folder.
-2) Add all the files of your project in that particular folder.
-3) Make relevant commits in your branch.
-4) After completion issue a PR.
+# quoteapp
+A Random Quote Generator is capable of pulling quotes randomly from an API, a database, or simply from an array. 
+We will be designing a Random Quote Generator from scratch using HTML, CSS, JavaScript, using API. The webpage displays a random quote from a collection and upon the click of a button, it randomly generates a new quote.
