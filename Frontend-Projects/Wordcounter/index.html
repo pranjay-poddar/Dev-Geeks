@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WordCounter</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="nav">
+
+        <a href="index.html"><h1 class="logo">WordCounter</h1></a>
+
+        <div class="tags">
+            <a href="index.html">Home</a>
+            <a href="indexx.html">Features</a>
+            <a href="#contact">Contact</a>
+        </div>
+
+
+        <!-- <div class="button">
+            <a href="/TypingTest/index3.html"><button class="typingtest">Typing test?</button></a>
+        </div> -->
+    </div>
+
+
+    <div class="wrapper">
+
+        <div class="main">
+
+            <div class="left">
+                <h1 class="hd">Unlock the <span class="clr"> power </span> of words, one <span class="clr">
+                        count</span> at
+                    a time
+                </h1>
+                <p class="para1">Discover the ultimate word counting tool that empowers your writing. With accurate
+                    counts and
+                    effortless tracking, unleash the potential of your words and elevate your writing game.</p>
+
+                <div class="butn">
+                    <a href="indexx.html"><button class="btn-pink">Give it a try</button></a>
+                    <a href="index3.html"><button class="btn-pink">Typing test?</button></a>
+                </div>
+
+            </div>
+
+            <div class="right">
+                <img src="https://drive.google.com/file/d/1fqkpDQrBzPKL4IGKUVFqor9WxlNlH7eL/view?usp=sharing" class="ofc" height="600px" width="600px" alt="">
+            </div>
+        </div>
+
+        <div class="main2">
+
+            <div class="left2">
+                <img src="https://drive.google.com/file/d/1CGVbjA_A8I64irZlPBT5qCLc652hCyLY/view?usp=sharing" width="500px" class="ofc2" height="500px" alt="">
+            </div>
+
+            <div class="right2">
+                <h1 class="hd2">Why word counter?</h1>
+                <p class="para2">A word counter is a useful tool for writers and content creators for various
+                    reasons. It
+                    helps ensure
+                    compliance with word count requirements in academic assignments and professional writing. It
+                    assists
+                </p>
+            </div>
+        </div>
+        <div class="main3" id="contact">
+            <div class="left3">
+
+                <div class="headpart">
+                    <h1 class="hd3">Contact Us</h1>
+                    <p>Questions, Thoughts, Or Just Want To Say Hello?</p>
+                </div>
+                <form action="" class="contactusform">
+
+                    <div class="input-fields">
+                        <input type="text" placeholder="Enter your name" id="in1">
+                    </div>
+                    <div class="input-fields">
+                        <input type="text" placeholder="Enter your email address" id="in2">
+                    </div>
+                    <div class="input-fields">
+                        <input type="text" placeholder="Enter your subject" id="in3">
+                    </div>
+                    <div class="input-text">
+                        <textarea name="" placeholder="Enter your message" id="in4" cols="30" rows="10"></textarea>
+                    </div>
+
+                </form>
+
+                <button class="msg" onclick="sendMessage()">Send Message</button>
+            </div>
+            <div class="right3">
+                <img src="https://drive.google.com/file/d/1brkU2PaZy2i6HYM8nY7rJv79x3p1XmIb/view?usp=sharing" class="ofc3" width="500px" height="500px" alt="">
+
+            </div>
+        </div>
+
+        <div class="footer">
+            Copyright &copy
+        </div>
+    </div>
+    <script>
+        function sendMessage() {
+            let message = document.querySelector(".msg")
+            let name = document.querySelector("#in1").value;
+            let email = document.querySelector("#in2").value;
+            let subject = document.querySelector("#in3").value;
+            let msg = document.querySelector("#in4").value
+            let form = document.querySelector(".contactusform");
+
+            let userInfo = JSON.parse(window.localStorage.getItem("users")) || []
+
+            let userresponse = {
+                "name": name,
+                "email": email,
+                "subject": subject,
+                "message": msg
+            }
+
+            userInfo.push(userresponse)
+
+            window.localStorage.setItem("users", JSON.stringify(userInfo))
+            form.reset()
+            event.preventDefault()
+            window.location.reload()
+        }
+    </script>
+</body>
+
+</html>
+
+

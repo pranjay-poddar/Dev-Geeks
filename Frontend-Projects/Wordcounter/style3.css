@@ -1,0 +1,99 @@
+* {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Source Code Pro', monospace;
+  background: #212121;
+  color: #52575d;
+  overflow-x: hidden;
+}
+
+.wrapper {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5em;
+}
+
+.result {
+  display: flex;
+  gap: 10em;
+}
+
+.time {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cw {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.titletime, .titlecw {
+  color:#ffd369;
+}
+
+
+.title30, .title0 {
+  font-size: 7em;
+}
+
+.random {
+  text-align: center;
+  width: 700px;
+  font-size: 20px;
+}
+
+textarea {
+  padding: 1em 0.5em 0em 0.5em;
+  height:40px;
+  background-color: transparent;
+  resize: none;
+  color: #ffffff;
+  font-size: 20px;
+  border-radius: 5px;
+  outline: none;
+}
+
+.rebtn {
+  color: #ffd369;
+}
+
+
+/* For JS */
+
+.correctword{
+  color: #29bb89;
+}
+
+.wrongword{
+  color: #e84545;
+}
+
+.current {
+  color: white;
+}
+
+
+@media screen and (max-width:750px)  {
+  .title30, .title0 {
+    font-size: 5em;
+  }
+    .result {
+      gap: 3em;
+    }
+    .random {
+      width: 250px;
+    }
+    textarea {
+      width: 200px;
+    }
+}

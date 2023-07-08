@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Admin Page</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        th,
+        td {
+            border: 1px solid #ccc;
+            padding: 8px;
+        }
+
+        th {
+            background-color: #f0f0f0;
+        }
+
+        button {
+            background-color: #000;
+            color: #fff;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        .selected {
+            background-color: #b8daff;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Admin Page</h1>
+    <table id="dataTable">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Subject</th>
+                <th>Message</th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+    <button onclick="editData()">Edit Data</button>
+    <button onclick="deleteData()">Delete Data</button>
+    <button onclick="exportData()">Export Data</button>
+
+    <script>
+        // Sample array object data
+        var data = JSON.parse(window.localStorage.getItem("users"));
+
+        // Function to generate table rows based on data
+        function generateTable(data) {
+            var tableBody = document.querySelector("#dataTable tbody");
+
+            data.forEach(function (item) {
+                var row = document.createElement("tr");
+                row.innerHTML = `
+                    <td>${item.name}</td>
+                    <td>${item.email}</td>
+                    <td>${item.subject}</td>
+                    <td>${item.message}</td>
+                `;
+                tableBody.appendChild(row);
+            });
+        }
+
+        // Call the function to generate table rows
+        generateTable(data);
+
+        // Delete data
+        function deleteData() {
+            var confirmation = confirm("Are you sure you want to delete this data?");
+            if (confirmation) {
+                var tableBody = document.querySelector("#dataTable tbody");
+                var selectedRow = tableBody.querySelector("tr.selected");
+                if (selectedRow) {
+                    selectedRow.remove();
+                    alert("Data deleted successfully.");
+                } else {
+                    alert("No row selected. Please select a row to delete.");
+                }
+            }
+        }
+
+        // Edit data
+        function editData() {
+            var tableBody = document.querySelector("#dataTable tbody");
+            var selectedRow = tableBody.querySelector("tr.selected");
+            if (selectedRow) {
+                var name = selectedRow.querySelector("td:nth-child(1)").innerText;
+                var email = selectedRow.querySelector("td:nth-child(2)").innerText;
+                var subject = selectedRow.querySelector("td:nth-child(3)").innerText;
+                var message = selectedRow.querySelector("td:nth-child(4)").innerText;
+
+                // Here, you can implement the logic to open a form or a modal
+                // and populate it with the selected row's data for editing.
+                // For simplicity, let's just log the data to the console.
+                console.log("Name:", name);
+                console.log("Email:", email);
+                console.log("Subject:", subject);
+                console.log("Message:", message);
+            } else {
+                alert("No row selected. Please select a row to edit.");
+            }
+        }
+
+        // Export data
+        function exportData() {
+            var tableBody = document.querySelector("#dataTable tbody");
+            var rows = tableBody.querySelectorAll("tr");
+
+            if (rows.length === 0) {
+                alert("No data available to export.");
+                return;
+            }
+
+            var csvContent = "data:text/csv;charset=utf-8,";
+
+            // Generate CSV header
+            var header = Array.from(rows[0].querySelectorAll("th")).map(function (th) {
+                return th.innerText;
+            });
+            var headerRow = header.join(",");
+            csvContent += headerRow + "\n";
+
+            // Generate CSV rows
+            rows.forEach(function (row) {
+                var rowData = Array.from(row.querySelectorAll("td")).map(function (td) {
+                    return td.innerText;
+                });
+                var rowString = rowData.join(",");
+                csvContent += rowString + "\n";
+            });
+
+            // Create a download link and trigger the download
+            var encodedUri = encodeURI(csvContent);
+            var link = document.createElement("a");
+            link.setAttribute("href", encodedUri);
+            link.setAttribute("download", "data.csv");
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        }
+
+        // Select row
+        function selectRow(event) {
+            var tableBody = document.querySelector("#dataTable tbody");
+            var selectedRow = tableBody.querySelector("tr.selected");
+
+            if (selectedRow) {
+                selectedRow.classList.remove("selected");
+            }
+
+            var row = event.target.closest("tr");
+            row.classList.add("selected");
+        }
+
+        // Attach click event listener to table rows
+        var tableRows = document.querySelectorAll("#dataTable tbody tr");
+        tableRows.forEach(function (row) {
+            row.addEventListener("click", selectRow);
+        });
+
+    </script>
+</body>
+
+</html>

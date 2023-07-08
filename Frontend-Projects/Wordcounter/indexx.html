@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WordCounter</title>
+    <link rel="stylesheet" href="stylee.css">
+</head>
+
+<body>
+
+    
+    
+
+    <div class="nav">
+
+        <a href="index.html"><h1 class="logo"><span class="role"></span>Counter</h1></a>
+
+        <div class="tags">
+            <a href="index.html">Home</a>
+            <a href="indexx.html">Features</a>
+        </div>
+
+    </div>
+
+    <div class="main">
+
+
+        <div class="left">
+
+            <div class="box">
+                <div class="boxes">
+                    Word <br> <br> <span id="word-count">0</span>
+                </div>
+                <div class="boxes">
+                    Sentences <br><br> <span id="sentence-count">0</span>
+                </div>
+
+                <div class="boxes">
+                    Reading Time <br><br> <span id="reading">0</span>
+                </div>
+
+                <div class="boxes">
+                    Space <br><br> <span id="space-count">0</span>
+                </div>
+            </div>
+
+            <div class="box2">
+                <div class="boxes">
+                    Characters <br> <br> <span id="char-count">0</span>
+                </div>
+
+                <div class="boxes">
+                    Paragraph <br><br> <span id="para-count">0</span>
+                </div>
+
+
+
+                <div class="boxes">
+                    Speaking Time <br><br> <span id="speaking">0</span>
+                </div>
+
+                <div class="butt0n">
+                    <button class="boxes" id="clr"> Clear All</button>
+                </div>
+                <div class="butt0n">
+                    <button class="boxes" id="caps"> Capitalize First Letters</button>
+                </div>
+                <div class="butt0n">
+                    <button class="boxes" id="fcaps">Capitalize Sentences.</button>
+                </div>
+            </div>
+            
+
+        </div>
+
+        <div class="right">
+            <textarea name="" id="text-input" placeholder="Enter the text" cols="30" rows="10"></textarea>
+
+        </div>
+    </div>
+
+    <div class="footer">
+        Copyright &copy
+    </div>
+
+    <script src="main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <!-- <script src="https://kit.fontawesome.com/58a810656e.js" crossorigin="anonymous"></script> -->
+    <script>
+        var typeData = new Typed(".role", {
+            strings: [
+                "Word",
+                "Character",
+                "Paragraph",
+                "Sentence",
+                "Space",
+            ],
+            loop: true,
+            typeSpeed: 100,
+            backSpeed: 80,
+            backDelay: 1000,
+        });
+
+    </script>
+</body>
+
+</html>
