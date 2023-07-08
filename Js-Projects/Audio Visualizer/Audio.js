@@ -57,3 +57,16 @@
     audio.volume = 0.6;
     audio.play();
   })();
+
+
+
+
+/*showreel:
+
+https://drive.google.com/file/d/1pP4vAezuOLXs2uzAbAdKVxkSYGRmt1wl/view?usp=drive_link
+
+background img:
+
+https://drive.google.com/file/d/1DZihRWJ9qsTm_68VnHy3lIpq_g4eM0K0/view?usp=sharing
+
+*/
