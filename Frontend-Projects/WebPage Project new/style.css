@@ -131,13 +131,13 @@
     #projectrow{ height: 2500px;}
 } 
 .projecthead{ 
-    text-align: left; 
+    text-align: center; 
     padding-left: 10px; 
     padding-top: 30px; 
     margin-top: 400px;
 } 
 .projectpara{ 
-    text-align: left; 
+    text-align: center; 
     padding-left: 10px;
 }
 .projectpara:hover{ 
