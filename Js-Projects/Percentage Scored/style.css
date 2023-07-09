@@ -1,0 +1,51 @@
+body {
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	margin: 0px;
+}
+.upper {
+	width: 81%;
+	margin: auto;
+	margin-top: 20px;
+	text-align: justify;
+	font-size: 20px;
+}
+.lower {
+	height: auto;
+	color: #2857a4;
+	width: 80%;
+	margin: auto;
+	text-align: center;
+}
+.sub-container {
+	margin: auto;
+	width: 80%;
+	height: auto;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	align-items: center;
+}
+.sub-container > div {
+	height: 200px;
+	width: 200px;
+	margin: 50px;
+	background-color: red;
+	flex-wrap: wrap;
+}
+#percentage-complete {
+	position: fixed;
+	right: 2%;
+	font-weight: bolder;
+	top: 2%;
+	border: 2px solid green;
+	box-shadow: 0px 0px 2px 1px green;
+	border-radius: 20px;
+	width: auto;
+	padding-left: 10px;
+	padding-right: 10px;
+	text-align: center;
+	font-size: 25px;
+	color: green;
+	background-color: rgba(0, 255, 128, 0.5);
+}
