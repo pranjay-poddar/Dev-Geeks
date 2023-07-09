@@ -1,0 +1,342 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: arial;
+    border: border-box;
+}
+
+/*header navbar*/
+
+.navbar{
+    height: 60px;
+    width: 100%;
+    background-color: #fff;
+    display:flex;
+    align-items: center;
+    justify-content: space-evenly;
+    border: 1px solid rgba(34,36,38,.15);
+    box-shadow: 0 1px 2px 0 rgba(34,36,38,.15);
+    border-radius: 0.28571429rem;
+}
+.nav-ops{
+    display: flex;
+    align-items: center;
+    font-size: 0.85rem;
+}
+.nav-ops p{
+    margin-left: 50px;
+}
+.nav-ops p a{
+    text-decoration: none;
+}
+.Problems a{
+    color:#121212;;
+    font-weight: 700;
+}
+.Problems a:hover{
+    color: green;
+}
+.Courses a{
+    color: green;
+    font-weight: 700;
+} 
+.GOL a{
+    color:rgb(255 112 0);
+    font-weight: 700;
+}
+.Events a{
+    color:rgb(255 112 0);
+    font-weight: 700;
+}
+.POTD a{
+    color:#121212;
+    font-weight: 700;
+}
+.POTD a:hover{
+    color: green;
+}
+.GFG-logo{
+    height: 40px;
+    width: 80px;
+    margin-top: 0;
+    margin-bottom: 40px;
+}
+.logo{
+    background-image: url("gfg logo.png");
+    background-size: cover;
+    height: 60px;
+    width: 100%;
+}
+.sign-button{
+    height: 33px;
+    width: 90px;
+    background-color: #273239;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 700;
+    border-radius: 3px;
+}
+
+/*body-section*/
+
+.top-section{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 100px;
+    width: 100%;
+    background-color: rgb(251, 250, 207);
+}
+.search{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    width: 500px;
+}
+.search-input{
+    height: 30px;
+    width: 100%;
+    font-size: 1rem;
+    border: none;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+}
+.search-input:hover{
+    border: 2px solid rgb(139, 200, 244);
+}
+.search-icon{
+    height: 80%;
+    width: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    background-color: rgb(140, 210, 125);
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+    color: #fff;
+    border: none;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+}
+.Popular{
+    margin-top: 100px;
+    margin-left: 40px;
+    margin-right: 40px;
+    border: 1px rgb(251, 250, 207);
+}
+.img-box{
+    display: flex;
+    justify-content: space-evenly;
+}
+.box{
+    /*border: 2px solid black;*/
+    height: 450px;
+    width: 23%;
+    background-color: white;
+    padding: 20px 0px 15px;
+    margin-top: 15px;
+    border: none;
+    border-radius: 5px;
+   
+}
+.box-img{
+    height: 150px;
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-bottom: 1rem;
+    border: none;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+.box-content{
+    margin-left: 10px;
+    margin-right: 1rem;
+    border-bottom: 2px solid #121212;
+    
+}
+.first-line{
+    display: flex;
+    justify-content: space-evenly;
+}
+.second-line{
+    display: flex;
+    justify-content: space-evenly;
+}
+.third-line{
+    display: flex;
+    justify-content: space-evenly;
+}
+.fourth-line{
+    display: flex;
+    justify-content: space-evenly;
+}
+.Course-Categories{
+    margin-top: 10px;
+    margin-left: 70px;
+    margin-right: 70px;
+    border: 1px rgb(251, 250, 207);
+    height: 280px;
+    width: 90%;
+}
+.Course-box{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin-left: -20px;
+}
+.box-course{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    width: 21%;
+    padding: 20px 0px 15px;
+    margin-top: 15px;  
+    color: #fff;
+}
+.box1{
+    display: flex;
+    align-items: center;
+    height: 80px;
+    width: 100%;
+    background-color: #f39893;
+    border: none;
+    border-radius: 5px; 
+}
+.box2{
+    display: flex;
+    align-items: center;
+    height: 80px;
+    width: 100%;
+    background-color: #3079ac;
+    border: none;
+    border-radius: 5px; 
+}
+.box3{
+    display: flex;
+    align-items: center;
+    height: 80px;
+    width: 100%;
+    background-color: #abd194; 
+    border: none;
+    border-radius: 5px; 
+}
+.box4{
+    display: flex;
+    align-items: center;
+    height: 80px;
+    width: 100%;
+    background-color: #7c87a5;
+    border: none;
+    border-radius: 5px; 
+}
+.box5{
+    display: flex;
+    align-items: center;
+    height: 80px;
+    width: 100%;
+    background-color: #627a92;
+    border: none;
+    border-radius: 5px; 
+}
+.box6{
+    display: flex;
+    align-items: center;
+    height: 80px;
+    width: 100%;
+    background-color: #21898c;
+    border: none;
+    border-radius: 5px; 
+}
+.box7{
+    display: flex;
+    align-items: center;
+    height: 80px;
+    width: 100%;
+    background-color: #b88cbf;
+    border: none;
+    border-radius: 5px; 
+}
+.box8{
+    display: flex;
+    align-items: center;
+    height: 80px;
+    width: 100%;
+    background-color: #f5a572;
+    border: none;
+    border-radius: 5px; 
+}
+
+/*offer zone*/
+
+.offer{
+    display: flex;
+    justify-content: space-evenly;
+    height: 300px;
+    margin-top: 40px;
+    margin-left: 100px;
+    margin-right: 100px;
+    
+}
+.offer1{
+    height: 200px;
+    width: 100%;
+    background-size: cover;
+    margin-left: 50px;
+    border: none;
+    border-radius: 8px;
+}
+.offer2{
+    height: 200px;
+    width: 100%;
+    background-size: cover;
+    margin-left: 50px;
+    border: none;
+    border-radius: 8px;
+}
+
+  
+/*footer-section*/
+
+.panel-1{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.GFG-list{
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 30px;
+    margin-left: 30px;
+    height: 45px;
+    width: 300px;
+}
+.add{
+    display: flex;
+    justify-content: space-evenly;
+    height: 40px;
+    width: 300px;
+    margin-top: 40px;
+    margin-left: 35px;
+}
+.feedback{
+    display: flex;
+    justify-content: space-evenly;
+    height: 40px;
+    width: 300px;
+    margin-top: 40px;
+    margin-left: 5px;
+}
+.panel-2{
+    background-color: #08860c;
+    color: #fff;
+    font-weight: 400;
+    height: 50px;
+    width: 100%;
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+}
