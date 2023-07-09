@@ -418,6 +418,12 @@ header .navbar a:hover {
   flex: 1 1 50rem;
   padding: 1rem;
 }
+.order .row form .inputBox label{
+  font-size: 20px;
+}
+.order .row form label{
+  font-size: 20px;
+}
 
 .order .row form .inputBox {
   display: flex;
