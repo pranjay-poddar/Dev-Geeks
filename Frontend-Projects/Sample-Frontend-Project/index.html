@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Library used for icons -->
+    <script src="https://kit.fontawesome.com/4f4f6e8374.js" crossorigin="anonymous"></script>
+    <!-- Library used for slider -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <!-- linking css file -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="utility.css">
+    <!-- Responsive  stylesheet -->
+    <link rel="stylesheet" href="responsive.css">
+    <title>CRAZYSTOCKS</title>
+</head>
+
+<body>
+    <!-- Navigation bar -->
+    <nav class="navbar d-flex tx-agn-cn text-nowrap">
+        <div class="navHeading">
+            <span class="navLogo">CRAZYSTOCKS</span>
+            <!-- Below logo is used for mobile only as a drop down menu -->
+            <i onclick="drop()" class="fa-solid fa-align-justify fa-lg d-none"></i>
+        </div>
+        <ul class="navLinks d-flex">
+            <li><a href="#home">HOME</a></li>
+            <li><a href="#about">ABOUT US</a></li>
+            <li><a href="#login">LOGIN UP</a></li>
+            <li><a href="#blog">BLOGS</a></li>
+            <li><a href="#contact">CONTACT</a></li>
+        </ul>
+        <div class="navSocial d-flex">
+            <div class="navFb">
+                <i class="fa-brands fa-twitter fa-lg"></i>
+            </div>
+            <div class="navTwitter">
+                <i class="fa-brands fa-facebook fa-lg"></i>
+            </div>
+            <div class="navInsta">
+                <i class="fa-brands fa-instagram-square fa-lg"></i>
+            </div>
+        </div>
+    </nav>
+    <!-- home.... -->
+    <a name="home"></a>
+    <!-- header -->
+    <header class="header d-flex">
+        <div class="headerInfo m-auto">
+            <h1>Market Forecast</h1>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Atque, reprehenderit praesentium! Molestiae
+                remquaerat excepturi reiciendis, corporis natus ipsum ut hic obcaecati sit delectus, et eum, animi
+                ratione
+                nesciunt doloribus?</p>
+            <button class="headerBtn">Get Started</button>
+        </div>
+        <div class="headerImgContainer m-auto">
+            <img src="https://ik.imagekit.io/m28ienqgh/sample-frontend-project/header.jpg" class="headerImg" alt="Market Forecast">
+        </div>
+    </header>
+    <!-- separator Image  -->
+    <div class="headerSeperator">
+        <img src="https://ik.imagekit.io/m28ienqgh/sample-frontend-project/separator.png" class="separator" alt="Section End">
+    </div>
+    <!-- Main section starts from here  -->
+    <main>
+        <!-- about.... -->
+        <a name="about"></a>
+        <!-- About section starts from here  -->
+        <section class="about d-flex">
+            <div class="aboutImgContainer m-auto">
+                <img src="https://ik.imagekit.io/m28ienqgh/sample-frontend-project/about.jpg" class="aboutImg" alt="About img">
+            </div>
+            <div class="aboutInfo m-auto">
+                <h3>What is</h3>
+                <h1>CRAZYSTOCKS ?</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore repellendus et perferendis placeat
+                    quas aperiam, nisi molestias, natus quisquam, quasi cupiditate reprehenderit eius commodi! Fugiat?
+                </p>
+                <div class="aboutBtn">
+                    <button class="aboutBtn1">CRAZYSTOCKS Mission</button>
+                    <button class="aboutBtn2">The platform in detail</button>
+                </div>
+            </div>
+        </section>
+        <!-- separator Image  -->
+        <div class="headerSeperator">
+            <img src="https://ik.imagekit.io/m28ienqgh/sample-frontend-project/separator.png" class="separator" alt="Section End">
+        </div>
+        <!-- Services section starts from here  -->
+        <section class="services d-flex">
+            <div class="servicesTitle m-auto">
+                <h3>services</h3>
+                <h1>Check Out Our <br>Specialized <br>Services</h1>
+            </div>
+            <div class="servicesDiscount m-auto">
+                <div class="serviceDiscountImgContainer m-auto">
+                    <img src="https://ik.imagekit.io/m28ienqgh/sample-frontend-project/discount.png" class="serviceDiscountImg" alt="Discount img">
+                </div>
+                <h2>Discount Broking</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat nam id officia ipsam quam laborum
+                    quasi a, perferendis, ducimus accusamus distinctio unde est doloremque fugit facilis in similique.
+                    Iure, nihil.</p>
+                <button class="serviceDiscountBtn">
+                    Learn More
+                </button>
+            </div>
+            <div class="servicesPortfolio m-auto">
+                <div class="servicePortfolioImgContainer m-auto">
+                    <img src="https://ik.imagekit.io/m28ienqgh/sample-frontend-project/portfolio.png" class="servicePortfolioImg" alt="Portfolio img">
+                </div>
+                <h2>Portfolio Match</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat nam id officia ipsam quam laborum
+                    quasi a, perferendis, ducimus accusamus distinctio unde est doloremque fugit facilis in similique.
+                    Iure, nihil.</p>
+                <button class="servicePortfolioBtn">
+                    Learn More
+                </button>
+            </div>
+        </section>
+        <!-- separator Image  -->
+        <div class="headerSeperator">
+            <img src="https://ik.imagekit.io/m28ienqgh/sample-frontend-project/separator.png" class="separator" alt="Section End">
+        </div>
+        <!-- Our Team named section starts from here  -->
+        <section class="team tx-agn-cnt">
+            <h1>Our Team</h1>
+            <div class="teamMembers d-flex">
+                <div class="teamProfile">
+                    <div class="teamPic">
+                        <img src="https://ik.imagekit.io/m28ienqgh/sample-frontend-project/profile.png" class="teamImage" alt="Profile">
+                    </div>
+                    <p class="teamData1">Lorem, ipsum dolor.</p>
+                    <p class="teamName">Full Name</p>
+                    <p class="teamData2">Lorem ipsum dolor sit amet.</p>
+                </div>
+                <div class="teamProfile">
+                    <div class="teamPic">
+                        <img src="https://ik.imagekit.io/m28ienqgh/sample-frontend-project/profile.png" class="teamImage" alt="Profile">
+                    </div>
+                    <p class="teamData1">Lorem, ipsum dolor.</p>
+                    <p class="teamName">Full Name</p>
+                    <p class="teamData2">Lorem ipsum dolor sit amet.</p>
+                </div>
+                <div class="teamProfile">
+                    <div class="teamPic">
+                        <img src="https://ik.imagekit.io/m28ienqgh/sample-frontend-project/profile.png" class="teamImage" alt="Profile">
+                    </div>
+                    <p class="teamData1">Lorem, ipsum dolor.</p>
+                    <span class="teamName">Full Name</span>
+                    <p class="teamData2">Lorem ipsum dolor sit amet.</p>
+                </div>
+            </div>
+        </section>
+        <!-- separator Image  -->
+        <div class="headerSeperator">
+            <img src="https://ik.imagekit.io/m28ienqgh/sample-frontend-project/separator.png" class="separator" alt="Section End">
+        </div>
+        <!-- login up.... -->
+        <a name="login"></a>
+        <!-- login -->
+        <section class="login d-flex">
+            <div class="loginData m-auto">
+                <h2>Hello! <br>Good Morning</h2>
+                <h3>Login your account</h3>
+                <form class="loginForm" action="#">
+                    <label for="username">Username</label>
+                    <br>
+                    <input type="text" name="Name" id="username">
+                    <br>
+                    <label for="password">Password</label>
+                    <br>
+                    <input type="text" name="Password" id="password">
+                    <br>
+                    <span class="loginForget">forget Password?</span>
+                    <br>
+                    <button class="loginBtn m-auto d-block tx-agn-cnt">Login</button>
+                    <br>
+                    <a href="/" class="d-block tx-agn-cnt">
+                        <span class="loginCreate tx-agn-cnt">Create Account</span>
+                    </a>
+                </form>
+            </div>
+            <div class="loginImgContainer">
+                <img src="https://ik.imagekit.io/m28ienqgh/sample-frontend-project/form.png" class="loginImg" alt="Login">
+            </div>
+        </section>
+        <!-- separator Image  -->
+        <div class="headerSeperator">
+            <img src="https://ik.imagekit.io/m28ienqgh/sample-frontend-project/separator.png" class="separator" alt="Section End">
+        </div>
+        <!-- What user say named section starts from here  -->
+        <section class="user">
+            <h1 class="userTitle">Here’s what our users have to say:</h1>
+            <div class="userBoxes ">
+                <div class="swiper">
+                    <div class="swiper-wrapper">
+                        <!-- Slides -->
+                        <div class="swiper-slide d-flex">
+                            <div class="userBox1 m-auto">
+                                <h1>01</h1>
+                                <h3>KATIDHAN</h3>
+                                <p class="userAbout">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste velit
+                                    deleniti
+                                    nulla
+                                    aperiam fuga! Sit necessitatibus a ab iure enim optio facilis eaque odit accusamus
+                                    quas, ullam
+                                    dolorem neque. Aliquid.</p>
+                                <button class="userBtn">Read More</button>
+                            </div>
+                            <div class="userBoxOther m-auto">
+                                <h1>02</h1>
+                                <h3>Head of Strategic Marketing, IT Company</h3>
+                                <p class="userAbout">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste velit
+                                    deleniti
+                                    nulla
+                                    aperiam fuga! Sit necessitatibus a ab iure enim optio facilis eaque odit accusamus
+                                    quas, ullam
+                                    dolorem
+                                    neque. Aliquid.</p>
+                                <button class="userBtn">Read More</button>
+                            </div>
+                        </div>
+                        <div class="swiper-slide d-flex">
+                            <div class="userBoxOther m-auto">
+                                <h1>03</h1>
+                                <h3>Head of Strategic Marketing, IT Company</h3>
+                                <p class="userAbout">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste velit
+                                    deleniti
+                                    nulla
+                                    aperiam fuga! Sit necessitatibus a ab iure enim optio facilis eaque odit accusamus
+                                    quas, ullam
+                                    dolorem
+                                    neque. Aliquid.</p>
+                                <button class="userBtn">Read More</button>
+                            </div>
+                            <div class="userBoxOther m-auto">
+                                <h1>04</h1>
+                                <h3>Head of Strategic Marketing, IT Company</h3>
+                                <p class="userAbout">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste velit
+                                    deleniti
+                                    nulla
+                                    aperiam fuga! Sit necessitatibus a ab iure enim optio facilis eaque odit accusamus
+                                    quas, ullam
+                                    dolorem
+                                    neque. Aliquid.</p>
+                                <button class="userBtn">Read More</button>
+                            </div>
+                        </div>
+                        <div class="swiper-slide d-flex">
+                            <div class="userBoxOther m-auto">
+                                <h1>05</h1>
+                                <h3>Head of Strategic Marketing, IT Company</h3>
+                                <p class="userAbout">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste velit
+                                    deleniti
+                                    nulla
+                                    aperiam fuga! Sit necessitatibus a ab iure enim optio facilis eaque odit accusamus
+                                    quas, ullam
+                                    dolorem
+                                    neque. Aliquid.</p>
+                                <button class="userBtn">Read More</button>
+                            </div>
+                            <div class="userBoxOther m-auto">
+                                <h1>06</h1>
+                                <h3>Head of Strategic Marketing, IT Company</h3>
+                                <p class="userAbout">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste velit
+                                    deleniti
+                                    nulla
+                                    aperiam fuga! Sit necessitatibus a ab iure enim optio facilis eaque odit accusamus
+                                    quas, ullam
+                                    dolorem
+                                    neque. Aliquid.</p>
+                                <button class="userBtn">Read More</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+        <!-- separator Image  -->
+        <div class="headerSeperator m-auto">
+            <img src="https://ik.imagekit.io/m28ienqgh/sample-frontend-project/separator.png" class="separator" alt="Section End">
+        </div>
+        <!-- blog.... -->
+        <a name="blog"></a>
+        <!-- Blog section starts from here -->
+        <section class=" blog">
+            <h1 class="tx-agn-cnt">Blog</h1>
+            <div class="blogBoxes d-grid">
+                <div class="blogBox1 userBox1 m-auto">
+                    <h3>KATIDHAN</h3>
+                    <p class="userAbout">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste velit deleniti
+                        nulla
+                        aperiam fuga! Sit necessitatibus a ab iure enim optio facilis eaque odit accusamus quas, ullam
+                        dolorem neque. Aliquid.</p>
+                    <button class="userBtn">Read More</button>
+                </div>
+                <div class="blogBoxOther userBoxOther m-auto">
+                    <h3>Head of Strategic Marketing, IT Company</h3>
+                    <p class=" blogAbout userAbout">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste velit
+                        deleniti nulla
+                        aperiam fuga! Sit necessitatibus a ab iure enim optio facilis eaque odit accusamus quas, ullam
+                        dolorem
+                        neque. Aliquid.</p>
+                    <button class="blogBoxBtn userBtn">Read More</button>
+                </div>
+                <div class="blogBoxOther userBoxOther m-auto">
+                    <h3>Head of Strategic Marketing, IT Company</h3>
+                    <p class=" blogAbout userAbout">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste velit
+                        deleniti nulla
+                        aperiam fuga! Sit necessitatibus a ab iure enim optio facilis eaque odit accusamus quas, ullam
+                        dolorem
+                        neque. Aliquid.</p>
+                    <button class="blogBoxBtn userBtn">Read More</button>
+                </div>
+                <div class="blogBoxOther userBoxOther m-auto">
+                    <h3>Head of Strategic Marketing, IT Company</h3>
+                    <p class=" blogAbout userAbout">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste velit
+                        deleniti nulla
+                        aperiam fuga! Sit necessitatibus a ab iure enim optio facilis eaque odit accusamus quas, ullam
+                        dolorem
+                        neque. Aliquid.</p>
+                    <button class="blogBoxBtn userBtn">Read More</button>
+                </div>
+
+            </div>
+            <div class="blogBtn tx-agn-cnt">
+                <button>See More <i class="fa-solid fa-arrow-right-long"></i></button>
+            </div>
+        </section>
+        <!-- separator Image  -->
+        <div class="headerSeperator m-auto">
+            <img src="https://ik.imagekit.io/m28ienqgh/sample-frontend-project/separator.png" class="separator" alt="Section End">
+        </div>
+        <!-- contact.... -->
+        <a name="contact"></a>
+        <!-- contact section starts from here -->
+        <section class="contact d-flex">
+            <div class="contactImgContainer m-auto">
+                <img src="https://ik.imagekit.io/m28ienqgh/sample-frontend-project/contact.jpg" class="contactImg" alt="">
+            </div>
+            <div class="contactForm m-auto">
+                <h3>CONTACT US NOW</h3>
+                <h1>Ask a question</h1>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Distinctio ipsam quos quidem voluptatem
+                    nisi odit?</p>
+                <form action="#">
+                    <div>
+                        <input type="text" class="contactName" placeholder="Full Name">
+                        <input type="text" class="contactEmail" placeholder="Email ID">
+                    </div>
+                    <div>
+                        <textarea type="text" class="contactMessage" placeholder="Message" name="" id="" cols="50"
+                            rows="10"></textarea>
+                    </div>
+                    <div class="tx-agn-cnt">
+                        <button type="submit" class="contactBtn">Send Message</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
+    <!-- Footer section starts from here  -->
+    <footer>
+        <div class="footer d-flex">
+            <div class="footerTitle">
+                <h2>CRAZYSTOCKS</h2>
+                <div class="footerNum">0123456789</div>
+                <div class="footerEmail">info@CRAZYSTOCKS.de</div>
+                <div class="footerAddress">Vishla Complex, 1st Floor Sector 7, HSR Layout, Banglore, Karnataka, 560102
+                </div>
+                <div class="footerSocial d-flex">
+                    <div class="footerFb m-auto">
+                        <i class="fa-brands fa-twitter fa-lg"></i>
+                    </div>
+                    <div class="footerInsta m-auto">
+                        <i class="fa-brands fa-instagram-square fa-lg"></i>
+                    </div>
+                    <div class="footerTwitter m-auto">
+                        <i class="fa-brands fa-facebook fa-lg"></i>
+                    </div>
+
+                </div>
+            </div>
+            <div class="footerTitle">
+                <h2>MENU</h2>
+                <div class="footerLinks">
+                    <div>Home</div>
+                    <div>About Us</div>
+                    <div>Login Up</div>
+                    <div>Blogs</div>
+                    <div>Contact</div>
+                </div>
+            </div>
+            <div class="footerTitle">
+                <h2>Newsletter</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse doloremque qui totam.</p>
+                <div class="footerSubscribe">
+                    <input type="text" placeholder="Subscribe">
+                    <button class="footerBtn" type="submit">Done</button>
+                    <div class="footerDownload d-flex">
+                        <a href="#"><img src="https://ik.imagekit.io/m28ienqgh/sample-frontend-project/playStore.png" alt="Download"></a>
+                        <a href="#"><img src="https://ik.imagekit.io/m28ienqgh/sample-frontend-project/appleStore.png" alt="Download"></a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <hr>
+    </footer>
+    <script src="main.js"></script>
+</body>
+
+</html>
