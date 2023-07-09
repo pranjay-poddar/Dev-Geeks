@@ -1,0 +1,134 @@
+/* Default settings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    align-items: center;
+    text-align: center;
+}
+
+body {
+    background-color: salmon;
+    transition: all 0.5s;
+}
+
+/* Styling the main container */
+.container {
+    background-color: rgba(255, 255, 255, 0.2);
+    width: 50%;
+    height: 90%;
+    border: none;
+    border-radius: 0.5rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: all 0.5s;
+}
+
+/* Styling the heading */
+h1 {
+    font-size: 2.5rem;
+    font-family: cursive;
+    font-weight: normal;
+    color: green;
+    user-select: none;
+    margin: 1rem 0;
+    transition: all 0.5s;
+}
+
+/* Styling the paragraph element nested inside the container */
+.container>p {
+    color: red;
+    font-size: 1.2rem;
+    margin-top: 0.5rem;
+    user-select: none;
+    transition: all 0.5s;
+}
+
+a {
+    text-decoration: none;
+    color: red;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Styling the input box */
+input {
+    margin: 2rem 0;
+    width: 60%;
+    height: 10%;
+    font-size: 2rem;
+    border: none;
+    border-radius: 0.75rem;
+    outline: none;
+    padding: 15px;
+    background: transparent;
+    transition: all 0.5s;
+}
+
+/* Removing the spinner of the number input box */
+input[type='number']::-webkit-inner-spin-button,
+input[type="number"]::-webkit-output-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Styling the output box */
+#output {
+    font-size: 1.5rem;
+    color: #9C27B0;
+    width: 96%;
+    margin: 0 2%;
+    height: 55%;
+    overflow: auto;
+    /* Wrap the answer into a fixed container */
+    transition: all 0.5s;
+}
+
+#output p {
+    word-wrap: break-word;
+}
+
+/* Responsiveness of the website */
+@media (max-width: 900px) {
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    .container>p {
+        font-size: 1rem;
+    }
+
+    input {
+        font-size: 1.5rem;
+        margin: 1.5rem 0;
+    }
+
+    #output {
+        font-size: 1rem;
+        height: 65%;
+    }
+}
+
+/* For small devices */
+@media (max-width: 450px) {
+    h1 {
+        font-size: 1rem;
+    }
+
+    .container>p {
+        font-size: 0.7rem;
+    }
+
+    input {
+        margin: 1.5rem 0;
+    }
+
+    #output {
+        font-size: 1rem;
+        height: 68%;
+    }
+}

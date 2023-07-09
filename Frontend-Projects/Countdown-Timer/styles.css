@@ -1,0 +1,88 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+
+}
+.main{
+    width:100%;
+    height:100vh;
+    background:url("https://i.ibb.co/nLQjb6Y/image4.webp") center center;
+    background-size:cover;
+}
+#end-date{
+width:50%;
+}
+#button:hover{
+    background-color: yellow;
+    transform: scale(1.2);
+    transition:1s transform;
+}
+#refresh:hover{
+    background-color: yellow;
+    transform: scale(1.2);
+    transition:1s transform;
+}
+input:hover{
+ 
+        background-color: yellow;
+        transform: scale(1.2);
+        transition:1s transform;
+    
+}
+#refresh{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width:15%;
+    background-color: rgba(255,255,255,0,9);
+    border-color: transparent;
+    border-radius: 5px;
+    height:40px;
+    text-align: center;
+    font-size: 30px;
+}
+#button{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width:15%;
+    background-color: rgba(255,255,255,0,9);
+    border-color: transparent;
+    border-radius: 5px;
+    height:40px;
+    text-align: center;
+    font-size: 30px;
+}.overlay{
+    width:100%;
+    height: 100%;
+    font-size:2.5rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgba(0,0,0,0.1);
+
+}
+.title{
+    margin-top: 10px;
+    color:white;
+    text-align: center;
+    font-size: 2.5rem;
+}.col{
+    margin-top: 20px;
+    width:90%;
+    display: flex;
+    justify-content: center;
+    color: white;
+}
+.col div{
+    width:250px;
+    text-align: center;
+}
+input{
+    width:50%;
+    background-color: rgba(255,255,255,0,9);
+    border-color: transparent;
+    border-radius: 5px;
+    height:50px;
+    text-align: center;
+    font-size: 30px;
+}
