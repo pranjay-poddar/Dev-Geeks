@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900%display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'Poppins', sans-serif;
+}
+
+body{
+    background: #000;
+}
+
+section{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 100px;
+}
+
+section header{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 40px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10;
+
+}
+
+section header .logo{
+    position: relative;
+    font-size: 1.5em;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 700;
+    text-decoration: none;
+    letter-spacing: 1px;
+}
+
+section header .toggle{
+    position: relative;
+    width: 40px;
+    height: 40px;
+    background: url(images/menu.png);
+    background-size: 30px;
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+}
+
+.bg{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    background-position: center;
+
+}
+
+.bird{
+    position: absolute;
+    bottom: 0;
+    right: 100px;
+    max-height: 80%;
+    z-index: 100;
+
+}
+
+.content{
+    position: absolute;
+    left: 100px;
+    max-width: 600px;
+    z-index: 10;
+
+}
+
+.content h2{
+    font-size: 3.5em;
+    color: #fff;
+    font-weight: 400;
+    line-height: 2em;
+}
+
+.content h2 span{
+    font-weight: 800;
+    font-size: 3.5em;
+    letter-spacing: 5px;
+
+}
+
+.content p{
+    color: #fff;
+    margin-top: -15px;
+
+}
+
+.content a{
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #fff;
+    color: #000;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin-top: 20px;
+    letter-spacing: 2px;
+}
+
+.sci{
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    width: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+    background-color: #fff;
+}
+
+.sci li{
+    list-style: none;
+}
+
+.sci li a{
+    display: inline-block;
+    transform: scale(0.5);
+}
+
+.textblocks{
+    position: absolute;
+    bottom: 0;
+    display: flex;
+
+}
+
+.textblocks .block{
+    position: relative;
+    padding: 20px;
+    margin-right: 40px;
+    max-width: 500px;
+    background-color: rgba(0, 255, 0, 0.2);
+}
+
+.textblocks .block{
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: #fff;
+}
+
+.textblocks .block p{
+    columns: #fff;
+}
