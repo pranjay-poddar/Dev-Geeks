@@ -28,7 +28,8 @@ setInterval(func, 1000) //Runs the "func" function every second */
     width: 100vw;
 
     /* adding image of clock template*/
-    background: url("clock.jpg") no-repeat;
+    /* background: url("clock.jpg") no-repeat; */
+    background: url("https://clipart-library.com/images/kT858boGc.gif") no-repeat;
     background-size: 98%;
 }
 
