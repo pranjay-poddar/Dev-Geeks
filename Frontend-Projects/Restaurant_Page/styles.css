@@ -1,0 +1,170 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    color: #f7f7f7;
+    font-family: sans-serif;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    justify-content: space-between;
+    background: #131313;
+    align-items: center;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    box-shadow: 0 16px 10px #0003;
+}
+
+header,
+footer {
+    padding: 1.2rem 0;
+    background: #2B2B2B;
+    width: 100%;
+}
+
+nav {
+    display: flex;
+    gap: 1rem;
+}
+
+button {
+    all: unset;
+    transition: .3s ease;
+    cursor: pointer;
+}
+
+button:hover {
+   transform: translateY(-20%);
+}
+
+.btn--active::after {
+    content: "";
+    width: 100%;
+    height: 2px;
+    background: #f2f2f2;
+    display: block;
+    margin-top: .1rem;
+    opacity: 1;
+}
+
+header img {
+    width: 18rem;
+    filter: invert(1);
+}
+
+.main__home,
+.main__menu,
+.main__contact {
+    background: rgba(255,255,255,.1);
+    margin: 0 1rem;
+    max-width: 36rem;
+    padding: 2.25rem 2rem;
+    display: grid;
+    place-items: center;
+    gap: 1.5rem;
+    line-height: 1.75rem;
+}
+
+.main__home-image {
+    width: 12rem;
+    height: 12rem;
+    background: url(./images/cook.webp), rgba(0,0,0,.5);
+    background-size: 120%;
+    background-repeat: no-repeat;
+    background-position: 50% 102%;
+    border-radius: 500%;
+    border: 1px solid;
+    box-shadow: inset rgba(255,255,255,0.25) 0 0 50px;
+}
+
+.main__line-break {
+    display: block;
+}
+
+.main__menu {
+    padding: 2.5rem 2.5rem;
+}
+
+.main__menu-items {
+    max-width: 18rem;
+    background: rgba(0,0,0,.3);
+    display: grid;
+    place-items: center;
+    padding: 1rem;
+    transition: .7s ease;
+    cursor: pointer;
+}
+
+.main__menu-items:hover {
+    box-shadow: inset 0 0px 60px rgba(255,255,255,.25), 0 10px 30px #0007;
+    transform: scale(1.05) translateY(-5px);
+    filter: brightness(1.1);
+}
+
+.main__menu img {
+    width: 75%;
+}
+
+.menu__item-name {
+    font-size: 1.4rem;
+    font-weight: 600;
+    letter-spacing: .05em;
+    text-transform: uppercase;
+}
+
+.main__contact {
+    gap: 1rem;
+}
+
+.main__contact p {
+    justify-self: start;
+}
+
+.main__contact img {
+    width: 100%;
+}
+
+[class$='disabled'] {
+    display: none;
+}
+
+/*
+    FOOTER SECTION
+*/
+footer {
+    text-align: center;
+    padding: 1em 0;
+    font-size: .7rem;
+    font-size: .85rem;
+}
+
+footer, a {
+    transition: .5s ease;
+    color: #f7f7f7;
+}
+
+@media (min-width: 17.5em){    /*  FOR DESKTOPS  */
+
+
+    footer {
+        font-size: .95rem;
+    }
+
+    .attribution__link {
+        color: white;
+    }
+
+}

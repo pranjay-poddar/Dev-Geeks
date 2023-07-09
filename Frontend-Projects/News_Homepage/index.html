@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta
+  name="description"
+  content="News Homepage Solution by 0xabdulkhalid for FrontendMentor.io"
+  />
+  <meta
+    name="keywords"
+    content="Frontend Mentor, News Homepage Challenge, 0xabdulkhalid"
+  />
+  <meta
+    property="og:title"
+    content="News Homepage - Frontend Mentor"
+  />
+  <meta
+    property="og:author"
+    content="0xabdulkhalid"
+  />
+  <meta
+    property="og:description"
+    content="News Homepage Solution by 0xabdulkhalid for FrontendMentor.io"
+  />
+  <title>News homepage | Frontend Mentor</title>
+  <link rel="stylesheet" href="./styles.min.css">
+  <link
+    rel="preload"
+    as="style"
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap"
+  />
+  <link
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap"
+    media="print"
+    onload="this.media='all'"
+  />
+  <noscript>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap"
+    />
+  </noscript>
+  <link rel="icon" href="https://raw.githubusercontent.com/0xabdulkhalid/news-homepage/main/images/favicon.svg" sizes="any" type="image/svg+xml">
+</head>
+<body>
+  <header class="header">
+    <div class="header__container">
+      <a href="#" class="header__logo">
+        <img
+          src="https://raw.githubusercontent.com/0xabdulkhalid/news-homepage/main/images/logo.svg"
+          alt="News - Home"
+          width="65" 
+          height="40"
+        />
+      </a>
+      <nav aria-labelledby="primary-nav">
+        <p id="primary-nav" hidden>primary</p>
+        <button
+          type="button"
+          class="header__menu-button"
+          aria-expanded="false"
+          aria-controls="menu-list"
+        >
+          <span class="sr-only">Menu</span>
+        </button>
+        <ul id="menu-list" class="header__list">
+          <li class="header__item">
+            <a href="#" class="header__link">Home</a>
+          </li>
+          <li class="header__item">
+            <a href="#" class="header__link">New</a>
+          </li>
+          <li class="header__item">
+            <a href="#" class="header__link">Popular</a>
+          </li>
+          <li class="header__item">
+            <a href="#" class="header__link">Trending</a>
+          </li>
+          <li class="header__item">
+            <a href="#" class="header__link">Categories</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  
+  <main>
+    <h1 class="heading--sr-only">News Homepage</h1>
+    <article class="main__headline">
+      <picture class="headline__illustration">
+        <source
+          media="(min-width: 56em)"
+          srcset="https://raw.githubusercontent.com/0xabdulkhalid/news-homepage/main/images/image-web-3-desktop.webp"
+        />
+        <img
+          src="https://raw.githubusercontent.com/0xabdulkhalid/news-homepage/main/images/image-web-3-mobile.webp"
+          alt=""
+          width="686" 
+          height="600"
+          class="main__header-image"
+        />
+      </picture>
+      <h2 class="headline__title">The Bright Future of Web 3.0?</h2>
+      <div class="headline__description-block">
+        <p class="headline__description">
+          We dive into the next evolution of the web that claims to put the power of the platforms back into the hands of the people.
+          But is it really fulfilling its promise?
+        </p>
+        <a href="#" class="headline__action">Read more</a>
+      </div>
+    </article>
+
+    <aside>
+      <span class="aside__heading">New</span>
+      <div class="aside__block">
+        <a href="#" class="block__title">Hydrogen VS Electric Cars</a>
+        <p class="block__description">Will hydrogen-fueled cars ever catch up to EVs?</p>
+      </div>
+      <div class="aside__block">
+        <a href="#" class="block__title">The Downsides of AI Artistry</a>
+        <p class="block__description">What are the possible adverse effects of on-demand AI image generation?</p>
+      </div>
+      <div class="aside__block">
+        <a href="#" class="block__title">Is VC Funding Drying Up?</a>
+        <p class="block__description">Private funding by VC firms is down 50% YOY. We take a look at what that means.</p>
+      </div>
+    </aside>
+
+    <section class="main__recommended">
+      <div class="recommended__block">
+        <img src="https://raw.githubusercontent.com/0xabdulkhalid/news-homepage/main/images/image-retro-pcs.webp" width="200" height="254" alt="">
+        <div class="recommended__text-block">
+          <a href="#" class="recommended__title">
+            <span class="recommended--highlighted">01</span>
+            Reviving Retro PCs
+          </a>
+          <p class="recommended__description">What happens when old PCs are given modern upgrades?</p>
+        </div>
+      </div>
+      <div class="recommended__block">
+        <img src="https://raw.githubusercontent.com/0xabdulkhalid/news-homepage/main/images/image-top-laptops.webp" width="200" height="254" alt="">
+        <div class="recommended__text-block">
+          <a href="#" class="recommended__title">
+            <span class="recommended--highlighted">02</span>
+            Top 10 Laptops of 2022
+          </a>
+          <p class="recommended__description">Our best picks for various needs and budgets.</p>
+        </div>
+      </div>
+      <div class="recommended__block">
+        <img src="https://raw.githubusercontent.com/0xabdulkhalid/news-homepage/main/images/image-gaming-growth.webp" width="200" height="254" alt="">
+        <div class="recommended__text-block">
+          <a href="#" class="recommended__title">
+            <span class="recommended--highlighted">03</span>
+            The Growth of Gaming
+          </a>
+          <p class="recommended__description">How the pandemic has sparked fresh opportunities.</p>
+        </div>
+      </div>
+    </section>   
+  </main>
+
+  <footer class="attribution">
+    Challenge by
+    <a
+      href="https://www.frontendmentor.io/"
+      target="_blank"
+      aria-describedby="Frontend Mentor Website"
+      >Frontend Mentor</a
+    >, Coded by
+    <a
+      href="https://github.com/0xabdulkhalid"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-describedby="Abdul khalid's Github profile"
+      >0xabdulkhalid</a
+    >
+  </footer>
+
+  <script src="./script.min.js"></script>
+</body>
+</html>
