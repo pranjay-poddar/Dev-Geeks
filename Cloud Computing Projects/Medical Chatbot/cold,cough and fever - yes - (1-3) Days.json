@@ -1,0 +1,87 @@
+{
+  "id": "42fdf8c9-6831-4fdf-96d2-a17f20fd42b5",
+  "name": "cold,cough and fever - yes - (1-3) Days",
+  "auto": true,
+  "condition": "",
+  "conditionalFollowupEvents": [],
+  "conditionalResponses": [],
+  "context": [
+    "Conversation3-1coldcoughandfever-yes-followup"
+  ],
+  "contexts": [
+    "Conversation3-1coldcoughandfever-yes-followup"
+  ],
+  "endInteraction": false,
+  "events": [],
+  "fallbackIntent": false,
+  "liveAgentHandoff": false,
+  "parentId": "4d174f3e-6521-4d6c-9af3-9875db060b28",
+  "followUpIntents": [],
+  "priority": 500000,
+  "responses": [
+    {
+      "action": "Conversation3.Conversation3-custom.Conversation3-1coldcoughandfever-custom.Conversation3-1coldcoughandfever-yes-custom-2",
+      "affectedContexts": [
+        {
+          "name": "Conversation3-1coldcoughandfever-yes-1-3Days-followup",
+          "lifespan": 2
+        },
+        {
+          "name": "coldcoughandfever-yes-1-3Days-followup",
+          "lifespan": 2
+        }
+      ],
+      "parameters": [],
+      "defaultResponsePlatforms": {},
+      "messages": [
+        {
+          "type": "message",
+          "condition": "",
+          "speech": [
+            "Select the level of your fever"
+          ]
+        },
+        {
+          "type": "message",
+          "condition": "",
+          "speech": [
+            "1.High"
+          ]
+        },
+        {
+          "type": "message",
+          "condition": "",
+          "speech": [
+            "2.Mid"
+          ]
+        },
+        {
+          "type": "message",
+          "condition": "",
+          "speech": [
+            "3.Low"
+          ]
+        }
+      ],
+      "resetContexts": false
+    }
+  ],
+  "rootParentId": "4ff6d6f4-51ce-40cc-bea4-977e35b5b1e4",
+  "templates": [],
+  "userSays": [
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "1",
+          "userDefined": false
+        }
+      ],
+      "count": 0,
+      "id": "08b5c0fd-a683-490e-8e3f-74687081157d",
+      "updated": null
+    }
+  ],
+  "webhookForSlotFilling": false,
+  "webhookUsed": false
+}

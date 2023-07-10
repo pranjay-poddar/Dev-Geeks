@@ -1,0 +1,112 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Inter;
+    scroll-behavior: smooth;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: black;
+    position: sticky;
+    width: 100%;
+    top: 0;
+    padding: 5px 0;
+}
+
+.logo-container {
+    flex: 3;
+}
+
+.logo {
+    height: 100px;
+    margin-left: 15%;
+    cursor: pointer;
+}
+
+
+.navbar-title-container {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-title {
+    color: white;
+    font-weight: 300;
+    font-size: 18px;
+    flex: 1;
+    display: flex;
+    justify-content: start;
+    padding: 25px;
+    width: 150px;
+    cursor: pointer;
+}
+
+.main {
+    height: 100vh;
+    background: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-container {
+    padding: 25px;
+    margin-bottom: 125px;
+}
+
+.main-container  > h1 {
+    color: white;
+    text-align: center;
+    padding: 25px;
+    font-size: 40px;
+}
+
+.main-container  > button {
+    display: block;
+    padding: 25px;
+    width: 300px;
+    font-weight: 700;
+    font-size: 24px;
+    border-radius: 50px;
+    margin: auto;
+    margin-top: -25px;
+    cursor: pointer;
+    background: white;
+    border: none;
+}
+
+.rewards {
+    background: #2260ef;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.rewards > p {
+    padding: 50px;
+    max-width: 600px;
+    line-height: 35px;
+    font-size: 18px;
+    margin-top: 100px;
+    border-radius: 10px;
+    color: black;
+    background: white;
+}
+
+.rewards-button {
+    display: block;
+    padding: 25px;
+    width: 300px;
+    font-weight: 700;
+    font-size: 24px;
+    border-radius: 50px;
+    cursor: pointer;
+    background: white;
+    border: none;
+}

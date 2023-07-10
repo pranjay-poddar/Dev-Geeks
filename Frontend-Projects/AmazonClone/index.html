@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="https://upload.wikimedia.org/wikipedia/commons/4/4a/Amazon_icon.svg">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">    <title>Amazon</title>
+</head>
+<body>
+    <header>
+        <div class="container container-header">
+            <div class="logo-container border-white">
+                <div class="logo"></div>
+                <span class="dotin">.in</span>
+            </div>
+
+            <div class="address-container border-white">
+                <p class="hello">Hello</p>
+                <div class="icon">
+                    <i class="fa-solid fa-location-dot"></i>
+                    
+                    <p >Select your address</p>
+                </div>
+            </div>
+
+            <div class="search-container">
+                <select>
+                    <option>All</option>
+                    <input type="text" class="search-bar" >
+                    <div class="search-icon">
+                        <i class="fa-solid fa-magnifying-glass" style="color: #ffffff;"></i>
+                    </div>
+                </select>
+            </div>
+
+            <div class="lang-container border-white">
+                <p>English</p>
+                <div class="lang-img">
+                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAARMAAAC3CAMAAAAGjUrGAAAAmVBMVEX/mTMSiAf/////lycAgQAAAIgAAIUAAH4AAIIAAIMAAHwAAHPi4u+kpMvz8/kAAHjn5/Lt7fXd3ey5uddPT6GZmcWDg7n6+v7Ly+HIyOJERJxlZao+PponJ5L29vy0tNbW1uggIJCfn8iGhrsYGJBNTaB2drQQEIx+fripqc5ra62QkMBXV6QiIpFfX6i+vtwyMpw6Opg1NZe0gadDAAAEvUlEQVR4nO3ba3OiSBiG4UzvdDcip8YDiAdQZAIxExP//4/btzHjZH1Nze6HpVPlc1Ul0eiH9g7Q2JKHBwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACA/+gvuPYg4BqacGjCoQmHJhyacF+hSTI5LFd7uV8tD5PE9WDEF2gSHNbaGyklpVRq5Omfh8D1kBw3qaZ6pCiGVFrr/oYc6SZ3OyinTZIpdZCeevnhNyY1jf/jRXm0vejG6S7kssnObhmeNxMbcTSiEuZIt2aeZ7eancNxOWzy7NFrn3cnI/p9pbTfcmFO3ZxaeVN3A3PWJNrS5lAEmb3d5wgvt7KgoMe2kauhuWoSPdK2QHvIwt5ZpPTtQF/p+S7tVbQNPbqK4qhJRluJ17VGZB3di2yPF/o62AxdJkzbUZRt5mZwjpo0lOTY3wrtFGMPHq/vP5N+JxJHiuLomOKmycyTXinOUewLX1IYSTmW7/cpiSjpOTMno3PSJNA049TnQ4gIae8J6cVrSkWbSNdvJvRITbOPdnJO66RJo1QzM3RjaY8YMhLVVmR+JraViGhzEZn9vZnZp7kYnosmCy31+UR180oH1a4QWWyiODJxJhqajaPTpn80oee5OM130WSlVL3pZ11hJO0daiLWITUJ12KiaM+Spn9ssamVKhyMz0GTVNsDrOi6/o5fiVKLdmVis2qFLkXl27OV/rhCh1mdDj9AB01qmoftnz+Z2ir5+Cjk08JP49RfPElxHNvdpZvao2vhyVE9/AAdNHmkOfZ8ihpK2l4m4y4fJ7ryKp2M8248oe1D7vrHDc3Z++EHOHwTmojlr9tRISciHB/beZ3v87puj+OdmMiV+fUE6WI6Hr5J6amnaFEuzptK6av8GAfrKmzDah3Ex/zR798Iik1e5tGT8srBRzh8k7lSLf1ID9NlWNF5yHLcBuugLd6KNl0H87E9N0m7p+Zgj66tUvPBRzh8k2cl/fNZRzLbxut2kczXaWFXIEdFsG6TfH6KH2fnPSb3pXoefITDN3lVanpZBTDhytd12o6kNWrTg/ZPu8vKYzRV6nXwEQ7fRErvkiSLIpNWeViovokqdnmVmii6LBJE3u8D8mCcNEmqYzhbnqT2/TiOvX37Js/e6q1Hv4l9LX8+H8IyT++mCbaTK1fHkzccTz7OO8Hveafp550mWM/vct6Zn085cH7ywe3z2JTOY9O7PY/F+50b9vS++PyiP3tfPLm398WiHv15/aTs109Wd7N+gnW2G4p/uR6b3c96rMiv1u2bT9btgztat+8/3zmY989xbn6+I+7t8x18DngLPi++YYrrChhcf3IDrlO6IdqOpCpSXM/2D/11j234yXWPwy+bXOD6WO5rXkc9vdvrqAWut78N/5dx08f/3zF/fvr/7is0+WrQhEMTDk04NOHQhHv4DtcevsE1NOHQhEMTDk04NOHQhEMTDk04NOHQhEMTDk04NOHQhEMTDk04NOHQhEMTDk04NOHQhEMTDk04NOHQhEMTDk04NOHQhEMTDk04NOHQhEMTDk04NOHQhEMTDk04NOHQhEMTDk04NOHQhEMTDk04NOHQhEMTDk04NOHQhEMTDk04NOHQhEMT7m/cNifkUwM0UQAAAABJRU5ErkJggg==" alt="">
+                </div>
+            </div>
+
+            <div class="login-container border-white">
+                <p>Hello,<span>Sign in</span></p>
+                <p class="account">Accounts & Lists</p>
+            </div>
+
+            <div class="return border-white">
+                <p>Returns <span class="order">& Orders</span></p>
+            </div>
+
+            <div class="cart border-white">
+                <i class="fa-solid fa-cart-shopping"> </i>
+                  Cart
+            </div>
+
+        </div>
+    </header>
+
+    <nav class="nav">
+        <div class="container container-nav">
+            <ul >
+                <li class="border-white" id="open-nav">
+                    <span class="open-nav">
+                        <i class="fa-solid fa-bars"></i>  All
+                    </span>
+                </li>
+
+                <li class="border-white">
+                    <a href="#">Best Sellers</a>
+                </li>
+
+                <li class="border-white">
+                    <a href="#">Today's Deals</a>
+                </li>
+
+                <li class="border-white">
+                    <a href="#">Mobiles</a>
+                </li>
+
+                <li class="border-white">
+                    <a href="#">Customer Service</a>
+                </li>
+
+                <li class="border-white">
+                    <a href="#">Electronics</a>
+                </li>
+
+                <li class="border-white">
+                    <a href="#">Home & Kitchen</a>
+                </li>
+
+                <li class="border-white">
+                    <a href="#">Fashion</a>
+                </li>
+
+                <li class="border-white">
+                    <a href="#">Books</a>
+                </li>
+
+                <li class="border-white prime-img-hover">
+                    <a href="#">Prime</a>
+                    <div class="prime-img">
+                        <img src="https://www.indiantelevision.com/sites/default/files/styles/smartcrop_800x800/public/images/tv-images/2023/05/25/3.jpg?itok=p9TFY0s6" alt="">
+                    </div>
+                </li>
+
+                <li class="border-white">
+                    <a href="#">Gifts</a>
+                </li>
+
+                <li class="border-white">
+                    <a href="#">Pet Supplies</a>
+                </li>
+            </ul>
+
+            <div class="nav-right-prime">
+                <img src="https://m.media-amazon.com/images/G/31/img17/Home/AmazonTV/Ravina/Desktop/SWM_400x39_Badtameez-Dil_V1A._CB603065353_.jpg" alt="">
+            </div>
+        </div>
+    </nav>
+
+    <div class="sidebar" id="sidebar-show">
+        <div class="sidebar-left">
+            <div class="sidebar-top">
+                <i class="fa-solid fa-circle-user"></i>
+                <h2>Hello, <span>Sign in</span></h2>
+            </div>
+            <div class="sidebar-wrap">
+                <div class="sidebar-item">
+                    <h2>Trending</h2>
+                    <p>Best Sellers</p>
+                    <p>Best Releases</p>
+                    <p>Movers and Shakers</p>
+                </div>
+                <div class="sidebar-item">
+                    <h2>Digital Content and Devices</h2>
+                    <p>Echo & Alexa</p>
+                    <p>Fire TV</p>
+                    <p>Kindle E-Readers &eBooks</p>
+                    <p>Audile Audiobooks</p>
+                    <p>Amazon Prime Video</p>
+                    <p>Amazon Prime Music</p>
+                </div>
+                <div class="sidebar-item">
+                    <h2>Shop by Category</h2>
+                    <p>Mobiles & Computers</p>
+                    <p>TV, Appliances, Electronics</p>
+                    <p>Men's Fashion</p>
+                    <p>Women's Fashion</p>
+                    <p>See All</p>
+                </div>
+                <div class="sidebar-item">
+                    <h2>Programs & Features</h2>
+                    <p>Gift Cards & Mobile Recharges</p>
+                    <p>#FoundItOnAmazon</p>
+                    <p>Clearance Store</p>
+                </div>
+                <div class="sidebar-item">
+                    <h2>Help & Settings</h2>
+                    <p>Your Account</p>
+                    <p>Customer Service</p>
+                    <p>Sign In</p>
+                </div>
+            </div>
+        </div>
+
+        <button id="sidebar-close">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+        
+    </div>
+
+    <section>
+        <div class="image-container">
+            <div class="image-list">
+                <div class="image-item">
+                    <img src="https://sm.ign.com/ign_in/screenshot/default/amazon-india-blockbuster-value-days-playstation-5-still-avai_12ha.jpg" alt="">
+                </div>
+                <div class="image-item">
+                    <img src="https://assets.indiadesire.com/images/amazon%20great%20indian%20festival%20happiness%20sale.jpg" alt="">
+                </div>
+                <div class="image-item">
+                    <img src="https://images-eu.ssl-images-amazon.com/images/G/31/img21/Fashion/Event/N2GL_sep/Ingress-SEP.jpg" alt="">
+                </div>
+                <div class="image-item">
+                    <img src="https://i.gadgets360cdn.com/large/amazon-prime-day-2020-large_1596679822271.jpg" alt="">
+                </div>
+                <div class="image-item">
+                    <img src="https://hips.hearstapps.com/hmg-prod/images/amazon-presidents-day-sale-index-1645032893.png" alt="">
+                </div>
+                <div class="image-item">
+                    <img src="https://m.media-amazon.com/images/I/61aURrton0L._SX3000_.jpg" alt="">
+                </div>
+                <div class="image-item">
+                    <img src="https://www.boldsky.com/img/2022/10/amazon-19-1665056175.jpg" alt="">
+                </div>
+                <div class="image-item">
+                    <img src="https://images-eu.ssl-images-amazon.com/images/G/31/img22/Toys/GW/0-PC_Hero_1x._CB594150943_.jpg" alt="">
+                </div>
+            </div>
+
+            <div class="btn-container">
+                <button class="slider-btn" id="slider-btn-left">
+                    <i class="fa-solid fa-angle-left"></i>
+                </button>
+                <button class="slider-btn" id="slider-btn-right"><i class="fa-solid fa-chevron-right"></i></button>
+            </div>
+        </div>
+    </section>
+
+    <main class="main">
+        <div class="product-container container">
+            <div class="card-product">
+                <h2>Revamp your home in style</h2>
+                <div class="card-product-nested">
+                    <div class="card-nested">
+                        <img src="https://images-eu.ssl-images-amazon.com/images/G/31/IMG20/Home/2021/GW/MSO/April/372x232_1_Low._SY116_CB670263840_.jpg" alt="">
+                        <p>Bedsheets, curtains</p>
+                    </div>
+                    <div class="card-nested">
+                        <img src="https://images-eu.ssl-images-amazon.com/images/G/31/IMG20/Home/2021/GW/MSO/April/372x232_2_Low._SY116_CB670263840_.jpg" alt="">  
+                        <p>Home decoration</p>
+                    </div>
+                    <div class="card-nested">
+                        <img src="https://images-eu.ssl-images-amazon.com/images/G/31/IMG20/Home/2021/GW/MSO/April/372x232_3_Low._SY116_CB670263840_.jpg" alt="">
+                        <p>Home Storage</p>
+                    </div>
+                    <div class="card-nested">
+                        <img src="https://images-eu.ssl-images-amazon.com/images/G/31/IMG20/Home/2021/GW/MSO/April/372x232_4_Low._SY116_CB670263840_.jpg" alt="">
+                        <p>Lighting decors</p>
+                    </div>
+                </div>
+
+                <button class="product-btn">See More</button>
+            </div>
+
+            <div class="card-product">
+                <h2>Flat ₹50 cashback | Fruits & vegetables</h2>
+                <div class="card-product-nested">
+                    <div class="card-nested">
+                        <img src="https://images-eu.ssl-images-amazon.com/images/G/31/img18/Fresh/GW/BTF_QCs/June23/T14/FNV/PC1/V2/QC6_FNV_RC_PC_01._SY116_CB602973763_.jpg" alt="">
+                        <p>Fruits</p>
+                    </div>
+                    <div class="card-nested">
+                        <img src="https://images-eu.ssl-images-amazon.com/images/G/31/img18/Fresh/GW/BTF_QCs/June23/T14/FNV/PC1/V2/QC6_FNV_RC_PC_02._SY116_CB602973763_.jpg" alt="">  
+                        <p>Vegetables</p>
+                    </div>
+                    <div class="card-nested">
+                        <img src="https://images-eu.ssl-images-amazon.com/images/G/31/img18/Fresh/GW/BTF_QCs/June23/T14/FNV/PC1/V2/QC6_FNV_RC_PC_03._SY116_CB602973763_.jpg" alt="">
+                        <p>Season's special</p>
+                    </div>
+                    <div class="card-nested">
+                        <img src="https://images-eu.ssl-images-amazon.com/images/G/31/img18/Fresh/GW/BTF_QCs/June23/T14/FNV/PC1/V2/QC6_FNV_RC_PC_04._SY116_CB602973763_.jpg" alt="">
+                        <p>Mango store</p>
+                    </div>
+                </div>
+
+                <button class="product-btn">See More</button>
+            </div>
+
+            <div class="card-product">
+                <h2>Up to 50% off | PC Accessiories</h2>
+                <div class="card-product-nested single">
+                    <div class="card-nested">
+                        <img src="https://images-eu.ssl-images-amazon.com/images/G/31/img23/CC/Desk/PCA/Pc_acc_DesktopCC_379x304._SY304_CB614856864_.jpg" alt="">
+                        
+                    </div>
+                    
+                </div>
+
+                <button class="product-btn">Shop Now</button>
+            </div>
+
+            <div class="card-product">
+                <h2>Up to 60% off | Start your fitness journey</h2>
+                <div class="card-product-nested single">
+                    <div class="card-nested">
+                        <img src="https://images-eu.ssl-images-amazon.com/images/G/31/img19/Sports/GW_Desktop/1199101_379x304_Compressed._SY304_CB448278349_.jpg" alt="">
+                    </div>
+                </div>
+
+                <button class="product-btn">See More</button>
+            </div>
+        </div>
+
+        <div class="product-container container">
+            <div class="card-product">
+                <h2>Revamp your home in style</h2>
+                <div class="card-product-nested">
+                    <div class="card-nested">
+                        <img src="https://images-eu.ssl-images-amazon.com/images/G/31/IMG20/Home/2021/GW/MSO/April/372x232_1_Low._SY116_CB670263840_.jpg" alt="">
+                        <p>Bedsheets, curtains</p>
+                    </div>
+                    <div class="card-nested">
+                        <img src="https://images-eu.ssl-images-amazon.com/images/G/31/IMG20/Home/2021/GW/MSO/April/372x232_2_Low._SY116_CB670263840_.jpg" alt="">  
+                        <p>Home decoration</p>
+                    </div>
+                    <div class="card-nested">
+                        <img src="https://images-eu.ssl-images-amazon.com/images/G/31/IMG20/Home/2021/GW/MSO/April/372x232_3_Low._SY116_CB670263840_.jpg" alt="">
+                        <p>Home Storage</p>
+                    </div>
+                    <div class="card-nested">
+                        <img src="https://images-eu.ssl-images-amazon.com/images/G/31/IMG20/Home/2021/GW/MSO/April/372x232_4_Low._SY116_CB670263840_.jpg" alt="">
+                        <p>Lighting decors</p>
+                    </div>
+                </div>
+
+                <button class="product-btn">See More</button>
+            </div>
+
+            <div class="card-product">
+                <h2>Minimum 40% off | Fresh deals on fiction eBooks</h2>
+                <div class="card-product-nested">
+                    <div class="card-nested">
+                        <img src="https://images-eu.ssl-images-amazon.com/images/G/31/GWJune2023/1_fic_qc_pc0.5x._SY116_CB587632952_.jpg" alt="">
+                        <p>Literature & Fiction</p>
+                    </div>
+                    <div class="card-nested">
+                        <img src="https://images-eu.ssl-images-amazon.com/images/G/31/GWJune2023/2_fic_qc_pc0.5x._SY116_CB587632887_.jpg" alt="">  
+                        <p>Romance</p>
+                    </div>
+                    <div class="card-nested">
+                        <img src="https://images-eu.ssl-images-amazon.com/images/G/31/GWJune2023/3fic_qc_pc0.5x._SY116_CB587492006_.jpg" alt="">
+                        <p>Crime & Mystery</p>
+                    </div>
+                    <div class="card-nested">
+                        <img src="https://images-eu.ssl-images-amazon.com/images/G/31/GWJune2023/4_fic_qc_pc0.5x._SY116_CB587633310_.jpg" alt="">
+                        <p>Teens & Children</p>
+                    </div>
+                </div>
+
+                <button class="product-btn">See More</button>
+            </div>
+
+            <div class="card-product">
+                <h2>Trending launches | Amazon brands & more</h2>
+                <div class="card-product-nested">
+                    <div class="card-nested">
+                        <img src="https://images-eu.ssl-images-amazon.com/images/G/31/home_private_label/moritika/baugwsept_cottonx/xcm_banners_cottons186_186x116_in-en._SY116_CB591200250_.jpg" alt="">
+                        <p>70% off | Curtains</p>
+                    </div>
+                    <div class="card-nested">
+                        <img src="https://images-eu.ssl-images-amazon.com/images/G/31/img22/AmazonBrands/Bikram/Bikram1/solimo_bottle_1861._SY116_CB592079644_.jpg" alt="">  
+                        <p>55% off | Water Bottles</p>
+                    </div>
+                    <div class="card-nested">
+                        <img src="https://images-eu.ssl-images-amazon.com/images/G/31/img22/AmazonBrands/Bikram/Bikram1/xcm_banners_bibs_186x116_in-en._SY116_CB592080532_.jpg" alt="">
+                        <p>Up to 60% off | Kids</p>
+                    </div>
+                    <div class="card-nested">
+                        <img src="https://images-eu.ssl-images-amazon.com/images/G/31/img22/AmazonBrands/Bikram/Bikram1/cycle_186._SY116_CB592080532_.jpg" alt="">
+                        <p>Up to 70% off | Cycles</p>
+                    </div>
+                </div>
+
+                <button class="product-btn">See More</button>
+            </div>
+
+            <div class="card-product">
+                <h2>Revamp your home in style</h2>
+                <div class="card-product-nested">
+                    <div class="card-nested">
+                        <img src="https://images-eu.ssl-images-amazon.com/images/G/31/IMG20/Home/2021/GW/MSO/April/372x232_1_Low._SY116_CB670263840_.jpg" alt="">
+                        <p>Bedsheets, curtains</p>
+                    </div>
+                    <div class="card-nested">
+                        <img src="https://images-eu.ssl-images-amazon.com/images/G/31/IMG20/Home/2021/GW/MSO/April/372x232_2_Low._SY116_CB670263840_.jpg" alt="">  
+                        <p>Home decoration</p>
+                    </div>
+                    <div class="card-nested">
+                        <img src="https://images-eu.ssl-images-amazon.com/images/G/31/IMG20/Home/2021/GW/MSO/April/372x232_3_Low._SY116_CB670263840_.jpg" alt="">
+                        <p>Home Storage</p>
+                    </div>
+                    <div class="card-nested">
+                        <img src="https://images-eu.ssl-images-amazon.com/images/G/31/IMG20/Home/2021/GW/MSO/April/372x232_4_Low._SY116_CB670263840_.jpg" alt="">
+                        <p>Lighting decors</p>
+                    </div>
+                </div>
+
+                <button class="product-btn">See More</button>
+            </div>
+        </div>
+
+        <section class="deals-container">
+            <div class="deals-headings">
+                <h1>Today's Deals</h1>
+                <p><a href="">See all deals</a></p>
+            </div>
+
+            <div class="deals-product-container">
+                <div class="deals-btn-container">
+
+                    <button  class="deals-btn">
+                        <i  class="fa-solid fa-angle-left"></i>
+                    </button>
+                    <button class="deals-btn">
+                        <i  class="fa-solid fa-angle-right"></i>
+                    </button>
+
+                </div>
+
+                <div class="deals-product-list">
+
+                    <div class="deals-product-item">
+                        <img src="https://m.media-amazon.com/images/I/71HOERLKYqL._AC_SY200_.jpg" alt="">
+                        <div class="discount">
+                            <a href="#">Upto 50% off</a>
+                            <a href="#">Deal of the Day</a>
+                        </div>
+                        <p>Realme Narzo N5 3|| Buy Now</p>
+                    </div>
+
+                    <div class="deals-product-item">
+                        <img src="https://m.media-amazon.com/images/I/71MkVdn5jxL._UL1500__AC_SY200_.jpg" alt="">
+                        <div class="discount">
+                            <a href="#">Upto 70% off </a>
+                            <a href="#">Deal of the Day</a>
+                        </div>
+                        <p>Starting 299 - Best Prices| PUMA</p>
+                    </div>
+
+                    <div class="deals-product-item">
+                        <img src="https://m.media-amazon.com/images/I/31G-ftiDlPL._AC_SY200_.jpg" alt="">
+                        <div class="discount">
+                            <a href="#">Upto 72% off</a>
+                            <a href="#">Deal of the Day</a>
+                        </div>
+                        <p>Branded Suitcase, Backpacks</p>
+                    </div>
+
+                    <div class="deals-product-item">
+                        <img src="https://m.media-amazon.com/images/I/51kdwtY1KvL._AC_SY200_.jpg" alt="">
+                        <div class="discount">
+                            <a href="#">Upto 87% off</a>
+                            <a href="#">Deal of the Day</a>
+                        </div>
+                        <p>Wallpapers from wolpin</p>
+                    </div>
+
+                    <div class="deals-product-item">
+                        <img src="https://m.media-amazon.com/images/I/41GQMZnWkSL._AC_SY200_.jpg" alt="">
+                        <div class="discount">
+                            <a href="#">Upto 60% off</a>
+                            <a href="#">Deal of the Day</a>
+                        </div>
+                        <p>Best offers on Men's Fragrances</p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <div class="wall">
+        <img src="https://m.media-amazon.com/images/G/31/AMS/IN/970X250-_desktop_banner.jpg" alt="">
+    </div>
+
+    <div class="top">
+        <button onclick="topFunction()" id="backtotop" title="Go to top">Back to top</button>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-heading">
+            <div class="heading">
+                <h2>Get to Know Us</h2>
+                <p>About Us</p>
+                <p>Careers</p>
+                <p>Press Releases</p>
+                <p>Amazon Science</p>
+            </div>
+
+            <div class="heading">
+                <h2>Connect with Us</h2>
+                <p>Facebook</p>
+                <p>Twitter</p>
+                <p>Instagram</p>
+            </div>
+
+            <div class="heading">
+                <h2>Make Money with Us</h2>
+                <p>Sell on Amazon</p>
+                <p>Sell under Amazon Accelerator</p>
+                <p>Protect and Build Your Brand</p>
+                <p>Amazon Global Selling</p>
+                <p>Become an Affiliate</p>
+                <p>Fulfilment by Amazon</p>
+                <p>Advertise Your Products</p>
+                <p>Amazon Pay on Merchants</p>
+            </div>
+
+            <div class="heading">
+                <h2>Let Us Help You</h2>
+                <p>COVID-19 and Amazon</p>
+                <p>Your Account</p>
+                <p>Returns Centre</p>
+                <p>100% Purchase Protection</p>
+                <p>Amazon App Download</p>
+                <p>Help</p>
+            </div>
+
+        </div>
+
+        <div class="end">
+            <img src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcSO3AAO3aAQKpfN6hA7zB_fyYewG3ag7Dr89zI4GWNeLxpIJJ-c" alt="">
+            <div class="lang-select">
+                <i class="fa-solid fa-globe"></i>
+                English
+            </div>
+        </div>
+
+        <div class="country">
+            <span>Australia</span>
+            <span>Brazil</span>
+            <span>Canada</span>
+            <span>China</span>
+            <span>France</span>
+            <span>Germany</span>
+            <span>Italy</span>
+            <span>Japan</span>
+            <span> Mexico</span>
+            <span>Netherlands</span>
+            <span>Poland</span>
+            <span>Singapore</span>
+            <span>Spain</span>
+            <span>Turkey</span>
+            <span>United Arab Emirates</span>
+            <span>United Kingdom</span>
+            <span>United States</span>
+        </div>
+
+    </footer>
+
+    <div class="copy">
+        <span>Conditions of Use & Sale</span>
+        <span>Privacy Notice</span>
+        <span>Interest-Based Ads</span><br>
+        <span>© 1996-2023, Amazon.com, Inc. or its affiliates</span><br>
+        <span><a href="https://github.com/ePSA-eJya">© Epsa (ePSA-eJya)</a> </span>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

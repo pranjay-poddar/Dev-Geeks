@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Logo of the website -->
+    <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
+    
+    <!-- Title -->
+    <title>Leap Years In A Range</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <!-- Main container of the webpage -->
+    <div class="container">
+        <div class="row">
+            <!-- Taking input of the starting year -->
+            <div class="input-wrapper">
+                <label for="start-year">Start Year:</label>
+
+                <input type="number" value="1900" id="start-year" />
+            </div>
+
+            <!-- Taking input of the last year -->
+            <div class="input-wrapper">
+                <label for="end-year">End Year:</label>
+
+                <input type="number" value="2022" id="end-year" />
+            </div>
+
+        </div>
+
+        <!-- But will trigger to calculate the leap year in the given range -->
+        <button id="get-leap-years">Get Leap Years</button>
+
+        <div id="result"></div>
+
+    </div>
+
+    <!-- Script -->
+    <script src="script.js"></script>
+</body>
+
+</html>
