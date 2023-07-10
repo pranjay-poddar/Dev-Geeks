@@ -141,3 +141,16 @@ h2{
 .social{
     margin:20px 10px;
 }
+
+.signup:hover{
+    border: black;
+    border-color: black;
+    border-style: solid;
+    border-radius: 1rem;
+    color: black;
+    background-color: white;
+}
+
+.signup{
+    border-radius: 1rem;
+}
