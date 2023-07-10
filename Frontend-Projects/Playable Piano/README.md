@@ -2,10 +2,6 @@
 
 "Playable Piano" is an immersive piano frontend project that combines the joy of playing music with interactive gameplay. The game offers a realistic and visually appealing virtual piano interface, complete with authentic sound effects, to create an engaging and authentic musical experience.
 
-## Screenshots
-
-![image](![Alt text](image.png))
-
 ## Features
 
 1. Interactive UI
