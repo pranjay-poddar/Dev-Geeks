@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@400;700&display=swap');
+
+:root{
+    --dark-cyan: hsl(158, 36%, 37%);
+    --cream: hsl(30, 38%, 92%);
+    --very-dark-blue:hsl(212, 21%, 14%);
+    --dark-grayish-blue:hsl(228, 12%, 48%);
+    --white:hsl(0, 0%, 100%);
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: var(--cream);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+picture{
+    max-width: 100%;
+}
+img{
+    max-width: 100%;
+    border-top-left-radius: .625rem;
+    border-top-right-radius: .625rem;
+}
+
+h1{
+    font-family: 'Fraunces',sans-serif;
+    color: var(--very-dark-blue);
+    margin: .8rem 0;
+    font-size: 1.6rem;
+}
+
+p{
+    font-size: 11px;
+    font-family: 'Montserrat', sans-serif;
+    color: var(--dark-grayish-blue);
+    font-weight: 600;
+    margin: .5rem 0 1rem;
+    line-height: 1.5;
+}
+
+button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: .8rem;
+    background-color: var(--dark-cyan);
+    border-radius: .625rem;
+    border: 1px var(--dark-cyan);
+    color: var(--white);
+    font-family: 'Montserrat';
+    font-weight: 700;
+    min-width: 100%;
+}
+
+button:hover{
+    cursor: pointer;
+    background-color: hsl(157, 18%, 45%);
+}
+
+
+.container{
+    background-color: var(--white);
+    border-radius: .625rem;
+    display: flex;
+    /* flex-direction: column; */
+    justify-content: center;
+    align-items: center;
+    margin: 1rem;
+}
+
+div.text{
+    padding: 1.5rem 2rem;
+}
+
+.perfume{
+    letter-spacing: .3rem;
+    font-size: 70%;
+    font-family: 'Montserrat', sans-serif;
+    color: var(--dark-grayish-blue);
+    font-weight: 700;
+}
+
+div.price{
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+span.price{
+    font-family: 'Fraunces', sans-serif;
+    color: var(--dark-cyan);
+    font-size: 1.7rem;
+}
+
+.smallPrice{
+    font-family: 'Montserrat', sans-serif;
+    color: var(--dark-grayish-blue);
+    font-size: .8rem;
+    font-weight: 700;
+    margin-left: 1rem;
+}
+
+img.cart{
+    margin-right: .5rem;
+}
+
+.attribution{
+    font-size: .6rem;
+    font-weight: 700;
+    font-family: 'Montserrat';
+}
+
+@media screen and (max-width:700px) {
+    .container{
+        max-width: 500px;
+        flex-direction: column;
+    }
+}
+
+@media screen and (min-width:700px){
+    .container{
+        max-width: 700px;
+    }   
+    img{
+        border-bottom-left-radius: .625rem;
+        border-top-right-radius: 0;
+    }
+}
