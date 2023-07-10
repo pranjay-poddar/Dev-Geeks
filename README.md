@@ -784,29 +784,56 @@ Happy Coding! -->
 <tr align="center">
   <td align="center"> 257.</td>
   <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Frontend-Projects/FIght%20Game"> Fight Game </a></td>
-
   <td align="center"> 258.</td>
   <td align="center"><a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Js-Games/Quiz_Game">Quiz_Game</a></td>
-
   <td align="center"> 259.</td>
   <td align="center"><a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/PHP%20Projects/User_Signup_Login_with_database">PHP-Signup-Login</a></td>
-
   <td align="center"> 260.</td>
-<td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Flutter Projects/Instagram Clone"> Flutter Instagram Clone </a></td>
-  <td align="center"> 261.</td>
-<td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Js-Projects/Facebook%20Clone"> Facebook Clone </a></td>
+  <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Flutter Projects/Instagram Clone"> Flutter Instagram Clone </a></td>  
+ </tr>
   
 
+ <tr align="center">
   <td align="center"> 261. </td>
+  <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Js-Games/Etch-a-Sketch"> Etch-a-Sketch </a> </td>
+  <td align="center"> 262.</td>
+  <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Flutter Projects/Instagram Clone"> Flutter Instagram Clone </a></td>
+  <td align="center"> 263.</td>
+  <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Js-Projects/Facebook%20Clone"> Facebook Clone </a></td>
+  <td align="center"> 264.</td>  
+  <td align="center"><a href="./Python Projects/Circle using Turtle">Circle using Turtle</a></td>
+  <td align="center"> 265. </td>
 <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Js-Games/Etch-a-Sketch"> Etch-a-Sketch </a> </td>
 </tr>
   
 <tr align="center">
-<td align="center"> 261.</td>  
-<td align="center"><a href="./Python Projects/Circle using Turtle">Circle using Turtle</a></td>
-<td align="center"> 264.</td>
-<td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Js-Games/Platform_Game">Platform Game</a></td>
+
+  <td align="center"> 266.</td>  
+  <td align="center"><a href="./Python Projects/SMTP mailing">SMTP mailing</a></td>
+  <td align="center"> 267.</td>
+  <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Js-Games/Platform_Game">Platform Game</a></td>
+  <td align="center"> 261.</td>
+  <td align="center"><a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Js-Games/Mastermind">Mastermind</a></td>
+  <td align="center"> 268.</td>
+  <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Js-Games/Web-Image Filter">Web-Image Filter</a></td>
+
 </tr>  
+
+
+
+<tr align="center">
+<td align="center"> 256.</td>  
+<td align="center"><a href="https://github.com/Nishitbaria/Dev-Geeks/tree/Test/Frontend-Projects/razorpayClone">   RazorpayClone  </a></td>
+
+<td align="center"> 265.</td>
+<td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Js-Games/Aim training">Aim training</a></td>
+
+<td align="center"> 263.</td>
+<td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Js-Games/Alien Shooting">Alien Shooting</a></td>
+
+</tr> 
+
+
 </table>
 
 
