@@ -1,0 +1,57 @@
+{
+  "id": "f4136db8-07fe-4b0b-b63d-128385b5abd7",
+  "name": "Conversation 3 - 7.none of the above",
+  "auto": true,
+  "condition": "",
+  "conditionalFollowupEvents": [],
+  "conditionalResponses": [],
+  "context": [
+    "Conversation3-followup"
+  ],
+  "contexts": [
+    "Conversation3-followup"
+  ],
+  "endInteraction": false,
+  "events": [],
+  "fallbackIntent": false,
+  "liveAgentHandoff": false,
+  "parentId": "4ff6d6f4-51ce-40cc-bea4-977e35b5b1e4",
+  "followUpIntents": [],
+  "priority": 500000,
+  "responses": [
+    {
+      "action": "Conversation3.Conversation3-custom",
+      "affectedContexts": [],
+      "parameters": [],
+      "defaultResponsePlatforms": {},
+      "messages": [
+        {
+          "type": "message",
+          "condition": "",
+          "speech": [
+            "Sorry i am not able to solve your problem so kindly consult your doctor."
+          ]
+        }
+      ],
+      "resetContexts": false
+    }
+  ],
+  "rootParentId": "4ff6d6f4-51ce-40cc-bea4-977e35b5b1e4",
+  "templates": [],
+  "userSays": [
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "7",
+          "userDefined": false
+        }
+      ],
+      "count": 0,
+      "id": "d2d2e987-7957-4e6f-88b9-d9dbb810b884",
+      "updated": null
+    }
+  ],
+  "webhookForSlotFilling": false,
+  "webhookUsed": false
+}
