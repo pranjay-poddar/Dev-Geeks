@@ -111,29 +111,54 @@ button{
 </head>
 <body>
 	<!-- Sign Up form -->
-	<form>
+    <form onsubmit ="return validateForm()">
             <h3>Sign Up</h3>
 
             <label for="name">Name</label>
-            <input type="text" placeholder="Name" id="name">
+            <input type="text" placeholder="Name" id="name" required>
 
             <label for="email">Email</label>
-            <input type="text" placeholder="Email" id="email">
+            <input type="email" placeholder="Email" id="email" required>
 
             <label for="password">Password</label>
-            <input type="text" placeholder="Password" id="pswd">
+            <input type="password" placeholder="Password" id="pswd" required>
 
             <label for="password">Confirm Password</label>
-            <input type="password" placeholder="Confirm Password" id="cpswd">
+            <input type="password" placeholder="Confirm Password" id="cpswd" required>
 
-
-            <button>Sign Up</button>
+            <button type="submit">Sign Up</button>
 
             <div class="social">
             <div class="go"><i class="fab fa-google"></i>  Google</div>
             <div class="fb"><i class="fab fa-facebook"></i>  Facebook</div>
             </div>
-        </form>
+      </form>
+
+  <script>
+    function validateForm() {
+      var name = document.getElementById('name').value
+      var email = document.getElementById('email').value
+      var password = document.getElementById('pswd').value
+      var confirmPassword = document.getElementById('cpswd').value
+
+      // email format validation
+      var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!emailRegex.test(email)) {
+          alert('Please enter a valid email address.');
+          return false;
+      }
+      
+      // compare password inputs
+      if (password !== confirmPassword) {
+          alert("Passwords do not match");
+          return false;
+      }
+
+      // redirect to login page after successful signup
+      window.location.href = "index.html";
+      return false;
+    }   
+  </script>
 
 </body>
 </html>
