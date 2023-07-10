@@ -18,7 +18,7 @@ To install the dependencies and set up the project, follow these steps:
 To run the project, follow these steps:
 
 1. Navigate to the project directory using the terminal
-2. Run `npm run dev` to start the development server
+2. Run `npm run start` to start the development server
 3. Open your browser and go to `http://localhost:3000` to view the website
 
 [Live Deployment](https://shortt.netlify.app/)
