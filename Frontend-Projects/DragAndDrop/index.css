@@ -1,0 +1,68 @@
+body {
+    background-color: rgb(133, 123, 199);
+}
+
+.content {
+    border: 2px solid rgb(133, 123, 199);
+    margin: 1rem;
+    background-color: white;
+    padding: 2rem 2rem;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+}
+
+.heading {
+    color: rgb(133, 123, 199);
+}
+
+.container {
+    display: inline-block;
+    border: 1px solid #ccc;
+    padding: 1rem 1rem;
+    vertical-align: middle;
+    width: 250px;
+    height: 250px;
+    margin: 1rem;
+    border-radius: 5px;
+    border: 1.5px solid rgb(133, 123, 199);
+}
+
+.drag-heading {
+    color: rgb(133, 123, 199);
+}
+
+.item {
+    display: inline-block;
+    width: 80px;
+    height: 80px;
+    background-color: rgb(133, 123, 199);
+    border: 1px solid #ccc;
+    margin: 5px;
+    cursor: move;
+    color: white;
+    border-radius: 5px;
+}
+
+.success-message {
+    color: rgb(249, 250, 249);
+    font-weight: bold;
+    font-size: larger;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.btn-div {
+    text-align: center;
+}
+
+.btn {
+    color: rgb(133, 123, 199);
+    background-color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1rem;
+}
