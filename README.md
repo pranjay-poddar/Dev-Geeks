@@ -807,14 +807,16 @@ Happy Coding! -->
 </tr>
   
 <tr align="center">
+
   <td align="center"> 266.</td>  
-  <td align="center"><a href="./Python Projects/Circle using Turtle">Circle using Turtle</a></td>
+  <td align="center"><a href="./Python Projects/SMTP mailing">SMTP mailing</a></td>
   <td align="center"> 267.</td>
   <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Js-Games/Platform_Game">Platform Game</a></td>
   <td align="center"> 261.</td>
   <td align="center"><a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Js-Games/Mastermind">Mastermind</a></td>
   <td align="center"> 268.</td>
   <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Js-Games/Web-Image Filter">Web-Image Filter</a></td>
+
 </tr>  
 
 
@@ -822,6 +824,8 @@ Happy Coding! -->
 <tr align="center">
 <td align="center"> 256.</td>  
 <td align="center"><a href="https://github.com/Nishitbaria/Dev-Geeks/tree/Test/Frontend-Projects/razorpayClone">   RazorpayClone  </a></td>
+<td align="center"> 263.</td>
+<td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Js-Games/Alien Shooting">Alien Shooting</a></td>
 </tr> 
 
 
