@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Temperature Converter</title>
+		<link rel="icon" type="image/png" href="./assets/icon.png" />
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+		/>
+
+		<!-- -----------------------------Bootstrap 4.6----------------------------------------- -->
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+			integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l"
+			crossorigin="anonymous"
+		/>
+
+		<!-- -------------------------------Custom CSS Style---------------------------------------- -->
+		<link rel="stylesheet" href="style.css" />
+	</head>
+
+	<body class="d-flex justify-content-center align-items-center min-vh-100">
+		<div class="container">
+			<div class="row">
+				<div class="card-group col-12 col-md-10 offset-md-1 my-md-auto">
+					<div class="card inputSection col-12 col-md-6">
+						<div class="card-body">
+							<form>
+								<div class="row px-3">
+									<div class="col-12 col-md-11 px-4">
+										<span class="card-title d-block"
+											>Enter Temperature</span
+										>
+										<label for="degreeInput" class="py-sm-2"
+											>Degree</label
+										>
+										<div class="input-group">
+											<input
+												type="number"
+												class="form-control"
+												id="inputDegree"
+												name="inputDegree"
+												placeholder="Enter Degree"
+												value="0"
+											/>
+											<div class="input-group-append">
+												<select
+													class="form-control"
+													id="selectInputDegreeType"
+												>
+													<option value="C" selected>
+														&deg;C
+													</option>
+													<option value="F">
+														&deg;F
+													</option>
+													<option value="K">K</option>
+												</select>
+											</div>
+										</div>
+										<label
+											for="selectConversionType"
+											class="py-sm-2"
+											>Convert In</label
+										>
+										<div class="input-group d-inline-block">
+											<div class="input-group-append">
+												<select
+													class="form-control"
+													id="selectConversionType"
+												>
+													<option value="F" selected>
+														Fahrenheit (&deg;F)
+													</option>
+													<option value="C">
+														Celcius (&deg;C)
+													</option>
+													<option value="K">
+														Kelvin (K)
+													</option>
+												</select>
+											</div>
+										</div>
+										<button
+											type="submit"
+											class="convertBtn btn btn-lg col-12 col-md-6 offset-md-3 mt-4 rounded-pill d-flex justify-content-center align-items-center text-white"
+										>
+											Convert&emsp;<img
+												src="./assets/right.svg"
+												class="mt-1"
+												width="15px"
+												height="15px"
+											/>
+										</button>
+									</div>
+								</div>
+							</form>
+						</div>
+					</div>
+					<div class="card resultSection col-12 col-md-6">
+						<div
+							class="card-body d-flex justify-content-center align-items-center"
+						>
+							<div id="resultValueSection">
+								<div id="convertedDegree">32</div>
+								<h3 id="degree">&deg;</h3>
+								<h3 id="convertedUnit">F</h3>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<footer class="mt-5 pt-5">Made with ❤️ by Shaurya</footer>
+		</div>
+
+		<!-- -----------------------------JQuery Plugins------------------------------------------ -->
+		<script
+			src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+			integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+			crossorigin="anonymous"
+		></script>
+		<script
+			src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+			integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
+			crossorigin="anonymous"
+		></script>
+
+		<!-- -------------------------------Custom JS Script---------------------------------------- -->
+		<script src="script.js"></script>
+	</body>
+</html>

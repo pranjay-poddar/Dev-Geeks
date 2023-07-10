@@ -1,0 +1,126 @@
+:root {
+	--primary-color: #3b0539;
+	--secondary-color: #61085d;
+}
+
+body {
+	color: var(--secondary-color);
+	background-image: url(./assets/bg-img.jpg);
+	height: 100vh;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	position: relative;
+	background-attachment: fixed;
+}
+
+.card {
+	padding: 20px 0px;
+	border-radius: 10px;
+}
+
+/* Input Section */
+
+.card-title {
+	font-size: 24px;
+	padding: 20px 0px;
+	font-weight: 600;
+}
+
+label {
+	font-weight: 500;
+}
+
+select {
+	margin-bottom: 40px;
+}
+
+#selectInputDegreeType {
+	border-radius: 0px 3px 3px 0px;
+}
+
+.convertBtn {
+	min-width: 10px;
+	background-color: var(--primary-color);
+}
+
+.convertBtn:hover {
+	transition: 0.5s;
+	background-color: var(--secondary-color);
+}
+
+/* Result Section */
+
+#resultValueSection {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	max-width: 500px;
+	height: 200px;
+	word-wrap: normal;
+	text-align: center;
+	font-size-adjust: 0.58;
+}
+
+#convertedDegree {
+	font-size: 65px;
+	font-weight: 500;
+	max-width: 500px;
+}
+
+#convertedUnit,
+#degree {
+	padding-bottom: 70px;
+}
+
+.resultSection {
+	background-color: var(--primary-color);
+	color: white;
+}
+
+/* Mobile view  */
+@media only screen and (max-width: 600px) {
+	body {
+		display: relative;
+		overflow: hidden;
+	}
+
+	.card-group {
+		padding: 0;
+	}
+
+	.card {
+		border: none;
+		border-radius: 0;
+		padding: 0;
+	}
+
+	.card-title {
+		line-height: 40px;
+	}
+
+	.card-body {
+		padding: 0;
+	}
+
+	.resultSection {
+		position: fixed;
+		top: 0;
+		padding: 10px 0px;
+		text-align: center;
+	}
+
+	.inputSection {
+		margin-top: 60%;
+	}
+
+	#degree,
+	#convertedUnit {
+		padding-top: 50px;
+	}
+}
+
+footer {
+	color: #fff;
+	text-align: center;
+}
