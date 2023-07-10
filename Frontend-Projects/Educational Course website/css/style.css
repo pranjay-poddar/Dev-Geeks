@@ -890,9 +890,11 @@ section {
 
 .footer {
   background: #f0fdfa;
+  margin-bottom: -10px;
 }
 
 .footer .box-container {
+  padding-left: -20px;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (minmax(25rem, 1fr))[auto-fit];
