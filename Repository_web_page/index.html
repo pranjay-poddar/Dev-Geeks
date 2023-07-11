@@ -25,6 +25,7 @@
     <meta property="og:url" content="https://pranjay-poddar.github.io/Dev-Geeks/Repository_web_page/index.html" />
     <meta property="og:title" content="Dev Geeks" />
     <meta property="og:description" content="Open Source repository for mini projects" />
+    <script src="projects.js"></script>
 
 </head>
 
@@ -49,16 +50,38 @@
                     </div>
                 </div>
             </div> 
+            <!-- ==================== SEARCH BAR ADDED ============== -->
             <div class="container">
                 <div class="row text-center">
                     <div class="col-12 my-3 text-center">
                         <div style="padding:25px;border-radius:25px;"id="poster" style="border-radius: 20px;">
-                             <input style="border:1px solid rgb(154, 173, 206);border-radius:5px;padding:5px;text-align:center;width:50%;box-shadow:2px 2px 2px 2px" type="text" name="" placeholder="Search Projects" id="">
-                             &nbsp; <i class="fa fa-search"></i>
-    
+
+                            <form id="seachForm">
+
+                                
+                             <input id="searchInput" style="border:1px solid rgb(154, 173, 206);border-radius:5px;padding:5px;text-align:center;width:50%;box-shadow:2px 2px 2px 2px" type="text" name="" placeholder="Search Projects">
+                              <button style="border:1px solid rgb(154, 173, 206);border-radius:5px;padding:5px;text-align:center;width:5%;box-shadow:2px 2px 2px 2px">
+
+                                <i class="fa fa-search"></i>
+
+                             </button>
+
+                            </form> 
                         </div>
                     </div>
-                </div>
+                </div> 
+            <!-- ====================================================== -->
+            <div class="container">
+                <div class="row text-center">
+                    <div class="col-12 my-3 text-center">
+                        <div style="padding:25px;border-radius:25px;"id="poster" style="border-radius: 5px;">
+
+                            <div id="projectContainer"></div>
+
+                        </div>
+                    </div>
+                </div> 
+            <!-- ====================================================== -->
             <div class="row my-5">
                 <div class="col-md-6 col-12">
                     <h2>What is Dev Geeks?</h2>

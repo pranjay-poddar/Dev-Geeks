@@ -1,3 +1,34 @@
+function searchProjects() {
+  // Get the input element and the search query
+  var input = document.getElementById("searchInput");
+  var query = input.value.toLowerCase();
+
+  console.log( query );
+
+  // Get the container where the projects will be displayed
+  var container = document.getElementById("projectContainer");
+  container.innerHTML = ""; // Clear the container
+
+  // Filter the projects based on the search query
+  var filteredProjects = projects.filter(function (project) {
+    return project.name.toLowerCase().includes(query);
+  });
+
+  // Display the filtered projects in the container
+  filteredProjects.forEach(function (project) {
+    var projectElement = document.createElement("div");
+    projectElement.innerHTML = project.name;
+    container.appendChild(projectElement);
+  });
+}
+
+document.getElementById("seachForm").addEventListener("submit", function (event) {
+  event.preventDefault(); // Prevent form submission
+  searchProjects();
+});
+
+// =====================================================
+
 let calcScrollValue = () => {
     let scrollProgress = document.getElementById("progress");
     let progressValue = document.getElementById("progress-value");
@@ -18,4 +49,5 @@ let calcScrollValue = () => {
   };
   
   window.onscroll = calcScrollValue;
-  window.onload = calcScrollValue;
+  window.onload = calcScrollValue; 
+
