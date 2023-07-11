@@ -1,0 +1,240 @@
+/* Reset Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Global Styles */
+  body {
+    font-family: Arial, sans-serif;
+    line-height: 1.5;
+  }
+  
+  .container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  /* Navigation Styles */
+  nav {
+    background-color: #333;
+    color: #fff;
+    height: 10vh;
+  }
+  
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+    justify-content: flex-en;
+  }
+  
+  .nav-links li {
+    display: flex;
+    justify-content: space-around;
+    
+    margin-left: 40px;
+  }
+  
+  .nav-links li a {
+
+    align-items: center;
+    color: #ffffff;
+    text-decoration: none;
+  }
+  
+  .head1{
+    display: flex;
+    margin-top: 200px;
+    margin-left: 10px;
+    padding-bottom: 60px;
+    
+  }
+  .head1 h1{
+    text-align: center;
+    background-color: violet;
+    border-radius: 5px;
+  }
+  .head1 a {
+    margin-top: 20px;
+    border-radius: 2px;
+    background: chocolate;
+    text-decoration: none;
+    color: #000;
+    font-weight: 700;
+  }
+  .cc{
+    margin-left: 130px;
+    display: flex;
+    width: 80vw;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    top: 45%;
+    left: 50%;
+    overflow: hidden;
+    border: 20px solid #ffffff;
+    border-radius: 8px;
+    box-shadow: 10px 25px 30px rgba(30,30,200,0.3);
+  }
+  .wrapper222{
+    width: 100%;
+    display: flex;
+    animation: slide 16s infinite;
+  }
+  @keyframes slide{
+    0%{
+        transform: translateX(0);
+    }
+    25%{
+        transform: translateX(0);
+    }
+    30%{
+        transform: translateX(-100%);
+    }
+    50%{
+        transform: translateX(-100%);
+    }
+    55%{
+        transform: translateX(-200%);
+    }
+    75%{
+        transform: translateX(-200%);
+    }
+    80%{
+        transform: translateX(-300%);
+    }
+    100%{
+        transform: translateX(-300%);
+    }
+  }
+  /* Hero Section Styles */
+  .container-body{
+    margin-top: 20px;
+  }
+  .container-body img{
+    height: 500px;
+  }
+  .container-body p{
+    background-color: aliceblue;
+    margin-top: 10px;
+    text-align: center;
+    font-style: italic;
+  }
+  .hero {
+    
+    background-image: url("hero.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+  }
+  
+  .hero h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+  }
+  
+  .hero p {
+    font-size: 18px;
+    margin-bottom: 30px;
+  }
+  
+  .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+  }
+  
+  /* About Section Styles */
+  .about {
+    background-color: #f4f4f4;
+    padding: 60px 0;
+    text-align: center;
+  }
+  
+  .about h2 {
+    font-size: 32px;
+    margin-bottom: 30px;
+  }
+  
+  /* Courses Section Styles */
+  .courses {
+    padding: 60px 0;
+    text-align: center;
+  }
+  
+  .courses h2 {
+    font-size: 32px;
+    margin-bottom: 30px;
+  }
+  
+  .course-card {
+    margin-bottom: 30px;
+  }
+  
+  .course-card img {
+    max-width: 100%;
+    margin-bottom: 10px;
+  }
+  
+  .course-card h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+
+ 
+  .body2 .container-body2{
+    text-align: center;
+    margin-left: 5px;
+    width: 48vw;
+    border-radius: 10px;
+    background-color: rgb(175, 204, 128);
+  }
+  .body2 .container-body3{
+    text-align: center;
+    margin-right: 5px;
+    border-radius: 10px;
+    width: 48vw;
+    background-color: rgb(128, 79, 79);
+  }
+  .body2{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+  }
+
+
+  
+  /* Footer Section Styles */
+  footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+  }
+  .recruiters{
+    text-align: center;
+    margin: 20px;
+  }
+  .recruiters .companies{
+    border-radius: 10px;
+    margin-left: 39%;
+    width: 20vw;
+    background-color: rgb(227, 164, 119);
+  }
+
+  .recruiters a{
+    padding: 9px;
+    color: #000;
+    text-decoration: none;
+  }
