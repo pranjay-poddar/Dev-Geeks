@@ -745,7 +745,8 @@ footer .text span a:hover{
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   background-color: rgb(97, 97, 211);
   color: white;
-  padding: 0% 10px 0px 10px;
+  padding: 0.7rem 1rem;
+  border-radius: 10px;
   
 }
 
