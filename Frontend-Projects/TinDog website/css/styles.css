@@ -141,3 +141,8 @@ h2{
 .social{
     margin:20px 10px;
 }
+.ofcard:hover {
+    color: black !important;
+    border-color: #1c1f23 !important;
+    background-color: white !important;
+}
