@@ -21,7 +21,7 @@ h2 {
 }
 
 .container {
-  border-radius: 5px;
+  border-radius: 1rem;
   width: 30%;
   margin: 6rem 0 2rem;
   /* background-color: rgb(218, 211, 211); */
