@@ -809,6 +809,10 @@ Happy Coding! -->
 <td align="center"><a href="./Python Projects/Circle using Turtle">Circle using Turtle</a></td>
 <td align="center"> 264.</td>
 <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Js-Games/Platform_Game">Platform Game</a></td>
+
+<td align="center"> 265.</td>
+<td align="center"> <a href="./Js-Games/Anaconda Game">Anaconda Game</a></td>
+ 
 </tr>  
 
 
