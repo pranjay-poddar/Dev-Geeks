@@ -32,6 +32,9 @@ body {
   }
   
   form button {
+    margin: auto;
+    display: flex;
+    margin-top: 1rem;
     background-color: #c130ed;
     color: #fff;
     border: none;
@@ -39,7 +42,6 @@ body {
     cursor: pointer;
     border-radius: 10px;
     font-size: 22px;
-    margin-top: 20px;
   }
   form button:hover{
     border:2px solid #f23e77;
