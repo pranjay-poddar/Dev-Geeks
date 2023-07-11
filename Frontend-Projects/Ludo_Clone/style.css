@@ -1,0 +1,223 @@
+/* Default settings */
+*,
+*:before,
+*:after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Styling the main container */
+.container {
+    width: 600px;
+    height: 600px;
+    margin: 1rem auto;
+    cursor: pointer;
+}
+
+.container1,
+.container3 {
+    width: 100%;
+    height: 40%;
+    display: flex;
+}
+
+.container2 {
+    width: 100%;
+    height: 20%;
+    display: flex;
+}
+
+/* Styling row1, and 3 of ludo game */
+.row1-col1,
+.row1-col3,
+.row3-col1,
+.row3-col3 {
+    width: 40%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+.row1-col2,
+.row3-col2 {
+    width: 20%;
+    height: 100%;
+}
+
+.row2-col1,
+.row2-col3 {
+    width: 40%;
+    height: 100%;
+}
+
+.row2-col2 {
+    width: 20%;
+    height: 100%;
+}
+
+/* Color of the game */
+.green {
+    background-color: #84c21f;
+}
+
+.red {
+    background-color: #dc2418;
+}
+
+.blue {
+    background-color: #0092dc;
+}
+
+.yellow {
+    background-color: #f6c700;
+}
+
+.white {
+    background-color: #fff;
+}
+
+/* Adding sub container of the containers */
+.row1-col1-child,
+.row1-col3-child,
+.row3-col1-child,
+.row3-col3-child {
+    width: 70%;
+    height: 70%;
+}
+
+.row1-col1-child>div,
+.row1-col3-child>div,
+.row3-col1-child>div,
+.row3-col3-child>div {
+    width: 35%;
+    height: 35%;
+    margin: 7.5%;
+    float: left;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 25, 1);
+}
+
+.row1-col1-child>div:hover,
+.row1-col3-child>div:hover,
+.row3-col1-child>div:hover,
+.row3-col3-child>div:hover {
+    box-shadow: -2px 14px 28px rgba(0, 0, 0, 0.25), -2px 10px 28px rgba(0, 0, 0, 0.22);
+}
+
+.row1-col2>div,
+.row3-col2>div {
+    width: 33.33%;
+    height: 16.667%;
+    float: left;
+    border: 1px solid #000;
+}
+
+.row2-col1>div,
+.row2-col3>div {
+    height: 33.33%;
+    width: 16.667%;
+    float: left;
+    border: 1px solid #000;
+}
+
+/* i icons i.e., star and circle icons */
+.icon {
+    color: #fff;
+}
+
+i {
+    text-align: center;
+    margin: 3px;
+}
+
+/* Designing the home of the ludo game */
+.contain-triangle {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.triangle-right {
+    width: 0;
+    height: 0;
+    border-top: 55px solid transparent;
+    border-left: 55px solid #84c21f;
+    border-bottom: 55px solid transparent;
+    position: absolute;
+    left: 0;
+    top: 5px;
+}
+
+.triangle-up {
+    width: 0;
+    height: 0;
+    border-left: 55px solid transparent;
+    border-bottom: 55px solid #dc2418;
+    border-right: 55px solid transparent;
+    position: absolute;
+    left: 5px;
+    bottom: 0;
+}
+
+.triangle-left {
+    width: 0;
+    height: 0;
+    border-top: 55px solid transparent;
+    border-right: 55px solid #0092dc;
+    border-bottom: 55px solid transparent;
+    position: absolute;
+    right: 0;
+    top: 5px;
+}
+
+.triangle-down {
+    width: 0;
+    height: 0;
+    border-left: 55px solid transparent;
+    border-top: 55px solid #f6c700;
+    border-right: 55px solid transparent;
+    position: absolute;
+    top: 0;
+    right: 5px;
+}
+
+/* Main circle of the ludo game */
+.circle {
+    width: 50%;
+    height: 50%;
+    margin: 28px;
+    position: absolute;
+    background: #fff;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+/* "Home" text of the game */
+.text {
+    width: 80%;
+    height: 40%;
+    margin: 20px 5px;
+    font-size: 8px;
+    color: #000;
+    font-family: cursive;
+    text-transform: uppercase;
+}
+
+/* Creator of the game */
+footer {
+    position: fixed;
+    bottom: 5%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1.2rem;
+    font-family: cursive;
+}
+a {
+    color: #000;
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}
