@@ -40,31 +40,52 @@ html {
 
 .logo {
   position: absolute;
-  top: 3rem;
-  left: 3rem;
+  top: 1rem;
 }
 
 .logo i {
-  font-size: 10rem;
-  color: rgba(0, 0, 0, 0.8);
+  font-size: 6rem;
+  color: rgba(255, 255, 255, 0.8);
+  transition: all 0.2s ease;
+}
+
+.logo i:hover {
+  scale: 1.1;
 }
 
 .navbar {
   position: absolute;
   top: 3rem;
-  right: 10%;
+  right: 5%;
+
+  padding: 0.2rem;
 }
 
 .navbar-link {
   font-size: 2rem;
+  text-transform: uppercase;
   display: inline-block;
   margin: 0 3rem;
-  color: var(--black-color);
+  color: var(--white-color);
   transition: transform 0.5s;
 }
 
 .navbar-link:hover {
-  transform: scale(1.5);
+  scale: 1.1;
+  font-weight: bold;
+  color: rgb(136, 222, 232);
+}
+
+header {
+  padding: 4rem;
+  background-image: linear-gradient(
+    black,
+    rgb(46, 46, 46),
+    rgb(38, 38, 38),
+    rgb(49, 49, 49)
+  );
+  box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px,
+    rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
 }
 
 .cube-wrapper {
@@ -230,7 +251,6 @@ html {
   opacity: 1;
 }
 
-
 .section-1-banner {
   flex-direction: column;
 }
@@ -238,20 +258,22 @@ html {
 .section-1-banner h1 {
   font-size: 13rem;
   font-weight: 300;
+  font-family: "Times New Roman", Times, serif;
   text-transform: uppercase;
-  letter-spacing: 0.5rem;
+  letter-spacing: 0.3rem;
+  text-shadow: 4px 4px 6px rgb(66, 65, 65);
 }
 
 .section-1-banner p {
   font-size: 4rem;
   font-weight: 400;
   letter-spacing: 0.1rem;
-  margin: 6rem 0 4rem 0;
+  margin: 4rem 0rem 2rem 18rem;
 }
 
 .section-1-banner span {
   font-size: 3rem;
-  margin-bottom: 5rem;
+  margin: 2rem 0rem 4rem 18rem;
 }
 
 .section-1-banner button {
@@ -264,30 +286,35 @@ html {
   border: none;
   border-radius: 0.5rem;
   cursor: pointer;
-  clip-path: polygon(50% 0%,
-      81% 5%,
-      100% 0,
-      100% 100%,
-      80% 95%,
-      50% 100%,
-      20% 95%,
-      0 100%,
-      0 0,
-      23% 5%);
+  clip-path: polygon(
+    50% 0%,
+    81% 5%,
+    100% 0,
+    100% 100%,
+    80% 95%,
+    50% 100%,
+    20% 95%,
+    0 100%,
+    0 0,
+    23% 5%
+  );
   transition: clip-path 0.5s;
+  margin: 1rem 0rem 2rem 18rem;
 }
 
 .section-1-banner button:hover {
-  clip-path: polygon(40% 15%,
-      77% 15%,
-      100% 10%,
-      100% 90%,
-      75% 85%,
-      40% 85%,
-      30% 100%,
-      0 50%,
-      0 50%,
-      30% 0);
+  clip-path: polygon(
+    40% 15%,
+    77% 15%,
+    100% 10%,
+    100% 90%,
+    75% 85%,
+    40% 85%,
+    30% 100%,
+    0 50%,
+    0 50%,
+    30% 0
+  );
 }
 
 .slideshow {
@@ -314,7 +341,6 @@ html {
   opacity: 1;
 }
 
-
 .section-2 {
   width: 100%;
   height: 120vh;
@@ -323,6 +349,9 @@ html {
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
+  box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px,
+    rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px,
+    rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
 }
 
 .section-2-heading {
@@ -331,6 +360,7 @@ html {
   color: var(--black-color);
   position: relative;
   margin-bottom: 5rem;
+  text-shadow: 4px 4px 6px rgb(66, 65, 65);
 }
 
 .section-2-heading::before {
@@ -345,6 +375,9 @@ html {
   transform-origin: left top;
   z-index: -1;
   border-radius: 1rem;
+  box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px,
+    rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px,
+    rgba(0, 0, 0, 0.09) 0px 32px 16px;
 }
 
 .iphones {
@@ -352,6 +385,10 @@ html {
   width: 50vw;
   background-image: linear-gradient(var(--primary-color), var(--white-color));
   border-radius: 0.5rem;
+  box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px,
+    rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px,
+    rgba(0, 0, 0, 0.09) 0px 32px 16px;
+  margin-bottom: 30px;
 }
 
 .iphones img {
@@ -364,56 +401,75 @@ html {
 
 .iphone-img-2 {
   opacity: 0;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+    rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
 }
 
 .iphones:hover .iphone-img-1 {
   opacity: 0;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+    rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
 }
 
 .iphones:hover .iphone-img-2 {
   opacity: 1;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+    rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
 }
-
 
 .iphone-btns {
   display: flex;
 }
 
 .iphone-btn {
-  width: 6rem;
-  height: 6rem;
-  background-image: linear-gradient(to right,
-      rgb(51, 51, 51) 60%,
-      rgb(82, 82, 82));
+  width: 20rem;
+  height: 8rem;
+  background-image: linear-gradient(
+    to right,
+    rgb(51, 51, 51) 60%,
+    rgb(82, 82, 82)
+  );
   margin: 0 3rem;
-  border-radius: 50%;
+  border-radius: 2rem;
   position: relative;
+  transition: all 0.2s ease;
+  box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px,
+    rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px,
+    rgba(0, 0, 0, 0.09) 0px 32px 16px;
 }
 
 .iphone-btn::after {
   content: "";
-  width: 50%;
-  height: 50%;
+  width: 90%;
+  height: 70%;
   display: block;
   border: 0.1rem solid #6edae6;
-  border-radius: 1rem;
+  border-radius: 1.2rem;
+}
+
+.iphone-btn:hover::after {
+  border: 0.3rem solid #6edae6;
+}
+
+.iphone-btn:hover {
+  scale: 1.05;
 }
 
 .iphone-btn span {
   position: absolute;
-  top: -3rem;
-  font-size: 1.6rem;
+  /* top: -3rem; */
+  font-size: 2rem;
   font-weight: 400;
   text-transform: uppercase;
   letter-spacing: 0.1rem;
   color: var(--primary-color);
   width: max-content;
-  transform: scale(0);
-  transition: transform 0.5s;
+  transform: scale(1);
+  transition: transform 0.1s ease;
 }
 
 .iphone-btn:hover span {
-  transform: scale(1);
+  font-weight: bold;
 }
 
 .section-3 {
@@ -430,14 +486,17 @@ html {
   font-weight: 200;
   color: var(--primary-color);
   margin-bottom: 15rem;
+  text-shadow: 2px 8px 8px rgb(119, 186, 182);
 }
-
 
 .section-3-content {
   width: 80%;
   flex-direction: column;
   perspective: 1000rem;
   position: relative;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+    rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
 }
 
 .section-3-content img {
@@ -454,14 +513,15 @@ html {
   transition: transform 3s;
 }
 
-
 .loading-wrapper {
   position: absolute;
   top: 6%;
   width: 60%;
   height: 85%;
-  background: linear-gradient(rgba(255, 255, 255, 0.6),
-      rgba(255, 255, 255, 0.6)),
+  background: linear-gradient(
+      rgba(255, 255, 255, 0.6),
+      rgba(255, 255, 255, 0.6)
+    ),
     url(images/MacBook/macbook-1-desktop.png) center no-repeat;
   z-index: -1;
   opacity: 0;
@@ -554,12 +614,13 @@ html {
   cursor: pointer;
 }
 
-
 .section-4 {
   height: 140vh;
   padding: 20vh 0;
   flex-direction: column;
   position: relative;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
 }
 
 .watches {
@@ -569,7 +630,7 @@ html {
   overflow: hidden;
 }
 
-.watches>div {
+.watches > div {
   position: absolute;
 }
 
@@ -581,6 +642,7 @@ html {
   width: 35rem;
   height: 35rem;
   object-fit: contain;
+  box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
 }
 
 .watch-cases {
@@ -593,7 +655,6 @@ html {
   height: 35rem;
   object-fit: contain;
 }
-
 
 .watch-control {
   position: absolute;
@@ -637,20 +698,25 @@ html {
   transform: translateY(-50%);
 }
 
-
 .watch-btn {
   position: absolute;
   bottom: 30vh;
   right: 80%;
-  width: 10rem;
-  height: 3rem;
+  padding: 1.5rem 5rem;
   background-color: var(--black-color);
   color: var(--primary-color);
-  border: 0.1rem dashed var(--primary-color);
   border-radius: 4rem;
-  font-size: 1.6rem;
-  font-weight: 200;
+  font-size: 1.8rem;
+  font-weight: light;
   cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.2s ease;
+}
+
+.watch-btn:hover {
+  border: 0.5rem solid var(--primary-color);
 }
 
 .section-5 {
@@ -672,7 +738,7 @@ html {
   transform: translateX(-50%);
   font-size: 15rem;
   font-weight: 300;
-  color: var(--white-color);
+  color: #fcf9f9;
   text-shadow: 0.1rem 0.1rem 0 #999;
 }
 
@@ -680,21 +746,20 @@ html {
   width: 50%;
   height: 100%;
   object-fit: contain;
+  box-shadow: rgba(0, 0, 0, 0.09) 0px 3px 12px;
 }
 
 .airpods-img-2 {
   background-color: var(--primary-color);
 }
 
-
 .airpods-buttons {
   position: absolute;
-  top: 50%;
+  top: 80%;
   left: 50%;
   transform: translate(-50%, -50%);
   margin-top: 5rem;
 }
-
 .airpods-btn {
   width: 15rem;
   height: 4rem;
@@ -715,14 +780,22 @@ html {
   width: 100%;
   height: 40vh;
   position: relative;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px,
+    rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
 }
-
 .icon-link {
   margin: 0 5rem;
+ 
 }
 
 .icon-link img {
   width: 10rem;
+  box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+  transition: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.icon-link img:hover{
+transform: scale(1.5);
+box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
 }
 
 .copyright {
@@ -731,7 +804,6 @@ html {
   font-size: 1.5rem;
   letter-spacing: 0.1rem;
 }
-
 
 @media (max-width: 1500px) {
   html {
@@ -816,16 +888,18 @@ html {
   }
 
   .section-1-banner button:hover {
-    clip-path: polygon(50% 0%,
-        81% 5%,
-        100% 0,
-        100% 100%,
-        80% 95%,
-        50% 100%,
-        20% 95%,
-        0 100%,
-        0 0,
-        23% 5%);
+    clip-path: polygon(
+      50% 0%,
+      81% 5%,
+      100% 0,
+      100% 100%,
+      80% 95%,
+      50% 100%,
+      20% 95%,
+      0 100%,
+      0 0,
+      23% 5%
+    );
   }
 
   .iphones {
@@ -938,4 +1012,116 @@ html {
   .icon-link img {
     width: 6rem;
   }
+}
+/*footer*/
+.ac-gf-footer {
+  background-color: #f5f5f5;
+  padding: 40px 0;
+  font-family: Arial, sans-serif;
+}
+
+.ac-gf-footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.ac-gf-footer-callout {
+  flex: 0 0 18%;
+  margin-bottom: 30px;
+}
+
+.ac-gf-footer-callout-title {
+  color: #666666;
+  font-size: 25px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.ac-gf-footer-callout-links {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.ac-gf-footer-callout-links li {
+  font-size: 15px;
+  margin-bottom: 5px;
+}
+
+.ac-gf-footer-callout-links li a {
+  color: #333;
+  text-decoration: none;
+}
+.ac-gf-footer-callout-links li a:hover {
+  color: #000000;
+  cursor: pointer;
+}
+
+.ac-gf-footer-bottom {
+  background-color: #333;
+  padding: 20px 0;
+  color: #fff;
+}
+
+.ac-gf-footer-bottom-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.ac-gf-footer-bottom-left {
+  display: flex;
+  align-items: center;
+}
+
+.ac-gf-footer-bottom-left p {
+  margin: 0;
+}
+
+.ac-gf-footer-bottom-links {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.ac-gf-footer-bottom-links li {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.ac-gf-footer-bottom-links li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.ac-gf-footer-bottom-country {
+  margin-left: 10px;
+}
+
+.ac-gf-footer-bottom-right {
+  text-align: right;
+}
+
+.ac-gf-footer-bottom-icons {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.ac-gf-footer-bottom-icons li {
+  display: inline-block;
+  margin-left: 10px;
+}
+
+.ac-gf-footer-bottom-icons li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 20px;
 }

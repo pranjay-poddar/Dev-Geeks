@@ -22,14 +22,14 @@
 
 <header class="header">
 
-   <a href="#" class="logo"> <i class="fas fa-brain"></i> EDU:ME </a>
+   <a href="./index.html" class="logo"> <i class="fas fa-brain"></i> EDU:ME </a>
 
    <nav class="navbar">
       <div id="close-navbar" class="fas fa-times"></div>
-      <a href="index.html">home</a>
-      <a href="about.html">about</a>
-      <a href="courses.html">courses</a>
-      <a href="contact.html">contact</a>
+      <a href="./index.html">home</a>
+      <a href="./about.html">about</a>
+      <a href="./courses.html">courses</a>
+      <a href="./contact.html">contact</a>
    </nav>
 
    <div class="icons">
@@ -53,7 +53,10 @@
    <form class="login-form active" action="">
       <h3>login now</h3>
       <input type="email" placeholder="enter your email" class="box">
-      <input type="password" placeholder="enter your password" class="box">
+      <input type="password" placeholder="enter your password" class="box" id="confirm-password-inpu">
+      <span class="login-password-toggle-icon" onclick="toggleShowPassword('confirm-password-input', 'showConfirmPasswordIcon')">
+         <i class="fas fa-eye 2x" id="showConfirmPasswordIcon"></i>
+      </span>
       <div class="flex">
          <input type="checkbox" name="" id="remember-me">
          <label for="remember-me">remember me</label>
@@ -65,8 +68,14 @@
    <form class="register-form" action="">
       <h3>register now</h3>
       <input type="email" placeholder="enter your email" class="box">
-      <input type="password" placeholder="enter your password" class="box">
-      <input type="password" placeholder="confirm your password" class="box">
+      <input type="password" placeholder="enter your password" class="box" id="confirm-password-input">
+      <span class="password-toggle-icon" onclick="toggleShowPassword('confirm-password-input', 'showConfirmPasswordIcon')">
+         <i class="fas fa-eye fa-sm" id="showConfirmPasswordIcon"></i>
+      </span>
+      <input type="password" placeholder="confirm your password" class="box" id="password-input">
+      <span class="confirm-password-toggle-icon" onclick="toggleConfirmShowPassword('password-input', 'showPasswordIcon')">
+         <i class="fas fa-eye fa-sm" id="showPasswordIcon"></i>
+      </span>
       <input type="submit" value="register now" class="btn">
    </form>
 
@@ -285,7 +294,7 @@
 
       <div class="box">
          <h3>quick links</h3>
-         <a href="home.html" class="link">home</a>
+         <a href="index.html" class="link">home</a>
          <a href="about.html" class="link">about</a>
          <a href="courses.html" class="link">courses</a>
          <a href="contact.html" class="link">contact</a>
@@ -322,12 +331,46 @@
 
 
 
-
 <!-- swiper js link  -->
 <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
 
 <!-- custom js file link  -->
 <script src="js/script.js"></script>
+
+
+<script>
+   function toggleShowPassword(inputId, iconId) {
+   const input = document.getElementById(inputId);
+   const icon = document.getElementById(iconId);
+
+   if (input.type === "password") {
+      input.type = "text";
+      icon.classList.remove("fa-eye");
+      icon.classList.add("fa-eye-slash");
+   } else {
+      input.type = "password";
+      icon.classList.remove("fa-eye-slash");
+      icon.classList.add("fa-eye");
+   }
+}
+
+
+   function toggleConfirmShowPassword(confirmInputId, confirmIconId) {
+     const confirmInput = document.getElementById(confirmInputId);
+     const confirmIcon = document.getElementById(confirmIconId);
+
+     if (confirmInput.type === "password") {
+       confirmInput.type = "text";
+       confirmIcon.classList.remove("fa-eye");
+       confirmIcon.classList.add("fa-eye-slash");
+     } else {
+       confirmInput.type = "password";
+       confirmIcon.classList.remove("fa-eye-slash");
+       confirmIcon.classList.add("fa-eye");
+     }
+   }
+ </script>
+
 
 </body>
 </html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Intro component with sign up form Solution by 0xabdulkhalid for FrontendMentor.io"/>
+  <meta name="keywords" content="Frontend Mentor, Intro component with sign up form Challenge, 0xabdulkhalid"/>
+  <meta property="og:title" content="Intro component with sign up form - Frontend Mentor" />
+  <meta property="og:description" content="Intro component with sign up form Solution by 0xabdulkhalid for FrontendMentor.io"/>
+  <meta name="theme-color" content="#F59090" />
+  <meta name="msapplication-navbutton-color" content="#F59090" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="#F59090" />
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="./images/favicon-16x16.png" />
+  <link rel="manifest" href="./images/site.webmanifest" />
+  <title>Frontend Mentor | Intro component with sign up form</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+<main class="fade-in-animation">
+    <div class="main__hero-section">
+      <h1 class="main__heading">Learn to code by watching others</h1>
+      <p class="main__description">
+        See how experienced developers solve problems in real-time. Watching scripted tutorials is great,
+        but understanding how developers think is invaluable.
+      </p>
+    </div>
+  
+    <div class="main__form-section">
+      <div class="main__trial-recommendation">
+        <strong>Try it free 7 days</strong> then <span class="main__word-break"></span>
+        $20/mo. thereafter
+      </div>
+      <form class="main__form-container">
+        <label for="first-name">
+          <span class="main__form-label--sr-only">First Name</span>
+          <input type="text" id="first-name" name="first-name" placeholder="First Name"></input>
+          <p class="main__input-error-prompter main__input-error-prompter--disabled">First Name cannot be empty</p>
+        </label>
+        <label for="last-name">
+          <span class="main__form-label--sr-only">Last Name</span>
+          <input type="text" id="last-name" name="last-name" placeholder="Last Name"></input>
+          <p class="main__input-error-prompter main__input-error-prompter--disabled">Last Name cannot be empty</p>
+        </label>
+        <label for="email">
+          <span class="main__form-label--sr-only">Email Address</span>
+          
+          <input type="email" id="email" name="email" placeholder="Email Address" class="main__form-input--border-disabled "></input>
+          <p class="main__input-error-prompter main__input-error-prompter--disabled">Enter a valid email</p>
+        </label>
+        <label for="password">
+          <span class="main__form-label--sr-only">Password</span>
+          
+          <input type="password" id="password" name="password" placeholder="Password"></input>
+          <p class="main__input-error-prompter main__input-error-prompter--disabled">Password must be alphanumeric with minimum 8 charecters</p>
+        </label>
+        <button class="main__submit-btn">Claim your free trial</button>
+
+        <p class="main__form-approval-terms">
+          By clicking the button, you are agreeing to our 
+          <strong class="main__strong--highlighted">Terms and Services</strong>
+        </p>
+
+        <div class="main__form-overlay main__form-overlay--disabled">
+          <img src="./images/checkmark.svg" class="main__form-success-vector" alt="">
+          <p class="main__form-success-prompter">
+            Thank you for claiming your free trial
+          </p>
+        </div>
+      </form>
+    </div>
+</main>
+
+<footer class="attribution">
+  Challenge by
+  <a class="attribution__link" href="https://www.frontendmentor.io/" target="_blank" aria-describedby="Frontend Mentor Website">Frontend Mentor</a>, Coded by
+  <a class="attribution__link" href="https://github.com/0xabdulkhalid" target="_blank" rel="noopener noreferrer" aria-describedby="Abdul khalid's Github profile">0xabdulkhalid</a>
+</footer>
+
+<script src="./main.js" defer></script>
+</body>
+</html>

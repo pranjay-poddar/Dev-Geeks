@@ -1,0 +1,29 @@
+body {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-image: url('https://source.unsplash.com/random/1920x1080/?nature');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  transition: background-image 0.5s ease-in-out;
+}
+
+#quoteContainer {
+  text-align: center;
+  color: #fff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+#quoteText {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+#quoteAuthor {
+  font-size: 16px;
+  font-style: italic;
+}

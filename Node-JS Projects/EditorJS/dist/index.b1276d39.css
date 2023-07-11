@@ -1,0 +1,59 @@
+@import "https://fonts.googleapis.com/css2?family=Montserrat&display=swap";
+body {
+  height: 100%;
+  text-align: center;
+  background-image: url("background.fe40e636.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 3em;
+  font-family: Montserrat, sans-serif;
+}
+
+#editorjs {
+  color: #fff;
+}
+
+.ce-toolbar__plus, .ce-toolbar__settings-btn {
+  color: #fff;
+  background-color: #0c4fb7;
+  transition: all .3s;
+}
+
+.ce-block__content {
+  background: none !important;
+}
+
+.ce-toolbar__plus:hover, .ce-toolbar__settings-btn:hover {
+  color: #0c4fb7;
+  background: none;
+}
+
+.ce-inline-toolbar, .ce-popover {
+  color: #000;
+}
+
+h1 {
+  padding: 1em;
+}
+
+h1 .left {
+  color: #0c4fb7;
+}
+
+h1 .right {
+  color: #ff07ea;
+}
+
+button {
+  color: #fff;
+  text-transform: uppercase;
+  cursor: pointer;
+  background: #ff07ea;
+  border: none;
+  border-radius: 10px;
+  margin-top: 2em;
+  padding: 1em;
+  font-family: Montserrat, sans-serif;
+}
+
+/*# sourceMappingURL=index.b1276d39.css.map */

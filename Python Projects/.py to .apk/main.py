@@ -1,19 +1,39 @@
-# First you have to import the modules using these following codes
+from kivymd.app import MDApp
+from kivymd.uix.label import MDLabel
+from kivymd.uix.button import MDFlatButton
+from kivy.uix.boxlayout import BoxLayout
+from kivy.uix.textinput import TextInput
 
-from kivymd.app import MDApp 
-from kivymd.uix.label import MDLabel #This is for graphics purpose
- 
- # Now you have to create a class and design your app 
-class Main_App(MDApp):
+
+class MainApp(MDApp):
     def build(self):
-        return MDLabel(text="Welcome to Dev-Geeks", halign="center") #Here you can customize your app
- 
-
-#Now run your app
-if __name__ == '__main__':
-    Main_App().run()
+        # Create the main layout
+        layout = BoxLayout(orientation='vertical', spacing=10, padding=10)
+        
+        # Create a label
+        label = MDLabel(text="Welcome to Dev-Geeks", halign="center")
+        
+        # Create a text input
+        text_input = TextInput(hint_text="Enter your name")
+        
+        # Create a button
+        button = MDFlatButton(text="Submit", on_release=self.on_button_release)
+        
+        # Add the widgets to the layout
+        layout.add_widget(label)
+        layout.add_widget(text_input)
+        layout.add_widget(button)
+        
+        return layout
     
-# After run this main.py you can see the created app in a pop-up window 
-# Now follow README.md to create .apk file
+    def on_button_release(self, instance):
+        # Get the text input value
+        name = instance.parent.children[1].text
+        
+        # Display a greeting message
+        greeting = f"Hello, {name}!"
+        instance.parent.children[0].text = greeting
 
-# Thank You
+
+if __name__ == '__main__':
+    MainApp().run()
