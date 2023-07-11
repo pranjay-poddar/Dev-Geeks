@@ -72,12 +72,15 @@ section h1 {
   text-transform: uppercase;
 }
 
+p{
+  text-align: justify;
+}
 section p {
   font-size: 30px;
-
   word-spacing: 2px;
   margin-bottom: 25px;
   text-shadow: 1px 3px 2px #00b894;
+  text-align: center;
 }
 
 section a {
@@ -146,5 +149,9 @@ section .btntwo {
 }
 #myContact a{
   color: white;
+}
+
+.mb-1 {
+  text-align: center;
 }
 
