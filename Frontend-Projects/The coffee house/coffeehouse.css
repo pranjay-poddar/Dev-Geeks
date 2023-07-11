@@ -370,7 +370,7 @@ section {
 .home .content {
   max-width: 60rem;
   text-transform: none;
-  text-align:center;
+  text-align:left;
 }
 
 .home .content h3 {
@@ -381,12 +381,12 @@ section {
 .home .content h4 {
   font-size: 4rem;
   color: #fff;
-  text-align: center;
+  text-align: left;
 }
 .home .content h5 {
   font-size: 4rem;
   color: #fff;
-  text-align: center;
+  text-align: left;
 }
 .home .content p {
   font-size: 2rem;
