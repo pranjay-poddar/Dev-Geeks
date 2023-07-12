@@ -21,7 +21,7 @@ h2 {
 }
 
 .container {
-  border-radius: 5px;
+  border-radius: 1rem;
   width: 30%;
   margin: 6rem 0 2rem;
   /* background-color: rgb(218, 211, 211); */
@@ -31,7 +31,7 @@ h2 {
     rgb(92, 5, 95) 100%
   ); */
   background-color: #AEE2FF;
-  border:5px solid black;
+  border: 5px solid #49216e;
   padding: 4rem 0;
   margin-left: 35%;
   box-shadow:5px 5px 5px #969696;
