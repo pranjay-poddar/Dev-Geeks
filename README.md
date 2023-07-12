@@ -816,6 +816,8 @@ Happy Coding! -->
   <td align="center"><a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Js-Games/Mastermind">Mastermind</a></td>
   <td align="center"> 268.</td>
   <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Js-Games/Web-Image Filter">Web-Image Filter</a></td>
+  <td align="center"> 269.</td>
+  <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Python Projects/Forex Exchanger">Web-Image Filter</a></td>
 
 </tr>  
 
@@ -824,8 +826,13 @@ Happy Coding! -->
 <tr align="center">
 <td align="center"> 256.</td>  
 <td align="center"><a href="https://github.com/Nishitbaria/Dev-Geeks/tree/Test/Frontend-Projects/razorpayClone">   RazorpayClone  </a></td>
+
+<td align="center"> 265.</td>
+<td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Js-Games/Aim training">Aim training</a></td>
+
 <td align="center"> 263.</td>
 <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Js-Games/Alien Shooting">Alien Shooting</a></td>
+
 </tr> 
 
 
