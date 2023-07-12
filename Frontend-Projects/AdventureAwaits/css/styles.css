@@ -217,6 +217,7 @@ input {
   cursor: pointer;
 }
 
+
 .nav__menu {
   position: relative;
 }
@@ -339,6 +340,16 @@ input {
   font-size: 1.2rem;
   width: max-content;
 }
+#facebook :hover{
+ font-size: 2rem;
+}
+#instagram :hover{
+  font-size: 2rem;
+ }
+ #twitter :hover{
+  font-size: 2rem;
+ }
+
 
 .home__info {
   background-color: var(--first-color);
@@ -384,10 +395,12 @@ input {
   padding: 1rem 2rem;
   font-weight: var(--font-semi-bold);
   transition: .3s;
+  
 }
 
 .button:hover {
   background-color: var(--first-color-alt);
+  
 }
 
 .button--flex {
@@ -399,10 +412,13 @@ input {
 .button--link {
   background: none;
   padding: 0;
+  position:relative;
 }
 
 .button--link:hover {
   background: none;
+  transform: translateX(40%) scale(1.2);
+ 
 }
 
 /*=============== ABOUT ===============*/
@@ -722,6 +738,9 @@ input {
   color: var(--title-color);
   margin-right: var(--mb-1-25);
 }
+.footer__social :hover{
+  font-size: 2rem;
+}
 
 .footer__subtitle {
   margin-bottom: var(--mb-1);
@@ -858,6 +877,7 @@ input {
   }
   .nav__link:hover {
     color: var(--white-color);
+    font-size:1.2rem;
   }
   .nav__dark {
     position: initial;
