@@ -1,0 +1,55 @@
+body 
+{
+    text-align: center;
+    background:  linear-gradient(to right, rgb(92, 91, 91), rgb(120, 119, 120), rgb(92, 91, 91));
+}
+
+body h1
+{
+    margin: 3vw;
+    color: white;
+}
+
+.card-grid 
+{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* Adjust the number of columns as needed */
+    grid-gap: 5px;
+    grid-row-gap: 1vw;
+    justify-items: center;
+    text-align: center;
+    align-items: center;
+    margin: 4vw 25vw;
+    perspective: 1000px;
+}
+
+.card 
+{
+    width: 100px;
+    height: 100px;
+    border: 1px solid #999;
+    display: inline-block;
+    margin: 2px;
+    text-align: center;
+    cursor: pointer;
+    background-color: #ffffff;
+    border-radius: 5px;
+}
+
+.card img 
+{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: none;
+}
+
+.btn 
+{
+    border: 3px solid black;
+    border-radius: 5px;
+    padding: 10px;
+    background-color: black;
+    color: white;
+    font-size: 15px;
+}
