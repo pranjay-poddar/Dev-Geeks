@@ -1,0 +1,126 @@
+
+body{
+  background:url("https://i.ibb.co/1XYj1L1/wooden-background-with-white-note-paper-vector-1168223.jpg");
+  /* background-size: cover; */
+    background-repeat: no-repeat;
+    /* height: 100vh;
+    width: 100vh; */
+
+    background-size: 1550px 1400px;
+}
+
+.App {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 100vw;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+  margin: 0;
+  padding: 0;
+}
+
+.addTask{
+  height: 30vh;
+  /* background-color: dodgerblue; */
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.list{
+  height: auto;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding-top: 50px;
+  flex-direction: column;
+}
+
+.task{
+  width: 500px;
+  height: 50px;
+  display: flex;
+  margin: 15px;
+  align-items: center;
+  justify-content: center;
+}
+
+.task button{
+  width: 25px;
+  height: 20px;
+  margin-left: 20px;
+  text-align: center;
+}
+
+.addTask button{
+  width: 100px;
+  height: 37px;
+  background-color: #e9f569;
+  cursor: pointer;
+}
+
+.addTask button:hover{
+  background-color: #d4e157;
+}
+
+
+
+.addTask input{
+  width: 449px;
+  height: 32px;
+}
+
+h1, button{
+  display: inline-block;
+  font-size: 18px;
+}
+
+
+.card{
+  align-items: center;
+  display: flex;
+  font-size: 18px;
+  justify-content: space-between;
+  padding: 1.25rem;
+  word-wrap: break-word;
+  width: 1100px;
+  border: 1px solid rgba(0,0,0,0.125);
+  border-radius: 4px;
+  
+
+}
+
+.donebtn{
+  border:1.5px solid  green;
+  background-color:white;
+  border-radius:5px;
+  margin:5px;
+  width:35px;
+  height:35px;
+  color:green;
+  cursor: pointer;
+}
+.crossbtn{
+  border:1.5px solid  red;
+  background-color:white;
+  border-radius:5px;
+  margin:5px;
+  width:35px;
+  height:35px;
+  color:red;
+  cursor: pointer;
+}
+.donebtn:hover{
+  background-color: green;
+  color: white;
+}
+
+.crossbtn:hover{
+  background-color: red;
+  color: white;
+}
+

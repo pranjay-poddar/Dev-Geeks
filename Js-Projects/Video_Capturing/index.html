@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Logo of the website -->
+    <link rel="shortcut icon"
+        href="https://t3.ftcdn.net/jpg/02/70/09/98/360_F_270099822_9zbx236dHn1hyxYNl9HSOBvpUEpU0eOz.jpg"
+        type="image/x-icon">
+
+    <!-- Title of the website -->
+    <title>Video Capture</title>
+
+    <!-- font awesome stylesheet -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <!-- Main stylesheet -->
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <!-- Camera screen -->
+    <div class="video-container">
+        <video autoplay></video>
+    </div>
+    <!-- Filter suggestions -->
+    <div class="ui-filter filter-6"></div>
+
+    <!-- Filter container -->
+    <div class="filter-container">
+        <div class="filter filter-1"></div>
+        <div class="filter filter-2"></div>
+        <div class="filter filter-3"></div>
+        <div class="filter filter-4"></div>
+        <div class="filter filter-5"></div>
+        <div class="filter filter-6"></div>
+    </div>
+
+    <!-- Set timing box -->
+    <div class="timing-container">
+        <div class="timing">00:00:00</div>
+    </div>
+
+    <!-- Facility for the user to zoom out and in -->
+    <div class="zoom-container">
+        <i class="fas fa-plus icon"></i>
+        <i class="fas fa-minus icon"></i>
+    </div>
+
+    <!-- Record video button -->
+    <div class="button-container">
+        <div class="record"><button id="record-video"></button></div>
+    </div>
+
+    <!-- Main javascript files -->
+    <script src="indexedDBScript.js" defer></script>
+    <script src="script.js" defer></script>
+</body>
+
+</html>

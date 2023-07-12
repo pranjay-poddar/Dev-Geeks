@@ -4,14 +4,18 @@ body {
   background-color: #f7f7f7;
 }
 
+h1 {
+  color: #520652;
+  font-family: system-ui;
+}
+
 .container {
-  background-color: #fff;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
   margin: 0 auto;
-  margin-top: 50px;
+  margin-top: 60px;
   text-align: center;
-  max-width: 600px;
-  border-radius: 5px;
+  max-width: 593px;
+  border-radius: 17px;
   padding: 20px;
 }
 
@@ -28,10 +32,12 @@ form input[type="text"] {
   outline: none;
   font-size: 18px;
   width: 60%;
+  border-radius: 11px;
+  background: #673ab71a;
 }
 
 form input[type="submit"] {
-  background-color: #007bff;
+  background-color: #520652;
   color: #fff;
   border: none;
   padding: 10px 20px;
