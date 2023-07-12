@@ -1,0 +1,39 @@
+{% macro card(video, channel_name, channel_logo) -%}
+
+<a href="https://www.youtube.com/watch?v={{ video[4] }}">
+    <div class="card">
+        <div class="thumbnail">
+            <img src="{{ video[1] }}" alt="" />
+            <img src="{{ video[6] }}" alt="" id = moving_thumbnail onerror="this.style.display='none'"/>
+            
+            {% if video[2] != none %}
+                <span id="duration" >{{ video[2] | minute }}:{{ video[2] | second }}</span>
+            {% elif video[7] == true %}
+                <span id="live" >
+                  <div class="icon"><img src="https://img.icons8.com/external-bearicons-glyph-bearicons/64/FFFFFF/external-Live-social-media-bearicons-glyph-bearicons.png"/></div>
+                  <div class="live_text">LIVE</div>
+                </span>
+            {% elif video[5] == none %}
+                <span id="liveSoon" >UPCOMING</span>
+            {% elif video[2] == none %}
+                <img src="https://i.postimg.cc/y8N5PVX7/download-2.png" alt="" id="shorts_logo" >      
+            {% endif %}
+      
+        </div>
+        <div class="content">
+          <div class="logo">
+            <img
+              src="{{ channel_logo }}"
+              alt=""
+            />
+          </div>
+          <div class="details">
+            <div class="title"><p>{{ video[0] }}</p></div>
+            <span>{{ channel_name }}</span>
+            <span>{{ video[3] | display_views }} views • {{ video[5] }}</span>
+          </div>
+        </div>
+      </div>
+</a>
+
+{%- endmacro %}
