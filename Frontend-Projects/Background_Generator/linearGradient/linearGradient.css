@@ -1,0 +1,53 @@
+body
+{
+    font-family: sans-serif;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.5em;
+    top: 15%;
+    background: linear-gradient(to right, #EECC91, #E66F51);
+    background-size: cover;
+}
+
+h1
+{
+    font: 600 3.5em sans-serif;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.5em;
+    width: 100%;
+}
+
+h3 
+{
+    font: 900 1em sans-serif;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    text-transform: none;
+    letter-spacing: 0.01em;
+}
+
+@media only screen and (max-width: 800px)
+{
+    body
+    {
+        letter-spacing: 0;
+    }
+    h1 
+    {
+        font-size: 30px;
+        font-family: 'Times New Roman', Times, serif;
+    }
+    h2 
+    {
+        font-size: 20px;
+        font-family: 'Times New Roman', Times, serif;
+    }
+    h3 
+    {
+        font-size: 30px;
+        font-family: 'Times New Roman', Times, serif;
+    }
+}
