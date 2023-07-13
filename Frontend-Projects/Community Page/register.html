@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style>
+
+body {
+  background-image: url(https://digitshack.com/codepen/mentor7/bg-desktop.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+  background-color: hsl(257, 40%, 49%);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Add padding to containers */
+.container {
+    margin-left: 200px;
+    margin-right: 200px;
+    
+  padding: 16px;
+  background-color: white;
+}
+.container h1{
+    color:hsl(257, 40%, 49%) ;
+    text-align: center;
+}
+.container p{
+    text-align: center;
+
+}
+.header img {
+    margin-top: 30px;
+  width: 170px;
+  padding-bottom: 20px;
+}
+
+
+/* Full-width input fields */
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Overwrite default styles of hr */
+hr {
+  border: 0.2px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+
+/* Set a style for the submit button */
+.registerbtn {
+ display: inline-block;
+  font-family: "Poppins", sans-serif;
+  color: #f1f1f1;
+  background-color:hsl(257, 40%, 49%) ;
+  padding: 13px 50px;
+  border-radius: 25px;
+  text-decoration: none;
+  box-shadow: 0 8px 17px -8px rgba(0, 0, 0, 0.8);
+  transition: all 0.3s ease;
+  
+}
+
+.registerbtn:hover {
+   
+  background-color: hsl(300, 69%, 71%);
+  color: white;
+}
+  
+
+
+/* Add a blue text color to links */
+a {
+  color: hsl(257, 40%, 49%) ;
+  
+}
+
+/* Set a grey background color and center the text of the "sign in" section */
+.signin {
+  background-color: #f1f1f1;
+  text-align: center;
+}
+</style>
+</head>
+<body>
+    <div class="header">
+        <img src="https://digitshack.com/codepen/mentor7/logo.svg" alt="" srcset="">
+      </div>
+<form action="/action_page.php">
+  <div class="container">
+    <h1>Registration</h1>
+    <p>Please fill in this form to create an account.</p>
+    <hr>
+
+    <label for="email"><b>Email</b></label>
+    <input type="text" placeholder="Enter Email" name="email" id="email" required>
+
+    <label for="psw"><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="psw" id="psw" required>
+
+    <label for="psw-repeat"><b>Repeat Password</b></label>
+    <input type="password" placeholder="Repeat Password" name="psw-repeat" id="psw-repeat" required>
+    <hr>
+    <p>By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p>
+
+    <button type="submit" class="registerbtn" onclick="myFunction()">Register</button>
+  </div>
+  
+  <div class="container signin">
+    <p>Already have an account? <a href="#">Sign in</a>.</p>
+  </div>
+</form>
+<script>
+    function myFunction() {
+      location.replace("community.html")
+    }
+    </script>
+</body>
+</html>
