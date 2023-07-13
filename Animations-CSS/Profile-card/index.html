@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #eccccc;
+    }
+    
+    .profile-card {
+      width: 300px;
+      background-color: #c2d8ec;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      text-align: center;
+      animation: moveIn 2s infinite alternate;
+    }
+    
+    .profile-picture {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      margin: 0 auto 20px;
+      background-color: #ccc;
+      background-image: url('https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80');
+    }
+    
+    .profile-picture img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .profile-name {
+      font-size: 24px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+    
+    .profile-bio p{
+      font-size: 16px;
+      color: #666363;
+      margin-bottom:8px;
+    }
+    
+     
+    .social-links {
+    display: flex;
+    justify-content: center;
+    }
+  
+    .social-link {
+    color: #fff;
+    background-color: #948787;
+    padding: 8px 16px;
+    margin: 0 5px;
+    border-radius: 20px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+    }
+  
+    .social-link:hover {
+    background-color: #dbb7b7;
+    color:black;
+    }
+  
+    /* Animation Keyframes */
+    @keyframes moveIn {
+      0% {
+        transform: translateX(0);
+      }
+      50% {
+        transform: translateX(20px);
+      }
+      100% {
+        transform: translateX(0);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="profile-card">
+    <div class="profile-picture">
+        <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80" alt="Profile Picture">
+
+    </div>      <!-- used the photo from unsplash-->
+    <div class="profile-name">John</div> <!--You can change the name-->
+    <div class="profile-bio">
+        <p>Web Developer</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta laudantium pariatur reprehenderit 
+            saepe nostrum laborum. Facilis iusto, in iure quasi nemo quos dolor vitae. Sequi eveniet optio est 
+            quibusdam debitis.</p>
+    </div>
+    <div class="social-links">
+        <a href="#" class="social-link">Twitter</a>
+        <a href="#" class="social-link">LinkedIn</a>
+        <a href="#" class="social-link">GitHub</a>
+      </div>
+  </div>
+</body>
+</html>
