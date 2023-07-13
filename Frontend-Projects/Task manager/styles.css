@@ -15,16 +15,22 @@ body {
 
 header {
 	padding: 2rem 1rem;
-	max-width: 800px;
-	width: 100%;
-	margin: 0 auto;
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
+    border: 2px solid red;
+    border-radius: 1rem;
+    margin-top: 4rem;
+    background: #ff000005;
 }
 
 header h1{ 
-	font-size: 2.5rem;
-	font-weight: 300;
-	color: rgb(255, 115, 28);
-	margin-bottom: 1rem;
+    font-size: 2.5rem;
+    font-weight: 900;
+    color: rgb(255, 115, 28);
+    margin-bottom: 1rem;
+    text-align: center;
+    font-family: math;
 }
 
 #new-task-form {
