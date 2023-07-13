@@ -418,6 +418,12 @@ header .navbar a:hover {
   flex: 1 1 50rem;
   padding: 1rem;
 }
+.order .row form .inputBox label{
+  font-size: 20px;
+}
+.order .row form label{
+  font-size: 20px;
+}
 
 .order .row form .inputBox {
   display: flex;
@@ -506,6 +512,32 @@ header .navbar a:hover {
 
 .loader-container.fade-out {
   top: -120%;
+}
+
+.to-top {
+  background-color: white;
+  position: fixed;
+  bottom: 16px;
+  right: 16px;
+  width: 40px;
+  height: 40px;
+  border-radius: 10%;
+  border: 2px solid #ff3838;
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: #1f1f1f;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s;
+}
+
+.to-top.active {
+  bottom: 32px;
+  pointer-events: auto;
+  opacity: 1;
 }
 
 /* media queries  */
