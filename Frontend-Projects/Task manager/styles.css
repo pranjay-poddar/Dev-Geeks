@@ -53,13 +53,14 @@ input, button {
 }
 
 #new-task-submit {
-	font-size: 1.25rem;
-	font-weight: 700;
-	background-image: linear-gradient(to right, rgb(134, 249, 255), rgb(0, 43, 128));
-	-webkit-background-clip: text;
-	-webkit-text-fill-color: transparent;
-	cursor: pointer;
-	transition: 0.4s;
+	color: #f4e9d6;
+    font-size: 1.45rem;
+    background: cadetblue;
+    cursor: pointer;
+    transition: 0.4s;
+    border-radius: 1rem;
+    padding: 10px 32px;
+    font-family: math;
 }
 
 #new-task-submit:hover {
