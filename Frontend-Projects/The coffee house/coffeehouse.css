@@ -176,6 +176,7 @@ section {
   color: #fff;
   background: var(--main-color);
   cursor: pointer;
+  border-radius: 10px;
 }
 .btn {
   margin-top: 1rem;
