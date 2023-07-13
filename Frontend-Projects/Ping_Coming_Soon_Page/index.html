@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Ping Coming Soon Page Solution by 0xabdulkhalid for FrontendMentor.io"
+    />
+    <meta
+      name="keywords"
+      content="Frontend Mentor, Ping Coming Soon Page Challenge, 0xabdulkhalid"
+    />
+    <meta
+      property="og:title"
+      content="Ping Coming Soon Page - Frontend Mentor"
+    />
+    <meta
+      property="og:description"
+      content="Ping Coming Soon Page Solution by 0xabdulkhalid for FrontendMentor.io"
+    />
+    <meta name="theme-color" content="#4F7DF3" />
+    <meta name="msapplication-navbutton-color" content="#4F7DF3" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="#4F7DF3" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="https://raw.githubusercontent.com/0xabdulkhalid/ping-coming-soon-page/main/images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+    <title>Ping coming soon page | FrontendMentor</title>
+  </head>
+
+  <body class="fade-in">
+    <main>
+      <wc-toast position="top-right" aria-live="polite"></wc-toast>
+
+      <header>
+        <a href="#" aria-label="Ping homepage" class="main__logo">
+          <img src="https://raw.githubusercontent.com/0xabdulkhalid/ping-coming-soon-page/main/images/logo.svg" alt="" width="86" height="26" />
+        </a>
+      </header>
+
+      <h1 class="main__heading">
+        We are launching <span class="main__heading--highlighted">soon!</span>
+      </h1>
+      <p class="main__description">Subscribe and get notified</p>
+
+      <form class="main__form" novalidate>
+        <input
+          type="email"
+          name="email"
+          id="email"
+          class="main__email"
+          placeholder="Email Address"
+          autocomplete="off"
+          aria-label="email address"
+        />
+        <div
+          id="error-message-container"
+          aria-live="polite"
+          class="main__error-message-container"
+        >
+          <span class="error-message" id="error-message"
+            >Please provide a valid email address</span
+          >
+        </div>
+        <button type="submit" class="submit" id="submit" aria-label="submit">
+          Notify Me
+        </button>
+      </form>
+
+      <picture>
+        <img
+          src="https://raw.githubusercontent.com/0xabdulkhalid/ping-coming-soon-page/main/images/illustration-dashboard.png"
+          alt=""
+          width="1280"
+          height="782"
+        />
+      </picture>
+    </main>
+
+    <footer>
+      <section class="footer__socials-container">
+        <a href="#" aria-label="Ping's Facebook profile">
+          <img src="https://raw.githubusercontent.com/0xabdulkhalid/ping-coming-soon-page/main/images/facebook-f.svg" alt="" width="86" height="26" />
+        </a>
+        <a href="#" aria-label="Ping's Twitter profile">
+          <img src="https://raw.githubusercontent.com/0xabdulkhalid/ping-coming-soon-page/main/images/twitter.svg" alt="" width="86" height="26" />
+        </a>
+        <a href="#" aria-label="Ping's Instagram profile">
+          <img src="https://raw.githubusercontent.com/0xabdulkhalid/ping-coming-soon-page/main/images/instagram.svg" alt="" width="86" height="26" />
+        </a>
+      </section>
+      <section class="footer__copyright">
+        &copy; Copyright Ping. All rights reserved.
+      </section>
+    </footer>
+    <script src="./main.js" defer></script>
+  </body>
+</html>
