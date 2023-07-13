@@ -1,0 +1,78 @@
+{
+  "id": "f7ebaf02-7590-4b8a-b469-0e68e38aec99",
+  "name": "Conversation 3 - 3.vomiting - no",
+  "auto": true,
+  "condition": "",
+  "conditionalFollowupEvents": [],
+  "conditionalResponses": [],
+  "context": [
+    "Conversation3-3vomitting-followup"
+  ],
+  "contexts": [
+    "Conversation3-3vomitting-followup"
+  ],
+  "endInteraction": false,
+  "events": [],
+  "fallbackIntent": false,
+  "liveAgentHandoff": false,
+  "parentId": "62ab6f92-a70c-4921-930a-cb927bda3666",
+  "followUpIntents": [],
+  "priority": 500000,
+  "responses": [
+    {
+      "action": "Conversation3.Conversation3-custom-2.Conversation3-3vomitting-custom-2",
+      "affectedContexts": [],
+      "parameters": [],
+      "defaultResponsePlatforms": {},
+      "messages": [
+        {
+          "type": "message",
+          "condition": "",
+          "speech": [
+            "Kindly take these medicines mentioned here."
+          ]
+        },
+        {
+          "type": "message",
+          "condition": "",
+          "speech": [
+            "1.Emeset Ondansetron Tablets [kindly take only 1 dose with/without food]."
+          ]
+        },
+        {
+          "type": "message",
+          "condition": "",
+          "speech": [
+            "Kindly avoid eating unhealthy food for atleast 1-2 weeks."
+          ]
+        },
+        {
+          "type": "message",
+          "condition": "",
+          "speech": [
+            "If still vomiting doesn't stops then kindly consult your doctor"
+          ]
+        }
+      ],
+      "resetContexts": false
+    }
+  ],
+  "rootParentId": "4ff6d6f4-51ce-40cc-bea4-977e35b5b1e4",
+  "templates": [],
+  "userSays": [
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "2",
+          "userDefined": false
+        }
+      ],
+      "count": 0,
+      "id": "a298c3c2-d8d3-463b-9408-58ad61d29e48",
+      "updated": null
+    }
+  ],
+  "webhookForSlotFilling": false,
+  "webhookUsed": false
+}

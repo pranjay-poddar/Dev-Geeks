@@ -77,7 +77,9 @@ nav ul li{
 .songItemContainer{
     margin-top: 74px;
 }
-
+.songItemContainer :hover{
+    transform :scale(1.1)
+ }
 .songItem{
     height: 50px;
     display: flex;
@@ -94,6 +96,10 @@ nav ul li{
     width: 43px;
     margin: 0 23px;
     border-radius: 34px;
+}
+.songItem :hover{
+    cursor: pointer;
+    transform: scale(1.1);
 }
 
 .timestamp{

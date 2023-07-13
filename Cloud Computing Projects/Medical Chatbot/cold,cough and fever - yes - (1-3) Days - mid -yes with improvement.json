@@ -1,0 +1,67 @@
+{
+  "id": "b71707d4-1ea2-4612-adb9-5a90c1e32318",
+  "name": "cold,cough and fever - yes - (1-3) Days - mid -yes with improvement",
+  "auto": true,
+  "condition": "",
+  "conditionalFollowupEvents": [],
+  "conditionalResponses": [],
+  "context": [
+    "coldcoughandfever-yes-1-3Days-mid-followup"
+  ],
+  "contexts": [
+    "coldcoughandfever-yes-1-3Days-mid-followup"
+  ],
+  "endInteraction": false,
+  "events": [],
+  "fallbackIntent": false,
+  "liveAgentHandoff": false,
+  "parentId": "93d33d51-88e6-4e7b-9fe5-c6f6e59814c1",
+  "followUpIntents": [],
+  "priority": 500000,
+  "responses": [
+    {
+      "action": "Conversation3.Conversation3-custom.Conversation3-1coldcoughandfever-custom.Conversation3-1coldcoughandfever-yes-custom-2.coldcoughandfever-yes-1-3Days-custom.coldcoughandfever-yes-1-3Days-mid-custom",
+      "affectedContexts": [],
+      "parameters": [],
+      "defaultResponsePlatforms": {},
+      "messages": [
+        {
+          "type": "message",
+          "condition": "",
+          "speech": [
+            "Okay then follow up your medicine and consult me after 2 days."
+          ]
+        },
+        {
+          "type": "message",
+          "condition": "",
+          "speech": []
+        },
+        {
+          "type": "message",
+          "condition": "",
+          "speech": []
+        }
+      ],
+      "resetContexts": false
+    }
+  ],
+  "rootParentId": "4ff6d6f4-51ce-40cc-bea4-977e35b5b1e4",
+  "templates": [],
+  "userSays": [
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "1",
+          "userDefined": false
+        }
+      ],
+      "count": 0,
+      "id": "06874d81-223a-4f9c-abb8-c7f6c07676e6",
+      "updated": null
+    }
+  ],
+  "webhookForSlotFilling": false,
+  "webhookUsed": false
+}

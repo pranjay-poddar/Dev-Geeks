@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <title>CARZILLA</title>
+
+    <style>
+         * {box-sizing: border-box}
+        body {font-family: Verdana, sans-serif; margin:0}
+        .mySlides {display: none}
+       img {vertical-align: middle;}
+
+/* Slideshow container */
+.container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
+
+        
+
+    </style>
+</head>
+
+<body>
+     <header>
+       <div class="topnav">
+          
+              <img src="https://lh3.googleusercontent.com/drive-viewer/AFGJ81oZJk-6aC4viiLEnV7gFQJnhQm7mNteqXeOQSEj7ADlkktYnDySqEmFemkkwrLTAt4KScrV_NB1naYAcdDJPx8fhcl0-w=s2560"  style="width: 200px; height: 100px;"/>
+          
+            <a href="index.html">Home</a>
+            <a href="WALLPAPERS.html">Wallpaper</a>
+            <a href="AboutUs.html">About Us</a>
+        </div>
+    </header>
+
+    <div class="container">
+
+        <div class="mySlides fade">
+          <div class="numbertext">1 / 3</div>
+          <img src="https://images.hindustantimes.com/auto/img/2022/12/13/1600x900/mercedes-maybach-s-class-haute-voiture_1670904952118_1670904961800_1670904961800.jpg" style="width:100%">
+          
+        </div>
+        
+        <div class="mySlides fade">
+          <div class="numbertext">2 / 3</div>
+          <img src="https://images.pexels.com/photos/8717426/pexels-photo-8717426.jpeg?cs=srgb&dl=pexels-tnarg-8717426.jpg&fm=jpg" style="width:100%">
+          
+        </div>
+        
+        <div class="mySlides fade">
+          <div class="numbertext">3 / 3</div>
+          <img src="https://pbs.twimg.com/media/CFjS-HtUkAARaJT.jpg:large" style="width:100%">
+          
+        </div>
+
+        
+        <a class="prev" onclick="plusSlides(-1)">❮</a>
+        <a class="next" onclick="plusSlides(1)">❯</a>
+        
+        </div>
+        <br>
+        
+        <div style="text-align:center">
+          <span class="dot" onclick="currentSlide(1)"></span> 
+          <span class="dot" onclick="currentSlide(2)"></span> 
+          <span class="dot" onclick="currentSlide(3)"></span> 
+        </div>
+        
+
+   
+
+        <!--<div
+            style="width: 100%; height: 1000px; background-image: url(upscaledBG.jpg);background-repeat: no-repeat;background-size: 100% ; transform: translateY(-280px);background-attachment: fixed;z-index: -1;">
+
+            <p class="carzi">CARZILLA</p>
+            <p class="quote"><q>LIVE LIFE AT FULL THROTTLE</q></p>
+        </div>
+        </div>
+
+
+
+
+        <div id="slider" class="slider">
+            <ul id="slideWrap">
+                <li><img src="https://images.hindustantimes.com/auto/img/2022/12/13/1600x900/mercedes-maybach-s-class-haute-voiture_1670904952118_1670904961800_1670904961800.jpg"
+                        alt=""></li>
+                <li><img src="https://images.pexels.com/photos/8717426/pexels-photo-8717426.jpeg?cs=srgb&dl=pexels-tnarg-8717426.jpg&fm=jpg"
+                        alt=""></li>
+                <li><img src="https://pbs.twimg.com/media/CFjS-HtUkAARaJT.jpg:large" alt=""></li>
+                <li><img src="https://www.team-bhp.com/forum/attachments/modifications-accessories/987824d1347953903-pics-tastefully-modified-cars-india-dsc00431.jpg"
+                        alt=""></li>
+                <li><img src="https://www.bmw.in/content/dam/bmw/marketIN/bmw_in/all-models/3-series/gl/2023/header-banner.jpg"
+                        alt=""></li>
+                <li><img src="https://www.topgear.com/sites/default/files/2021/12/1%20Cadillac%20Escalade.jpg" alt="">
+                </li>
+                <li><img src="https://www.motortrend.com/uploads/2022/02/2022-Mercedes-Benz-G-Class-AMG-G63-22.jpg"
+                        alt=""></li>
+
+
+
+                <li><img src="https://www.bentleymotors.com/content/dam/bentley/Master/Models/derivative-strategy-/flying-spur/flying-spur-mulliner/Hero%201920x960%20front%203.4%20Flying%20Spur%20Mulliner.jpg/_jcr_content/renditions/original.image_file.1920.960.file/Hero%201920x960%20front%203.4%20Flying%20Spur%20Mulliner.jpg"
+                        alt=""></li>
+                <li><img src="https://images.hindustantimes.com/auto/img/2022/05/03/1600x900/jeep_1651383732846_1651560386041.jpg"
+                        alt=""></li>
+                <li><img src="https://moottori.fi/wp-content/uploads/2022/05/Maybach_GLS600_etuviisto.jpg" alt=""></li>
+                <li><img src="https://images.hindustantimes.com/auto/img/2022/02/01/1600x900/E9pRVeBWEAQ3xP3_1629978357103_1643720914263.jpeg"
+                        alt=""></li>
+                <li><img src="https://m.economictimes.com/thumb/msid-80706019,width-4127,height-2477,resizemode-4,imgsize-1013890/maserati-ghibli-hybrid-1.jpg"
+                        alt=""></li>
+                <li><img src="https://www.topgear.com/sites/default/files/2021/12/1%20Cadillac%20Escalade.jpg" alt="">
+                </li>
+                <li><img src="https://www.motortrend.com/uploads/2022/02/2022-Mercedes-Benz-G-Class-AMG-G63-22.jpg"
+                        alt=""></li>
+            </ul>
+            <a id="prev" href="#">&#8810;</a>
+            <a id="next" href="#">&#8811;</a>
+        </div>
+
+        <div class="hastag">
+            <p class="hashtext">
+                #LIVE LIVE AT FULL THROTTLE
+            </p>
+
+        </div>
+
+
+
+        <div class="allphotos">
+
+
+            <div style="float: left; margin-left: 50px; margin-top: -220px; ">
+
+
+                <div class="gallery">
+                    <a target="_self" href="exhaust.html">
+                        <img src="https://drive.google.com/uc?id=1CAnFL6X-X7A1498EMb5AXM9ulRjoJwHm"
+                            width="1200" height="800">
+                    </a>
+                    <div class="desc">Exhaust Upgrade</div>
+                </div>
+
+                <div class="gallery">
+                    <a target="_self" href="alloys.html">
+                        <img src="https://www.hottracks.in/wp-content/uploads/2021/09/kia-stinger-gt-wheels-tsw-silvano-gloss-black-rims-14-800X572.jpg"
+                            width="1200" height="600">
+                    </a>
+                    <div class="desc">Rims & Alloys</div>
+                </div>
+
+                <div class="gallery">
+                    <a target="_self" href=" ">
+                        <img src="https://media.zigcdn.com/media/content/2012/Jul/in-car-audio-components-25072012-main_560x420.jpg"
+                            width="1200" height="800">
+                    </a>
+                    <div class="desc">Music System Upgrade</div>
+                </div>
+
+                <div class="gallery">
+                    <a target="_self" href="headlamps.html">
+                        <img src="https://www.cartoq.com/wp-content/uploads/2020/06/laser-headlamps.jpg" width="1200"
+                            height="800">
+                    </a>
+                    <div class="desc">laser-headlamps</div>
+                </div>
+            </div>
+            <div style="float: left;margin-left: 50px;">
+                <div class="gallery">
+                    <a target="_self" href=" ">
+                        <img src="https://lirp.cdn-website.com/656eaf13/dms3rep/multi/opt/IMG_6544-640w.jpg"
+                            width="1200" height="800">
+                    </a>
+                    <div class="desc">Paint Protections Films</div>
+                </div>
+
+                <div class="gallery">
+                    <a target="_self" href=" ">
+                        <img src="https://img.freepik.com/premium-photo/removing-dents-car-body-without-painting-pdr_117123-807.jpg"
+                            width="1200" height="600">
+                    </a>
+                    <div class="desc">Denting & Painting</div>
+                </div>
+
+                <div class="gallery">
+                    <a target="_self" href=" ">
+                        <img src="https://i.ytimg.com/vi/_mxIcuJHetA/maxresdefault.jpg" width="1200" height="1200">
+                    </a>
+                    <div class="desc">Body Kits</div>
+                </div>
+
+                <div class="gallery">
+                    <a target="_self" href=" ">
+                        <img src="https://media.istockphoto.com/id/160821689/photo/auto-parts.jpg?s=612x612&w=0&k=20&c=HszbmFYLv7hLnJde45x48aatbxUhW3ozyGThIMEALKM="
+                            width="1200" height="800">
+                    </a>
+                    <div class="desc">Accesories</div>
+                </div>
+            </div>
+
+        </div>
+
+
+
+
+
+        <div class="ourwork">
+            <h2> OUR PROJECTS</h2>
+        </div>
+        <div class="videocontent">
+            <div style="float: left; margin-left: 80px;">
+
+                <div id="video" style="display: inline; margin: 10px; float: left;">
+
+                    <!-- <video width="330" height="280" autoplay muted controls loop class="vid" controls>
+                        <source src="https://drive.google.com/file/d/1RvcGNw3VrAsTi_3YV5P4FtCbA-_6O5oV/view?usp=sharing" type="video/mp4">
+                    </video> -->
+                    <!--<iframe src="https://drive.google.com/file/d/1RvcGNw3VrAsTi_3YV5P4FtCbA-_6O5oV/preview" width="330" height="280"
+                        allow="autoplay"></iframe>
+
+                </div>
+
+
+                <div class="video" style="display: inline; margin: 10px; float: left;">
+
+                    <video width="330" height="280" autoplay muted controls loop class="vid">
+                        <source src="endevour.mp4" type="video/mp4">
+                    </video>
+
+                </div>
+
+
+                <div class="video" style="display: inline; margin: 10px; float: left;">
+
+                    <video width="330" height="280" autoplay muted controls loop class="vid">
+                        <source src="accesorries.mp4" type="video/mp4">
+                    </video>
+
+                </div>
+
+
+                <div class="video" style="display: inline; margin: 10px; float: left;">
+
+                    <video width="330" height="280" autoplay muted controls loop class="vid">
+                        <source src="workshop.mp4" type="video/mp4">
+                    </video>
+
+                </div>
+
+            </div>
+
+
+            <div style="float: left; margin-left: 80px;">
+
+                <div class="video" style="display: inline; margin: 10px; float: left;">
+
+                    <video width="330" height="280" autoplay muted controls loop class="vid">
+                        <source src="ppf.mp4" type="video/mp4">
+                    </video>
+
+                </div>
+
+
+                <div class="video" style="display: inline; margin: 10px; float: left;">
+
+                    <video width="330" height="280" autoplay muted controls loop class="vid">
+                        <source src="scross.mp4" type="video/mp4">
+                    </video>
+
+                </div>
+
+
+                <div class="video" style="display: inline; margin: 10px; float: left;">
+
+                    <video width="330" height="280" autoplay muted controls loop class="vid">
+                        <source src="car girl.mp4" type="video/mp4">
+                    </video>
+
+                </div>
+
+
+                <div class="video" style="display: inline; margin: 10px; float: left;">
+
+                    <video width="330" height="280" autoplay muted controls loop class="vid">
+                        <source src="swift.mp4" type="video/mp4">
+                    </video>
+
+                </div>
+
+            </div>
+
+        </div>
+        <div class="footer">
+            <h3 class="fu">follow us</h3>
+            <a href="https://www.facebook.com/" target="_blank">
+                <i class="fa-brands fa-3x fa-facebook fb"></i>
+            </a>
+            <a href="https://www.instagram.com/" target="_blank">
+                <i class="fa-brands fa-3x fa-instagram insta"></i>
+            </a>
+            <a href="https://www.youtube.com/" target="_blank">
+                <i class="fa-brands fa-3x fa-youtube yt"></i>
+            </a>
+
+            <div class="contactinfo">
+                <h3>contact us</h3>
+                <h3>phone number : <span class="phn">1234567890</span></h3>
+                <h3>address :<span class="add">NEW DELHI, INDIA</span>
+                </h3>
+            </div>
+        </div>-->
+    <script>
+    let slideIndex = 1;
+    showSlides(slideIndex);
+    
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+    
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
+    
+    function showSlides(n) {
+      let i;
+      let slides = document.getElementsByClassName("mySlides");
+      let dots = document.getElementsByClassName("dot");
+      if (n > slides.length) {slideIndex = 1}    
+      if (n < 1) {slideIndex = slides.length}
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+      }
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block";  
+      dots[slideIndex-1].className += " active";
+    }
+    </script>
+
+</body>
+
+
+
+
+
+</html>

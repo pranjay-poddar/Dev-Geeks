@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+body {
+    font-size: 20px;
+    overflow: hidden;
+}
+
+.flex-container {
+    flex-wrap: wrap-reverse;
+    display: flex;
+    justify-content: center;
+    margin: 30px auto;
+    width: 60%;
+    height: 70vh;
+}
+
+.flex-item {
+    background-color: coral;
+    border: 1pt solid black;
+    width: 5px;
+    margin: 0 1px;
+    display: inline-block;
+    transition: 0.1s all ease;
+}
+
+.row {
+    display: grid;
+    grid-template-columns: 1fr 1fr 2fr;
+}
+
+#input {
+    display: flex;
+    padding: 10px;
+    justify-content: space-around;
+}
+
+nav {
+    background: #1b1b1b;
+    box-shadow: 5px 5px 4px #3d3c3c;
+}
+
+nav:after {
+    content: '';
+    clear: both;
+    display: table;
+}
+
+nav .logo {
+    float: left;
+    color: white;
+    font-size: 27px;
+    font-weight: 600;
+    line-height: 70px;
+    padding-left: 60px;
+}
+
+nav .logo span {
+    color: #417474;
+}
+
+nav ul {
+    float: right;
+    margin-right: 40px;
+    list-style: none;
+    position: relative;
+}
+
+nav ul li {
+    display: inline-block;
+    background: #1b1b1b;
+    margin: 0 5px;
+}
+
+nav ul li a {
+    color: white;
+    line-height: 70px;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 8px 15px;
+}
+
+nav ul li a:hover {
+    color: cyan;
+    border-radius: 5px;
+    box-shadow: 0 0 5px #33ffff, 0 0 10px #66ffff;
+}
+
+nav ul ul li a:hover {
+    box-shadow: none;
+}
+
+nav ul ul {
+    position: absolute;
+    top: 90px;
+    border-top: 3px solid cyan;
+    opacity: 0;
+    visibility: hidden;
+    transition: top .3s;
+}
+
+nav ul ul ul {
+    border-top: none;
+}
+
+nav ul li:hover>ul {
+    top: 70px;
+    opacity: 1;
+    visibility: visible;
+}
+
+nav ul ul li {
+    position: relative;
+    margin: 0px;
+    width: 150px;
+    float: none;
+    display: list-item;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+nav ul ul li a {
+    line-height: 50px;
+}
+
+nav ul ul ul li {
+    position: relative;
+    top: -60px;
+    left: 150px;
+}
+
+.icon {
+    display: none;
+}
+
+#informationlist {
+    justify-content: center;
+    width: 1100px;
+}

@@ -1,0 +1,75 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  margin: 50px;
+  padding: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin-top: 0;
+}
+
+h1 {
+  font-size: 40px;
+}
+
+.square {
+  background: #ffffff;
+  border: 1px solid #999;
+  float: left;
+  font-size: 35px;
+  font-weight: bold;
+  line-height: 35px;
+  height: 65px;
+  margin: -1px;
+  padding: 0;
+  text-align: center;
+  width: 65px;
+}
+
+.board-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.board-row {
+  clear: both;
+  content: '';
+  display: table;
+}
+
+.status {
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 20px;
+  font-size: 19px;
+}
+
+.restart-button-container {
+  display: flex;
+  justify-content: center;
+}
+
+.restart-button {
+  margin-top: 10px;
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  padding: 10px 70px;
+  font-size: 16px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+}
+
+.restart-button:hover {
+  background-color: #45a049;
+}

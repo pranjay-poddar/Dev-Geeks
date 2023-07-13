@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+      crossorigin="anonymous"
+    />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&family=Ubuntu:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css" />
+    <title>Work Day Scheduler</title>
+  </head>
+
+  <body>
+    <!-- current time line -->
+<div class="container">
+  <div id="current-time" class="grid-container">
+    <hr id="current-line">
+    <span id="triangle"></span>
+  </div>
+</div>
+    <!-- header -->
+    <header class="container-fluid position-fixed">
+      <div id="header-content" class="container">
+        <div class="grid-container">
+          <h1 id="day-display" class="">THURSDAY</h1>
+          <div id="time-display" class="text-align-right">
+            <h1 id="time-digits" class="d-inline">10:45</h1>
+            <h3 id="time-period" class="d-inline"></h3>
+          </div>
+        </div>
+      </div>
+    </header>
+<!-- timeblocks -->
+<main>
+<div id="timeblocks">
+  <div class="container">
+    <!-- timeblock 9am -->
+    <div class="time-line grid-container">
+      <p class="side-time">9AM</p>
+    </div>
+    <div class="grid-container">
+      <p class="side-time">10AM</p>
+      <div id="9" class="time-block empty" data-value="9">
+      </div>
+    </div>
+    <!-- timeblock 10am -->
+    <div class="grid-container">
+      <p class="side-time">11AM</p>
+      <div id="10" class="time-block empty" data-value="10">
+      </div>
+    </div>
+    <!-- timeblock 11am -->
+    <div class="grid-container">
+      <p class="side-time">12PM</p>
+      <div id="11" class="time-block empty" data-value="11">
+      </div>
+    </div>
+    <!-- timeblock 12pm -->
+    <div class="grid-container">
+      <p class="side-time">1PM</p>
+      <div id="12" class="time-block empty" data-value="12">
+      </div>
+    </div>
+    <!-- timeblock 1pm -->
+    <div class="grid-container">
+      <p class="side-time">2PM</p>
+      <div id="13" class="time-block empty" data-value="13">
+      </div>
+    </div>
+    <!-- timeblock 2pm -->
+    <div class="grid-container">
+      <p class="side-time">3PM</p>
+      <div id="14" class="time-block empty" data-value="14">
+      </div>
+    </div>
+    <!-- timeblock 3pm -->
+    <div class="grid-container">
+      <p class="side-time">4PM</p>
+      <div id="15" class="time-block empty" data-value="15">
+      </div>
+    </div>
+    <!-- timeblock 4pm -->
+    <div class="grid-container">
+      <p class="side-time">5PM</p>
+      <div id="16" class="time-block empty" data-value="16">
+      </div>
+    </div>
+ </div>  <!-- end of container div -->
+</div> <!-- end of timeblock div -->
+
+<!-- timeblock form -->
+<div id="text-form" style="display: none;">
+  <div class="d-flex justify-content-between">
+    <button id="close">X</button>
+    <button type="submit" id="save">SAVE</button>
+  </div>
+  <h3 id="form-time"></h3>
+  <form id="myform">
+    <hr class="line">
+    <input type="text" id="title" name="title" placeholder="Event title"/>
+    <hr class="line">
+    <input type="text" id="description" name="description" placeholder="Event description"/>
+    <hr class="line">
+  </form>
+</div>
+</main>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="javascript.js"></script>
+  </body>
+</html>

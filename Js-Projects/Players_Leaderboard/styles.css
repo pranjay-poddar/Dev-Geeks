@@ -1,0 +1,156 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    text-align: center;
+    font-family: sans-serif;
+    min-height: 100vh;
+    color: #252525;
+    background: #fcfcfc;
+    padding: 3em 0;
+    font-weight: 300;
+    display: grid;
+    justify-content: center;
+} 
+
+main {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 2em;
+}
+
+.main__title {
+    font-size: 1.5rem;
+    width: 80%;
+}
+
+.main__form {
+    display: grid;
+    gap: .6em;
+    justify-items: center;
+}
+
+input {
+    all: unset;
+    padding: .5em .8em;
+    width: 80%;
+    border: 1px solid #E5C9C5;
+    color: #131313;
+    text-align: start;
+}
+
+input:focus {
+    border: 3px solid #ffb1a5;
+}
+
+.main__error-prompter {
+    color: #ff7864;
+    font-weight: 500;
+    font-size: .9rem;
+    display: none;
+}
+
+button:not(.main__form-submit-btn) {
+    all: unset;
+    background: #f7f7f7;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    transition: all .4s ease;
+}
+
+.main__form-submit-btn {
+    all: unset;
+    width: 10em;
+    background: #E5C9C5;
+    padding: .7em 0;
+    transition: all .4s ease;
+}
+
+button:active {
+    transform: scale(.95) translateY(5px);
+    filter: brightness(.9);
+}
+
+.main__scoreboard-wrapper {
+    width: 100%;
+    display: grid;
+    justify-items: center;
+    gap: 1em;
+}
+.main__scoreboard {
+    display: grid;
+    justify-items: center;
+    gap: .3em;
+    width: 90%;
+    background: #E5C9C5;
+    text-transform: uppercase;
+    padding: 1em 0;
+}
+.main__player-name {
+    font-weight: 400;
+}
+.main__time-stamp {
+    color: #686868;
+    font-size: .8rem;
+}
+.main__scoreboard-btn-container {
+    margin: 1em;
+    display: flex;
+    gap: .5em;
+}
+
+.attribution {
+    border-top: 1px solid #aaa;
+    width: 100%;
+    text-align: center;
+    margin-top: 1em;
+    padding: 1em 0;
+    font-size: .75rem;
+    position: fixed;
+    bottom: 0;
+    background: rgba(255,255,255,.2);
+    backdrop-filter: blur(5px);
+    transition: .5s ease;
+    z-index: 2;
+}
+
+.attribution, a {
+    color: #232323;
+}
+
+@media (min-width: 35.25em){    /*  FOR DESKTOPS  */
+
+    .main__title {
+        font-size: 2.3rem;
+        font-weight: 300;
+        font-variant: small-caps;
+    }
+    .main__form {
+        display: flex;
+    }
+    .main__scoreboard {
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+    input { 
+        width: 10em; 
+    }
+    .attribution {
+        font-size: 1rem;
+    }
+
+    .attribution:hover {
+        background: rgba(0,0,0,.5);
+        color: #ddd;
+    }
+
+    .attribution:hover a {
+        color: #f7f7f7;
+    }
+}
