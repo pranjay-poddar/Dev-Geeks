@@ -1,31 +1,32 @@
-function searchProjects() {
-  // Get the input element and the search query
-  var input = document.getElementById("searchInput");
-  var query = input.value.toLowerCase();
+// =============SEARCH BAR IMPLEMENTATION===============
+document.querySelector("#projectContainer").style.display = "none";
+search = () => {
+  let searchquery = document.querySelector("#searchInput").value ;
+  searchquery = searchquery.toLowerCase();
 
-  console.log( query );
-
-  // Get the container where the projects will be displayed
-  var container = document.getElementById("projectContainer");
-  container.innerHTML = ""; // Clear the container
-
-  // Filter the projects based on the search query
-  var filteredProjects = projects.filter(function (project) {
-    return project.name.toLowerCase().includes(query);
+  let results;
+  projects.forEach( searchIn = (element) => {
+    // console.log( element.title.toLowerCase())
+    if (element.title.toLowerCase() == searchquery )  {
+      results = element ;
+    } 
   });
 
-  // Display the filtered projects in the container
-  filteredProjects.forEach(function (project) {
-    var projectElement = document.createElement("div");
-    projectElement.innerHTML = project.name;
-    container.appendChild(projectElement);
-  });
+  // console.log( typeof results) ;
+  searchResult( results ) ; 
 }
+searchResult = (results) => {
 
-document.getElementById("seachForm").addEventListener("submit", function (event) {
-  event.preventDefault(); // Prevent form submission
-  searchProjects();
-});
+  const searchResults = document.querySelector( "#projectContainer") ;
+
+  console.log( results ) ;
+
+  document.querySelector("#projectContainer").style.display = "block";
+
+  searchResults.innerHTML = `<span>Description:&nbsp;${results.description}</span><br><span>GitHub Link:&nbsp;<a href="${results.githublink}">GitHub Link</a></span><br><span>Projects Link:&nbsp;<a href="${results.projectlink}">Project Link</a></span><br>` ;
+
+
+}
 
 // =====================================================
 
