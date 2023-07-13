@@ -82,3 +82,12 @@ table {
   width: 30px;
   height: 30px;
 }
+
+button#clear-button:hover {
+  background: black;
+  color: purple;
+}
+button#solve-button:hover {
+  background: black;
+  color: wheat;
+}
