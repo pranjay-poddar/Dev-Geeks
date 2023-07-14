@@ -1,0 +1,221 @@
+<div data-scope="newsletters">
+
+	<div data---="layout2__null__parent:.ui-layout2-section" class="invisible">
+
+		<section data-type="top2" data-size="44">
+			<div class="header">
+				<label><i class="far fa-envelope-o"></i>@(List of newsletters)</label>
+				<nav data-bind="?.checked__enabled .S:value && value.length">
+					<button class="exec" data-exec="?/create"><i class="fa fa-plus-circle"></i>@(Create)</button>
+					<button class="exec" data-exec="?/options"><i class="fa fa-wrench"></i>@(Options)</button>
+					<button class="exec S" data-exec="?/checked" disabled><i class="fa fa-check-circle"></i>@(Checked)</button>
+				</nav>
+			</div>
+		</section>
+
+		<section data-type="right" data-size="250,250,200,0">
+
+			<div class="hidden padding bg-yellow mb10" style="padding-bottom:15px" data-bind="?.state.sending__show">
+				<div class="help"><i class="fa fa-spin fa-spinner color"></i>@(CMS is sending a newsletter:)</div>
+				<div data---="progress__?.state.percentage" class="mt5"></div>
+			</div>
+
+			<div class="padding">
+				<div class="caption"><i class="fa fa-code"></i>@(Templates)</div>
+				<nav class="links">
+					<div data-bind="common.dependencies.templatesnewsletters__template">
+						<script type="text/html">
+							{{ foreach m in value }}
+								<button data-id="{{ m.id }}" class="exec" data-exec="?/template"><span class="pull-right exec" data-exec="?/removetemplate" data-prevent="true" style="width:12px;margin-right:0"><i class="fa fa-times red"></i></span><i class="far fa-file-text-o"></i>{{ m.name }}</button>
+							{{ end }}
+						</script>
+					</div>
+					<button class="exec b" data-exec="?/template"><i class="fa fa-check-circle green"></i>@(Add a new template)</button>
+				</nav>
+			</div>
+		</section>
+
+		<section data-type="main">
+			<div data---="datagrid__?.grid__filterlabel:@(Search);checked:?.checked;button:?/button;noborder:1;height:window;margin:45;exec:?/refresh;dblclick:?/update">
+				<script type="text/plain">
+				[
+					{ name: 'name', text: '@(Name)', width: 350, template: '{{ if issending }}<i class="fa fa-spinner fa-spin mr5 color"></i>{{ fi }}{{ if issent }}<span class="badge badge-green badge b mr5">@(SENT)</span>{{ fi }}{{ name }}' },
+					{ name: 'count', text: '@(Subscribers)', align: 2, width: 150, template: '{{ count }}x<i class="fa fa-envelope-o ml5"></i>' },
+					{ name: 'dtsent', text: '@(Sent)', format: '[date]', width: 150, sort: false, align: 1 },
+					{ name: 'dtupdated', text: '@(Updated)', format: '[date]', width: 150, align: 1 },
+					{ name: 'dtcreated', text: '@(Created)', format: '[date]', width: 150, align: 1, hide: true },
+					{ name: '@(Options)', align: 1, filter: false, sort: false, width: 120, template: '<div class="inline"><button title="@(Duplicate)" name="duplicate"><i class="far fa-copy"></i></button><button name="update" title="@(Edit)"><i class="fa fa-pencil"></i></button><button class="btn-remove" name="remove" title="@(Remove)"><i class="far fa-trash-o"></i></button></div>' }
+				]
+				</script>
+			</div>
+
+		</section>
+	</div>
+
+</div>
+
+<div data---="importer__common.form__if:newslettersform;url:@{#}/_newsletters/form.html"></div>
+
+<script>
+	PLUGIN('newsletters', function(exports) {
+
+		exports.refresh = function(type, filter, sort, page) {
+
+			FUNC.loading(true);
+
+			if (!filter)
+				filter = {};
+
+			if (!filter.limit)
+				filter.limit = 100;
+
+			filter.page = page || 1;
+
+			if (sort && sort.length)
+				filter.sort = sort.join(',');
+			else
+				delete filter.sort;
+
+			AJAX('GET [url]api/newsletters/', filter, function(response) {
+				SET('?.grid', response);
+				FUNC.loading(false, 200);
+			});
+		};
+
+		exports.template = function(el) {
+			var id = el.attrd('id');
+			if (id) {
+				AJAX('GET [url]api/templates/' + id, function(response) {
+					SETR('pagestemplate', response);
+					SET('common.form', 'pagestemplate');
+				});
+			} else {
+				SETR('pagestemplate', { type: 'newsletter' });
+				SET('common.form', 'pagestemplate');
+			}
+		};
+
+		exports.update = function(row) {
+			exports.button('update', row);
+		};
+
+		exports.state = function() {
+			exports.scope();
+			AJAX('GET [url]api/newsletters/state/', function(response) {
+
+				if (response.percentage > 100)
+					response.percentage = 100;
+
+				if (response.sending) {
+					!exports.removed && setTimeout(exports.state, 15000);
+				} else {
+					var tmp = GET('?.state');
+					tmp && tmp.sending && exports.refresh();
+				}
+
+				SET('common.progress', response.percentage);
+				SET('?.state', response);
+			});
+		};
+
+		exports.reload = function() {
+			exports.refresh();
+			exports.state();
+		};
+
+		exports.button = function(name, row, grid) {
+			switch (name) {
+				case 'remove':
+					SETTER('approve/show', '@(Are you sure you want to remove selected newsletter?)', '"trash" @(Remove)', function() {
+						FUNC.loading(true);
+						AJAX('DELETE [url]api/newsletters/' + row.id, function(response) {
+							FUNC.loading(false, 1000);
+							if (response.success) {
+								SETTER('snackbar/success', '@(Newsletter has been removed successfully.)');
+								exports.refresh();
+							}
+						});
+					});
+					break;
+				case 'update':
+				case 'duplicate':
+					FUNC.loading(true);
+					AJAX('GET [url]api/newsletters/' + row.id, function(response) {
+
+						if (name === 'duplicate') {
+							response.id = '';
+							response.count = 0;
+							response.send = false;
+							response.issent = false;
+						}
+
+						SET('cmseditor.template', response.template);
+						SETR('newslettersform', response);
+						SET('common.form', 'newslettersform');
+					});
+					break;
+			}
+		};
+
+		exports.checkbox = function(el, grid) {
+			el && !el.value && grid.checked(el.checked);
+			var count = grid.checked().length;
+			toolbar.btnChecked.prop('disabled', count === 0);
+		};
+
+		exports.checked = function(el) {
+			var options = {};
+			options.element = el;
+			options.align = 'right';
+			options.items = [];
+			options.items.push({ id: 'remove', name: '@(Remove newsletters)', icon: 'trash red' });
+
+			options.callback = function(item) {
+				switch (item.id) {
+					case 'remove':
+						SETTER('approve/show', '@(Are you sure you want to remove all selected newsletters?)', '"trash" @(Remove)', function() {
+							FUNC.loading(true);
+							newsletters.checked.wait(function(el, next, index) {
+								SET('common.progress', (index / arr.length) * 100);
+								AJAX('DELETE [url]api/newsletters/' + el.id, next);
+							}, function() {
+								NULL('?.grid');
+								FUNC.loading(false, 1000);
+								SETTER('snackbar/success', '@(Newsletters have been removed successfully.)');
+							});
+						});
+						break;
+				}
+			};
+
+			SETTER('menu/show', options);
+		};
+
+		exports.options = function(el) {
+			var options = {};
+			options.align = 'right';
+			options.element = el;
+			options.items = [];
+			options.items.push({ id: 'refresh', name: '@(Refresh)', icon: 'refresh' });
+			options.items.push({ id: 'create', name: '@(Create newsletter)', icon: 'plus-circle green' });
+
+			options.callback = function(item) {
+				switch (item.id) {
+					case 'refresh':
+					case 'create':
+						exports[item.id]();
+						break;
+				}
+			};
+
+			SETTER('menu/show', options);
+		};
+
+		exports.create = function() {
+			SETR('newslettersform', { widgets: [], limit: 1500 });
+			SET('common.form', 'newslettersform');
+		};
+
+	});
+
+</script>

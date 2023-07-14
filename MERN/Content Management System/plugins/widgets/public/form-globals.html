@@ -1,0 +1,67 @@
+<div data---="form__common.form__if:widgetsglobals;width:800;reload:widgetsglobals/reload;submit:widgetsglobals/submit;icon:clone;title:@(Edit global style and script)" class="hidden">
+
+	<div class="padding bg-smoke" style="padding-bottom:5px">
+		<p class="nmt nmb">@(Globals variables can contain preddefined values for styles and main script. Styles support auto-vendor-prefixes and variable declaration like in SASS. All content will be minified into the single file of CSS and JS.)</p>
+		<ul data---="tabmenu__widgets.formglobalstab__null__'css'" class="tabmenu tabmenu-bordered">
+			<li data-value="css"><i class="fa fa-paint-brush"></i>@(Style)</li>
+			<li data-value="js"><i class="fa fa-code"></i>@(Script)</li>
+		</ul>
+	</div>
+
+	<div class="padding" data-bind="widgets.formglobalstab__show:value==='css'__exec:widgetsglobals/redraw">
+		<div data---="codemirror__widgets.formglobals.css__height:300;type:css;tabs:true;trim:true">@(Global CSS)</div>
+		<div class="row fs12 mt10">
+			<div class="col-xs-6">
+				<span class="link exec" data-exec="widgetsglobals/upload"><i class="fa fa-folder-o mr5"></i>@(Browse files)</span>
+			</div>
+		</div>
+	</div>
+	<div class="padding" data-bind="widgets.formglobalstab__show:value==='js'__exec:widgetsglobals/redraw">
+		<div data---="codemirror__widgets.formglobals.js__height:300;type:javascript;tabs:true;trim:true" class="m">@(Global JavaScript)</div>
+	</div>
+	<div data---="error__widgets.formglobals.response"></div>
+
+	<nav data---="validation__widgets.formglobals">
+		<button name="submit"><i class="fa fa-check-circle"></i>@(SAVE)</button>
+		<button name="cancel">@(Cancel)</button>
+	</nav>
+
+</div>
+
+<script>
+
+	PLUGIN('widgetsglobals', function(exports) {
+
+		exports.redraw = function() {
+			setTimeout2(exports.name, function() {
+				SETTER('codemirror/reload');
+			}, 500);
+		};
+
+		exports.reload = function() {
+			AJAX('GET [url]api/widgets/globals/', function(response) {
+				SET('widgets.formglobals', response, true);
+				FUNC.loading(false, 1000);
+			});
+		};
+
+		exports.submit = function() {
+			FUNC.loading(true);
+			AJAX('POST [url]api/widgets/globals/', GETR('widgets.formglobals'), function(response) {
+				FUNC.loading(false, 1000);
+				if (response.success) {
+					SETTER('snackbar/success', '@(Globals variables have been saved successfully.)');
+					SET('common.form', '');
+				}
+			});
+		};
+
+		exports.upload = function() {
+			refresh_filebrowser(function(file) {
+				SETTER('.widgets.formglobals.css/insert', file);
+			});
+		};
+
+	});
+
+</script>

@@ -1,0 +1,1744 @@
+<script type="text/html" id="cmseditortoolbar">
+	<div class="cmseditor-help">
+		<nav><i class="fa fa-desktop"></i> <span class="exec link" data-exec="cmseditor.instance.setDevice" data-device="lg">@(Device width)</span><span class="exec link" data-exec="cmseditor.instance.setDevice" data-device="md">@(Medium)</span><span class="exec link" data-exec="cmseditor.instance.setDevice" data-device="sm">@(Tablet)</span><span class="exec link" data-exec="cmseditor.instance.setDevice" data-device="xs">@(Mobile)</span><span class="exec link red hidden cmsundo" data-exec="cmseditor.instance.undo" data-bind="cmseditor.history__show:value&&value.length"><i class="fa fa-undo"></i>@(Undo removed)</span></nav>
+		<div class="hidden-xs cmseditorsourcecode"><b>@(Formatting:)</b> @(bold) (&#8984+B), @(italic) (&#8984+I), @(underline) (&#8984+U), @(non-breaking space) (&#8984+Spacebar), @(link) (&#8984+L), @(icon) (&#8984+P). <span data-exec="cmseditor.instance.sourcecode" class="exec link black ml5"><i class="fa fa-code mr5"></i>@(Show Source-Code)</span></div>
+	</div>
+</script>
+
+<div data---="importer__cmseditor.form__if:sourcecode;url:@{#}/_pages/form-cmseditor-sourcecode.html"></div>
+<div data---="importer__cmseditor.form__if:link;url:@{#}/_pages/form-cmseditor-link.html"></div>
+<div data---="importer__cmseditor.form__if:attribute;url:@{#}/_pages/form-cmseditor-attribute.html"></div>
+<div data---="importer__cmseditor.form__if:picture;url:@{#}/_pages/form-cmseditor-picture.html"></div>
+<div data---="importer__cmseditor.form__if:widgets;url:@{#}/_pages/form-cmseditor-widgets.html"></div>
+<div data---="importer__cmseditor.form__if:styles;url:@{#}/_pages/form-cmseditor-styles.html"></div>
+<div data---="importer__cmseditor.form__if:settings;url:@{#}/_pages/form-cmseditor-settings.html"></div>
+<div data---="importer__cmseditor.form__if:part;url:@{#}/_pages/form-cmseditor-part.html"></div>
+<div data---="importer__cmseditor.form__if:inject;url:@{#}/_pages/form-cmseditor-inject.html"></div>
+<div data---="importer__common.form2__if:tracking;url:@{#}/_pages/form-cmseditor-tracking.html"></div>
+
+<input type="file" class="hidden" id="cmseditor_inlineupload" accept="image/*" />
+
+<script>
+
+	// A shared info about CMS editor
+	MAKE('cmseditor', function(obj) {
+		// Current form
+		obj.form = '';
+		obj.filebrowser = {};
+		obj.history = [];
+		obj.link = {};
+		obj.attribute = {};
+		obj.crop = {};
+		obj.widget = {};
+		obj.settings = {};
+		obj.html = {};
+		obj.instance = null;
+		obj.widgets = []; // Contains all widgets
+		obj.wrap = null; // Helper for wrapped element
+		obj.wrap_widgets = null;
+		obj.widgetsettings = {}; // Temporary object for storing of widget settings
+		obj.widgetcachereset = false;
+		obj.cmseditorbackup = document.createElement('DIV');
+	});
+
+	setTimeout(function() {
+		$('#cmseditor_inlineupload').on('change', function(e) {
+			SETTER('loading/show');
+			var data = new FormData();
+			var files = e.target.files;
+			data.append('file0', files[0]);
+			this.value = '';
+			UPLOAD('POST [url]api/upload/', data, function(response, err) {
+
+				SETTER('loading/hide', 100);
+
+				if (err) {
+					SETTER('snackbar/warning', '@(Upload error:) ' + err.toString());
+					return;
+				}
+
+				var instance = cmseditor.instance;
+				if (response && response.length) {
+					instance.getTarget().attr('src', '/download/' + response[0]);
+					instance.change(true);
+				}
+
+				instance.autoresize();
+			});
+		});
+	}, 1000);
+
+	// CMS EDITOR
+	COMPONENT('cmseditor', function(self, config) {
+
+		var target, iframe, container, width;
+		var offsetter = '<span id="cmseditorheight"></span><scr' + 'ipt>window.parent.cmseditor_iframeloaded()</sc' + 'ript>';
+		var locked = false;
+
+		self.readonly();
+		self.nocompile();
+
+		self.released = function(is) {
+			is && iframe.attr('src', 'about:blank');
+		};
+
+		self.make = function() {
+
+			var el = $('#cmseditortoolbar');
+			var toolbar = el.html();
+			el.remove();
+
+			if ((/win/i).test(navigator.platform))
+				toolbar = toolbar.replace(/\&\#8984/g, 'CTRL');
+
+			self.html(toolbar + '<div class="cmseditorcontainer" style="margin:0 auto"><iframe src="about:blank"></iframe></div>');
+			iframe = self.find('iframe');
+			container = self.find('.cmseditorcontainer');
+
+			COMPILE(self.find('.cmsundo'));
+		};
+
+		self.autoresize = function() {
+			setTimeout(function() {
+				self.resize(true);
+			}, 500);
+			setTimeout(function() {
+				self.resize(false);
+			}, 1500);
+			return self;
+		};
+
+		self.editPart = function() {
+			var el = target.hclass('CMS_widget') ? target : self.getParent('CMS_widget');
+			cmseditor.part = {};
+			cmseditor.part.target = el;
+			cmseditor.part.name = el.attrd('cms-part');
+			cmseditor.part.isnew = !el.hclass('CMS_part');
+			cmseditor.part.id = el.attrd('cms-id');
+			UPDATE('cmseditor.part', true);
+			SET('cmseditor.form', 'part');
+		};
+
+		self.editCSS = function() {
+			SET('cmseditor.styles', cmseditor.css, true);
+			SET('cmseditor.form', 'styles');
+		};
+
+		self.setCSS = function() {
+
+			var doc = cmseditor.instance.getWindow().document;
+			var style = doc.getElementById('pagecustomcss');
+
+			style && style.parentNode.removeChild(style);
+
+			if (!cmseditor.css)
+				return;
+
+			AJAX('POST [url]/api/pages/css/', { css: cmseditor.css }, function(value) {
+				style = doc.createElement('style');
+				style.id = 'pagecustomcss';
+				style.type = 'text/css';
+				if (style.styleSheet)
+					style.styleSheet.cssText = value;
+				else
+					style.appendChild(document.createTextNode(value));
+				(doc.head || doc.getElementsByTagName('head')[0]).appendChild(style);
+			});
+		};
+
+		self.setWidgetOptions = function(arr) {
+			cmseditor.widgetsettings = {};
+			for (var i = 0, length = arr.length; i < length; i++) {
+				var item = arr[i];
+				cmseditor.widgetsettings[item.id] = item.options;
+			}
+		};
+
+		self.configure = function(key, value, init, prev) {
+			switch (key) {
+				case 'device':
+					if (value !== prev) {
+						container.css({ width: value === 'md' ? '1140px' : value === 'sm' ? '960px' : value === 'xs' ? '400px' : 'auto' });
+						init && self.resize();
+					}
+					break;
+				case 'template':
+					cmseditor.template = value;
+					break;
+			}
+		};
+
+		self.setDevice = function(el) {
+			self.reconfigure('device:' + el.attrd('device'));
+			return self.resize();
+		};
+
+		self.lock = function(is) {
+			locked = is;
+			$('.cmseditorsourcecode').tclass('hidden', is);
+		};
+
+		self.save = function(callback, type) {
+			var w = self.getWindow();
+			w.$cmseditor_save && w.$cmseditor_save(type);
+			w.EMIT && w.EMIT('cmseditor.save', type);
+			setTimeout(callback, 1000);
+			FUNC.loading(false, 1500);
+		};
+
+		self.filebrowser = function(target, type) {
+			refresh_filebrowser(target, type);
+		};
+
+		self.write = function(content) {
+
+			var frm = iframe[0].contentWindow;
+			if (!frm)
+				return;
+
+			var doc = frm.document;
+
+			doc.open('text/html', 'replace');
+
+			if (!content) {
+				doc.write('<html><head></head><body style="color:gray;text-align:center;padding:140px 0 0;margin:0;font-family:Arial;font-size:11px;color:#ADADAD;line-height:16px">@(<b>WITHOUT CONTENT</b><br />Choose the template for content editing.)</body></html>');
+				doc.close();
+				iframe.css({ height: 'auto' });
+				setTimeout(function() {
+					M.components.findItem('name', 'autocomplete') && SETTER('autocomplete/resize');
+				}, 500);
+				return;
+			}
+
+			W.cmseditor_iframeloaded = self.setEvents;
+
+			doc.write(content.replace('</body>', offsetter + '</body>'));
+			doc.close();
+			frm.$cmseditor = true;
+			iframe.css({ height: 'auto' });
+
+			setTimeout(function() {
+				self.resize(10);
+			}, 500);
+
+			setTimeout(function() {
+				self.resize();
+			}, 3000);
+
+			setTimeout(function() {
+				self.resize();
+			}, 6000);
+
+			setTimeout(function() {
+				self.resize();
+			}, 10000);
+		};
+
+		self.getToolbar = function() {
+			return self.doFind('#CMS_panel');
+		};
+
+		self.getContents = function() {
+			return iframe.contents();
+		};
+
+		self.doFind = function(selector) {
+			return iframe.contents().find(selector);
+		};
+
+		self.getDocument = function() {
+			return this.getWindow().document;
+		};
+
+		self.getWindow = function() {
+			return iframe[0].contentWindow;
+		};
+
+		self.getTarget = function() {
+			return target;
+		};
+
+		self.setTarget = function(val) {
+			target = val;
+			return self;
+		};
+
+		self.getParent = function(cls, max) {
+
+			if (!target)
+				return null;
+
+			if (target.hclass(cls))
+				return target;
+
+			var parent = target.parent();
+			if (!max)
+				max = 20;
+
+			for (var i = 0; i < max; i++) {
+				if (parent.hclass(cls))
+					return parent;
+				parent = parent.parent();
+			}
+
+			return null;
+		};
+
+		self.getContainer = function(max) {
+			if (target.hclass('CMS_widget') || target.hclass('CMS_widgets'))
+				return target;
+			var parent = target.parent();
+			for (var i = 0; i < max; i++) {
+				if (parent.hclass('CMS_widget') || parent.hclass('CMS_widgets'))
+					return parent;
+				parent = parent.parent();
+			}
+			return null;
+		};
+
+		self.getParentElement = function(name) {
+			if (target[0].nodeName === name)
+				return target;
+			var parent = target.parent();
+			for (var i = 0; i < 20; i++) {
+				var el = parent[0];
+				if (!el)
+					break;
+				if (el.nodeName === name)
+					return parent;
+				parent = parent.parent();
+			}
+			return null;
+		};
+
+		self.state = function(type, who) {
+			who === 2 && self.resize(true);
+		};
+
+		self.getWidgets = function() {
+			var widgets = [];
+			var unique = {};
+
+			self.doFind('.CMS_widget').each(function() {
+				var el = $(this);
+				var id = el.attrd('cms-id');
+				var idwidget = el.attrd('cms-widget');
+				if (idwidget.substring(0, 4) !== '0000') {
+					unique[idwidget] = true;
+					var config = PARSE(el.attrd('cms-config') || '') || cmseditor.widgetsettings[id] || {};
+					widgets.push({ id: id, idwidget: idwidget, options: config });
+				}
+			});
+
+			return { settings: widgets, widgets: Object.keys(unique) };
+		};
+
+		self.clearParts = function() {
+			self.doFind('.CMS_part').each(function() {
+				var el = $(this);
+				el.rattr('data-cms-part').rclass('CMS_part');
+			});
+		};
+
+		self.getParts = function() {
+
+			var parts = [];
+
+			self.doFind('.CMS_part').each(function() {
+
+				var el = $(this);
+				var widgets = [];
+
+				var idwidget = el.attrd('cms-widget');
+				if (idwidget) {
+					var id = el.attrd('cms-id');
+					widgets.push({ id: id, idwidget: idwidget, options: cmseditor.widgetsettings[id] || {} });
+				}
+
+				el.find('.CMS_widget').each(function() {
+					var el = $(this);
+					var id = el.attrd('cms-id');
+					var idwidget = el.attrd('cms-widget');
+					var config = PARSE(el.attrd('cms-config') || '') || cmseditor.widgetsettings[id] || {};
+					id && idwidget && widgets.push({ id: id, idwidget: idwidget, options: config });
+				});
+
+				parts.push({ id: el.attrd('cms-id'), name: el.attrd('cms-part'), widgets: widgets, body: el[0].outerHTML, category: el.attrd('cms-category') });
+			});
+
+			return parts;
+		};
+
+		self.getSummary = function() {
+			var el = self.doFind('.CMS_summary');
+			return el.length ? el.html().replace(/<\/?[^>]+(>|$)/g, '') : '';
+		};
+
+		self.replace = function(html) {
+
+			var target = self.getTarget();
+
+			self.getToolbar().hide();
+
+			if (target) {
+				self.endedit();
+				target.rattr('contentEditable');
+				target.rclass('CMS_selected');
+				target = null;
+			}
+
+			self.doFind('#CMS').html(html);
+			self.change(true);
+			self.load('sourcecode');
+			self.autoresize();
+		};
+
+		self.getKeywords = function() {
+
+			var text = '';
+
+			self.doFind('.CMS_search').each(function(index) {
+				text += ' ' + this.innerText;
+			});
+
+			!text && self.doFind('.CMS_edit').each(function(index) {
+				text += ' ' + this.innerText;
+			});
+
+			return find_keywords(text);
+		};
+
+		self.endedit = function() {
+
+			if (!target.length)
+				return;
+
+			var node = target[0];
+			var tag = target[0].tagName;
+			var a = node;
+			var is = false;
+
+			for (var i = 0; i < 4; i++) {
+				if (a.tagName === 'A') {
+					is = true;
+					break;
+				} else {
+					a = a.parentNode;
+					if (!a)
+						return;
+				}
+			}
+
+			if (!is || (a && a.$cmsskipupdate))
+				return;
+
+			a = $(a);
+
+			var content = target.text().replace(/\s/g, '');
+			var href = a.attr('href');
+			var ismail = /[#|@|\:]/;
+			if (content.indexOf('@') !== -1) {
+				if (!href || ismail.test(href))
+					a.attr('href', 'mailto:' + content);
+			} else if (!(/[a-z]/i).test(content) && content.length > 5)
+				a.attr('href', 'tel:' + content);
+		};
+
+		self.moveToolbar = function(el) {
+
+			var sel = $(self.getDocument()).find('.CMS_selected');
+			if (!sel.length)
+				return;
+
+			if (target) {
+				self.endedit();
+				target.rclass('CMS_selected');
+				target.rattr('contenteditable');
+				target = null;
+			}
+
+			sel.trigger('click');
+		};
+
+		function find_keywords(content, alternative, count, max, min) {
+
+			min = min || 2;
+			count = count || 200;
+			max = max || 20;
+
+			var words = content.toLowerCase().match(/[a-zá-žа-я]+/gi);
+
+			if (words === null)
+				words = EMPTYARRAY;
+
+			var length = words.length;
+			var dic = {};
+			var counter = 0;
+
+			for (var i = 0; i < length; i++) {
+				var word = words[i].trim();
+
+				if (word.length < min || counter >= count)
+					continue;
+
+				if (alternative)
+					word = word.substring(0, (word.length / 100) * 80);
+
+				if (word.length < min || word.length > max)
+					continue;
+
+				if (dic[word])
+					dic[word]++;
+				else
+					dic[word] = 1;
+
+				counter++;
+			}
+
+			var keys = Object.keys(dic);
+
+			keys.sort(function(a, b) {
+
+				var countA = dic[a];
+				var countB = dic[b];
+
+				if (countA > countB)
+					return -1;
+
+				if (countA < countB)
+					return 1;
+
+				return 0;
+			});
+
+			return keys.join(' ');
+		}
+
+		self.getPictures = function() {
+			var pictures = [];
+			self.doFind('img.CMS_edit').each(function() {
+				var url = $(this).attr('src');
+				url.substring(0, 5).toLowerCase() !== 'data:' && pictures.indexOf(url) === -1 && pictures.length < 5 && pictures.push(url);
+			});
+
+			return pictures;
+		};
+
+		self.getSourceCode = function() {
+			target && self.endedit();
+			var content = self.getContents();
+			content.find('[contenteditable]').rattr('contenteditable');
+			content.find('.CMS_selected').rclass('CMS_selected');
+			return cmseditor_prettify((content.find('#CMS').html() || '').trim().replace(/&nbsp;/g, ' ').replace(offsetter, ''));
+		};
+
+		self.getContent = function() {
+			target && self.endedit();
+			var content = self.getContents().find('#CMS').clone();
+			content.find('[contenteditable]').rattr('contenteditable');
+			content.find('.CMS_selected').rclass('CMS_selected');
+			content.find('.CMS_edit:empty,.CMS_remove:empty,.CMS_widgets:empty').each(function() {
+				var tag = this.nodeName;
+				if (tag === 'IMG' || tag === 'IFRAME')
+					return;
+				var cls = this.getAttribute('class');
+				cls.indexOf('CMS_widget') === -1 && cls.indexOf('fa') === -1 && $(this).detach().remove();
+			});
+			return (content.html() || '').trim().replace(offsetter, '');
+		};
+
+		self.check = function(el) {
+			// var type = el[0].tagName;
+			// if (type === 'DIV' || type === 'P' || type === 'B' || type.substring(0, 1) === 'H')
+			// 	!el.html() && el.html('&nbsp;');
+		};
+
+		self.updWidgets = function(parent) {
+
+			// Regenerates widget IDs + copies settings
+
+			var oldid = parent.attrd('cms-id');
+			var newid;
+
+			if (oldid) {
+				newid = GUID(10);
+				if (cmseditor.widgetsettings[oldid])
+					cmseditor.widgetsettings[newid] = CLONE(cmseditor.widgetsettings[oldid]);
+				parent.attrd('cms-id', newid);
+			}
+
+			parent.find('[data-cms-id]').each(function() {
+
+				oldid = this.getAttribute('data-cms-id');
+				newid = GUID(10);
+
+				if (cmseditor.widgetsettings[oldid])
+					cmseditor.widgetsettings[newid] = CLONE(cmseditor.widgetsettings[oldid]);
+
+				this.setAttribute('data-cms-id', newid);
+			});
+
+			var cls = 'CMS_selected CMS_operation';
+			parent.find('.CMS_selected,.CMS_operation').rclass(cls);
+			parent.find('[contenteditable="true"]').rattr('contenteditable');
+			parent.rclass(cls);
+			return parent;
+		};
+
+		self.updCopyPaste = function() {
+			self.getToolbar().find('#CMS_panel_buttons_copy span').each(function() {
+
+				var el = $(this);
+
+				switch (el.attrd('name')) {
+
+					case 'copy':
+						el.toggle(!!cmseditor.wrap);
+						break;
+
+					case 'paste':
+
+						var cur = self.getTarget();
+						if (!cur.hclass('CMS_widgets'))
+							cur = null;
+
+						cmseditor.copypasteparent = cur ? cur : cmseditor.wrap_widgets ? cmseditor.wrap_widgets : cmseditor.wrap ? cmseditor.wrap.closest('.CMS_widgets') : null;
+						var can = !!(cmseditor.copypaste && (cmseditor.copypasteparent && cmseditor.copypasteparent.length));
+						if (can) {
+
+							if (!cmseditor.copypasteparent.attrd('cms-category')) {
+								el.toggle(true);
+								break;
+							}
+
+							// checks widget category
+							var id = cmseditor.copypaste.attrd('cms-widget');
+							AJAXCACHE('GET [url]api/widgets/', function(response) {
+								var widget = response.items.findItem('id', id);
+								var can = false;
+								widget && (can = cmseditor.copypasteparent.attrd('cms-category').indexOf(widget.category) !== -1);
+								el.toggle(can);
+							}, '1 minute', 0, cmseditor.widgetcachereset);
+							cmseditor.widgetcachereset = false;
+						} else
+							el.toggle(false);
+						break;
+				}
+			});
+		};
+
+		self.updWidgetsList = function() {
+			AJAXCACHE('GET [url]api/widgets/', function(response) {
+
+				response = response.items;
+				var arr = [];
+
+				for (var i = 0, length = response.length; i < length; i++) {
+					var item = response[i];
+					if (!self.widgetscategory || self.widgetscategory.indexOf(item.category) !== -1)
+						arr.push(item);
+				}
+
+				arr.quicksort('name');
+				SET('cmseditor.widgets', arr);
+				SET('cmseditor.form', 'widgets');
+
+			}, '1 minute', 0, cmseditor.widgetcachereset);
+
+			cmseditor.widgetcachereset = false;
+		};
+
+		self.updWidgetsCSS = function() {
+			var doc = $(cmseditor.instance.getWindow().document);
+			doc.find('link').each(function() {
+				var el = $(this);
+				var href = el.attr('href');
+				if (href.indexOf('widgets.css') !== -1) {
+					var n = el.clone().attr('href', '/widgets.css?ts=' + GUID(4));
+					var p = el.parent();
+					el.remove();
+					p.append(n);
+				}
+			});
+		};
+
+		self.undo = function() {
+			var item = cmseditor.history.pop();
+			if (!item)
+				return;
+
+			self.getToolbar().hide();
+
+			if (target) {
+				self.endedit();
+				target.rattr('contentEditable');
+				target.rclass('CMS_selected');
+				target = null;
+			}
+
+			UPD('cmseditor.history');
+
+			if (!item.parent.children.length) {
+				item.parent.appendChild(item.node);
+				return;
+			}
+
+			var sibling = item.parent.children[item.index];
+			if (sibling)
+				item.parent.insertBefore(item.node, sibling);
+			else
+				item.parent.appendChild(item.node);
+
+			self.autoresize();
+		};
+
+		self.setEvents = function() {
+
+			var body = self.getContents();
+			var touch = { time: 0, target: null };
+
+			body.off('click touchstart touchmove touchend dblclick keydown');
+
+			if (common.form === 'pagesform') {
+				$(self.getWindow()).on('keydown', function(e) {
+					if (e.metaKey && e.which === 83) {
+						e.preventDefault();
+						if (common.form === 'pagesform')
+							EXEC('pagesform/submit');
+					} else if (e.key === 'F10') {
+						if (common.window)
+							NULL('common.window');
+						else if (common.form === 'pagesform')
+							EXEC('pagesform/preview2');
+						else if (common.form === 'postsform')
+							EXEC('postsform/toolbar', 'preview');
+					} else if (e.which === 27) {
+						if (common.window)
+							NULL('common.window');
+						else if (target) {
+							self.endedit();
+							self.check(target);
+							target.rclass('CMS_selected');
+							target.rattr('contenteditable');
+							self.getToolbar().hide();
+							target = null;
+						}
+					}
+				});
+			}
+
+			body.on('dblclick', '.CMS_edit', function(e) {
+
+				if (locked)
+					return;
+
+				e.preventDefault();
+				e.stopPropagation();
+				!this.getAttribute('contenteditable') && setTimeout2('cmseditordblclick', function() {
+					var btn = body.find('.CMS_panel_buttons').find('span[data-name="edit"]');
+					!btn.hclass('CMS_panel_disabled') && btn.trigger('click');
+				}, 100);
+			});
+
+			body.on('dblclick', '.CMS_widgets', function(e) {
+
+				if (locked)
+					return;
+
+				e.preventDefault();
+				e.stopPropagation();
+				 setTimeout2('cmseditordblclick', function() {
+					var btn = body.find('.CMS_panel_buttons').find('span[data-name="settings"]');
+					!btn.hclass('CMS_panel_disabled') && btn.trigger('click');
+				}, 100);
+			});
+
+			body.on('click touchstart touchmove touchend', '.CMS_edit,.CMS_repeat,.CMS_remove,.CMS_widgets,.CMS_attribute', function(e) {
+
+				if (e.type === 'touchstart') {
+					touch.time = Date.now();
+					touch.target = this;
+					return;
+				} else if (e.type === 'touchmove' || e.type === 'touchend') {
+					if (Date.now() - touch.time < 300)
+						return;
+					touch.time = 0;
+				}
+
+				if (locked)
+					return;
+
+				SETTER('!faicons/hide', true);
+				SETTER('!directory/hide', true);
+
+				e.preventDefault();
+				e.stopPropagation();
+
+				var el = $(this);
+
+				if (target && this !== target[0]) {
+					self.endedit();
+					self.check(target);
+					target.rclass('CMS_selected');
+					target.rattr('contenteditable');
+					target = null;
+				}
+
+				if (target)
+					return;
+
+				var off = el.offset();
+				var panel = self.getToolbar();
+				var left = off.left;
+
+				if (left + 270 > width)
+					left = width - 270;
+
+				// Firefox
+				setTimeout(function() {
+					panel.show();
+				}, 100);
+
+				var arr = el.attr('class').split(/\s+/);
+				var tag = this.nodeName;
+				var info = body.find('#CMS_panel_info');
+
+				target = el;
+
+				if (tag === 'IMG')
+					info.html('<span><b>{0}</b>x<b>{1}</b>px</span>'.format(this.getAttribute('data-cms-width') || this.width, this.getAttribute('data-cms-height') || this.height));
+				else if (tag)
+					info.html('<span>&lt;{0}&gt;</span>'.format(tag.toLowerCase()));
+
+				var wrap = self.getParent('CMS_widget');
+				var reposition = !!self.getParent('CMS_repeat', 5);
+
+				cmseditor.wrap = wrap;
+				cmseditor.wrapremove = self.getParent('CMS_remove');
+
+				panel.find('#CMS_panel_buttons_move').toggle(!!(wrap && wrap.length));
+				panel.find('#CMS_panel_buttons_reposition').toggle(reposition);
+				panel.find('.CMS_panel_buttons span').each(function() {
+
+					var el = $(this);
+					var name = el.attrd('name');
+					if (name === 'hide')
+						return;
+
+					var disabled = name === 'settings' ? true : arr.indexOf('CMS_' + name) === -1;
+
+					if (disabled && name === 'attribute')
+						disabled = arr.indexOf('CMS_edit') === -1;
+
+					if (name === 'link')
+						disabled = self.getParentElement('A') === null;
+
+					// Are some widgets?
+					if (name === 'widgets' && !disabled)
+						disabled = cmseditor.widgets.length === 0;
+
+					if ((name === 'settings' || name === 'part') && disabled)
+						disabled = self.getParent('CMS_widget') === null;
+
+					if (disabled && name === 'repeat')
+						disabled = self.getParent('CMS_repeat') === null;
+
+					if (disabled && name === 'remove')
+						disabled = cmseditor.wrapremove === null;
+
+					if (disabled && name === 'widgets') {
+						cmseditor.wrap_widgets = self.getParent('CMS_widgets', 5);
+						disabled = cmseditor.wrap_widgets == null;
+					}
+
+					if (name === 'edit' && tag === 'IFRAME')
+						disabled = true;
+
+					if (name === 'settings' || name === 'partial')
+						el.tclass('CMS_panel_disabled CMS_panel_hidden', disabled);
+					else
+						el.tclass('CMS_panel_disabled', disabled);
+				});
+
+				panel.find('#CMS_panel_buttons_body').toggle(!!(wrap && wrap.find('.wb,.wbi').length > 0));
+				panel.find('#CMS_panel_buttons_copy').toggle((wrap ? (!!wrap.length) : false) || (!!cmseditor.wrap_widgets));
+				panel.css({ left: left, top: off.top - panel.innerHeight() - 5 });
+				target.aclass('CMS_selected');
+				self.updCopyPaste();
+			});
+
+			body.off('paste');
+			body.on('paste', function(e) {
+				e.preventDefault();
+				e.stopPropagation();
+
+				if (locked)
+					return;
+
+				var text = e.originalEvent.clipboardData.getData('text/plain');
+				if (target) {
+					if (!target.hclass('CMS_multiline'))
+						text = text.replace(/\n\r|\n|\r/g, ' ');
+					self.getDocument().execCommand('insertText', false, text.trim().replace(/\s{2,}/g, ' ').replace(/\&nbsp;/g, ' '));
+				}
+			});
+
+			body.on('dragenter dragover dragexit drop dragleave', function (e) {
+
+				e.stopPropagation();
+				e.preventDefault();
+
+				if (locked)
+					return;
+
+				switch (e.type) {
+					case 'drop':
+						break;
+					case 'dragenter':
+					case 'dragover':
+						return;
+					case 'dragexit':
+					case 'dragleave':
+					default:
+						return;
+				}
+
+				var el = $(e.target);
+
+				if (e.target.nodeName !== 'IMG')
+					return;
+
+				var files = e.originalEvent.dataTransfer.files;
+
+				if (!files[0])
+					return;
+
+				if (el.hclass('CMS_edit') && el.attrd('cms-width') && el.attrd('cms-height')) {
+
+					var w = el.attrd('cms-width').parseInt();
+					var h = el.attrd('cms-height').parseInt();
+
+					if (isNaN(w) || isNaN(h))
+						return;
+
+					FIND('#cmseditor.crop', function(com) {
+						com.reconfigure('width:{0};height:{1};background:{2}'.format(w, h, el.attrd('cms-bg')));
+						SET('cmseditor.crop.url', el.attrd('cms-src') || el.attr('src'), 100);
+						setTimeout(function() {
+							com.load(files[0]);
+						}, 500);
+					});
+
+					cmseditor.crop.alt = el.attr('alt');
+					cmseditor.crop.href = '';
+					cmseditor.crop.target = el;
+
+					var parent = el.parent('a');
+					if (parent.length)
+						cmseditor.crop.href = parent.attr('href');
+
+					cmseditor.crop.ishref = !!cmseditor.crop.href;
+
+					UPDATE('cmseditor.crop', true);
+					SET('cmseditor.form', 'picture');
+					return;
+				}
+
+				SETTER('loading/show');
+
+				var data = new FormData();
+
+				data.append('file0', files[0]);
+
+				UPLOAD('POST [url]api/upload/', data, function(response, err) {
+
+					SETTER('loading/hide', 100);
+
+					if (err) {
+						SETTER('snackbar/warning', '@(Upload error:) ' + err.toString());
+						return;
+					}
+
+					var instance = cmseditor.instance;
+					if (response && response.length) {
+						el.attr('src', response[0].download);
+						instance.change(true);
+						refresh_filebrowser_files(true);
+					}
+
+					instance.autoresize();
+				});
+			});
+
+			body.unbind('keydown').on('keydown', function(e) {
+
+				if (!target || locked)
+					return;
+
+				if (e.keyCode === 13 && !target.hclass('CMS_multiline')) {
+					self.endedit();
+					target.rattr('contentEditable');
+					target.rclass('CMS_selected');
+					target = null;
+					self.getToolbar().hide();
+					e.preventDefault();
+					e.stopPropagation();
+					return;
+				}
+
+				if (e.keyCode === 13) {
+					// "div" prevention
+					var tmp = target.html();
+					self.getDocument().execCommand('insertHTML', false, '<br>');
+					var end = target.html().trim();
+					if (end.substring(end.length - 3) !== tmp.substring(tmp.length - 3))
+						self.getDocument().execCommand('insertHTML', false, '<br><br>');
+					e.preventDefault();
+					e.stopPropagation();
+					self.autoresize();
+					return;
+				}
+
+				if (!e.metaKey && !e.ctrlKey)
+					return;
+
+				if (e.keyCode === 80) {
+					// Font-Awesome icon
+					var tmp = self.getTarget();
+					var tag = tmp[0].nodeName.toLowerCase();
+					var icon = '<i class="fa fa-flag CMS_edit CMS_remove"></i>';
+
+					switch (tag) {
+						case 'span':
+							tmp.parent().prepend(icon);
+							break;
+						default:
+							self.getDocument().execCommand('insertHTML', false, icon);
+							break;
+					}
+
+					e.preventDefault();
+					e.stopPropagation();
+					return;
+				}
+
+				if (e.keyCode === 66) {
+					// bold
+					self.getDocument().execCommand('Bold', false, null);
+					e.preventDefault();
+					e.stopPropagation();
+					return;
+				}
+
+				if (e.keyCode === 76) {
+
+					// link
+					e.preventDefault();
+					e.stopPropagation();
+
+					var url = '#' + Date.now();
+					var mt = self.getTarget();
+					var mtd = mt[0];
+
+					for (var i = 0; i < 5; i++) {
+						if (mtd.tagName === 'A')
+							return;
+						mtd = mtd.parentNode;
+						if (!mtd)
+							break;
+					}
+
+					self.getDocument().execCommand('CreateLink', false, url);
+					var tmp = mt.find('a[href="' + url + '"]');
+					if (!tmp.length)
+						return;
+
+					tmp.attr('class', 'CMS_edit');
+					self.endedit();
+					target.rattr('contentEditable');
+					target.rclass('CMS_selected');
+
+					var content = tmp.text();
+					target = tmp;
+					target.data('temporary', true);
+
+					var link = cmseditor.link;
+
+					link.file = '';
+					link.href = '';
+
+					if (content.indexOf('@') !== -1)
+						link.href = 'mailto:' + content;
+					else if ((/\d+/).test(content))
+						link.href = 'tel:' + content;
+					else if (content.indexOf(' ') === -1 && content.indexOf(',') === -1 && content.indexOf('.') !== -1)
+						link.href = (/http(s):\/\//).test(content) ? content : ('https://' + content);
+
+					link.target = link.href.indexOf('.') !== -1 && link.href.indexOf(location.hostname) === -1 ? '_blank' : '_self';
+					link.title = '';
+					link.alllinks = false;
+					link.tracking = null;
+					link.idtracking = null;
+
+					UPDATE('cmseditor.link', true);
+					SET('cmseditor.form', 'link');
+					return;
+				}
+
+				if (e.keyCode === 73) {
+					// italic
+					self.getDocument().execCommand('Italic', false, null);
+					e.preventDefault();
+					e.stopPropagation();
+					return;
+				}
+
+				if (e.keyCode === 85) {
+					// underline
+					self.getDocument().execCommand('Underline', false, null);
+					e.preventDefault();
+					e.stopPropagation();
+					return;
+				}
+
+				if (e.keyCode === 32) {
+					self.getDocument().execCommand('insertHTML', false, '&nbsp;');
+					e.preventDefault();
+					e.stopPropagation();
+					return;
+				}
+			});
+
+			body.on('click', 'a', function(e) {
+				e.preventDefault();
+			});
+
+			body.find('#CMS_panel').on('mouseenter mouseleave', '.fa-arrow-up,.fa-arrow-down', function(e) {
+				!locked && cmseditor.wrap && cmseditor.wrap.length && cmseditor.wrap.tclass('CMS_selected_template', e.type === 'mouseenter');
+			});
+
+			body.find('#CMS_panel').on('mouseenter mouseleave', '.fa-plug', function(e) {
+				!locked && cmseditor.wrap_widgets && cmseditor.wrap_widgets.length && cmseditor.wrap_widgets.tclass('CMS_selected_template', e.type === 'mouseenter');
+			});
+
+			body.find('#CMS_panel').on('mouseenter mouseleave', '.fa-trash,.fa-object-ungroup,.fa-copy', function(e) {
+				!locked && this.classList.value.indexOf('_disabled') === -1 && cmseditor.wrapremove && cmseditor.wrapremove.tclass('CMS_operation', e.type === 'mouseenter');
+			});
+
+			body.find('#CMS_panel').on('click', 'span', function(e) {
+
+				e.preventDefault();
+				e.stopPropagation();
+
+				var el = $(this);
+				if (el.hclass('CMS_panel_disabled') || locked)
+					return;
+
+				var hide = function() {
+					body.find('#CMS_panel').find('[data-name="hide"]').trigger('click');
+				};
+
+				var name = el.attrd('name');
+				var tmp;
+
+				SETTER('!faicons/hide', true);
+
+				switch (name) {
+
+					case 'part':
+						self.editPart();
+						break;
+
+					case 'wm':
+					case 'wp':
+						var t = cmseditor.wrap.find('.wb:first-child');
+						if (t.length) {
+							t.tclass(name);
+						} else {
+							t = cmseditor.wrap.find('.wbi:first-child');
+							t.length && t.tclass(name + 'i');
+						}
+						self.change(true);
+						break;
+
+					case 'paste':
+
+						target && self.endedit();
+						var clone = cmseditor.copypaste.clone();
+						clone = self.updWidgets(clone).rattr('contentEditable').rclass('CMS_selected').aclass('CMS_remove');
+
+						var parent = self.getTarget().closest('.CMS_widget');
+
+						if (parent.parent()[0] === cmseditor.copypasteparent[0])
+							parent.after(clone);
+						else
+							cmseditor.copypasteparent.append(clone);
+
+						self.autoresize();
+						self.change(true);
+						break;
+
+					case 'copy':
+						cmseditor.copypaste = cmseditor.wrap.clone();
+						cmseditor.copypaste.rclass('CMS_operation CMS_selected');
+						self.updCopyPaste();
+						break;
+
+					case 'up2':
+
+						if (!target) {
+							self.getToolbar().hide();
+							return;
+						}
+
+						if (!target.hclass('CMS_repeat'))
+							target = self.getParent('CMS_repeat');
+						if (!target.length)
+							return hide();
+						var prev = target.prev();
+						if (!prev.length || !prev.hclass('CMS_repeat'))
+							return hide();
+						tmp = prev.clone();
+						var n = target.clone();
+						prev.replaceWith(n);
+						target.replaceWith(tmp);
+						self.change(true);
+						self.moveToolbar();
+						cmseditor.instance.autoresize();
+						setTimeout(cmseditor.instance.autoresize, 2000);
+						break;
+					case 'down2':
+
+						if (!target) {
+							self.getToolbar().hide();
+							return;
+						}
+
+						if (!target.hclass('CMS_repeat'))
+							target = self.getParent('CMS_repeat');
+						if (!target.length)
+							return hide();
+						var next = target.next();
+						if (!next.length || !next.hclass('CMS_repeat'))
+							return hide();
+						tmp = next.clone();
+						var n = target.clone();
+						next.replaceWith(n);
+						target.replaceWith(tmp);
+						self.change(true);
+						self.moveToolbar();
+						setTimeout(cmseditor.instance.autoresize, 2000);
+						break;
+
+					case 'up':
+
+						tmp = cmseditor.wrap.prev();
+						if (tmp.length) {
+							tmp.before(cmseditor.wrap);
+							self.moveToolbar();
+						} else
+							hide();
+
+						self.change(true);
+						break;
+
+					case 'down':
+						tmp = cmseditor.wrap.next();
+
+						if (tmp.length) {
+							tmp.after(cmseditor.wrap);
+							self.moveToolbar();
+						} else
+							hide();
+
+						self.change(true);
+						break;
+
+					case 'hide':
+
+						if (!target) {
+							self.getToolbar().hide();
+							return;
+						}
+
+						self.getToolbar().hide();
+						self.endedit();
+						self.check(target);
+						target.rattr('contentEditable');
+						body.find('.CMS_selected').rclass('CMS_selected');
+						body.find('.CMS_selected_template').rclass('CMS_selected_template');
+						target = null;
+						return;
+
+					case 'widgets':
+
+						var arr = [];
+						var tmp = self.getParent('CMS_widgets', 5);
+						var categories = tmp ? (tmp.attrd('cms-category') || '').split(',').trim() : EMPTYARRAY;
+
+						if (!categories.length)
+							categories = null;
+
+						cmseditor.widgetcachereset = true;
+						self.widgetscategory = categories;
+						self.updWidgetsList();
+						return;
+
+					case 'attribute':
+
+						if (!target) {
+							self.getToolbar().hide();
+							return;
+						}
+
+						var targettmp = target.hclass('CMS_unwrap') ? target.parent() : target;
+						var cls = (targettmp.attr('class') || '').split(' ');
+						var arr = [];
+
+						cls.forEach(function(cls) {
+							cls.substring(0, 4) !== 'CMS_' && arr.push(cls);
+						});
+
+						var tag = targettmp[0].nodeName;
+						var cattr = cmseditor.attribute;
+
+						cattr.isimage = tag === 'IMG';
+						cattr.config = targettmp.attrd('---');
+
+						if (cattr.config)
+							cattr.config = cattr.config.split('__')[2] || '';
+						else
+							cattr.config = null;
+
+						cattr.isconfig = cattr.config != null;
+						cattr.isiframe = tag === 'IFRAME';
+						cattr.isnone = !cattr.isimage && !cattr.isiframe;
+						cattr.id = targettmp.attr('id') || '';
+						cattr.cls = arr.join(' ');
+						cattr.css = targettmp.attr('style') || '';
+						cattr.title = targettmp.attr('title') || '';
+						cattr.themes = targettmp.attrd('cms-theme');
+
+						if (cattr.themes) {
+							arr = [];
+							var selected = '';
+							cattr.themes.replace(/;/g, ',').split(',').forEach(function(value) {
+								value = value.trim().split('|');
+								var obj = { name: value[0], id: value[1] == null ? value[0] : value[1] };
+								arr.push(obj);
+								if (cattr.cls.indexOf(obj.id) !== -1) {
+									selected = obj.id;
+									cattr.cls = cattr.cls.replace(obj.id, '').trim().replace(/\s{2,}/g, '');
+								}
+							});
+
+							cattr.themes = arr;
+							cattr.theme = selected;
+						}
+
+						cattr.src = targettmp.attr('src') || '';
+
+						if (cattr.isimage) {
+
+							var tw = targettmp.attrd('cms-width');
+							var th = targettmp.attrd('cms-height');
+
+							cattr.imgdefined = tw != null || th != null;
+
+							if (!cattr.imgdefined) {
+								tw = targettmp.attr('width');
+								th = targettmp.attr('height');
+							}
+
+							cattr.datawidth = tw;
+							cattr.dataheight = th;
+							cattr.datasize = targettmp.attrd('cms-size');
+							if (cattr.datasize)
+								cattr.datasize += '%';
+							cattr.alt = targettmp.attr('alt') || '';
+							cattr.databg = targettmp.attrd('cms-bg') || '';
+						}
+
+						UPDATE('cmseditor.attribute', true);
+						SET('cmseditor.form', 'attribute');
+						return;
+
+					case 'link':
+
+						if (!target) {
+							self.getToolbar().hide();
+							return;
+						}
+
+						var href = '';
+						var targ = '';
+						var title = '';
+						var idtracking = '';
+
+						if (target.prop('tagName') === 'A') {
+							href = target.attr('href');
+							title = target.attr('title');
+							targ = target.attr('target') || '_self';
+							idtracking = target.attrd('cms-track');
+						} else {
+							var tmp = self.getParentElement('A');
+							href = tmp.attr('href');
+							title = tmp.attr('title');
+							targ = tmp.attr('target') || '_self';
+							idtracking = tmp.attrd('cms-track');
+						}
+
+						var link = cmseditor.link;
+						link.file = '';
+						link.href = href;
+						link.target = targ;
+						link.title = (title || '').trim();
+						link.alllinks = false;
+						link.tracking = null;
+						link.idtracking = idtracking;
+
+						UPDATE('cmseditor.link', true);
+						SET('cmseditor.form', 'link');
+						return;
+
+					case 'settings':
+
+						if (!target) {
+							self.getToolbar().hide();
+							return;
+						}
+
+						var wel = target.hclass('CMS_widget') ? target : self.getParent('CMS_widget');
+						var id = wel.attrd('cms-id');
+						var opt = cmseditor.widgetsettings[id];
+
+						cmseditor.settings.options = opt ? CLONE(opt) : {};
+						cmseditor.settings.target = wel;
+						cmseditor.settings.id = id;
+						cmseditor.settings.exports = null;
+
+						SET('cmseditor.settings.hiddenxs', wel.hclass('hidden-xs'));
+						SET('cmseditor.settings.hiddensm', wel.hclass('hidden-sm'));
+						SET('cmseditor.settings.hiddenmd', wel.hclass('hidden-md'));
+						SET('cmseditor.settings.hiddenlg', wel.hclass('hidden-lg'));
+						cmseditor.settings.element = wel;
+
+						AJAX('GET [url]api/widgets/{0}/settings/'.format(wel.attrd('cms-widget')), function(response, err) {
+
+							if (!response) {
+								cmseditor.settings.options = null;
+								SETTER(true, '#cmseditor.settings/remapempty');
+								SET('cmseditor.form', 'settings');
+								return;
+							}
+
+							SETTER(true, '#cmseditor.settings/remap2', function(option) {
+								cmseditor.settings.exports = {};
+								(new Function('option', 'exports', response))(option, cmseditor.settings.exports);
+							});
+
+							SET('cmseditor.form', 'settings');
+						});
+
+						return;
+
+					case 'edit':
+
+						if (!target) {
+							self.getToolbar().hide();
+							return;
+						}
+
+						if (target.attr('contenteditable')) {
+							self.endedit();
+							self.getToolbar().hide();
+							target.rattr('contentEditable');
+							target.rclass('CMS_selected');
+							target = null;
+							return;
+						}
+
+						if (target.hclass('fa') || target.hclass('far') || target.hclass('fal') || target.hclass('fab') || target.hclass('fad') || target.hclass('fas')) {
+							var fa = target.attr('class').match(/fa-[a-z0-9\-]+/i);
+							fa = fa ? fa.toString() : '';
+
+							var opt = {};
+							var off = self.element.offset();
+							opt.offsetY = off.top - 30;
+							opt.offsetX = off.left;
+							opt.element = target;
+							opt.scrolltop = 0;
+							opt.callback = function(icon) {
+								target.rclass('fa far fab fal fad fas').rclass2('fa-').aclass(icon);
+							};
+
+							SETTER('faicons/show', opt);
+							return;
+						}
+
+						if (target.prop('tagName') === 'IMG') {
+
+							var w = (target.attrd('cms-width') || '').parseInt();
+							var h = (target.attrd('cms-height') || '').parseInt();
+
+							if (!w || !h) {
+								cmseditor.instance.filebrowser(target, (/^image\/*/));
+								return;
+							}
+
+							FIND('#cmseditor.crop', function(com) {
+								com.reconfigure('width:{0};height:{1};background:{2}'.format(w, h, target.attrd('cms-bg') || ''));
+								SET('cmseditor.crop.url', target.attrd('cms-src') || target.attr('src'), 100);
+								setTimeout2('cropmodal', function() {
+									SETTER(true, '#cmseditor.crop.modal/reconfigure', 'height:' + (h + 215));
+								}, 300);
+							});
+
+							cmseditor.crop.alt = target.attr('alt');
+							cmseditor.crop.href = '';
+							cmseditor.crop.target = target;
+
+							var parent = target.parent('a');
+
+							if (parent.length)
+								cmseditor.crop.href = parent.attr('href');
+
+							cmseditor.crop.ishref = !!cmseditor.crop.href;
+
+							UPDATE('cmseditor.crop', true);
+							SET('cmseditor.form', 'picture');
+							return;
+						}
+
+						target.attr('contenteditable', true).focus();
+						self.change(true);
+						break;
+
+					case 'remove':
+
+						if (!target) {
+							self.getToolbar().hide();
+							return;
+						}
+
+						if (!target.hclass('CMS_remove')) {
+							target = self.getParent('CMS_remove');
+							if (!target) {
+								self.getToolbar().hide();
+								return;
+							}
+						}
+
+						tmp = target.next();
+						if (!tmp.length)
+							tmp = target.prev();
+
+						var parent = target[0].parentNode;
+						var node = target[0];
+
+						for (var i = 0; i < parent.children.length; i++) {
+							if (parent.children[i] == node)
+								break;
+						}
+
+						$(parent).find('.CMS_selected,.CMS_operation').rclass('CMS_selected CMS_operation');
+						PUSH('cmseditor.history', { parent: parent, index: i, node: node });
+						cmseditor.cmseditorbackup.appendChild(node);
+
+						self.getToolbar().hide();
+						self.change(true);
+
+						if (tmp.length && (tmp.hclass('CMS_edit') || tmp.hclass('CMS_remove')))
+							tmp.trigger('click');
+
+						self.autoresize();
+						break;
+
+					case 'repeat':
+
+						if (!target) {
+							self.getToolbar().hide();
+							return;
+						}
+
+						if (target.hclass('CMS_repeat')) {
+							self.endedit();
+							target.after(self.updWidgets(target.clone()).rattr('contentEditable').rclass('CMS_selected').aclass('CMS_remove'));
+						} else {
+							var parent = self.getParent('CMS_repeat');
+							if (parent) {
+								self.endedit();
+								target.rclass('CMS_selected');
+								parent.after(self.updWidgets(parent.clone()).rattr('contentEditable').rclass('CMS_selected').aclass('CMS_remove'));
+							}
+						}
+
+						self.autoresize();
+						self.change(true);
+						break;
+				}
+			});
+
+			self.resize(10);
+			self.load();
+		};
+
+		self.load = function(type) {
+			setTimeout(function() {
+				var w = self.getWindow();
+				w.$cmseditor_load && w.$cmseditor_load(type);
+				w.EMIT && w.EMIT('cmseditor.load', type);
+			}, 1000);
+		};
+
+		self.resize = function(force) {
+			setTimeout2('cmseditor', function() {
+				var contents = self.getContents();
+				var elheight = contents.find('#cmseditorheight');
+				if (!elheight.length)
+					return self.resize(500);
+				var h = navigator.userAgent.indexOf('Safari') === -1 ? $(contents).find('body')[0].scrollHeight : elheight.offset().top + 80;
+				iframe.css({ height: h });
+				width = contents.width();
+				setTimeout(function() {
+					SETTER('form/resize');
+					M.components.findItem('name', 'autocomplete') && SETTER('autocomplete/resize');
+				}, 300);
+			}, force ? 10 : 500);
+		};
+
+		self.setter = function(value, path, type) {
+
+			// cmseditor.copypaste = null;
+			// cmseditor.copypasteparent = null;
+
+			// Sets the current instance of editor to global variable
+			cmseditor.instance = self;
+			SET('cmseditor.history', []);
+			cmseditor.cmseditorbackup.innerHTML = '';
+
+			if (value == null) {
+				self.write('');
+				return;
+			}
+
+			var options = {};
+			options.body = value;
+			options.template = cmseditor.template;
+
+			if (!options.template) {
+				self.write('');
+				return;
+			}
+
+			SETTER('loading/show');
+			AJAX('POST [url]api/pages/preview/', options, function(response) {
+
+				self.write(response.replace('</body>', '<div id="CMS_panel"><div id="CMS_panel_buttons_move"><span class="fa fa-arrow-up" data-name="up" title="@(Move up)"></span><span class="fa fa-arrow-down" data-name="down" title="@(Move down)"></span></div><div id="CMS_panel_buttons_reposition"><span class="fa fa-chevron-up" data-name="up2" title="@(Move up current repeated element)"></span><span class="fa fa-chevron-down" data-name="down2" title="@(Move down current repeated element)"></span></div><div id="CMS_panel_buttons_copy"><span class="fa fa-paste" data-name="paste" title="@(Paste widget)"></span><span class="fa fa-copy" data-name="copy" title="@(Copy widget)"></span></div><div id="CMS_panel_info"></div><div class="CMS_panel_buttons"><span class="fa fa-pencil" title="@(Edit)" data-name="edit"></span><span class="fa fa-cog" title="@(Widget settings)" data-name="settings"></span><span class="fa fa-link" title="@(Change link)" data-name="link"></span><span class="fa fa-quote-left" title="@(Change attributes)" data-name="attribute"></span><span class="fa fa-file-text-o" title="@(Choose a partial content)" data-name="partial"></span><span class="fa fa-object-ungroup" title="@(Edit as part)" data-name="part"></span><span class="fa fa-copy" title="@(Duplicate)" data-name="repeat"></span></span><span class="fa fa-plus-circle" title="@(Add a widget)" data-name="widgets"></span><span class="fa fa-trash" title="@(Remove content)" data-name="remove"></span><span class="fa fa-caret-square-o-down" title="@(Hide)" data-name="hide"></span></div><div id="CMS_panel_buttons_body"><span class="fa fa-arrows-v" data-name="wm"></span><span class="fa fa-arrows-h" data-name="wp"></span></div></div></body>'));
+				setTimeout(self.setCSS, 500);
+
+				SETTER('loading/hide', 500);
+				AJAX('GET [url]api/pages/dependencies/', function(response) {
+					var links = response.links;
+					for (var i = 0, length = links.length; i < length; i++) {
+						var item = links[i];
+						var parent = item.parent;
+						var path = item.name;
+						var is = false;
+
+						while (parent) {
+
+							var sub = links.findItem('url', parent);
+							if (!sub)
+								break;
+
+							if (sub.url === '/')
+								break;
+
+							path = sub.name + ' / ' + path;
+							parent = sub.parent;
+							is = true;
+						}
+
+						item.path = path;
+					}
+
+					links.quicksort('path');
+					response.parts.quicksort('name');
+
+					SET('%links', links);
+					SET('%parts', response.parts);
+				});
+			});
+		};
+
+		self.sourcecode = function() {
+			SETTER('loading/show');
+			self.save(function() {
+				SET('cmseditorsourcecode', self.getSourceCode().replace(/\n[\s\t]+\n/g, '\n'), true);
+				SET('cmseditor.form', 'sourcecode');
+			}, 'sourcecode');
+		};
+	});
+
+	function cmseditor_prettify(body) {
+
+		var index = 0;
+		var builder = [];
+		var count = 0;
+		var tmp;
+
+		if (body.indexOf('\t') !== -1)
+			return body;
+
+		var pad = function(count) {
+			return '\n'.padRight(count, '\t');
+		};
+
+		while (true) {
+
+			var c = body[index++];
+			var n = body[index];
+
+			if (index > body.length)
+				break;
+
+			if (c === '<' && n === 'd' && body.substring(index, index + 3) === 'div') {
+				tmp = index;
+				index = body.indexOf('>', index + 3) + 1;
+				builder.push(pad(count + 1) + body.substring(tmp - 1, index) + pad(count + 2));
+				count++;
+				continue;
+			}
+
+			if (c === '<' && n === '/' && body.substring(index, index + 4) === '/div') {
+				count--;
+				builder.push(pad(count + 1) + '</div>' + pad(count + 1));
+				index += 5;
+				continue;
+			}
+
+			builder.push(body.substring(index - 1, index));
+		}
+
+		for (var i = 0, length = builder.length; i < length; i++) {
+			var line = builder[i];
+			var next = builder[i + 1];
+			if (!next)
+				break;
+			var a = line.indexOf('>');
+			if (a === -1)
+				continue;
+			var b = next.indexOf('<');
+			if (b === -1)
+				continue;
+			next = next.substring(0, b);
+			if (line.indexOf('\n', a) === -1 || (next.indexOf('\n') === -1))
+				continue;
+			builder[i] = line.substring(0, a + 1) + line.substring(a + 2);
+		}
+
+		return builder.join('').replace(/\t{1,}\n/g, '\n').trim();
+	}
+
+</script>

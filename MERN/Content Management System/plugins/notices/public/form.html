@@ -1,0 +1,136 @@
+<div data---="form__common.form__if:noticesform;icon:bullhorn;width:800;reload:noticesform/show;submit:noticesform/submit;autofocus:1" class="hidden">
+
+	<div data-scope="noticesform">
+		<div class="padding npb">
+			<div class="row">
+				<div class="col-md-8 m">
+					<div data---="input__?.name__required:1;maxlength:300" class="m">@(Name)</div>
+					<div data---="input__?.pinned__type:checkbox">@(Pin this notice)</div>
+				</div>
+				<div class="col-md-4">
+					<div data---="input__?.language__dirsource:common.dependencies.languages;dirplaceholder:@(Search language);dirempty:@(No language)">@(Language)</div>
+				</div>
+			</div>
+		</div>
+		<div class="padding bg-smoke" style="padding-bottom:10px">
+			<div class="row">
+				<div class="col-md-4 m">
+					<div data---="input__?.category__dirsource:common.dependencies.notices;icon:folder-o;required:1;dircustom:1;dirvalue:name;dirplaceholder:@(Search or enter a new);placeholder:@(Choose a category)">@(Category)</div>
+				</div>
+				<div class="col-md-4 m">
+					<div data---="input__?.date__type:date;icon:clock-o;placeholder:@(yyyy-mm-dd);align:center">@(Date)</div>
+					<div class="help mt10">@(You can specify a publish date.)</div>
+				</div>
+				<div class="col-md-4 m">
+					<div data---="input__?.event__type:date;icon:calendar;placeholder:@(yyyy-mm-dd);align:center">@(Event)</div>
+				</div>
+			</div>
+		</div>
+		<div class="padding" style="padding-bottom:10px">
+			<div class="row">
+				<div class="col-md-8 m">
+					<div data---="input__?.summary__maxlength:500">@(Summarization)</div>
+				</div>
+				<div class="col-md-4 m">
+					<div data---="input__?.author__maxlength:30;icon:user;placeholder:@(Who is the autor?)">@(Author)</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-8 m">
+					<div data---="input__?.url__placeholder:@(Type a URL address)">@(URL address)</div>
+				</div>
+				<div class="col-md-4 m">
+					<div class="fs12" style="margin-bottom:5px">@(Choose icon):</div>
+					<div data---="input__?.icon__type:icon"></div>
+				</div>
+			</div>
+		</div>
+		<div class="tabmenu-container">
+			<ul data---="tabmenu__?tab__'editor'" class="tabmenu">
+				<li data-value="editor"><i class="fa fa-pencil"></i>@(Editor)</li>
+				<li data-value="preview"><i class="fa fa-search"></i>@(Preview)</li>
+				<li data-value="picture"><i class="far fa-camera"></i>@(Picture)</li>
+			</ul>
+		</div>
+		<div class="padding">
+			<div data-bind="?tab__show:value=='editor'">
+				<div data---="codemirror__?.body__height:300;required:1;type:markdown">@(Body)</div>
+				<div class="row fs12 mt10">
+					<div class="col-xs-6">
+						<span class="link exec" data-exec="noticesform/upload"><i class="fa fa-folder-o mr5"></i>@(Browse files)</span>
+					</div>
+					<div class="col-xs-6 right">
+						<div class="help nmt"><i class="fab fa-markdown"></i><span class="link exec" data-path="common.top" data-value="'markdownhelp'">@(Markdown format)</div>
+					</div>
+				</div>
+			</div>
+			<div data-bind="?tab__show:value=='preview'" class="hidden">
+				<div data-bind="notices.preview__html:value" class="noticespreview"></div>
+			</div>
+			<div class="row hidden" data-bind="?tab__show:value=='picture'">
+				<div class="col-md-4 col-md-offset-4">
+					<br class="hidden-xs" />
+					<div data---="preview__?.picture__width:500;height:500;url:[url]api/upload/base64/" class="m"></div>
+					<div class="center help">
+						@(Drag & Drop picture for this notice)<br />
+						<b>@(500x500px)</b>
+					</div>
+					<br class="hidden-xs" />
+				</div>
+			</div>
+		</div>
+		<div data---="error__?.response"></div>
+	</div>
+
+	<nav data---="validation__noticesform">
+		<button name="submit"><i class="fa fa-check-circle"></i>@(SAVE)</button>
+		<button name="cancel">@(Cancel)</button>
+	</nav>
+
+</div>
+
+<script>
+
+	PLUGIN('noticesform', function(exports) {
+
+		exports.show = function(com) {
+			SET('noticesformtab', 'editor');
+			com.reconfigure({ title: GET('?.id') ? '@(Edit notice)' : '@(New notice)' });
+			FUNC.loading(false, 1000);
+		};
+
+		exports.upload = function(el) {
+			refresh_filebrowser(function(file, name) {
+				name = name.replace(/\.[a-z]+$/i, '');
+				if ((/\.(jpg|png|gif|jpeg|svg)$/i).test(file))
+					file = '![{0}]({1})'.format(name, file);
+				else
+					file = '[{0}]({1})'.format(name, file);
+				SETTER('.noticesform.body/insert', file);
+			});
+		};
+
+		exports.submit = function(hide) {
+			FUNC.loading(true);
+			var model = GETR('?');
+			AJAX('POST [url]api/notices/', model, function(response) {
+				FUNC.loading(false, 1000);
+				if (response.success) {
+
+					if (!common.dependencies.notices.findItem('name', model.category))
+						refresh_dependencies();
+
+					SETTER('snackbar/success', '@(Notice has been saved successfully.)');
+					EXEC('notices/refresh');
+					hide();
+				}
+			});
+		};
+
+		WATCH('noticesformtab', function(path, value) {
+			if (value === 'preview')
+				AJAX('POST [url]api/notices/preview/', { body: noticesform.body }, 'notices.preview');
+		});
+	});
+
+</script>

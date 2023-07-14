@@ -1,0 +1,129 @@
+<style>
+	.widgetext { cursor: pointer; position: relative; margin-bottom: 10px; }
+	.widgetext img { border: 4px solid #E0E0E0; border-radius: var(--radius); }
+	.widgetext:hover img { border-color: #D0D0D0; }
+	.widgetext-name { font-weight: bold; color: black; line-height: 16px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-size: 12px; }
+	.widgetext-category { font-size: 11px; color: gray; margin-top: 8px; line-height: 14px; }
+	.widgetext i { margin-right: 5px; }
+	.widgetext .fa-check-circle { display: none; }
+	.widgetextinstalled .fa-check-circle { display: block; position: absolute; font-size: 28px; right: 10px; bottom: 50px; background-color: white; border-radius: 100px; padding: 3px; box-shadow: 0 2px 5px rgba(0,0,0,0.3); }
+	.widgetextinstalled img { border-color: #79AF65; }
+</style>
+
+<div data---="form__common.form3__if:widgetsimport;width:1100;reload:widgetsimport/show;scroll:false;icon:plug;title:@(Import existing widgets)" class="hidden">
+
+	<div class="tabmenu-container">
+		<ul data---="tabmenu__widgets.externaltab__null__'all'" class="tabmenu tabmenu-bordered">
+			<li data-value="all">@(All)</li>
+			<li data-value="Layouts">@(Layouts)</li>
+			<li data-value="Columns">@(Columns)</li>
+			<li data-value="Content">@(Content)</li>
+			<li data-value="Inline">@(Inline)</li>
+			<li data-value="Newsletter">@(Newsletter)</li>
+		</ul>
+	</div>
+
+	<div data---="listing__widgets.external -> widgetsimport/filter(value)__count:24" class="padding">
+		<script type="text/html">
+			<div class="col-xs-6 col-lg-2 col-sm-3 m">
+				<div class="widgetext exec{{ id | widgetsinstalled }}" data-id="{{ id }}" data-exec="widgetsimport/submit">
+					<i class="fa fa-check-circle green"></i>
+					<div><img src="{{ picture }}" border="0" class="img-responsive" /></div>
+					<div class="widgetext-category"><i class="far fa-folder-o"></i>{{ category }} / <a href="https://componentator.com/widgets/?id={{ id }}" target="_blank">@(Detail)</a></div>
+					<div class="widgetext-name">{{ name }}</div>
+				</div>
+			</div>
+		</script>
+		<script type="text/html">
+			<div class="row">
+				{{ body | raw }}
+			</div>
+		</script>
+	</div>
+
+	<nav>
+		<button name="cancel" style="width:100%">@(Cancel)</button>
+	</nav>
+
+</div>
+
+<script>
+	PLUGIN('widgetsimport', function(exports) {
+
+		exports.filter = function(value) {
+			if (!value)
+				return value;
+			switch (widgets.externaltab) {
+				case 'Layouts':
+				case 'Inline':
+				case 'Columns':
+				case 'Content':
+				case 'Newsletter':
+					return value.findAll('category', widgets.externaltab);
+				case 'all':
+				default:
+					return value;
+			}
+		};
+
+		WATCH('widgets.externaltab', function() {
+			UPDATE('widgets.external');
+		});
+
+		exports.show = function() {
+			AJAX('GET [url]api/widgets/', function(response) {
+				SET('widgets.grid', response);
+				AJAXCACHE('GET https://componentator.com/api/widgets/', function(response) {
+
+					for (var i = 0; i < response.items.length; i++) {
+						var item = response.items[i];
+						if (item.picture.substring(0, 5) !== 'https')
+							item.picture = 'https://componentator.com' + item.picture;
+					}
+
+					SET('widgets.external', response.items);
+				}, '2 minutes');
+			});
+		};
+
+		exports.submit = function(el, e) {
+
+			if (e.target.tagName === 'A')
+				return;
+
+			SETTER('approve/show', '@(Are you sure you want to import selected widget?)', '"cloud-download" @(Import)', function() {
+				AJAX('GET https://componentator.com/api/widgets/{0}/'.format(el.attrd('id')), function(response) {
+					var data = {};
+					data.name = response.name;
+					data.category = response.category;
+					data.body = response.html;
+					data.picture = 'https://componentator.com' + response.picture;
+					data.reference = response.id + '';
+
+					FUNC.loading(true);
+					AJAX('POST [url]api/widgets/', data, function(response) {
+						FUNC.loading(false, 1000);
+						if (response.success) {
+							el.aclass('widgetextinstalled');
+							SETTER('snackbar/success', '@(Widget <b>{0}</b> has been imported successfully.)'.format(data.name));
+							EXEC('widgets/refresh');
+
+							// Hack
+							if (W.cmseditor && common.page !== 'widgets') {
+								cmseditor.widgetcachereset = true;
+								cmseditor.instance.updWidgetsList();
+								cmseditor.instance.updWidgetsCSS();
+							}
+						}
+					});
+				});
+			});
+
+		};
+	});
+
+	Tangular.register('widgetsinstalled', function(value) {
+		return widgets.grid.items.findItem('reference', value + '') ? ' widgetextinstalled' : '';
+	});
+
+</script>

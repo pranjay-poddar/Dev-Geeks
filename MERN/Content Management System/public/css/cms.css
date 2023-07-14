@@ -1,0 +1,22 @@
+.ui-mobilecarousel { overflow: hidden; visibility: visible; }
+.ui-mobilecarousel .ui-mobilecarousel-container { width: 100%; overflow-x: scroll; overflow-y: hidden; overflow-scrolling: touch; -webkit-overflow-scrolling: touch; }
+.ui-mobilecarousel .ui-mobilecarousel-body { padding-bottom: 35px; }
+.ui-mobilecarousel .row { margin: 0; }
+
+.animation { visibility: hidden; }
+.ui-animation-1-init { transition: all 0.2s; opacity: 0; }
+.ui-animation-1-run { opacity: 1; }
+.ui-animation-2-init { transition: all 0.2s; transform: scale(1.5); }
+.ui-animation-2-run { transform: scale(1); }
+.ui-animation-3-init { transition: all 0.2s; transform: scale(0.5); }
+.ui-animation-3-run { transform: scale(1); }
+.ui-animation-4-init { transition: all 0.2s; transform: rotateY(-90deg); }
+.ui-animation-4-run { transform: rotateY(-1deg); }
+.ui-animation-5-init { transition: all 0.2s; transform: translate(-100px); opacity: 0; }
+.ui-animation-5-run { transform: translate(0); opacity: 1; }
+.ui-animation-6-init { transition: all 0.2s; transform: translate(0, -100px); opacity: 0; }
+.ui-animation-6-run { transform: translate(0, 0); opacity: 1; }
+
+.jcomponent { display: none; visibility: hidden; }
+.nowrap, .wnowrap { text-overflow: ellipsis; white-space: nowrap; overflow: hidden; }
+.CMS_none { display: none; }

@@ -1,0 +1,55 @@
+<div data---="form__common.form2__if:tracking;width:450;autofocus:true;reload:cmseditortracking/reload;submit:cmseditortracking/submit;icon:chart-bar;title:@(Tracking)" class="hidden">
+
+	<div class="padding">
+		<div data---="input__cmseditor.tracking.id__dirsource:%tracking;dirempty:@(New tracking);placeholder:@(New tracking)">@(Existing tracking)</div>
+		<div class="help">@(Choose existing tracking.)</div>
+	</div>
+
+	<div class="padding bg-yellow hidden" data-bind="cmseditor.tracking.id__show:!value">
+		<div data---="input__cmseditor.tracking.name__required:true;maxlength:30;placeholder:@(A name for tracking)">@(Name)</div>
+	</div>
+
+	<nav data---="validation__cmseditor.tracking">
+		<button name="submit"><i class="fa fa-check-circle"></i>@(APPLY)</button>
+		<button name="cancel">@(Cancel)</button>
+	</nav>
+
+</div>
+
+<script>
+
+	PLUGIN('cmseditortracking', function(exports) {
+
+		AJAX('GET [url]api/tracking/', '%tracking');
+
+		exports.reload = function() {
+			SET('cmseditor.tracking.id', cmseditor.link.idtracking, true);
+			!cmseditor.link.idtracking && SET('cmseditor.tracking.name', '', true);
+		};
+
+		exports.submit = function(hide) {
+
+			var editor = cmseditor.instance;
+			var target = editor.getTarget();
+			var tracking = cmseditor.tracking;
+			var link;
+
+			if (target.prop('tagName') === 'A')
+				link = target;
+			else
+				link = editor.getParentElement('A');
+
+			if (!cmseditor.tracking.id) {
+				tracking.id = GUID(10);
+				AJAX('POST [url]api/tracking/', tracking, NOOP);
+				PUSH('%tracking', CLONE(tracking), true);
+				GET('%tracking').quicksort('name');
+			}
+
+			EXEC('cmseditorlink/tracking', tracking.id);
+			editor.change(true);
+			hide();
+		};
+	});
+
+</script>

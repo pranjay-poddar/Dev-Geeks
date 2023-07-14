@@ -1,0 +1,218 @@
+<div data---="form__cmseditor.form__if:link;width:600;height:450;submit:cmseditorlink/submit;cancel:cmseditorlink/cancel;reload:cmseditorlink/reload;title:@(Link editor);icon:link" class="hidden">
+	<div data-scope="cmseditor.link">
+		<div class="padding">
+			<div data---="input__?.href2__dirsource:%links;icon:sitemap;dirkey:path;dirvalue:url;placeholder:@(Choose existing page)" class="m">@(URL according to the sitemap)</div>
+		</div>
+		<hr class="nmt nmb" />
+		<div class="padding bg-yellow">
+			<div data---="input__?.href__icon:globe;required:true;autocomplete:cmseditorlink/autocomplete">@(URL address)</div>
+			<div class="m mt10 fs12">
+				<span class="link exec mr10" data-exec="cmseditorlink/type" data-type="upload"><i class="fa fa-folder-o mr5"></i>@(Browse files)</span>
+				<span class="link exec mr10" data-exec="cmseditorlink/type" data-type="email"><i class="fa fa-envelope-o mr5"></i>@(Email)</span>
+				<span class="link exec" data-exec="cmseditorlink/type" data-type="phone"><i class="fa fa-phone mr5"></i>@(Phone number)</span>
+			</div>
+			<div data---="input__?.target__dirsource:cmseditorlink.target;required:true" class="m">@(Target)</div>
+			<div data---="input__?.title__icon:info-circle" class="m">@(Tooltip)</div>
+			<div data---="input__?.alllinks__type:checkbox">@(Apply on all links in the parent container)</div>
+		</div>
+		<div class="padding">
+			<div data-bind="?.tracking__show:!value" class="hidden">
+				<div class="help"><i class="fa fa-chart-bar mr5"></i>@(This feature tracks clicks to this link.)</div>
+				<div class="fs12 b"><span class="link exec" data-path="common.form2" data-value="'tracking'">@(Enable link tracking)</span></div>
+			</div>
+			<div data-bind="?.tracking__show:value" class="hidden">
+				<div data---="nosqlcounter__?.tracking"></div>
+				<div class="fs11 mt5"><span class="link red exec" data-exec="cmseditorlink/removetracking"><i class="fa fa-times-circle mr5"></i>@(Remove tracking)</span></div>
+			</div>
+		</div>
+	</div>
+
+	<nav data---="validation__cmseditor.link">
+		<button name="submit"><i class="fa fa-check-circle"></i>@(APPLY)</button>
+		<button name="cancel">@(Cancel)</button>
+	</nav>
+
+</div>
+
+<script>
+
+	PLUGIN('cmseditorlink', function(exports) {
+
+		SET('?.target', [{ name: '@(Current tab or window)', id: '_self' },{ name: '@(New tab or window)', id: '_blank' }]);
+
+		WATCH('cmseditor.link.href2', function(path, value, type) {
+			if (value && type === 2)
+				SET('cmseditor.link.href', value);
+		});
+
+		WATCH('cmseditor.link.href', function(path, value, type) {
+			SET('cmseditor.link.href2', value);
+			if (type === 2 && cmseditor.link.target !== '_blank' && value.length > 12 && (/^(http|https)\:\/\//i).test(value))
+				SET('cmseditor.link.target', '_blank');
+		}, true);
+
+		exports.reload = function() {
+			var id = cmseditor.link.idtracking;
+			id && exports.tracking(id);
+			if (cmseditor.link.href)
+				CHANGE('cmseditor.link.href', true);
+		};
+
+		exports.type = function(el) {
+			var r = /^(tel|mailto)\:/;
+			var path = 'cmseditor.link.href';
+			switch (el.attrd('type')) {
+				case 'upload':
+					cmseditor.instance.filebrowser(path);
+					break;
+				case 'email':
+					SET(path, 'mailto:' + cmseditor.link.href.replace(r, ''));
+					break;
+				case 'phone':
+					SET(path, 'tel:' + cmseditor.link.href.replace(r, ''));
+					break;
+			}
+		};
+
+		exports.submit = function(hide) {
+
+			var editor = cmseditor.instance;
+			var target = editor.getTarget();
+			var obj = cmseditor.link;
+			var link;
+
+			if (target.prop('tagName') === 'A')
+				link = target;
+			else
+				link = editor.getParentElement('A');
+
+			var href = obj.href;
+
+			if (href.isEmail()) {
+				if (href.substring(0, 7) !== 'mailto:')
+					href = 'mailto:' + href;
+			} else if (href.substring(0, 1) === '+')
+				href = 'tel:' + href;
+
+			link[0].$cmsskipupdate = 1;
+			link.attr('href', href);
+
+			if (obj.title)
+				link.attr('title', obj.title.trim());
+			else
+				link.rattr('title');
+
+			if (obj.target === '_self')
+				link.rattr('target');
+			else
+				link.attr('target', obj.target);
+
+			if (obj.idtracking)
+				link.attrd('cms-track', obj.idtracking);
+			else
+				link.rattr('data-cms-track');
+
+			if (obj.alllinks) {
+				var parent = editor.getParent('CMS_repeat', 8);
+				parent == null && (parent = editor.getParent('CMS_remove', 5));
+				parent && parent.find('a').each(function() {
+					var link = $(this);
+
+					link.attr('href', obj.href);
+
+					if (obj.title)
+						link.attr('title', obj.title.trim());
+					else
+						link.rattr('title');
+
+					if (obj.target === '_self')
+						link.rattr('target');
+					else
+						link.attr('target', obj.target);
+				});
+			}
+
+			target.data('temporary') && target.removeData('temporary');
+			editor.change(true);
+			hide();
+		};
+
+		exports.cancel = function(hide) {
+
+			var editor = cmseditor.instance;
+			var target = editor.getTarget();
+
+			if (target.data('temporary')) {
+				target.removeData('temporary');
+				target.replaceWith(target.html());
+			}
+
+			hide();
+		};
+
+		exports.tracking = function(id) {
+			AJAX('GET [url]api/tracking/' + id, 'cmseditor.link.tracking');
+			cmseditor.link.idtracking = id;
+		};
+
+		exports.removetracking = function() {
+			var id = cmseditor.link.idtracking;
+			cmseditor.link.idtracking = null;
+			SET('cmseditor.link.tracking', null);
+			SETTER('approve/show', '@(Do you want to remove this tracking from database?)', '"trash-o" @(Remove)', function() {
+				AJAX('DELETE [url]api/tracking/{0}/'.format(id), NOOP);
+				var arr = GET('%tracking');
+				if (arr) {
+					arr = arr.remove('id', id);
+					SET('%tracking', arr);
+				}
+			});
+		};
+
+		exports.autocomplete = function(com) {
+			SETTER('autocomplete/attach', com, function(query, render) {
+
+				var q = query.substring(0, 6);
+
+				if (q === 'http:/' || q === 'https:') {
+					render(EMPTYARRAY);
+					return;
+				}
+
+				var output = [];
+				if (query.substring(0, 1) === '#') {
+					query = query.substring(1);
+					$(cmseditor.instance.getDocument()).find('[id]').each(function() {
+						if (this.id.toLowerCase().substring(0, 3) !== 'cms' && this.id.indexOf(query) !== -1)
+							output.push({ name: '#' + this.id, type: this.nodeName });
+					});
+				} else {
+					var arr = GET('%links');
+					for (var i = 0; i < arr.length; i++) {
+						var item = arr[i];
+						(item.url.indexOf(query) !== -1 || item.name.indexOf(query) !== -1) && output.push({ name: item.url, type: item.name });
+					}
+
+					$(cmseditor.instance.getDocument()).find('a').each(function() {
+						var el = $(this);
+						var href = el.attr('href');
+						if (!href || href.substring(0, 1) === '#' || href.indexOf('void(0)') !== -1)
+							return;
+						if (output.findIndex('name', href) === -1) {
+							var text = el.text();
+							output.push({ name: href, type: text || '' });
+						}
+					});
+				}
+
+				output.quicksort('name');
+				render(output);
+
+			}, function(value) {
+				SET('cmseditor.link.href', value.name, 2);
+			});
+		};
+
+	});
+
+</script>

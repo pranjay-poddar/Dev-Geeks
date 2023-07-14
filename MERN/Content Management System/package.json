@@ -1,0 +1,21 @@
+{
+  "name": "CMS",
+  "description": "A simple and powerful CMS solution written in Total.js / Node.js.",
+  "version": "14.0.0",
+  "main": "index.js",
+  "repository": {
+      "type": "git",
+      "url": "https://github.com/totaljs/cms"
+  },
+  "dependencies": {
+    "total4": "latest"
+  },
+  "scripts": {
+    "start": "node index.js 8000"
+  },
+  "keywords": [
+    "cms"
+  ],
+  "author": "Peter Širka",
+  "license":"MIT"
+}

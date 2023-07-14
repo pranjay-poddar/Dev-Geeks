@@ -1,0 +1,297 @@
+<style>
+	.ui-navigation-children { margin-left: 38px; }
+	.ui-navigation-item { background-color: #FFF9D1; border-radius: var(--radius); margin-bottom: 3px; font-size: 12px; height: 42px; line-height: 14px; cursor: pointer; }
+	.ui-navigation-item:hover { background-color: #FFF7B6; }
+	.ui-navigation-item .name { margin: 0 94px 0 84px; padding: 5px 30px 0 0; font-weight: bold; }
+	.ui-navigation-item .language { float: left; width: 38px; border-right: 1px solid #F5F1A3; color: #996; text-align: center; height: 42px; padding: 15px 0 0 0; float: left; font-size: 12px; }
+	.ui-navigation-item .plus { float: right; width: 42px; text-align: center; font-size: 16px; padding: 0; line-height: 41px; cursor: pointer; border-right: 1px solid #F5F1A3; border-left: 1px solid #F5F1A3; height: 42px; }
+	.ui-navigation-item .edit { float: right; width: 42px; text-align: center; font-size: 16px; padding: 0; line-height: 41px; cursor: pointer; border-right: 1px solid #F5F1A3; height: 42px; }
+	.ui-navigation-item .right-direction { float: right; width: 42px; text-align: center; font-size: 16px; padding: 0; line-height: 41px; cursor: pointer; border-right: 1px solid #F5F1A3; border-left: 1px solid #F5F1A3; height: 42px; }
+	.ui-navigation-item .left-direction { float: right; width: 42px; text-align: center; font-size: 16px; padding: 0; line-height: 41px; cursor: pointer; border-right: 1px solid #F5F1A3; border-left: 1px solid #F5F1A3; height: 42px; }
+	.ui-navigation-item .remove { float: right; width: 38px; text-align: center; color: red; font-size: 16px; padding: 13px 0 0 0; cursor: pointer; }
+	.ui-navigation-item .name span { display: block; font-size: 11px; color: gray; font-weight: normal; text-overflow: ellipsis; white-space: nowrap; overflow: hidden; margin-top: 2px; }
+	.ui-navigation-item .icon { width: 38px; border-right: 1px solid #F5F1A3; text-align: center; height: 42px; padding: 13px 0 0 4px; float: left; font-size: 16px; }
+	.ui-navigation-empty { padding: 50px 0; text-align: center; color: #A0A0A0; }
+	.ui-navigation-empty .fa { margin-right: 5px; }
+	.ui-navigation-language { margin-top: 20px; }
+	.ui-navigation-language:first-child { margin-top: 0; }
+</style>
+
+<div data---="form__common.form__icon:sitemap;if:pagesnavigation;width:800;submit:pagesnavigation/submit;reload:pagesnavigation/reload" class="hidden" data-scope="pagesnavigation">
+
+	<div class="toolbar toolbar2 nmt nmb">
+		<button class="exec" data-exec="?/create"><i class="fa fa-plus-circle green"></i>@(Add new)</button>
+		<span></span>
+		<button class="exec" data-exec="?/clear"><i class="fa fa-trash red"></i>@(Clear all)</button>
+	</div>
+
+	<div class="padding mt10">
+		<div class="row">
+			<div class="col-sm-3 m">
+				<div data---="input__?.name__maxlength:70">@(Title)</div>
+			</div>
+			<div class="col-sm-3 m">
+				<div data---="input__?.icon__type:icon">@(Icon)</div>
+			</div>
+			<div class="col-sm-6 m">
+				<div data---="input__?.body" class="m">@(Description)</div>
+			</div>
+		</div>
+		<div data---="navigation__?.children"></div>
+	</div>
+
+	<nav data---="validation__?">
+		<button name="submit"><i class="fa fa-check-circle"></i>@(APPLY)</button>
+		<button name="cancel">@(Cancel)</button>
+	</nav>
+
+</div>
+
+<script>
+
+	COMPONENT('navigation', function(self, config, cls) {
+
+		var dragdrop, language;
+		var cls2 = '.' + cls;
+
+		self.template = Tangular.compile('<div data-id="{{ id }}" class="ui-navigation-itemcontainer" draggable="true"><div class="ui-navigation-item"><i class="fa fa-times remove"></i><i class="fa fa-pencil edit"></i><i class="fa fa-plus-circle plus"></i><i class="fa fa-arrow-right right-direction"></i><i class="fa fa-arrow-left left-direction"></i><i class="icon{{ if icon }} {{ icon }}{{ fi }}"></i><span class="language">{{ language }}</span><div class="name">{{ name }}<span><i class="fa fa-globe mr5"></i>{{ url }}</span></div></div>{{ if children && children.length }}<div class="ui-navigation-children">{{ children | navigationchildren($.template) }}</div>{{ fi }}</div>');	
+		self.novalidate();
+		self.nocompile();
+		self.getter = null;
+
+		self.make = function() {
+			self.aclass(cls);
+
+			self.event('click', '.fa', function() {
+				var el = $(this);
+				var id = el.closest(cls2 + '-itemcontainer').attrd('id');
+				if (el.hclass('edit')) {
+					var item = self.finditem(id, self.get());
+					var obj = CLONE(item.item);
+					obj.$target = item.children;
+					SETR('pagesnavigationitem', obj);
+					SET('common.form2', 'pagesnavigationitem');
+				} else if (el.hclass('remove')) {
+					
+					var item = self.finditem(id, self.get());
+					var index = item.children.indexOf(item.item);
+					item.children.splice(index, 1);
+					self.update();
+					self.change(true);
+
+				} else if (el.hclass('plus')) {
+					var item = self.finditem(id, self.get());
+					var obj = {};
+					!item.item.children && (item.item.children = []);
+					obj.$target = item.item.children;
+					obj.behaviour = 'default';
+					obj.target = '_self';
+					SETR('pagesnavigationitem', obj);
+					SET('common.form2', 'pagesnavigationitem');
+
+				} else if (el.hclass('right-direction')) {
+					
+					var item = self.finditem(id, self.get());
+					var index = item.children.indexOf(item.item);
+	
+					if (index) {
+						var obj = item.children[index];
+						item.children.splice(index, 1);
+						if (!Array.isArray(item.children[index-1].children)){
+							item.children[index-1].children = [];
+						}
+						item.children[index-1].children.push(obj);
+						self.update();
+						self.change(true);
+						
+					}			
+					
+				} else if (el.hclass('left-direction')) {
+
+					var item = self.finditem(id, self.get());
+					var index = item.children.indexOf(item.item);
+					var parent = self.findparent(id ,self.get());
+
+					if (parent) {
+						var parentsiblings = self.finditem(parent.id, self.get());
+						var parentindex = parentsiblings.children.findIndex('id',parent.id);
+						item.children.splice(index,1);
+						parentsiblings.children.splice(parentindex+1,0,item.item);
+						self.update();
+						self.change(true);
+					}
+				}
+			});
+		
+
+			self.event('dragover dragenter dragstart drag drop', cls2 + '-itemcontainer', function(e) {
+				switch (e.type) {
+					case 'dragstart':
+						dragdrop = $(e.target);
+						if (!dragdrop.hclass(cls + '-itemcontainer'))
+							dragdrop = dragdrop.closest(cls2 + '-itemcontainer');
+						dragdrop.aclass(cls + '-drag');
+						language = dragdrop.closest(cls2 + '-language').attrd('language');
+						e.originalEvent.dataTransfer.setData('text', '1');
+						return;
+					case 'drop':
+						dragdrop.rclass(cls + '-drag');
+						var el = $(e.target);
+
+						if (!el.hclass(cls + '-itemcontainer'))
+							el = el.closest(cls2 + '-itemcontainer');
+
+						if (!el.length || el.closest(dragdrop).length || el[0] === dragdrop[0] || el.closest(cls2 + '-language').attrd('language') !== language)
+							return;
+
+						setTimeout2(self.id, function() {
+							self.move(el, dragdrop);
+						}, 50);
+						break;
+				}
+				e.preventDefault();
+			});
+		};
+
+		self.move = function(target, dragged) {
+
+			var arr = self.get();
+			var a = self.finditem(target.attrd('id'), arr);
+			var b = self.finditem(dragged.attrd('id'), arr);
+
+			if (a.children === b.children) {
+
+				// moving in the same array
+				var items = b.children;
+
+				var ai = items.indexOf(a.item);
+				var bi = items.indexOf(b.item);
+
+				if (ai < bi) {
+					items.splice(bi, 1);
+					ai = items.indexOf(a.item);
+					items.splice(ai, 0, b.item);
+				} else {
+					items.splice(ai, 1);
+					bi = items.indexOf(b.item);
+					items.splice(bi, 0, a.item);
+				}
+
+			} else {
+				// moving between arrays
+				b.children.splice(b.children.indexOf(b.item), 1);
+				a.children.push(b.item);
+			}
+			self.update();
+			self.change(true);
+		};
+
+		self.finditem = function(id, items) {
+			for (var i = 0; i < items.length; i++) {
+				var item = items[i];
+				if (item.id === id)
+					return { children: items, item: item };
+				if (item.children) {
+					item = self.finditem(id, item.children);
+					if (item)
+						return item;
+				}
+			}
+		};
+
+		self.findparent = function(id, items) {
+			for (var i = 0; i < items.length; i++) {
+				var item = items[i];
+				
+				if(item.children && item.children.length){
+					console.log(item.children.length);
+					for (var x = 0; x < item.children.length; x++) {
+						
+
+
+						var children = item.children[x];
+						
+						if(children.id === id){
+							return item;
+						} else {
+							item2 = self.findparent(id,item.children);
+							if(item2)
+								return item2;
+						}
+					}
+				}
+			}
+		};
+
+		self.setter = function(value) {
+
+			if (!value)
+				value = EMPTYARRAY;
+
+			var items = {};
+			for (var i = 0, length = value.length; i < length; i++) {
+				var item = value[i];
+				var key = item.language || '0';
+				var val = self.template(item, { template: self.template });
+				if (items[key])
+					items[key].push(val);
+				else
+					items[key] = [val];
+			}
+
+			var keys = Object.keys(items);
+			var builder = [];
+
+			keys.quicksort();
+
+			for (var i = 0; i < keys.length; i++)
+				builder.push('<div class="ui-navigation-language" data-language="{0}">{1}</div>'.format(keys[i], items[keys[i]].join('')));
+
+			self.html(builder.length ? builder : '<div class="ui-navigation-empty"><i class="fa fa-ban"></i>@(No items in this navigation)</div>');
+		};
+	});
+
+	Thelpers.navigationchildren = function(value, template) {
+		var builder = [];
+		for (var i = 0, length = value.length; i < length; i++) {
+			var item = value[i];
+			builder.push(template(item, { template: template }));
+		}
+		return builder.join('');
+	};
+
+	PLUGIN('pagesnavigation', function(exports) {
+
+		exports.create = function() {
+			SETR('pagesnavigationitem', { $target: pagesnavigation.children, target: '_self', behaviour: 'default' });
+			SET('common.form2', 'pagesnavigationitem');
+		};
+
+		exports.clear = function() {
+			SET('?.children', []);
+			CHANGE('?.children', true);
+		};
+
+		exports.reload = function(com) {
+			com.reconfigure({ title: '@(Edit: {0})'.format(common.dependencies.navigations.findItem('id', pagesnavigation.id).name) });
+		};
+
+		exports.submit = function(hide) {
+			FUNC.loading(true);
+
+			function clean(arr) {
+				for (var i = 0, length = arr.length; i < length; i++) {
+					if (arr[i].children && !arr[i].children.length)
+						arr[i].children = null;
+				}
+			}
+
+			clean(pagesnavigation.children);
+			AJAX('POST [url]api/nav/ REPEAT', pagesnavigation, function(response) {
+				FUNC.loading(false, 1000);
+				hide();
+			});
+		};
+	});
+
+</script>

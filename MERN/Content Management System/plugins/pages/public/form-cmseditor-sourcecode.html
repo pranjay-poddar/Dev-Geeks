@@ -1,0 +1,32 @@
+<div data---="form__cmseditor.form__if:sourcecode;width:1400;submit:cmseditorsourcecode/submit;cancel:cmseditorsourcecode/cancel;title:@(Source-code);icon:code" class="hidden">
+
+	<div class="padding">
+		<div data---="codemirror__cmseditorsourcecode__minheight:300;parent:window;margin:180;required:1;tabs:true;trim:true">@(HTML)</div>
+	</div>
+
+	<nav data---="validation__cmseditorsourcecode">
+		<button name="submit"><i class="fa fa-check-circle"></i>@(APPLY)</button>
+		<button name="cancel">@(Cancel)</button>
+	</nav>
+
+</div>
+
+<script>
+
+	PLUGIN('cmseditorsourcecode', function(exports) {
+
+		exports.submit = function(hide) {
+			cmseditor.instance.replace(cmseditorsourcecode);
+			hide();
+		};
+
+		exports.cancel = function(hide) {
+			var editor = cmseditor.instance;
+			editor.resize();
+			editor.load('sourcecode');
+			hide();
+		};
+
+	});
+
+</script>

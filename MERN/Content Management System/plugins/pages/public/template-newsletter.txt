@@ -1,0 +1,61 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=10" />
+	<meta name="format-detection" content="telephone=no" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+</head>
+<body style="padding:0;margin:0;background-color:#F0F0F0;font-family:Arial;font-size:14px;height:100%;line-height:18px">
+
+	@{if !repository.preview && repository.page.id}
+		<!-- For counting of statistcs -->
+		<img src="@{'%url'}/newsletter.gif?id=@{repository.page.id}" alt="" width="1" height="1" style="opacity:0;position:absolute;left:-100px;top:-100px" />
+	@{else}
+		<br /><br />
+	@{fi}
+
+	<div style="background-color:#F0F0F0;font-size:14px;font-family:Arial;line-height:18px">
+		<div id="CMS" style="padding:10px">
+			@{if repository.page && repository.page.body}
+				@{!repository.page.body}
+			@{else}
+			<table align="center" cellpadding="0" cellspacing="0" width="100%" border="0">
+				<tr>
+					<td style="width:95%;min-width:250px;max-width:600px;background-color:white;margin:20px auto;display:block" bgcolor="#FFFFFF" valign="top">
+						<div class="CMS_widgets" data-cms-category="Newsletter">
+							<a href="/" class="CMS_remove CMS_template" style="display:block;margin-bottom:15px"><img src="data:image/gif;base64,R0lGODdhWALIAIAAANbW1gAAACwAAAAAWALIAAAC/4SPqcvtD6OctNqLs968+w+G4kiW5omm6sq27gvH8kzX9o3n+s73/g8MCofEovGITCqXzKbzCY1Kp9Sq9YrNarfcrvcLDovH5LL5jE6r1+y2+w2Py+f0uv2Oz+v3/L7/DxgoOEhYaHiImKi4yNjo+AgZKTlJWWl5iZmpucnZ6fkJGio6SlpqeoqaqrrK2ur6ChsrO0tba3uLm6u7y9vr+wscLDxMXGx8jJysvMzc7PwMHS09TV1tfY2drb3N3e39DR4uPk5ebn6Onq6+zt7u/g4fLz9PX29/j5+vv8/f7/8PMKDAgQQLGjyIMKHChQwbOnwIMaLEiRQrWryIMaPGje8cO3r8CDKkyJEkS5o8iTKlypUsW7p8CTOmzJk0a9q8iTOnzp08e/r8CTSo0KFEixo9ijSp0qVMmzp9CjWq1KlUq1q9ijWr1q1cu3r9Cjas2LFky5o9izat2rVs27p9Czeu3Ll069q9izev3r18+/r9Cziw4MGECxs+jDix4sWMGzt+DDmy5MmUK1u+jDmz5s2cO3v+DDq06NGkS5s+jTq16tWsW7t+DTu27Nm0a9u+jTu37t28e/v+DTy48OHEixs/jjy58uXMmzt/Dj269OnUq1u/jj279u3cu3v/Dj68+PHky5s/jz69+vXs2x8rAAA7" border="0" alt="" style="width:100%;height:auto;max-width:600px" class="CMS_edit" /></a>
+							<a href="/" style="display:block;font-weight:bold;margin:10px 0 5px;font-size:16px;text-decoration:none;padding:0 15px" class="CMS_edit">Lorem Ipsum</a>
+							<div class="CMS_edit CMS_remove CMS_template" style="padding:0 15px 15px 15px">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod. Excepteur sint occaecat cupidatat nonproident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+							<div class="CMS_remove CMS_template" style="padding:0 15px 15px 15px">
+								<table style="width:100%;padding:0;margin:0;" border="0" cellpadding="0" cellspacing="0">
+									<tr class="CMS_repeat">
+										<td style="width:50%;padding:0;margin:0;font-size:14px;font-family:Arial">
+											<div style="margin-right:10px;margin-bottom:20px">
+												<a href="/"><img src="data:image/gif;base64,R0lGODdhDgGWAIAAANbW1gAAACwAAAAADgGWAAAC/4SPqcvtD6OctNqLs968+w+G4kiW5omm6sq27gvH8kzX9o3n+s73/g8MCofEovGITCqXzKbzCY1Kp9Sq9YrNarfcrvcLDovH5LL5jE6r1+y2+w2Py+f0uv2Oz+v3/L7/DxgoOEhYaHiImKi4yNjo+AgZKTlJWWl5iZmpucnZ6fkJGio6SlpqeoqaqrrK2ur6ChsrO0tba3uLm6u7y9vr+wscLDxMXGx8jJysvMzc7PwMHS09TV1tfY2drb3N3e39DR4uPk5ebn6Onq6+zt7u/g4fLz9PX29/j5+vv8/f7/8PMKDAgQQLGjyIMKHChQwbOnwIMaLEiRQrWryIMaPGjQgcO3r8CFJEAQA7" border="0" alt="" style="width:100%;height:auto;max-width:300px" class="CMS_edit" /></a>
+												<a href="/" style="display:block;font-weight:bold;margin:10px 0 5px;font-size:16px;text-decoration:none" class="CMS_edit">Lorem Ipsum</a>
+												<div class="CMS_edit" style="margin-top:5px">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod. Excepteur sint occaecat cupidatat nonproident.</div>
+											</div>
+										</td>
+										<td style="width:50%;padding:0;margin:0;font-size:14px;font-family:Arial">
+											<div style="margin-left:10px;margin-bottom:20px">
+												<a href="/"><img src="data:image/gif;base64,R0lGODdhDgGWAIAAANbW1gAAACwAAAAADgGWAAAC/4SPqcvtD6OctNqLs968+w+G4kiW5omm6sq27gvH8kzX9o3n+s73/g8MCofEovGITCqXzKbzCY1Kp9Sq9YrNarfcrvcLDovH5LL5jE6r1+y2+w2Py+f0uv2Oz+v3/L7/DxgoOEhYaHiImKi4yNjo+AgZKTlJWWl5iZmpucnZ6fkJGio6SlpqeoqaqrrK2ur6ChsrO0tba3uLm6u7y9vr+wscLDxMXGx8jJysvMzc7PwMHS09TV1tfY2drb3N3e39DR4uPk5ebn6Onq6+zt7u/g4fLz9PX29/j5+vv8/f7/8PMKDAgQQLGjyIMKHChQwbOnwIMaLEiRQrWryIMaPGjQgcO3r8CFJEAQA7" border="0" alt="" style="width:100%;height:auto;max-width:300px" class="CMS_edit" /></a>
+												<a href="/" style="display:block;font-weight:bold;margin:10px 0 5px;font-size:16px;text-decoration:none" class="CMS_edit">Lorem Ipsum</a>
+												<div class="CMS_edit" style="margin-top:5px">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod. Excepteur sint occaecat cupidatat nonproident.</div>
+											</div>
+										</td>
+									</tr>
+								</table>
+							</div>
+						</div>
+						<div style="border-top:1px solid #E0E0E0;padding:15px;text-align:center;font-size:11px;color:#A0A0A0"><span class="CMS_edit">I don't want to receive similar emails.</span> <a href="@{'%url'}/api/unsubscribe/?email=@@@" class="CMS_edit b">Unsubscribe me</a>.</div>
+					</td>
+				</tr>
+			</table>
+			@{fi}
+		</div>
+	</div>
+	<br />
+
+</body>
+</html>

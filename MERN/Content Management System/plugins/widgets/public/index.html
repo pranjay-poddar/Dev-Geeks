@@ -1,0 +1,169 @@
+<div data-scope="widgets">
+	<div data---="layout2__null__parent:.ui-layout2-section" class="invisible">
+
+		<section data-type="top2" data-size="44">
+			<div class="header">
+				<label><i class="fa fa-plug"></i>@(List of widgets)</label>
+				<nav data-bind="?.checked__enabled .S:value && value.length">
+					<button class="exec" data-exec="?/create"><i class="fa fa-plus-circle green"></i><span>@(Create)</span></button>
+					<button class="exec" data-exec="?/import" data-bind="common.componentator__show"><i class="fa fa-cloud-download"></i><span>@(Import)</span></button>
+					<button class="exec" data-exec="?/options"><i class="fa fa-wrench"></i><span>@(Options)</span></button>
+					<button class="exec" data-exec="?/remove" data-bind="?__enabled:value&&(value.selected||(value.checked&&value.checked.length))__track:checked,selected" disabled><i class="far fa-trash-o red"></i>@(Remove)</button>
+				</nav>
+			</div>
+		</section>
+
+		<section data-type="right" data-size="250,250,200,0">
+			<div class="padding">
+				<div class="caption"><i class="fa fa-clone"></i>@(Options)</div>
+				<nav class="links">
+					<button class="exec hidden b" data-bind="common.componentator__show" data-exec="?/import"><i class="fa fa-cloud-download"></i>@(Import widgets)</button>
+					<button class="exec" data-exec="?/create"><i class="fa fa-plus-circle green"></i>@(Create widget)</button>
+					<button class="exec" data-path="common.form" data-value="'pagesglobals'"><i class="fa fa-cog"></i>@(Variables)</button>
+					<button class="exec" data-path="common.form" data-value="'widgetsglobals'"><i class="fa fa-paint-brush"></i>@(Global style/script)</button>
+				</nav>
+			</div>
+		</section>
+
+		<section data-type="main">
+			<div data---="datagrid__?.grid__filterlabel:@(Search);checked:?.checked;button:?/button;noborder:1;height:window;margin:45;dblclick:?/update;highlight:1;click:?.selected">
+				<script type="text/plain">
+					[
+						{ name: 'id', text: '@(ID)', width: 120, hide: true, class: 'monospace' },
+						{ name: 'name', text: '@(Name)', width: 430, template: '{{ if picture }}<i class="fa fa-camera mr5 blue"></i>{{ fi }}{{ name }}' },
+						{ name: 'category', text: '@(Category)', width: 200 },
+						{ name: 'dtupdated', text: '@(Updated)', format: '[date]', width: 150, align: 1 },
+						{ name: '@(Options)', filter: false, align: 1, sort: false, width: 100, template: '<button title="@(Duplicate)" name="duplicate"><i class="far fa-copy"></i></button><button name="update" title="@(Edit)"><i class="fa fa-pencil"></i></button><button class="btn-remove" name="remove" title="@(Remove)"><i class="far fa-trash-o"></i></button>' }
+					]
+				</script>
+			</div>
+
+		</section>
+	</div>
+</div>
+
+<div data---="importer__common.form__if:widgetsform;url:@{#}/_widgets/form.html"></div>
+
+<script>
+	PLUGIN('widgets', function(exports) {
+
+		exports.refresh = function() {
+			FUNC.loading(true);
+			AJAX('GET [url]api/widgets/', function(response) {
+
+				var categories = {};
+
+				for (var i = 0, length = response.items.length; i < length; i++)
+					categories[response.items[i].category] = true;
+
+				SET('?.categories', Object.keys(categories));
+				SET('?.grid', response);
+
+				if (W.cmseditor)
+					W.cmseditor.widgetcachereset = true;
+
+				FUNC.loading(false, 200);
+			});
+		};
+
+		exports.import = function() {
+			SET('common.form3', 'widgetsimport');
+		};
+
+		exports.reload = function() {
+			exports.refresh();
+		};
+
+		exports.button = function(name, row, grid) {
+			switch (name) {
+				case 'remove':
+					SETTER('approve/show', '@(Are you sure you want to remove selected widget?)', '"trash" @(Remove)', function() {
+						FUNC.loading(true);
+						AJAX('DELETE [url]api/widgets/{id}/'.arg(row), function(response) {
+							FUNC.loading(false, 1000);
+							if (response.success) {
+								SETTER('snackbar/success', '@(Widget has been removed successfully.)');
+								exports.refresh();
+							}
+						});
+					});
+					break;
+				case 'update':
+				case 'duplicate':
+					FUNC.loading(true);
+					AJAX('GET [url]api/widgets/{id}/'.arg(row), function(response) {
+
+						if (name === 'duplicate') {
+							response.id = '';
+							response.reference = '';
+						}
+
+						SETR('widgetsform.form', response);
+						SET('common.form', 'widgetsform');
+					});
+					break;
+			}
+		};
+
+		exports.update = function(row) {
+			exports.button('update', row);
+		};
+
+		exports.create = function() {
+			SETR('widgetsform.form', {});
+			SET('common.form', 'widgetsform');
+		};
+
+		exports.options = function(el) {
+			var opt = {};
+			opt.align = 'right';
+			opt.element = el;
+			opt.items = [];
+			opt.items.push({ id: 'create', name: '@(Create widget)', icon: 'plus-circle green' });
+			opt.items.push({ id: 'refresh', name: '@(Refresh)', icon: 'refresh' });
+			opt.items.push('-');
+			opt.items.push({ id: 'import', name: '@(Import widgets)', icon: 'cloud-download' });
+			opt.items.push({ id: 'widgetsglobals', name: '@(Global CSS/JS)', icon: 'paint-brush' });
+			opt.items.push({ id: 'pagesglobals', name: '@(Variables)', icon: 'clone' });
+			opt.callback = function(item) {
+				switch (item.id) {
+					case 'refresh':
+					case 'create':
+					case 'import':
+						exports[item.id]();
+						break;
+					default:
+						SET('common.form', item.id);
+						break;
+				}
+			};
+
+			SETTER('menu/show', opt);
+		};
+
+		exports.remove = function(el) {
+			var model = GET('?');
+			SETTER('approve/show', '@(Are you sure you want to remove all selected widgets?)', '"trash" @(Remove)', function() {
+
+				FUNC.loading(true);
+
+				var checked = model.checked;
+				if (!checked || !checked.length) {
+					checked = model.selected;
+					if (checked)
+						checked = [checked];
+				}
+
+				checked.wait(function(el, next, index) {
+					SET('common.progress', (index / checked.length) * 100);
+					AJAX('DELETE [url]api/widgets/', { id: el.id }, next);
+				}, function() {
+					exports.refresh();
+					FUNC.loading(false, 1000);
+					SETTER('snackbar/success', '@(Widgets have been removed successfully.)');
+				});
+			});
+		};
+	});
+
+</script>

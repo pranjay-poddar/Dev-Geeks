@@ -1,0 +1,74 @@
+<div data---="form__common.form__if:settingsadmin;width:500;submit:settingsadmin/submit;autofocus:1;icon:user;title:@(Administrator)" class="hidden">
+
+	<div data-scope="settingsadmin">
+		<div class="padding bg-smoke">
+			<div data---="input__?.name__placeholder:@(Peter Sirka);required:1;maxlength:40" class="m">@(User name)</div>
+			<div data---="input__?.sa__type:checkbox" class="b">@(Super administrator)</div>
+		</div>
+		<div class="padding npb">
+			<div class="row">
+				<div class="col-md-6 m">
+					<div data---="input__?.login__required:1;placeholder:@(petersirka)">@(Login name)</div>
+					<div class="help"><span class="link exec" data-exec="settingsadmin/make">@(Make from name)</span></div>
+				</div>
+				<div class="col-md-6 m">
+					<div data---="input__?.password__required:1;camouflage:1" data-bind="?.id__config:'required:'+(value?0:1)">@(Login password)</div>
+					<div class="help"><span class="link exec" data-exec="settingsadmin/password">@(Generate password)</span></div>
+				</div>
+			</div>
+		</div>
+		<div data-bind="?.sa__hide">
+			<hr class="nmt nmb" />
+			<div class="padding">
+				<div data---="input__?.permissions__multiple:1;dirsource:common.permissions;placeholder:@(Choose allowed permissions)">@(Permissions)</div>
+				<div class="help m">@(If the user permissions will be empty then the user will be access to all functionality.)</div>
+			</div>
+		</div>
+	</div>
+
+	<nav data---="validation__settingsadmin">
+		<button name="submit">@(SAVE)</button>
+		<button name="cancel">@(Cancel)</button>
+	</nav>
+
+</div>
+
+<script>
+
+	PLUGIN('settingsadmin', function(exports) {
+
+		exports.password = function() {
+			SET('?.password', GUID(10));
+		};
+
+		exports.make = function() {
+			SET('?.login', (settingsadmin.name || '').slug().replace(/\-/g, ''));
+		};
+
+		exports.submit = function(hide) {
+
+			hide();
+
+			var model = GETR('?');
+
+			if (model.id) {
+				var user = settings.form.users.findItem('id', model.id);
+				user.name = model.name;
+				user.login = model.login;
+				if (model.password)
+					user.password = '#' + model.password;
+				user.permissions = model.permissions;
+				user.sa = model.sa;
+				UPDATE('settings.form.users');
+			} else {
+				model.id = GUID(15);
+				model.password = '#' + model.password;
+				PUSH('settings.form.users', model);
+			}
+
+			// Performs change for validation
+			CHANGE('settings.form.url');
+		};
+	});
+
+</script>

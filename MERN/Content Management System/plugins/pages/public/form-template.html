@@ -1,0 +1,97 @@
+<div data---="form__common.form__if:pagestemplate;width:1100;submit:pagestemplate/submit;title:@(Template source-code);icon:code;autofocus:1" class="hidden">
+
+	<div data-scope="pagestemplate">
+		<div class="padding">
+			<div data---="input__?.name__required:1;maxlength:30;placeholder:@(Type a name of template)">@(Name)</div>
+			<div class="help">@(Keep the simple naming)</div>
+		</div>
+
+		<div class="toolbar toolbar2 nmt nmb">
+			<button class="exec highlight" data-exec="?/file"><i class="far fa-images"></i>@(Insert file)</button>
+			<span></span>
+			<button class="exec" data-exec="?/import"><i class="fa fa-scroll"></i>@(Insert template)</button>
+		</div>
+
+		<div class="padding">
+			<div data---="codemirror__?.body__minheight:400;parent:window;margin:440;required:1;tabs:true;trim:true;type:totaljs;$id:codemirrorpagestemplate">@(HTML)</div>
+		</div>
+
+		<div data-bind="?.id__show:value && value.length" class="hidden">
+			<div class="padding bg-smoke">
+				<div class="row">
+					<div class="col-md-4 m">
+						<div class="keyvalue">
+							<div class="key">@(# Id)</div>
+							<div class="value" data-bind="?.id__html:value"></div>
+						</div>
+					</div>
+					<div class="col-md-4 m">
+						<div class="keyvalue">
+							<div class="key"><i class="fa fa-calendar"></i>@(Created)</div>
+							<div class="value" data-bind="?.dtcreated__html:Thelpers.time(value)"></div>
+						</div>
+					</div>
+					<div class="col-md-4 m">
+						<div class="keyvalue">
+							<div class="key"><i class="fa fa-calendar"></i>@(Updated)</div>
+							<div class="value" data-bind="?.dtupdated__html:value ? Thelpers.time(value) : '@(unchanged)'"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<nav data---="validation__pagestemplate">
+		<button name="submit"><i class="fa fa-check-circle"></i>@(APPLY)</button>
+		<button name="cancel">@(Cancel)</button>
+	</nav>
+</div>
+
+<script>
+
+	PLUGIN('pagestemplate', function(exports) {
+		exports.submit = function(hide) {
+			var model = GETR('?');
+			AJAX('POST [url]api/templates/ REPEAT', model, function(response) {
+				if (response.success) {
+					refresh_dependencies();
+					SETTER('snackbar/success', '@(Template has been saved successfully.)');
+					hide();
+				}
+			});
+		};
+
+		exports.file = function() {
+			refresh_filebrowser(function(url, filename) {
+				SETTER('#codemirrorpagestemplate/insert', url);
+			});
+		};
+
+		exports.import = function(el) {
+			var model = GET('?');
+			var opt = {};
+			opt.element = el;
+			opt.offsetY = -3;
+			opt.items = [];
+			switch (model.type) {
+				case 'page':
+					opt.items.push({ id: 'default', name: '@(Basic template)', icon: '!far fa-file-text-o' });
+					opt.items.push({ id: 'navigation', name: '@(Template with navigation)', icon: '!far fa-file-text-o' });
+					break;
+				case 'post':
+					opt.items.push({ id: 'post', name: '@(Basic template)', icon: '!far fa-file-text-o' });
+					break;
+				case 'newsletter':
+					opt.items.push({ id: 'newsletter', name: '@(Basic template)', icon: '!far fa-file-text-o' });
+					break;
+			}
+			opt.callback = function(item) {
+				exports.scope();
+				AJAX('GET @{#}/_pages/template-' + item.id + '.txt', '?.body');
+			};
+			SETTER('menu/show', opt);
+		};
+	});
+
+</script>

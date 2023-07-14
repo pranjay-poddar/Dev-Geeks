@@ -1,0 +1,26 @@
+{
+	"notices": [],
+	"url": "http://0.0.0.0:8000",
+	"componentator": true,
+	"cdn": "//cdn.componentator.com",
+	"cookie": "ahWFbCEfLO",
+	"users": [
+		{
+			"id": "ma81865iryfkc14",
+			"name": "Administrator",
+			"login": "rwffiw8p1z",
+			"password": "e5ce2766ac8fc2bdc18d52f50f0010a88c7bd3862b2c9a633e2aa51ab625193e",
+			"permissions": [],
+			"sa": true,
+			"passwordinit": "4wnjisepo1"
+		}
+	],
+	"usersinitialized": true,
+	"signals": [],
+	"languages": [],
+	"navigations": [],
+	"templates": [],
+	"templatesposts": [],
+	"templatesnewsletters": [],
+	"posts": []
+}

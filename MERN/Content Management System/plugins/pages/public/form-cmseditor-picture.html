@@ -1,0 +1,102 @@
+<div data---="form__cmseditor.form__if:picture;width:900;submit:cmseditorpicture/submit;scrollbar:true;$id:cmseditor.crop.modal;title:@(Picture editor);icon:camera" class="hidden">
+	<div class="padding npb bg-smoke">
+		<div data---="crop__cmseditor.crop.url__width:200;height:100;$id:cmseditor.crop"></div>
+	</div>
+	<hr class="nmt nmb" />
+	<div class="padding">
+		<div data---="input__cmseditor.crop.alt__placeholder:@(Describe the picture)">@(Alternate text)</div>
+	</div>
+	<div class="hidden" data-bind="cmseditor.crop.ishref__show">
+		<div class="padding bg-smoke">
+			<div class="row">
+				<div class="col-md-6 m">
+					<div data---="input__cmseditor.crop.href2__dirsource:%links;icon:sitemap;dirkey:path;dirvalue:url">@(URL according to the sitemap)</div>
+				</div>
+				<div class="col-md-6 m">
+					<div data---="input__cmseditor.crop.href">@(URL address)</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<nav data---="validation__cmseditor.crop">
+		<button name="submit"><i class="fa fa-check-circle"></i>@(APPLY)</button>
+		<button name="cancel">@(Cancel)</button>
+	</nav>
+
+</div>
+
+<script>
+
+	PLUGIN('cmseditorpicture', function(exports) {
+
+		WATCH('cmseditor.crop.href2', function(path, value, type) {
+			if (value && type === 2)
+				SET('cmseditor.crop.href', value);
+		});
+
+		WATCH('cmseditor.crop.href', function(path, value) {
+			SET('cmseditor.crop.href2', value);
+		}, true);
+
+		exports.submit = function(hide) {
+
+			var editor = cmseditor.instance;
+			var target = cmseditor.crop.target;
+			var cropper = FIND('#cmseditor.crop');
+
+			target.attr('alt', cmseditor.crop.alt);
+			cmseditor.crop.href && target.parent('a').attr('href', cmseditor.crop.href);
+			editor.change(true);
+
+			// Is the picture changed?
+			if (cropper.dirty()) {
+				hide();
+				return;
+			}
+
+			var url = cropper.getUrl();
+			if (url) {
+				var size = target.attrd('cms-size');
+				if (size) {
+					target.attrd('cms-src', url);
+					target.attr('src', url + '?s=' + size.replace('%', ''));
+				} else
+					target.attr('src', url);
+
+				cmseditor.instance.change(true);
+				hide();
+				return;
+			}
+
+			var data = cropper.output();
+			FUNC.loading(true);
+
+			AJAX('POST [url]api/upload/base64/', { file: data, name: (cmseditor.crop.alt || 'base64').slug() }, function(response, err) {
+
+				FUNC.loading(false, 500);
+
+				if (err) {
+					SETTER('snackbar/warning', err.toString());
+					return;
+				}
+
+				response && setTimeout(function() {
+					var size = target.attrd('cms-size');
+					if (size) {
+						target.attrd('cms-src', response);
+						target.attr('src', response + '?s=' + size.replace('%', ''));
+					} else
+						target.attr('src', response);
+
+					editor.autoresize();
+					cmseditor.instance.change(true);
+
+				}, 1000);
+
+				setTimeout(hide, 1000);
+			});
+		};
+	});
+
+</script>

@@ -1,0 +1,443 @@
+@{layout('')}
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>@{'%name'} v@{'%version'}</title>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=10" />
+	<meta name="format-detection" content="telephone=no" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<meta name="robots" content="all,follow" />
+	<link rel="stylesheet" href="@{'%cdn'}/spa.min@18@{if CONF.proicons}pro@{fi}.css" />
+	<script src="@{'%cdn'}/spa.min@18.js"></script>
+	<script>ENVIRONMENT('cms');</script>
+	@{import('head', 'admin-ui.css + admin.css + codemirror.min.css', 'admin-ui.js + admin.js + codemirror.min.js', 'favicon.ico')}
+</head>
+<body data---="exec">
+
+	@{json(user, 'userprofile', (k,v) => k === 'password' ? undefined : v)}
+	@{json(model, 'adminplugins')}
+
+	<div data---="LAZY autocomplete"></div>
+	<div data---="LAZY faicons"></div>
+	<div data---="LAZY datepicker__null__days:@(SU,MO,TU,WE,TH,FR,SO);months:@(January,February,March,April,May,June,July,August,September,October,November,December);today:@(Set today);firstday:0"></div>
+	<div data---="LAZY approve__null__cancel:@(Cancel)"></div>
+	<div data---="LAZY colorpicker"></div>
+	<div data---="LAZY directory__null__placeholder:@(Search)"></div>
+	<div data---="LAZY features__null__placeholder:@(Search ...)"></div>
+	<div data---="LAZY snackbar__null__button:@(Close);timeout:5500"></div>
+	<div data---="LAZY suggestion__null__placeholder:@(Search)"></div>
+	<div data---="LAZY tooltip"></div>
+	<div data---="LAZY menu"></div>
+	<div data---="loading" class="hidden"></div>
+	<div data---="avatar"></div>
+	<div data---="message__null__style:2"></div>
+	<div data---="mainprogress__common.progress"></div>
+	<div data---="shortcuts"></div>
+	<div data---="websocket__null__reconnect:5000;url:[url]live/"></div>
+
+	<div class="header-message hidden">
+		<i class="fa fa-bell"></i>
+		<div>
+			<div class="header-message-table">
+				<div class="header-message-cell"></div>
+			</div>
+		</div>
+	</div>
+
+	<div data---="layout2__null__parent:window" class="invisible">
+		<div data-type="left" data-size="220,220,200,0" data-scrollbar="selector:main;margin:40">
+			<main>
+				<a href="/" class="logo" target="_blank"><i class="fa fa-globe"></i><span>@{'%name'}</span></a>
+				@{foreach m in model}
+					@{if m.plugins.length && m.name}
+						@{if m.name}
+						<hr class="nmt" />
+						<div class="group">@{m.name}</div>
+						@{fi}
+						<ul class="nav" data-bind="common.nav__template" data---="selected__common.page__selector:li">
+							@{foreach p in m.plugins}
+								<li data-if="@{p.id}" class="exec" data-exec="common/plugin"><i class="@{p.icon}"></i>@{p.name}</li>
+							@{end}
+						</ul>
+					@{fi}
+				@{end}
+				<hr />
+				<ul class="nav" data-bind="common.nav__template" data---="selected__common.page__selector:li.selectable">
+					<li class="exec" data-exec="common/profile"><i class="fa fa-user-circle"></i>@(My profile)</li>
+					@{if user.sa}
+					<li data-if="settings" class="exec selectable" data-exec="common/plugin"><i class="fa fa-cog"></i>@(Settings)</li>
+					@{fi}
+					<li class="exec" data-exec="common/logout"><i class="fa fa-power-off red"></i>@(Logout)</li>
+				</ul>
+			</main>
+		</div>
+		<div data-type="main">
+			<div id="parts">
+				@{foreach m in model}
+					@{foreach p in m.plugins}
+					<div data---="part__common.page__if:@{p.id};url:@{#}/_@{p.id}/index.html;reload:@{p.id}/reload;hidden:@{p.id}/hidden" data-id="@{p.id}" data-icon="@{p.icon}" data-name="@{p.name}" class="hidden"></div>
+					@{end}
+				@{end}
+			</div>
+		</div>
+	</div>
+
+	<!-- SPECIAL DEPENDENCIES -->
+	<div data---="importer__common.form3__if:widgetsimport;url:@{#}/_widgets/form-import.html"></div>
+	<div data---="importer__common.form__if:widgetsglobals;url:@{#}/_widgets/form-globals.html"></div>
+	<div data---="importer__common.form3__if:filebrowser;url:@{#}/_pages/form-filebrowser.html"></div>
+	<div data---="importer__common.form__if:pagesglobals;url:@{#}/_pages/form-globals.html"></div>
+	<div data---="importer__common.form__if:pagestemplate;url:@{#}/_pages/form-template.html"></div>
+	<div data---="importer__common.form__if:profileform;url:/_settings/profile.html"></div>
+	<div data---="importer__common.top__if:markdownhelp;url:/_notices/help.html"></div>
+
+	<script>
+
+		var user = PARSE($('#userprofile').html());
+		var filebrowser = {};
+
+		common.nav = PARSE($('#adminplugins').html());
+		common.version = @{MAIN.version};
+		common.init = false;
+
+		(function() {
+
+			var parts = $('#parts');
+			var permissions = [];
+
+			parts.find('> div').each(function() {
+				var el = $(this);
+				permissions.push({ id: el.attrd('id'), name: el.attrd('name'), icon: el.attrd('icon') });
+			});
+
+			common.lastpage = permissions[0] ? permissions[0].id : '';
+			SET('common.permissions', permissions);
+		})();
+
+		ENV('url', '/admin/');
+		ENV('date', '@(yyyy-MM-dd - HH:mm)');
+
+		MAKE('common', function(obj) {
+
+			obj.name = document.title;
+			obj.notifications = {};
+
+			var tmp = $('.header-message');
+			obj.notifications.ui = { el: tmp, icon: tmp.find('> .fa'), body: tmp.find('.header-message-cell') };
+			obj.notifications.messages = []; // messages from notifications
+			obj.notifications.running = false;
+			obj.notifications.template = '<b>{0}</b>{1}';
+
+			obj.componentator = @{if PREF.componentator !== false}true@{else}false@{fi};
+
+			// Navigation
+			obj.page = '';
+			obj.form = '';
+			obj.form2 = ''; // Form 2nd level
+			obj.form3 = ''; // Form 3nd level
+
+			setTimeout(function(obj) {
+				if (obj.pagecache)
+					EXEC('common/plugin', obj.pagecache);
+				else
+					EXEC('common/plugin', common.lastpage);
+			}, 200, obj);
+		});
+
+		CACHEPATH('common.pagecache', '1 week');
+
+		ON('page', function(item) {
+			SET('common.title', item.name);
+			document.title = common.name + ': ' + item.name;
+		});
+
+		Thelpers.time = function(value) {
+
+			if (!value)
+				return;
+
+			var diff = Date.now() - value.parseDate().getTime();
+			var minutes = ((diff / 1000) / 60) >> 0;
+
+			if (minutes <= 1) {
+				var seconds = (diff / 1000) >> 0;
+				if (seconds < 60)
+					return @(seconds + ' ' + Tangular.helpers.pluralize(seconds >> 0, 'seconds', 'second', 'seconds', 'seconds') + ' ago');
+			}
+
+			if (minutes < 60)
+				return minutes < 2 ? '@(less than minute ago)' : @(minutes + ' minutes ago');
+
+			var hours = (minutes / 60) >> 0;
+			if (hours < 24)
+				return @(hours + ' ' + Tangular.helpers.pluralize(hours, 'hours', 'hour', 'hours', 'hours') + ' ago');
+
+			var days = (hours / 24) >> 0;
+			if (days < 30)
+				return @(days + ' ' + Tangular.helpers.pluralize(days, 'days', 'day', 'days', 'days') + ' ago');
+
+			var months = (days / 29) >> 0;
+			if (months < 12)
+				return @(months + ' ' + Tangular.helpers.pluralize(months, 'months', 'month', 'months', 'months') + ' ago');
+
+			var years = (months / 12) >> 0;
+			return @(years + ' ' + Tangular.helpers.pluralize(years, 'years', 'year', 'years', 'years') + ' ago');
+		};
+
+		ON('message', function(message) {
+			if (message.type === 'visitor') {
+				EMIT('visitor', message.message);
+			} else {
+				common.notifications.messages.push(message);
+				if (!common.notifications.running)
+					refresh_notifications();
+			}
+		});
+
+		ON('online', function(is) {
+			$('header .user .fa').tclass('green', is).tclass('red', !is);
+			if (common.init)
+				FUNC.loading(!is);
+			else
+				common.init = true;
+		});
+
+		function refresh_notifications() {
+			var item = common.notifications.messages.shift();
+
+			if (item === undefined) {
+				common.notifications.ui.el.rclass('header-message-visible').aclass('hidden', 200);
+				common.notifications.running = false;
+				return;
+			}
+
+			var msg = '';
+			var t = common.notifications.template;
+
+			if (item.message)
+				item.message = Thelpers.encode(item.message);
+
+			switch (item.type) {
+
+				case 'navigation.save':
+					msg = t.format('@(Navigation has been saved)', item.message);
+					break;
+
+				case 'navigations/edit':
+				case 'pages/edit':
+				case 'posts/edit':
+				case 'newsletters/edit':
+				case 'notices/edit':
+				case 'widgets/edit':
+
+					if (user.name !== item.user) {
+
+						var tmp = item.type.substring(0, item.type.indexOf('/'));
+						if (tmp === 'navigations')
+							tmp = 'pagesnavigation';
+						else
+							tmp += 'form';
+
+						if (tmp === common.form) {
+							// send warning to another user
+							if (item.notified)
+								SETTER('message/warning', '@(The user  "<b>{0}</b>" is editing this content too.)'.format(item.user));
+							else {
+								var model = GET(tmp);
+								if (model && model.id === item.message) {
+									setTimeout(function(item) {
+										item.notified = true;
+										item.user = user.name;
+										SETTER('websocket/send', item);
+									}, 1000, item);
+								}
+							}
+						}
+					}
+
+					refresh_notifications();
+					return;
+
+				case 'newsletters/save':
+					msg = t.format('@(Nesletter has been saved)', item.message);
+					break;
+				case 'newsletters/percentage':
+					msg = t.format('@(Sending of newsletter)', '@(Sent: {0}%)'.format(item.message));
+					break;
+				case 'newsletters/sent':
+					msg = t.format('@(Newsletter has been sent)', item.message);
+					break;
+				case 'subscribers/save':
+					msg = t.format('@(Subscriber has been saved)', item.message);
+					break;
+				case 'subscribers/unsubscribe':
+					msg = t.format('@(Unsubscribed)', item.message);
+					break;
+				case 'files/clear':
+					msg = t.format('@(Useless files have been removed)', '@(Count of files: {0}x)'.format(item.message));
+					common.form3 === 'filebrowser' && EXEC('filebrowser_refresh');
+					break;
+				case 'contacts/create':
+					msg = t.format('@(New contact form received)', '@(From: {0})'.format(item.message));
+					break;
+				case 'pages/save':
+					msg = t.format('@(Page has been saved)', item.message);
+					break;
+				case 'posts/save':
+					msg = t.format('@(Post has been saved)', item.message);
+					break;
+				case 'notices/save':
+					msg = t.format('@(Notice has been saved)', item.message);
+					break;
+				case 'widgets/save':
+					msg = t.format('@(Widget has been saved)', item.message);
+					break;
+				case 'admin/login':
+					msg = t.format('@(Administrator has been logged)', item.message);
+					break;
+				case 'settings/save':
+					msg = '@(Settings have been updated.)';
+					break;
+				case 'success':
+				case 'warning':
+					if (item.type === 'warning')
+						SETTER('message/warning', item.message);
+					else
+						SETTER('snackbar', item.type, item.message);
+					break;
+				default:
+					if (item.TYPE === 'event')
+						msg = t.format(item.type, item.message);
+					break;
+			}
+
+			msg = { type: item.type, body: msg };
+			EMIT('notification', msg);
+
+			if (msg && msg.body) {
+				!common.notifications.running && common.notifications.ui.el.rclass('hidden').aclass('header-message-visible', 100);
+				common.notifications.running = true;
+				msg && common.notifications.ui.body.html(msg.body);
+			}
+
+			setTimeout(refresh_notifications, item.delay || 3000);
+		}
+
+		SETTER(true, 'shortcuts/register', 'cmd + s, ctrl + s', function() {
+			if (common.form === 'pagesform')
+				EXEC('pagesform/submit');
+		}, true);
+
+		SETTER(true, 'shortcuts/register', 'ESC', function() {
+			if (common.window)
+				NULL('common.window');
+			else if (common.form3)
+				NULL('common.form3');
+			else if (W.cmseditor && cmseditor.form)
+				NULL('cmseditor.form');
+			else if (common.form2)
+				NULL('common.form2');
+			else if (common.form) {
+				switch (common.form) {
+					case 'pagesform':
+					case 'productsform':
+					case 'newslettersform':
+					case 'widgetsform':
+					case 'noticesform':
+					case 'postsform':
+					case 'pagesredirects':
+					case 'pagestemplate':
+						var fields = MODIFIED(common.page + 'form').join(',');
+						if (fields.indexOf('.body') !== -1) {
+							SETTER('approve/show', '@(Are you sure you want to close this form without saving?)', '@(Yes)', function() {
+								NULL('common.form');
+							});
+							return;
+						}
+						break;
+				}
+				NULL('common.form');
+			}
+		});
+
+		SETTER(true, 'shortcuts/register', 'F10', function(e) {
+			if (common.window)
+				NULL('common.window');
+			else if (common.form === 'pagesform')
+				EXEC('pagesform/preview2');
+			else if (common.form === 'postsform')
+				EXEC('postsform/toolbar', 'preview');
+
+		});
+
+		SETTER(true, 'shortcuts/register', 'F1', function(e) {
+
+			var items = [];
+
+			for (var i = 0; i < common.permissions.length; i++) {
+				var item = common.permissions[i];
+				if (user.sa || !user.permissions.length || user.permissions.indexOf(item.id) !== -1)
+					items.push({ id: item.id, name: item.name, icon: item.icon });
+			}
+
+			items.push({ name: '@(Sign out)', icon: 'power-off', signout: true });
+
+			SETTER('features/show', items, function(item) {
+				if (item.signout) {
+					location.href = '[url]logout/'.env();
+				} else {
+					W.cmseditor && cmseditor.form && SET('cmseditor.form', '');
+					common.form3 && SET('common.form3', '');
+					common.form2 && SET('common.form2', '');
+					common.form && SET('common.form', '');
+					REDIRECT(item.url);
+				}
+			}, true);
+		}, true);
+
+		PLUGIN('common', function(exports) {
+
+			exports.profile = function() {
+				SET('common.form', 'profileform');
+			};
+
+			exports.plugin = function(el) {
+				var id = el instanceof jQuery ? el.attrd('if') : el;
+				var item = common.permissions.findItem('id', id);
+				if (item) {
+					EMIT('page', item);
+					SET('common.page', id);
+					SET('common.pagecache', id);
+				} else
+					SETTER('message/warning', '@(You don\'t have required permissions.)');
+			};
+
+			exports.menu = function(el) {
+				var opt = {};
+				opt.element = el;
+				opt.items = [];
+				for (var i = 0; i < common.nav.length; i++) {
+					var item = common.nav[i];
+					opt.items.push({ icon: '!' + item.icon, name: item.name, id: item.id });
+				}
+				opt.callback = function(item) {
+					exports.plugin(item.id);
+				};
+
+				SETTER('menu/show', opt);
+			};
+
+			exports.logout = function() {
+				location.href = '[url]logout/'.env();
+			};
+		});
+
+	</script>
+
+	@{section('admin')}
+	@{components('admin')}
+
+</body>
+</html>

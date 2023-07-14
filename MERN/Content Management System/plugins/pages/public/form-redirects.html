@@ -1,0 +1,42 @@
+<div data---="form__common.form__if:pagesredirects;width:800;height:390;reload:pagesredirects/reload;submit:pagesredirects/submit;title:@(Edit redirects)" class="hidden">
+
+	<div class="padding">
+		<div data---="codemirror__pagesredirects.body__height:300;type:totaljsresources;tabs:true;trim:true">@(Redirects)</div>
+		<div class="help">@(Follow this format: <code>OLDURL&nbsp;&nbsp;: NEWURL</code>)</div>
+	</div>
+	<div data---="error__pagesredirects.response"></div>
+
+	<nav data---="validation__pagesredirects">
+		<button name="submit"><i class="fa fa-check-circle"></i>@(SAVE)</button>
+		<button name="cancel">@(Cancel)</button>
+	</nav>
+
+</div>
+
+<script>
+
+	PLUGIN('pagesredirects', function(exports) {
+
+		exports.reload = function() {
+			AJAX('GET [url]api/pages/redirects/', function(response) {
+				if (!response.body)
+					response.body = '// OLD URL      : NEW URL\n@(/products/)      : @(/company/products/)\n@(/services/)      : @(/company/services/)';
+				SET('?', response, true);
+				FUNC.loading(false, 1000);
+			});
+		};
+
+		exports.submit = function() {
+			FUNC.loading(true);
+			AJAX('POST [url]api/pages/redirects/ REPEAT', GETR('?'), function(response) {
+				FUNC.loading(false, 1000);
+				if (response.success) {
+					SETTER('snackbar/success', '@(Redirects have been applied successfully.)');
+					NULL('common.form');
+				}
+			});
+		};
+
+	});
+
+</script>

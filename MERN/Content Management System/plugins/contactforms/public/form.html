@@ -1,0 +1,54 @@
+<div data---="form__common.form__if:contactformsform;width:800;submit:contactformsform/submit;autofocus:true;title:@(Contact form);icon:envelope-open" class="hidden">
+
+	<div data-scope="contactformsform">
+		<div class="padding">
+			<div class="row">
+				<div class="col-md-4 m">
+					<div class="keyvalue">
+						<div class="key"><i class="far fa-user"></i>@(User)</div>
+						<div class="value" data-bind="?__text:value.name"></div>
+					</div>
+				</div>
+				<div class="col-md-4 m">
+					<div class="keyvalue">
+						<div class="key"><i class="fa fa-envelope"></i>@(Email)</div>
+						<div class="value"><a data-bind="?.email__text__href:'mailto:'+value"></a></div>
+					</div>
+				</div>
+				<div class="col-md-4 m">
+					<div class="keyvalue">
+						<div class="key"><i class="fa fa-phone"></i>@(Phone)</div>
+						<div class="value"><a data-bind="?.phone__text__href:'tel:'+value__show"></a><span data-bind="?.phone__hide">---</span></div>
+					</div>
+				</div>
+				<div class="col-md-4 m">
+					<div class="keyvalue">
+						<div class="key"><i class="fa fa-calendar"></i>@(Created)</div>
+						<div class="value" data-bind="?.dtcreated__html:Thelpers.time(value)"></div>
+					</div>
+				</div>
+				<div class="col-md-4 m">
+					<div class="keyvalue">
+						<div class="key"><i class="fa fa-desktop"></i>@(Device)</div>
+						<div class="value"><span data-bind="?.ip__text__empty"></span> / <span data-bind="?.browser__text__empty"></span></div>
+					</div>
+				</div>
+				<div class="col-md-4 m">
+					<div class="keyvalue">
+						<div class="key"><i class="fa fa-globe"></i>@(Source)</div>
+						<div class="value" data-bind="?.source__text__empty"></div>
+					</div>
+				</div>
+			</div>
+			<div class="padding bg-smoke">
+				<pre data-bind="?.body__text" style="white-space:pre-wrap;padding:0;margin:0"></pre>
+			</div>
+		</div>
+
+	</div>
+
+	<nav>
+		<button name="cancel" style="width:100%">@(Cancel)</button>
+	</nav>
+
+</div>

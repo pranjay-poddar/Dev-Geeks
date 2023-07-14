@@ -1,0 +1,137 @@
+<style>
+	.event-type { font-weight: bold; height: 12px; }
+	.event-type span { float: right; font-weight: normal; font-size: 10px; margin: 2px 0 0; color: gray; }
+	.event-type span i { margin: 0 0 0 5px !important; }
+	.event-user { font-size: 10px; color: gray; margin-top: 5px; height: 20px; }
+	.event-user span { float: right; color: black; }
+	.event-user span i { margin: 0 0 0 5px !important; }
+	.event { border-bottom: 1px solid #E0E0E0; margin-top: 5px; padding: 8px 20px; font-size: 12px; }
+	.event-body { font-size: 14px; }
+	.event i { margin-right: 5px; }
+	.event:first-child { margin-top: 0; }
+	.event-bg-today { background: linear-gradient(#FFFFD5,white); }
+</style>
+
+<div data-scope="events" class="events">
+	<div data---="layout2__null__parent:.ui-layout2-section" class="invisible">
+
+		<div data-type="top2" data-size="44">
+			<div class="header">
+				<label><i class="far fa-clock-o"></i>@(Events)</label>
+				<nav data-bind="user.sa__show" class="hidden">
+					<button class="exec" data-exec="?/clear" data-bind="!?__show:value.today.length||value.yesterday.length||value.older.length"><i class="fa fa-trash-o red"></i>@(Clear events)</button>
+				</nav>
+			</div>
+		</div>
+
+		<div data-type="main">
+			<div class="padding-events">
+				<div data---="mobilecarousel__null__selecotr:.col-sm-4">
+					<div class="row">
+						<div class="col-sm-4">
+							<div class="panel">
+								<label><i class="fa fa-circle green blink fs11"></i> @(Today events)</label>
+								<div data---="viewbox__common.page__parent:.ui-layout2-section;scrollbar:1;margin:100">
+									<div data-bind="events.today__template">
+										<script type="text/html">
+											{{ foreach m in value }}
+												<div class="event">
+													<div class="event-type">{{ if m.user }}<span>{{ m.user }}<i class="fa fa-user"></i></span>{{ fi }}<i class="fa fa-bookmark"></i>{{ m.type }}</div>
+													<div class="event-user"><span>{{ m.dtcreated | time }}<i class="far fa-clock-o"></i></span>{{ m.ua }} / {{ m.ip }}</div>
+													<div class="event-body">{{ m.body }}</div>
+												</div>
+											{{ end }}
+										</script>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-sm-4">
+							<div class="panel">
+							<label>@(Yesterday events)</label>
+								<div data---="viewbox__common.page__parent:.ui-layout2-section;scrollbar:1;margin:100">
+									<div data-bind="events.yesterday__template">
+										<script type="text/html">
+											{{ foreach m in value }}
+												<div class="event">
+													<div class="event-type">{{ if m.user }}<span>{{ m.user }}<i class="fa fa-user"></i></span>{{ fi }}<i class="fa fa-bookmark"></i>{{ m.type }}</div>
+													<div class="event-user"><span>{{ m.dtcreated | time }}<i class="far fa-clock-o"></i></span>{{ m.ua }} / {{ m.ip }}</div>
+													<div class="event-body">{{ m.body }}</div>
+												</div>
+											{{ end }}
+										</script>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-sm-4">
+							<div class="panel">
+								<label>@(Older events)</label>
+								<div data---="viewbox__common.page__parent:.ui-layout2-section;scrollbar:1;margin:100">
+									<div data-bind="events.older__template">
+										<script type="text/html">
+											{{ foreach m in value }}
+												<div class="event">
+													<div class="event-type">{{ if m.user }}<span>{{ m.user }}<i class="fa fa-user"></i></span>{{ fi }}<i class="fa fa-bookmark"></i>{{ m.type }}</div>
+													<div class="event-user"><span>{{ m.dtcreated | time }}<i class="far fa-clock-o"></i></span>{{ m.ua }} / {{ m.ip }}</div>
+													<div class="event-body">{{ m.body }}</div>
+												</div>
+											{{ end }}
+										</script>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="clearfix"></div>
+			</div>
+		</div>
+	</div>
+
+</div>
+<script>
+
+	PLUGIN('events', function(exports) {
+
+		exports.scope = 'events';
+		exports.limit = 100; // Count of items per page
+
+		exports.refresh = function() {
+
+			if (common.page !== 'events')
+				return;
+
+			FUNC.loading(true);
+			AJAX('GET [url]api/{0}/'.format(exports.scope), function(response) {
+				var format = 'yyyyMMdd';
+				var data = {};
+				var now = NOW.format(format);
+				data.today = response.findAll(n => n.dtcreated.format(format) === now);
+				now = NOW.add('-1 day').format(format);
+				data.yesterday = response.findAll(n => n.dtcreated.format(format) === now);
+				now = +now;
+				data.older = response.findAll(n => +n.dtcreated.format(format) < now);
+				SET('events', data);
+				FUNC.loading(false, 500);
+			});
+		};
+
+		exports.clear = function() {
+			SETTER('approve/show', '@(Are you sure you want to clear all events?)', '"trash-o" @(Clear)', function() {
+				AJAX('GET [url]api/events/clear/', function() {
+					SET('events', { today: [], yesterday: [], older: [] });
+					exports.element.SETTER('*', 'resize');
+				});
+			});
+		};
+
+		exports.reload = function() {
+			exports.refresh();
+		};
+
+		ON('knockknock', exports.refresh);
+
+	});
+
+</script>

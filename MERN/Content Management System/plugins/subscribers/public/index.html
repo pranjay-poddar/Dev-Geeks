@@ -1,0 +1,158 @@
+<div data-scope="subscribers">
+	<div data---="layout2__null__parent:.ui-layout2-section" class="invisible">
+		<section data-type="top2" data-size="44">
+			<div class="header">
+				<label><i class="far fa-address-card"></i>@(List of subscribers)</label>
+				<nav data-bind="?.checked__enabled .S:value && value.length">
+					<button class="exec" data-exec="?/import"><i class="fa fa-cloud-upload"></i>@(Import)</button>
+					<button class="exec" data-exec="?/options"><i class="fa fa-wrench"></i>@(Options)</button>
+					<button class="exec S" data-exec="?/checked" disabled><i class="fa fa-check-circle"></i>@(Checked)</button>
+				</nav>
+			</div>
+		</section>
+
+		<section data-type="main">
+			<div data---="datagrid__?.grid__filterlabel:@(Search);checked:?.checked;button:?/button;noborder:1;height:window;margin:45;exec:?/refresh">
+				<script type="text/plain">
+					[
+						{ name: 'email', text: '@(Email address)', width: 300, template: '{{ if unsubscribed }}<span class="badge badge-red mr5">@(unsubscribed)</span>{{ fi }}{{ email }}' },
+						{ name: 'source', text: '@(Source)', width: 200 },
+						{ name: 'browser', text: '@(Device)', width: 150 },
+						{ name: 'unsubscribed', text: '@(Unsubscribed)', width: 130, type: 'boolean', options: [{ text: '@(Yes)', value: true }, { text: '@(No)', value: false }], align: 1 },
+						{ name: 'dtcreated', text: '@(Logged)', width: 200, template: '{{ dtcreated | format(\'@(yyyy-MM-dd HH:mm)\') }}', align: 1 },
+						{ name: '@(Options)', align: 1, filter: false, sort: false, width: 100, template: '<button name="ban" title="@(Ban)"><i class="fa fa-ban"></i></button><button class="btn-remove" name="remove" title="@(Remove)"><i class="far fa-trash-o"></i></button>' }
+					]
+				</script>
+			</div>
+		</section>
+	</div>
+</div>
+
+<div data---="importer__common.form__if:subscribersimport;url:@{#}/_subscribers/form-import.html"></div>
+
+<script>
+	PLUGIN('subscribers', function(exports) {
+
+		exports.refresh = function(type, filter, sort, page) {
+
+			FUNC.loading(true);
+
+			if (!filter)
+				filter = {};
+
+			if (!filter.limit)
+				filter.limit = 100;
+
+			filter.page = page || 1;
+
+			if (sort && sort.length)
+				filter.sort = sort.join(',');
+			else
+				delete filter.sort;
+
+			AJAX('GET [url]api/subscribers/', filter, function(response) {
+				SET('?.grid', response);
+				FUNC.loading(false, 200);
+			});
+		};
+
+		exports.reload = function() {
+			SET('?.grid', null);
+		};
+
+		exports.button = function(name, row, grid) {
+			switch (name) {
+				case 'remove':
+					SETTER('approve/show', '@(Are you sure you want to remove selected subscriber?)', '"trash" @(Remove)', function() {
+						FUNC.loading(true);
+						AJAX('DELETE [url]api/subscribers/', { email: row.email }, function(response) {
+							FUNC.loading(false, 1000);
+							if (response.success) {
+								SETTER('snackbar/success', '@(Subscriber has been removed successfully.)');
+								exports.refresh();
+							}
+						});
+					});
+					break;
+				case 'ban':
+					FUNC.loading(true);
+					AJAX('GET [url]api/subscribers/toggle/', { id: row.email }, exports.refresh);
+		 			break;
+			}
+		};
+
+		exports.checked = function(el) {
+			var options = {};
+			options.align = 'right';
+			options.element = el;
+			options.items = [];
+			options.items.push({ id: 'toggle', name: '@(Subscribe / Unsubscribe)', icon: 'globe' });
+			options.items.push({ id: 'remove', name: '@(Remove subscribers)', icon: 'trash red' });
+			options.align = 'right';
+
+			options.callback = function(item) {
+				switch (item.id) {
+					case 'toggle':
+						var arr = [];
+						var items = GET('?.checked');
+
+						for (var i = 0; i < items.length; i++)
+							arr.push(items[i].email);
+
+						AJAX('GET [url]api/subscribers/toggle/', { id: arr.join(',') }, exports.refresh);
+						break;
+					case 'remove':
+						SETTER('approve/show', '@(Are you sure you want to remove all selected subscribers?)', '"trash" @(Remove)', function() {
+							FUNC.loading(true);
+							var arr = GET('?.checked');
+							arr.wait(function(el, next, index) {
+								SET('common.progress', (index / arr.length) * 100);
+								AJAX('DELETE [url]api/subscribers/', { email: el.email }, next);
+							}, function() {
+								exports.refresh();
+								FUNC.loading(false, 1000);
+								SETTER('snackbar/success', '@(Subscribers have been removed successfully.)');
+							});
+						});
+						break;
+				}
+			};
+
+			SETTER('menu', 'show', options);
+		};
+
+		exports.exportcsv = function() {
+			location.href = '/admin/api/subscribers/download/';
+		};
+
+		exports.options = function(el) {
+			var opt = {};
+			opt.element = el;
+			opt.align = 'right';
+			opt.items = [];
+			opt.items.push({ id: 'refresh', name: '@(Refresh)', icon: 'refresh' });
+			opt.items.push('-');
+			opt.items.push({ id: 'import', name: '@(Import addresses)', icon: 'plus-circle green' });
+			opt.items.push({ id: 'exportcsv', name: '@(Export addresses to CSV)', icon: 'cloud-upload' });
+			opt.align = 'right';
+			opt.callback = function(item) {
+				exports[item.id]();
+			};
+
+			SETTER('menu/show', opt);
+		};
+
+		exports.import = function() {
+			SET('subscribersimport.import', { progress: 0, body: '' }, true);
+			SET('common.form', 'subscribersimport');
+		};
+
+		exports.filter = function(type, obj, sort, page) {
+			filter = obj ? CLONE(obj) : {};
+			sort && (filter.sort = sort[0].replace(' ', '_'));
+			filter.page = page;
+			exports.refresh();
+		};
+	});
+
+</script>

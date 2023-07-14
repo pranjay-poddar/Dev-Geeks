@@ -1,0 +1,395 @@
+<style>
+	/*auto*/
+	.ui-filelistbox { font-size: 14px; color: black; position: relative; }
+	.ui-filelistbox ul { list-style-type: none; width: 100%; height: 100%; overflow: auto; margin: 0; padding: 0; font-size: 12px; }
+	.ui-filelistbox li { border-bottom: 1px solid #E0E0E0; padding: 0 10px; cursor: pointer; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; overflow-scrolling: touch; }
+	.ui-filelistbox-dragdrop { border-color: #6290C8; }
+	.ui-filelistbox-name { padding: 3px 0 0 0; display: block; margin-right: 280px; }
+	.ui-filelistbox li > i { width: 30px; font-size: 12px; border-right: 1px solid #E0E0E0; margin-right: 7px; color: #5590CD; float: left; height: 22px; padding: 5px 0 0 7px; }
+	.ui-filelistbox li:hover { background-color: #F0F0F0; }
+	.ui-filelistbox-selected { background-color: #FFE7A4 !important; }
+	.ui-filelistbox-search-empty { height: 34px; }
+	.ui-filelistbox-search { border-bottom: 1px solid #E0E0E0; height: 34px; background-color: white; position: absolute; width: 100%; }
+	.ui-filelistbox-search input { width: 100%; outline: 0; background-color: white; font: normal normal 12px Arial; border: 0; margin: 0; padding: 0; }
+	.ui-filelistbox-search span { float: left; width: 40px; text-align: center; height: 30px; padding: 8px 0 0 3px; font-size: 12px; color: #A0A0A0; }
+	.ui-filelistbox-search .fa-times { color: red; cursor: pointer; }
+	.ui-filelistbox-search div { margin-left: 40px; padding: 6px 10px 0 0; }
+	.ui-filelistbox-invalid { border-color: #E1A1A1; background-color: #FFF3F3 !important; }
+	.ui-filelistbox-invalid .ui-filelistbox-search { border-color: #E1A1A1; }
+	.ui-filelistbox.ui-disabled input { background-color: #F0F0F0; color: gray; }
+	.ui-filelistbox.ui-disabled .ui-filelistbox-search { background-color: #F0F0F0; }
+	.ui-filelistbox.ui-disabled ul { color: gray; overflow: hidden; }
+	.ui-filelistbox.ui-disabled li:hover { background-color: white; }
+	.ui-filelistbox.ui-disabled li { cursor: not-allowed; }
+	.ui-filelistbox.ui-disabled .ui-filelistbox-selected { background-color: #D0D0D0 !important; }
+	.ui-filelistbox-date { float: right; font-size: 11px; color: #A0A0A0; padding: 3px 5px 0 0; }
+	.ui-filelistbox-dimension { float: right; font-size: 11px; color: #A0A0A0; border-left: 1px solid #E0E0E0; width: 90px; text-align: center; height: 22px; padding: 3px 0 0 0; background-color: rgba(0,0,0,0.03); }
+	.ui-filelistbox-size { float: right; font-size: 11px; color: #A0A0A0; border-left: 1px solid #E0E0E0; width: 60px; text-align: right; height: 22px; padding: 3px 0 0 0; }
+	.ui-filelistbox-preview { float: right; font-size: 11px; margin: 0 0 0 7px; border-left: 1px solid #E0E0E0; padding: 3px 0 0 5px; height: 22px; width: 30px; text-align: center; }
+	.ui-filelistbox-pagination { height: 45px; background-color: #F5F5F5; padding: 8px 0 0 10px; border-top: 1px solid #D0D0D0; }
+	.ui-filelistbox-pagination button { width: 22px; height: 22px; border: 0; background-color: #4285F4; border-radius: var(--radius); outline: 0; font-size: 12px; vertical-align: middle; padding: 2px 0 0 0; margin: 3px 5px 0 0; float: left; color: white; }
+	.ui-filelistbox-pagination button:hover { opacity: 0.9; }
+	.ui-filelistbox-pagination button:disabled { color: silver; cursor: not-allowed; background-color: #E0E0E0 !important; opacity: 1; }
+	.ui-filelistbox-pagination div { float: left; font-size: 11px; vertical-align: middle; margin: 6px 0 0 8px; }
+
+	@media(max-width: 767px) {
+		.ui-filelistbox-date { display: none; }
+		.ui-filelistbox-dimension { display: none; }
+		.ui-filelistbox-size { display: none; }
+	}
+
+</style>
+
+<div data---="form__common.form3__if:filebrowser;width:1000;autofocus:true;icon:folder-o;title:@(File Browser)" class="hidden">
+	<div class="m" data---="filelistbox__filebrowser.id__datasource:filebrowser.files;search:@(Search file ...);exec:filelistbox/submit;filter:filelistbox/filter"></div>
+	<div class="padding npt">
+		<div class="row">
+			<div class="col-xs-6">
+				<span data---="fileupload__filebrowser.filename__url:[url]api/upload/;$id:filebrowser.filename;error:@(File is too large)" class="link fs12"><i class="fa fa-cloud-upload mr5"></i>@(Upload new file)</span>
+			</div>
+			<div class="col-xs-6 right">
+				<span class="link fs12 red exec" data-exec="filelistbox/clear"><i class="fa fa-trash mr5"></i>@(Clear useless files)</span>
+			</div>
+		</div>
+	</div>
+
+	<nav>
+		<button name="cancel" style="width:100%">@(Cancel)</button>
+	</nav>
+</div>
+
+<script>
+
+	PLUGIN('filelistbox', function(exports) {
+
+		exports.filter = function(item) {
+			if (filebrowser.type)
+				return filebrowser.type.test(item.type) ? true : false;
+			else
+				return true;
+		};
+
+		exports.clear = function() {
+			SETTER('approve/show', '@(Are you sure you want to remove all useless files?)', '"trash" @(Remove)', function() {
+				FUNC.loading(true);
+				AJAX('GET [url]api/files/clear/', function() {
+					setTimeout(function() {
+						FUNC.loading(false, 1000);
+						refresh_filebrowser_files(true);
+						SETTER('snackbar/success', '@(Cleaning of useless files has been started.)');
+					}, 5000);
+				});
+			});
+		};
+
+		exports.refresh = function() {
+			filebrowser.clear = true;
+			refresh_filebrowser(filebrowser.target, filebrowser.type);
+		};
+
+		exports.submit = function(val, text) {
+			var obj = filebrowser;
+			var url = '/download/' + obj.id;
+			var type = typeof(obj.target);
+			if (type === 'string') {
+				SET(obj.target, url);
+				CHANGE(obj.target, true);
+			} else if (type === 'function') {
+				obj.target(url, text);
+			} else {
+				if (/\.(jpg|png|gif|svg|jpeg)$/i.test(url))
+					$(obj.target).attr('src', url);
+				else {
+					SETTER('snackbar/warning', '@(You need to choose an image.)');
+					return;
+				}
+			}
+			W.cmseditor && W.cmseditor.instance && W.cmseditor.instance.resize();
+			SET('common.form3', '');
+		};
+
+		WATCH('filebrowser.filename', function(path, value) {
+
+			refresh_filebrowser_files(true);
+
+			if (!value || !value.length)
+				return;
+
+			var files = filebrowser.files;
+
+			for (var i = 0; i < value.length; i++)
+				value[i].id += '.' + value[i].extension;
+
+			files.push.apply(files, value);
+			files.quicksort('ctime', false);
+
+			var obj = filebrowser;
+			var url = value[0].download;
+			var type = typeof(obj.target);
+
+			if (type === 'string') {
+				SET(obj.target, url);
+				CHANGE(obj.target, true);
+			} else if (type === 'function') {
+				obj.target(url, value[0].name);
+			} else {
+				if (/\.(jpg|png|gif|svg|jpeg)$/.test(url)) {
+					$(obj.target).attr('src', url);
+				} else {
+					SETTER('snackbar/warning', '@(You need to choose an image.)');
+					return;
+				}
+			}
+
+			if (W.cmseditor && W.cmseditor.instance) {
+				W.cmseditor.instance.change(true);
+				W.cmseditor.instance.resize();
+			}
+
+			SET('common.form3', '');
+		});
+
+	});
+
+	COMPONENT('filelistbox', 'height:300', function(self, config) {
+
+		var Eitems, datasource, filter = null;
+		var skip = false;
+		var psel = '.ui-filelistbox-pagination';
+		var pages = {};
+
+		self.readonly();
+		self.nocompile();
+		self.datasource = EMPTYARRAY;
+		self.template = Tangular.compile('<li data-index="{{ index }}"><a href="/download/{{ value }}" target="_blank" class="ui-filelistbox-preview"><i class="fa fa-search"></i></a><span class="ui-filelistbox-size">{{ size | filesize }}</span><span class="ui-filelistbox-dimension">{{ if width }}{{ width }}x{{ height }}{{ else }}{{ fi }}</span><span class="ui-filelistbox-date">{{ mtime | format(\'@(yyyy-MM-dd)\') }}</span>{{ if icon }}<i class="far fa-{{ icon }}"></i>{{ fi }}<span class="ui-filelistbox-name">{{ text }}</span></li>');
+
+		self.make = function() {
+
+			self.aclass('ui-filelistbox');
+			self.redraw();
+
+			config.datasource && self.reconfigure('datasource:' + config.datasource);
+
+			self.event('dragenter dragover dragexit drop dragleave', function (e) {
+
+				e.stopPropagation();
+				e.preventDefault();
+
+				switch (e.type) {
+					case 'drop':
+						self.rclass('ui-filelistbox-dragdrop');
+						break;
+					case 'dragenter':
+					case 'dragover':
+						self.aclass('ui-filelistbox-dragdrop');
+						return;
+					case 'dragexit':
+					case 'dragleave':
+					default:
+						self.rclass('ui-filelistbox-dragdrop');
+						return;
+				}
+
+				filebrowser.clear = true;
+				var files = e.originalEvent.dataTransfer.files;
+				SETTER('#filebrowser.filename/upload', files);
+			});
+
+			self.event('click', 'a', function(e) {
+				e.stopPropagation();
+			});
+
+			self.event('click', 'li', function() {
+				if (config.disabled)
+					return;
+
+				var index = +this.getAttribute('data-index');
+				var value = self.datasource[index];
+
+				skip = true;
+
+				self.set(value.value);
+				config.exec && EXEC(config.exec, value.value, value.text);
+				self.change(true);
+			});
+
+			self.event('click', '.fa-times', function() {
+				if (!config.disabled) {
+					self.find('input').val('');
+					self.search();
+				}
+			});
+
+			self.event('click', 'button', function() {
+				switch (this.name) {
+					case 'prev':
+						if (pages.page > 0) {
+							pages.page--;
+							self.paginate();
+						}
+						break;
+					case 'next':
+						pages.page++;
+						self.paginate();
+						break;
+				}
+			});
+
+			typeof(config.search) === 'string' && self.event('keydown', 'input', function() {
+				!config.disabled && setTimeout2(self.id, self.search, 500);
+			});
+		};
+
+		self.configure = function(key, value, init) {
+
+			if (key === 'filter') {
+				filter = value ? GET(value) : null;
+				return;
+			}
+
+			if (init)
+				return;
+
+			var redraw = false;
+
+			switch (key) {
+				case 'type':
+					self.type = value;
+					break;
+				case 'disabled':
+					self.tclass('ui-disabled', value);
+					self.find('input').prop('disabled', value);
+					if (value)
+						self.rclass('ui-filelistbox-invalid');
+					else if (config.required)
+						self.state(1, 1);
+					break;
+				case 'required':
+					!value && self.state(1, 1);
+					break;
+				case 'search':
+					redraw = true;
+				case 'height':
+					Eitems.css('height', value + 'px');
+					break;
+				case 'datasource':
+					datasource && self.unwatch(datasource, self.bind);
+					self.watch(value, self.bind, true);
+					datasource = value;
+					break;
+			}
+
+			redraw && self.redraw();
+		};
+
+		self.search = function() {
+			pages.page = 0;
+			self.paginate();
+		};
+
+		self.redraw = function() {
+			self.html((typeof(config.search) === 'string' ? '<div class="ui-filelistbox-search"><span><i class="fa fa-search ui-filelistbox-search-icon"></i></span><div><input type="text" placeholder="{0}" /></div></div><div><div class="ui-filelistbox-search-empty"></div>'.format(config.search) : '') + '<div><ul style="height:{0}px"></ul></div><div class="ui-filelistbox-pagination"><button name="prev" disabled="disabled"><i class="fa fa-chevron-left"></i></button><button name="next" disabled="disabled"><i class="fa fa-chevron-right"></i></button><div></div></div>'.format(config.height));
+			Eitems = self.find('ul');
+			pages = { prev: self.find(psel + ' button[name="prev"]'), next: self.find(psel + ' button[name="next"]'), info: self.find(psel + ' div') };
+		};
+
+		self.bind = function(path, value) {
+			pages.page = 0;
+			self.paginate();
+		};
+
+		self.paginate = function() {
+
+			var page = pages.page;
+			var search = config.search ? self.find('input').val().toSearch() : '';
+			var data = self.get(config.datasource) || EMPTYARRAY;
+			var take = 150;
+			var skip = page * take;
+			var index = 0;
+			var builder = [];
+			var isnext = false;
+
+			self.datasource = [];
+
+			for (var i = 0, length = data.length; i < length; i++) {
+
+				var item = data[i];
+
+				if (search) {
+					if (item.id.indexOf(search) === -1 && item.name.toSearch().indexOf(search) === -1)
+						continue;
+				}
+
+				index++;
+
+				if (skip > index)
+					continue;
+
+				if (take-- <= 0) {
+					isnext = true;
+					break;
+				}
+
+				var obj = { text: item.name, value: item.id, index: self.datasource.length, icon: item.type.substring(0, 5) === 'image' ? 'file-image' : 'file-o', size: item.size, width: item.width, height: item.height, mtime: item.mtime };
+				self.datasource.push(obj);
+				builder.push(self.template(obj));
+			}
+
+			pages.prev.prop('disabled', page === 0);
+			pages.next.prop('disabled', !isnext || self.datasource.length === 0);
+			pages.info.html('<b>{0}</b> / @(page)'.format((page + 1)));
+			Eitems.empty().append(builder.join(''));
+		};
+
+		self.released = function(is) {
+			is && Eitems.empty();
+		};
+
+		self.setter = function(value) {
+
+			var selected = {};
+			var builder = [];
+
+			var ds = self.datasource;
+			var dsl = ds.length;
+
+			if (value != null) {
+				if (config.multiple) {
+					for (var i = 0, length = value.length; i < length; i++) {
+						for (var j = 0; j < dsl; j++) {
+							if (ds[j].value === value[i])
+								selected[j] = true;
+						}
+					}
+				} else {
+					for (var j = 0; j < dsl; j++) {
+						if (ds[j].value === value)
+							selected[j] = true;
+					}
+				}
+			}
+
+			var first;
+
+			Eitems.find('li').each(function() {
+				var el = $(this);
+				var index = +el.attrd('index');
+				var is = selected[index] !== undefined;
+				el.tclass('ui-filelistbox-selected', is);
+			});
+
+			self.search();
+		};
+
+		self.state = function(type) {
+			if (!type)
+				return;
+			var invalid = config.required ? self.isInvalid() : false;
+			if (invalid === self.$oldstate)
+				return;
+			self.$oldstate = invalid;
+			self.tclass('ui-filelistbox-invalid', invalid);
+		};
+	});
+
+</script>
