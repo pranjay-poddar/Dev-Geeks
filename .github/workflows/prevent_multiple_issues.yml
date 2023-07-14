@@ -14,7 +14,7 @@ jobs:
         id: check_open_issues
         uses: actions/github-script@v4
         with:
-          github-token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
+          github-token: ${{ secrets.GITHUB_TOKEN }}
           script: |
             const owner = context.repo.owner;
             const repo = context.repo.repo;
@@ -32,28 +32,30 @@ jobs:
             const closeIssue = previousOpenIssues.length > 0;
             console.log(`Close issue: ${closeIssue}`);
             if (closeIssue) {
-              const comment = `Hey @${openerName} , You can't have another issue before completing the previous one 😀 \n you already have the following ${previousOpenIssues.length} open issues 👀 ! :\n\n<h1>${previousOpenIssueNumbers.join('\n')}</h1>`;
+              const comment = `Hey @${openerName}, you can't have another issue before completing the previous one 😀\nYou already have the following ${previousOpenIssues.length} open issues 👀:\n\n<h1>${previousOpenIssueNumbers.join('\n')}</h1>`;
               core.exportVariable('comment_body', comment); // Export the variable
               core.setOutput('close_issue', true);
             } else {
               core.exportVariable('comment_body', '');
               core.setOutput('close_issue', false);
             }
+
       - name: Close the issue and add a comment
         if: always() && ${{ needs.check_open_issues.outputs.close_issue }}
         uses: actions/github-script@v4
         with:
-          github-token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
+          github-token: ${{ secrets.GITHUB_TOKEN }}
           script: |
             const owner = context.repo.owner;
             const repo = context.repo.repo;
             const issueNumber = context.issue.number;
             const comment = process.env.comment_body; // Retrieve the exported variable
-            
+
             if (comment.trim() === '') {
               console.log('Comment body is empty. Skipping comment creation.');
               return;
             }
+
             const closeComment = `${comment}`;
             await github.issues.createComment({
               owner,
@@ -61,6 +63,7 @@ jobs:
               issue_number: issueNumber,
               body: closeComment
             });
+
             await github.issues.update({
               owner,
               repo,
