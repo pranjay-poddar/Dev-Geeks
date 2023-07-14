@@ -224,6 +224,7 @@ nav ul li a:hover{
   .destination-card p {
     font-size: 16px;
     margin: 0 20px 20px;
+    text-align: center;
   }
   
   @keyframes destination-card-animation {

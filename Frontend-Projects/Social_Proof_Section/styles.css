@@ -105,7 +105,7 @@ body {
     color: var(--soft-pink);
 }
 .testimonal__user-testimonal {
-    text-align: start;
+    text-align: justify;
     font-weight: 500;
 }
 

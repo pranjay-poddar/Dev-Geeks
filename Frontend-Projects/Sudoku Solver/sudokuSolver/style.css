@@ -50,12 +50,12 @@ tr:nth-child(3n) td {
   justify-content: center;
   align-items: center;
   text-align: center;
-  width: 100px;
+  width: 141px;
   height: 50px;
   margin: auto;
   margin-bottom: 20px;
   margin-top: 20px;
-  /* position: absolute; */
+  border-radius: 10px;
 }
 
 .footer {
@@ -81,4 +81,13 @@ table {
 .git {
   width: 30px;
   height: 30px;
+}
+
+button#clear-button:hover {
+  background: black;
+  color: purple;
+}
+button#solve-button:hover {
+  background: black;
+  color: wheat;
 }
