@@ -1,0 +1,55 @@
+*{
+    font-size: 20px;
+}
+body{
+    background-image: linear-gradient(120deg, #d4fc79 0%, #96e6a1 100%);
+}
+.div1 {
+    width: 40%;
+    height: 300px;
+   
+}
+
+.div_11 {
+  
+ 
+    flex: 4;
+    height: 40px;
+
+}
+
+.div_2_1{
+    margin-top: 20px;
+     display: flex;
+     cursor: pointer;
+     border:2px solid grey;
+  padding:10px;
+  border-radius: 20px;
+}
+.div_2_1:hover{
+    background-color: #23012032;
+}
+
+.arrow_sign {
+    font-size: 1.5rem;
+ 
+}
+
+.main_div{
+display: flex;
+justify-content: center;
+align-items: center;
+
+height:42vh;
+}
+.div_12{
+display: none;
+}
+h1{
+font-size:40px;
+text-align: center;
+}
+hr{
+background-color: black;
+height:2px;
+}
