@@ -63,14 +63,13 @@
 	 justify-content: space-around;
 }
  #container .game-ready #start-button {
-	 transition: opacity 0.5s ease, transform 0.5s ease;
-	 opacity: 0;
-	 transform: translatey(-50px);
-	 border: 3px solid #334;
-	 padding: 10px 20px;
-	 background-color: transparent;
-	 color: #334;
-	 font-size: 30px;
+	transition: opacity 0.5s ease, transform 0.5s ease;
+    border: 2px solid grey;
+    padding: 10px 20px;
+    background-color: transparent;
+    color: dimgrey;
+    border-radius: 1rem;
+    font-size: 30px;
 }
  #container #instructions {
 	 position: absolute;
