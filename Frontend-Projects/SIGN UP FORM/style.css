@@ -160,6 +160,7 @@ input[type="text"], input[type="email"], input[type="password"] {
   border-radius: 10px;
   background: #eaeaea29;
   border: 2px solid #80808096;
+  width: 100%;
 }
 
 input.email, input.text.w3lpass {
