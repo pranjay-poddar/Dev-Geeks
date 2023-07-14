@@ -114,6 +114,7 @@ main {
 	width: 100%;
 	display: block;
 	transition: 0.4s;
+	margin-top: 7px;
 }
 
 .task .content .text:not(:read-only) {
@@ -143,11 +144,17 @@ main {
 }
 
 .task .actions .edit {
-	background-image: linear-gradient(to right, rgb(134, 249, 255), rgb(0, 43, 128));
-	-webkit-background-clip: text;
-	-webkit-text-fill-color: transparent;
+    color: #fff9ee;
+    background: #3f3f52f5;
+    padding: 9px 25px;
+    border-radius: 10px;
+    font-family: math;
 }
 
 .task .actions .delete {
-	color: rgb(85, 0, 145);
+    color: #fff9ee;
+    background: red;
+    padding: 9px 25px;
+    border-radius: 10px;
+    font-family: math;
 }
