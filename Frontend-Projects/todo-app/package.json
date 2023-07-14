@@ -1,0 +1,16 @@
+{
+  "name": "todo-app-main",
+  "version": "1.0.0",
+  "description": "Stay organized and conquer your tasks with a user-friendly todo app that keeps you on track and productive.",
+  "main": "./src/index.js",
+  "scripts": {
+    "build": "npx webpack"
+  },
+  "keywords": [],
+  "author": "0xabdulkhalid",
+  "license": "MIT",
+  "devDependencies": {
+    "webpack": "^5.88.1",
+    "webpack-cli": "^5.1.4"
+  }
+}
