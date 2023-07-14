@@ -105,13 +105,13 @@ nav ul li a:hover{
     margin-bottom: 40px;
 }
 .content a{
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #333;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 4px;
-    transition: background-color 0.3s ease;
+  display: inline-block;
+  padding: 15px 20px;
+  background-color: #333;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 12px;
+  transition: background-color 0.3s ease;
     
 }
 
@@ -224,6 +224,7 @@ nav ul li a:hover{
   .destination-card p {
     font-size: 16px;
     margin: 0 20px 20px;
+    text-align: center;
   }
   
   @keyframes destination-card-animation {
@@ -560,7 +561,7 @@ nav ul li a:hover{
     padding: 12px;
     margin-bottom: 20px;
     border: 1px solid #ccc;
-    border-radius: 4px;
+    border-radius: 10px;
     box-sizing: border-box;
     transition: transform 0.3s ease-in-out;
   }
@@ -583,7 +584,7 @@ nav ul li a:hover{
     text-transform: uppercase;
     letter-spacing: 1px;
     border: none;
-    border-radius: 4px;
+    border-radius: 10px;
     cursor: pointer;
     transition: background-color 0.3s ease;
   }
