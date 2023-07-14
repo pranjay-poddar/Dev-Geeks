@@ -5,16 +5,23 @@ body {
   height: 100vh;
   align-items: center;
   background-color: salmon;
-  font-family: cursive;
+  font-family: monospace;
 }
 
 .container {
-  background-color: lightpink;
-  width: 400px;
+  background: #607d8b;
+  width: 500px;
   padding: 20px;
   margin: 5px;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  margin-top: -23rem;
+  color: wheat;
+}
+
+h2 {
+  text-align: center;
+  font-size: 1.5rem;
 }
 
 .textarea {
@@ -26,6 +33,9 @@ body {
   padding: 10px;
   box-sizing: border-box;
   border: solid 2px darkgray;
+  background: #d6dde1;
+  border-radius: 1rem;
+  color: grey;
 }
 
 .counter-container {
@@ -36,7 +46,7 @@ body {
 
 .counter-container p {
   font-size: 18px;
-  color: gray;
+  color: aliceblue;
 }
 
 .total-counter {
