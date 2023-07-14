@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="currentcolor">
+  <meta
+    name="description"
+    content="Todo App Solution by 0xabdulkhalid for FrontendMentor.io"
+  />
+  <meta
+    name="keywords"
+    content="Frontend Mentor, Todo App Challenge, 0xabdulkhalid"
+  />
+  <meta
+    property="og:title"
+    content="Todo App - Frontend Mentor"
+  />
+  <meta
+    property="og:description"
+    content="Todo App Solution by 0xabdulkhalid for FrontendMentor.io"
+  />
+  <title>Todo app | Frontend Mentor</title>
+  <link rel="stylesheet" href="./styles.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    rel="preload"
+    as="style"
+    href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap"
+  />
+  <link
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap"
+    media="print"
+    onload="this.media='all'"
+  />
+  <noscript>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap"
+    />
+  </noscript>
+  <link rel="icon" href="https://raw.githubusercontent.com/0xabdulkhalid/todo-app/main/images/favicon.svg" sizes="any" type="image/svg+xml">
+</head>
+<body>
+
+  <header>
+    <div class="header__wrapper">
+      <a href="#" class="header__title">Todo</a>
+      
+      <button
+        class="header__theme-toggle"
+        id="theme-toggle"
+        title="Toggles light & dark"
+        aria-label="auto"
+        aria-live="polite"
+        tabindex="0"
+      >
+      </button>
+    </div>
+
+    <audio src="https://raw.githubusercontent.com/0xabdulkhalid/todo-app/main/audio/audio_light-on.mp3" class="header__switch--on"></audio>
+    <audio src="https://raw.githubusercontent.com/0xabdulkhalid/todo-app/main/audio/audio_light-off.mp3" class="header__switch--off"></audio>
+  </header>
+
+  <main>
+    <form>
+      <div class="form__decoration"></div>
+      <input type="text" placeholder="Create a new todo.." aria-label="Create a new todo">
+    </form>
+
+    <ul class="main__todo-list">
+      <li class="todo-list__item--action">
+        <ul class="action__list">
+          <li class="action__items-count">
+            <span class="count__displayer">5</span> items left
+          </li>
+          <li class="action__filters">
+            <ul class="filters__list">
+              <li class="fitler__category">
+                <button class="filter__btn filter__btn--active" tabindex="0" aria-label="Click me to display all Todo's.">
+                  All
+                </button>
+              </li>
+              <li class="fitler__category">
+                <button class="filter__btn" tabindex="0" aria-label="Click me to display the active Todo's which are not completed yet.">
+                  Active
+                </button>
+              </li>
+              <li class="fitler__category">
+                <button class="filter__btn" tabindex="0" aria-label="Click me to display the completed Todo's.">
+                  Completed
+                </button>
+              </li>
+            </ul>
+          </li>
+          <li class="action__clear-filter">
+            <button class="clear-completed-todo__btn" tabindex="0" aria-label="Click me to clear all the completed Todo's.">
+              Clear Completed
+            </button>
+          </li>
+        </ul>
+      </li>
+    </ul>
+
+    <ul class="main__filters">
+      <li class="fitler__category">
+        <button class="filter__btn filter__btn--active" tabindex="0" aria-label="Click me to display all Todo's.">
+          All
+        </button>
+      </li>
+      <li class="fitler__category">
+        <button class="filter__btn" tabindex="0" aria-label="Click me to display the active Todo's which are not completed yet.">
+          Active
+        </button>
+      </li>
+      <li class="fitler__category">
+        <button class="filter__btn" tabindex="0" aria-label="Click me to display the completed Todo's.">
+          Completed
+        </button>
+      </li>
+    </ul>
+
+    <p class="main__drag-description" hidden>Drag and drop to reorder list</p>
+  </main>
+
+  <footer>
+      Challenge by
+      <a
+        href="https://www.frontendmentor.io/"
+        target="_blank"
+        class="footer__link"
+        aria-describedby="Frontend Mentor Website"
+        >Frontend Mentor</a
+      >, Coded by
+      <a
+        href="https://github.com/0xabdulkhalid"
+        target="_blank"
+        class="footer__link"
+        rel="noopener noreferrer"
+        aria-describedby="Abdul khalid's Github profile"
+        >0xabdulkhalid</a
+      >
+  </footer>
+
+  <script src="./dist/main.js"></script>
+</body>
+</html>
