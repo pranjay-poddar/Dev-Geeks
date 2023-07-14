@@ -861,6 +861,7 @@ label {
   color: #fff;
   border: var(--border);
   font-size: 2rem;
+  border-radius: 10px;
 }
 
 .footer .links a:hover {
