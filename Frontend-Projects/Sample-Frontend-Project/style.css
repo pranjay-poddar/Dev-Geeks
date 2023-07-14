@@ -76,6 +76,7 @@ header {
 .headerInfo p {
     font-size: 1.2rem;
     margin-bottom: 4vh;
+    text-align: justify;
 }
 
 .headerBtn {
