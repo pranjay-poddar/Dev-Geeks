@@ -161,6 +161,7 @@ ul li a {
 }
 .textBox p {
   color: #333;
+  text-align: justify;
 }
 .textBox a {
   display: inline-block;
