@@ -15,16 +15,22 @@ body {
 
 header {
 	padding: 2rem 1rem;
-	max-width: 800px;
-	width: 100%;
-	margin: 0 auto;
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
+    border: 2px solid red;
+    border-radius: 1rem;
+    margin-top: 4rem;
+    background: #ff000005;
 }
 
 header h1{ 
-	font-size: 2.5rem;
-	font-weight: 300;
-	color: rgb(255, 115, 28);
-	margin-bottom: 1rem;
+    font-size: 2.5rem;
+    font-weight: 900;
+    color: rgb(255, 115, 28);
+    margin-bottom: 1rem;
+    text-align: center;
+    font-family: math;
 }
 
 #new-task-form {
@@ -53,13 +59,14 @@ input, button {
 }
 
 #new-task-submit {
-	font-size: 1.25rem;
-	font-weight: 700;
-	background-image: linear-gradient(to right, rgb(134, 249, 255), rgb(0, 43, 128));
-	-webkit-background-clip: text;
-	-webkit-text-fill-color: transparent;
-	cursor: pointer;
-	transition: 0.4s;
+	color: #f4e9d6;
+    font-size: 1.45rem;
+    background: cadetblue;
+    cursor: pointer;
+    transition: 0.4s;
+    border-radius: 1rem;
+    padding: 10px 32px;
+    font-family: math;
 }
 
 #new-task-submit:hover {
@@ -107,6 +114,7 @@ main {
 	width: 100%;
 	display: block;
 	transition: 0.4s;
+	margin-top: 7px;
 }
 
 .task .content .text:not(:read-only) {
@@ -136,11 +144,17 @@ main {
 }
 
 .task .actions .edit {
-	background-image: linear-gradient(to right, rgb(134, 249, 255), rgb(0, 43, 128));
-	-webkit-background-clip: text;
-	-webkit-text-fill-color: transparent;
+    color: #fff9ee;
+    background: #3f3f52f5;
+    padding: 9px 25px;
+    border-radius: 10px;
+    font-family: math;
 }
 
 .task .actions .delete {
-	color: rgb(85, 0, 145);
+    color: #fff9ee;
+    background: red;
+    padding: 9px 25px;
+    border-radius: 10px;
+    font-family: math;
 }
