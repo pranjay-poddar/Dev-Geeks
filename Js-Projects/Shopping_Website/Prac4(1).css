@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
+* {
+   margin: 0;
+   padding: 0;
+   font-family: 'Poppins',sans-serif;
+}
+
+section {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   min-height: 100vh;
+   width: 100%;
+   background: url(signinbg.jpg) no-repeat;
+   background-position: center;
+   background-size: cover;
+}
+
+.form-box {
+   position: relative;
+   width: 400px;
+   height: 450px;
+   background: transparent;
+   border: 2px solid rgba(255,255,255,0.5);
+   border-radius: 20px;
+   backdrop-filter: blur(15px);
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+h2 {
+   font-size: 2rem;
+   color: cyan;
+   text-align: center;
+}
+
+.input-box {
+   position: relative;
+   margin: 30px 0;
+   width: 310px;
+   border-bottom: 2px solid #fff;
+}
+
+.input-box label {
+   position: absolute;
+   top: 50%;
+   left: 5px;
+   transform: translateY(-50%);
+   color: #fff;
+   font-size: 1rem;
+   pointer-events: none;
+   transition: .5s;
+}
+
+input:focus ~ label,
+input:valid ~ label {
+   top: -5px;
+}
+
+
+.input-box input {
+   width: 100%;
+   height: 50px;
+   background: transparent;
+   border: none;
+   outline: none;
+   font-size: 1rem;
+   padding: 0 35px 0 5px;
+   color: #fff;
+}
+
+.input-box ion-icon {
+   position: absolute;
+   right: 8px;
+   color: #fff;
+   font-size: 1.2rem;
+   bottom: 5px;
+}
+
+.forget {
+   margin: -15px 0 15px;
+   font-size: .9rem;
+   color: #fff;
+   display: flex;
+   justify-content: center;
+}
+
+.forget label input {
+   margin-right: 3px;
+}
+
+.forget label a{
+   color: #fff;
+   text-decoration: none;
+}
+
+.forget label a:hover {
+   text-decoration: underline;
+}
+
+.register {
+   font-size: .9rem;
+   color: #fff;
+   text-align: center;
+   margin: 25px 0 10px;
+}
+
+.register p a {
+   text-decoration: none;
+   color: #fff;
+   font-weight: 600;
+}
+
+.register p a:hover {
+   text-decoration: underline;
+}
