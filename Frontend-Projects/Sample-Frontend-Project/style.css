@@ -422,12 +422,12 @@ header {
 }
 
 .contactForm h1 {
-    font-size: 4rem;
+    font-size: 2rem;
     margin: 2vh 0vw;
 }
 
 .contactForm h3 {
-    font-size: 2rem;
+    font-size: 3rem;
 }
 
 .contactForm p {
@@ -446,14 +446,17 @@ header {
     word-spacing: 2px;
     font-size: 1.2rem;
     font-weight: bold;
+    float: left;
+    margin-top: 1rem;
 }
 
 .contactForm form input{
     background-color: black;
     border: 1px solid rgb(160, 160, 160);
-    border-radius: 2px;
     padding-left: 2vw;
-    margin: 3vh 0vw;
+    margin-bottom: 1rem;
+    width: 50%;
+    border-radius: 1rem;
 }
 .contactName{
     height: 8vh;
@@ -462,17 +465,15 @@ header {
 .contactEmail{
     height: 8vh;
     width: 46vh;
-    float: right;
 }
 
 .contactMessage{
     background-color: black;
     border: 1px solid rgb(160, 160, 160);
-    border-radius: 2px;
     padding-left: 2vw;
     padding-top: 2vh;
-
-    margin: 3vh 0vw;
+    border-radius: 1rem;
+    width: 50%;
 }
 .footer{
     height: 60vh;
