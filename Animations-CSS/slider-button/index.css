@@ -1,0 +1,55 @@
+body{
+    background-color: rgba(0, 0, 0, 0.858);
+}
+.box{
+    margin-top: 50vh;
+    margin-left: 30vw;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    width: 600px;
+    background: linear-gradient(to bottom, rgba(172, 95, 184, 0.861) , rgb(198, 144, 203));
+    border-radius: 40px;
+    box-shadow: 15px 15px 20px rgba(112, 110, 110, 0.105), -5px -5px 10px #302f2f6b;
+    
+}
+.range{
+    width: 500px;
+    height: 15px;
+    appearance: none;
+    background-color: #f2f3f5;
+    outline: none;
+    border-radius: 15px;
+    box-shadow: 2px 2px 7px rgba(0,0,0,0.1),-2px -2px 7px #d1cfcfaf,
+    inset 5px 5px 5px rgba(0,0,0,0.1);
+    overflow: hidden;
+
+}
+.range::-webkit-slider-thumb{
+    appearance: none;
+    width: 15px;
+    height: 15px;
+    background: #fff;
+    border-radius: 50%;
+    border: 2px solid rgb(103, 0, 119);
+    box-shadow: -407px 0 0 400px rgb(103, 0, 119);
+    cursor: pointer;
+}
+
+#rangeValue{
+    position: relative;
+    text-align: center;
+    width: 60px;
+    font-size: 1.25em;
+    color :#fff;
+    background: rgb(103, 0, 119);
+    margin-left: 15px;
+    border-radius: 25px;
+    font-weight: 500;
+    box-shadow: 5px 5px 10px rgba(0,0,0,0.1),-2px -2px 7px #e7dcdc,
+    inset 5px 5px 10px rgba(0,0,0,0.1),
+    inset -5px -5px 5px rgba(255,255,255,0.25);
+
+}
