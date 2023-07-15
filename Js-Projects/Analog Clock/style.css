@@ -8,10 +8,13 @@
      /* padding: 20px; */
      margin: auto;
      /* border: 2px solid #000; */
-     background: url('./Clock.jpg')no-repeat;
+     background: url('pngwing.com/png')no-repeat;
      background-size: 100%;
 }
 
+body{
+     background-image: linear-gradient(to right, #3a1c5f, #2a4a90);
+}
 #hour, #minute, #second {
      position: absolute;
      background-color: #000;
