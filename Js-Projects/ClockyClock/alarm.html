@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AlarmClock</title>
+    <link rel="stylesheet" href="alarm.css">
+   
+</head>
+<body>
+    <div class="container">
+        <div class="backvid">
+            <video class="backvidcontent"  autoplay muted loop>
+                <source src="https://player.vimeo.com/external/299108946.sd.mp4?s=aaf063c80e9825e1e20f13b27058a47cbd64c86a&profile_id=164&oauth2_token_id=57447761" type="video/mp4">Your browser doesn't support video.
+            </video>
+        </div>
+        
+        
+        <img class="image" src="https://images.unsplash.com/photo-1541480601022-2308c0f02487?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80" alt="AlarmClock">
+        
+        <h1>00:00:00 PM</h1> 
+
+        <div class="content">
+            <div class="column">
+                <select>
+                     <option value="Hour" selected hidden>Hour</option>
+                </select>
+                <select>
+                    <option value="Minute"selected hidden >Minute</option>
+                </select>
+
+                <select>
+                    <option value="Am/PM" selected hidden>AM/PM</option>
+                </select>
+            </div>
+
+            <button class="button">
+                <a href="#" class="btn">Set Alarm</a>
+
+            </button>
+        </div>
+    </div>
+    <script src="alarm.js"></script>
+</body>
+</html>
