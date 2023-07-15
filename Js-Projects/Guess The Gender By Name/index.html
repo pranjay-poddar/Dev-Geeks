@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+	<!-- Logo of the website -->
+	<link rel="shortcut icon" href="./logo.svg" type="image/x-icon">
+
+	<!-- Title of the website -->
+	<title>Guess The Gender By Name</title>
+
+	<!-- Google Fonts -->
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap" rel="stylesheet" />
+
+	<!-- Stylesheet -->
+	<link rel="stylesheet" href="./style.css" />
+</head>
+
+<body>
+	<!-- Main container of the project -->
+	<div class="container">
+		<h1 class="app-title">
+			<img src="./logo.svg" alt="Logo" class="app-logo">
+			Guess The Gender By Name
+		</h1>
+
+		<!-- Details of the app creator -->
+		<h4 class="app-creator">
+			Created by <a href="https://github.com/Avdhesh-Varshney">Avdhesh Varshney</a>
+		</h4>
+
+		<!-- Taking text from the user -->
+		<div class="input-wrapper">
+			<input type="text" id="name" placeholder="Enter a name..." />
+			<button id="submit">Guess</button>
+		</div>
+
+		<!-- Showing the result after checking the name -->
+		<div id="result">
+			<div id="wrapper"></div>
+			<div id="error"></div>
+		</div>
+	</div>
+
+	<!-- JavaScript -->
+	<script src="./script.js"></script>
+</body>
+
+</html>

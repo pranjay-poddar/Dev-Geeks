@@ -1,0 +1,74 @@
+.cube{
+	height: 50px;
+	width: 50px;
+	position: absolute;
+	margin: 100px;
+	transform-style: preserve-3d;
+	perspective:1000px;
+/*	transform: rotateX(25deg) rotateY(-25deg);*/
+	animation-name: rotate3d;
+	animation-duration:2s;
+	animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+.face{
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	top: 20%;
+	left: 20%;
+/*	transition: all 1s;*/
+    
+}
+.one{
+	background-color: cyan;
+/*	z-index: 10;*/
+}
+/*.one:hover{
+	transform:rotateX(40deg) rotateY(40deg);
+}
+*/
+.two{
+ background-color: orange;
+ transform: rotateY(90deg) translateZ(-25px) translateX(-25px);
+}
+
+.three{
+	background-color: purple;
+	transform: rotateY(180deg) translateZ(-50px) translateX(0px);
+}
+
+.four{
+	background-color: green;
+	transform: rotateY(-90deg) translateZ(-25px) translateX(25px);
+
+}
+
+.five{
+	background-color: orangered;
+    transform: rotateZ(180deg) rotateX(90deg) translateZ(25px) translateX(0px) translateY(25px);
+}
+
+.six{
+	background-color: lightyellow;
+    transform: rotateZ(180deg) rotateX(90deg) translateZ(-25px) translateX(0px) translateY(25px);
+
+}
+
+@keyframes rotate3d{
+	0%{
+		transform:rotate3d(0, 0, 1, 0deg) translate3d(0px, 0px, 0px);
+	}
+
+	25%{
+		transform: rotate3d(45, 45, 45, 90deg) translate3d(50px, 12.5px, 0px);
+	}
+
+	50%{
+        transform: rotate3d(90, 90, -90, -90deg) translate3d(100px, 25px, 0px);;
+	}
+
+	100%{
+		transform: rotate3d(180, 180, 90, 180deg) translate3d(200px, 50px, 0px);
+	}
+}

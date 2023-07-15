@@ -1,0 +1,111 @@
+{
+  "id": "4d174f3e-6521-4d6c-9af3-9875db060b28",
+  "name": "Conversation 3 - 1.cold,cough and fever - yes",
+  "auto": true,
+  "condition": "",
+  "conditionalFollowupEvents": [],
+  "conditionalResponses": [],
+  "context": [
+    "Conversation3-1coldcoughandfever-followup"
+  ],
+  "contexts": [
+    "Conversation3-1coldcoughandfever-followup"
+  ],
+  "endInteraction": false,
+  "events": [],
+  "fallbackIntent": false,
+  "liveAgentHandoff": false,
+  "parentId": "c5ad9452-870a-4792-8f78-9978fafcc563",
+  "followUpIntents": [],
+  "priority": 500000,
+  "responses": [
+    {
+      "action": "Conversation3.Conversation3-custom.Conversation3-1coldcoughandfever-custom",
+      "affectedContexts": [
+        {
+          "name": "Conversation3-1coldcoughandfever-yes-followup",
+          "lifespan": 2
+        }
+      ],
+      "parameters": [
+        {
+          "noInputPromptMessages": [],
+          "noMatchPromptMessages": [],
+          "promptMessages": [],
+          "defaultValue": "",
+          "name": "Permission",
+          "dataType": "@Permission",
+          "isList": false,
+          "required": false,
+          "prompts": [],
+          "value": "$Permission",
+          "outputDialogContexts": []
+        }
+      ],
+      "defaultResponsePlatforms": {},
+      "messages": [
+        {
+          "type": "message",
+          "condition": "",
+          "speech": [
+            "From how many days you are suffering with cold, cough and fever?"
+          ]
+        },
+        {
+          "type": "message",
+          "condition": "",
+          "speech": [
+            "1.(1-3) Days"
+          ]
+        },
+        {
+          "type": "message",
+          "condition": "",
+          "speech": [
+            "2.(3-5) Days"
+          ]
+        },
+        {
+          "type": "message",
+          "condition": "",
+          "speech": [
+            "3.(5-7) Days"
+          ]
+        }
+      ],
+      "resetContexts": false
+    }
+  ],
+  "rootParentId": "4ff6d6f4-51ce-40cc-bea4-977e35b5b1e4",
+  "templates": [],
+  "userSays": [
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "1",
+          "userDefined": false
+        }
+      ],
+      "count": 0,
+      "id": "29d87e0a-ef1c-4eed-8125-7cb0b9267041",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "Yes",
+          "userDefined": true,
+          "alias": "Permission",
+          "meta": "@Permission"
+        }
+      ],
+      "count": 0,
+      "id": "96fe1708-9a5d-4fbb-b77a-8e6698e93355",
+      "updated": null
+    }
+  ],
+  "webhookForSlotFilling": false,
+  "webhookUsed": false
+}

@@ -1,0 +1,177 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    text-align: center;
+    font-family: sans-serif;
+    min-height: 100vh;
+    color: #252525;
+    background: url(https://raw.githubusercontent.com/0xabdulkhalid/30-days-of-javascript-solutions/main/day-24/images/galaxy.gif);
+    background-size: 100%;
+}
+
+h1 {
+    font-size: 2.1rem;
+    text-transform: uppercase;
+    letter-spacing: .02em;
+}
+
+h2 {
+    margin: .5em 0;
+}
+
+section {
+    position: fixed;
+    top: 3%;
+}
+
+.glass-bg {
+    background: rgba(255,255,255,0.15);
+    backdrop-filter: blur(5px);
+}
+
+.g-place-center {
+    display: grid;
+    place-items: center;
+}
+
+.wrapper {
+    margin-top: 1em;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 10px;
+    width: min(90%, 60em);
+    padding: 50px 30px;
+    backdrop-filter: blur(2px);
+}
+
+h3 {
+    background: #f7f7f7;
+    padding: 1.2em 2.2em;
+    font-size: 2.2rem;
+    border-radius: 5em;
+    box-shadow: 0 15px 5px rgba(0,0,0,0.3);
+    transition: .2s ease;
+}
+
+.btn--clicked {
+    transform: scale(.99) translateY(15px);
+    box-shadow: unset;
+}
+
+.wrapper > div {
+    width: 100px;
+    height: 70px;
+    font-size: 2rem;
+    color: white;
+}
+
+.result {
+    padding: 30px 40px;
+    color: #f7f7f7;
+    order: 2;
+    gap: .1em;
+}
+
+span {
+    display: block;
+    width: 100px;
+    height: 100px;
+    font-weight: 900;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.25);
+}
+
+img {
+    width: 40%;
+    object-fit: contain;
+    filter: drop-shadow(0 10px 25px rgba(255,255,255,.3));
+}
+
+b {
+    text-transform: uppercase;
+}
+
+.input-container {
+    width: min(90%, 50em);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1em;
+    margin: 2em 0;
+}
+
+.error-prompter {
+    color: #FD5E53;
+    font-weight: bold;
+    word-wrap: break-word;
+}
+
+button {
+    all: unset;
+    padding: 10px 20px;
+    color: white;
+    width: 12em;
+    transition: .4s ease;
+    box-shadow: 0 10px 10px #aaa;
+    margin-left: 1em;
+}
+
+button:active {
+    transform: scale(.98) translateY(15px);
+    box-shadow: 0 0 0 rgba(0,0,0,0);
+}
+
+button, select {
+    background: rgba(255,255,255,0.4);
+    backdrop-filter: blur(5px);
+}
+
+select {
+    padding: 10px;
+    border: 1px solid rgba(255,255,255,0.4);
+    color: white;
+    transform: scale(1.1);
+}
+
+input { 
+    all: unset;
+    padding: 10px;
+    border: 1px solid rgba(255,255,255,0.4);
+    text-align: start;
+    width: 70%;
+    color: white;
+}
+
+input:focus {
+    border-width: 3px;
+}
+
+.wrapper, button, .result {
+    border-radius: 10px;
+}
+
+.attribution, header {
+    border-top: 1px solid #aaa;
+    width: 100%;
+    text-align: center;
+    margin-top: 1em;
+    padding: 1em 0;
+    position: fixed;
+    bottom: 0;
+}
+
+header {
+    border-top: unset;
+    border-bottom: 1px solid #aaa;
+    bottom: unset;
+    top: 0;
+    margin: 0;
+}
+
+.attribution, a, header {
+    color: #ddd;
+}

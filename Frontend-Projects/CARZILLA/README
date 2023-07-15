@@ -1,0 +1,71 @@
+<h2 align="center">Documentation on CARZILLA Site</h2>
+<p> The primary objective of a car dealer website is to provide as many avenues to prospective customers as possible to create an interest in them for the cars your dealership is selling.</p>
+
+<br />
+
+
+
+# Screenshots :
+ <h3>Home Page</h3><br>
+<img width="1438" alt="Screenshot 2023-07-12 at 3 28 21 PM" src="https://github.com/pranjay-poddar/Dev-Geeks/assets/102572480/1792dc38-2ac8-41ba-9ff2-5a1e8600e28f">
+<br><br>
+<h3>Wall Papers Page</h3><br>
+<img width="1438" alt="Screenshot 2023-07-12 at 3 28 33 PM" src="https://github.com/pranjay-poddar/Dev-Geeks/assets/102572480/f27f7053-e047-4406-9864-5ec526175048">
+<br><br>
+<h3>About Us Page</h3><br>
+<img width="1438" alt="Screenshot 2023-07-12 at 3 28 58 PM" src="https://github.com/pranjay-poddar/Dev-Geeks/assets/102572480/96d533f7-c3e3-477d-8268-c608e0f1808b">
+<br><br>
+<h3>About Us other sections</h3>
+<img width="1438" alt="Screenshot 2023-07-12 at 3 28 52 PM" src="https://github.com/pranjay-poddar/Dev-Geeks/assets/102572480/cb7c68f5-8781-4917-806e-0194577d5e64">
+
+
+
+
+
+# Dependencies Required:
+
+ - Just a Browser which can support HTML5, CSS3, JavaScript
+ - To open the website of CARZILLA open index.html file in your browser, 
+ - To open the website with all the media working first download all the assets from this drive link (https://drive.google.com/drive/folders/1Cy_J6gERS2T7wpMuGskb8OaNzRlWGIiN?usp=sharing)
+
+### How to Run it Locally:
+
+- At first Clone the Repository by using the command:
+```
+  - git clone https://github.com/pranjay-poddar/Dev-Geeks.git
+```
+
+- Change Directory  By using:
+     - ``` cd Dev-Geeks ```
+- Always wiser to create different branch while doing updates rather doing in main
+     - ``` git branch unique ```
+     - ``` git checkout unique ```
+- Make necessary changes/update you need. 
+- After changes has been made.
+     - ``` git add . ```
+     - ``` git commit -m "Add any message" ```
+- Now, changes reflected by using push command.
+     - ```git push upstream unique``` 
+    
+    Thus, we can merge the changes which were made by you.After successful review of carefully observation of your code by reviewer your code will be merged to the main branch. 
+    Happy Coding 😀
+
+
+
+## **Built With**
+
+- ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)   
+- ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white) 
+- ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)  
+
+
+<br>
+
+## **Tools Used**
+
+- ![Google](https://img.shields.io/badge/google-DA4437?style=for-the-badge&logo=google&logoColor=white)
+- ![GitHub](https://img.shields.io/badge/github-0D1117.svg?style=for-the-badge&logo=github&logoColor=white)  
+- ![Visual Studio Code](https://img.shields.io/badge/Visual%20Studio%20Code-0078d7.svg?style=for-the-badge&logo=visual-studio-code&logoColor=white)   
+
+
+<br>

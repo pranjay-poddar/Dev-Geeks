@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0" />
+  <link rel="shortcut icon" href="./images/logo.png" type="image/x-icon">
+  <title>Gallery</title>
+  <!-- toastify-js css -->
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="body">
+
+  <header>
+    <nav>
+      <ul>
+        <li>Home</li>
+        <li><a href="preview.html">Preview</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div id="slide">
+    <h2 id="txt"></h2>
+
+    <main class="main" id="photo-container">
+    </main>
+  </div>
+  <footer>
+    <div class="copy">
+      Made with &#9825; by Soubhik
+      <div class="ft">
+        <div id="dt"></div>
+        All rights reserved
+      </div>
+    </div>
+  </footer>
+
+  <!-- toastify-js js -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+  <script src="main.js"></script>
+  <script>
+    Toastify({
+        text: "Hold any image or take your cursor to clear the image!",
+        duration: 3000,
+        newWindow: true,
+        close: true,
+        gravity: "top", // `top` or `bottom`
+        position: "left", // `left`, `center` or `right`
+        stopOnFocus: true, // Prevents dismissing of toast on hover
+        position: "top-right",
+        style: {
+          background: " #4c53a7",
+        },
+        onClick: function(){} // Callback after click
+    }).showToast();
+
+
+    let txtlen = txt.length;
+    let pos = -1;
+    const t = setInterval(move, 200);
+    photoContainer.innerHTML = photos.map(link => `<a href="${link}" class="aimg"><img src="${link}" class="img" /></a>`).join("")
+
+  </script>
+</body>
+
+</html>
