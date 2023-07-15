@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SIgnUp Page</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body 
+style="
+background-color: #27374d;
+display: flex;
+margin-top: 80px;
+align-items: center;
+justify-content: center;
+"
+>
+    <div class="section">
+        <div class="header_signin">
+        Sign Up
+        </div>
+        <form class="signUp-form" id="form">
+          <div class="first-box" style="padding-top: 50px;">
+            <div class="form-group">
+              <i class="fa fa-address-book-o"></i>
+              <input type="text" name="" id="fullName" placeholder="Name">
+            </div>
+            <div class="form-group">
+              <i class="fa fa-envelope"></i>
+              <input type="email" name="" id="email" placeholder="Email">
+            </div>
+            <div class="form-group">
+              <i class="fa fa-phone"></i>
+              <input type="tel" name="" id="phone" placeholder="Mobile number" maxlength="10">
+            </div>
+          
+          </div>
+          <div class="second-box">
+            <div class="form-group" >
+              <i class="fa fa-user-o"></i>
+              <input type="text" name="" id="username" placeholder="Username">
+            </div>
+            <div class="form-group">
+              <i class="fa fa-unlock-alt"></i>
+              <input type="password" name="" id="password" placeholder="Password">
+              <i class="fa fa-eye-slash icon" id="newPassword"></i>
+            </div>
+            <div class="form-group">
+              <i class="fa fa-unlock-alt"></i>
+              <input type="password" name="" id="confirmPassword" placeholder="Confirm password">
+              <label>
+                <i class="fa fa-eye-slash icon" id="confirmNewPassword"></i>
+              </label>
+            </div>
+            <div class="button">
+                    <button class="button_signin" style="margin-left: 240px; margin-top: 15px;">Submit</button>
+            </div>
+          </div>
+          <div class="redirect_signup">
+            Already have an account ? 
+            <button style="background: none; border: none;">
+              <a href="signin.html" 
+              style="
+              color: rgb(252, 247, 247);
+              text-decoration: none;
+              /* background: ; */
+              background-image: radial-gradient(
+                  93% 87% at 87% 89%,
+                  rgba(0, 0, 0, 0.23) 0%,
+                  transparent 86.18%
+                ),
+                radial-gradient(
+                  66% 66% at 26% 20%,
+                  rgba(255, 255, 255, 0.55) 0%,
+                  rgba(255, 255, 255, 0) 69.79%,
+                  rgba(255, 255, 255, 0) 100%
+                );
+              box-shadow: inset -3px -3px 9px rgba(255, 255, 255, 0.25),
+                2px 19px 31px rgba(0, 0, 0, 0.2);
+              border-radius: 10px;
+              border: none;
+              padding: 10px;
+            "
+              >Login</a>
+            </button>
+          </div>
+        </form>
+       
+        
+      </div>
+</body>
+</html>
