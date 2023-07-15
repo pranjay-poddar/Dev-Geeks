@@ -10,3 +10,4 @@ if __name__ == "__main__":
     data = "https://www.google.com"
     img = generate_qr_code(data)
     img.save("qr_code.png")
+    
