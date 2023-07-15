@@ -13,17 +13,19 @@ body{
 
 .content{
     position: absolute;
-    top: 40%;
-    left: 40%;
+    top: 300px;
+    left: 400px;
 }
 
 .content h2{
     text-align: center;
     font-size: 40px;
+    border: 2px solid;
+    padding: 50px;
 }
 
 .open{
-    position: absolute;
+    position: relative;
     left: 0;
 }
 
@@ -46,82 +48,110 @@ body{
     left: -250px;
     top: 0;
     height: 100%;
-    background: #222;
-    transition: 0.5s;
+    background: #242423;
+    transition: all 0.5s ease;
 }
 
-.sidebar .close span{
+.title {
+    font-size: 24px;
+    letter-spacing: 1px;
+    font-weight: 300;
+    color: white;
+    border-bottom: 1px solid #ced4da;
+    padding: 20px;
+    text-align: center;
+}
+
+.close{
     position: absolute;
-    top: 5px;
+    top: 10px;
     right: 10px;
     padding: 7px;
     color: white;
-    background: #444;
-    border-radius: 4px;
+    cursor: pointer;
+    height: 35px;
+    width: 35px;
+    text-align: center;
+    background: black;
+    border: 2px solid white;
+    border-radius: 25px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    transition: all 0.5s ease;
+}
+
+.close:hover {
+    background: white;
+    color: black;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.links {
+    height: 80vh;
+    width: 225px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    margin: 10px;
+}
+
+.links i {
+    flex: 1;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid #ced4da;
+    width: 100%;
     cursor: pointer;
 }
 
-.sidebar .title{
-    padding-left: 60px;
-    font-size: 25px;
-    line-height: 60px;
+.link-title {
+    margin: 5px;
+    font-size: 22px;
+}
+
+.links i:hover {
+    background: white;
+    color: black;
+}
+
+.social i{
     color: white;
-    border-bottom: 2px solid gray;
-}
-
-.sidebar .links li{
-    list-style: none;
-    display: block;
-    width: 100%;
-    line-height: 60px;
-    border-left: 5px solid transparent;
-    border-bottom: 2px solid gray;
-    cursor: pointer;
-}
-
-.sidebar .links li:hover{
-    background: #333;
-    border-left: 5px solid cornflowerblue;
-}
-
-.sidebar .links li a{
-    text-decoration: none;
-    color: white;
-    font-size: 20px;
-    padding-left: 40px;
-    transition: 0.5s;
-}
-
-.sidebar .links li:hover a{
-    color: cornflowerblue;
-    letter-spacing: 1.2px;
-}
-
-.sidebar .links li a i{
-    margin-right: 5px;
-}
-
-.sidebar .social{
-    width: 100%;
-    position: absolute;
-    bottom: 30px;
-    left: 20px;
-}
-
-.sidebar .social i{
+    font-size: 22px;
     width: 45px;
-    font-size: 25px;
-    color: white;
-    background: #444;
+    border-radius: 50%;
     padding: 10px;
     text-align: center;
-    margin-right: 5px;
     cursor: pointer;
-    border-radius: 5px;
-    transition: 0.5s;
+    margin: 2px;
 }
 
-.sidebar .social i:hover{
-    background: cornflowerblue;
-    transform: translateY(-10px);
+.social i:hover {
+    transition: all 0.5s ease;
+    transform: scale(1.1);
+}
+.instagram {
+    background: rgb(236, 9, 149);
+}
+
+.youtube {
+    background: red;
+}
+
+.facebook {
+    background: rgba(68, 137, 216, 0.789);
+}
+
+.twitter {
+    background: skyblue;
 }

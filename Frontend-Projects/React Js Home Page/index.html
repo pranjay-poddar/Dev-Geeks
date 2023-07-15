@@ -1,0 +1,56 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>React Js Home Page</title>
+</head>
+<body>
+    <div class="navbar">
+        <img src="./images/logo.png" alt="React Logo">
+        <input type="text" placeholder="Search">
+        <div class="navbar-items">
+            <a href="https://react.dev/learn">
+                <div class="item">Learn</div>
+            </a>
+            <a href="https://react.dev/reference/react">
+                <div class="item">Reference</div>
+            </a>
+            <a href="https://react.dev/community">
+                <div class="item">Community</div>
+            </a>
+            <a href="https://react.dev/blog">
+                <div class="item">Blog</div>
+            </a>
+            <div class="item" onclick="enableNightMode()">
+                <img src="./images/night-mode.png" class="night-mode-icon" alt="night mode">
+            </div>
+            <a href="https://github.com/facebook/react">
+                <div class="item">Github</div>
+            </a>
+        </div>
+    </div>
+    <div class="mobile-navbar">
+        <img src="./images/logo.png" class="react-logo" alt="React Logo">
+        <input type="text" placeholder="Search">
+        <img src="./images/menu.png" class="menu-logo" onclick="showMenu()" alt="Menu-Logo">
+    </div>
+    <div class="main">
+        <img src="./images/logo.png" alt="React Logo">
+        <h1 class="main-title">React</h1>
+        <h2>The library for web and native user interfaces</h2>
+        <div class="buttons-container">
+            <a href="https://react.dev/learn" class="learn-react-btn">
+                Learn React
+            </a>
+            <a href="https://react.dev/reference/react" class="api-reference-btn">
+                API Reference
+            </a>
+        </div>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>

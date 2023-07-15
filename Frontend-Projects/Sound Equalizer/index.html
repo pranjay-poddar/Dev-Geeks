@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Logo of the website -->
+    <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
+
+    <!-- Title of the webpage -->
+    <title>Sound Equalizer</title>
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <!-- Main heading -->
+    <h1>Sound Equalizer</h1>
+    
+    <!-- Main container -->
+    <div class="content">
+        <!-- Music -->
+        <div class="eq">
+            <input type="range" id="equalizer1" value="0" autocomplete="off" max="99">
+            <span class="level"></span>
+            <span class="number off">00</span>
+            <span class="icon music off"></span>
+        </div>
+
+        <!-- Mic -->
+        <div class="eq">
+            <input type="range" id="equalizer2" value="50" autocomplete="off" max="99">
+            <span class="level"></span>
+            <span class="number">00</span>
+            <span class="icon microphone"></span>
+        </div>
+
+        <!-- Headphone -->
+        <div class="eq">
+            <input type="range" id="equalizer3" value="99" autocomplete="off" max="99">
+            <span class="level"></span>
+            <span class="number">00</span>
+            <span class="icon headphones"></span>
+        </div>
+    </div>
+
+    <!-- Creator of this design -->
+    <p class="author">
+        Created with ❤️ by <a target="_blank" href="https://github.com/Avdhesh-Varshney">Avdhesh Varshney</a>
+    </p>
+
+    <!-- JavaScript file -->
+    <script src="./script.js"></script>
+</body>
+
+</html>

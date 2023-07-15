@@ -1,0 +1,244 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Roboto:wght@400;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --primary-text-color:#183b56;
+    --secondary-text-color: #577592;
+    --accent-color: #2294ed;
+    --accent-color-dark: #1d69a3;
+    --padding-inline-section: 20px;
+
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: var(--primary-text-color);
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+h3 {
+    font-size: 1.25rem;
+}
+
+p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.25rem;
+    color: var(--secondary-text-color);
+    line-height: 1.8rem;
+}
+
+a {
+    text-decoration: none;
+    display: inline-block;
+}
+.small-bold-text{
+    font-size: 0.85rem;
+    font-weight: 700;
+}
+
+.container{
+    max-width: 1180px;
+    margin-inline: auto;
+    padding:var(--padding-inline-section) ;
+}
+.flex{
+    display: flex;
+    align-items: center;
+}
+.hover-links{
+    color: var(--primary-text-color);
+}
+.hover-links:hover{
+    color: var(--accent-color);
+}
+ul{
+    list-style: none;
+}
+.primary-button{
+    background-color: var(--accent-color);
+    color:white;
+    border-radius: 6px;
+    padding:10px 20px
+}
+.primary-button:hover{
+    background-color: var(--accent-color-dark);
+}
+.secondary-button{
+    background-color: white !important;
+    border: 1px solid;
+    padding:10px 20px;
+    border-radius:4px;
+    color: var(--primary-text-color);
+}
+.secondary-button:hover{
+    color: var(--accent-color);
+}
+
+.top-banner{
+    background-color: #4fb3d4;
+    background-image: url(./assets/asset\ 30.png);
+    background-size: 300px;
+}
+.banner-text{
+    color: white;
+    padding: 0px 10px;
+    text-align: center;
+}
+
+
+.main-nav{
+    justify-content: space-between;
+}
+
+.company-logo img{
+    width:200px;
+}
+.nav-links{
+    flex-basis: 730px;
+}
+.nav-links ul{
+    justify-content: end;
+    gap: 40px;
+    
+}
+
+
+.header-section{
+    justify-content: center;
+}
+.header-right img{
+    width:110%
+}
+.header-left{
+    max-width:40vw;
+    align-items: left;
+    padding-right: 65px;
+}
+.header-left h1{
+    padding-bottom: 20px;
+    width:600px;
+}
+.get-started{
+    margin-top: 20px;
+}
+.companies-header{
+    text-align: center;
+}
+.logos{
+    justify-content: space-between;
+    padding-top: 20px;
+    
+}
+.logo{
+    height:46px;
+}
+
+.features-section{
+    padding:80px,var(--padding-inline-section) 0;
+}
+.features-header{
+    text-align: center;
+    margin-bottom: 20px;
+}
+.features-header h2{
+    margin-top: 80px;
+    margin-bottom: 20px;
+}
+.features-area{
+    margin-top: 40px;;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap:40px;
+}
+.features-card{
+    flex-direction: column;
+    gap:20px;
+    max-width: 30%;
+    text-align:center;
+}
+.features-card img{
+    width:40px;
+}
+.feature1-img img{
+    width: 587px;
+}
+
+.big-features-section{
+    margin-top: 40px;
+}
+.feature-desc{
+    flex-direction: column;
+    align-items: flex-start;
+}
+.big-features-1{
+    gap:60px;
+}
+.feature-desc h3{
+    text-align: left;
+}
+
+.examples-header{
+    text-align: center;
+    flex-direction: column;
+    gap:20px;
+}
+
+.example-area{
+    margin-top: 20px;
+    margin-bottom: 60px;
+    gap:20px;
+}
+.example-card{
+    width:23%;
+    position:relative;
+    min-height:300px;
+    background: black;
+    
+}
+.card-text{
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    right:20px;
+    color:white;
+    
+}
+.card1{
+    background-image: url(assets/asset\ 35.jpeg);
+}
+.card2{
+    background-image: url(assets/asset\ 34.jpeg);
+}
+.card3{
+    background-image: url(assets/asset\ 36.jpeg);
+}
+.card4{
+    background-image: url(assets/asset\ 37.jpeg);
+}
+
+
+.cta-section{
+    background-color: #183b54;
+    gap:50px;
+}
+.cta-desc{
+    align-items: flex-start;
+    color:white;
+    flex-flow: column;
+    gap:20px;
+    width:65%;
+}
+.image{
+    height:400px;
+}

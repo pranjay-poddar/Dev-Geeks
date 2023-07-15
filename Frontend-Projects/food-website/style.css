@@ -33,14 +33,19 @@ html{
 }
 
 #logo img{
-    margin: 3px 8px;
+    /* margin: 5px 8px; */
     height: 90px;
+    margin-top:13%;
     width: 117px;
     /* border-radius: 86% 43% 10% 85% / 37% 93% 0% 87%  ; */
 }
 
 #navbar ul{
     display: flex;
+     margin-left:45%;   
+     font-size:150%; 
+    
+
 }
 
 #navbar ul li{
@@ -52,7 +57,7 @@ html{
     display: block;
     text-decoration: none;
     padding: 10px 20px;
-    color: wheat;
+    color: rgb(221, 241, 162);
 }
 #navbar ul li a:hover{
     color: black;
@@ -167,10 +172,31 @@ section h1{
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color:rgb(66, 61, 66);
 }
 .clients img{
-    width: 130px;
-    height: 130px;
+    width: 90px;
+    height: 90px;
+}
+.clients img{
+    width: 90px;
+    height: 90px;
+}
+.client_item2 img{
+    width: 40px;
+    height: 40px;
+    margin-left:-33%;
+}
+.client_item1 img{
+    width: 40px;
+    height: 40px;
+    margin-left:-83%;
+}
+.client_item3 img{
+    width: 60px;
+    height: 60px;
+    margin-right:-63%;
+   
 }
 
 .client_item{
@@ -189,7 +215,7 @@ section h1{
     width: 100%;
     height: 100%;
     background-image: url("image/contact-us-4193523_1920.jpg");
-    opacity: 0.9;
+    opacity: 1.5;
     z-index: -1;
 }
 
@@ -212,18 +238,19 @@ section h1{
     text-align: center;
 }
 
-.submit button{
-    padding: 8px 25px;
-    border: 3px solid black;
+/* .submit button{
+    padding: 8px 25px 25px 25px;
+    border: 1px solid black;
     background-color: rgb(67, 65, 75);
     color: white;
     margin: 20px;
     font-size: 1.1rem;
     border-radius: 15px;
     cursor: pointer;
+    align-items: center;
 }
 .submit button:hover{
-    padding: 8px 25px;
+    padding: 8px 25px 25px 25px;
     border: 3px solid black;
     background-color: rgb(14, 14, 15);
     color: white;
@@ -231,13 +258,25 @@ section h1{
     font-size: 1.1rem;
     border-radius: 15px;
     cursor: pointer;
-}
+} */
+
+.sbutton {
+    background-color: #828181; /* Green */
+    border: none;
+    margin:auto;
+    color: white;
+    padding: 10px 35px;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    font-size: 22px;
+    border-radius: 15px;
+  }
 
 #contact_box input, #contact_box textarea{
     width: 100%;
     padding: 0.5rem;
     border-radius: 20px;
-    font-size: 1rem;
 }
 
 .form_group input:hover, .form_group textarea:hover{
@@ -245,8 +284,20 @@ section h1{
     padding: 0.5rem;
     border-radius: 20px;
     font-size: 1rem;
-    background-color: rgb(rgb(189, 189, 189);
+    background-color: rgbrgb(189, 189, 189)
     /* box-shadow: rgb(rgb(68, 68, 68); */
+}
+
+.contact_us_field
+{
+    text-align: center;
+    color: 7F7D7D;
+    font-size: 0.55cm;
+    padding-top: 0.85px;
+    background-color: D9D9D9;
+    width: 600px !important;
+    border-radius: 5px;
+    height: 35px;
 }
 
 

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Password Generator</title>
+  <style>
+    .container {
+      margin-top: 20px;
+    }
+    
+    label {
+      font-weight: bold;
+    }
+    
+    input[type="number"] {
+      width: 50px;
+    }
+    
+    button {
+      margin-left: 10px;
+      border: 5px solid #ff0000;
+      background-color: rgb(234, 255, 0);
+    }
+    
+    #password {
+      margin-top: 10px;
+      font-weight: bold;
+    }
+    
+  </style>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+  <h1>Password Generator</h1>
+  <div class="container">
+    <label for="length">Password Length:</label>
+    <input type="number" id="length" min="4" max="20">
+    <button onclick="generatePassword()">Generate Password</button>
+    <p id="password"></p>
+  </div>
+
+  <script>
+    function generatePassword() {
+      var length = document.getElementById("length").value;
+      var charset = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()_+~`|}{[]:;?><,./-=";
+      var password = "";
+    
+      for (var i = 0, n = charset.length; i < length; ++i) {
+        password += charset.charAt(Math.floor(Math.random() * n));
+      }
+    
+      document.getElementById("password").textContent = password;
+    }
+  </script>
+</body>
+</html>

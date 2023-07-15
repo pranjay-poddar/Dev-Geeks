@@ -1,0 +1,84 @@
+/*! =========================================================
+ *
+ * Material Kit PRO - v2.0.3 (Bootstrap 4.0.0 Final Edition)
+ *
+ * =========================================================
+ *
+ * Product Page: https://www.creative-tim.com/product/material-kit-pro
+ * Available with purchase of license from https://www.creative-tim.com/product/material-kit-pro
+ * Copyright 2018 Creative Tim (https://www.creative-tim.com)
+ * License Creative Tim (https://www.creative-tim.com/license)
+ *
+ * ========================================================= */
+
+ @import "core/variables";
+ @import "core/mixins";
+ @import "core/core-bootstrap";
+ @import "core/reboot";
+
+ // Core Components
+ @import "core/layout";
+ @import "core/buttons";
+ @import "core/misc";
+ @import "core/checkboxes";
+ @import "core/cards";
+ @import "core/custom-forms";
+ @import "core/switches";
+ @import "core/radios";
+ @import "core/carousel";
+ @import "core/forms";
+ @import "core/input-group";
+ @import "core/list-group";
+ @import "core/nav";
+ @import "core/images";
+ @import "core/navbar";
+ @import "core/badges";
+ @import "core/alerts";
+ @import "core/pagination";
+ @import "core/pills";
+ @import "core/info-areas";
+ @import "core/type";
+ @import "core/tabs";
+ @import "core/tooltip";
+ @import "core/popover";
+ @import "core/modal";
+ @import "core/dropdown";
+ @import "core/drawer";
+ @import "core/progress";
+ @import "core/togglebutton";
+ @import "core/ripples";
+
+ // Components for PRO
+ @import "pro/social-buttons";
+ @import "pro/fileupload";
+ @import "pro/tables";
+ @import "pro/cards";
+ @import "pro/sections";
+ @import "pro/media";
+
+ // Core Plugins
+
+ @import "plugins/plugin-datetime-picker";
+ @import "plugins/plugin-nouislider";
+
+//Plugins for PRO
+
+@import "plugins/plugin-bootstrap-select";
+@import "plugins/plugin-flexisel";
+@import "plugins/plugin-tagsinput";
+
+// Sections and Example pages for PRO
+
+@import "pro/example-pages";
+@import "pro/sections/headers";
+@import "pro/sections/footers";
+@import "pro/sections/social-subscribe-lines";
+@import "pro/sections/features";
+@import "pro/sections/team";
+@import "pro/sections/pricing";
+@import "pro/sections/blogs";
+@import "pro/sections/projects";
+@import "pro/sections/testimonials";
+@import "pro/sections/contactus";
+
+ @import "core/responsive";

@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Bus Reservation App</title>
+  <loading><img src="loading.gif" alt="loading"></loading>
+  <style>
+    /* Reset some default styles */
+body, form {
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Center the login form vertically and horizontally */
+  body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color:whitesmoke;
+    flex-direction: column; /* Added */
+  }
+  
+  /* Style the form container */
+  form {
+    width: 450px;
+    padding: 40px;
+    background-color:#9b1c05;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 20px; /* Added */
+    position: absolute;
+  top: 0;
+  right: 0;
+    /* width: 55%; */
+    height: 60vh;
+    margin: 70px 50px 50px 0;;
+    /* padding: 20px; */
+  }
+  
+  /* Style the form header (logo and title) */
+  header {
+    text-align: left;
+    
+  }
+  
+  /* Style the form title */
+  h1 {
+    font-size: 24px;
+    color: #333;
+   
+    text-align: left;
+  }
+  
+  /* Style the form fields and labels */
+  label, select, input[type="text"], input[type="submit"] {
+    display: block;
+    width: 100%;
+    margin-bottom: 15px;
+  }
+  
+  /* Style the label */
+  label {
+    font-weight: bold;
+    color: black;
+  }
+  
+  /* Style the select field */
+  select {
+    height: 40px;
+    border: 1px solid lightsteelblue;
+    border-radius: 5px;
+    padding: 0 10px;
+  }
+  
+  /* Style the input fields */
+  input[type="text"] {
+    height: 40px;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 0 10px;
+  }
+  
+  /* Style the submit button */
+  input[type="submit"] {
+    height: 40px;
+    background-color:whitesmoke;
+    color: black;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-bottom: 10px;
+  }
+  
+  /* Change submit button color on hover */
+  input[type="submit"]:hover {
+    background-color:burlywood;
+  }
+  
+  
+  
+    label {
+      display: block;
+      margin-bottom: 10px;
+      font-size: 18px;
+    }
+    
+    input[type="password"] {
+      width: 80%;
+      padding: 10px;
+      font-size: 15px;
+      margin-bottom: 10px;
+      height: 15px;
+    }
+    input[type="password"] {
+      margin-bottom: 60px; /* Add spacing between password label and login button */
+    }
+    input[type="submit"] {
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+  <header style="display:flex; align-items:center;">
+    
+    <h1 style="margin-right:500px;margin-top: -60%;"><pre><header>
+      <h1 style="font-size: 80px; font-family: 'Times New Roman', Times, serif;">
+   
+    RouteEase:</h1>
+       Streamlining Bus Route 
+       Bookings for College Students</pre></h1>
+  </header>
+  
+  <form action="#" method="post" id="loginForm">
+    <label for="user-type">Student/Admin</label>
+    <select id="user-type" name="user-type">
+      <option value="student">Student</option>
+      <option value="admin">Admin</option>
+    </select>
+    <br>
+    <label for="username">Username:</label>
+    <input type="text" id="username" name="username" placeholder="Enter your username" required style="width: 95%;font-size: 15px;">
+    <br>
+    <label for="password" style="font-size: 18px;">Password:</label>
+    <input type="password" id="password" name="password" placeholder="Enter your password" minlength="6" required style="width: 95%; padding: 10px; font-size: 15px;">
+    <br>
+    <input type="submit" value="Login">
+  </form>
+  <script>
+    var userTypeSelect = document.getElementById('user-type');
+    var loginForm = document.getElementById('loginForm');
+    loginForm.addEventListener('submit', function(event) {
+      event.preventDefault(); // Prevent form submission
+      var selectedUserType = userTypeSelect.value;
+      if (selectedUserType == 'student') {
+        window.location.href = 'student.html'; // Redirect to student.html
+      } else if (selectedUserType == 'admin') {
+        window.location.href = 'admin.html'; // Redirect to admin.html
+      } else {
+        // Add logic for other user types if needed
+      }
+    });
+    window.addEventListener("load", function() {
+  // Remove the loading page
+  document.querySelector("loading").remove();
+});
+
+  </script>
+</body>
+</html>

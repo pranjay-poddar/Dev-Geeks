@@ -1,0 +1,47 @@
+#Gif Creator
+
+This project is a Gif Creator application that allows you to create animated GIFs 
+from a series of images or video files. It provides various features and effects like 
+fade in/out, star wipe, and window blinds transitions.
+
+##Installation
+
+1) Clone the repository:
+git clone https://github.com/your-username/gif-creator.git
+
+2)Install the required dependencies:
+pip install imageio moviepy
+
+##Usage
+
+1) Add your images or video files to the appropriate directories:
+
+2) For images: Place your image files in the "Image-Slideshow" directory.
+For videos: Place your video files in the "Gif-Creator" directory.
+Modify the filenames in the Python code to match your image or video files:
+
+3) For the slide show: Update the filenames list in the first code block of create_slideshow.py with the filenames of your images.
+For the GIF conversion: Update the VideoFileClip argument in the second code block of create_gif.py with the filename of your video.
+Run the Python scripts to create the GIF:
+
+4) For the slide show: Execute create_slideshow.py.
+For the GIF conversion: Execute create_gif.py.
+Find the generated GIF in the project directory with the name "output.gif".
+
+##Acknowledgements
+
+This project makes use of the following libraries:
+
+imageio (https://imageio.readthedocs.io/en/stable/)
+moviepy (https://zulko.github.io/moviepy/)
+
+##Optional Enhancements
+You can explore additional enhancements for the Gif Creator project, such as:
+
+Adding more transition effects or allowing users to choose different effects.
+Providing options to adjust the duration of each frame or transition.
+Implementing a user-friendly interface to select images or videos and customize the GIF creation process.
+Feel free to contribute to the project by adding new features, fixing bugs, or suggesting improvements.
+
+
+

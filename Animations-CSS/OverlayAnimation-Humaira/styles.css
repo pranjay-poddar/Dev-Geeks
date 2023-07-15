@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Dongle:wght@300;400&family=Lato:wght@400;700&family=Tilt+Prism&family=Ubuntu:wght@400;500;700&display=swap');
+
+html {
+    font-size: 62.5%;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #485460;
+}
+
+.content {
+    background-image: url(./images/bot.jpg);
+    height: 70vh;
+    width: 80vw;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    box-shadow: 0 1rem 2rem -.6rem #fff;
+    transition: all .5s ease-in-out;
+    position: relative;
+    overflow: hidden;
+}
+
+.content:hover {
+    transform: scale(1.08);
+}
+
+.content:hover .text {
+    opacity: 0;
+}
+
+.overLay {
+    height: 100%;
+    transition: all .5s linear;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.overLay::before,
+.overLay::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 60%;
+}
+
+.overLay::before {
+    transform: skewX(25deg);
+    left: -11rem;
+    background-color: rgba(0, 0, 0, 0.9);
+    transition: all .5s linear;
+}
+
+.overLay::after {
+    transform: skewX(25deg);
+    right: -11rem;
+    background-color: rgba(255, 255, 255, 0.5);
+    transition: all .5s linear;
+}
+
+.overLay:hover::before {
+    transform: translateX(-100rem);
+}
+
+.overLay:hover::after {
+    transform: translateX(100rem);
+}
+
+.overLay .text {
+    display: flex;
+    flex-direction: column;
+    font-size: 2.9rem;
+    background: -webkit-linear-gradient(#eee, #333);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    z-index: 1;
+}
+
+.overLay .text span {
+    font-size: 6rem;
+    background: -webkit-linear-gradient(#333, #000);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    z-index: 1;
+}
+
+@media(max-width: 780px) {
+
+    html{
+        font-size: 55%;
+    }
+    .overLay::before,
+    .overLay::after {
+        width: 65%;
+    }
+}
+@media(max-width: 780px) {
+
+    html{
+        font-size: 30%;
+    }
+}

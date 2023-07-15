@@ -1,0 +1,85 @@
+{
+  "id": "1d2f4c68-f2de-46dd-9067-03ecb5f37c7a",
+  "name": "Conversation 3 - 1.cold,cough and fever - no - (3-5) Days - high - no for improvement",
+  "auto": true,
+  "condition": "",
+  "conditionalFollowupEvents": [],
+  "conditionalResponses": [],
+  "context": [
+    "Conversation3-1coldcoughandfever-no-3-5Days-high-followup"
+  ],
+  "contexts": [
+    "Conversation3-1coldcoughandfever-no-3-5Days-high-followup"
+  ],
+  "endInteraction": false,
+  "events": [],
+  "fallbackIntent": false,
+  "liveAgentHandoff": false,
+  "parentId": "546c5fa5-ff8a-4007-a26e-afab852f4378",
+  "followUpIntents": [],
+  "priority": 500000,
+  "responses": [
+    {
+      "action": "Conversation3.Conversation3-custom.Conversation3-1coldcoughandfever-custom-2.Conversation3-1coldcoughandfever-no-custom.Conversation3-1coldcoughandfever-no-3-5Days-custom.Conversation3-1coldcoughandfever-no-3-5Days-high-custom-2",
+      "affectedContexts": [],
+      "parameters": [],
+      "defaultResponsePlatforms": {},
+      "messages": [
+        {
+          "type": "message",
+          "condition": "",
+          "speech": [
+            "Okay then follow the medicines as per the below."
+          ]
+        },
+        {
+          "type": "message",
+          "condition": "",
+          "speech": [
+            "1.Diominic BCA [1] tablets per day for fever."
+          ]
+        },
+        {
+          "type": "message",
+          "condition": "",
+          "speech": [
+            "2.Use Dolo 650 [1] tablet per day."
+          ]
+        },
+        {
+          "type": "message",
+          "condition": "",
+          "speech": [
+            "If needed then increase all your doses by 1."
+          ]
+        },
+        {
+          "type": "message",
+          "condition": "",
+          "speech": [
+            "Above course is for 3 days so kindly follow it and then contact me after 3 days."
+          ]
+        }
+      ],
+      "resetContexts": false
+    }
+  ],
+  "rootParentId": "4ff6d6f4-51ce-40cc-bea4-977e35b5b1e4",
+  "templates": [],
+  "userSays": [
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "2",
+          "userDefined": false
+        }
+      ],
+      "count": 0,
+      "id": "6f210902-2ae6-42a4-a6a8-7c93398d83e7",
+      "updated": null
+    }
+  ],
+  "webhookForSlotFilling": false,
+  "webhookUsed": false
+}

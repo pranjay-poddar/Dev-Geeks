@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Filter User App</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div class="container">
+      <h1>Filter User App</h1>
+      <h5 class="description"> 
+        Filter Users via their profession , Name.
+      </h5>
+      <!------------------- profession ---------------->
+      <div class="profession-section">
+        <!---- filters---- -->
+        <div class="filters">
+        <select name="profession" id="profession" required>
+          <option value="" disabled selected>Profession</option>
+          <option value="developer">Developer</option>
+          <option value="admin">Admin</option>
+          <option value="hr-manager">HR Manager</option>
+          <option value="designer">Designer</option>
+        </select>
+         
+          <input type="text" name="name" placeholder="Name" id="byname"/>
+        
+        </div>
+          <!------------------ filter Ui Cards ------------------>
+        <div class="filter-ui">
+          <!--inside this ,  we will add cards using js -->
+          <!-- <div class="cards">
+            <span>1.</span>
+            <span>Name: John</span>
+            <span>Profession: Developer</span>
+            <span>Age:18</span>
+          </div> -->
+        </div>
+
+        <button id="filter" onclick="filter()">Filter</button>
+      </div>
+
+      <!----------------- Add a new User Section------------->
+      <div class="add-user">
+        <p>Add a new user</p>
+        <div class="user">
+          <form onsubmit="event.preventDefault();">
+            <div class="inputs">
+            <section>
+              <label for="name">Enter Name</label><br>
+              <input type="text" name="name" id="name" required />
+            </section>
+            <section>
+              <label for="profession-input">Enter Profession</label> <br>
+              <select name="profession-input" id="profession-input" required>
+                <option value="" disabled selected>Profession</option>
+                <option value="developer">Developer</option>
+                <option value="admin">Admin</option>
+                <option value="hr-manager">HR Manager</option>
+                <option value="designer">Designer</option>
+              </select>
+            </section>
+            <section>
+              <label for="age">Enter Age</label>  <br>
+              <input type="text" name="age" id="age" required />
+            </section>
+            </div>
+             <section>
+            <button id="add" type="submit" onclick="addUser()">Add User</button>
+            </section>
+          </form>
+        </div>
+      </div>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>

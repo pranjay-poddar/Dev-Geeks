@@ -1,0 +1,166 @@
+body {
+    font-family: Inter;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar > img {
+    height: 50px;
+    width: 50px;
+    margin-left: 15px;
+    cursor: pointer;
+}
+
+input {
+    flex: 1;
+    padding: 12px;
+    margin: 25px;
+    border-radius: 25px;
+    border: none;
+    background: rgb(244, 242, 242);
+    font-size: 16px;
+}
+
+input::placeholder {
+    font-size: 18px;
+    position: relative;
+    top: 2px;
+    left: 10px
+}
+
+input:focus {
+    outline-color: #087ea4;
+}
+
+.navbar-items {
+    padding: 15px;
+    display: flex;
+    gap: 10px;
+    margin-right: 25px;
+}
+
+.navbar-items  > a {
+    text-decoration: none;
+    color: black;
+}
+
+.item {
+    padding: 10px;
+    cursor: pointer;
+}
+
+.item:hover {
+    transform: scale(1.1);
+    transition: all 0.5s ease;
+}
+
+.night-mode-icon {
+    height: 25px;
+    position: relative;
+    bottom: 2px;
+}
+
+.main {
+    width: 800px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 100px auto;
+    padding: 25px;
+}
+
+.main-title {
+    margin-bottom: -10px;
+    font-size: 35px;
+}
+
+.main > img {
+    height: 125px;
+    cursor: pointer;
+}
+
+.main > h2 {
+    font-size: 28px;
+    font-weight: 400;
+    opacity: 0.8;
+    padding: 10px;
+}
+
+.buttons-container {
+    padding: 25px;
+    display: flex;
+    gap: 10px;
+    margin-top: -25px;
+}
+
+.learn-react-btn, .api-reference-btn {
+    padding: 12px;
+    cursor: pointer;
+    border: none;
+    font-size: 16px;
+    font-weight: 700;
+    border-radius: 25px;
+    margin: 1px;
+    text-decoration: none;
+    width: 125px;
+    text-align: center;
+}
+
+.learn-react-btn {
+    background: #087ea4;
+    color: white;
+}
+
+.api-reference-btn {
+    background: white;
+    border: 1px solid lightgray;
+    color: black;
+}
+
+.mobile-navbar {
+    display: none;
+}
+
+@media screen and (max-width: 576px) {
+    .navbar {
+        display: none;
+    }
+
+    .mobile-navbar {
+        display: block;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        max-width: 100%;
+    }
+
+    .mobile-navbar > .react-logo {
+        height: 35px;
+    }
+
+    .mobile-navbar > input {
+        max-width: 225px;
+    }
+
+    .menu-logo {
+        height: 25px;
+        cursor: pointer;
+    }
+
+    .main {
+        margin-top: 75px;
+        max-width: 275px;
+    }
+
+    .main > h2 {
+        font-size: 18px;
+        text-align: center;
+    }
+}

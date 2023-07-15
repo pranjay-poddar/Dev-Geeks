@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Register a Bus</title>
+    <!-- Add reference to the jQuery library -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Add CSS for the notification box -->
+    <style>
+        body {
+            background-color: #f8f8f8;
+            font-family: Arial, sans-serif;
+        }
+
+        h1 {
+            margin-top: 30px;
+            text-align: center;
+            color: #333;
+        }
+
+        form {
+            max-width: 500px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            color: #333;
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        input[type="number"],
+        input[type="time"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ddd;
+            border-radius: 3px;
+        }
+
+        input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            background-color: #9b1c05;
+            color: #fff;
+            font-weight: bold;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+
+        .notification {
+            background-color: #9b1c05;
+            color: #fff;
+            padding: 10px;
+            margin-bottom: 10px;
+            display: none;
+            text-align: center;
+            border-radius: 3px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+        }
+
+        .notification.show {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1 style="font-family:  'Times New Roman';">Register Bus</h1>
+
+        <form method="post" action="">
+            <label for="bus_name">Bus Number:</label>
+            <input type="text" name="bus_name" required><br><br>
+
+            <label for="route">Route:</label>
+            <input type="text" name="route" required><br><br>
+
+            <label for="num_stops">Number of Stops:</label>
+            <input type="number" name="num_stops" id="num_stops" required><br><br>
+
+            <div id="stops-container">
+                <!-- Stops will be dynamically generated here based on the number of stops input -->
+            </div>
+
+            <input type="submit" name="submit" value="Register Bus">
+        </form>
+
+        <!-- JavaScript code for displaying notification box and generating dynamic stops -->
+        <script>
+            $(document).ready(function () {
+                $('form').on('submit', function (event) {
+                    event.preventDefault();
+                    // Perform form submission logic here
+
+                    // Show notification box
+                    $('.notification').addClass('show').text('Bus successfully registered');
+                    setTimeout(function () {
+                        $('.notification').removeClass('show');
+                    }, 2000);
+                });
+
+                $('#num_stops').on('input', function () {
+                    var numStops = parseInt($(this).val());
+                    var stopsContainer = $('#stops-container');
+                    stopsContainer.empty();
+                    for (var i = 1; i <= numStops; i++) {
+                        var stopLabel = $('<label>').text('Stop ' + i + ' Name:');
+                        var stopInputName = $('<input>').attr('type', 'text').attr('name', 'stop_name_' + i).attr('required', true);
+                        var stopLabelTime = $('<label>').text('Stop ' + i + ' Time:');
+                        var stopInputTime = $('<input>').attr('type', 'time').attr('name', 'stop_time_' + i).attr('required', true).css('margin-bottom', '10px');
+                        var stopLabelSeats = $('<label>').text('Available Seats:');
+                        var stopInputSeats = $('<input>').attr('type', 'number').attr('name', 'stop_seats_' + i).attr('required', true).css('margin-bottom', '10px');
+                        stopsContainer.append(stopLabel).append(stopInputName).append('<br><br>').append(stopLabelTime).append(stopInputTime).append('<br><br>').append(stopLabelSeats).append(stopInputSeats).append('<br><br>');
+                    }
+                });
+
+            });
+
+        </script>
+
+        <!-- Notification box HTML -->
+        <div class="notification"></div>
+    </div>
+</body>
+
+</html>

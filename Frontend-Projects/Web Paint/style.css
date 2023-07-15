@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200;300;400;500;600;700;800&display=swap');
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css");
+:root{
+    --font-main: 'Dosis', sans-serif;
+}
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--font-main);
+    color: rgb(19, 19, 88);
+}
+header{
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    padding: 8px 5%;
+    background-color: #fafafb;
+    justify-content: space-between;
+    box-shadow: 0px 2px 5px rgb(88 93 111 / 40%);
+    align-items: center;
+}
+.tools{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+.color-palette{
+    display: grid;
+    grid-template-columns: repeat(10, 15px);
+    grid-gap: 5px;
+}
+.color{
+    width: 15px;
+    height: 15px;
+    border: .8px solid rgb(207, 205, 205);
+    background-color: var(--set-color);
+    cursor: pointer;
+}
+.canvas-container{
+    height: 90vh;
+    cursor: url(./pencil.png), auto;
+}
+
+.btn{
+    font-family: var(--font-main);
+    font-weight: 500;
+    font-size: 14px;
+    color: rgb(19, 19, 88);
+    background: none;
+    border: .8px solid rgb(207, 205, 205);
+    position: relative;
+}
+.btn:hover{
+    background: rgba(212, 203, 203, 0.235);
+}
+
+.color-btn{
+    width: 50px;
+    padding: 5px 5px;
+    position: relative;
+}
+.color-btn div{
+    width: 100%;
+    height: 20px;
+    margin: 0;
+    padding: 0;
+    background-color: green;
+}
+.size-btn{
+    padding: 5px;
+}
+.size-btn span{
+    margin: 0 8px;
+}
+.size-list{
+    list-style: none;
+    display: none;
+    position: absolute;
+    top: 20px;
+    width: 100%;
+    left: 0;
+    border-radius: 2px;
+    background-color: white;
+    box-shadow: 0px 4px 30px rgba(165, 190, 204, 0.25);
+    border: .8px solid rgb(207, 205, 205);
+    padding: 0;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 10px;
+}
+.show-list{
+    display: flex;
+}
+.size-list li{
+    width: 85%;
+}
+.size-list li div{
+    width: 100%;
+    height: var(--set-size);
+    background-color: rgb(19, 19, 88);
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+.color_box{
+    width: 100%;
+}
+.color_box input[type=checkbox]{
+    display: none;
+    box-sizing: border-box;
+}
+.color_box span{
+    box-sizing: border-box;
+}
+input[type=color]{
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    left: 0;
+}

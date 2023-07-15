@@ -1,0 +1,123 @@
+* {
+    font-family: Inter;
+}
+
+.netlify-logo {
+    height: 40px;
+    padding: 25px;
+    margin-left: 85px;
+}
+
+.container {
+    width: 380px;
+    height: 455px;
+    margin: auto;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+}
+
+.title {
+    font-weight: 500;
+    font-size: 28px;
+    text-align: center;
+}
+
+.email, .password {
+    padding: 11px;
+    margin-top: 18px;
+    border-radius: 5px;
+    border: 1px solid grey;
+}
+
+.email::placeholder, .password::placeholder {
+    color: gray;
+    font-weight: 500;
+    font-size: 16px;
+}
+
+.email:focus, .password:focus {
+    outline: 3px solid #8EFBF7;
+}
+
+.forgot-password-link {
+    text-align: center;
+    margin-top: 11px;
+    margin-bottom: 15px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #014847;
+}
+
+.forgot-password-link:hover {
+    text-decoration: none;
+}
+
+.login-button {
+    padding: 8px;
+    border-radius: 5px;
+    margin-top: 10px;
+    background: #8EFBF7;
+    font-weight: 500;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+.login-button:hover {
+    background: #68e6e1;
+}
+
+.other-accounts-info {
+    text-align: center;
+    margin-top: 32px;
+    margin-bottom: 5px;
+    font-size: 14px;
+    font-weight: 400;
+    opacity: 0.9;
+}
+
+.git-provider-link {
+    text-align: center;
+    color: #014847;
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.git-provider-link:hover {
+    text-decoration: none;
+}
+
+.sign-up-info {
+    text-align: center;
+    margin-top: 65px;
+    font-size: 14px;
+    opacity: 0.9;
+}
+
+.sign-up-link {
+    color: #014847;
+    font-weight: 500;
+}
+
+.sign-up-link:hover {
+    text-decoration: none;
+}
+
+@media screen and (max-width: 576px) {
+    .netlify-logo {
+        margin-left: -15px;
+    }
+
+    .container {
+        max-width: 300px;
+        height: 450px;
+        padding: 15px;
+        margin-top: 25px;
+    }
+
+    .title {
+        margin-bottom: 0px;
+        font-size: 24px;
+    }
+}

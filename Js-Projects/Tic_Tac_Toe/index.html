@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tic Tac Toe</title>
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="wrapper">
+    <div class="options">
+      <button class="option-btn" onclick="startGameAI()">Play against AI</button>
+      <button class="option-btn" onclick="startGameUser()">Play against other user</button>
+    </div>
+    <div id="game-board" class="hide">
+      <div class="container">
+        <button class="button-option"></button>
+        <button class="button-option"></button>
+        <button class="button-option"></button>
+        <button class="button-option"></button>
+        <button class="button-option"></button>
+        <button class="button-option"></button>
+        <button class="button-option"></button>
+        <button class="button-option"></button>
+        <button class="button-option"></button>
+      </div>
+      <button id="restart">Restart</button>
+    </div>
+    <div class="popup hide">
+      <p id="message">Sample Message</p>
+      <button id="new-game">New Game</button>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+
+</html>
