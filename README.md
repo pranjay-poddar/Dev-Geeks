@@ -833,6 +833,9 @@ Happy Coding! -->
 <td align="center"> 263.</td>
 <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Js-Games/Alien Shooting">Alien Shooting</a></td>
 
+<td align="center"> 264.</td>
+<td align="center"> <a href="https://github.com/Shuchita33/Dev-Geeks/tree/main/Animations-JS/3D-Sliding-effect"> 3D Hovering Effect </a> </td>
+
 </tr> 
 
 
