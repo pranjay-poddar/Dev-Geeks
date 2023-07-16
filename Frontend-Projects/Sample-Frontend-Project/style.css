@@ -369,6 +369,7 @@ form.loginForm {
     word-spacing: 2px;
     font-size: 1.1rem;
     color: #d4d4d4;
+    text-align: justify;
 }
 
 .userBoxOther {
@@ -396,6 +397,7 @@ form.loginForm {
     font-weight: bold;
     font-size: 1.2rem;
     border: 0px;
+    border-radius: 1rem;
 }
 .userBoxOther button{
     background-color: black;
