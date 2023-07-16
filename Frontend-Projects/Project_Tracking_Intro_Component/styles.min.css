@@ -313,13 +313,13 @@ a {
 
     .main__decorative {
         transform: translateX(39.8vw);
-        height: 26.5rem
+        height: 21.5rem
     }
 
     .main__decorative img {
         width: unset;
         max-width: 60rem;
-        transform: translateX(.8vw)translateY(14.8vw)
+        transform: translateX(.8vw)translateY(10.8vw)
     }
 
     .main__heading {
