@@ -3,7 +3,6 @@
   
   
  <p align="center">
-<img src="https://img.shields.io/badge/made%20by%20-Aarti-blue">
 <img src="https://img.shields.io/badge/Python-red">
 <img src="https://img.shields.io/badge/Contributions-welcome-brightgreen">
 <img src="https://badges.frapsoft.com/os/v1/open-source.svg?v=103">
