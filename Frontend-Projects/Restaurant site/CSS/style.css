@@ -1,18 +1,18 @@
 body{
     margin: 0;
-}       
+    font-family: math;
+}      
 .header{
    padding: 20px 20px 40px 20px;
    background-color: #0D2A79;
    color: white;
 }
 .logo-image{
-   width: 10%;
-   height: 10%;
+   width: 5%;
    float: left;
 }
 .name{
-   font-size: 40px;
+   font-size: 20px;
    color: #A76502;
    font-weight: bold;
    padding: 15px ;
@@ -23,6 +23,8 @@ body{
 .options{
    float: right;
    color: #060E22;
+   margin-top: -1rem;
+
 }
 .options a{
    text-decoration: none;
@@ -346,3 +348,14 @@ input[type=submit]:hover{
    
 } 
 
+/* header's logo paragraph styling */
+.logo-para{
+    margin-left: 5rem;
+    font-style: italic;
+    font-size: 10px;
+    display: inline;
+}
+
+.navbar {
+    height: 2rem;
+}
