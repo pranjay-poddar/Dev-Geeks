@@ -189,7 +189,7 @@ header {
     height: 90vh;
     padding: 0px 4vw;
     width: 20vw;
-    background-color: #f2f2f2;
+    background-color: black;
 }
 
 .servicePortfolioImg,
@@ -203,12 +203,16 @@ header {
     font-size: 2rem;
     font-weight: bolder;
     margin-bottom: 3vh;
+    color: white;
+    text-align: center;
 }
 
 .servicesDiscount p,
 .servicesPortfolio p {
     font-size: 1.2rem;
     margin-bottom: 4vh;
+    text-align: justify;
+    color: white;
 }
 
 .serviceDiscountImgContainer,
@@ -229,6 +233,10 @@ header {
     border-radius: 10px;
     font-weight: bold;
     background-color: white;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;    
 }
 
 .team {
