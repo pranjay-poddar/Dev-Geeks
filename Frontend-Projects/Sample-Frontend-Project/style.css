@@ -291,6 +291,8 @@ header {
     font-size: 1.2rem;
     margin: 5vh 0vw;
     font-weight: 100;
+    margin-bottom: 1rem;
+    margin-left: 1rem;
 }
 
 .loginForm label {
@@ -320,8 +322,14 @@ header {
 }
 
 .loginForget {
-    float: right;
+    float: left;
     margin-bottom: 5vh;
+}
+
+form.loginForm {
+    border: 2px solid grey;
+    padding: 10px 58px;
+    border-radius: 1rem;
 }
 
 .loginForm a {
