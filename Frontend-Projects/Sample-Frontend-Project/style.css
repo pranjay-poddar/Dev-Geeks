@@ -9,11 +9,12 @@
 .navbar {
     min-height: 7vh;
     border-bottom: 1px solid black;
+    background: black;
 }
 
 .navLogo {
     font-size: 2rem;
-    color: black;
+    color: aliceblue;
     font-weight: bold;
     margin-left: 2vw;
 }
@@ -31,7 +32,7 @@
 
 .navLinks li a {
     text-decoration: none;
-    color: black;
+    color: white;
     margin: auto;
     font-weight: bolder;
     font-size: 1.1rem;
