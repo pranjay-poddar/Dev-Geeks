@@ -35,7 +35,23 @@ var i, j, k, IsOver, Max=3, Color=0, StartTime, EndTime;
  Pic = new Array(5);
  for (i=0; i < 5; i++)
  { Pic[i] = new Image(); 
-   Pic[i].src = "cubula"+eval(i)+".gif"; 
+  if (i == 0) {
+    Pic[i].src = "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhOijjJSIpSXiG4mXgHTMBuhiKm93jBlub2BtzzQJ394FdJZOzGjOZQ_B3AwCwl3WIQMBQqlihxcUSO5vUrcG_Y45_K-n3GYghgtTDEYwHCYO7S0Cru1B8CQtnYvKIfhEFnyKarHcu6TV56QbCkcB5YWVQFNh0li4feRUb1EwUtenX3LTAZLXD3BUeJsvDw/s25/cubula0.gif";
+  }
+  else if(i == 1) {
+    Pic[i].src = "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjzVzCkpw_5XpT5VuuUnwjNQWmfyfvMfdtJ9GlGuP6aHHwDCG27POzgQRRleXcSQYHSyLJs8A7eOJ-dyfOk3t9tX98rNwAM4Ln0fDIEeS35Xw6CrWjNEdvwJDl9SuVhuM-6nCeqh3QzBmsgVZQ7TUuBeGPR6Ujo21N3Z4Pqh3CKC_YFz_YbRR4dbqforxXX/s25/cubula1.gif";
+  }
+  else if(i == 2) {
+    Pic[i].src = "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhSptFh8B4-sWF5_InRud84W-nJuVSx9jBz2nNYvlIGI6lQYvZru5_ZD4Sdr484vwe80nGyecXJoFcaAFGsALl9lma5Nu1cHSKXYPSnPejCXRnhGiOrQuLx8qRhDEqbiVsiU-Yr9auqJqIvi5Tr5BVoDY8sw2QRu804O7Sjw7noIiMYCgT9Dx0gqTQrr8l7/s25/cubula2.gif";
+  }
+  else if(i == 3) {
+    Pic[i].src = "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiUFDxx69vhUn7qxQZX5gPoQ7cJdiRkYp1YBka0sSkDm-AdhXZz5hmAuxSXGmv30vimT0G2Mqo4Dk3MA0LEGrTDA8vu_An8oQRlz5hOMyHC-8CaIVrP4stAuDGAbMZ2Q7rum4hpWQ5C85kj3j9CHYHAd9-EiTAhvJoNCQ2XDMpf3AZ2QDNGvG7tG-fyR8p7/s25/cubula3.gif";
+  }
+  else if(i == 4) {
+    Pic[i].src = "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjdpF8TUpSw5hWniMkPDmGoQ2qlFUMvQj8syB8LjLKfsEvxKwNJtR3u4wkinoT1tJCgQKbszgmZ1IpnBkMWLhi1tQRPiQmbi3CuuxDeL-OQgBtJ9Eats3bu9_ukI1qUEFh-Wla-28z5SJJtgi_G1cvck21yoa7N7JDkMXQPOGaDB7DbEoEj4tIgZ5GfD1IT/s25/cubula4.gif";
+  }
+   //Pic[i].src = "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhOijjJSIpSXiG4mXgHTMBuhiKm93jBlub2BtzzQJ394FdJZOzGjOZQ_B3AwCwl3WIQMBQqlihxcUSO5vUrcG_Y45_K-n3GYghgtTDEYwHCYO7S0Cru1B8CQtnYvKIfhEFnyKarHcu6TV56QbCkcB5YWVQFNh0li4feRUb1EwUtenX3LTAZLXD3BUeJsvDw/s25/cubula"+eval(i)+".gif"; 
+   
  } 
 
  function SetColor(cc)
