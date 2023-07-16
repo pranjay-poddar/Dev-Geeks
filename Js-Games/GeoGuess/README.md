@@ -6,5 +6,5 @@ Get dropped into random locations using google streetview and identify to which 
 
 Before running the game, make sure to do the following changes:
 - Open up game.html
-- In line 8, i.e    ``` src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCq_b16rzEbCdNh8M79OPumjT3MuSJJ1WM&callback=initMap">```, replace the key with your own Google google maps api key.
+- In line 8, i.e    ``` src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_GOES_HERE&callback=initMap">```, replace the key with your own Google google maps api key.
 - Save the file, and execute the game.
