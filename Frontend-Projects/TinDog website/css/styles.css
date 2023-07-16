@@ -23,6 +23,8 @@ h3{
 p{
     color:#8f8f8f ;
 }
+
+/* Features Section */
 #features{
     padding:7% 15% ;
     background-color: white;
@@ -67,6 +69,8 @@ body{
     padding:5% ;
 
 }
+
+/* Testimonials Section */
 #testimonials{
     background-color:#ef8172 ;
     text-align: center;
@@ -95,6 +99,8 @@ h2{
     margin:20px 20px ;
     width: 15%;
 }
+
+/* Pricing Section */
 #pricing{
     padding:100px ;
     text-align: center;
