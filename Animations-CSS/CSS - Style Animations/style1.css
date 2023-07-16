@@ -1,0 +1,41 @@
+div {
+	height: 200px;
+	width: 200px;
+	position: absolute;
+	top: 40%;
+	left: 40%;
+	background-color: cyan;
+	animation-name: changeShape, rotate, reduceSize;
+	animation-duration:0.8s, 0.8s, 0.8s;
+	animation-iteration-count: infinite, infinite, infinite;
+    animation-direction: alternate, alternate, alternate;
+}
+
+@keyframes changeShape{
+	from{
+		border-radius: 0%;
+	}
+	to{
+		border-radius: 50%;
+	}
+}
+
+@keyframes reduceSize{
+	from{
+		height: 200px;
+		width: 200px;
+	}
+	to {
+		height: 100px;
+		width: 100px;
+	}
+}
+
+@keyframes rotate{
+	from {
+		transform:rotate(0deg);
+		}
+	to {
+		transform:rotate(360deg);
+		}
+}

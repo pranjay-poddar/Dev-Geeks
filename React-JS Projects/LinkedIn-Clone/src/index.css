@@ -1,0 +1,46 @@
+body {
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+:root,
+body, html{
+    background-color:#f5f5f5;
+    box-sizing: border-box;
+}
+
+html, header,div, h1, h2, h3, h4, h5, h6,
+i, img, label, ul, li, p, small, span {
+    border: 0;
+    margin: 0;
+    padding: 0;
+    outline: none;
+    font-size:100%;
+    vertical-align: baseline;
+    background: transparent;
+}
+
+body {
+    font-family: -apple-system,system-ui,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Fira Sans,Ubuntu,Oxygen,Oxygen Sans,Cantarell,Droid Sans,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Lucida Grande,Helvetica,Arial,sans-serif;
+}
+
+@-webkit-keyframes fadeIn {
+from {
+    opacity: 0;
+}
+
+to {
+    opacity: 1
+}
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    
+    to {
+        opacity: 1
+    }
+    }
+

@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --White: hsl(0, 0%, 100%);
+    --LightGrey : hsl(217, 12%, 63%);
+    --MediumGrey: hsl(216, 12%, 54%);
+    --DarkBlue: hsl(213, 19%, 18%);
+    --VeryDarkBlue: hsl(216, 12%, 8%);
+    --Orange: hsl(25, 97%, 53%);
+}
+
+body{
+    font-size: .9375rem;
+    font-family: 'Overpass', sans-serif;
+    margin: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: var(--VeryDarkBlue);
+}
+
+img{
+    max-width: 100%;
+}
+
+.container{
+    border-radius: 1.5rem;
+    background-color: var(--DarkBlue);
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+img.star{
+    background-color: hsl(212, 22%, 24%);
+    padding: .5rem;
+    border-radius: 2rem;
+    margin-bottom: 1rem;
+}
+
+.icon{
+    background-color: hsl(212, 22%, 24%);
+    border-radius: 50%;
+    height: 2.5rem;
+    width: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: .3rem 0 0;
+    margin-bottom: 1rem;
+}
+
+h1{
+    color: var(--White);
+    margin-bottom: 1rem;
+}
+
+p{
+    color: var(--MediumGrey);
+    margin-bottom: 2rem;
+    line-height: 1.5rem;
+}
+
+.ratingChoices{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+
+button.choice{
+    color: var(--MediumGrey);
+    font-family: 'Overpass';
+    font-weight: 700;
+    border: 0;
+    cursor: pointer;
+}
+
+button.choice:focus{
+    background-color: var(--LightGrey);
+    color: var(--White);
+}
+
+button:hover{
+    background-color: var(--Orange);
+    color: var(--White);
+}
+
+.submit{
+    border-radius: 5rem;
+    border: var(--Orange);
+    background-color: var(--Orange);
+    color: var(--White);
+    font-family: 'Overpass', sans-serif;
+    width: 100%;
+    padding: 1rem 0;
+    font-weight: 700;
+    letter-spacing: .2rem;
+    cursor: pointer;
+}
+
+.submit:hover{
+    background-color: var(--White);
+    color: var(--Orange);
+}
+
+.thankYou{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.thankYou img{
+    margin-bottom: 2rem;
+}
+
+div.rating{
+    background-color: hsl(212, 22%, 24%);
+    padding: .2rem .7rem .1rem;
+    color: var(--Orange);
+    border-radius: 2rem;
+    font-size: .9rem;
+    margin-bottom: 2rem;
+}
+
+.hidden{
+    display: none;
+}
+
+.attribution
+{ 
+    font-size: 11px; text-align: center;
+    color: var(--White);
+}
+.attribution a{ 
+    color: hsl(228, 45%, 44%); 
+    text-decoration: none;
+}
+
+@media screen and (min-width: 450px) {
+    .container{
+        max-width: 400px;
+    }
+  }

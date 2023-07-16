@@ -1,0 +1,735 @@
+html {
+  scroll-behavior: smooth;
+  line-height: 1.15;
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: transparent;
+}
+img {
+  width: unset;
+  height: unset;
+}
+*,
+::after,
+::before {
+  box-sizing: border-box;
+  border-style: solid;
+  border-width: 0;
+}
+*,
+body,
+h1,
+h2,
+h3,
+hr,
+iframe,
+ol,
+p,
+ul {
+  margin: 0;
+}
+a,
+hr {
+  color: inherit;
+}
+*,
+[class*="sr-only"],
+ol,
+ul {
+  padding: 0;
+}
+.attribution a,
+footer {
+  position: relative;
+}
+main {
+  display: block;
+  display: grid;
+  place-items: center;
+}
+h1,
+h2,
+h3 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+ol,
+ul {
+  list-style: none;
+}
+abbr[title] {
+  text-decoration: underline dotted;
+}
+embed,
+iframe,
+img,
+object,
+svg {
+  vertical-align: bottom;
+}
+button,
+input,
+optgroup,
+select,
+textarea {
+  -webkit-appearance: none;
+  appearance: none;
+  vertical-align: middle;
+  color: inherit;
+  font: inherit;
+  background: 0 0;
+  padding: 0;
+  margin: 0;
+  border-radius: 0;
+  text-align: inherit;
+  text-transform: inherit;
+}
+[type="button"]:disabled,
+[type="reset"]:disabled,
+[type="submit"]:disabled,
+button:disabled {
+  cursor: default;
+}
+:-moz-focusring {
+  outline: auto;
+}
+select:disabled {
+  opacity: inherit;
+}
+[contenteditable]:focus {
+  outline: auto;
+}
+a,
+h2,
+h3 {
+  font-weight: 600;
+}
+button {
+  all: unset;
+}
+[type="button"],
+[type="reset"],
+[type="submit"],
+button,
+label[for] {
+  cursor: pointer;
+}
+
+:root {
+  --soft-red: hsl(7, 99%, 70%);
+  --yellow: hsl(51, 100%, 49%);
+  --dark-desaturated-cyan: hsl(167, 40%, 24%);
+  --dark-blue: hsl(198, 62%, 26%);
+  --dark-moderate-cyan: hsl(168, 34%, 41%);
+  --Very-dark-desaturated-blue: hsl(212, 27%, 19%);
+  --Very-dark-grayish-blue: hsl(213, 9%, 39%);
+  --Dark-grayish-blue: hsl(232, 10%, 55%);
+  --grayish-blue: hsl(210, 4%, 67%);
+}
+
+body {
+  font-family: "Barlow", sans-serif;
+  min-height: 100vh;
+  background: #FFFBF7;
+}
+a {
+  background-color: transparent;
+  text-decoration: none;
+}
+h1,
+h2,
+h3,
+.section__link,
+.figcaption__user-name,
+.header__item:last-child {
+  font-family: 'Fraunces', serif;;
+  color: var(--Very-dark-desaturated-blue);
+}
+
+[class*="sr-only"] {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+[aria-expanded="false"] {
+  background: url(https://raw.githubusercontent.com/0xabdulkhalid/sunnyside-agency-landing-page/main/images/icon-hamburger.svg);
+}
+[aria-expanded="true"] {
+  background: url(https://raw.githubusercontent.com/0xabdulkhalid/sunnyside-agency-landing-page/main/images/icon-close.svg);
+}
+:is(button, a):is(:focus, :focus-visible, :focus-within):not(.attribution a) {
+  outline: gray dotted 3px;
+  outline-offset: 0.35rem;
+}
+
+header {
+  position: fixed;
+  width: 100%;
+  padding: 2rem 1.5rem;
+  background: #3cbdfd;
+  z-index: 1;
+  transition: 0.4s ease;
+}
+
+.header--active {
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 7px 20px;
+  padding: 1.6rem 1.5rem;
+}
+
+.header__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__list {
+  position: fixed;
+  min-height: 19rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  right: 0;
+  width: 88%;
+  background: white;
+  text-align: center;
+  color: var(--Very-dark-grayish-blue);
+  margin: 3.4rem 0;
+  font-size: 1.2rem;
+  padding: 2.5rem 1rem;
+  gap: 2.1rem;
+  transition: all 0.5s ease;
+  visibility: hidden;
+  transform: translate(-7%, -150%);
+  opacity: 0.5;
+}
+
+[aria-expanded="true"] + .header__list {
+  visibility: visible;
+  transform: translateX(-7%);
+  opacity: 1;
+}
+
+.header__item:last-child {
+  margin-top: 1.2rem;
+  text-transform: uppercase;
+  font-size: 1rem;
+  color: var(--Very-dark-desaturated-blue);
+}
+
+.header__item:last-child a {
+  background: var(--yellow);
+  padding: 1rem 1.8rem;
+  border-radius: 5rem;
+}
+
+.header__list::before {
+  content: "";
+  width: 0px;
+  height: 0;
+  position: absolute;
+  right: 0;
+  top: -1.5rem;
+  border-top: 30px solid transparent;
+  border-bottom: 30px solid transparent;
+  border-right: 30px solid white;
+  z-index: -1;
+}
+
+img {
+  width: 100%;
+}
+
+.main__hero-container {
+  display: grid;
+  place-items: center;
+  width: 100%;
+  background: url(https://raw.githubusercontent.com/0xabdulkhalid/sunnyside-agency-landing-page/main/images/mobile/image-header.jpg) no-repeat;
+  background-size: cover;
+  text-align: center;
+  line-height: 3rem;
+  text-transform: uppercase;
+  min-height: 100vh;
+  background-position: center;
+  align-content: start;
+  padding-top: 9rem;
+  gap: 3rem;
+}
+
+.hero__heading {
+  font-size: 2.6rem;
+  font-weight: 800;
+  letter-spacing: 0.4rem;
+  word-spacing: 0.1rem;
+  color: white;
+}
+
+.hero__arrow-image {
+  width: 2.3rem;
+}
+
+.main__first-section,
+.main__second-section {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.section__description {
+  color: var(--Dark-grayish-blue);
+}
+
+.section__heading,
+.testimonals__heading {
+  font-size: 2.1rem;
+  font-weight: 700;
+  margin-top: 1.5rem;
+}
+
+.testimonals__section:nth-child(3) {
+  min-height: 25rem;
+}
+
+.main__third-section h2,
+.main__third-section p {
+  color: var(--dark-desaturated-cyan);
+}
+
+.main__fourth-section h2,
+.main__fourth-section p {
+  color: var(--dark-blue);
+}
+
+.section__description {
+  font-size: 1.1rem;
+  line-height: 1.75rem;
+  margin-bottom: 1rem;
+  font-weight: 900;
+}
+
+.section__link::after {
+  content: "";
+  width: 9rem;
+  height: 0.6rem;
+  display: block;
+  position: absolute;
+  transform: translate(-0.7rem, -0.3rem);
+  z-index: -2;
+  border-radius: 5rem;
+}
+
+.main__first-section .section__link::after {
+  background: hsla(50.9, 100%, 49%);
+}
+
+.main__second-section .section__link::after {
+  background: hsla(6.8, 98.7%, 70%);
+}
+
+.section__link::after {
+  transition: 0.5s ease;
+  opacity: 0.45;
+}
+
+.section__link {
+  letter-spacing: 0.1rem;
+  font-size: 0.95rem;
+  text-transform: uppercase;
+}
+
+[class*="section__block"] {
+  text-align: center;
+  display: grid;
+  align-content: start;
+  gap: 1.7rem;
+}
+
+.section__block {
+  min-height: 27.5rem;
+  padding: 2.5rem 1.7rem;
+  place-items: center;
+}
+
+.main__third-section {
+  background: url(https://raw.githubusercontent.com/0xabdulkhalid/sunnyside-agency-landing-page/main/images/mobile/image-graphic-design.jpg) no-repeat;
+}
+
+.main__fourth-section {
+  background: url(https://raw.githubusercontent.com/0xabdulkhalid/sunnyside-agency-landing-page/main/images/mobile/image-photography.jpg) no-repeat;
+}
+
+.section__picture img {
+  height: 100%;
+  object-fit: cover;
+}
+
+.main__third-section,
+.main__fourth-section {
+  background-size: cover;
+  min-height: 37rem;
+  display: grid;
+  align-content: end;
+  padding: 2.3rem 1rem;
+}
+
+.section__block--secondary h2 {
+  font-size: 1.8rem;
+}
+
+.section__block--secondary p {
+  font-size: 1rem;
+}
+
+.main__testimonals {
+  display: grid;
+  place-items: center;
+  text-align: center;
+  padding: 3rem 1.7rem;
+  padding-bottom: 4.5rem;
+}
+
+.testimonals__heading {
+  text-transform: uppercase;
+  font-size: 1rem;
+  word-spacing: 0.2rem;
+  letter-spacing: 0.25rem;
+}
+
+.figcaption__text-block {
+  font-size: 0.9rem;
+  color: var(--Dark-grayish-blue);
+}
+
+.testimonals__section {
+  position: relative;
+  display: grid;
+  min-height: 23rem;
+  align-content: end;
+}
+
+blockquote {
+  font-size: 1.1rem;
+  line-height: 2rem;
+  color: var(--Very-dark-grayish-blue);
+}
+
+figcaption {
+  display: grid;
+  place-items: center;
+  margin-top: 2.2rem;
+  margin-bottom: 1rem;
+}
+
+.figcaption__user-name {
+  font-size: 1.15rem;
+  display: block;
+  margin-bottom: 0.8rem;
+}
+
+figcaption img {
+  width: 4.5rem;
+  border-radius: 50%;
+  position: absolute;
+  top: 4.2rem;
+}
+
+.main__illustrative-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+footer {
+  background: #90d4c5;
+  display: grid;
+  min-height: 22rem;
+  padding: 2rem;
+  align-content: start;
+  place-items: center;
+  gap: 3rem;
+  color: var(--dark-desaturated-cyan);
+}
+
+.footer__socials,
+.footer__navigations {
+  display: grid;
+  place-items: center;
+}
+
+.footer__socials {
+  margin-top: 2.5rem;
+}
+
+.socials__links,
+.navigation__links {
+  display: flex;
+}
+
+.socials__links {
+  gap: 1.8rem;
+}
+
+.socials__links img {
+  aspect-ratio: 1/1;
+}
+
+.navigation__links {
+  gap: 4rem;
+}
+
+.footer__home-link {
+  width: 10.5rem;
+  margin: 2rem 0 0 -1.1rem;
+  filter: invert(38%) sepia(68%) saturate(342%) hue-rotate(118deg)
+  brightness(58%) contrast(92%);
+}
+
+[aria-expanded="true"] + .nav__menu-section {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.attribution {
+  width: 100%;
+  text-align: center;
+  font-size: 0.775rem;
+  position: absolute;
+  bottom: 1em;
+  opacity: 0.75;
+}
+.attribution,
+.attribution a {
+  transition: 0.5s;
+  text-transform: none;
+}
+footer a:is(:hover) {
+  filter: invert(100%) saturate(0%) hue-rotate(321deg) brightness(200%)
+    contrast(102%);
+}
+button,
+a {
+  transition: 0.5s ease;
+}
+@media (min-width: 56em) {
+  header {
+    padding: 3rem 2.6rem;
+  }
+
+  .header__container a {
+    width: 10.5rem;
+  }
+
+  .header__list::before {
+    display: none;
+  }
+
+  .header__menu-button {
+    display: none;
+  }
+
+  .header__list {
+    position: static;
+    flex-direction: revert;
+    padding: 0;
+    min-height: unset;
+    margin: 0;
+    transform: unset;
+    visibility: visible;
+    opacity: 1;
+    font-size: 1.1rem;
+    color: white;
+    background: unset;
+    gap: 3.1rem;
+    align-content: center;
+    width: unset;
+  }
+
+  .hero__heading {
+    font-size: 3.45rem;
+    letter-spacing: 0.6rem;
+    word-spacing: 0.4rem;
+    font-weight: 900;
+    margin-left: -0.5rem;
+  }
+
+  .header--active {
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 7px 20px;
+    padding: 2rem 2.6rem;
+  }
+
+  .header__list li:last-child a:hover {
+    background: rgba(255, 255, 255, 0.25);
+    color: white;
+  }
+
+  .main__hero-container {
+    padding-top: 13rem;
+    gap: 6rem;
+    min-height: 50rem;
+    background-image: url(https://raw.githubusercontent.com/0xabdulkhalid/sunnyside-agency-landing-page/main/images/desktop/image-header.jpg);
+  }
+
+  .header__item:last-child a {
+    background: white;
+    letter-spacing: -0.02rem;
+  }
+
+  .header__item:last-child {
+    margin: -0.3rem 0.5rem 0 0;
+  }
+
+  .main__first-section,
+  .main__second-section {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .section__block {
+    text-align: start;
+    place-items: start;
+    padding: 8.5rem 6.1rem 10rem 10.2rem;
+    gap: 2rem;
+  }
+
+  .section__heading {
+    font-size: 2.6rem;
+    letter-spacing: -.01rem;
+    font-weight: 900;
+  }
+
+  .section__description {
+    word-spacing: .03rem;
+    line-height: 1.85rem;
+    margin-bottom: 0.8rem;
+  }
+
+  .section__link {
+    margin-left: 0.7rem;
+    word-spacing: -0.1rem;
+  }
+
+  .main__second-section div {
+    order: 1;
+    padding-right: 10.2rem;
+    padding-left: 6.7rem;
+  }
+
+  .main__sub-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .section__link:hover::after {
+    opacity: 0.8;
+  }
+
+  .main__third-section,
+  .main__fourth-section {
+    padding: 2rem 12rem;
+  }
+
+  .main__third-section {
+    background-image: url(https://raw.githubusercontent.com/0xabdulkhalid/sunnyside-agency-landing-page/main/images/desktop/image-graphic-design.jpg);
+  }
+
+  .main__fourth-section {
+    background-image: url(https://raw.githubusercontent.com/0xabdulkhalid/sunnyside-agency-landing-page/main/images/desktop/image-photography.jpg);
+  }
+
+  .main__sub-container p {
+    line-height: 1.7rem;
+    margin-bottom: 1.2rem;
+  }
+
+  .main__sub-container section {
+    min-height: 37.5rem;
+    padding-bottom: 2.5rem;
+  }
+
+  .testimonals__divider {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    width: 82%;
+    margin-top: 1rem;
+  }
+
+  .testimonals__section {
+    min-height: 26rem;
+    place-items: center;
+  }
+
+  blockquote {
+    width: 90%;
+  }
+
+  figcaption img {
+    top: 3.7rem;
+  }
+
+  .main__testimonals {
+    padding: 9.1rem 1.7rem 9.7rem 1.7rem;
+  }
+
+  .testimonals__heading {
+    font-size: 1.2rem;
+    letter-spacing: 0.4rem;
+    word-spacing: -0.1rem;
+    margin: 1rem 0 0.5rem 0.1rem;
+  }
+
+  figcaption {
+    margin: 0;
+    margin-bottom: 0.55rem;
+    margin-top: 4.5rem;
+  }
+
+  .figcaption__text-block {
+    margin-left: -1rem;
+  }
+
+  .figcaption__user-name {
+    font-size: 1.2rem;
+  }
+
+  .main__illustrative-section:last-of-type {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  footer {
+    padding-top: 2.4rem;
+    gap: 2.7rem;
+  }
+
+  .footer__socials {
+    margin-top: 3rem;
+  }
+
+  .attribution {
+    font-size: 0.9rem;
+  }
+  .attribution a {
+    padding: 0.3rem;
+  }
+  .attribution a::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: var(--dark-desaturated-cyan);
+    transition: 0.7s;
+    z-index: -1;
+    transform: rotate(-2deg);
+  }
+  .attribution a:hover {
+    color: #f7f7f7;
+    filter: brightness();
+  }
+  .attribution a:hover::before {
+    width: 100%;
+  }
+}
