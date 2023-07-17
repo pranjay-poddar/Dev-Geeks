@@ -1,0 +1,32 @@
+body{
+    margin: 0;
+    background: black;
+    color: white;
+    font-family: math;
+}
+h1{
+    font-size: 2.5rem;
+    margin-top: 3rem;
+    font-weight: 900;
+    text-align: center;
+}
+.container{
+    margin-top: 4rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.colorcontainer{
+    width: 255px;
+    height: 65px;
+    color: white;
+    padding: 10px 7px;
+    margin-bottom: 0.8rem;
+    margin-left: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,.5);
+    border-radius: 10px;
+}
