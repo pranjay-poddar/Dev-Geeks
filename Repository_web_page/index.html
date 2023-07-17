@@ -16,6 +16,7 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
+     <link rel="stylesheet" href="go_to_top.css">
     <link rel="icon" href="./img/favicon.ico">
     <title>Dev Geeks||Repository</title>
     <meta name="description" content="Dev Geeks" />
@@ -30,7 +31,9 @@
 </head>
 
 <body>
-
+  <button class="gotop">
+    <img src="https://github.com/pranjay-poddar/Dev-Geeks/assets/104543751/f1773a97-93d3-4d48-b52e-6bd815282fc0" alt="arrow up">
+  </button>
     <!-- SCROLL TP TOP -->
     <section>
     <div id="progress">
@@ -38,12 +41,9 @@
       </div>
     </section>
 
-
-    <section>
-        <div class="container">
-            <div class="row text-center">
-                <div class="col-12 my-3 text-center">
-                    <div id="poster" style="border-radius: 20px;">
+ <header>
+      <nav class="navbar">
+         <div id="poster" style="border-radius: 20px;">
                         <!-- <a href="https://github.com/pranjay-poddar"><img class="img-fluid" src="https://cdn.worldvectorlogo.com/logos/github-2.svg" alt="Dev geeks"></a> -->
                         <a href="https://github.com/pranjay-poddar" target="_blank"><div class="logo">
                             <i class="github-logo"></i>
@@ -52,8 +52,18 @@
                           </div>
                           </a>
                     </div>
-                </div>
-            </div>
+        <ul>
+           <li><a class="nava" href="../Devgeeks website/index.html#hero">Home</a></li>
+          <li><a class="nava" href="../Devgeeks website/index.html#about">About</a></li>
+          <li><a class="nava" href="../Devgeeks website/index.html#services">Projects</a></li>
+          <li><a class="nava" href="https://devgeeks-os.netlify.app/repository_web_page/">How to Contribute</a></li>
+          <li><a class="nava" href="../Devgeeks website/index.html#team">Team</a></li>
+        </ul>
+      </nav>
+    </header>
+    <section>
+        <div class="container">
+           
             <div class="row my-5">
                 <div class="col-md-6 col-12">
                     <h2>What is Dev Geeks?</h2>
@@ -247,6 +257,8 @@
             </div>
           </div>
         </div>
+          <button id="scrollToButton" class="HideElement scrollToTopButton" title="Click to scroll top">
+        <div class="top"><img src="./assets/Image/Chevron.svg" alt="Scroll-To-Top" /></div>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
@@ -254,6 +266,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <script src="script.js"></script>
+     <script src="go_to_top.js"></script>
 
 </body>
 
