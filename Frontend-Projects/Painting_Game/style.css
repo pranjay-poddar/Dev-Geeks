@@ -120,7 +120,7 @@ section{
   font-size: 0.9rem;
   margin-bottom: 13px;
   background: none;
-  border-radius: 4px;
+  border-radius: 1rem;
   cursor: pointer;
 }
 .buttons .clear-canvas{
@@ -143,4 +143,8 @@ section{
 .drawing-board canvas{
   width: 100%;
   height: 100%;
+}
+label.title {
+  color: blue;
+  font-weight: bold;
 }
