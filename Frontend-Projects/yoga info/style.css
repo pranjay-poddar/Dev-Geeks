@@ -1,4 +1,4 @@
- /*=============== GOOGLE FONTS ===============*/
+/*=============== GOOGLE FONTS ===============*//*=============== GOOGLE FONTS ===============*/
 @import url("https://fonts.googleapis.com/css2?family=Lora:wght@400;500&family=Poppins:wght@400;500&display=swap");
 
 /*=============== VARIABLES CSS ===============*/
@@ -430,6 +430,7 @@ body.dark-theme {
 }
 
 .list__description {
+  text-align: justify;
   position: relative;
 }
 
@@ -622,12 +623,11 @@ body.dark-theme {
 }
 
 .follow__button {
-  flex-direction: column;
   row-gap: 0.5rem;
-  border-radius: 50%;
-  width: 88px;
-  height: 88px;
+  width: 121px;
+  height: 49px;
   margin-bottom: 2rem;
+  border-radius: 2rem;
 }
 
 .follow__content-1,

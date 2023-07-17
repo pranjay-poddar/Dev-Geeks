@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unit converter</title>
+    <script src="https://kit.fontawesome.com/3e6491bf19.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <main>
+      
+        <div class="title_container">
+            <h2>Unit Converters</h2>
+        </div>
+
+        <div class="amount_container">
+            <label for="amount">Amount :</label>
+            <input type="number" name="amount" id="amount">
+        </div>
+
+        <div class="unit_container">
+            <div class="left">
+                <p>From</p>
+                <div class="select_container">
+                    <select name="from" id="from">
+                        <option value="centimeter">centimeter</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="right">
+                <p>To</p>
+                <div class="select_container to">
+                    <select name="to" id="to">
+                        <option value="centimeter">centimeter</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        
+        <div class="result_container">
+            <label for="result">Result</label>
+            <input type="text" name="result" id="result">
+        </div>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

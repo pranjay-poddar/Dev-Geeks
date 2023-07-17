@@ -1,0 +1,116 @@
+
+  @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=Crimson+Text:wght@600&family=Dancing+Script:wght@600&family=Lora&family=Martel:wght@200;300;400;700;800&family=Montserrat:wght@500&family=Open+Sans:wght@500&family=Quicksand:wght@700&display=swap');
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family:  
+
+}
+.container {
+  display: flex;
+  row-gap: 15px;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+}
+.container .image {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+.container header {
+  font-size: 60px;
+  color: #fff;
+  font-weight: 600;
+  text-align: center;
+}
+.container p {
+  font-size: 18px;
+  font-weight: 500;
+  color: #fff;
+  max-width: 550px;
+  text-align: center;
+}
+.container .time-content {
+  display: flex;
+  column-gap: 30px;
+  align-items: center;
+}
+.time-content .time {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.time .number,
+.time .text {
+  font-weight: 500;
+  color: #fff;
+}
+.time .number {
+  font-size: 40px;
+}
+.time .text {
+  text-transform: capitalize;
+  font-size: 12px;
+}
+.email-content {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 30px;
+  width: 100%;
+}
+.email-content p {
+  font-size: 13px;
+}
+.input-box {
+  display: flex;
+  align-items: center;
+  height: 40px;
+  max-width: 360px;
+  width: 100%;
+  margin-top: 20px;
+  column-gap: 20px;
+}
+.input-box input,
+.input-box button {
+  height: 100%;
+  outline: none;
+  border: none;
+  border: 1px solid #fff;
+  border-radius: 4px;
+  background-color: rgba(255, 255, 255, 0.2);
+  font-weight: 400;
+}
+.input-box input {
+  width: 100%;
+  padding: 0 15px;
+  color: #fff;
+}
+input::placeholder {
+  color: #fff;
+}
+.input-box button {
+  cursor: pointer;
+  color: #fff;
+  white-space: nowrap;
+  padding: 0 20px;
+  transition: all 0.3s ease;
+}
+.input-box button:hover {
+  background-color: #fff;
+  color: #0d6a81;
+}
+@media screen and (max-width: 300px) {
+  .container header {
+    font-size: 50px;
+  }
+}
