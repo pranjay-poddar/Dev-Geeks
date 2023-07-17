@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+
+body {
+    background-image: url("https://images.unsplash.com/photo-1616699002805-0741e1e4a9c5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80");
+    background-repeat: no-repeat;
+    background-size:cover;
+    height: 97vh;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.box {
+    min-height: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.box form {
+    background-color: rgba(255, 255, 255, 0.5);
+    color: black;
+    padding: 0 50px;
+    border-radius: 10px;
+}
+
+.box form p {
+    color: red;
+    font-size: 13px;
+}
+
+.box form input, select {
+    border-radius: 6px;
+    outline: none;
+    border: 1px solid black;
+    padding: 8px 10px;
+    width: 200px;
+    margin: 0 20px;
+    justify-content: end;
+    align-items: end;
+    background-color: transparent;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.box form select {
+    width: 221px;
+}
+
+.box form select option {
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.box form .heading, .btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+}
+
+.box form button {
+    padding: 10px 15px;
+    border-radius: 6px;
+    border: 2px solid #6739B7;
+    background-color: #6739B7;
+    cursor: pointer;
+    font-family: 'Ubuntu', sans-serif;
+    color: #fff;
+    transition: all 0.3s ease;
+}
+
+.box form button:hover {
+    background-color: transparent;
+    border: 2px solid #6739B7;
+    color: #6739B7;
+    font-weight: 600;
+}
+
+.box form button i {
+    padding: 5px;
+    transition: all 0.3s ease;
+}
+
+.box form button:hover i {
+    transform: rotateY(360deg);
+}
+
+@media screen and (max-width: 450px) {
+    .box form .heading h1 {
+        font-size: 25px;
+    }
+    .box form {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+@media screen and (min-width: 800px) and (max-width: 3000px) {
+    .box form {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 600px;
+    }
+    .box form input, select {
+        width: 300px;
+    }
+    .box form select {
+        width: 321px;
+    }
+}
+
+@media screen and (min-width: 450px) and (max-width: 3000px) {
+    .box form .name input {
+        margin-left: 34px;
+    }
+    .box form .age input {
+        margin-left: 48px;
+    }
+    .box form .gender input {
+        margin-left: 23px;
+    }
+    .box form .fee input {
+        margin-left: 50px;
+    }
+    .box form select {
+        margin-left: 48px;
+    }
+}

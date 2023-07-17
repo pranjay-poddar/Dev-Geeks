@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PostMan Clone</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <h1>Welcome To PostMaster</h1>
+    <div class="container">
+        <div class="mb-3 row urlbox">
+            <label for="url" class="col-sm-2 col-form-label">
+                <h5>URL</h5>
+            </label>
+            <div class="col-sm-8">
+                <input type="text" class="form-control" id="inputurl" placeholder="Enter URL here">
+            </div>
+        </div>
+        <fieldset class="row mb-3">
+            <legend class="col-form-label col-sm-2 pt-0">
+                <h5>Request Type </h5>
+            </legend>
+            <div class="col-sm-10">
+                <div class="form-check requestBox">
+                    <input class="form-check-input" type="radio" name="request" id="GET" value="GET" checked>
+                    <label class="form-check-label" for="gridRadios1">
+                        GET
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="request" id="POST" value="POST">
+                    <label class="form-check-label" for="gridRadios2">
+                        POST
+                    </label>
+                </div>
+            </div>
+        </fieldset>
+        <fieldset class="row mb-3">
+            <legend class="col-form-label col-sm-2 pt-0">
+                <h5>Content Type </h5>
+            </legend>
+            <div class="col-sm-10 contentBox">
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="content" id="json" value="JSON" checked>
+                    <label class="form-check-label" for="gridRadios1">
+                        JSON
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="content" id="parameters" value="customparam">
+                    <label class="form-check-label" for="gridRadios2">
+                        Custom Parameters
+                    </label>
+                </div>
+            </div>
+        </fieldset>
+        <div id="paramBox" class="form-row">
+            <form class="row g-3" style="margin-bottom: 10px;">
+                <label for="url" class="col-sm-2 col-form-label my-2">
+                    <h5>Parameter 1</h5>
+                </label>
+                <div class="col-md-4">
+                    <input type="text" class="form-control" id="keyParam1" placeholder="Enter parameter 1 key">
+                </div>
+                <div class="col-md-4">
+                    <input type="text" class="form-control" id="valueParam1" placeholder="Enter parameter 1 value">
+                </div>
+                <br/>
+            </form>
+            <button id="addParam" class="btn btn-primary">+</button>
+            <br/>
+            <div id="parameter"></div>
+        </div>
+        
+        <div class="Jsonbox">
+            <div class="my-3" id="requestJsonBox">
+                <div class="form-group row">
+                    <label for="requestJsonText" class="col-sm-2 col-form-label">
+                        <h5>Request Json</h5>
+                    </label>
+                    <div class="col-sm-8">
+                        <textarea class="form-control" id="requestJsonText" rows="3"
+                            placeholder="Enter Request JSON here"></textarea>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="form-group row my-2">
+            <div class="col-sm-8">
+                <button id="submit" class="btn btn-primary">Submit</button>
+            </div>
+        </div>
+        <div class="my-3" id="responseJsonBox">
+            <div class="form-group row">
+                <label for="responseJsonText" class="col-sm-2 col-form-label">
+                    <h5>Response</h5>
+                </label>
+                <div class="col-sm-8">
+                    <textarea class="form-control" id="responsetext" rows="3">Your response will appear here</textarea>
+
+                    <pre id='responsePre'
+                        class="language-javascript"> <code id='responsePrism' class="language-javascript"> Your response will appear here </code> </pre>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"
+        integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.min.js"
+        integrity="sha384-ODmDIVzN+pFdexxHEHFBQH3/9/vQ9uori45z4JjnFsRydbmQbmL5t1tQ0culUzyK"
+        crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

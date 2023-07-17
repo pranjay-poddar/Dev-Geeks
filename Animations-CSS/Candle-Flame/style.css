@@ -1,0 +1,116 @@
+/* Default settings */
+* {
+    user-select: none;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: #012;
+    height: 100vh;
+    display: grid;
+    place-items: center;
+}
+
+/* Styling the flame colours */
+.red {
+    width: 200px;
+    height: 200px;
+    background: orangered;
+    box-shadow: 0px 0px 10px 5px orangered;
+}
+
+.orange {
+    width: 160px;
+    height: 160px;
+    background: orange;
+    left: 20px;
+    box-shadow: 0px 0px 12px 6px orange;
+}
+
+.gold {
+    width: 140px;
+    height: 140px;
+    background: gold;
+    left: 30px;
+    box-shadow: 0px 0px 9px 4px gold;
+}
+
+.white {
+    width: 120px;
+    height: 120px;
+    background: lightyellow;
+    left: 40px;
+    box-shadow: 0px 0px 9px 4px lightyellow;
+}
+
+/* Styling the flame of the candle */
+.flame-wrapper {
+    position: relative;
+    animation: flicker 3ms ease-in infinite;
+    margin-top: 6rem;
+    z-index: 1;
+}
+
+.flame {
+    bottom: 0;
+    position: absolute;
+    border-radius: 50% 0% 50% 50%;
+    transform: rotate(-45deg);
+}
+
+/* Moving effect of the flame */
+@keyframes flicker {
+    0% {
+        transform: rotate(-1deg);
+    }
+
+    20% {
+        transform: rotate(2deg) scaleY(1.05);
+    }
+
+    40% {
+        transform: rotate(-1deg);
+    }
+
+    60% {
+        transform: rotate(1deg);
+    }
+
+    80% {
+        transform: rotate(-1deg) scaleY(0.9);
+    }
+
+    100% {
+        transform: rotate(1deg);
+    }
+}
+
+/* Styling the candle */
+.candle {
+    position: absolute;
+    top: 34%;
+    right: 41.2%;
+    width: 5%;
+    height: 40%;
+    background-color: whitesmoke;
+    border-radius: 3rem 3rem 0 0;
+}
+
+.first-stand {
+    width: 7%;
+    height: 5%;
+    position: absolute;
+    top: 74%;
+    right: 40.2%;
+    background-color: whitesmoke;
+}
+
+.second-stand {
+    width: 10%;
+    height: 5%;
+    position: absolute;
+    top: 79%;
+    right: 38.6%;
+    background-color: whitesmoke;
+}

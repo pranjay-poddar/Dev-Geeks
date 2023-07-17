@@ -1,0 +1,134 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, rgb(9,37,255),#fff);
+}
+
+.card{
+    width: 350px;
+    height: 190px;
+    /*height: 450px;*/
+    background: white;
+    border-radius: .5rem;
+    transition: .5s;
+    position: relative;
+}
+
+.card:hover{
+    height: 450px;
+}
+
+.card .imgbox{
+    height: 150px;
+    width: 150px;
+    background:black;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: -50px;
+    border-radius: .5rem;
+    transition: .5s;
+    overflow: hidden;
+}
+
+.card:hover .imgbox{
+    height: 250px;
+    width: 250px;
+
+}
+
+.card .imgbox img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.card .contant{
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    overflow: hidden;
+}
+
+.card .contant .details{
+    width: 100%;
+    padding: 2rem;
+    text-align: center;
+    transform: translateY(140px);
+    transition: .5s;
+}
+
+.card:hover .details{
+    transform: translateY(0);
+}
+.card .contant .details h2{
+    font-size: 1.5rem;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 400;
+    line-height: 1.5rem;
+}
+
+.card .contant .details h2 span{
+    font-size: 1.1rem;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-style: oblique;
+    font-weight: 300;
+}
+
+.card .stats{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1.7rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 300;
+    color: rgb(5,5,5);
+    font-size: 1rem;
+}
+
+.card .btns{
+    margin-top: 1rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.card .btns button{
+    padding: 10px 20px;
+    border: none;
+    outline: none;
+    border-radius: .3rem;
+    background: blue;
+    color: white;
+    cursor: pointer;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    transition: 0.3s;
+   transform: translateY(0);
+   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+
+.card .btns button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.16), 0 6px 12px rgba(0, 0, 0, 0.23);
+}
+
+.card .btns button:last-child {
+  background: transparent;
+  color: blue;
+  border: 2px solid blue;
+}
+
+.card .btns button:last-child:hover {
+  background: blue;
+  color: white;
+}

@@ -1,118 +1,58 @@
-// create your account on https://openweathermap.org/ and
-// enter you api id
-// let appId =
-let units = "metric"; //metric,imperial
-let searchMethod;
+//sign-in to open-weather api inorder to get your apikey
 
-document.getElementById("searchBtn").addEventListener("click", function () {
-  let searchTerm = document.getElementById("searchInput").value;
-  if (!searchTerm) return;
+const apikey="3c865c366a5470166aea5e2ccc871e8c";
 
-  getSearchMethod(searchTerm);
-  searchWeather(searchTerm);
+
+const weatherDataE1= document.getElementById("weatherdata");
+
+const cityInputEl= document.getElementById("cityinput");
+
+const formE1=document.querySelector("form")
+
+formE1.addEventListener("submit",(event)=>{
+    event.preventDefault(); 
+    const cityValue=cityInputEl.value;
+    getweatherdata(cityValue);
 });
+//to get the weather details from open weatherapi
+async function getweatherdata(cityValue){
+    try {
+        const response= await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${cityValue}&appid=${apikey}&units=metric`)
+        if(!response.ok)
+        {
+            throw new Error("Network response was not ok")
+        }
+        const data= await response.json()
+        console.log(data);
+       //math.round is to round a number to its nearest value like eg.17.33 -> 17
+        const temperature=Math.round(data.main.temp)
 
-function getSearchMethod(searchTerm) {
-  if (isFinite(searchTerm)) {
-    searchMethod = "zip";
-  } else {
-    searchMethod = "q";
-  }
-}
+        const description=data.weather[0].description
 
-function init(resultFromServer) {
-  // console.log(resultFromServer);
+        const icon=data.weather[0].icon
 
-  switch (resultFromServer.weather[0].main) {
-    case "Clear":
-      document.body.style.backgroundImage = 'url("img/clear.jpg")';
-      break;
-    case "Clouds":
-      document.body.style.backgroundImage = 'url("img/cloud.jpg")';
-      break;
-    case "Rain":
-    case "Drizzle":
-    case "Mist":
-      document.body.style.backgroundImage = 'url("img/rain.jpg")';
-      break;
+        const details=[
+            `Feels like : ${Math.round(data.main.feels_like)}°C`,
+            `Humidity : ${data.main.humidity}%`,
+            `Wind speed : ${data.wind.speed} m/s`,
+        ]
+          // to get weather emojis
+        weatherDataE1.querySelector(".icon").innerHTML= `<img src="https://openweathermap.org/img/wn/${icon}.png" alt="Weather icon">`;
 
-    case "Thunderstorm":
-      document.body.style.backgroundImage = 'url("img/thunderstorm.jpg")';
-      break;
+        weatherDataE1.querySelector(".temperature").textContent = `${temperature}°C`;
+        
+        weatherDataE1.querySelector(".description").textContent = `${description}`
+        weatherDataE1.querySelector(".details").innerHTML =details.map((details)=>
+            `<div>${details}</div>`
+        ).join("");
 
-    case "Snow":
-      document.body.style.backgroundImage = 'url("img/snow.jpg")';
-      break;
 
-    default:
-      document.body.style.backgroundImage = 'url("img/default.jpg")';
-      break;
-  }
+    } catch (error) {
+        weatherDataE1.querySelector(".icon").innerHTML= "";
 
-  let weatherDescriptionHeader = document.getElementById(
-    "weatherDescriptionHeader"
-  );
-  let temperatureElement = document.getElementById("temperature");
-  let humidityElement = document.getElementById("humidity");
-  let windSpeedElement = document.getElementById("windSpeed");
-  let cityHeader = document.getElementById("cityHeader");
-  let weatherIcon = document.getElementById("documentIconImg");
-  let hideAfterSearch = document.getElementById("hideAfterSearch");
-  console.log(hideAfterSearch);
-
-  hideAfterSearch.classList.add("hideAfterSearch");
-
-  weatherIcon.src =
-    " http://openweathermap.org/img/wn/" +
-    resultFromServer.weather[0].icon +
-    "@2x.png";
-
-  let resultDescription = resultFromServer.weather[0].description;
-
-  // weatherDescriptionHeader.innerText = resultDescription.split(' ').forEach(function(ele){
-  //     return ele.slice(1,1).toUpperCase() + ele.slice(2);
-  // });
-  weatherDescriptionHeader.innerText =
-    resultDescription.charAt(0).toUpperCase() + resultDescription.slice(1);
-
-  temperatureElement.innerHTML =
-    Math.floor(resultFromServer.main.temp) + "&#176";
-
-  windSpeedElement.innerHTML = resultFromServer.wind.speed + " m/s";
-
-  humidityElement.innerHTML =
-    "Humidity levels at " + resultFromServer.main.humidity + "%";
-
-  cityHeader.innerText = resultFromServer.name;
-
-  setPositionForWeatherInfo();
-}
-
-function setPositionForWeatherInfo() {
-  let weatherContainer = document.getElementById("weatherContainer");
-  let weatherContainerHeight = weatherContainer.clientHeight;
-  let weatherContainerWidth = weatherContainer.clientWidth;
-  weatherContainer.style.left = `calc(50% - ${weatherContainerWidth / 2}px)`;
-  weatherContainer.style.top = `calc(50% - ${weatherContainerHeight / 1.3}px)`;
-  weatherContainer.style.visibility = "visible";
-}
-
-async function searchWeather(searchTerm) {
-  try {
-    const sea = await fetch(
-      `http://api.openweathermap.org/data/2.5/weather?${searchMethod}=${searchTerm}&appid=${appId}&${units}`
-    );
-    // const sea = await fetch('http://api.openweathermap.org/data/2.5/weather?q=london&appid=c0e4b3d9be14a150a117efe798421dfe&imperial')
-    const data = await sea.json();
-    // const data = await sea.text();
-    if (!data) {
-      throw new Error(err);
+        weatherDataE1.querySelector(".temperature").textContent = "";
+        
+        weatherDataE1.querySelector(".description").textContent = "An Error happened ,please try again later!";
+        weatherDataE1.querySelector(".details").innerHTML ="";
     }
-    // console.log(data)
-    init(data);
-  } catch (err) {
-    console.log(err);
-  }
 }
-
-// setPositionForWeatherInfo();

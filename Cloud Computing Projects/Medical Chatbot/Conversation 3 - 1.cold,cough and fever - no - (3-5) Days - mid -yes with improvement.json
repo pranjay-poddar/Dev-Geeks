@@ -1,0 +1,57 @@
+{
+  "id": "fc496c0a-3d41-427f-b5a5-f636a96b3170",
+  "name": "Conversation 3 - 1.cold,cough and fever - no - (3-5) Days - mid -yes with improvement",
+  "auto": true,
+  "condition": "",
+  "conditionalFollowupEvents": [],
+  "conditionalResponses": [],
+  "context": [
+    "Conversation3-1coldcoughandfever-no-3-5Days-mid-followup"
+  ],
+  "contexts": [
+    "Conversation3-1coldcoughandfever-no-3-5Days-mid-followup"
+  ],
+  "endInteraction": false,
+  "events": [],
+  "fallbackIntent": false,
+  "liveAgentHandoff": false,
+  "parentId": "1c748861-9b8e-4038-a36e-3d2074e5fa07",
+  "followUpIntents": [],
+  "priority": 500000,
+  "responses": [
+    {
+      "action": "Conversation3.Conversation3-custom.Conversation3-1coldcoughandfever-custom-2.Conversation3-1coldcoughandfever-no-custom.Conversation3-1coldcoughandfever-no-3-5Days-custom-2.Conversation3-1coldcoughandfever-no-3-5Days-mid-custom",
+      "affectedContexts": [],
+      "parameters": [],
+      "defaultResponsePlatforms": {},
+      "messages": [
+        {
+          "type": "message",
+          "condition": "",
+          "speech": [
+            "Okay then kindly follow your home remedies and then contact me after 2 days."
+          ]
+        }
+      ],
+      "resetContexts": false
+    }
+  ],
+  "rootParentId": "4ff6d6f4-51ce-40cc-bea4-977e35b5b1e4",
+  "templates": [],
+  "userSays": [
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "1",
+          "userDefined": false
+        }
+      ],
+      "count": 0,
+      "id": "5d66f4e8-6aec-4411-961c-31a64919a7a1",
+      "updated": null
+    }
+  ],
+  "webhookForSlotFilling": false,
+  "webhookUsed": false
+}

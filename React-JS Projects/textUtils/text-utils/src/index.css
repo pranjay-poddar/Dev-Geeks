@@ -1,0 +1,12 @@
+body {
+  margin: 0;
+  font-family: 'Roboto Condensed', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  /* light color originally given to the webpage */
+  background-color: #E9E4F0;
+}
+
+code {
+  font-family: 'Roboto Condensed', sans-serif;
+}

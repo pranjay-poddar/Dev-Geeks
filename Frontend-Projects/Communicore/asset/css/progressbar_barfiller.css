@@ -1,0 +1,98 @@
+
+
+/* Custom Code skills */
+.single-skill{
+  display: flex;
+}
+
+.single-skill span {
+	color: #79838b;
+	font-size: 13px;
+	font-weight: 300;
+	letter-spacing: 0;
+	margin-bottom: 14px;
+	display: block;
+}
+.single-skill .bar-progress {
+	width: 100%;
+}
+.single-skill .bar-title {
+  width: 20%;
+  margin-bottom: 19px;
+}
+
+.skills-content {
+  padding-top: 200px;
+  padding-left: 70px;
+}
+
+.skills-shape-bg {
+  height: 651px;
+  width: 868px;
+  position: absolute;
+  content: "";
+  border: 2px solid #4d4d4d;
+  left: 40%;
+  top: 255px;
+}
+
+.skills-shape-bg::before {
+  position: absolute;
+  content: "";
+  height: 465px;
+  width: 300px;
+  border: 2px solid #4d4d4d;
+  left: -35%;
+  top: 50%;
+  transform: translateY(-50%);
+  border-right: 0;
+}
+
+
+
+/* Default */
+.barfiller {
+	width: 100%;
+	height: 10px;
+	background: #f6f9fc;
+  position: relative;
+  border-radius: 5px;
+}
+
+.barfiller .fill {
+  display: block;
+  position: relative;
+  width: 0px;
+  height: 100%;
+  background: #333;
+  z-index: 1;
+  border-radius: 5px;
+}
+
+.barfiller .tipWrap { display: none; }
+
+.barfiller .tip {
+  margin-top: -28px;
+  padding: 2px 4px;
+  font-size: 16px;
+  color: #09cc7f;
+  left: 0px;
+  position: absolute;
+  z-index: 2;
+  background: transparent;
+  font-weight: 800;
+}
+
+.barfiller .tip:after {
+  border: solid;
+  border-color: rgba(0,0,0,.8) transparent;
+  border-width: 6px 6px 0 6px;
+  content: "";
+  display: block;
+  position: absolute;
+  left: 9px;
+  top: 100%;
+  z-index: 9;
+  display: none;
+  
+}

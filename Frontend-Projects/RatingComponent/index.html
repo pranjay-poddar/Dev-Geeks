@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <title>Interactive rating component</title>
+  <link rel="stylesheet" href="styles.css">
+  <!-- Font Awesome Kit -->
+  <script src="https://kit.fontawesome.com/c04965d3c1.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  
+  <main>
+    <!-- Rating state start -->
+    <div class="main container">
+      <img class="star" src="images/icon-star.svg" alt="star-icon">
+      <h1>How did we do?</h1>
+      <p>Please let us know how we did with your support request. All feedback is appreciated to help us improve our offering!</p>
+      <div class="ratingChoices">
+        <button class="choice icon">1</button>
+        <button class="choice icon">2</button>
+        <button class="choice icon">3</button>
+        <button class="choice icon">4</button>
+        <button class="choice icon">5</button>
+      </div>
+      <button class="submit">SUBMIT</button>
+    </div>
+
+
+  <!-- Rating state end -->
+
+  <!-- Thank you state start -->
+  <div class="container thankYou hidden" id="thankYou">
+    <img src="images/illustration-thank-you.svg" alt="" class="thankYou">
+    <div class="rating">
+        You selected <span class="rating"></span> out of 5
+    </div>
+    <h1 class="thankYou">Thank you!</h1>
+    <p class="thankYou">We appreciate you taking the time to give a rating. If you ever need more support, don’t hesitate to get in touch!</p>
+  </div>
+  <!-- Thank you state end -->
+
+  </main>
+
+  <footer>
+    <div class="attribution">
+      Coded by <a href="https://github.com/MisterMickey">Master Mickey</a>.
+    </div>
+  </footer>
+
+  <script src="index.js"></script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Save Text As File</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="wrapper">
+        <textarea required placeholder="Enter your text here"></textarea>
+        <div class="file-options">
+            <div class="option file-name">
+                <label>File Name</label>
+                <input type="text" placeholder="Enter file name">
+            </div>
+            <div class="option save-as">
+                <label>Save as</label>
+                <div class="select-menu">
+                    <select>
+                        <option value="text/plain">Text File (.txt)</option>
+                        <option value="text/html">HTML File (.html)</option>
+                        <option value="text/css">CSS (.css)</option>
+                        <option value="text/javascript">JavaScript (.js)</option>
+                        <option value="image/svg+xml">SVG (.svg)</option>
+                        <option value="application/msword">Doc (.doc)</option>
+                        <option value="application/pdf">PDF (.pdf)</option>
+                        <option value="application/vnd.ms-powerpoint">PPT (.ppt)</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <button class="save-btn">Save as Text File</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

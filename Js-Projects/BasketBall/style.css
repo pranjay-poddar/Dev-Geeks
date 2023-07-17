@@ -1,0 +1,136 @@
+@font-face {
+    font-family: score_card;
+    src: url(score_card.ttf);
+}
+
+.box1 {
+
+    /* border: 1px solid red; */
+    width: 500px;
+    margin: auto;
+    height: 520px;
+    margin-top: 50px;
+    background-color: #1B244A;
+    color: rgb(232, 224, 214);
+    border-radius: 10px;
+    box-shadow: 25px 25px 30px;
+}
+
+.box2 {
+    display: flex;
+    /* border: 1px solid red; */
+    justify-content: space-around;
+}
+
+.box3 {
+    display: flex;
+    /* border: 1px solid red; */
+    justify-content: space-around;
+    height: 15vh;
+
+}
+
+.box4 {
+    display: flex;
+    /* border: 1px solid red; */
+    justify-content: space-around;
+    height: 6vh;
+
+}
+
+.score {
+    margin-top: 4vh;
+    background-color: black;
+    color: orange;
+    height: 8vh;
+    width: 10vh;
+
+    font-family: score_card;
+
+    display: flex;
+    justify-content: center;
+
+    text-align: center;
+    align-items: center;
+
+    color: #F94F6D;
+}
+
+h2 {
+    font-size: 40px;
+}
+
+.inc {
+    border: 1px solid #9AABD8;
+    height: 6vh;
+    width: 6vh;
+    margin-left: 3px;
+    margin-right: 3px;
+    border-radius: 5px;
+    background-color: #1B244A;
+    color: #9AABD8;
+    font-family: score_card;
+    font-size: 18px;
+}
+#heading{
+    padding-top: 15px;
+   text-align: center;
+   font-family: score_card;
+   color: yellow;
+
+}
+
+    .reset {
+width: 112px;
+height: 37px;
+margin: auto;
+align-items: center;
+display: block;
+margin-top: 50px;
+font-size: 33px;
+color: greenyellow;
+background-color: black;
+font-family: score_card;
+}
+
+
+@media(max-width: 780px){
+.reset {
+
+margin-top: 66px;
+font-size: 33px;
+
+}
+.box1 {
+/* border: 1px solid red; */
+width: 400px;
+
+}
+#heading {
+font-size: 28px;
+}
+
+}
+@media(max-width:376px){
+.box1 {
+/* border: 1px solid red; */
+width: 301px;
+height: 468px;
+}
+.reset {
+margin-top: 115px;
+font-size: 26px;
+}
+#heading {
+font-size: 20px;
+}
+.inc {
+font-size: 14px;
+}
+.inc {
+
+font-size: 16px;
+display: block;
+margin-top: 10px;
+}
+}

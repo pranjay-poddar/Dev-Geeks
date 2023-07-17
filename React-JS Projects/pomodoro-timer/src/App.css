@@ -1,0 +1,53 @@
+.session {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 30%;
+  margin: 0 auto;
+}
+.label {
+  text-align: center;
+}
+.buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30%;
+  margin: 0 auto;
+  gap: 10px;
+}
+.time {
+  font-size: x-large;
+}
+.timer {
+  margin: 70px auto;
+  width: 20%;
+  text-align: center;
+  border: 1px solid #646cff;
+  padding: 15px 0;
+  border-radius: 10px;
+  font-size: x-large;
+}
+.timer p {
+  margin: 0;
+}
+#time-left {
+  font-size: 62px;
+}
+.timer button {
+  margin: 10px;
+  font-size: x-large;
+}
+.bd-danger {
+  border: 1px solid #dc3545;
+}
+
+@media (max-width: 668px) {
+  .App,
+  .timer,
+  .session,
+  .buttons {
+    width: 95%;
+    margin: 30px auto;
+  }
+}

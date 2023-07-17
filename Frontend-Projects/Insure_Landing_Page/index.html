@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Insure Landing Page Solution by 0xabdulkhalid for FrontendMentor.io"
+    />
+    <meta
+      name="keywords"
+      content="Frontend Mentor, Insure Landing Page Challenge, 0xabdulkhalid"
+    />
+    <meta
+      property="og:title"
+      content="Insure Landing Page - Frontend Mentor"
+    />
+    <meta
+      property="og:description"
+      content="Insure Landing Page Solution by 0xabdulkhalid for FrontendMentor.io"
+    />
+    <title>Insure landing page | Frontend Mentor</title>
+    <link rel="stylesheet" href="./styles.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="preload"
+      as="style"
+      href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Karla:wght@400;700&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Karla:wght@400;700&display=swap"
+      media="print"
+      onload="this.media='all'"
+    />
+    <noscript>
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Karla:wght@400;700&display=swap"
+      />
+    </noscript>
+    <link rel="icon" href="https://raw.githubusercontent.com/0xabdulkhalid/insure-landing-page/main/images/favicon.svg" sizes="any" type="image/svg+xml">
+  </head>
+  <body>
+    <header>
+      <a href="#" class="header__logo" aria-label="Insure">
+        <img src="https://raw.githubusercontent.com/0xabdulkhalid/insure-landing-page/main/images/logo.svg" alt="" width="112" height="18"/>
+      </a>
+    </header>
+
+    <nav data-inclusive-menu>
+      <button
+        data-inclusive-menu-opens="menu"
+        aria-haspopup="true"
+        aria-expanded="false"
+        class="nav__menu-btn"
+      > <span class="sr-only">Menu</span>
+      </button>
+      <div
+        id="menu"
+        class="nav__menu-section"
+        data-inclusive-menu-from="left"
+        role="menu"
+        hidden
+      >
+        <button role="menuitem" tabindex="-1">How we work</button>
+        <button role="menuitem" tabindex="-1">Blog</button>
+        <button role="menuitem" tabindex="-1">Account</button>
+        <button role="menuitem" tabindex="-1">View plans</button>
+      </div>
+    </nav>
+
+    <main>
+      <h1 class="main__heading--sr-only">Insure landing page</h1>
+      <section class="main__hero-section">
+        <picture class="main__picture-header">
+          <source
+            media="(min-width: 56em)"
+            srcset="https://raw.githubusercontent.com/0xabdulkhalid/insure-landing-page/main/images/image-intro-desktop.webp"
+          />
+          <img
+            src="https://raw.githubusercontent.com/0xabdulkhalid/insure-landing-page/main/images/image-intro-mobile.webp"
+            alt=""
+            class="main__header-image"
+            width="375"
+            height="451"
+          />
+        </picture>
+        <div class="main__hero-divider">
+          <div class="main__hero-section-liner"></div>
+          <picture class="main__intro-pattern-left">
+            <source
+              media="(min-width: 56em)"
+              srcset="https://raw.githubusercontent.com/0xabdulkhalid/insure-landing-page/main/images/bg-pattern-intro-left-desktop.svg"
+            />
+            <img
+              src="https://raw.githubusercontent.com/0xabdulkhalid/insure-landing-page/main/images/bg-pattern-intro-left-mobile.svg"
+              alt=""
+              class="main__header-image"
+              width="168" 
+              height="165"
+            />
+          </picture>
+          <h2 class="main__hero-heading">Humanizing your insurance.</h2>
+          <p class="main__hero-description">
+            Get your life insurance coverage easier and faster. We blend our
+            expertise and technology to help you find the plan that’s right for
+            you. Ensure you and your loved ones are protected.
+          </p>
+          <a href="#" class="main__hero-btn">View plans</a>
+          <picture class="main__intro-pattern-right">
+            <source
+              media="(min-width: 56em)"
+              srcset="https://raw.githubusercontent.com/0xabdulkhalid/insure-landing-page/main/images/bg-pattern-intro-right-desktop.svg"
+            />
+            <img
+              src="https://raw.githubusercontent.com/0xabdulkhalid/insure-landing-page/main/images/bg-pattern-intro-right-mobile.svg"
+              alt=""
+              class="main__header-image"
+              width="124" 
+              height="330"
+            />
+          </picture>
+        </div>
+      </section>
+
+      <section class="main__features-section">
+        <div class="main__features-liner"></div>
+        <h2 class="main__features-heading">We’re different
+          <span class="main__features--sr-only">take a look about our features</span>
+        </h2>
+        <div class="main__featured-divider">
+          <div class="main__featured-block">
+            <img
+              src="https://raw.githubusercontent.com/0xabdulkhalid/insure-landing-page/main/images/icon-snappy-process.svg"
+              alt=""
+              class="main__featured-icon"
+              width="86" 
+              height="86"
+            />
+            <h3 class="main__featured-heading">Snappy Process</h3>
+            <p class="main__featured-description">
+              Our application process can be completed in minutes, not hours.
+              Don’t get stuck filling in tedious forms.
+            </p>
+          </div>
+          <div class="main__featured-block">
+            <img
+              src="https://raw.githubusercontent.com/0xabdulkhalid/insure-landing-page/main/images/icon-affordable-prices.svg"
+              alt=""
+              class="main__featured-icon"
+              width="86"
+              height="86"
+            />
+            <h3 class="main__featured-heading">Affordable Prices</h3>
+            <p class="main__featured-description">
+              We don’t want you worrying about high monthly costs. Our prices
+              may be low, but we still offer the best coverage possible.
+            </p>
+          </div>
+          <div class="main__featured-block">
+            <img
+              src="https://raw.githubusercontent.com/0xabdulkhalid/insure-landing-page/main/images/icon-people-first.svg"
+              alt=""
+              class="main__featured-icon"
+              width="86" 
+              height="86"
+            />
+            <h3 class="main__featured-heading">People First</h3>
+            <p class="main__featured-description">
+              Our plans aren’t full of conditions and clauses to prevent
+              payouts. We make sure you’re covered when you need it.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="main__outro-section">
+        <h2 class="main__outro-heading">Find out more about how we work</h2>
+        <a href="#" class="main__outro-btn">How we work</a>
+      </section>
+    </main>
+
+    <footer>
+      <section class="footer__socials-section">
+        <h2 class="footer__social-heading--sr-only">
+          Insure's social platforms
+        </h2>
+        <div class="footer__brand-block">
+          <img src="https://raw.githubusercontent.com/0xabdulkhalid/insure-landing-page/main/images/logo.svg" alt="" width="112" height="18" />
+        </div>
+
+        <ol class="footer__socials-block" role="list">
+          <li role="listitem">
+            <a href="#" aria-label="Facebook">
+              <img src="https://raw.githubusercontent.com/0xabdulkhalid/insure-landing-page/main/images/icon-facebook.svg" alt="" width="24" height="24" />
+            </a>
+          </li>
+
+          <li role="listitem">
+            <a href="#" aria-label="Twitter">
+              <img src="https://raw.githubusercontent.com/0xabdulkhalid/insure-landing-page/main/images/icon-twitter.svg" alt="" width="24" height="20" />
+            </a>
+          </li>
+
+          <li role="listitem">
+            <a href="#" aria-label="Pinterest">
+              <img src="https://raw.githubusercontent.com/0xabdulkhalid/insure-landing-page/main/images/icon-pinterest.svg" alt="" width="24" height="24" />
+            </a>
+          </li>
+
+          <li role="listitem">
+            <a href="#" aria-label="Instagram">
+              <img src="https://raw.githubusercontent.com/0xabdulkhalid/insure-landing-page/main/images/icon-instagram.svg" alt="" width="24" height="24" />
+            </a>
+          </li>
+        </ol>
+      </section>
+
+      <div class="footer__socials-liner"></div>
+
+      <div class="footer__links-divider">
+        <div class="footer__links-block">
+          <h3 class="footer__links-heading">Our company</h3>
+          <ol class="footer__listed-links" role="list">
+            <li role="listitem"><a href="#">How we work</a></li>
+            <li role="listitem"><a href="#">Why Insure?</a></li>
+            <li role="listitem"><a href="#">Check price</a></li>
+            <li role="listitem"><a href="#">Reviews</a></li>
+          </ol>
+        </div>
+
+        <div class="footer__links-block">
+          <h3 class="footer__links-heading">Help me</h3>
+          <ol class="footer__listed-links" role="list">
+            <li role="listitem"><a href="#">FAQ</a></li>
+            <li role="listitem"><a href="#">Terms of use</a></li>
+            <li role="listitem"><a href="#">Privacy policy</a></li>
+            <li role="listitem"><a href="#">Cookies</a></li>
+          </ol>
+        </div>
+
+        <div class="footer__links-block">
+          <h3 class="footer__links-heading">Contact</h3>
+          <ol class="footer__listed-links" role="list">
+            <li role="listitem"><a href="#">Sales</a></li>
+            <li role="listitem"><a href="#">Support</a></li>
+            <li role="listitem"><a href="#">Live chat</a></li>
+          </ol>
+        </div>
+
+        <div class="footer__links-block">
+          <h3 class="footer__links-heading">Others</h3>
+          <ol class="footer__listed-links" role="list">
+            <li role="listitem"><a href="#">Careers</a></li>
+            <li role="listitem"><a href="#">Press</a></li>
+            <li role="listitem"><a href="#">Licenses</a></li>
+          </ol>
+        </div>
+      </div>
+
+      <div class="attribution">
+        Challenge by
+        <a
+          href="https://www.frontendmentor.io/"
+          target="_blank"
+          aria-describedby="Frontend Mentor Website"
+          >Frontend Mentor</a
+        >, Coded by
+        <a
+          href="https://github.com/0xabdulkhalid"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-describedby="Abdul khalid's Github profile"
+          >0xabdulkhalid</a
+        >
+      </div>
+    </footer>
+
+    <script src="./index.min.js" defer></script>
+  </body>
+</html>

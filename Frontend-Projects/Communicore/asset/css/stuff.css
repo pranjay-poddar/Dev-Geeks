@@ -1,0 +1,62 @@
+.services {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .services .section-heading h2 {
+    padding-right: 30px;
+  }
+  
+  .services::before {
+    content: url(../img/services-left.jpg);
+    top: 120px;
+    left: 0;
+    position: absolute;
+    width: 844px;
+    height: 400px;
+    z-index: -1;
+  }
+  
+  .services::after {
+    content: url(../img/contact-left.jpg);
+    bottom: -150px;
+    right: 0;
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+    position: absolute;
+    width: 103px;
+    height: 464px;
+    z-index: -1;
+  }
+  
+  .services .service-item {
+    border: 1px solid #f3d7ff;
+    border-radius: 23px;
+    padding: 30px;
+    background-color: #fff;
+    margin-bottom: 30px;
+    transition: all .4s;
+  }
+  
+  .services .service-item h4 {
+    font-size: 20px;
+    color: #2a2a2a;
+    margin-top: 20px;
+    line-height: 30px;
+    transition: all .4s;
+  }
+  
+  .services .service-item:hover {
+    border-color: #fff;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15);
+  }
+  
+  .services .service-item:hover h4 {
+    color: #5b03e4;
+  }
+  @media (max-width: 1200px) {
+    .services::before {
+      top: 60%;
+      transform: translateY(-50%);
+    }
+  }

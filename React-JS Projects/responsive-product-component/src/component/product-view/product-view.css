@@ -1,6 +1,26 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body {
+  padding: 1rem;
+}
+
+.App {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 25px;
+  min-height: 100vh;
+}
+
+/* Default styles */
 .product-wrapper {
   max-width: 450px;
-
   border-radius: 10px;
   padding: 1rem;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
@@ -10,7 +30,6 @@
   display: flex;
   align-items: flex-start;
   flex-direction: column;
-
   gap: 8px;
   width: 100%;
 }
@@ -36,7 +55,6 @@
 .product-price {
   font-size: 1.2em;
   margin-top: 8px;
-
   opacity: 0.5;
 }
 
@@ -44,14 +62,12 @@
   display: flex;
   justify-content: center;
   align-items: center;
-
   margin-top: 12px;
 }
 
 .product-count-ctrl {
   font-size: 1.5rem;
   border: 1px solid black;
-
   padding: 0.5em;
   background: transparent;
   cursor: pointer;
@@ -71,17 +87,14 @@
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
-
   margin-top: 14px;
 }
 
 .variations {
   font-size: 14px;
   padding: 1em;
-
   border-radius: 12px;
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-
   transition: 300ms ease-in-out;
   cursor: pointer;
 }
@@ -104,7 +117,6 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
-
   gap: 8px;
   margin-top: 12px;
 }
@@ -112,27 +124,47 @@
 .product-action-buttons > button {
   font-size: 14px;
   padding: 1em;
-
   width: 100%;
-  background-color: transparent;
-
+  background-color: black;
   border: 1px solid black;
   border-radius: 10px;
   cursor: pointer;
+  color: #ffffff;
 }
 
 .product-action-buttons > button:hover,
 .product-count-ctrl:hover {
-  color: #fff;
-  background-color: black;
+  color: #000000;
+  background-color: #ffffff;
 }
 
 .product-sidebar {
   display: flex;
   flex-direction: column;
   gap: 16px;
-
   width: 100%;
+}
+
+/* Dark mode styles */
+body.dark-mode {
+  background-color: #1a1a1a;
+  color: #ffffff;
+}
+
+body.dark-mode .product-wrapper {
+  background-color: #333333;
+  color: #ffffff;
+}
+
+body.dark-mode .product-action-buttons > button {
+  color: #000000;
+  background-color: #ffffff;
+}
+
+body.dark-mode .product-action-buttons > button:hover,
+body.dark-mode .product-count-ctrl:hover {
+  color: #ffffff;
+  background-color: #000000;
 }
 
 @media only screen and (min-width: 768px) {
