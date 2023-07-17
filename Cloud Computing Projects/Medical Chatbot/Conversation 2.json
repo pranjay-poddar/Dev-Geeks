@@ -1,0 +1,129 @@
+{
+  "id": "374367f5-742e-4da2-b063-0a04f6a00261",
+  "name": "Conversation 2",
+  "auto": true,
+  "condition": "",
+  "conditionalFollowupEvents": [],
+  "conditionalResponses": [],
+  "context": [],
+  "contexts": [],
+  "endInteraction": false,
+  "events": [],
+  "fallbackIntent": false,
+  "liveAgentHandoff": false,
+  "parentId": null,
+  "followUpIntents": [],
+  "priority": 500000,
+  "responses": [
+    {
+      "action": "",
+      "affectedContexts": [],
+      "parameters": [
+        {
+          "noInputPromptMessages": [],
+          "noMatchPromptMessages": [],
+          "promptMessages": [],
+          "defaultValue": "",
+          "name": "healthque",
+          "dataType": "@HealthQue",
+          "isList": false,
+          "required": false,
+          "prompts": [],
+          "value": "$healthque",
+          "outputDialogContexts": []
+        },
+        {
+          "noInputPromptMessages": [],
+          "noMatchPromptMessages": [],
+          "promptMessages": [],
+          "defaultValue": "",
+          "name": "hp",
+          "dataType": "@hp",
+          "isList": false,
+          "required": false,
+          "prompts": [],
+          "value": "$hp",
+          "outputDialogContexts": []
+        },
+        {
+          "noInputPromptMessages": [],
+          "noMatchPromptMessages": [],
+          "promptMessages": [],
+          "defaultValue": "",
+          "name": "health",
+          "dataType": "@Health",
+          "isList": false,
+          "required": false,
+          "prompts": [],
+          "value": "$health",
+          "outputDialogContexts": []
+        }
+      ],
+      "defaultResponsePlatforms": {},
+      "messages": [
+        {
+          "type": "message",
+          "condition": "",
+          "speech": [
+            "Okay, so can you please tell me about the diseases you are suffering?"
+          ]
+        }
+      ],
+      "resetContexts": false
+    }
+  ],
+  "rootParentId": null,
+  "templates": [],
+  "userSays": [
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "yes",
+          "userDefined": false,
+          "alias": "healthque",
+          "meta": "@HealthQue"
+        },
+        {
+          "text": " i am ",
+          "userDefined": false
+        },
+        {
+          "text": "not good",
+          "userDefined": false,
+          "alias": "health",
+          "meta": "@Health"
+        }
+      ],
+      "count": 0,
+      "id": "2d9b7e2c-1293-4c14-a5c9-9cdf687f03e3",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "Yes",
+          "userDefined": false,
+          "alias": "healthque",
+          "meta": "@HealthQue"
+        },
+        {
+          "text": " i am ",
+          "userDefined": false
+        },
+        {
+          "text": "not feeling well",
+          "userDefined": false,
+          "alias": "hp",
+          "meta": "@hp"
+        }
+      ],
+      "count": 0,
+      "id": "7eb39a56-d9da-4c51-93f6-8fa3a45b8144",
+      "updated": null
+    }
+  ],
+  "webhookForSlotFilling": false,
+  "webhookUsed": false
+}

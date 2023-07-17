@@ -7,9 +7,10 @@ const female = document.querySelector('#female');
 const java = document.querySelector('#java');
 const html = document.querySelector('#HTML');
 const css = document.querySelector('#CSS');
-
-const enroll_btn = document.querySelector('#enroll-btn');
 const Students = document.querySelector('.student-details');
+
+/*const enroll_btn = document.querySelector('#enroll-btn');
+
 
 enroll_btn.onclick = (e) => {
     e.preventDefault();
@@ -97,4 +98,4 @@ enroll_btn.onclick = (e) => {
     html.checked = false;
     css.checked = false;
 
-}
+}*/

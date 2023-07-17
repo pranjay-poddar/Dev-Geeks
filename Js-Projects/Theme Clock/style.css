@@ -134,3 +134,15 @@ body {
     transition: all 0.5s ease-in;
     font-size: 12px;
 }
+
+
+.timezone {
+    cursor: pointer;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    border: 0;
+    border-radius: 4px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 140px;
+}

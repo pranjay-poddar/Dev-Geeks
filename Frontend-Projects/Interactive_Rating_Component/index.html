@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Interactive Rating Component Solution by 0xabdulkhalid for FrontendMentor.io"
+    />
+    <meta
+      name="keywords"
+      content="Frontend Mentor, Interactive Rating Component Challenge, 0xabdulkhalid"
+    />
+    <meta
+      property="og:title"
+      content="Interactive Rating Component - Frontend Mentor"
+    />
+    <meta
+      property="og:description"
+      content="Interactive Rating Component Solution by 0xabdulkhalid for FrontendMentor.io"
+    />
+    <meta name="theme-color" content="#FC7614" />
+    <meta name="msapplication-navbutton-color" content="#FC7614" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="#FC7614" />
+    <title>Interactive rating component | Frontend Mentor</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="preload"
+      as="style"
+      href="https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap"
+      media="print"
+      onload="this.media='all'"
+    />
+    <noscript>
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap"
+      />
+    </noscript>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="https://raw.githubusercontent.com/0xabdulkhalid/interactive-rating-component/main/images/favicon-32x32.png"
+    />
+    <style>
+      :root{--orange:hsl(25, 97%, 53%);--light-grey:hsl(217, 12%, 63%);--medium-grey:hsl(216, 12%, 54%);--dark-blue:hsl(213, 19%, 18%);--very-dark-blue:hsl(216, 12%, 8%)}*,::after,::before{margin:0;padding:0}body{font-family:Overpass,sans-serif;min-height:100dvh;display:grid;place-items:center;background:var(--very-dark-blue);color:var(--light-grey)}main{background:radial-gradient(farthest-side at top center,hsl(215deg,17%,15%),hsl(215deg,27%,12%));max-width:22rem;min-height:22.41rem;margin:0 1.5rem;border-radius:1rem}.main__ratings-container,.main__thankyou-state{padding:1.5rem;font-size:.95rem;display:grid;gap:1.35rem}.main__star-icon{padding:.75rem;background:var(--dark-blue);border-radius:50%;width:.9rem}.main__heading{letter-spacing:.03rem;color:#fff}.main__description{margin-top:-.5rem;font-size:.875rem;line-height:1.35rem}.main__form{display:grid;gap:1.5rem}.main__fieldset{border:none;display:flex;justify-content:space-between;margin-top:.45rem}.main__fieldset input{width:100%;height:100%}.main__rating{position:relative;display:grid;place-items:center;border-radius:50%;overflow:hidden;width:2.45rem;height:2.45rem;font-size:.85rem;cursor:pointer}.main__rating-count{position:absolute;inset:0;display:grid;place-items:center;background:var(--dark-blue);color:var(--light-grey);transition:.4s}input[type=radio]{-webkit-appearance:none;appearance:none}input[type=radio]:checked+.main__rating-count,input[type=radio]:focus+.main__rating-count{background:var(--medium-grey);color:#fff}.main__submit-btn{all:unset;cursor:pointer;background:var(--orange);color:#fff;width:100%;border-radius:2rem;height:2rem;text-align:center;text-transform:uppercase;font-weight:700;padding:.5rem 0 .4rem;font-size:.96rem;letter-spacing:.047rem;transition:.4s}.main__submit-btn:disabled{filter:brightness(.85)}.main__submit-btn:is(:hover,:focus){background:#fff;color:var(--orange)}.main__thankyou-state{place-items:center;padding:2.55rem 1.5rem}.main__paragraph-metrics{margin-top:1.1rem;color:var(--orange);padding:.4rem 1.25rem;background:var(--dark-blue);border-radius:5rem}.main__thankyou-state .main__heading{margin-top:.2rem}.main__thankyou-state .main__description{text-align:center;font-size:.95rem}.main__ratings-container--disabled,.main__thankyou-state--disabled{display:none}.main__sr-only{border:0!important;-webkit-clip-path:inset(50%)!important;clip-path:inset(50%)!important;height:1px!important;margin:-1px!important;overflow:hidden!important;padding:0!important;position:absolute!important;white-space:nowrap!important;width:1px!important}.attribution{width:100%;text-align:center;margin-top:1em;padding:1em 0;position:fixed;bottom:0;font-size:.8rem;background:rgba(255,255,255,.05);backdrop-filter:blur(5px)}.attribution,.attribution__link{transition:.5s;color:var(--light-grey)}.attribution .attribution__link:hover{color:#eee}.fade-in{-webkit-animation:1.5s cubic-bezier(.39,.575,.565,1) both fade-in;animation:1.5s cubic-bezier(.39,.575,.565,1) both fade-in}@-webkit-keyframes fade-in{0%{opacity:0}100%{opacity:1}}@keyframes fade-in{0%{opacity:0}100%{opacity:1}}@media (min-width:56.25em){main{max-width:24.5rem;padding:.55rem;overflow:hidden;max-height:25rem;border-radius:2rem}.main__ratings-container{padding:1rem 1.5rem}.main__star-icon{width:1.1rem;padding:.9rem;margin-top:.5rem}.main__heading{font-size:1.7rem;margin-top:.85rem;letter-spacing:0}.main__description{font-size:.93rem;line-height:1.5rem;margin-top:-.65rem}.main__fieldset{margin-top:.5rem;width:98%}.main__rating{width:3.1rem;height:3.1rem;font-size:.92rem}.main__submit-btn{margin-top:.5rem;width:98%;letter-spacing:.1rem}.attribution{font-size:.85rem}}
+    </style>
+  </head>
+  <body>
+    <main class="fade-in">
+      <h1 class="main__sr-only">Interactive Rating Component</h1>
+      <section class="main__ratings-container fade-in">
+        <img src="https://raw.githubusercontent.com/0xabdulkhalid/interactive-rating-component/main/images/icon-star.svg" class="main__star-icon" alt="" width="16" height="17"/>
+
+        <h2 class="main__heading">How did we do?</h2>
+        <p class="main__description">
+          Please let us know how we did with your support request. All feedback
+          is appreciated to help us improve our offering!
+        </p>
+
+        <form class="main__form">
+          <fieldset class="main__fieldset">
+            <legend class="main__sr-only">Please select a rating</legend>
+
+            <div class="main__rating">
+              <input type="radio" name="rating" id="rating-1" value="1" />
+              <label for="rating-1" class="main__rating-count">1</label>
+            </div>
+
+            <div class="main__rating">
+              <input type="radio" name="rating" id="rating-2" value="2" />
+              <label for="rating-2" class="main__rating-count">2</label>
+            </div>
+
+            <div class="main__rating">
+              <input type="radio" name="rating" id="rating-3" value="3" />
+              <label for="rating-3" class="main__rating-count">3</label>
+            </div>
+
+            <div class="main__rating">
+              <input type="radio" name="rating" id="rating-4" value="4" />
+              <label for="rating-4" class="main__rating-count">4</label>
+            </div>
+
+            <div class="main__rating">
+              <input type="radio" name="rating" id="rating-5" value="5" />
+              <label for="rating-5" class="main__rating-count">5</label>
+            </div>
+          </fieldset>
+
+          <button type="submit" class="main__submit-btn" disabled>
+            Submit
+          </button>
+        </form>
+      </section>
+
+      <section
+        class="main__thankyou-state main__thankyou-state--disabled fade-in"
+        aria-atomic="true"
+        aria-live="polite"
+      >
+        <img
+          src="https://raw.githubusercontent.com/0xabdulkhalid/interactive-rating-component/main/images/illustration-thank-you.svg"
+          class="main__thankyou-illustration"
+          alt=""
+          width="162"
+          height="108"
+        />
+
+        <p class="main__paragraph-metrics">
+          You selected <span class="main__rating-displayer">-</span> out of 5
+        </p>
+
+        <h2 class="main__heading">Thank you!</h2>
+
+        <p class="main__description">
+          We appreciate you taking the time to give a rating. If you ever need
+          more support, don’t hesitate to get in touch!
+        </p>
+      </section>
+    </main>
+
+    <footer class="attribution">
+      Challenge by
+      <a
+        class="attribution__link"
+        href="https://www.frontendmentor.io/"
+        target="_blank"
+        aria-describedby="Frontend Mentor Website"
+        >Frontend Mentor</a
+      >, Coded by
+      <a
+        class="attribution__link"
+        href="https://github.com/0xabdulkhalid"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-describedby="Abdul khalid's Github profile"
+        >0xabdulkhalid</a
+      >
+    </footer>
+
+    <script defer>
+      const form = document.querySelector('form'),
+            userRatingDisplayer = document.querySelector('.main__rating-displayer'),
+            ratingContainer = document.querySelector('.main__ratings-container'),
+            feedbackDisplayer = document.querySelector('.main__thankyou-state');
+
+      form.addEventListener('submit', (e)=> {
+          e.preventDefault();
+          userRatingDisplayer.textContent = e.target.rating.value;
+          ratingContainer.classList.add('main__ratings-container--disabled');
+          feedbackDisplayer.classList.remove('main__thankyou-state--disabled');
+      })
+
+      document.getElementsByName('rating').forEach(el => {
+          el.onchange = function () {
+              document.querySelector('button').removeAttribute('disabled');
+          }
+      })
+    </script>
+  </body>
+</html>

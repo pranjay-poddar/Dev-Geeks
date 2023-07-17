@@ -18,13 +18,16 @@ html, body {
     overflow: hidden;
 }
 
-#main #nav {
+
+/* #main #nav {
     width: 100%;
     height: 15%;
-    /* background-color: red; */
+    padding-top: 10px;
+    background-color: red;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    flex-direction: column;
 }
 
 #main #left {
@@ -38,63 +41,74 @@ html, body {
 
 #nav #west {
     width: 30%;
-    /* background-color: blue; */
-    display: flex;
+    background-color: blue;
+     display: flex;
     align-items: center;
     justify-content: space-between;
     z-index: 1;
     position: absolute;
     left: 67px;
-}
+} 
 
-#west #models {
-    width: 20%;
+ #west #models {
+    width: 30%;
+}
+#west #models h5{
+    color: black;
 }
 
 #west img {
     object-fit: cover;
     width: 65px;
-}
+} 
 
-#west h5 {
-    color: rgb(255, 255, 255);
-    /* width: 50px; */
-    font-weight: 400;
-    display: flex;
-    align-items: center;
-}
 
-#west i {
-    font-size: 17px;
-    margin-right: 10px;
-    cursor: pointer;
-}
 
-#nav #center {
+ #nav #center {
     position: absolute;
-    left: 42%;
+    left: auto;
     width: 70px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    /* background-color: blue; */
+    background-color: blue;
+ } 
+ #center h5 {
+    color:black;
+     font-weight: 400;
+    display: flex;
+    align-items: center;
 }
 
-#center h5 {
+#center i {
+    font-size: 17px;
+    margin-right: 10px;
+    cursor: pointer;
+} 
+ 
+
+#nav h5 {
     padding: 0px 16px;
     font-weight: 400;
     font-size: 14px;
 }
+#nav .container{
+    padding-top: 25px;
+    display: flex;
+    align-content: center;
+    justify-content:space-evenly;
+  flex-direction: column;
+}
 
-#nav #east {
+ #nav #east {
     width: 40px;
     height: 40px;
     background-color: rgb(2, 3, 43);
-    margin: 50px;
+    margin-right: 25px;
     border-radius: 50%;
     position: absolute;
     right: 0;
-}
+}  
 
 #cart img {
     position: absolute;
@@ -103,7 +117,7 @@ html, body {
     top: 50%;
     left: 49%;
     transform: translate(-50%, -50%);
-    /* background-color: red; */
+    background-color: red;
 }
 
 #cart #bubble {
@@ -123,8 +137,78 @@ html, body {
     left: 50%;
     transform: translate(-50%, -50%);
     font-weight: 400;
+} */
+
+
+.logo{
+    position: relative;
+    width: 50px;
+    height: 50px;
+    z-index: 1;
+}
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 40px;
+    padding-left: 5%;
+    padding-right: 5%;
+    z-index: 1;
+}
+nav #cart{
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: black;
+}
+#cart img {
+    position: relative;
+    height: 25px;
+    width: 25px;
+}
+nav ul{
+    padding-left: 800px;
+}
+nav ul li{
+    list-style-type: none;
+    display: inline-block;
+    padding:10px 20px ;
+}
+nav ul li a{
+    color: black;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+}
+nav ul li a:hover{
+    color: blue;
+    transition: 0.3s;
+}
+.bx-menu{
+    height: 10px;
+    padding-right: 5px;
+}
+ .cycle:hover{
+    background-color: black;
+    transition: 0.3s;
+
+}
+.basket:hover
+#cart{
+    background-color: blue;
 }
 
+#main #left {
+    position: absolute;
+    width: 40%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background: linear-gradient(to bottom right, #409cff, #007bfff1);
+}
 #left h1 {
     color: white;
     font-weight: 450;
@@ -213,7 +297,7 @@ a ion-icon {
     height: 630px;
     top: 70%;
     left: 53%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -66%);
     transition: all 2s cubic-bezier(0.19, 1, 0.22, 1);
 }
 
@@ -419,7 +503,7 @@ a ion-icon {
     height: 630px;
     top: 70%;
     left: 153%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -66%);
     transition: all 2s cubic-bezier(0.19, 1, 0.22, 1);
 }
 
@@ -427,9 +511,11 @@ a ion-icon {
     position: absolute;
     /* width: 800px */
     height: 630px;
+    max-height: auto;
+    max-width: 100%;
     top: 70%;
     left: -47%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -63%);
     transition: all 2s cubic-bezier(0.19, 1, 0.22, 1);
 }
 

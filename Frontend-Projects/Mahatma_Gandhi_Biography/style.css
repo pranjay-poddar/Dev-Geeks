@@ -1,0 +1,55 @@
+/* Default settings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Styling the quote lines */
+#quotes {
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.05);
+    border: none;
+    border-radius: 10px;
+}
+
+.carousel-item {
+    padding: 7% 12%;
+}
+
+/* SCROLL TO TOP */
+#progress {
+    z-index: 100001;
+    position: fixed;
+    bottom: 20px;
+    right: 10px;
+    height: 50px;
+    width: 50px;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+  }
+  #progress-value {
+    display: block;
+    height: calc(100% - 15px);
+    width: calc(100% - 15px);
+    background-color: #ffffff;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    font-size: 24px;
+    color: #5e5e5e;
+  }
+  
+/* Styling the anchor tags */
+.link {
+    text-decoration: none;
+    color: black;
+}
+
+.link:hover {
+    text-decoration: underline;
+    color: black;
+}
