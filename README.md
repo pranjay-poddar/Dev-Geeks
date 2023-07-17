@@ -815,11 +815,17 @@ Happy Coding! -->
   <td align="center"> 261.</td>
   <td align="center"><a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Js-Games/Mastermind">Mastermind</a></td>
   <td align="center"> 268.</td>
-  <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Js-Games/Web-Image Filter">Web-Image Filter</a></td>
-  <td align="center"> 269.</td>
+
+  <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Python Projects/Forex Exchanger">Web-Image Filter</a></td>
+  <td align="center"> 272.</td>
+  <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Js-Games/Cubula">Cubula</a></td>
+
   <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Python Projects/Forex Exchanger">Forex Exchanger</a></td>
   <td align="center"> 270.</td>
   <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Animations-CSS/404-Page Character">404-Page Character</a></td>
+<td align="center"> 273.</td>
+  <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Js-Games/Geoguess">Geoguess</a></td>
+
 
 </tr>  
 
