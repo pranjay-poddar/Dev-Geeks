@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Bruno+Ace&family=Caveat&family=Foldit&display=swap');
+*{
+    margin :0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Caveat', cursive;
+}
+
+/* #flame{
+    background-image: url('images/flameHashira.jpeg');
+}
+
+#sound{
+    background-image: url('images/soundHashira.jpeg');
+}
+
+
+#water{
+    background-image: url('images/waterHashira.png');
+}
+
+#insect{
+    background-image: url('images/insectHashira.png');
+}
+
+#serpent{
+    background-image: url('images/serpentHashira.jpeg');
+} */
+
+body{
+    display: flex;
+    flex-direction: column;
+    min-height:100vh;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.container{
+    display: flex;
+    width:80vw;
+}
+
+.image{
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height:80vh;
+    flex:0.5;
+    position:relative;
+    border-radius: 50px;
+    margin:10px;
+    transition: flex 0.7s ease-out;
+    cursor:pointer;
+    color:rgb(255, 0, 0);
+    position : relative;
+    text-align: center;
+    border: 2px solid black;
+}
+
+.image h3{
+    position:absolute;
+    bottom:20px;
+    left:20px;
+    opacity: 0;
+
+}
+.image.active{
+    flex: 5;
+
+    /* display:flex;
+    justify-content: center; */
+    color:rgb(0, 136, 255);
+    font-size: 2rem;
+    border:1px solid black;
+}
+
+
+@media (max-width:500px) {
+    .container{
+        width:50vh;
+    }
+    .input-files-container{
+        width:30vh
+    }
+    #serpent{
+        display: none;
+        
+        /* visibility: hidden; */
+    }  
+}
+
