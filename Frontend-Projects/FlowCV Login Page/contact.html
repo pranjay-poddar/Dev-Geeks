@@ -1,0 +1,148 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <title>FlowCV Login Page</title>
+
+    <style>
+        body{
+           
+  background-color: hsla(120, 60%, 70%, 0.3);
+  }
+  ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #fff;
+  }
+  
+  
+  li {
+  float: left;
+  padding: 20px;
+  }
+  
+  li a {
+  text-transform: uppercase;
+  font-size: 25px;
+  display: block;
+  color: grey;
+  text-align: center;
+  padding: 15px;
+  text-decoration: none;
+  }
+  
+  /* Change the link color to #111 (black) on hover */
+  li a:hover {
+  background-color:#0080ff;
+  }
+  .active {
+  background-color: #04AA6D;
+  }
+  .heading{
+  margin-top: 25px;
+  text-align: center;
+  font-size: 40px;
+  font-weight: bold;
+  
+  }
+  /* Style inputs with type="text", select elements and textareas */
+  input[type=text], select, textarea {
+  width: 100%; /* Full width */
+  padding: 12px; /* Some padding */ 
+  border: 1px solid #ccc; /* Gray border */
+  border-radius: 4px; /* Rounded borders */
+  box-sizing: border-box; /* Make sure that padding and width stays in place */
+  margin-top: 6px; /* Add a top margin */
+  margin-bottom: 16px; /* Bottom margin */
+  resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+  }
+  input[type=email], select, textarea {
+  width: 100%; /* Full width */
+  padding: 12px; /* Some padding */ 
+  border: 1px solid #ccc; /* Gray border */
+  border-radius: 4px; /* Rounded borders */
+  box-sizing: border-box; /* Make sure that padding and width stays in place */
+  margin-top: 6px; /* Add a top margin */
+  margin-bottom: 16px; /* Bottom margin */
+  resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+  }
+  
+  /* Style the submit button with a specific background color etc */
+  
+  button[type=submit] {
+  background-color: #04AA6D;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  }
+  
+  /* When moving the mouse over the submit button, add a darker green color */
+  
+  button[type=submit]:hover {
+  background-color: #45a049;
+  }
+  
+  /* Add a background color and some padding around the form */
+  .container {
+  border: 0.5px solid #04AA6D; 
+  border-radius: 5px;
+  margin-left:150px;
+  margin-right:150px;
+  margin-top: 20px;
+  background-color: #f2f2f2;
+  padding: 20px;
+  }
+    </style>
+       
+</head>
+<body >
+   
+    <header>
+       
+        <div class="topnav">
+            <h2>Build you own CV</h2>
+            <a href="index.html">Home</a>
+            <a href="services.html">Services</a>
+            <a href="contact.html">Contact Us</a>
+        </div>
+    </header>
+    <h1 style="text-align: center; font-size: 40px;  color:#04AA6D;">Contact Form</h1>
+    <div class="container"><br>
+        
+        <label for="fname">Enter First Name</label>
+        <input type="text" id="fname" name="firstname" placeholder="John" required>
+    
+        <label for="lname">Enter Last Name</label>
+        <input type="text" id="lname" name="lastname" placeholder="Doe">
+    
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+    
+    
+        <label for="subject">Your Suggestion</label>
+        <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+        <button type="submit" value="Submit">Submit</button>
+    
+        
+        <br><br>
+       </div>
+
+
+    <script src="script.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+        
+    
+</body>
+</html>

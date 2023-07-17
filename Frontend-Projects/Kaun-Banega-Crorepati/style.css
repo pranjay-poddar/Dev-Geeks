@@ -1,0 +1,146 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* main{
+    height: 100vh;
+    width: 100vw;
+} */
+header{
+    height: 100%;
+    width: 100%;
+    min-height: 7vh;
+    background-color: rgb(208, 220, 255);
+    display: flex;
+    align-items: center;
+    padding-left: 1vw;
+    font-size: 2rem;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+#info{
+    text-align: center;
+    font-size: xx-large;
+    height: 100%;
+    width: 100%;
+    font-family: sans-serif;
+    min-height: 15vh;
+    display: flex;
+    align-items: end;
+    justify-content: center;
+    /* background: aqua; */
+}
+main{
+    height: 100%;
+    width: 100%;
+    min-height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.container{
+    height: 100%;
+    width: 100%;
+    max-height: 65vh;
+    min-height: 50vh;
+    max-width: 50vw;
+    display: flex;
+    align-items: center;
+    padding-left: 1vw;
+    font-size: 1.5rem;
+    font-family: ssans-serif;
+    /* margin: 10vh auto; */
+    border: 10px solid  rgb(208, 220, 255);
+    border-radius:50px;
+    /* background-color: rgb(208, 220, 255); */
+}
+
+form{
+    margin: auto;
+    height: 100%;
+    width: 100%;
+    min-height: 55vh;
+}
+#question{
+    margin: 5vh 0;
+    font-size: 2rem;
+}
+
+
+.opt-div{
+    display: flex;
+    height: 100%;
+    width: 100%;
+    min-height: 10vh;
+    font-size: larger;
+    align-items: center;
+    padding: 0 3vw;
+    /* justify-content: space-around; */
+}
+.bottom-opt{
+    /* margin: 0 13vw; */
+    margin-left: 13vw;
+}
+#timer{
+    height: 100%;
+    width: 100%;
+    min-height: 6vh;
+    max-width: 9vw;
+    font-family: 12rem;
+    font-size: 2rem;
+    border:5px solid rgb(208, 220, 255);
+    border-radius: 11px;
+    text-align: center;
+}
+#btn-container{
+    
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding:0 2vw;
+
+}
+#btn{
+    height: 100%;
+    width: 100%;
+    min-height: 6vh;
+    max-width: 9vw;
+    font-family: 12rem;
+    font-size: 2rem;
+    background:   rgb(208, 220, 255);
+    border: 0;
+    border-radius: 11px;
+}
+
+
+.red{
+    color: rgb(255, 59, 59);
+    margin: 0 1vw;
+}
+
+.blue{
+    color: rgb(59, 151, 255);
+    margin: 0 1vw;
+}
+#won-container{
+    height: 100%;
+    width: 100%;
+}
+#won-tab-info{
+    font-size: 3rem;
+    font-family: monospace;
+    text-align: center;
+}
+#won-tab-amount{
+    font-size: 5rem;
+    font-family: monospace;
+    text-align: center;
+    margin: 7vh 0;
+    color:   rgb(89, 131, 255);
+
+}
+
+input,label{
+    cursor: pointer;
+}

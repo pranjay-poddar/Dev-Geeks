@@ -1,0 +1,41 @@
+Piyushi|37|Polycythemia Vera|Dr. Pridhi|2022-06-19|A+
+Pranjal|55|Anemia|Dr. Piyush|2022-06-19|B+
+Harshit|38|Leukocytosis|Dr. Saini|2022-06-19|B+
+Shreya|49|Von Willebrand Disease|Dr. Piyush|2022-06-19|O-
+Tushar|39|Hemophilia|Dr. Harsh|2022-06-19|AB-
+Prerna|61|Thalassemia|Dr. Pridhi|2022-06-19|AB+
+Ekta|37|Sickle Cell Disease|Dr. Lakshay|2022-06-19|B+
+Akansha|13|Von Willebrand Disease|Dr. Harsh|2022-06-19|O+
+Tanvi|53|Von Willebrand Disease|Dr. Piyush|2022-06-19|B+
+Sukriti|63|Leukocytosis|Dr. Anushka|2022-06-19|B+
+Divyanshu|30|Anemia|Dr. Lakshay|2022-06-19|O+
+Ayush|10|Thalassemia|Dr. Lakshay|2022-06-19|AB+
+Kirtika|28|Sickle Cell Disease|Dr. Abhishek|2022-06-20|O-
+Sneha|34|Thalassemia|Dr. Anushka|2022-06-21|B-
+Kirti|33|Thalassemia|Dr. Harsh|2022-06-22|O+
+Nikhil|55|Hemophilia|Dr. Anushka|2022-06-23|AB+
+Dev|13|Thalassemia|Dr. Saini|2022-06-24|AB+
+Sourabh|62|Hemophilia|Dr. Piyush|2022-06-25|A+
+Sajal|48|Leukocytosis|Dr. Piyush|2022-06-26|AB+
+Krishna|36|Von Willebrand Disease|Dr. Anushka|2022-06-27|AB-
+Anshul|14|Polycythemia Vera|Dr. Abhishek|2022-06-28|AB-
+Sneha|51|Anemia|Dr. Anushka|2022-06-29|A+
+Akshita|15|Polycythemia Vera|Dr. Lakshay|2022-06-30|AB-
+Sweety|26|Sickle Cell Disease|Dr. Pridhi|2022-06-31|B-
+Amaan|21|Leukocytosis|Dr. Abhishek|2022-06-32|B-
+Ashutosh|57|Thalassemia|Dr. Anushka|2022-06-33|AB-
+Deblina|26|Polycythemia Vera|Dr. Piyush|2022-06-34|A+
+Abhay|26|Anemia|Dr. Saini|2022-06-35|AB-
+Ajay|43|Von Willebrand Disease|Dr. Saini|2022-06-36|O+
+Ananya|62|Polycythemia Vera|Dr. Piyush|2022-06-37|AB-
+Anay|26|Hemophilia|Dr. Abhishek|2022-06-38|B-
+Anmol|44|Von Willebrand Disease|Dr. Harsh|2022-06-39|O+
+Anubhav|50|Von Willebrand Disease|Dr. Pridhi|2022-06-40|B-
+Anuj|61|Hemophilia|Dr. Lakshay|2022-06-41|A+
+Aryan|63|Thalassemia|Dr. Harsh|2022-06-42|B-
+Doobey|54|Blood Disorder|Dr. Sharma|2022-12-32|B-
+Sholay|24|Blood Disorder|Dr. Sharma|2022-02-12|O+
+Piyush|19|Blood Disorder|Mr. Mohit|2022-06-22|B+
+Akshay|67|engineer|pio|678990|o-
+pop|98|ui|yu|77 88 99 |o
+Rahul|23|no|dr.raju|1999-12-23|O+

@@ -1,0 +1,459 @@
+/*
+    IMPORTING FONTS FROM RELATIVE SOURCE
+*/
+@font-face {
+    font-family: "Outfit";
+    src: url("https://raw.githubusercontent.com/0xabdulkhalid/tic-tac-toe/main/fonts/outfit.ttf");
+}
+
+/*
+  VARIABLES DECLARATION ON ROOT
+*/
+:root {
+    --primary: #1A2B33;
+    --secondary: #1E3640;
+    --grey: #A9BEC8;
+    --dark-cyan: #34C3BE;
+    --lighten-yellow: #F2B138;
+}
+
+* {     /* Manual CSS Reset */
+    margin: 0;
+    padding: 0;
+}
+
+[role='button'],    
+textarea,  /* Disables selection highlighting upon elements on Mobile devices */
+input,
+select, 
+a{
+    -webkit-tap-highlight-color: transparent;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.disabled {     /* Used to hide dom elements via Javascript at certain events */
+    display: none !important;
+}
+
+html {    /* Ensuring the device height */
+  height: 100%;
+}
+
+body {
+    font-family: 'Outfit', sans-serif;
+    text-transform: uppercase;
+    height: 100vh;
+    display: grid;
+    place-items: center;
+    letter-spacing: .08em;
+    background: var(--primary);
+    color: var(--primary);
+}
+
+header {
+    position: fixed;
+    width: 100%;
+    height: 4rem;
+    top: 0;
+    display: grid;
+    place-items: center;
+    background: white;
+    display: none;
+}
+
+main {
+    display: grid;
+    place-items: center;
+    padding: 10px;
+    border-radius: 10px;
+    width: 100%;
+}
+
+.main__upper-section {
+    position: fixed;
+    top: .5em;
+    width: 100%;
+    height: max-content;
+    padding: 10px;
+    display: flex;
+    justify-content: space-around;
+    gap: 1em;
+    align-items: center;
+}
+
+.main__restart-btn {
+    width: 50px;
+    height: 50px;
+    background: url(https://raw.githubusercontent.com/0xabdulkhalid/tic-tac-toe/main/assets/icon-restart.svg), var(--grey);
+    background-repeat: no-repeat;
+    background-position: center, center;
+    background-size: 50%, 100%;
+    border-radius: 10px;
+    box-shadow: 0 -5px 0px rgba(0, 0, 0, .3);
+}
+.main__restart-btn {
+    color: #f7f7f7;
+}
+
+.main__player-turn-display {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #1E3640;
+    gap: 10px;
+    font-size: 1.2rem;
+    padding: 10px 25px;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, .3);
+    border-radius: 10%;
+    color: var(--grey);
+    
+}
+
+[data-field-turn='turn-x'] .main__get-turn-sign {
+    background-image: url(https://raw.githubusercontent.com/0xabdulkhalid/tic-tac-toe/main/assets/icon-x-gray.svg);
+}
+[data-field-turn='turn-o'] .main__get-turn-sign {
+    background-image: url(https://raw.githubusercontent.com/0xabdulkhalid/tic-tac-toe/main/assets/icon-o-gray.svg);
+}
+.main__get-turn-sign,
+.result-conveyer__get-winner-sign {
+    width: 20px;
+    height: 20px;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.main__seperator,span {
+    width: 100%;
+    height: 1px;
+    background: rgba(0, 0, 0, .5);
+}
+
+.main__game-board {
+    width: 310px;
+    min-height: 310px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    overflow: hidden;  
+    gap: 20px; 
+    padding: 20px 5px;
+}
+
+.game-board__field {
+    color: var(--woody-brown);
+    background: #1E3640;
+    border-radius: 5px;
+    font-weight: 700;
+    display: grid;
+    place-items: center;
+    font-size: 3.5rem;
+    outline: 2px solid var(--opac-black);
+    outline: 2px solid rgba(255, 255, 255, .2);
+    transition: all .5s ease;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, .5);
+
+}
+.game-board__state {
+    width: 100%;
+    height: 100%;
+    background-size: 60%;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: all .5s ease;
+}
+
+.main__summary-section {
+    display: grid;
+    width: 100%;
+    gap: 15px;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-top: 50px;
+    width: 90%;
+}
+.main__summary {
+    border-radius: 10px;
+    display: grid;
+    place-items: center;
+    padding: 10px 20px;
+}
+.main__summary:first-child {
+    background: var(--dark-cyan);
+}
+.main__summary:nth-child(2) {
+    background: var(--grey);
+}
+.main__summary:nth-child(3) {
+    background: var(--lighten-yellow);
+}
+.main__display-name {
+    font-size: .65rem;
+}
+.game-board__field [data-field-turn] {
+    transition: all .5s ease;
+}
+.game-board__field [data-field-turn='turn-x']:hover {
+    background-image: url(https://raw.githubusercontent.com/0xabdulkhalid/tic-tac-toe/main/assets/icon-x-outline.svg);
+}
+.game-board__field [data-field-turn='turn-o']:hover {
+    background-image: url(https://raw.githubusercontent.com/0xabdulkhalid/tic-tac-toe/main/assets/icon-o-outline.svg);
+}
+[data-field-state='set-x'] {
+    background-image: url(https://raw.githubusercontent.com/0xabdulkhalid/tic-tac-toe/main/assets/icon-x.svg) !important;
+}
+[data-field-state='set-o'] {
+    background-image: url(https://raw.githubusercontent.com/0xabdulkhalid/tic-tac-toe/main/assets/icon-o.svg) !important;
+}
+
+.game-board--field-won-x { background: var(--dark-cyan);}
+.game-board--field-won-o { background: var(--lighten-yellow);}
+
+.game-board--field-won-x > [data-field-state='set-x'] {
+    background-image: url(https://raw.githubusercontent.com/0xabdulkhalid/tic-tac-toe/main/assets/icon-x-transparent.svg) !important;
+}
+.game-board--field-won-o > [data-field-state='set-o'] {
+    background-image: url(https://raw.githubusercontent.com/0xabdulkhalid/tic-tac-toe/main/assets/icon-o-transparent.svg) !important;
+}
+.game-initializer {
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    align-content: center;
+    justify-items: center;
+    gap: 50px;
+}
+
+.game-initializer__player-picker {
+    background: var(--secondary);
+    height: 250px;
+    width: 90%;
+    border-radius: 10px;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, .5);
+    display: grid;
+    grid-template-rows: 75px 1fr 75px;
+    place-items: center;
+    
+    color: var(--grey);
+    font-size: 1rem;
+}
+
+.game-initializer__notice {
+    color: rgba(255, 255, 255, .4);
+}
+
+.game-initializer__sign-selector {
+    display: grid;
+    width: 80%;
+    height: 80%;
+    grid-template-columns: 1fr 1fr;
+    border-radius: 18px;
+    overflow: hidden;
+    background: #1A2B33;
+    position: relative;
+    padding: 10px;
+}
+
+.game-initializer--hide-label {
+    border: 0;
+    clip-path: rect(1px 1px 1px 1px); /* IE6, IE7 */
+    clip-path: rect(1px, 1px, 1px, 1px);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px; 
+} 
+
+[class*='game-initializer__select'] {
+    -webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+    outline: none;
+    transition-duration: 0.3s;
+    cursor: pointer;
+    position: absolute;
+    width: 50%;
+    height: 100%;
+}
+[class*='game-initializer__select']:first-of-type{
+    left: 0;
+}
+[class*='game-initializer__select']:last-of-type{
+    right: 0;
+}
+
+.game-initializer__sign--x {
+    background: url(https://raw.githubusercontent.com/0xabdulkhalid/tic-tac-toe/main/assets/icon-x-gray.svg), #1A2B33;
+}
+
+.game-initializer__sign--o {
+    background: url(https://raw.githubusercontent.com/0xabdulkhalid/tic-tac-toe/main/assets/icon-o-gray.svg), #1A2B33;
+}
+
+[class*='game-initializer__select']:first-of-type:checked ~
+.game-initializer__sign--x{
+    background: url(https://raw.githubusercontent.com/0xabdulkhalid/tic-tac-toe/main/assets/icon-x-transparent.svg), var(--grey);
+}
+[class*='game-initializer__select']:last-of-type:checked ~
+.game-initializer__sign--o{
+    background: url(https://raw.githubusercontent.com/0xabdulkhalid/tic-tac-toe/main/assets/icon-o-transparent.svg), var(--grey);
+}
+
+.game-initializer__sign,
+[class*='game-initializer__select']:last-of-type:checked ~
+.game-initializer__sign {
+    background-position: center, 100% !important;
+    background-repeat: no-repeat, no-repeat !important;
+    background-size: 25%, 100% !important;
+    border-radius: 15px;
+    overflow: hidden;
+    transition: .5s ease;
+}
+
+.game-initializer__action-btn,
+.result-conveyer__reset-btn, 
+.result-conveyer__continue-btn {
+    height: 50px;
+    padding-bottom: 5px;
+    display: grid;
+    place-items: center;
+    border-radius: 10px;
+    
+    font-weight: 700;
+    box-shadow: inset 0 -3px 2px rgba(0, 0, 0, .3);
+}
+.game-initializer__action-btn {
+    background: var(--lighten-yellow);
+    width: 80%;
+}
+.result-conveyer__action-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+    width: 100%;
+}
+.result-conveyer__reset-btn {
+    width: 25%;
+    background: var(--grey);
+}
+.result-conveyer__continue-btn {
+    width: 40%;
+    background: var(--lighten-yellow);
+}
+[role='button'] {
+    transition: all .3s ease;
+}
+[class*='clicked'] {
+    transform: scale(.95) translateY(5px);
+    box-shadow: 0 0 0, inset 0 2px 10px rgba(0, 0, 0, .4);
+    filter: brightness(1.2);
+}
+.result-conveyer {
+    position: fixed;
+    background: var(--secondary);
+    height: max-content;
+    text-align: center;
+    width: 100%;
+    padding: 40px 0;
+    box-shadow: 0 0 0 100vh rgba(0, 0, 0, .3);
+    display: grid;
+    place-items: center;
+    gap: 20px;
+}
+.result-conveyer__result,
+.greyish-text {
+    color: var(--grey);
+}
+.greyish-text {
+    font-size: 2rem;
+}
+
+.result-conveyer__brief {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    height: 50px;
+    margin-bottom: 10px;
+}
+.result-conveyer__get-winner-sign {
+    width: 40px;
+    height: 40px;
+}
+[data-field-turn='turn-x'] .result-conveyer__get-winner-sign {
+    background-image: url(https://raw.githubusercontent.com/0xabdulkhalid/tic-tac-toe/main/assets/icon-x.svg);
+}
+[data-field-turn='turn-o'] .result-conveyer__get-winner-sign {
+    background-image: url(https://raw.githubusercontent.com/0xabdulkhalid/tic-tac-toe/main/assets/icon-o.svg);
+}
+[data-field-turn=''] .result-conveyer__get-winner-sign {
+    display: none;
+}
+.result-conveyer__brief {
+    color: var(--dark-cyan);
+}
+
+/*
+    MEDIA QUERIES SECTION
+*/
+@media (min-width: 37.5em) {      /*  For Tablets  */
+    main {
+        gap: 2em;
+    }
+
+    .main__game-board {
+        width: 450px;
+        min-height: 450px;
+        gap: 1.7em;
+        margin-top: 50px;
+    }
+
+    .main__summary-section {
+        width: 60%;
+    }
+
+    .main__upper-section {
+        top: 2em;
+    }
+
+    .main__display-name {
+        font-size: .8rem;
+    }
+
+    .game-initializer {
+        width: 35em;
+    }
+
+    .game-initializer__action-btn {
+        width: 50%;
+    }
+}
+@media (min-width: 56.25em) {       /*  For Desktops  */
+    main {
+        gap: 0;
+        width: 70%;
+        margin-top: 5em;
+    }
+
+    .main__upper-section {
+        justify-content: space-evenly;
+        gap: 0;
+    }
+    
+    .main__game-board {
+        width: 350px;
+        min-height: 350px;
+        gap: 1.7em;
+        margin-top: 0px;
+    }
+
+    .result-conveyer__action-section {
+        width: 45%;
+    }
+}  
