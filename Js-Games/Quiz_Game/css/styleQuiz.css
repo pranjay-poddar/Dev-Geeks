@@ -1,0 +1,83 @@
+body {
+    background-color: #99d2ff;
+}
+
+#big-box {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.q-box {
+    margin: 20px;
+    padding: 5% 7%;
+    text-align: center;
+    max-width: 770px;
+    border-radius: 28px;
+    background-color: #3f4964;
+}
+
+.current-q-no {
+    width: 60vw;
+    text-align: start;
+    padding-top: 5%;
+    color: #fcfeff;
+}
+
+.current-q {
+    font-size: 180%;
+    padding: 2% 0;
+    line-height: normal;
+    text-align: start;
+    color: #f5f9fa;
+}
+
+.ans-btn-div {
+    text-align: center;
+}
+
+.ans-btn {
+    margin: 1% 3% 3% 3%;    
+    text-align:left;
+}
+
+
+.btn {
+    background: #3f4964;
+    background-image: -webkit-linear-gradient(top, #3f4964, #3f4964);
+    background-image: -moz-linear-gradient(top, #3f4964, #3f4964);
+    background-image: -ms-linear-gradient(top, #3f4964, #3f4964);
+    background-image: -o-linear-gradient(top, #3f4964, #3f4964);
+    background-image: linear-gradient(to bottom, #3f4964, #3f4964);
+    -webkit-border-radius: 28;
+    -moz-border-radius: 28;
+    border-radius: 28px;
+    font-family: Arial;
+    color: #ffffff;
+    font-size: 110%;
+    padding: 2%;
+    border: solid #465c7a 7px;
+    text-decoration: none;
+  }
+  
+  .btn:hover {
+    cursor: pointer;
+    background: #4e7999;
+    background-image: -webkit-linear-gradient(top, #4e7999, #4e7999);
+    background-image: -moz-linear-gradient(top, #4e7999, #4e7999);
+    background-image: -ms-linear-gradient(top, #4e7999, #4e7999);
+    background-image: -o-linear-gradient(top, #4e7999, #4e7999);
+    background-image: linear-gradient(to bottom, #4e7999, #4e7999);
+    text-decoration: none;
+  }
+
+  .score-hidden{
+    visibility: hidden;
+  }
+  .score-visible{
+    position: relative;
+    bottom: 8%;  
+    visibility: visible;
+  }

@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="owner" content="Master-Mickey">
+    <meta name="description" content="Online vegetable marketplace">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SabziWala : Online Vegetable Marketplace</title>
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="icon" href="images/logo.png">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo&family=Montserrat:wght@100;200;300;600;700;800&family=Nunito&family=Ubuntu:wght@300;400&family=Work+Sans:wght@800&display=swap" rel="stylesheet">
+   
+    <!-- font awesome -->
+    <script src="https://kit.fontawesome.com/c04965d3c1.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>       
+        <section class="navbar flex justify">
+            <nav>
+                <div id="navbar" class="navbar">
+                    <ul>
+                        <li class="logo-searchBar">
+                            <div class="logo-searchBar flex align">
+                                <div class="logoImage flex-center pointer">
+                                    <img class="logo" src="images/logo.png" alt="">
+                                    <span class="logoText nunito">We<br>Bring<br>It<br>Fresh!</span>
+                                </div>
+                                <div class="searchBar flex">
+                                    <input class="searchBar nunito" type="text" placeholder="Search for Products..">
+                                    <div class="searchButton flex-center bg-color">
+                                        <i class="fa-solid fa-magnifying-glass pointer"></i>
+                                    </div>
+                                </div>
+                                <div class="cart flex align pointer">
+                                    <i class="fa-solid fa-basket-shopping"></i>
+                                    <span class="cart1 nunito">My Basket<br><span class="cart2">0 items</span></span>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="dropDown">
+                            <div class="navContainer flex">
+                                <div class="dropDown flex align bg-color">
+                                    <span>
+                                        <p class="dropDown">SHOP BY CATEGORY</p>                                    
+                                    </span>
+                                    <a href="" class="dropDown">
+                                        <i class="fa-solid fa-caret-down"></i>
+                                    </a>
+                                </div>
+                                <div class="offers flex align">
+                                    <a class="offers" href="">
+                                        <i class="fa-solid fa-location-pin"></i>
+                                        <span class="offers">OFFERS</span>
+                                    </a>
+                                </div>
+                            </div>    
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </section>
+    </header>
+    
+    
+    <main class="flex justify">
+        <div class="mainContent">
+            <!-- Intro Video Section  -->
+            <section class="introVid">
+                <div class="introVid">
+                    <video src="images/nana.mp4" controls muted autoplay loop></video>
+                </div>
+            </section>
+
+            <!-- vegCards Section  -->
+            <section class="vegCards">
+                <div class="vegCards">
+                    
+                    <!-- First vegetable cards row -->
+                    <div class="vegCard cardL1">
+                        <div class="card">
+                            <div class="vegImagePart flex-center">
+                                <img class="vegetable" src="images/cabbage.png" alt="vegetable">
+                            </div>
+                            <div class="vegDetails">
+                                <h4 class="vegDetails">Cabbage</h4>
+                                <p  class="vegDetails">Status : <span class="vegAvailable">Available</span></p>
+                                <span class="vegDetails">Price : 30Rs/kg</span>
+                                <button class="vegDetails">Buy Now</button>
+                            </div>
+                        </div>
+                        <div class="card">                          
+                            <div class="vegImagePart">
+                                <img class="vegetable" src="images/ladyfinger.png" alt="vegetable">
+                            </div>
+                            <div class="vegDetails">
+                                <h4 class="vegDetails">LadyFinger</h4>
+                                <p  class="vegDetails">Status : <span class="vegAvailable">Available</span></p>
+                                <span class="vegDetails">Price : 25Rs/kg</span>
+                                <button class="vegDetails">Buy Now</button>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="vegImagePart">
+                                <img class="vegetable" src="images/onion.png" alt="vegetable">
+                            </div>
+                            <div class="vegDetails">
+                                <h4 class="vegDetails">Onion</h4>
+                                <p  class="vegDetails">Status : <span class="vegAvailable">Available</span></p>
+                                <span class="vegDetails">Price : 40Rs/kg</span>
+                                <button class="vegDetails">Buy Now</button>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="vegImagePart">
+                                <img class="vegetable" src="images/potato.png" alt="vegetable">
+                            </div>
+                            <div class="vegDetails">
+                                <h4 class="vegDetails">Potato</h4>
+                                <p  class="vegDetails">Status : <span class="vegAvailable">Available</span></p>
+                                <span class="vegDetails">Price : 20Rs/kg</span>
+                                <button class="vegDetails">Buy Now</button>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="vegImagePart">
+                                <img class="vegetable" src="images/tomato.png" alt="vegetable">
+                            </div>
+                            <div class="vegDetails">
+                                <h4 class="vegDetails">Tomato</h4>
+                                <p  class="vegDetails">Status : <span class="vegAvailable">Available</span></p>
+                                <span class="vegDetails">Price : 15Rs/kg</span>
+                                <button class="vegDetails">Buy Now</button>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!-- Second vegetable cards row -->
+                    <div class="vegCard cardL2">
+                        <div class="card">
+                            <div class="vegImagePart">
+                                <img class="vegetable" src="images/carrot.png" alt="vegetable">
+                            </div>
+                            <div class="vegDetails">
+                                <h4 class="vegDetails">Carrot</h4>
+                                <p  class="vegDetails">Status : <span class="vegAvailable">Available</span></p>
+                                <span class="vegDetails">Price : 45Rs/kg</span>
+                                <button class="vegDetails">Buy Now</button>
+                            </div>
+                        </div>
+                        <div class="card">                          
+                            <div class="vegImagePart">
+                                <img class="vegetable" src="images/cauliflower.png" alt="vegetable">
+                            </div>
+                            <div class="vegDetails">
+                                <h4 class="vegDetails">Cauliflower</h4>
+                                <p  class="vegDetails">Status : <span class="vegAvailable">Available</span></p>
+                                <span class="vegDetails">Price : 35Rs/kg</span>
+                                <button class="vegDetails">Buy Now</button>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="vegImagePart">
+                                <img class="vegetable" src="images/broccoli.png" alt="vegetable">
+                            </div>
+                            <div class="vegDetails">
+                                <h4 class="vegDetails">Broccoli</h4>
+                                <p  class="vegDetails">Status : <span class="vegAvailable">Available</span></p>
+                                <span class="vegDetails">Price : 50Rs/kg</span>
+                                <button class="vegDetails">Buy Now</button>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="vegImagePart">
+                                <img class="vegetable" src="images/spinach.png" alt="vegetable">
+                            </div>
+                            <div class="vegDetails">
+                                <h4 class="vegDetails">Spinach</h4>
+                                <p  class="vegDetails">Status : <span class="vegAvailable">Available</span></p>
+                                <span class="vegDetails">Price : 10Rs/kg</span>
+                                <button class="vegDetails">Buy Now</button>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="vegImagePart">
+                                <img class="vegetable" src="images/coriander.png" alt="vegetable">
+                            </div>
+                            <div class="vegDetails">
+                                <h4 class="vegDetails">Coriander</h4>
+                                <p  class="vegDetails">Status : <span class="vegAvailable">Available</span></p>
+                                <span class="vegDetails">Price : 5Rs/kg</span>
+                                <button class="vegDetails">Buy Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+    
+    
+    <footer class="flex align justify">
+        <div class="footer flex align pointer bg-color">
+            <i class="flex align fa-brands fa-square-facebook"><span class="footer">FACEBOOK</span></i>
+            <i class="flex align fa-brands fa-square-instagram"><span class="footer">INSTAGRAM</span></i>
+            <i class="flex align fa-brands fa-square-twitter"><span class="footer">TWITTER</span></i>
+            <i class="flex align fa-brands fa-linkedin"><span class="footer">LINKEDIN</span></i>
+        </div>
+        <div class="credit footer flex-center">
+        <p class="credit footer nunito">Made with &#10084; by Master Mickey!</p>
+        </div>
+    </footer>
+    
+    
+</body>
+</html>

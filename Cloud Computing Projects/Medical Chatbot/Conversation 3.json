@@ -1,0 +1,576 @@
+{
+  "id": "4ff6d6f4-51ce-40cc-bea4-977e35b5b1e4",
+  "name": "Conversation 3",
+  "auto": true,
+  "condition": "",
+  "conditionalFollowupEvents": [],
+  "conditionalResponses": [],
+  "context": [],
+  "contexts": [],
+  "endInteraction": false,
+  "events": [],
+  "fallbackIntent": false,
+  "liveAgentHandoff": false,
+  "parentId": null,
+  "followUpIntents": [],
+  "priority": 500000,
+  "responses": [
+    {
+      "action": "",
+      "affectedContexts": [
+        {
+          "name": "Conversation3-followup",
+          "lifespan": 2
+        }
+      ],
+      "parameters": [
+        {
+          "noInputPromptMessages": [],
+          "noMatchPromptMessages": [],
+          "promptMessages": [],
+          "defaultValue": "",
+          "name": "Disease4",
+          "dataType": "@Disease4",
+          "isList": false,
+          "required": false,
+          "prompts": [],
+          "value": "$Disease4",
+          "outputDialogContexts": []
+        }
+      ],
+      "defaultResponsePlatforms": {},
+      "messages": [
+        {
+          "type": "message",
+          "condition": "",
+          "speech": [
+            "Okay so you are suffering from $Disease4"
+          ]
+        },
+        {
+          "type": "message",
+          "condition": "",
+          "speech": [
+            "Is there any other symptoms you are feeling?"
+          ]
+        },
+        {
+          "type": "message",
+          "condition": "",
+          "speech": [
+            "1.Fever with/without Cold and Cough"
+          ]
+        },
+        {
+          "type": "message",
+          "condition": "",
+          "speech": [
+            "2.Only Loose Motion"
+          ]
+        },
+        {
+          "type": "message",
+          "condition": "",
+          "speech": [
+            "3.Only Vomiting"
+          ]
+        },
+        {
+          "type": "message",
+          "condition": "",
+          "speech": [
+            "4.Only Cold and Cough"
+          ]
+        },
+        {
+          "type": "message",
+          "condition": "",
+          "speech": [
+            "5.Only Stomachache"
+          ]
+        },
+        {
+          "type": "message",
+          "condition": "",
+          "speech": [
+            "6. Only Headache"
+          ]
+        },
+        {
+          "type": "message",
+          "condition": "",
+          "speech": [
+            "7.None of the Above"
+          ]
+        }
+      ],
+      "resetContexts": false
+    }
+  ],
+  "rootParentId": null,
+  "templates": [],
+  "userSays": [
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "lowfeversomecough",
+          "userDefined": true,
+          "alias": "Disease4",
+          "meta": "@Disease4"
+        }
+      ],
+      "count": 0,
+      "id": "fffb2a09-277b-466e-bea0-4fdf7a864fe1",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "highfeversomecold",
+          "userDefined": true,
+          "alias": "Disease4",
+          "meta": "@Disease4"
+        }
+      ],
+      "count": 0,
+      "id": "32cfc090-8706-4060-97c5-6a336061e76f",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "feversneezing",
+          "userDefined": true,
+          "alias": "Disease4",
+          "meta": "@Disease4"
+        }
+      ],
+      "count": 0,
+      "id": "820ef54e-5fdb-4fdb-a967-68adb64d72da",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "headachestomachache",
+          "userDefined": true,
+          "alias": "Disease4",
+          "meta": "@Disease4"
+        }
+      ],
+      "count": 0,
+      "id": "0dd6e8ee-ca07-4c78-a585-731d380581e5",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "coldcoughfever",
+          "userDefined": true,
+          "alias": "Disease4",
+          "meta": "@Disease4"
+        }
+      ],
+      "count": 0,
+      "id": "34dc63cf-e460-4a2a-bf7c-c24ced6e4081",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "cough,cold",
+          "userDefined": false,
+          "alias": "Disease4",
+          "meta": "@Disease4"
+        }
+      ],
+      "count": 0,
+      "id": "c53c1a33-1e33-4ce6-98b6-535abcec8b70",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "cold cough fever",
+          "userDefined": false,
+          "alias": "Disease4",
+          "meta": "@Disease4"
+        }
+      ],
+      "count": 0,
+      "id": "2f85e133-f8d1-4158-8fc0-3db396fe46f6",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "cough cold fever",
+          "userDefined": false,
+          "alias": "Disease4",
+          "meta": "@Disease4"
+        }
+      ],
+      "count": 0,
+      "id": "93a93b3e-9945-48c4-ac2a-4c72b14c4282",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "fever sneezing",
+          "userDefined": true,
+          "alias": "Disease4",
+          "meta": "@Disease4"
+        }
+      ],
+      "count": 1,
+      "id": "9ab3104a-ac9b-4356-a7e0-180e0640fa44",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "cough,cold,fever",
+          "userDefined": true,
+          "alias": "Disease4",
+          "meta": "@Disease4"
+        }
+      ],
+      "count": 0,
+      "id": "bdb533a9-75a0-46d4-8db6-d68e5efe9e29",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "cough,cold,fever,headache,stomachae",
+          "userDefined": true,
+          "alias": "Disease4",
+          "meta": "@Disease4"
+        }
+      ],
+      "count": 0,
+      "id": "9a052f7e-ccea-42b8-80c4-91f7f66b8bb4",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "headache,sneezing",
+          "userDefined": false,
+          "alias": "Disease4",
+          "meta": "@Disease4"
+        }
+      ],
+      "count": 0,
+      "id": "6351717f-2e64-481c-a57a-10f51c80eba7",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "fever and sneezing",
+          "userDefined": false,
+          "alias": "Disease4",
+          "meta": "@Disease4"
+        }
+      ],
+      "count": 0,
+      "id": "225489f8-1a56-40b1-b209-d1acc4e0f425",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "fever,sneezing",
+          "userDefined": false,
+          "alias": "Disease4",
+          "meta": "@Disease4"
+        }
+      ],
+      "count": 0,
+      "id": "024ccfa7-dd63-48be-9bb2-d51f323bb97a",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "stomachache sneezing",
+          "userDefined": true,
+          "alias": "Disease4",
+          "meta": "@Disease4"
+        }
+      ],
+      "count": 0,
+      "id": "99fc67d7-672c-4942-9aca-40af22d22cfc",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "high cold",
+          "userDefined": false,
+          "alias": "Disease4",
+          "meta": "@Disease4"
+        }
+      ],
+      "count": 0,
+      "id": "ec3decec-9bdb-401f-b581-b5e0364722c8",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "low cold",
+          "userDefined": false,
+          "alias": "Disease4",
+          "meta": "@Disease4"
+        }
+      ],
+      "count": 0,
+      "id": "09c78361-0099-4da4-a4c6-d1467817cb6b",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "some cold",
+          "userDefined": false,
+          "alias": "Disease4",
+          "meta": "@Disease4"
+        }
+      ],
+      "count": 0,
+      "id": "e555af33-2077-41cf-98af-e1f1414ba057",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "stomachache vomitting",
+          "userDefined": true,
+          "alias": "Disease4",
+          "meta": "@Disease4"
+        }
+      ],
+      "count": 1,
+      "id": "1a787a76-f5ad-4934-9c27-3cc4dbb6fe68",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "stomachache,vomitting",
+          "userDefined": true,
+          "alias": "Disease4",
+          "meta": "@Disease4"
+        }
+      ],
+      "count": 0,
+      "id": "f75cc7b6-9015-42d6-961c-bfc7118f9b43",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "stomachachevomitting",
+          "userDefined": true,
+          "alias": "Disease4",
+          "meta": "@Disease4"
+        }
+      ],
+      "count": 0,
+      "id": "983e0622-1038-4257-9d7c-3c861d9e761f",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "headache,stomachache",
+          "userDefined": true,
+          "alias": "Disease4",
+          "meta": "@Disease4"
+        }
+      ],
+      "count": 0,
+      "id": "409fd007-d29d-420a-8080-f65678063024",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "headache sneezing",
+          "userDefined": true,
+          "alias": "Disease4",
+          "meta": "@Disease4"
+        }
+      ],
+      "count": 0,
+      "id": "8df70081-fb61-49a5-8fac-aba2c1ee2691",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "cold fever",
+          "userDefined": true,
+          "alias": "Disease4",
+          "meta": "@Disease4"
+        }
+      ],
+      "count": 0,
+      "id": "cd4973a6-13e3-4c92-a1f3-9d424bd1267f",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "cold,fever",
+          "userDefined": true,
+          "alias": "Disease4",
+          "meta": "@Disease4"
+        }
+      ],
+      "count": 0,
+      "id": "d01d4b47-5ce1-4662-af7c-a65c716a786e",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "headache stomachache",
+          "userDefined": true,
+          "alias": "Disease4",
+          "meta": "@Disease4"
+        }
+      ],
+      "count": 0,
+      "id": "42728b9c-cbac-4658-9e4d-85f20fe8fed0",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "cold,cough,fever,headache,stomachache",
+          "userDefined": true,
+          "alias": "Disease4",
+          "meta": "@Disease4"
+        }
+      ],
+      "count": 0,
+      "id": "03d04ce6-88c2-41ec-85ac-89fbe34b6727",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "fever,cold",
+          "userDefined": false,
+          "alias": "Disease4",
+          "meta": "@Disease4"
+        }
+      ],
+      "count": 0,
+      "id": "363d05dc-b88a-494b-8a28-0b1a0b52469f",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "i am feeling both ",
+          "userDefined": false
+        },
+        {
+          "text": "cold and cough",
+          "userDefined": true,
+          "alias": "Disease4",
+          "meta": "@Disease4"
+        }
+      ],
+      "count": 0,
+      "id": "28e17acb-3615-48d8-8a9a-caacd06ae023",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "i am having ",
+          "userDefined": false
+        },
+        {
+          "text": "fever,cold,cough",
+          "userDefined": true,
+          "alias": "Disease4",
+          "meta": "@Disease4"
+        }
+      ],
+      "count": 0,
+      "id": "fcbe4280-b2f1-4f2d-b7a2-262b4dd11ad9",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "cold,cough",
+          "userDefined": true,
+          "alias": "Disease4",
+          "meta": "@Disease4"
+        }
+      ],
+      "count": 0,
+      "id": "ce9dfa79-4b6f-4c1d-972f-5380da1ce582",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "i am having ",
+          "userDefined": false
+        },
+        {
+          "text": "cough",
+          "userDefined": true,
+          "alias": "Disease4",
+          "meta": "@Disease4"
+        }
+      ],
+      "count": 0,
+      "id": "34f5fb80-2f8e-4657-a520-cdfd4d309164",
+      "updated": null
+    }
+  ],
+  "webhookForSlotFilling": false,
+  "webhookUsed": false
+}
