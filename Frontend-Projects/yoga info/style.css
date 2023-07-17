@@ -1,4 +1,4 @@
- /*=============== GOOGLE FONTS ===============*/
+/*=============== GOOGLE FONTS ===============*//*=============== GOOGLE FONTS ===============*/
 @import url("https://fonts.googleapis.com/css2?family=Lora:wght@400;500&family=Poppins:wght@400;500&display=swap");
 
 /*=============== VARIABLES CSS ===============*/
@@ -430,6 +430,7 @@ body.dark-theme {
 }
 
 .list__description {
+  text-align: justify;
   position: relative;
 }
 

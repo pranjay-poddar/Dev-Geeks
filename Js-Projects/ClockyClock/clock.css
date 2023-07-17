@@ -1,0 +1,48 @@
+body{
+    background: url('https://images.unsplash.com/photo-1472214103451-9374bd1c798e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80');
+    width: 100%;
+    height: 100vh;
+    background-repeat: repeat-x;
+    background-size: 100% 100%;  
+    background-attachment: fixed;
+}
+.clockcontainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin: auto;
+    height: 440px;
+    width: 440px;
+    background: url('https://clipart-library.com/data_images/445671.jpg') no-repeat;
+    background-size: 100%;
+}
+#hour,#minute,#second{
+
+    position: absolute;
+    background: black;
+    border-radius: 10px;
+    transform-origin: bottom;
+}
+#hour{
+    width: 1.6%;
+    height: 18%;
+    top: 31%;
+    left: 49.77%;
+    opacity: 0.8;
+}
+#minute{
+    width: 1.6%;
+    height: 37%;
+    top: 14%;
+    left: 49.69%;
+    opacity: 0.8;
+}
+#second{
+    width: .8%;
+    height: 34%;
+    top: 17%;
+    left: 50.16%;
+    opacity: 0.8;
+    background: #e17055 ;
+}

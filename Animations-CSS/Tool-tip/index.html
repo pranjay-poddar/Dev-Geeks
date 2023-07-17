@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tool-tip</title>
+    <style>
+        .tooltip-container {
+             position: relative;
+            padding-top: 100px;
+            text-align: center;
+}
+
+        .tooltip-trigger {
+             cursor: pointer;
+        }
+
+        .tooltip {
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            border-radius: 4px;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.3s, visibility 0.3s;
+        }
+
+        .tooltip-container:hover .tooltip {
+            opacity: 1;
+            visibility: visible;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="tooltip-container">
+  <h1><span class="tooltip-trigger">JavaScript</span></h1>
+  <div class="tooltip">
+    
+The base language of JavaScript (JS) is ECMAScript (ES).
+  </div>
+</div>
+</html>

@@ -13,7 +13,39 @@ body {
     padding-right: 0px;
     scroll-behavior: smooth;
 }
-
+.navbar {
+    /* max-width: 1300px; */
+    margin: 0 auto;
+  }
+  .nava {
+    text-decoration: none;
+    color: white;
+  }
+  ul {
+    list-style: none;
+  }
+  header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: #007bff;
+  }
+   nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+  }
+  nav ul {
+    display: flex;
+    gap: 3.5rem;
+  }
+  nav li {
+    font-size: 1.8rem;
+    border-bottom: 0.4rem transparent solid;
+    transition: 0.3s ease-in-out;
+  }
+ 
 ::-webkit-scrollbar {
     width: 10px;
     overflow-y: scroll;
