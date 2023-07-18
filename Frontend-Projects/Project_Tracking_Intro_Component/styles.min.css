@@ -198,7 +198,6 @@ main {
 .main__action-btn {
     background: var(--red);
     color: white;
-    padding: .6rem 1.55rem;
     border-radius: 0.8rem;
     letter-spacing: .01rem;
     font-weight: 700;
@@ -212,11 +211,14 @@ main {
 
 .main__preview-btn {
     margin-top: 0;
-    letter-spacing: .2rem;
-    color: var(--grayish-blue);
     border: 2px solid darkgray;
     padding: 10px 11px;
-    border-radius: 0.8rem
+    border-radius: 0.8rem;
+    font-size: .8rem;
+    word-spacing: -.05rem;
+    letter-spacing: .2rem;
+    margin-left: 1rem;
+    color: var(--grayish-blue)
 }
 
 .attribution {
@@ -313,13 +315,14 @@ a {
 
     .main__decorative {
         transform: translateX(39.8vw);
-        height: 26.5rem
+        height: 21.5rem
     }
 
     .main__decorative img {
         width: unset;
         max-width: 60rem;
-        transform: translateX(.8vw)translateY(14.8vw)
+        transform: translateX(.8vw)translateY(10.8vw)
+
     }
 
     .main__heading {
