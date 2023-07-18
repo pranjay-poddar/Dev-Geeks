@@ -1,11 +1,15 @@
 # CANDIES WEBSITE
 
+This is a simple candy website. This project is a beginner friendly project.
+
 --- 
 
 ## **Tech Stack 🎮**
 
 - HTML
 - CSS
+- Bootstrap
+- jQuery
 
 <br>
 
