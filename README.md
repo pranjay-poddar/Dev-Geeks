@@ -825,6 +825,9 @@ Happy Coding! -->
   <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Animations-CSS/404-Page Character">404-Page Character</a></td>
 <td align="center"> 273.</td>
   <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Js-Games/Geoguess">Geoguess</a></td>
+  <td align="center"> 274.</td>
+  <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Python Projects/CollegeGPACalculator">College GPA Calculator</a></td>
+
 
 
 </tr>  
