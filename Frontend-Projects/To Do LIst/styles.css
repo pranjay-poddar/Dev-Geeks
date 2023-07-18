@@ -30,8 +30,9 @@ h2 {
     rgb(202, 100, 53) 0%,
     rgb(92, 5, 95) 100%
   ); */
-  background-color: #AEE2FF;
-  border: 5px solid #49216e;
+
+  background-color: #aee2ff70;
+  border:5px solid black;
   padding: 4rem 0;
   margin-left: 35%;
   box-shadow:5px 5px 5px #969696;

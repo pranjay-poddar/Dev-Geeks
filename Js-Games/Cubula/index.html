@@ -1,0 +1,96 @@
+<!DOCTYPE HTML>
+ <HTML>
+ <HEAD>
+ <meta charset="utf-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+ <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+ <META NAME="description" content="Cubula is a Javascript based game">
+ <META NAME="keywords" content="Game, cubula, JavaScript">
+ <script src="index.js"></script>  
+ <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+ <title>Cubula</title>
+
+ </head>
+ <BODY style="background-color: black;">
+ <form>
+ <DIV ALIGN=center>
+   <br>
+   <br>
+   <br>
+   <div class="h1"  style="color: aliceblue;">CUBULA</div>
+   <br>
+ <table class="rounded" cellpadding=20 cellspacing=0 bgcolor=#ffffff><tr align=center>
+ <script language="JavaScript">
+ document.open("text/plain");
+ for (l=0; l<2; l++)
+ { document.writeln("<td><table noborder cellpadding=0 cellspacing=0>");
+     document.writeln("<tr align=center><td></td><td><table border cellpadding=0 cellspacing=0>");
+       for (i=0; i < Max; i++)
+       { document.writeln("<tr align=center>");
+         for (j=0; j < Max; j++)
+           document.writeln("<td><IMG src=\"https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjdpF8TUpSw5hWniMkPDmGoQ2qlFUMvQj8syB8LjLKfsEvxKwNJtR3u4wkinoT1tJCgQKbszgmZ1IpnBkMWLhi1tQRPiQmbi3CuuxDeL-OQgBtJ9Eats3bu9_ukI1qUEFh-Wla-28z5SJJtgi_G1cvck21yoa7N7JDkMXQPOGaDB7DbEoEj4tIgZ5GfD1IT/s25/cubula4.gif\" border=0 onMouseDown=\"Clicked(0, "+i+", "+j+")\"></td>");
+         document.writeln("</tr>");
+       }
+     document.writeln("</table></td><td></td></tr>");
+     document.writeln("<tr align=center><td><table border cellpadding=0 cellspacing=0>");
+       for (i=0; i < Max; i++)
+       { document.writeln("<tr align=center>");
+         for (j=0; j < Max; j++)
+           document.writeln("<td><IMG src=\"https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjdpF8TUpSw5hWniMkPDmGoQ2qlFUMvQj8syB8LjLKfsEvxKwNJtR3u4wkinoT1tJCgQKbszgmZ1IpnBkMWLhi1tQRPiQmbi3CuuxDeL-OQgBtJ9Eats3bu9_ukI1qUEFh-Wla-28z5SJJtgi_G1cvck21yoa7N7JDkMXQPOGaDB7DbEoEj4tIgZ5GfD1IT/s25/cubula4.gif\" border=0 onMouseDown=\"Clicked(1, "+i+", "+j+")\"></td>");
+         document.writeln("</tr>");
+       }
+     document.writeln("</table></td>");
+     document.writeln("<td><table border cellpadding=0 cellspacing=0>");
+       for (i=0; i < Max; i++)
+       { document.writeln("<tr align=center>");
+         for (j=0; j < Max; j++)
+           document.writeln("<td><IMG src=\"https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjdpF8TUpSw5hWniMkPDmGoQ2qlFUMvQj8syB8LjLKfsEvxKwNJtR3u4wkinoT1tJCgQKbszgmZ1IpnBkMWLhi1tQRPiQmbi3CuuxDeL-OQgBtJ9Eats3bu9_ukI1qUEFh-Wla-28z5SJJtgi_G1cvck21yoa7N7JDkMXQPOGaDB7DbEoEj4tIgZ5GfD1IT/s25/cubula4.gif\" border=0 onMouseDown=\"Clicked(2, "+i+", "+j+")\"></td>");
+         document.writeln("</tr>");
+       }
+     document.writeln("</table></td>");
+     document.writeln("<td><table border cellpadding=0 cellspacing=0>");
+       for (i=0; i < Max; i++)
+       { document.writeln("<tr align=center>");
+         for (j=0; j < Max; j++)
+           document.writeln("<td><IMG src=\"https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjdpF8TUpSw5hWniMkPDmGoQ2qlFUMvQj8syB8LjLKfsEvxKwNJtR3u4wkinoT1tJCgQKbszgmZ1IpnBkMWLhi1tQRPiQmbi3CuuxDeL-OQgBtJ9Eats3bu9_ukI1qUEFh-Wla-28z5SJJtgi_G1cvck21yoa7N7JDkMXQPOGaDB7DbEoEj4tIgZ5GfD1IT/s25/cubula4.gif\" border=0 onMouseDown=\"Clicked(3, "+i+", "+j+")\"></td>");
+         document.writeln("</tr>");
+       }
+     document.writeln("</table></td></tr>");
+     document.writeln("<tr align=center><td></td><td><table border cellpadding=0 cellspacing=0>");
+       for (i=0; i < Max; i++)
+       { document.writeln("<tr align=center>");
+         for (j=0; j < Max; j++)
+           document.writeln("<td><IMG src=\"https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjdpF8TUpSw5hWniMkPDmGoQ2qlFUMvQj8syB8LjLKfsEvxKwNJtR3u4wkinoT1tJCgQKbszgmZ1IpnBkMWLhi1tQRPiQmbi3CuuxDeL-OQgBtJ9Eats3bu9_ukI1qUEFh-Wla-28z5SJJtgi_G1cvck21yoa7N7JDkMXQPOGaDB7DbEoEj4tIgZ5GfD1IT/s25/cubula4.gif\" border=0 onMouseDown=\"Clicked(4, "+i+", "+j+")\"></td>");
+         document.writeln("</tr>");
+       }
+     document.writeln("</table></td><td></td></tr>");
+     document.writeln("<tr align=center><td></td><td><table border cellpadding=0 cellspacing=0>");
+       for (i=0; i < Max; i++)
+       { document.writeln("<tr align=center>");
+         for (j=0; j < Max; j++)
+           document.writeln("<td><IMG src=\"https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjdpF8TUpSw5hWniMkPDmGoQ2qlFUMvQj8syB8LjLKfsEvxKwNJtR3u4wkinoT1tJCgQKbszgmZ1IpnBkMWLhi1tQRPiQmbi3CuuxDeL-OQgBtJ9Eats3bu9_ukI1qUEFh-Wla-28z5SJJtgi_G1cvck21yoa7N7JDkMXQPOGaDB7DbEoEj4tIgZ5GfD1IT/s25/cubula4.gif\" border=0 onMouseDown=\"Clicked(5, "+i+", "+j+")\"></td>");
+         document.writeln("</tr>");
+       }
+     document.writeln("</table></td><td></td></tr>");
+   document.writeln("</table></td>");
+ }
+ document.close();
+ </script>
+ </tr></table>
+ <br>
+ <table noborder width=590>
+   <tr><td align=center><input class="btn btn-warning shadow-lg" type=button value="SHOW" width=108 style="width:108" onClick="javascript:Show()"></td>
+       <td align=center><input class="btn btn-light shadow-lg" type=button value="black </> white" width=134 style="width:134" onClick="javascript:SetColor(-1)"></td>
+       <td align=center><table border cellpadding=0 cellspacing=0><tr><td><IMG src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhOijjJSIpSXiG4mXgHTMBuhiKm93jBlub2BtzzQJ394FdJZOzGjOZQ_B3AwCwl3WIQMBQqlihxcUSO5vUrcG_Y45_K-n3GYghgtTDEYwHCYO7S0Cru1B8CQtnYvKIfhEFnyKarHcu6TV56QbCkcB5YWVQFNh0li4feRUb1EwUtenX3LTAZLXD3BUeJsvDw/s25/cubula0.gif" border=0 onMouseDown="SetColor(-1)"></td></tr></table></td>
+       <td align=center><input class="btn btn-primary shadow-lg" type=button value="NEW GAME" width=134 style="width:134" onClick="javascript:Scramble()"></td>
+       <td align=center><input class="btn btn-secondary shadow-lg" type=button value="HELP" width=108 style="width:108" onClick="javascript:Help()"></td>
+   </tr>
+ </table>
+ </DIV>
+ </form>
+ <script language="JavaScript">
+   Scramble();
+ </script>
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+ </BODY>
+ </HTML>
