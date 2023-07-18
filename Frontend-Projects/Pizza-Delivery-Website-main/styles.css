@@ -56,10 +56,9 @@ li {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    background-color: rgb(206, 206, 182);
-    height: 30%;
+    background-color: #b76c7a96;
+    height: 45%;
     width: 30%;
-    /* border: #e64747 2px solid; */
     border-radius: 30px;
 }
 
@@ -70,21 +69,27 @@ li {
 }
 
 .popup-button {
+    border: none;
+    color: white;
     cursor: pointer;
-    height: 35px;
-    width: 100px;
+    height: 40px;
+    width: 114px;
     border-radius: 10px;
+    font-size: 1rem;
+    background: #a70743;
 }
 
 .info-person {
     height: 40px;
     width: 250px;
     border-radius: 10px;
+    border: 2px solid pink;
+    background: #ffffff24;
 }
 
 .info-person:hover,
 .popup-button:hover {
-    border: #e64747 4px solid;
+    border: #e64747 2px solid;
 }
 
 
