@@ -1,3 +1,5 @@
+Build: https://admin-plus-dashboard.netlify.app
+
 ## About
 
 Administrators lack an efficient and user-friendly platform to manage and monitor their application or system. There is a need for an admin dashboard that provides a comprehensive set of components and features, including navigation, data management, analytics, user management, settings, notifications, and error handling. The admin dashboard should allow administrators to customize the theme, view important metrics and key information, handle authentication, manage data through tables and forms, visualize data with interactive charts, schedule events with a calendar, track tasks with a Kanban board, manage user accounts, configure settings, receive notifications, and handle errors gracefully. Additionally, there is a need for a backend sserver that can store and retrieve data from a JSON file, allowing for data persistence without the need for a cloud database. The goal is to create an intuitive and robust admin dashboard solution that simplifies administrative tasks, enhances decision-making through data visualization, and provides a seamless user experience.
