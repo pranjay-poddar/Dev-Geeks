@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    
+    <title>Parking Lot Managing System</title>
+    <style>
+        body{
+           background-color: lightblue;
+           /*background-position: cover;
+           background-repeat: no-repeat;
+           background-size: cover;*/
+        }
+    </style>
+</head>
+
+<body>
+    <header class="shadow" >
+        <div class="header-content d-flex justify-content-center p-2">
+            <img src="https://thumb.ac-illust.com/a6/a679aa3ef66ca31ad051ae5d0f217fc0_t.jpeg" alt="" id="header-logo">
+            <div id="header-msg" class="ml-5 align-self-center">Parking-Lot Management System</div>
+        </div>
+    </header>
+     
+    <div class="form-container mt-5">
+        <form class="w-50 mx-auto" id="entryForm">
+            <h5 class="text-center" id="sub-heading">Add Vehicle Details to Parking Lot System</h5>
+            <div class="form-group" id="one">
+                <label for="owner">Owner</label>
+                <input type="text" class="form-control rounded-0 shadow-sm" id="owner" placeholder="Owner"><br>
+                <label for="Vehicle">Vehicle</label>
+                <input type="text" class="form-control rounded-0 shadow-sm" id="car" placeholder="Vehicle"><br>
+                <label for="licensePlate">License Plate</label>
+                <input type="text" class="form-control rounded-0 shadow-sm" id="licensePlate" placeholder="NN-NN-LL,NN-LL-NN,....etc"><br>
+            </div>
+            
+            <div class="row">
+                <div class="col-6" id="one"> 
+                    <label for="entryDate">Entry Date</label>
+                    <input type="date" class="form-control rounded-0 shadow-sm" id="entryDate">
+                </div>
+                <div class="col-6" id="one">
+                    <label for="exitDate">Exit Date</label>
+                    <input type="date" class="form-control rounded-0 shadow-sm" id="exitDate">
+                </div>
+            </div>
+            <button type="submit" class="btn mx-auto d-block mt-5 rounded-12 shadow" id="btnOne">Add Vehicle</Details></button>
+        </form>
+    </div>
+    <div class="table-container mt-5 mb-5 w-75 mx-auto" >
+            <h5 class="text-center mb-3" id="bottom-heading">List of Vehicles in Parking Lot</h5>
+            <input type="text" class="w-100 mb-3" id="searchInput" placeholder="Search..." >
+            
+            <table class="table table-striped shadow " id="parkingTable">
+                    <thead class="text-white" id="tableHead">
+                      <tr>
+                        <th scope="col">Owner</th>
+                        <th scope="col">Vehicle</th>
+                        <th scope="col">License Plate</th>
+                        <th scope="col">Entry Date</th>
+                        <th scope="col">Exit Date</th>
+                        <th scope="col">Actions</th>
+                      </tr>
+                    </thead>
+                    <tbody id="tableBody">
+                     
+                    </tbody>
+                  </table>
+    </div>
+
+    
+    <script src="core.js"></script>
+</body>
+
+</html>
