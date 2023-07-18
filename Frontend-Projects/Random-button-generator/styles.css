@@ -1,0 +1,44 @@
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: black;
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: white; 
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: orange; 
+  }
+  
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height:80vh;
+    color:white;
+    text-transform: capitalize;
+}
+button{
+    margin-top: 20px;
+    height:50px;
+    width:20%;
+   
+    background-color: black;
+    color:white;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+button:hover{
+    color:black;
+    background-color: white;
+    transform:scale(1.1);
+    transition:2s;
+}
