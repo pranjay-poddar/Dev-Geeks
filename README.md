@@ -844,6 +844,9 @@ Happy Coding! -->
 <td align="center"> 263.</td>
 <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Js-Games/Alien Shooting">Alien Shooting</a></td>
 
+<td align="center"> 264.</td>
+<td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Python Projects/Image Classification">Image Classification</a></td>
+
 </tr> 
 
 
@@ -914,6 +917,7 @@ Happy Coding! -->
 </p>
 
 
+
 </h1>
 
 <div align="center">
@@ -923,4 +927,3 @@ Happy Coding! -->
   Back to top
  </a> 
 </div>
-
