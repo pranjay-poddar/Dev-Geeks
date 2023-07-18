@@ -841,13 +841,16 @@ Happy Coding! -->
 
 <tr align="center">
 <td align="center"> 256.</td>  
-<td align="center"><a href="https://github.com/Nishitbaria/Dev-Geeks/tree/Test/Frontend-Projects/razorpayClone">   RazorpayClone  </a></td>
-
+<td align="center"><a href="https://github.com/Nishitbaria/Dev-Geeks/tree/Test/Frontend-Projects/razorpayClone">RazorpayClone</a></td>
 <td align="center"> 265.</td>
 <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Js-Games/Aim training">Aim training</a></td>
-
 <td align="center"> 263.</td>
 <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Js-Games/Alien Shooting">Alien Shooting</a></td>
+<td align="center"> 264.</td>
+<td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/testing/Js-Projects/Password_Validation">Password Validation</a></td>
+
+<td align="center"> 264.</td>
+<td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Python Projects/Image Classification">Image Classification</a></td>
 
 </tr> 
 
@@ -919,6 +922,7 @@ Happy Coding! -->
 </p>
 
 
+
 </h1>
 
 <div align="center">
@@ -928,4 +932,3 @@ Happy Coding! -->
   Back to top
  </a> 
 </div>
-
