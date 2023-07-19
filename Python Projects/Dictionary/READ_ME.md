@@ -1,0 +1,3 @@
+##Description:
+
+A dictionary project in Python with GUI that emulates a digital dictionary. It allows users to enter a word and retrieves its corresponding meaning from a preloaded dictionary database.It also has get_close_matches function to detect spelling errors and suggest the word closest to it. The program provides a user-friendly interface, making it easy to search for word meanings efficiently and accurately.
