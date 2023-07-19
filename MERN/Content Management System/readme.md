@@ -1,8 +1,6 @@
 # Total.js CMS
 
-- [Documentation](https://docs.totaljs.com)
-- [Join Total.js Telegram](https://t.me/totaljs)
-- [Support](https://www.totaljs.com/support/)
+
 
 __Instructions__:
 
