@@ -1,0 +1,104 @@
+/* Default styling */
+* {
+    margin: 0px;
+    padding: 0px;
+    outline: none;
+    text-decoration: none;
+    text-align: center;
+    font-family: cursive;
+    box-sizing: border-box;
+    transition: all 0.5s;
+    user-select: none;
+}
+
+body {
+    background-image: url('https://www.pixelstalk.net/wp-content/uploads/images5/Black-and-White-4K-Wallpaper-HD-Free-download.jpg');
+    /* background-repeat: no-repeat; */
+    /* background-size: cover; */
+}
+
+/* Main heading */
+h1 {
+    color: #959494;
+    font-weight: 700;
+    font-size: 3rem;
+    margin-top: 1rem;
+    transition: all 0.5s;
+}
+
+/* Styling the gallery box */
+.gallery {
+    padding: 3rem;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    transition: all 0.5s;
+}
+
+/* Styling each and every cards */
+.card {
+    position: relative;
+    width: 28%;
+    overflow: hidden;
+    border-radius: 15px;
+    margin-bottom: 20px;
+}
+
+/* Styling the each and every card image */
+.card img {
+    width: 100%;
+    height: 100%;
+    filter: grayscale(100%);
+    box-shadow: 0 0 20px #333;
+}
+
+/* Styling figurecaption */
+.card figcaption {
+    position: absolute;
+    bottom: 0%;
+    left: 2%;
+    padding: 10px;
+    width: 100%;
+    height: 12%;
+    font-size: 17px;
+    font-weight: 500;
+    color: white;
+    opacity: 0;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.5) 0%, rgba(255, 255, 255, 0) 100%);
+    transition: 2s;
+}
+
+.card:hover {
+    transform: scale(1.03);
+    transition: 1.07s;
+    filter: drop-shadow(0 0 10px rgb(38, 105, 38));
+}
+
+.card img:hover {
+    filter: grayscale(0%);
+}
+
+.card:hover figcaption {
+    opacity: 1;
+    transition: 0.90s;
+}
+
+/* Styling the footer section */
+footer {
+    color: #959494;
+    margin-bottom: 1rem;
+    font-size: 1.4rem;
+    font-weight: 600;
+    transition: all 0.5s;
+}
+
+a {
+    color: #959494;
+}
+
+a:hover {
+    text-decoration: underline;
+}
