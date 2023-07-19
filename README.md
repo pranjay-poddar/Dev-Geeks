@@ -847,6 +847,9 @@ Happy Coding! -->
 <td align="center"> 264.</td>
 <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Python Projects/Image Classification">Image Classification</a></td>
 
+<td align="center"> 270.</td>
+<td align="center"> <a href="https://github.com/AnushkaS1/Dev-Geeks/tree/main">Beer-Pong-Game</a>  </td>
+
 </tr> 
 
 
