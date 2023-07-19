@@ -1,0 +1,53 @@
+.m-0 {
+    margin: 0px;
+}
+
+.p-0 {
+    padding: 0px;
+}
+.m-auto{
+    margin: auto;
+}
+.d-flex {
+    display: flex;
+}
+
+.d-block {
+    display: block;
+}
+
+.d-none {
+    display: none;
+}
+
+.d-grid {
+    display: grid;
+}
+
+.tx-agn-cnt {
+    text-align: center;
+}
+
+.jst-cntt-cnt {
+    justify-content: center;
+}
+
+.text-nowrap {
+    white-space: nowrap;
+}
+
+.flex-auto {
+    flex: auto;
+}
+
+.cursor-pointer {
+    cursor: pointer;
+}
+
+.float-left {
+    float: left;
+}
+
+.float-right {
+    float: right;
+}

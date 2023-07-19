@@ -9,6 +9,7 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
   font-size: 100%;
   font: inherit;
   vertical-align: baseline;
+  font-family: 'Cambria';
 }
 
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
@@ -108,13 +109,13 @@ img {
 body {
   background: #b85252;
   /* fallback for old browsers */
-  background: -webkit-linear-gradient(to top, #b85252, #8DC26F);
-  background: -moz-linear-gradient(to top,#b85252, #8DC26F);
-  background: -o-linear-gradient(to top, #b85252, #8DC26F);
-  background: linear-gradient(to top,  #b85252, #8DC26F);
+  background: -webkit-linear-gradient(to top, #587e43, #607D8B);
+  background: -moz-linear-gradient(to top,#587e43, #607D8B);
+  background: -o-linear-gradient(to top, #587e43, #607D8B);
+  background: linear-gradient(to top, #587e43, #607D8B);
   background-size: cover;
   background-attachment: fixed;
-  font-family: 'Times New Roman', sans-serif;
+  font-family: 'Cambria';
 }
 
 h1 {
@@ -125,18 +126,21 @@ h1 {
   text-transform: capitalize;
   letter-spacing: 4px;
   font-family: 'Cambria', sans-serif;
+  letter-spacing: -1px;
+    word-spacing: 3px;
 }
 
 /*-- main --*/
 .main-w3layouts {
-  padding: 3em 0 1em;
+  padding: 2em 0 1em;
 }
 
 .main-agileinfo {
   width: 35%;
   margin: 3em auto;
-  background: rgba(0, 0, 0, 0.18);
+  background: rgb(62 89 103 / 44%);
   background-size: cover;
+  border-radius: 15px;
 }
 
 .agileits-top {
@@ -144,23 +148,19 @@ h1 {
 }
 
 input[type="text"], input[type="email"], input[type="password"] {
+  font-family: 'Times New Roman', sans-serif;
   font-size: 0.9em;
-  color: #fff;
   font-weight: 100;
-  width: 94.5%;
   display: block;
-  border: none;
   padding: 0.8em;
-  border: solid 1px rgba(255, 255, 255, 0.37);
-  -webkit-transition: all 0.3s cubic-bezier(0.64, 0.09, 0.08, 1);
   transition: all 0.3s cubic-bezier(0.64, 0.09, 0.08, 1);
-  background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0) 96%, #fff 4%);
-  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 96%, #fff 4%);
   background-position: -800px 0;
-  background-size: 100%;
   background-repeat: no-repeat;
   color: #fff;
-  font-family: 'Times New Roman', sans-serif;
+  border-radius: 10px;
+  background: #eaeaea29;
+  border: 2px solid #80808096;
+  width: 100%;
 }
 
 input.email, input.text.w3lpass {
@@ -204,33 +204,36 @@ input.email, input.text.w3lpass {
 }
 
 input[type="submit"] {
-  font-size: .9em;
+  font-size: .8em;
   color: #fff;
-  background: #76b852;
-  outline: none;
-  border: 1px solid #76b852;
-  cursor: pointer;
   padding: 0.9em;
   -webkit-appearance: none;
   width: 100%;
   margin: 2em 0;
-  letter-spacing: 4px;
+  word-spacing: 4px;
+  font-size: 0.95rem;
+  border-radius: 10px;
+  background: #577f4dd1;
+  outline: none;
+  border: 1px solid #4c7447;
+  cursor: pointer;
 }
 
 input[type="submit"]:hover {
-  -webkit-transition: .5s all;
-  -moz-transition: .5s all;
-  -o-transition: .5s all;
-  -ms-transition: .5s all;
-  transition: .5s all;
-  background: #8DC26F;
+  -webkit-transition: .1s all;
+  -moz-transition: .1s all;
+  -o-transition: .1s all;
+  -ms-transition: .1s all;
+  transition: .1s all;
+  border: 2px solid #61884c;
+  background: none;
 }
 
 .agileits-top p {
   font-size: 1em;
   color: #fff;
   text-align: center;
-  letter-spacing: 1px;
+  word-spacing: 2px;
   font-weight: 300;
 }
 
@@ -257,7 +260,7 @@ input[type="submit"]:hover {
 }
 
 input.checkbox {
-  background: #c26f6f;
+  background: #759084;
   cursor: pointer;
   width: 1.2em;
   height: 1.2em;
