@@ -1,0 +1,13 @@
+#desc{
+font-size: 28px;
+font-family:tahoma;
+color:rgb(255, 255, 255);
+width:250px;
+float:left;
+position:absolute;
+margin:5px;
+}
+#canvas{
+    height: 100%;
+    width: 100%;
+}
