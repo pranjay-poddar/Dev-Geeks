@@ -1,0 +1,62 @@
+html
+{
+    height: 100%;
+}
+
+body
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url("background.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.score
+{
+    font-size: 50px;
+    color: yellow;
+}
+
+.container
+{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    height: 300px;
+    width: 300px;
+    gap: 5px;
+    margin: 10px;
+}
+
+.hole
+{
+    border-radius: 50%;
+    border: 5px solid darkcyan;
+    position: relative;
+    overflow: hidden;
+}
+
+.hole img
+{
+    width: 100%;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0;
+    animation: raise 0.5s ease-out;
+}
+
+@keyframes raise {
+    0%
+    {
+        transform: translateX(-50%) translateY(-100%);
+    }
+    100%
+    {
+        transform: translateX(-50%) translateY(0);
+    }
+}
