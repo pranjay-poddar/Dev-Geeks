@@ -1,0 +1,972 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lato';
+}
+
+li {
+    list-style: none;
+}
+
+.main-container {
+    z-index: -2;
+    background: -webkit-linear-gradient(90deg, #5a935c, #e64747, #8f725a);
+    background: linear-gradient(90deg, #b613a6f6, #9fff04f3, #764b2ae0);
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+
+
+
+
+/* Layout of the popup window */
+.popup {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(159, 0, 74, 0.908);
+    top: 0;
+    left: 0;
+    opacity: 0;
+    visibility: hidden;
+    overflow-y: auto;
+    overflow-x: hidden;
+    transition: all 0.8s ease 0s;
+}
+
+.popup.open {
+    opacity: 1;
+    visibility: visible;
+}
+
+.popup.open .popup__content {
+    transform: perspective(600px) translate(0px, 0%) rotateX(0deg);
+    opacity: 1;
+}
+
+.popup-log-in {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #b76c7a96;
+    height: 45%;
+    width: 30%;
+    border-radius: 30px;
+}
+
+.field-info {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.popup-button {
+    border: none;
+    color: white;
+    cursor: pointer;
+    height: 40px;
+    width: 114px;
+    border-radius: 10px;
+    font-size: 1rem;
+    background: #a70743;
+}
+
+.info-person {
+    height: 40px;
+    width: 250px;
+    border-radius: 10px;
+    border: 2px solid pink;
+    background: #ffffff24;
+}
+
+.info-person:hover,
+.popup-button:hover {
+    border: #e64747 2px solid;
+}
+
+
+
+/* Layout of the main content =======================================*/
+.content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* Navigation menu layout============================================ */
+.logo-pizza {
+    height: 160px;
+    padding: 20px;
+}
+
+.logo {
+    display: flex;
+    margin-left: 10px;
+}
+
+.navigation {
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    flex-direction: column;
+    background: #c52e2e;
+    height: 688px;
+    border-radius: 70px;
+}
+
+.main-nav,
+.footer-nav,
+.nav-btn {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 18px;
+    color: white;
+}
+
+.nav-btn {
+    transition: all 0.5s ease;
+}
+
+.nav-btn:hover {
+    background: rgba(255, 255, 255, 0.6) 100px;
+    color: #1a1a3b;
+    border-radius: 50%;
+    box-sizing: border-box;
+    font-style: 30px;
+    padding: 10px;
+    transition: all 0.5s ease;
+}
+
+.fa-solid {
+    font-size: x-large;
+}
+
+
+/* User data. Minimum data about the email and number. */
+.profile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    top: 0;
+    left: 0;
+    opacity: 0;
+    visibility: hidden;
+    overflow-y: auto;
+    overflow-x: hidden;
+    transition: all 0.8s ease 0s;
+}
+
+.profile.open {
+    opacity: 1;
+    visibility: visible;
+}
+
+.profile-block {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    background-color: white;
+    min-width: 300px;
+    min-height: 350px;
+    border-radius: 40px;
+}
+
+.name-surname {
+    width: 200px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.profile-surname {
+    margin-top: 10px;
+}
+
+.contacts {
+    margin-bottom: 60px;
+}
+
+.close-profile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 60px;
+    width: 40px;
+    height: 30px;
+    background-color: white;
+    cursor: pointer;
+    border: none;
+    border-radius: 10px;
+    transition: 0.4s ease 0s;
+}
+
+.close-profile:hover {
+    background-color: #ca1a1a;
+    color: white;
+    transition: 0.4s ease 0s;
+}
+
+.email-block,
+.number-block {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px;
+}
+
+.email-input,
+.number-input {
+    border-radius: 20px;
+    width: 250px;
+    height: 30px;
+    padding: 15px;
+    margin-top: 10px;
+}
+
+.email-line {
+    display: flex;
+    width: 170px;
+}
+
+.number-line {
+    display: flex;
+    width: 210px;
+}
+
+.submit-ok {
+    width: 30px;
+    height: 25px;
+    border-radius: 10px;
+    margin-top: 15px;
+}
+
+.edit-email,
+.edit-number,
+.out-number,
+.out-email {
+    margin-left: 10px;
+}
+
+
+
+/* Charitable organization */
+
+.charity-block {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    top: 0;
+    left: 0;
+    opacity: 0;
+    visibility: hidden;
+    overflow-y: auto;
+    overflow-x: hidden;
+    transition: all 0.8s ease 0s;
+}
+
+.charity-block.open {
+    opacity: 1;
+    visibility: visible;
+}
+
+.charity {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 30px;
+    height: 200px;
+    width: 400px;
+    background-color: #f9a3a3;
+    padding: 20px;
+}
+
+
+.fa-heart {
+    color: #ca1a1a;
+    text-shadow: 0px -4px 8px rgba(252, 0, 0, 0.482), 0 10px 10px rgba(224, 8, 8, 0.499);
+}
+
+.btns-charity {
+    display: flex;
+    justify-content: space-between;
+    width: 90px;
+}
+
+
+/* Leave feedback ---------------------------------------------- */
+.review {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    top: 0;
+    left: 0;
+    opacity: 0;
+    visibility: hidden;
+    overflow-y: auto;
+    overflow-x: hidden;
+    transition: all 0.8s ease 0s;
+}
+
+.review.open {
+    opacity: 1;
+    visibility: visible;
+}
+
+.review-content {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    margin-right: 800px;
+    margin-top: 170px;
+    height: 150px;
+    width: 300px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 30px;
+}
+
+.review-input {
+    max-height: 80px;
+    max-width: 200px;
+    border-radius: 10px;
+    border-style: dashed;
+    text-align: center;
+}
+
+.close-review {
+    height: 30px;
+    width: 40px;
+    border-radius: 10px;
+    cursor: pointer;
+    border-style: none;
+    border: 1px solid black;
+    color: rgb(0, 0, 0);
+    transition: 0.4s ease 0s;
+}
+
+.close-review:hover {
+    background-color: #ca1a1a;
+    color: white;
+    border-style: none;
+    transition: 0.4s ease 0s;
+}
+
+
+
+/* Styles for the main body of content. Block where you can order food================== */
+
+
+/* Site search */
+.main-block {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-around;
+    background: rgba(215, 223, 7, 0.919);
+    height: 608px;
+    width: 896px;
+    border-radius: 15px 0 0 15px;
+    
+}
+
+.search {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    height: 64px;
+    width: 816px;
+}
+
+
+
+/* Block in the center, with a promotion and product categories */
+.midle-block {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+/* Promotion and delivery =====================*/
+.prize {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(233, 160, 77);
+    width: 480px;
+    border-radius: 20px;
+}
+
+.prize-info {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    padding: 20px;
+    height: 192px;
+    width: 320px;
+}
+
+.delivery-bike {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bike {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    padding: 10px;
+    height: 144px;
+}
+
+.prize-btn {
+    border-style: none;
+    background: #ca1a1a;
+    color: white;
+    border-radius: 20px;
+    padding: 10px;
+    transition: all 0.5s ease;
+}
+
+.prize-btn:hover {
+    color: black;
+    background: white;
+    transition: all 0.5s ease;
+}
+
+
+/* Find out more about the promotion */
+.popup-discount {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    top: 0;
+    left: 0;
+    opacity: 0;
+    visibility: hidden;
+    overflow-y: auto;
+    overflow-x: hidden;
+    transition: all 0.8s ease 0s;
+}
+
+.popup-discount.open {
+    opacity: 1;
+    visibility: visible;
+}
+
+.discount {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+    border-radius: 30px;
+    width: 450px;
+    height: 300px;
+    background-color: rgb(233, 160, 77);
+}
+
+.close-prize,
+.close-charity,
+.add-charity {
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    border-style: none;
+    transition: 0.4s ease 0s;
+}
+
+.close-prize:hover {
+    background-color: #3e3e42;
+    transition: 0.4s ease 0s;
+}
+
+.close-charity:hover {
+    color: red;
+}
+
+.add-charity:hover {
+    color: red;
+}
+
+.fa-check-hover {
+    transition: 0.4s ease 0s;
+}
+
+.fa-check-hover:hover {
+    color: white;
+    transition: 0.4s ease 0s;
+}
+
+
+/* Different categories of food and drinks ================== */
+
+.pizza {
+    grid-area: pizza;
+}
+
+.burger {
+    grid-area: burger;
+}
+
+.snack {
+    grid-area: snack;
+}
+
+.drink {
+    grid-area: drink;
+}
+
+.choice {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: #ffffff;
+    box-shadow: 0px -4px 10px rgba(0, 0, 0, 0.3), 0 10px 10px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    height: 80px;
+    width: 80px;
+    padding: 10px;
+    margin: 15px;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+
+.choice:hover {
+    background: #c52e2e;
+    box-shadow: 0px -4px 10px rgba(243, 19, 19, 0.3), 0 10px 10px rgba(253, 14, 14, 0.3);
+    color: white;
+    transition: all 0.5s ease;
+}
+
+.logo-choice {
+    height: 50px;
+}
+
+.category {
+    display: grid;
+    grid-template-columns: 50px 50px 50px 50px;
+    grid-template-rows: auto;
+    grid-template-areas:
+        "pizza . burger"
+        "snack .  drink";
+    margin-left: 100px;
+    padding: 10px;
+}
+
+
+/* Select dishes in the selected category ===========================*/
+
+
+/* Styling the scrollbar for menu selection */
+.menu::-webkit-scrollbar {
+    width: 15px;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #d5d5d5;
+    width: 5px;
+    border-radius: 20px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #952020;
+    border-radius: 10px;
+}
+
+/* ----------------------------------- */
+
+.menu {
+    display: flex;
+    justify-content: center;
+    height: 320px;
+    max-width: 800px;
+    border-radius: 10px;
+    overflow-y: scroll;
+}
+
+
+/* Add to cart button. It creates innerHTML JS */
+.btn-add,
+.btn-info,
+.btn-info-burger,
+.btn-info-snack,
+.btn-info-drink {
+    background: #ffffff;
+    color: rgb(0, 0, 0);
+    height: 32px;
+    width: 64px;
+    border-radius: 20px;
+    border-style: none;
+    border: 1px black solid;
+    cursor: pointer;
+    margin: 15px 5px 0px 5px;
+}
+
+
+
+/* Styles for the menu in the "pizza" section, I create classes via JavaScript innerHTML */
+.block-pizza,
+.block-burger,
+.block-snack,
+.block-drink {
+    display: flex;
+    flex-direction: column;
+}
+
+.img-pizza {
+    height: 176px;
+}
+
+.img-burger {
+    height: 144px;
+}
+
+.img-drink {
+    height: 96px;
+}
+
+
+.img-snack {
+    height: 96px;
+}
+
+.box-pizza,
+.box-burger,
+.box-snack,
+.box-drink {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+    border-radius: 30px;
+    padding: 10px;
+    margin: 20px;
+    width: 200px;
+    height: 280px;
+    background: rgb(255, 255, 255);
+    box-shadow: 0px -4px 10px rgba(0, 0, 0, 0.3), 0 10px 10px rgba(0, 0, 0, 0.3);
+    transition: all 0.5s ease;
+}
+
+.box-pizza:hover,
+.box-burger:hover,
+.box-snack:hover,
+.box-drink:hover {
+    background: url(img/animation.gif);
+    box-shadow: 0px -4px 10px rgba(243, 19, 19, 0.3), 0 10px 10px rgba(253, 14, 14, 0.3);
+    transition: all 0.5s ease;
+}
+
+
+/* Pizza filling. Block created with JavaScript innerHTML*/
+.box-filling-pizza,
+.box-filling-burger,
+.box-filling-snack,
+.box-filling-drink {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 30px;
+    padding: 10px;
+    margin: 20px;
+    width: 200px;
+    height: 280px;
+    background: rgb(238, 228, 228);
+    box-shadow: 0px -4px 10px rgba(0, 0, 0, 0.3), 0 10px 10px rgba(0, 0, 0, 0.3);
+    transition: all 0.5s ease;
+}
+
+
+/* description close button. Created with innerHTML */
+.close-filling {
+    border-style: none;
+    background: #646161;
+    color: rgb(255, 255, 255);
+    border-radius: 20px;
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+.close-filling:hover {
+    background: #ca1a1a;
+    opacity: 1;
+    transition: 0.4s;
+}
+
+
+
+
+
+/* Separator line between order and main content */
+
+.line-delimiter {
+    height: 608px;
+    width: 2px;
+    background: #afafaf;
+}
+
+
+/* Order block ==================================================== */
+.order-box {
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    height: 608px;
+    width: 320px;
+    border-radius: 0 15px 15px 0;
+    background: rgba(255, 68, 0, 0.949);
+}
+
+
+/* Person information, person logo */
+.display-name {
+    margin: 14px;
+}
+
+.person {
+    display: flex;
+    align-items: center;
+    width: 240px;
+}
+
+.person-photo {
+    padding: 4px;
+    height: 81px;
+    background-color: #d5d5d5;
+    border-radius: 50%;
+}
+
+
+/* Styling order items */
+
+
+/* Delivery adress  */
+.adress {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5px;
+}
+
+.adress-block {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 130px;
+    padding: 10px;
+}
+
+.add-adress {
+    border-style: none;
+    background: none;
+    cursor: pointer;
+    color: rgb(180, 0, 0);
+    font-weight: bolder;
+}
+
+.input-adress {
+    padding: 5px;
+    border-radius: 20px;
+    height: 30px;
+    width: 200px;
+}
+
+.enter-adress {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.fa-circle-check {
+    font-size: 23px;
+    cursor: pointer;
+    transition: all 0.5s ease;
+    margin-right: 40px;
+}
+
+.fa-circle-check:hover {
+    color: #ae0707;
+    transition: all 0.5s ease;
+}
+
+.submit {
+    background: #c52e2e;
+    border-style: none;
+    color: white;
+    width: 128px;
+    height: 32px;
+    border-radius: 30px;
+}
+
+.submit:hover {
+    color: black;
+    background: white;
+    transition: all 0.5s ease;
+    cursor: pointer;
+    border: 1px solid #262629;
+}
+
+
+
+/* Open cart in the center of the screen */
+
+.summary.open {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: #08d47cdf;
+    top: 0;
+    left: 0;
+    visibility: visible;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    transition: all 0.8s ease 0s;
+}
+
+.maximaze-close {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.maximaze-close.open {
+    opacity: 1;
+    visibility: visible;
+    margin-top: 60px;
+    width: 40px;
+    height: 30px;
+    background-color: wheat;
+    cursor: pointer;
+    border: none;
+    border-radius: 10px;
+    transition: 0.4s ease 0s;
+}
+
+.maximaze-close.open:hover {
+    background-color: #ca1a1a;
+    color: white;
+    transition: 0.4s ease 0s;
+}
+
+.basket-list.open {
+    background-color: #3e3e42;
+}
+
+/* Small basket on the side -------------------------------------- */
+
+.summary {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    height: 240px;
+    width: 304px;
+    overflow-y: scroll;
+    transition: all 0.8s ease 0s;
+
+}
+
+.basket-img {
+    height: 50px;
+    width: 50px;
+}
+
+.basket-img-narrow {
+    height: 50px;
+    width: 25px;
+}
+
+.basket-img-flattened {
+    height: 35px;
+    width: 45px;
+}
+
+.basket-img-coffe {
+    height: 50px;
+    width: 38px;
+}
+
+.cart-sum {
+    display: flex;
+    margin: 5px;
+    height: 64px;
+    width: 272px;
+    border-radius: 20px;
+}
+
+.basket-list {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 272px;
+}
+
+.delete {
+    cursor: pointer;
+    transition: 0.4s;
+    color: rgb(123, 123, 123);
+}
+
+.delete:hover {
+    color: rgb(45, 7, 216);
+}
+
+
+/* Scroll in order */
+.summary::-webkit-scrollbar {
+    width: 10px;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: goldenrod;
+    width: 10px;
+    border-radius: 20px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #cf3838;
+    border-radius: 10px;
+}

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Etch-a-Sketch</title>
+    <link rel="shortcut icon" href="https://raw.githubusercontent.com/0xabdulkhalid/etch-a-sketch/main/assets/etch-a-sketch-2202733-1838478.png" type="image/x-icon">
+    <link rel="stylesheet" href="./fonts-imported.css">
+    <link rel="stylesheet" href="./styles.css">
+    
+</head>
+<body>
+    <div class="header">
+        <h1>Etch-a-Sketch</h1>
+    </div>
+
+    <div class="main">
+        <div class="btns-container">
+            <div id="erase" class="btns erase">Erase</div>
+            <div id="draw" class="btns draw">Draw</div>
+            <div id="reset" class="btns clear">Clear</div>
+        </div>
+        <div class="main-container">
+            <div class="grid-container"></div>
+        </div>
+        <div class="tools">
+            <div class="gridSize-input">
+                <p class="live-input-feeder">Choose</p>
+                <input type="range" min="0" max="64" step="2" name="grid-size" id="grid-size">
+                <p class="size-feedback">Grid Size</p>
+            </div>
+            <div class="color-picker">
+                <input id="color-picker" type="color" value="#00000">
+                <p class="size-feedback">Color Picker</p>
+            </div>
+        </div>
+        </div>
+    </div>
+    <footer class="footer">
+        <p>By &nbsp;Abdul &nbsp;Khalid</p>
+        <a href="https://github.com/0xAbdulKhalid"><img src="https://raw.githubusercontent.com/0xabdulkhalid/etch-a-sketch/main/assets/icons8-github-100.png" alt="GitHub-Logo"></a>
+    </footer>
+    <script src="./script.js" defer></script>
+</body>
+</html>

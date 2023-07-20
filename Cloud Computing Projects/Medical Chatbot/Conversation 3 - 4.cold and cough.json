@@ -1,0 +1,99 @@
+{
+  "id": "aab1f947-0ac6-46d6-bd00-5740f7107d57",
+  "name": "Conversation 3 - 4.cold and cough",
+  "auto": true,
+  "condition": "",
+  "conditionalFollowupEvents": [],
+  "conditionalResponses": [],
+  "context": [
+    "Conversation3-followup"
+  ],
+  "contexts": [
+    "Conversation3-followup"
+  ],
+  "endInteraction": false,
+  "events": [],
+  "fallbackIntent": false,
+  "liveAgentHandoff": false,
+  "parentId": "4ff6d6f4-51ce-40cc-bea4-977e35b5b1e4",
+  "followUpIntents": [],
+  "priority": 500000,
+  "responses": [
+    {
+      "action": "Conversation3.Conversation3-custom",
+      "affectedContexts": [],
+      "parameters": [],
+      "defaultResponsePlatforms": {},
+      "messages": [
+        {
+          "type": "message",
+          "condition": "",
+          "speech": [
+            "Okay so you are suffering from cold and cough"
+          ]
+        },
+        {
+          "type": "message",
+          "condition": "",
+          "speech": [
+            "Please refer the medicine mentioned."
+          ]
+        },
+        {
+          "type": "message",
+          "condition": "",
+          "speech": [
+            "1.If you are suffering from high cold and cough then use Astakan Dx(Syrup) 3 - spoon per day."
+          ]
+        },
+        {
+          "type": "message",
+          "condition": "",
+          "speech": [
+            "2. If your cold and cough is mild then Use Diomeric/Dio-one 3 - dose per day."
+          ]
+        },
+        {
+          "type": "message",
+          "condition": "",
+          "speech": [
+            "3. If your cold and cough is low then avoid colddrinks, junk food and drink and gargle hot water as much as possible."
+          ]
+        },
+        {
+          "type": "message",
+          "condition": "",
+          "speech": [
+            "4. Maintain proper sleep and avoid eating ice-creams,sugar etc."
+          ]
+        },
+        {
+          "type": "message",
+          "condition": "",
+          "speech": [
+            "5.Eat only warm food made from home to keep you relief."
+          ]
+        }
+      ],
+      "resetContexts": false
+    }
+  ],
+  "rootParentId": "4ff6d6f4-51ce-40cc-bea4-977e35b5b1e4",
+  "templates": [],
+  "userSays": [
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "4",
+          "userDefined": false
+        }
+      ],
+      "count": 0,
+      "id": "fe0347ca-ea5f-49a0-9e23-f2d30c9c6434",
+      "updated": null
+    }
+  ],
+  "webhookForSlotFilling": false,
+  "webhookUsed": false
+}

@@ -85,6 +85,7 @@ section .title::after{
     padding: 30px 0;
     font-family: 'Ubuntu', sans-serif;
     transition: all 0.3s ease;
+    background: #ffffffb3;
 }
 .navbar.sticky{
     padding: 15px 0;
@@ -118,6 +119,7 @@ section .title::after{
     font-weight: 500;
     margin-left: 25px;
     transition: color 0.3s ease;
+    color: blueviolet;
 }
 .navbar .menu li a:hover{
     color: blueviolet;

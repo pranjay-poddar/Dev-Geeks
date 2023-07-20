@@ -4,53 +4,54 @@
 }
 
 body{
-    background-color: rgb(231, 227, 222);
-    padding-top: 30px;
+  background:url("parallax_background.gif");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
 }
 .rule-heading{
-    color:rgb(19, 18, 18) ;
-    position: absolute;
-    left: 17%;
-    top: 30%;
-    font-size: 2rem;
-    font-weight: bolder;
+  color: white;
+  position: absolute;
+  left: 17%;
+  top: 20%;
+  font-size: 2rem;
+  font-weight: bolder;
+  padding-top: 30px;
   }
   .rule1{
     position: absolute;
     left: 17%;
-    top: 40%;
-    color: rgb(19, 18, 18);
+    top: 30%;
+    color: white;
     font-size: 1rem;
     font-weight: bold;
   }
   .rule2{
     position: absolute;
     left: 17%;
-    top: 40%;
-    color: rgb(19, 18, 18);
+    top: 30%;
+    color: white;
     font-size: 1rem;
     font-weight: bold;
   }
   .rule3{
     position: absolute;
     left: 17%;
-    top: 44%;
-    color: rgb(19, 18, 18);
+    top: 33%;
+    color: white;
     font-size: 1rem;
     font-weight: bold;
   }
-  .rule4{
-    position: absolute;
-    left: 17%;
-    top: 52%;
-    color: rgb(19, 18, 18);
-    font-size: 1rem;
+  .scorestyle{
+    color: white;
     font-weight: bold;
+    text-align: center;
+    padding-bottom: 20px;
   }
 #game{
     width: 400px;
     height: 500px;
-    border: 3px solid black;
+    border: 3px solid rgb(175 104 200);
     margin: auto;
     overflow: hidden;
 }
@@ -67,7 +68,7 @@ body{
 .block{
     width: 400px;
     height: 20px;
-    background-color: rgb(17, 17, 17);
+    background-color: rgb(178 233 229);
     position: relative;
     top: 100px;
     margin-top: -20px;
@@ -76,7 +77,7 @@ body{
 .hole{
     width: 40px;
     height: 20px;
-    background-color: rgb(231, 227, 222);
+    background-color: black;
     position: relative;
     top: 100px;
     margin-top: -20px;
