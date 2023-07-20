@@ -560,6 +560,7 @@ section{
 
 .blogs .box-container .box .content .title{
     font-size: 2.5rem;
+    font-family: Georgia, 'Times New Roman', Times, serif;
     line-height: 1.5;
     color:#fff;
 }
@@ -576,6 +577,55 @@ section{
 }
 
 .blogs .box-container .box .content p{
+    font-size: 1.6rem;
+    line-height: 1.8;
+    color:#ccc;
+    padding:1rem 0;
+}
+.blogs .box-container .box1{
+    background-color: rgb(134, 97, 2) ;
+    border:var(--border);    
+}
+
+.blogs .box-container .box1 .image{
+    height: 25rem;
+    overflow:hidden;
+    width: 100%;
+}
+
+.blogs .box-container .box1 .image img{
+    height: 100%;
+    object-fit: cover;
+    width: 100%;
+}
+
+.blogs .box-container .box1:hover .image img{
+    transform: scale(1.2);
+}
+
+.blogs .box-container .box1 .content{
+    padding:2rem;
+}
+
+.blogs .box-container .box1 .content .title{
+    font-size: 2.5rem;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    line-height: 1.5;
+    color:#fff;
+}
+
+.blogs .box-container .box1 .content .title:hover{
+    color:var(--main-color);
+}
+
+.blogs .box-container .box1 .content span{
+    color:var(--main-color);
+    display: block;
+    padding-top: 1rem;
+    font-size: 2rem;
+}
+
+.blogs .box-container .box1 .content p{
     font-size: 1.6rem;
     line-height: 1.8;
     color:#ccc;
