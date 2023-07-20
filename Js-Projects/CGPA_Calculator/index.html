@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>CGPA Calculator</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+  <h1>CGPA Calculator</h1>
+
+  <div class="container">
+    <div class="course-list">
+      <label for="course-name">Course Name:</label>
+      <input type="text" id="course-name" /> 
+	  <br>
+	  <br>
+      <label for="course-code">Course Code:</label>
+      <input type="text" id="course-code" />
+	  <br>
+	  <br>
+      <label for="credit">Credit:</label>
+      <input type="number" id="credit" min="1" max="10" />
+      <label for="grade">Grade:</label>
+      <select id="grade">
+        <option value="10">A1</option>
+        <option value="9">A2</option>
+        <option value="8">B1</option>
+        <option value="7">B2</option>
+        <option value="6">C</option>
+        <option value="5">D</option>
+        <option value="4">E</option>
+        <option value="0">F</option>
+      </select><br>
+      <button class="add-course-btn" onclick="addCourse()">Add Course</button>
+    </div>
+    <button class="calculation-btn" onclick="calculateCGPA()">Calculate CGPA</button>
+	<button class="reset-btn" onclick="resetCalculator()">Reset Calculator</button>
+
+    <ul id="course-list" class="course-list"></ul>
+
+    <div id="result" class="result"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
