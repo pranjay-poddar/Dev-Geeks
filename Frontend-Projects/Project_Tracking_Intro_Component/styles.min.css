@@ -198,8 +198,7 @@ main {
 .main__action-btn {
     background: var(--red);
     color: white;
-    padding: .6rem 1.55rem;
-    border-radius: .1rem;
+    border-radius: 0.8rem;
     letter-spacing: .01rem;
     font-weight: 700;
     padding: .6rem 1.4rem
@@ -212,6 +211,9 @@ main {
 
 .main__preview-btn {
     margin-top: 0;
+    border: 2px solid darkgray;
+    padding: 10px 11px;
+    border-radius: 0.8rem;
     font-size: .8rem;
     word-spacing: -.05rem;
     letter-spacing: .2rem;
@@ -258,7 +260,7 @@ a {
 
     header,
     nav {
-        margin: 1.75rem auto
+        margin: 3.75rem auto
     }
 
     nav {
@@ -320,6 +322,7 @@ a {
         width: unset;
         max-width: 60rem;
         transform: translateX(.8vw)translateY(10.8vw)
+
     }
 
     .main__heading {
