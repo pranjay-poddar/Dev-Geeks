@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+<style>
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.header img {
+  margin-top: 30px;
+  width: 170px;
+  padding-bottom: 20px;
+}
+
+
+.header h1{
+    margin-left: 30px;
+    padding: 30px;
+    text-align: center;
+    background: rgb(1, 1, 45);
+    color: #f1f1f1;
+    font-size: 30px;
+    margin-right: 30px;
+    margin-top: 10px;
+    
+}
+.column h1{
+    margin-left: 30px;
+    padding: 30px;
+    text-align: center;
+    background: rgb(1, 1, 45);
+    color: #f1f1f1;
+    font-size: 30px;
+    margin-right: 30px;
+    margin-top: 50px;
+    
+}
+
+.flip-card {
+  background-color: transparent;
+  width: 300px;
+  height: 300px;
+  perspective: 1000px;
+  margin-left: 40px;
+    margin-top: 50px;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flip-card-front {
+  background-color: #bbb;
+  color: black;
+  
+}
+
+.flip-card-back {
+  background-color: hsl(257, 40%, 49%);
+  color: white;
+  transform: rotateY(180deg);
+  float: left;
+  width: 33.33%;
+  padding: 5px;
+}
+
+
+</style>
+</head>
+<body>
+    <div class="header">
+        <img src="https://digitshack.com/codepen/mentor7/logo.svg" alt="" srcset="">
+        <h1>Communities you can join to make life more exciting!</h1>
+      </div>
+    <div class="column">
+       
+           <div class="flip-card" style="margin-left: 50px;">
+               <div class="flip-card-inner">
+                  <div class="flip-card-back">
+                     <img src="https://odishabytes.com/wp-content/uploads/2017/08/saswat-1-1-1200x900.jpg" alt="Avatar" style="width:300px;height:300px;">
+                   </div>
+                   <div class="flip-card-front">
+                      <h1>Odissi in the Park</h1> 
+                    </div>
+               </div>
+           </div>
+       
+        
+        
+           <div class="flip-card" style="margin-left: 300px;">
+              <div class="flip-card-inner">
+                  <div class="flip-card-back">
+                     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR50aLJSP2jbIJplw4BDNtdhXSgdQSQrUFLCCahJfD-5VszNZ7a6nJlgNPYLl0fF6XSOXQ&usqp=CAU" alt="Avatar" style="width:300px;height:300px;">
+                   </div>
+                  <div class="flip-card-front">
+                     <h1>Whistlers Unite</h1> 
+                  </div>
+               </div>
+            </div>
+       
+       <div class="flip-card" style="margin-left: 600px;">
+          <div class="flip-card-inner">
+            <div class="flip-card-back">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRbG68e61D7G9MU-oHgo9wJ3sNVzSy_suu94g&usqp=CAU" alt="Avatar" style="width:300px;height:300px;">
+            </div>
+            <div class="flip-card-front">
+               <h1>Mumbai Meat Marathon</h1> 
+            </div>
+        </div>
+        <div class="flip-card" style="margin-left: 300px;">
+            <div class="flip-card-inner">
+                <div class="flip-card-back">
+                    <img src="https://pbs.twimg.com/media/FMneIaSacAAAHxR.jpg" alt="Avatar" style="width:300px;height:300px;">
+                </div>
+                <div class="flip-card-front">
+                   <h1>Save Rocks</h1> 
+                </div>
+            </div>
+       </div>
+       <div class="flip-card" style="margin-left: 100px;">
+          <div class="flip-card-inner">
+            <div class="flip-card-back">
+                <img src="https://sacredflowart.com/wp-content/uploads/2021/03/162176383_466796544743348_5770378160636614702_n-1182x800.jpg" alt="Avatar" style="width:300px;height:300px;">
+            </div>
+            <div class="flip-card-front">
+               <h1>Fire Poi</h1> 
+            </div>
+        </div>
+       </div>
+   </div>
+
+   
+    
+   <div class="social">
+       <a href="#">
+         <i class="fab fa-facebook-f"></i>
+        </a>
+       <a href="#">
+         <i class="fab fa-twitter"></i>
+       </a>
+      <a href="#">
+          <i class="fab fa-instagram"></i>
+       </a>
+    </div>
+
+</body>
+</html>
