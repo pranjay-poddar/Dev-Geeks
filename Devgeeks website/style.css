@@ -1092,3 +1092,10 @@ footer {
 .col3 li{
   font-size: 2rem;
 }
+ li a:hover
+{
+  font-size: 16px;
+  font-weight: 100;
+  color: white;
+  transition-duration: 0.7s;
+}
