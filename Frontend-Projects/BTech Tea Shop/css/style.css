@@ -244,6 +244,7 @@ section{
 
 .about .row .image img{
     width: 100%;
+    border-radius: 30%;
 }
 .about .row .content{
     flex:1 1 45rem;
@@ -252,15 +253,22 @@ section{
 
 .about .row .content h3{
     font-size: 3rem;
-    color:#fff;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: rgb(134, 97, 2);
 }
 
 .about .row .content p{
     font-size: 1.6rem;
-    color:#ccc;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: bisque;
     padding:1rem 0;
     line-height: 1.8;
 }
+.about .row .content .btn{
+    border-radius: 20px;
+    background-color: rgb(209, 72, 72) ;
+}
+
 
 .menu .box-container{
     display: grid;
