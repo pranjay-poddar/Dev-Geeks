@@ -369,33 +369,66 @@ section{
     gap:1.5rem;
 }
 
-.review .box-container .box{
+.review .box-container .box1{
     border:var(--border);
     text-align: center;
     padding:3rem 2rem;
 }
 
-.review .box-container .box p{
+.review .box-container .box1 p{
     font-size: 1.5rem;
     line-height: 1.8;
     color:#ccc;
     padding:2rem 0;
 }
 
-.review .box-container .box .user{
-    height: 7rem;
-    width: 7rem;
+.review .box-container .box1 .user{
+    height: 10rem;
+    width: 10rem;
     border-radius: 50%;
     object-fit: cover;
 }
 
-.review .box-container .box h3{
+.review .box-container .box1 h3{
     padding:1rem 0;
     font-size: 2rem;
+    font-family: Georgia, 'Times New Roman', Times, serif;
     color:#fff;
 }
 
-.review .box-container .box .stars i{
+.review .box-container .box1 .stars i{
+    font-size: 1.5rem;
+    color:var(--main-color);
+}
+.review .box-container .box2{
+    background-color: rgb(134, 97, 2);
+    border:var(--border);
+    text-align: center;
+    padding:3rem 2rem;
+}
+
+.review .box-container .box2 p{
+    font-size: 1.5rem;
+    line-height: 1.8;
+    color:#ccc;
+    padding:2rem 0;
+}
+
+.review .box-container .box2 .user{
+    height: 10rem;
+    width: 10rem;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.review .box-container .box2 h3{
+    padding:1rem 0;
+    font-size: 2rem;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color:#fff;
+}
+
+.review .box-container .box2 .stars i{
     font-size: 1.5rem;
     color:var(--main-color);
 }
