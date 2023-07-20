@@ -1,0 +1,42 @@
+<div data---="form__cmseditor.form__if:part;width:500;autofocus:true;submit:cmseditorpart/submit;title:@(Edit part);icon:object-ungroup" class="hidden">
+
+	<div class="padding bg-yellow">
+		<div data---="input__cmseditor.part.name__required:true;maxlength:30;placeholder:@(Type a name of part)" class="m">@(Name)</div>
+		<div class="hidden" data-bind="cmseditor.part.isnew__show:!value">
+			<span class="link b red exec" data-exec="cmseditorpart/remove"><i class="fa fa-times-circle mr5"></i>@(Remove part)</span>
+		</div>
+	</div>
+
+	<nav data---="validation__cmseditor.part">
+		<button name="submit"><i class="fa fa-check-circle"></i>@(APPLY)</button>
+		<button name="cancel">@(Cancel)</button>
+	</nav>
+
+</div>
+
+<script>
+
+	PLUGIN('cmseditorpart', function(exports) {
+
+		exports.remove = function() {
+			SETTER('approve/show', '@(Are you sure you want to remove this part?)', '"trash-o" @(Remove)', function() {
+				var target = cmseditor.part.target;
+				target.rattr('data-cms-part');
+				target.rclass('CMS_part');
+				cmseditor.instance.change(true);
+				NULL('cmseditor.form');
+			});
+		};
+
+		exports.submit = function(hide) {
+			var editor = cmseditor.instance;
+			var target = editor.getTarget();
+			var form = cmseditor.part;
+			form.target.attrd('cms-part', form.name);
+			form.target.aclass('CMS_part');
+			editor.change(true);
+			hide();
+		};
+	});
+
+</script>
