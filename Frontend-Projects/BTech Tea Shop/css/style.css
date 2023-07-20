@@ -424,6 +424,9 @@ section{
     font-size: 3.5rem;
     color:#fff;
 }
+.contact .row form h3 span{
+    color: rgb(209, 72, 72);
+}
 
 .contact .row form .inputBox{
     display: flex;
@@ -447,6 +450,10 @@ section{
     color:#fff;
     text-transform: none;
     background:none;
+}
+.contact .row form .btn{
+    font-size: 20px;
+    border-radius: 12px;
 }
 
 .blogs .box-container{
