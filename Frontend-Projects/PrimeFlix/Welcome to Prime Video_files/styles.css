@@ -19658,6 +19658,8 @@ a._4tt9ZY._4tt9ZY.I9Bzd2 strong {
   text-align: center;
   margin: auto;
   display: flex;
+  margin-top: 0;
+  width: 75%
 }
 
 .DVPAWebWidgetsCustomComponents_Text__text.DVPAWebWidgetsCustomComponents_Text__hasHeight {
@@ -22528,7 +22530,8 @@ html[dir="rtl"] .DVPAWebWidgetsCustomComponents_Address__address .DVPAWebWidgets
   position: relative;
   z-index: 1;
   padding: 64px 5%;
-  color: #fff
+  color: #fff;
+  height: 46rem
 }
 
 .DVPAWebWidgetsCustomComponents_CustomMagnet__wrapper .DVPAWebWidgetsCustomComponents_CustomMagnet__inner:after {

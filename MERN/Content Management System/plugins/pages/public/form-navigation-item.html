@@ -1,0 +1,115 @@
+<div data---="form__common.form2__if:pagesnavigationitem;width:650;submit:pagesnavigationitem/submit;reload:pagesnavigationitem/reload;scrollbar:true;$id:pagesnavigationitemmodal;title:@(Navigation item)" class="hidden">
+
+	<div data-scope="pagesnavigationitem">
+		<div class="padding bg-smoke">
+			<div data---="input__?.url2__dirsource:pages.list;icon:sitemap;dirvalue:url;dirplaceholder:@(Search)">@(URL according to the sitemap)</div>
+			<div class="help"><i class="fa fa-refresh"></i>@(CMS will synchronizes all information automatically according to the page settings.)</div>
+		</div>
+		<hr class="nmt" />
+		<div class="padding npt npb">
+			<div class="row">
+				<div class="col-md-8 m">
+					<div data---="input__?.name__required:1;maxlength:50">@(Name)</div>
+				</div>
+				<div class="col-md-4 m">
+					<div data---="input__?.language__dirsource:common.dependencies.languages;dirplaceholder:@(Search)">@(Language)</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-8 m">
+					<div data---="input__?.url__maxlength:500;required:1">@(URL address)</div>
+					<div class="mt10 fs12"><span class="link exec" data-exec="?/file"><i class="fa fa-folder-o mr5"></i>@(Insert file)</span></div>
+				</div>
+				<div class="col-md-4 m">
+					<div class="fs12" style="margin-bottom:3px">@(Choose icon):</div>
+					<div data---="input__?.icon__type:icon"></div>
+				</div>
+			</div>
+		</div>
+		<div class="padding bg-yellow">
+			<div class="row">
+				<div class="col-md-6 m">
+					<div data---="input__?.target__dirsource:?internal.target;dirplaceholder:@(Search);required:true__'_self'">@(Target)</div>
+				</div>
+				<div class="col-md-6 m">
+					<div data---="input__?.behaviour__dirsource:?internal.behaviour;dirplaceholder:@(Search)__'default'">@(Behaviour)</div>
+				</div>
+			</div>
+			<div data---="input__?.title__maxlength:100" class="m">@(Tooltip)</div>
+		</div>
+	</div>
+
+	<nav data---="validation__pagesnavigationitem">
+		<button name="submit"><i class="fa fa-check-circle"></i>@(APPLY)</button>
+		<button name="cancel">@(Cancel)</button>
+	</nav>
+
+</div>
+
+<script>
+
+	PLUGIN('pagesnavigationitem', function(exports) {
+
+		SET('?internal.target', [{ name: '@(Current tab or window)', id: '_self' },{ name: '@(New tab or window)', id: '_blank' }]);
+		SET('?internal.behaviour', [{ name: '@(Default)', id: 'default' },{ name: '@(Highlight)', id: 'highlight' },{ name: '@(Info)', id: 'info' },{ name: '@(Warning)', id: 'warn' },{ name: '@(Special)', id: 'special' }]);
+
+		exports.reload = function() {
+			setTimeout2(exports.name, function() {
+				SETTER('#pagesnavigationitemmodal/resize');
+			}, 500);
+		};
+
+		exports.file = function() {
+			refresh_filebrowser('pagesnavigationitem.url');
+		};
+
+		exports.submit = function() {
+
+			var obj = pagesnavigationitem;
+			var page = pages.grid.items.findItem('url', obj.url);
+
+			obj.pageid = page ? page.id : null;
+
+			if (obj.id) {
+				var index = obj.$target.findIndex('id', obj.id);
+				obj.$target[index] = obj;
+				obj.$target = undefined;
+			} else {
+				obj.id = GUID(10);
+				obj.$target.push(obj);
+				obj.$target = undefined;
+			}
+
+			NULL('common.form2');
+
+			// Notifies parent
+			UPDATE('pagesnavigation.children');
+			CHANGE('pagesnavigation.children', true);
+		};
+
+		WATCH('?.url2', function(path, value, type) {
+			if (value && type === 2)
+				SET('?.url', value, 2);
+		});
+
+		WATCH('?.url', function(path, value, type) {
+
+			SET('?.url2', value);
+
+			if (type === 2 && pagesnavigationitem.target !== '_blank' && (/^(http|https)\:\/\//i).test(value))
+				SET('cmseditor.link.target', '_blank');
+
+			if (type === 2) {
+				var item = pages.grid.items.findItem('url', value);
+				if (item) {
+					var tmp = GET('?');
+					tmp.name = item.name;
+					tmp.icon = item.icon;
+					tmp.title = item.title;
+					tmp.language = item.language;
+					UPDATE('?');
+				}
+			}
+		}, true);
+	});
+</script>
