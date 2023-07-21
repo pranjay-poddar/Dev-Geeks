@@ -1,0 +1,221 @@
+:root {
+    --very-dark-magenta: hsl(300, 43%, 22%);
+    --soft-pink: hsl(333, 80%, 67%);
+    --dark-grayish-magenta: hsl(303, 10%, 53%);
+    --light-grayish-magenta: hsl(300, 24%, 96%);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url('https://raw.githubusercontent.com/0xabdulkhalid/social-proof-section/main/images/bg-pattern-top-mobile.svg'), url('https://raw.githubusercontent.com/0xabdulkhalid/social-proof-section/main/images/bg-pattern-bottom-mobile.svg');
+    background-repeat: no-repeat, no-repeat;
+    background-position: top left, bottom right;
+    background-size: 100%, 100%;
+    font-family: 'League Spartan', sans-serif;
+}
+
+.main {
+    display: grid;
+    grid-template-rows: .5fr 150px 350px;
+    grid-auto-rows: max-content;
+    place-items: center;
+    color: var(--very-dark-magenta);
+    text-align: center;
+    min-height: 150vh;
+    margin: 50px 0;
+}
+
+.main__heading {
+    font-size: 2.5rem;
+    width: 70%;
+    align-self: flex-end;
+    line-height: 1em;
+    font-weight: 700;
+}
+
+.main__description {
+    width: 90%;
+    line-height: 1.5em;
+    color: var(--dark-grayish-magenta);
+    font-weight: 500;
+    font-size: 1.1rem;
+}
+
+.main__ratings-container {
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    width: 100%;
+    height: 90%;
+    place-items: center;
+}
+
+.ratings {
+    width: 90%;
+    padding: 20px 0;
+    border-radius: 10px;
+    background: var(--light-grayish-magenta);
+    font-weight: 700;
+    display: grid;
+    gap: 12px;
+}
+
+.ratings__stars-container {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+}
+
+.main__testimonal-container {
+    display: grid;
+    place-items: center;
+    grid-template-rows: repeat(3, 250px);
+    margin-top: 20px;
+}
+
+.testimonal {
+    background: var(--very-dark-magenta);
+    color: white;
+    display: grid;
+    grid-template-rows: 80px 150px;
+    height: 95%;
+    width: 90%;
+    padding: 20px 30px;
+    border-radius: 10px;
+    line-height: 1.5em;
+}
+
+.testimonal__user-profile {
+    display: flex;
+    gap: 20px;
+    place-items: center;
+}
+.testimonal__user-avatar {
+    width: 40px;
+    border-radius: 50%;
+}
+.testimonal__username {
+    font-weight: 800;
+}
+.testimonal__verified-user {
+    color: var(--soft-pink);
+}
+.testimonal__user-testimonal {
+    text-align: justify;
+    font-weight: 500;
+}
+
+.attribution {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    font-size: 0.8rem;
+    text-align: center;
+    margin: 2rem 0 1rem 0;
+}
+.attribution__link:link, .attribution__link:visited {
+    color: #502050;
+    transition: all 0.2s; 
+}
+.attribution__link:hover, .attribution__link:active {
+    color: #937b92; 
+}
+
+@media (min-width: 56.25em) {
+
+
+    html {
+        overflow: hidden;
+    }
+
+    body {
+        background-image: url('https://raw.githubusercontent.com/0xabdulkhalid/social-proof-section/main/images/bg-pattern-top-desktop.svg'), url('.https://raw.githubusercontent.com/0xabdulkhalid/social-proof-section/main/images/bg-pattern-bottom-desktop.svg');
+        background-size: 50%, 80%;
+        background-position: top -23% left -9%, bottom right -30%;
+        padding-bottom: 20px;
+        height: 100vh;
+        display: grid;
+        place-items: center;
+    }
+
+    .main {
+        grid-template-columns: .7fr 1fr;
+        grid-template-rows: .25fr 100px 1fr;
+        margin: 0;
+        text-align: start;
+        transform: scale(.85);
+        background: unset;
+        min-height: unset;
+    }
+
+    .main__heading {
+        width: 70%;
+        font-size: 3.7rem;
+        align-self: flex-end;
+        justify-self: self-start;
+        margin: 0 0 20px 30px;
+    }
+
+    .main__description {
+        grid-row: 2;
+        align-self: flex-start;
+        font-size: 1.4rem;
+    }
+
+    .main__ratings-container {
+        grid-column: 2/-1;
+        grid-row: span 2;
+    }
+
+    .ratings {
+        width: 60%;
+        display: grid;
+        grid-template-columns: .7fr 1fr;
+        font-size: 1.2rem;
+        transition: all .7s ease;
+    }
+
+    .ratings:nth-of-type(1){
+        align-self: flex-end;
+    }
+
+    .ratings:nth-of-type(2){
+        margin-left: 80px;
+    }
+
+    .ratings:nth-of-type(3){
+        align-self: flex-start;
+        margin-left: 160px;
+    }
+
+    .main__testimonal-container {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: unset;
+        grid-column: 1/-1;
+    }
+
+    .testimonal {
+        height: 68%;
+        font-size: 1.2rem;
+        transition: .7s ease;
+    }
+
+    .testimonal:nth-of-type(2) {
+        margin-top: 50px;
+    }
+
+    .testimonal:nth-of-type(3) {
+        margin-top: 100px;
+    }
+
+    .ratings:hover {
+       transform: translateX(-10%);;
+    }
+    .testimonal:hover {
+        transform: translateY(-10%);
+    }
+}
