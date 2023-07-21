@@ -1,0 +1,155 @@
+/* Styling of this border-box */
+html,
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow-x: overlay;
+}
+
+body {
+    font-family: 'Rubik', system-ui, sans-serif;
+    background-color: #273544;
+    color: white;
+    box-sizing: border-box;
+    font-size: 0.5em;
+}
+
+header {
+    font-size: 5em;
+    grid-area: 2 / 4 / 4 / 12;
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+.creator {
+    font-size: 1rem;
+}
+
+.symbol {
+    font-weight: 500;
+    margin: 0;
+}
+
+h2 {
+    font-weight: 500;
+}
+
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #273544;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #222e3d;
+}
+
+.element {
+    --color: #3498db;
+    grid-column: var(--xpos);
+    grid-row: var(--ypos);
+    color: var(--color);
+    padding: 8px;
+    cursor: pointer;
+    border-radius: 4px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    transition: background-color 200ms ease;
+}
+
+.element .symbol {
+    clear: both;
+}
+
+.element .atomic-number {
+    display: block;
+    text-align: right;
+    float: right;
+}
+
+.element:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+/* Syling of this periodic table box */
+#app {
+    width: 100%;
+    height: 100%;
+    overflow-y: overlay;
+}
+
+.ptable-container {
+    display: grid;
+    box-sizing: border-box;
+    padding: 24px;
+    margin-bottom: 70px;
+    min-height: calc(100% - 70px);
+    grid-template-columns: repeat(18, 1fr);
+    grid-template-rows: repeat(10, 1fr);
+}
+
+.element-details {
+    box-sizing: border-box;
+    padding: 0 32px;
+    display: grid;
+    grid-template-columns: 3fr 7fr 3fr 4fr min-content 8fr;
+    align-items: center;
+    font-size: 2em;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    background-color: #273544;
+    width: 100%;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.25);
+}
+
+.element-details .atomic-number {
+    font-size: 2rem;
+}
+
+.element-details .dot {
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    margin-right: 16px;
+    vertical-align: middle;
+    background-color: var(--color);
+    border-radius: 100%;
+}
+
+#element-119 {
+    opacity: 0.2;
+    transition: opacity 200ms ease;
+}
+
+#element-119:hover {
+    opacity: 1;
+}
+
+.font-medium {
+    font-weight: 500;
+}
+
+/* Responsiveness of the website */
+@media (max-width: 900px) {
+    header {
+        text-align: center;
+        font-size: 2.5em;
+    }
+
+    .element {
+        text-align: center;
+    }
+
+    .element *:not(.symbol) {
+        display: none;
+    }
+}

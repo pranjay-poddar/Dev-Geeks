@@ -1,0 +1,35 @@
+div{
+	height: 200px;
+	width: 200px;
+	position: absolute;
+	top: 40%;
+	left: 40%;
+	background-color: cyan;
+	animation: changeShape 1s ease-in-out infinite alternate;
+
+}
+
+/*@keyframes changeShape{
+	from {
+		border-radius: 0%;
+	}
+
+	to{
+		border-radius: 50%;
+	}
+}*/
+
+@keyframes changeShape{
+	0%{
+		boreder-radius:0%;
+	}
+	25%{
+		border-radius: 12.5%;
+	}
+	50%{
+		border-radius: 25%;
+	}
+	100%{
+		border-radius: 50%;
+	}
+}

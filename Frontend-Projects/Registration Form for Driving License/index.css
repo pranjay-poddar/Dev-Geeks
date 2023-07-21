@@ -1,0 +1,22 @@
+.submit {
+    background: #B9DFFF;
+	color: #fff;
+	border: 1px solid #eee;
+	border-radius: 40px;
+    font-size: 20px;
+    padding: 14px 40px;
+	box-shadow: 5px 5px 5px #eee;
+	text-shadow: none;
+}
+.submit:hover{
+    background: #016ABC;
+	color: #fff;
+	border: 1px solid #eee;
+	border-radius: 40px;
+    font-size: 20px;
+    padding: 14px 40px;
+	box-shadow: 5px 5px 5px #eee;
+	text-shadow: none;
+}
+
+

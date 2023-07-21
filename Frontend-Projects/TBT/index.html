@@ -1,10 +1,8 @@
-<html lang="en">
+<!DOCTYPE html>
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TBT website</title>
-    <link rel="stylesheet" href="style.css">
+  <title>Tour Before Trip</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
     <div class="main">
@@ -14,17 +12,134 @@
         <nav>
             <img src="TBT_imgs/logo.png" class="logo">
             <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Know Places</a></li>
-                <li><a href="#">Find Support</a></li>
-                <li><a href="#">Contact Us</a></li>
+                <li><a href="#destinations">Destinations</a></li>
+                <li><a href="#activities">Activities</a></li>
+                <li><a href="#accommodations">Accommodations</a></li>
+                <li><a href="#testimonials">Testimonials</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
         <div class="content">
             <h1>Tour Before Trip</h1>
-            <a href="#">Visit</a>
+            <h2>Plan Your Perfect Adventure</h2>
+            <a href="#destinations" class="btn">Explore Destinations</a>
         </div>
     </div>
-    
+
+
+
+
+
+  <section id="destinations">
+    <h2>Discover Exciting Destinations</h2>
+    <div class="destination-card">
+      <img src="./TBT_imgs/destination1.jpg" alt="Destination 1">
+      <h3>Destination 1</h3>
+      <p>Explore the wonders of Destination 1 with its stunning landscapes and vibrant culture.</p>
+    </div>
+    <div class="destination-card">
+      <img src="./TBT_imgs/destination2.jpg" alt="Destination 2">
+      <h3>Destination 2</h3>
+      <p>Experience the thrill of adventure in Destination 2, where natural beauty meets adrenaline-pumping activities.</p>
+    </div>
+    <div class="destination-card">
+      <img src="./TBT_imgs/destination3.jpg" alt="Destination 3">
+      <h3>Destination 3</h3>
+      <p>Immerse yourself in the rich history and architectural marvels of Destination 3.</p>
+    </div>
+  </section>
+  
+
+
+
+
+  <section id="activities">
+    <div class="container">
+      <h2>Exciting Activities for Every Traveler</h2>
+      <ul class="activity-list">
+        <li>
+          <img src="./TBT_imgs/activity1.jpg" alt="Hiking">
+          <span>Hiking</span>
+        </li>
+        <li>
+          <img src="./TBT_imgs/activity2.jpg" alt="Scuba Diving">
+          <span>Scuba Diving</span>
+        </li>
+        <li>
+          <img src="./TBT_imgs/activity3.jpeg" alt="City Tours">
+          <span>City Tours</span>
+        </li>
+        <li>
+          <img src="./TBT_imgs/activity4.jpg" alt="Wildlife Safari">
+          <span>Wildlife Safari</span>
+        </li>
+        <!-- More activities -->
+      </ul>
+    </div>
+  </section>
+  
+
+
+
+
+
+  <section id="accommodations">
+    <h2>Comfortable Accommodations</h2>
+    <div class="accommodation-card">
+      <img src="./TBT_imgs/accomodation1.jpg" alt="Accommodation 1">
+      <h3>Accommodation 1</h3>
+      <p>Enjoy a cozy stay at Accommodation 1, known for its excellent service and breathtaking views.</p>
+    </div>
+    <div class="accommodation-card">
+      <img src="./TBT_imgs/accomodation2.jpg" alt="Accommodation 2">
+      <h3>Accommodation 2</h3>
+      <p>Relax in luxury at Accommodation 2, where you'll be pampered with top-notch amenities and unmatched hospitality.</p>
+    </div>
+    <!-- More accommodation cards -->
+  </section>
+
+
+
+
+  <section id="testimonials">
+    <h2>What Our Customers Say</h2>
+    <div class="testimonial">
+      <img src="./TBT_imgs/customer1.jpg" alt="Customer 1">
+      <blockquote>
+        <p>"Tour Before Trip helped me plan the most memorable vacation of my life. The destinations, activities, and accommodations were all incredible!"</p>
+        <cite>- John Doe</cite>
+      </blockquote>
+    </div>
+    <div class="testimonial">
+      <img src="./TBT_imgs/customer2.jpg" alt="Customer 2">
+      <blockquote>
+        <p>"I highly recommend Tour Before Trip to anyone who wants a hassle-free and unforgettable travel experience. They truly go above and beyond!"</p>
+        <cite>- Jane Smith</cite>
+      </blockquote>
+    </div>
+    <!-- More testimonials -->
+  </section>
+
+
+
+
+
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <p>Have questions or need assistance? We're here to help! Contact our friendly team:</p>
+    <form>
+      <input type="text" name="name" placeholder="Your Name">
+      <input type="email" name="email" placeholder="Your Email">
+      <textarea name="message" placeholder="Your Message"></textarea>
+      <button type="submit" class="btn">Send Message</button>
+    </form>
+  </section>
+
+
+
+
+  <footer>
+    <p>&copy; 2023 Tour Before Trip. All rights reserved.</p>
+  </footer>
 </body>
 </html>

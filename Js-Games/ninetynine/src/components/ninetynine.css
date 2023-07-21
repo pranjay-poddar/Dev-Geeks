@@ -1,0 +1,40 @@
+.h {
+    color: #4ba4eb;
+    text-decoration: none;
+    font-family: "Press Start 2P", cursive;
+  }
+  .fancy {
+    color: white;
+    font-family: "Peralta", cursive;
+    text-align: center;
+    
+  }
+  
+  .keypad {
+      width: 80%;
+      max-width: 600px;
+      margin: auto;
+  }
+  
+  .keypad > div{
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 0.5em;
+      margin: 0.5em 0;
+      height: 4em;
+  }
+  
+  .keypad > div > div {
+      cursor: pointer;
+      background-color: #4ba4eb;
+      display: grid;
+      place-items: center;
+      font-size: 1.5rem;
+      border-radius: 1em;
+      box-shadow: 2px 2px 4px rgba(120, 128, 167, 0.63);
+  }
+  
+  .keypad > div > div:hover {
+      background-color: #4196dc;
+      box-shadow: none;
+  }

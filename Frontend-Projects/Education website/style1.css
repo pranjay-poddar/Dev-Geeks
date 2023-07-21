@@ -1,0 +1,282 @@
+body{
+    margin: 0;
+    
+}
+.navbar {
+  height: 80px;
+    overflow: hidden;
+    background-color: #333;
+    background-image:linear-gradient(rgb(47, 44, 44), grey);
+
+  }
+  
+  .navbar a {
+    float: left;
+    color: #f2f2f2;
+      margin-top: 8px;
+    text-align: center;
+      font-size: 30px;
+    padding: 15px 26px;
+    text-decoration: none;
+  }
+  .navbar img{
+    margin-top: -4px;
+      float: left;
+      height: 100px;
+      width: 150px;
+  }
+  
+  .navbar a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  .list{
+    width: 650px;
+    background-image: linear-gradient(to bottom right, rgba(102, 91, 18, 0.442), rgb(190, 194, 155));
+    border-radius: 15px;
+    text-align: left;
+    text-decoration: none;
+    height: 200px;
+
+  }
+  .split{
+    height: 100%;
+    width: 50%;
+    position: fixed;
+  }
+  .left{
+      top: 120px;
+      left: 50px;
+  }
+  .right{
+    right: 10px;
+  }
+  .split h1{
+    margin-top: 10px;
+   font-size: 60px;
+  color: rgb(20, 15, 15);
+   padding: 30px;
+  }
+  .split span{
+    margin-top: -2px;
+    font-size: 90px;
+    color: rgb(5, 93, 5);
+  }
+  .split li{
+    font-size: 30px;
+    font-weight: bolder;
+      padding: 5px;
+  }
+  button{
+    margin-left: 200px;
+    font-size: 15px;
+    padding: 10px;
+    border-radius: 10px;
+    font-weight: 900;
+    background-image: linear-gradient(to bottom right, rgba(30, 28, 34, 0.442), rgb(34, 255, 126));
+    border: none;
+  }
+  .button:hover{
+    background-color: white;
+    background-image: linear-gradient(to bottom right, rgba(8, 6, 11, 0.442), rgb(33, 80, 52));
+    color: #fff;
+
+  }
+  .button a{
+    text-decoration: none;
+  }
+  .split .img2{
+    float: right;
+  }
+  .split img{
+    border: 8px solid rgb(255, 255, 255);
+  }
+/* About section*/
+.about-section h2{
+    font-size: 50px;
+    text-align: center;
+}
+.about-section p{
+    margin-left: 50px;
+  margin-right: 50px;
+  
+  border-radius: 2px;
+    font-size: 30px;
+}
+.about-section .skill .column h2{
+  font-size: 30px;
+  
+}
+/* Three image containers (use 25% for four, and 50% for two, etc) */
+.about-section .skill .column {
+  float: left;
+  width: 33.33%;
+  padding: 5px;
+}
+
+/* Clear floats after image containers */
+.about-section .skill::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+.column{
+
+    float: left;
+    width: 20%;
+    padding: 10px;
+    height: 300px;
+    
+}
+.row:after{
+    content: "";
+    display: table;
+    clear: both;
+}
+/*contact page----*/
+input[type=text],textarea{
+    width: 100%;
+    padding: 12px;
+    border: 5px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+    background-color: white;
+}
+input[type=submit] {
+    background-color: #04AA6D;
+    color: white;
+    padding: 12px 20px;
+    border: 3px solid black;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  input[type=submit]:hover {
+    background-color: #161e39;
+  }
+  label{
+      font-size: 30px;
+      font-weight: bold;
+  }
+  .Contact h2{
+      text-align: center;
+      font-size: 40px;
+  }
+  body{
+    background-image: url("bg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+  }
+
+/* skills card*/
+
+.row{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.row a{
+  text-decoration: none;
+}
+
+
+.flip-card {
+  background-color: transparent;
+  width: 300px;
+  height: 300px;
+  padding: 20px;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  border:5px solid black;
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flip-card-front {
+  background-color: lightblue;
+  color: black;
+}
+.flip-card-back h1 {
+ font-size: 30px;
+}
+
+.flip-card-back {
+  background-color: rgb(66, 140, 224) ;
+  color: rgb(35, 34, 34);
+  transform: rotateY(180deg);
+}
+/*boxes for sites/content/courses*/
+.column1{
+  float: left;
+  height: 1000px;
+  width: 33.095%;
+  background-color: lightblue;
+ 
+}
+.column1 h1{
+  text-align: center;
+  font-size: 40px;
+}
+.row1:after{
+  content: "";
+  display: table;
+  clear: both;
+}
+.column1 li a{
+    margin-left: 20px;
+  font-size: 25px;
+  text-decoration: none;
+}
+/*footer*/
+.fa {
+  padding: 20px;
+  font-size: 40px;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+  border-radius: 10px;
+}
+.fa:hover {
+  opacity: 0.7;
+}
+
+.fa-facebook {
+background: #3B5998;
+color: white;
+}
+.fa-linkedin {
+  background: #007bb5;
+  color: white;
+}
+.fa-instagram {
+  background: #125688;
+  color: white;
+}
+.footer{
+  background-color: black;
+  color: white;
+  text-align: center;
+}

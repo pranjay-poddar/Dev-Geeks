@@ -1,0 +1,55 @@
+/* Flex container for the list items */
+#linkList {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    list-style: none;
+  }
+  
+  /* Styling for the list item cards */
+  .card {
+    flex-basis: 30%; /* Adjust as per your preference for relative sizing */
+    border-radius: 10px; 
+    padding: 10px;
+    margin-bottom: 20px;
+    text-align: center;
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* Styling for the link within the card */
+  .card a {
+    text-decoration: none;
+    color: white;
+    display: block;
+  }
+  
+  /* Responsive styling for smaller screens */
+  @media screen and (max-width: 768px) {
+    .card {
+      flex-basis: 45%;
+    }
+  }
+ 
+.feature {
+  width: auto;
+  height: auto;
+}
+
+.filter-btn {
+  display: flex;
+  justify-content: space-between;
+}
+
+#heading {
+  margin-top: 4rem;
+}
+
+.current-tab {
+  font-size: 0.9rem;
+  color: papayawhip;
+}
+
+.current {
+  border-bottom: 3px solid papayawhip;
+  padding-bottom: 0px;
+}

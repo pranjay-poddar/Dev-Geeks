@@ -1,0 +1,134 @@
+*{
+    margin:0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+body{
+    width: 100%;
+    height: auto;
+}
+
+header{
+    text-align: center;
+    padding: 2rem 0;
+    color: #fff;
+    background-color: #fce043;
+    background-image: linear-gradient(315deg, #fce043 0%, #fb7ba2 74%);
+}
+
+header h1{
+    font-size: 3rem;
+    font-family:'Trebuchet MS';
+}
+
+main{
+    width: 100%;
+    margin-top: 5rem;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+section{
+    width: 100%;
+    height: auto;
+    text-align: center;
+}
+
+section h2{
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    font-family: cursive;
+    text-shadow: 3px 1px gainsboro;
+}
+
+.color-palette{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    margin-bottom: 1rem;
+}
+
+.card{
+    width: 11rem;
+    height: 18rem;
+    border-radius: 13px;
+    margin-top: 1.9rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 1rem 1.6rem;
+}
+
+.clr{
+    width: 11rem;
+    height: 14rem;
+    border: 1px solid gainsboro;
+    border-radius: 13px;
+}
+
+.name{
+    margin-top: 1rem;
+    font-size: 1.5rem;
+}
+
+.generate{
+    width: 14rem;
+    margin-top: 1rem;
+    padding: 1rem 1rem;
+    border: none;
+    border-radius: 5px;
+    background-color: #f876de;
+    background-image: linear-gradient(315deg, #f876de 0%, #b9d1eb 74%);
+    color: #fff;
+    font-size: 1rem;
+    cursor: pointer;
+    font-size: 1.5rem;
+}
+
+.generate:hover{
+    background-image: linear-gradient(315deg, #b9d1eb 0%, #f876de 74%);
+    color: #fff;
+}
+
+footer{
+    width:100%;
+    text-align: center;
+    margin-top: 1rem;
+    font-size: 1.3rem;
+    text-shadow: 3px 1px gainsboro;
+}
+
+span{
+    color: red;  
+}
+
+@media screen and (max-width: 768px){
+    .color-palette{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 540px){
+    .color-palette{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .card{
+        width: 17rem;
+        height: 20rem;
+    }
+
+    .clr{
+        width: 17rem;
+    }
+}

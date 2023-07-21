@@ -1,0 +1,85 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <title>FlowCV Login Page</title>
+</head>
+<body>
+    <header>
+       
+        <div class="topnav">
+            <h2>Build you own CV</h2>
+            <a href="index.html">Home</a>
+            <a href="services.html">Services</a>
+            <a href="contact.html">Contact Us</a>
+            <a href="#about" class="split">Login</a>
+          </div>
+    </header>
+    
+    <div class="section" >
+        <span class="icon-close"><ion-icon name="close-outline"></ion-icon></span>
+        <div class="front-side Login">
+            <h2>Login</h2>
+            <form action="#">
+                <div class="enter-input">
+                    <span class="icon"><ion-icon name="mail"></ion-icon></span>
+                    <input type="email"  required>
+                    <label>Email</label>
+                </div>
+                <div class="enter-input">
+                    <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
+                    <input type="password"  required>
+                    <label>Password</label>
+                </div>
+                <div class="remember-forgot">
+                    <label><input type="checkbox">Remember me</label>
+                    <a href="#">Forgot Password?</a>
+                </div>
+                <button type="submit" class="btn">Login</button>
+                <div class="login-registration">
+                    <p>Don't have an account? <a href="#" class="registration-link">Register</a></p>
+                </div>
+            </form>
+        </div>
+
+        <div class="front-side Register">
+            <h2>Registration</h2>
+            <form action="#">
+                <div class="enter-input">
+                    <span class="icon"><ion-icon name="person"></ion-icon></span>
+                    <input type="text" required>
+                    <label>Username</label>
+                </div>
+                <div class="enter-input">
+                    <span class="icon"><ion-icon name="mail"></ion-icon></span>
+                    <input type="email" required>
+                    <label>Email</label>
+                </div>
+                <div class="enter-input">
+                    <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
+                    <input type="password" required>
+                    <label>Password</label>
+                </div>
+                <div class="remember-forgot">
+                    <label><input type="checkbox">I accept to the terms and conditions</label>
+               </div>
+                <button type="submit" class="btn">Register</button>
+                <div class="login-registration">
+                    <p>Already have an account? <a href="#" class="login-link">Login</a></p>
+                </div>
+            </form>
+        </div>
+
+    </div>
+    <script src="script.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+        
+</body>
+</html>
