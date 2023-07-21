@@ -56,6 +56,7 @@ img{
 
 .heading-dark{
     color: var(--brown-color);
+    text-align: center;
 }
 
 .heading-light{
