@@ -217,6 +217,7 @@ input {
   cursor: pointer;
 }
 
+
 .nav__menu {
   position: relative;
 }
@@ -351,6 +352,17 @@ a i{
 i:hover{
   transform: scale(1.5);
 }
+
+#facebook :hover{
+ font-size: 2rem;
+}
+#instagram :hover{
+  font-size: 2rem;
+ }
+ #twitter :hover{
+  font-size: 2rem;
+}
+
 .home__info {
   background-color: var(--first-color);
   display: flex;
@@ -395,10 +407,12 @@ i:hover{
   padding: 1rem 2rem;
   font-weight: var(--font-semi-bold);
   transition: .3s;
+  
 }
 
 .button:hover {
   background-color: var(--first-color-alt);
+  
 }
 
 .button--flex {
@@ -410,10 +424,13 @@ i:hover{
 .button--link {
   background: none;
   padding: 0;
+  position:relative;
 }
 
 .button--link:hover {
   background: none;
+  transform: translateX(40%) scale(1.2);
+ 
 }
 
 /*=============== ABOUT ===============*/
@@ -767,6 +784,9 @@ i:hover{
   color: var(--title-color);
   margin-right: var(--mb-1-25);
 }
+.footer__social :hover{
+  font-size: 2rem;
+}
 
 .footer__subtitle {
   margin-bottom: var(--mb-1);
@@ -903,6 +923,7 @@ i:hover{
   }
   .nav__link:hover {
     color: var(--white-color);
+    font-size:1.2rem;
   }
   .nav__dark {
     position: initial;
