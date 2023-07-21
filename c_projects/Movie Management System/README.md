@@ -13,14 +13,13 @@ The Movie Management System is a command-line program written in C language to h
 
 ## How to Run
 
-1. Ensure you have a C compiler installed on your machine (e.g., GCC).
+1. Ensure you have a C compiler installed on your machine.
 
-2. Clone the repository from GitHub: `git clone https://github.com/your-username/movie-management-system.git`
+2. Clone the repository from GitHub
 
 3. Navigate to the project directory: `cd movie-management-system`
 
-4. Compile the C program: `gcc movie_management.c -o movie_management`
-
+4. Compile the C program
 5. Run the application: `./movie_management`
 
 ## Usage
