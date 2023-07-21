@@ -1,0 +1,188 @@
+*,
+*::after,
+*::before {
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+	font-family: bookman old style;
+}
+body {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100vw;
+	height: 100vh;
+	background: linear-gradient(#2193b0, #6dd5ed);
+}
+img {
+	width: 100%;
+	aspect-ratio: 2/1;
+	border-radius: 10px;
+	object-fit: contain;
+}
+i {
+	border: 1px solid gray;
+	padding: 8px 16px;
+	cursor: pointer;
+}
+
+.edtr_section {
+	background-color: white;
+	width: 90%;
+	box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3), 0 2px 4px rgba(0, 0, 0, 0.3),
+		0 4px 8px rgba(0, 0, 0, 0.3), 0 8px 16px rgba(0, 0, 0, 0.07),
+		0 16px 32px rgba(0, 0, 0, 0.07), 0 32px 64px rgba(0, 0, 0, 0.07);
+	border-radius: 20px;
+	padding: 20px 30px;
+	display: grid;
+	gap: 15px;
+	height: auto;
+	/* overflow: hidden; */
+}
+.edtr_header {
+	text-transform: capitalize;
+	font-size: 1.6rem;
+	text-align: center;
+	width: 100%;
+}
+.edtr_body {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 100%;
+	gap: 20px;
+}
+.edtr_options {
+	width: 100%;
+	border: 1px solid lightgray;
+	padding: 10px 20px;
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+	text-transform: capitalize;
+	font-weight: bold;
+	height: auto;
+	/* overflow: hidden; */
+}
+
+.edtr_output {
+	width: 100%;
+	overflow: hidden;
+}
+.edtr_footer {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+button {
+	background-color: transparent;
+	text-transform: uppercase;
+	padding: 10px 10px;
+	border: 1px solid gray;
+	color: gray;
+	font-size: 0.8rem;
+	cursor: pointer;
+	transition: all 200ms linear;
+	border-radius: 2px;
+}
+.edtr_reset button:hover {
+	background-color: gray;
+	color: white;
+}
+.edtr_choose button {
+	background-color: gray;
+	color: white;
+}
+.edtr_choose button:hover {
+	background-color: rgb(143, 142, 142);
+}
+.edtr_choose button:last-child {
+	background-color: #2193b0;
+	border: 2px solid rgb(81, 173, 239);
+}
+.edtr_choose button:last-child:hover {
+	background-color: #02a5ce;
+}
+.filter {
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
+}
+.filter_options {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: repeat(auto, 1fr);
+	gap: 10px;
+}
+.saturation {
+	display: flex;
+	flex-direction: column;
+	gap: 0px;
+}
+.sat_header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+.rotation {
+	display: flex;
+	flex-direction: column;
+	gap: 5px;
+}
+.icons {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+}
+:is(button, i):hover {
+	background-color: whitesmoke;
+}
+.active {
+	background-color: #2193b0;
+	color: white;
+}
+.active:hover {
+	background-color: #2193b0;
+	color: white;
+}
+input[type='range'] {
+	width: 100%;
+}
+
+.edtr_section.disable
+	:where(.edtr_body, .edtr_reset, .edtr_choose button:last-child) {
+	opacity: 0.6;
+	pointer-events: none;
+}
+.filter_name {
+	text-transform: capitalize;
+}
+.filter_options button {
+	text-transform: capitalize;
+	font-size: 1rem;
+}
+@media screen and (min-width: 568px) {
+	.edtr_section {
+		width: 500px;
+	}
+}
+@media screen and (min-width: 768px) {
+	.edtr_section {
+		width: 50%;
+		/* gap: 1px; */
+	}
+	button {
+		padding: 10px 5px;
+	}
+}
+
+@media screen and (min-width: 1024px) {
+	.edtr_body {
+		flex-direction: row;
+	}
+	.edtr_section {
+		width: 1000px;
+	}
+}

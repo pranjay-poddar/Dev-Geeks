@@ -1,0 +1,16 @@
+::-webkit-scrollbar {
+	background-color: blueviolet;
+	width: 4px;
+}
+::-webkit-scrollbar-button {
+	background-color: whitesmoke;
+}
+::-webkit-scrollbar-thumb {
+	background-color: gray;
+}
+::-webkit-scrollbar-track {
+	background-color: whitesmoke;
+}
+.image:hover div:nth-child(2) > div {
+	bottom: 5rem;
+}

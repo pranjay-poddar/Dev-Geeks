@@ -890,9 +890,11 @@ section {
 
 .footer {
   background: #f0fdfa;
+  margin-bottom: -10px;
 }
 
 .footer .box-container {
+  padding-left: -20px;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (minmax(25rem, 1fr))[auto-fit];
@@ -1047,3 +1049,52 @@ section {
   }
 }
 /*# sourceMappingURL=style.css.map */
+
+.password-input-container {
+  position: relative;
+}
+
+.password-toggle-icon {
+  position: absolute;
+  top: 62%;
+  right:56px;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+.password-toggle-icon i {
+  color: #999;
+  font-size: 14px;
+}
+
+.password-toggle-icon:hover i {
+  color: #333;
+}
+
+.confirm-password-input-container {
+  position: relative;
+}
+
+.confirm-password-toggle-icon {
+  position: absolute;
+  top: 53%;
+  right:56px;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+.confirm-password-toggle-icon i {
+  color: #999;
+  font-size: 14px;
+}
+
+.confirm-password-toggle-icon:hover i {
+  color: #333;
+}
+.login-password-toggle-icon{
+  position: absolute;
+  top: 55%;
+  right:56px;
+  transform: translateY(-50%);
+  cursor: pointer;
+}

@@ -1,0 +1,85 @@
+{
+  "id": "32384ef5-f8e7-49d6-b145-0d7e8024d950",
+  "name": "Conversation 3 - 2.only loose motion - no",
+  "auto": true,
+  "condition": "",
+  "conditionalFollowupEvents": [],
+  "conditionalResponses": [],
+  "context": [
+    "Conversation3-2onlyloosemotion-followup"
+  ],
+  "contexts": [
+    "Conversation3-2onlyloosemotion-followup"
+  ],
+  "endInteraction": false,
+  "events": [],
+  "fallbackIntent": false,
+  "liveAgentHandoff": false,
+  "parentId": "a9f18bac-da08-4ee3-9832-fbf49c8c6dc5",
+  "followUpIntents": [],
+  "priority": 500000,
+  "responses": [
+    {
+      "action": "Conversation3.Conversation3-custom.Conversation3-2onlyloosemotion-custom-2",
+      "affectedContexts": [],
+      "parameters": [],
+      "defaultResponsePlatforms": {},
+      "messages": [
+        {
+          "type": "message",
+          "condition": "",
+          "speech": [
+            "Okay just follow up the home remedies such as:"
+          ]
+        },
+        {
+          "type": "message",
+          "condition": "",
+          "speech": [
+            "1.Avoid eating junk food, oily food."
+          ]
+        },
+        {
+          "type": "message",
+          "condition": "",
+          "speech": [
+            "2.Drink water as much as possible."
+          ]
+        },
+        {
+          "type": "message",
+          "condition": "",
+          "speech": [
+            "3.Eat only healthy food in adequate amount."
+          ]
+        },
+        {
+          "type": "message",
+          "condition": "",
+          "speech": [
+            "If no improvement is seen then consult your doctor."
+          ]
+        }
+      ],
+      "resetContexts": false
+    }
+  ],
+  "rootParentId": "4ff6d6f4-51ce-40cc-bea4-977e35b5b1e4",
+  "templates": [],
+  "userSays": [
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "2",
+          "userDefined": false
+        }
+      ],
+      "count": 0,
+      "id": "8a525970-8a7c-4652-b180-4681cbce32f6",
+      "updated": null
+    }
+  ],
+  "webhookForSlotFilling": false,
+  "webhookUsed": false
+}

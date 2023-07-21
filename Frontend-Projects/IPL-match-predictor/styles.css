@@ -1,0 +1,58 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap");
+body{
+    background:linear-gradient(90deg,#FF5733 50%,#C70039 50%);
+    font-family: "Poppins", sans-serif;
+   color:yellow;
+}
+.div2{
+    display: flex;
+    justify-content: space-between;
+}
+span{
+    font-size: 2rem;
+    color: white;
+}
+#team1{
+    background-color: #C70039;
+margin-left: 200px;
+height:40px;
+width:30%;
+color:white;
+}
+::placeholder{
+    color:white;
+}
+#paraa{
+    font-size: 10px;
+}
+#team2{
+    background-color: #FF5733;
+    margin-right: 200px;
+height:40px;
+width:30%;
+color:white;
+
+    }
+    input:hover{
+        border:2px solid yellow;
+    }
+#submit{
+    background:linear-gradient(90deg, #C70039 50%,#FF5733 50%);
+    height:30px;
+        margin-left: 680px;
+        width:10%;
+        color: white;
+      border:none;
+      font-size: 1.5rem;
+ }
+ #submit:hover{
+    transform: scale(1.1);
+    transition: transform 1s;
+    border:2px solid yellow;
+ }
+.div1{
+    margin-top:10px;
+    padding:20px;
+    border:2px solid red;
+    width:100%;
+}

@@ -1,0 +1,50 @@
+#main{
+     /* background-color: aquamarine; */
+     position: relative;
+     /* border-radius: 10px; */
+     /* display: inline-block; */
+     height: 40vw;
+     width: 40vw;
+     /* padding: 20px; */
+     margin: auto;
+     /* border: 2px solid #000; */
+     background: url('pngwing.com/png')no-repeat;
+     background-size: 100%;
+}
+
+body{
+     background-image: linear-gradient(to right, #3a1c5f, #2a4a90);
+}
+#hour, #minute, #second {
+     position: absolute;
+     background-color: #000;
+     border-radius: 10px;
+     transform-origin: bottom;
+}
+
+#hour{
+     height: 27%;
+     width: 3%;
+     top: 23.5%;
+     left: 48.5%;
+     opacity: 0.8;
+     /* display: none; */
+}
+
+#minute{
+     height: 33%;
+     width: 2.5%;
+     top: 17%;
+     left: 48.7%;
+     opacity: 0.8;
+     /* display: none; */
+}
+
+#second{
+     height: 38%;
+     width: 1.5%;
+     top: 12%;
+     left: 49.2%;
+     /* display: none; */
+     /* opacity: 1.9%; */
+}

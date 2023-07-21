@@ -1,0 +1,370 @@
+/*
+    IMPORTING FONTS FROM RELATIVE SOURCE
+*/
+@font-face {
+    font-family: 'Libre Franklin';
+    src:  url('https://raw.githubusercontent.com/0xabdulkhalid/ping-coming-soon-page/main/fonts/LibreFranklin.woff') format('woff'), url('https://raw.githubusercontent.com/0xabdulkhalid/ping-coming-soon-page/main/fonts/LibreFranklin.woff2') format('woff2');
+    font-weight: 1 999;
+    font-display: swap;
+  }
+  
+
+/**
+  ---- VARIABLES ---->
+**/
+
+:root {
+    --blue: hsl(223, 87%, 63%);
+    --pale-blue: hsl(223, 100%, 88%);
+    --light-red: hsl(354, 100%, 66%);
+    --gray: hsl(0, 0%, 59%);
+    --very-dark-blue: hsl(209, 33%, 12%);
+}
+
+
+/**
+  ---- RESETS ---->
+**/
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  line-height: 1.5;
+  text-rendering: optimizeSpeed;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  max-inline-size: 100%;
+  block-size: auto;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+  border: none;
+}
+
+.sr-only {
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(100%);
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+}
+
+
+/**
+  ---- LAYOUT ---->
+**/
+
+body {
+    font-family: "Libre Franklin", sans-serif;
+    color: var(--very-dark-blue);
+}
+
+main,
+picture {
+    display: grid;
+    place-items: center;    
+}
+
+main {
+    min-height: 100dvh;
+    align-content: baseline;
+    gap: .5rem;
+    margin-top: 3.5rem;
+}
+
+  
+/**
+  ---- PICTURE ---->
+**/
+
+picture img {
+    margin-top: 15%;
+    width: 90%;
+    height: 90%;
+    object-fit: contain;
+}
+  
+
+/**
+  ---- HEADING & TEXT ---->
+**/
+
+.main__heading {
+    font-size: clamp(1.38rem, calc(-0.02rem + 6.96vw), 2.5rem);
+    line-height: 1.2;
+    font-weight: 200;
+    text-align: center;
+    color: var(--gray);
+    padding: .4rem 0;
+}
+
+.main__heading--highlighted {
+    font-weight: 700;
+    color: var(--very-dark-blue);
+}
+
+.main__description {
+    font-size: clamp(0.88rem, calc(0.8rem + 0.36vw), 1.25rem);
+    line-height: 1.5;
+    text-align: center;
+    margin-bottom: 2rem;
+    font-weight: 300;
+}
+
+
+/**
+  ---- FORM & BUTTON ---->
+**/
+
+.main__form {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+input {
+    width: 100%;
+    height: 2.8rem;
+    outline: 1px solid var(--pale-blue);
+    border: 0;
+    border-radius: 1.88rem;
+    padding-left: 1.25rem;
+    margin-bottom: 0.5rem;
+    color: var(--gray);
+    transition: .8s all ease;
+}
+
+.main__error-message-container {
+    transition: .7s ease;
+    text-align: center;
+    margin-top: -.3em;
+    font-size: .9rem;
+    font-style: italic;
+    color: var(--light-red);
+    height: 0;
+    overflow: hidden;
+    opacity: 0;
+}
+
+.main__error-message-container span {
+    margin-right: .5rem;
+}
+
+.main__email--error {
+    border-color: var(--light-red);
+}
+
+button {
+    color: white;
+    background: var(--blue);
+    width: 100%;
+    height: 2.8rem;
+    border-radius: 1.88rem;
+    transition: all 0.2s;
+    cursor: pointer;
+    margin-top: .5em;
+    font-weight: bold;
+    font-size: .9rem;
+    box-shadow: 0px 10px 19px 0px var(--pale-blue);
+}
+button:is(:hover){
+    filter: brightness(1.1);
+}
+button:is(:focus-visible, :active) {
+    transform: scale(.95) translateY(2px);
+    filter: brightness(1.2);
+}
+
+
+/**
+  ---- INPUT FIELD ---->
+**/
+
+input[type="email"]:is(:hover, :focus-visible) {
+    outline: 2px solid var(--blue);
+}
+
+.main__email--invalid {
+    outline: 2px solid var(--light-red) !important;
+    transition: 0.3s ease;
+}
+
+.main__email--invalid + .main__error-message-container {
+    height: auto;
+    padding: .5rem 0 1.5rem 0;
+    opacity: 1;
+}
+
+/**
+    ---- FOOTER ---->
+**/
+footer {
+    font-size: .8rem;
+    color: var(--gray);
+    text-align: center;
+    width: 100%;
+    margin-bottom: 1rem;
+}
+.footer__socials-container {
+    display: flex;
+    gap: 1em;
+    justify-content: center;
+    padding-bottom: 2em;
+}
+.footer__socials-container a {
+    border-radius: 50%;
+    height: 2rem;
+    width: 2rem;
+    border: 1px solid #eee;
+    transition: .7s ease;
+}
+.footer__socials-container img {
+    aspect-ratio: 1/1;
+    padding: .5rem;
+    filter: invert(38%) sepia(81%) saturate(1096%) hue-rotate(203deg) brightness(101%) contrast(91%);
+    transition: .4s ease;
+}
+
+
+/**
+    ---- MEDIA QUERIES ---->
+**/
+
+@media (min-width: 55.25em) {
+    main {
+        padding-top: 2em;
+        margin-top: 3.5rem;
+        min-height: unset;
+    }
+    .main__form {
+        flex-direction: row;
+        height: 5em;
+        gap: .7em;
+    }
+    .main__heading {
+        font-size: 3rem;
+        margin-top: 1.5rem;
+    }
+    .main__description {
+        font-size: 1.3rem;
+        letter-spacing: -.01em;
+        margin-bottom: 1.75rem;
+    }
+    .main__form {
+        max-width: 40rem;
+        gap: 1rem;
+    }
+    form button {
+        width: 19.7rem;
+        padding: 0;
+        height: 3.45rem;
+        font-size: 1rem;
+    }
+    .main__email {
+        width: 40.5rem;
+        padding-left: 2rem;
+        height: 3.7rem;
+    }
+    button {
+        margin: 0;
+        width: 55%;
+    }
+    .main__error-message-container {
+        position: absolute;
+        bottom: -1rem;
+        padding: 0 0 0 1.25rem !important;
+    }
+    picture img {
+        margin-top: 3.4rem;
+        max-width: 44.5rem;
+    }
+    footer {
+        margin: 4.49rem 0;
+    }
+    .footer__socials-container {
+        padding-bottom: 1.7em;
+    }
+    .footer__socials-container a:hover {
+        background: var(--blue);
+    }
+    .footer__socials-container a:hover img {
+        filter: invert(1);
+    }
+    .footer__copyright {
+        font-size: .7rem;
+        letter-spacing: .02em;
+    }
+}
+
+
+/**
+  ---- ANIMATION ---->
+**/
+
+.fade-in {
+    -webkit-animation: fade-in 1.5s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+    animation: fade-in 1.5s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+}
+
+@-webkit-keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}

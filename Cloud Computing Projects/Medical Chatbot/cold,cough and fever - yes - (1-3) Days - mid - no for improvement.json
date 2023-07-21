@@ -1,0 +1,85 @@
+{
+  "id": "a7848943-1932-4016-a1f7-dc5d95857bf7",
+  "name": "cold,cough and fever - yes - (1-3) Days - mid - no for improvement",
+  "auto": true,
+  "condition": "",
+  "conditionalFollowupEvents": [],
+  "conditionalResponses": [],
+  "context": [
+    "coldcoughandfever-yes-1-3Days-mid-followup"
+  ],
+  "contexts": [
+    "coldcoughandfever-yes-1-3Days-mid-followup"
+  ],
+  "endInteraction": false,
+  "events": [],
+  "fallbackIntent": false,
+  "liveAgentHandoff": false,
+  "parentId": "93d33d51-88e6-4e7b-9fe5-c6f6e59814c1",
+  "followUpIntents": [],
+  "priority": 500000,
+  "responses": [
+    {
+      "action": "Conversation3.Conversation3-custom.Conversation3-1coldcoughandfever-custom.Conversation3-1coldcoughandfever-yes-custom-2.coldcoughandfever-yes-1-3Days-custom.coldcoughandfever-yes-1-3Days-mid-custom",
+      "affectedContexts": [],
+      "parameters": [],
+      "defaultResponsePlatforms": {},
+      "messages": [
+        {
+          "type": "message",
+          "condition": "",
+          "speech": [
+            "Okay then follow the medicines as per the below."
+          ]
+        },
+        {
+          "type": "message",
+          "condition": "",
+          "speech": [
+            "1.Diominic BCA [1] tablet per day for cold, cough and fever."
+          ]
+        },
+        {
+          "type": "message",
+          "condition": "",
+          "speech": [
+            "2.If your cough and cold is not frequent then prefer Astakaam Dx(Syrup) -2 spoon per day and for cold use (Diomeric/Dio-one) - 2 tablets per day."
+          ]
+        },
+        {
+          "type": "message",
+          "condition": "",
+          "speech": [
+            "Caution!!-[If cough and cold is high then increase the dozes by 1]"
+          ]
+        },
+        {
+          "type": "message",
+          "condition": "",
+          "speech": [
+            "If there is any improvement seen then contact me after 2 days else cosult doctor."
+          ]
+        }
+      ],
+      "resetContexts": false
+    }
+  ],
+  "rootParentId": "4ff6d6f4-51ce-40cc-bea4-977e35b5b1e4",
+  "templates": [],
+  "userSays": [
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "2",
+          "userDefined": false
+        }
+      ],
+      "count": 0,
+      "id": "f43f2314-ee1c-467e-9d40-817241d4bb21",
+      "updated": null
+    }
+  ],
+  "webhookForSlotFilling": false,
+  "webhookUsed": false
+}
