@@ -114,10 +114,6 @@ img{
     font-family: var(--heading-font);
 }
 
-.title .button{
-    float: right;
-}
-
 
 /* offer section */
 #offer{
