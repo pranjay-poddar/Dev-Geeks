@@ -60,7 +60,6 @@ streamlit run app.py
 
 Open your browser and go to http://localhost:8501/ to access the Bangalore-House-Price-Prediction webpage.
 
-Or you can use the deployed project using the link: https://movie-recommender-system-ml-ca6n1lthfcd-kanishka.streamlit.app/
 
 ## Disclaimer
 The Bangalore-House-Price-Prediction provided by this project are based on a ml model and may not always accurately reflect the real price secenerios. The predictions should be used for reference purposes only, and dataset of house-Price from kaggle can vary due to various factors.
