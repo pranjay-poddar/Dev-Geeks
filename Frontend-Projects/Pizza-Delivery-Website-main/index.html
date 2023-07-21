@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <title>Ashish Pizza Delivery</title>
+</head>
+
+
+<body>
+
+    
+    <!-- Main content -->
+
+    <div class="main-container">
+        <div class="content">
+
+            
+            <!-- Menu with Navigation (in red column: buttons and logo) -------->
+
+            <nav class="navigation">
+                <div class="logo"><img class="logo-pizza" src="img/pizza.png" alt=""></div>
+                <div class="main-nav">
+                    <div class="home-nav nav-btn">
+                        <i class="fa-solid fa-house-user"></i>
+                    </div>
+                    <div class="charity-nav nav-btn">
+                        <i class="fa-solid fa-hand-holding-heart"></i>
+                    </div>
+                    <div class="basket-nav nav-btn">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                    </div>
+                    <div class="coments-nav nav-btn">
+                        <i class="fa-solid fa-message"></i>
+                    </div>
+                
+                </div>
+                <div class="footer-nav">
+                    <div class="line-nav ">
+                    </div>
+                    <div class="log-out-nav nav-btn">
+                        <i class="fa-solid fa-right-from-bracket"></i>
+                    </div>
+                </div>
+            </nav>
+            
+            <!-- The main part of the content. Block where you can order food. ------->
+            <main class="main-block">
+                <div class="search">
+                    <div>
+                        <h1>Ashish Pizza House</h1>
+                    </div>
+                    <div>
+                        <h1 class="search-type">Food Menu</h1>
+                    </div>
+                </div>
+                
+                <!-- Block in the very center, promotion plus food categories -->
+                <div class="midle-block">
+                    <div class="prize">
+                        <div class="delivery-bike"><img class="bike" src="img/bike.png" alt=""></div>
+                        <div class="prize-info">
+                            <h2 class="prize-title">Hello</h2>
+                            <span class="prize-text">Get free delivery every ₹250.00 purchase</span>
+                            <button class="prize-btn">Learn More</button>
+                        </div>
+                    </div>
+                    <div class="category">
+                        <div class="pizza choice">
+                            <img class="logo-choice" src="img/logo-pizza.png" alt="">
+                            <h4>Pizza</h4>
+                        </div>
+                        <div class="burger choice">
+                            <img class="logo-choice" src="img/logo-burger.png" alt="">
+                            <h4>Burger</h4>
+                        </div>
+                        <div class="snack choice">
+                            <img class="logo-choice" src="img/logo-snack.png" alt="">
+                            <h4>Snacks</h4>
+                        </div>
+                        <div class="drink choice">
+                            <img class="logo-choice" src="img/logo-drink.png" alt="">
+                            <h4>Drinks</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="menu" id="menu-cards">
+                </div>
+            </main>
+            <div class="line-delimiter"></div>
+            <div class="order-box">
+                <div class="person">
+                    <img class="person-photo" src="img/person-logo.gif" alt="">
+                    <h3 class="display-name"></h3>
+                    <h3 class="display-surname"></h3>
+                </div>
+                <div class="list-order">
+                    <h2>Order Summary</h2>
+                    <div class="summary">
+                        <button class="maximaze-close">
+                            <i class="fa-solid fa-square-xmark"></i>
+                        </button>
+                    </div>
+                    <div>----------------------------------------------------</div>
+                <div class="submit-order">
+                    <div class="adress">
+                        <h2>Delivery Address</h2>
+                    </div>
+                    <div class="adress-block">
+                        <div class="display-adress">
+                            <span> Your Address:</span>
+                            <span class="users-address"></span>
+                        </div>
+                        <div class="enter-adress">
+                            <input class='input-adress' type="text" name="" id="" value="Enter your Address">
+                            <i class="fa-regular fa-circle-check accept-adress"></i>
+                        </div>
+                    </div>
+                    <button class="submit">Submit Order</button>
+                </div>
+            </div>
+
+
+        </div>
+
+
+
+
+        
+        <!-- Below are various pop-ups ---->
+
+        
+        <!-- Login window (Popup) ------------------------------->
+        <div id="popup" class="popup">
+            <div class="popup-log-in">
+                <div class="popup-name field-info">
+                    <span style="color: wheat;">Your Name😊</span>
+                    <input type="text" name="name" class="info-person log-name">
+                </div>
+                <div class="popup-surname field-info">
+                    <span style="color: wheat;">Your surname😎</span>
+                    <input type="text" name="surname" class="info-person log-surname">
+                </div>
+                <div class="popup-btn field-info">
+                    <input class="popup-button" type="button" value="Confirm">
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    
+    <!-- Window for pop-up action. Popup action ---->
+    <div id="popup-discount" class="popup-discount">
+        <div class="discount">
+            <h2 class="header-discount">Get free delivery on order over ₹499.00 purchase</h2>
+            <div class="decription-discount">
+                Shipping is free on orders over ₹250.00. This promotion is valid for everyone once a week.
+            </div>
+            <button class="close-prize">
+                <i class="fa-solid fa-check fa-check-hover"></i>
+            </button>
+        </div>
+    </div>
+
+
+    
+    <!-- Charity box --------------------->
+    <div class="charity-block">
+        <div class="charity">
+            <div>
+                <span class="header-charity">Helping children</span>
+                <i class="fa-solid fa-heart"></i>
+            </div>
+            <div class="info-charity">
+                You can join a charity event. The charitable organization is engaged in helping orphanages.
+                You can add as little as ₹10.00 to your order for charity.
+            </div>
+            <div class="btns-charity">
+                <button class="add-charity" data-id="chrt000">
+                    <i class="fa-solid fa-check check-charity"></i>
+                </button>
+                <button class="close-charity">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    
+    <!-- Feedback box -------->
+    <div class="review">
+        <div class="review-content">
+            <h4>You can leave your feedback </h4>
+            <textarea class="review-input" name="" id="" cols="30" rows="8"></textarea>
+            <button class="close-review">Send</button>
+        </div>
+    </div>
+
+
+    
+    <!-- User profile ---------->
+    <div class="profile">
+        <div class="profile-block">
+            <button class="close-profile"><i class="fa-solid fa-square-xmark"></i></button>
+            <div class="name-surname">
+                <span class="profile-name"></span>
+                <span class="profile-surname"></span>
+            </div>
+            <div class="contacts">
+                <div class="email-block">
+                    <div class="email-line">
+                        <span>Email:</span>
+                        <span class="out-email">Enter your Email</span>
+                    </div>
+                    <input class="email-input" type="email" name="" id="">
+                    <button class="submit-ok submit-email">OK</button>
+                </div>
+                <div class="number-block">
+                    <div class="number-line">
+                        <span>Number:</span>
+                        <span class="out-number">Enter your Number</span>
+                    </div>
+                    <input class="number-input" type="number" name="" id="">
+                    <button class="submit-ok submit-number">OK</button>
+                </div>
+            </div>
+        </div>
+        <div>
+
+        </div>
+    </div> 
+
+
+
+
+
+    <script type="module" src="script.js" defer async></script>
+</body>
+
+
+</html>

@@ -1,12 +1,13 @@
 body{
     background: ghostwhite;
-    color: dimgray;
-    font-family: serif;
+    color: #607D8B;
+    font-family: system-ui;
     text-align: center;
 }
 
 h1{
     font-size: 2rem;
+    margin-top: 3rem;
 }
 
 #container{
