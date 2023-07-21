@@ -902,7 +902,7 @@ Happy Coding! -->
 <br>
 <h1 align="center">
  <b>Contributors
-<a href="https://github.com/pranjay-poddar/Dev-Geeks/graphs/contributors">
+<a href="https://github.com/panditshivammishra/Mytextutil">
   <img src="https://contrib.rocks/image?repo=pranjay-poddar/Dev-Geeks&&max=817" />
 </a>
 
