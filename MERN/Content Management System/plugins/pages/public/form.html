@@ -1,0 +1,350 @@
+<div data---="form__common.form__icon:file-text-o;if:pagesform;width:1500;reload:pagesform/show;submit:pagesform/submit;autofocus:1" class="hidden">
+	<div data-scope="pagesform">
+		<div class="padding" style="padding-bottom:10px">
+			<div class="row">
+				<div class="col-md-3 m">
+					<div data---="input__?.name__placeholder:@(Homepage);required:true">@(Name)</div>
+					<div data---="input__?.pinned__type:checkbox" class="mt10">@(Pin the page)</div>
+				</div>
+				<div class="col-md-3 m">
+					<div data---="input__?.url__icon:globe;placeholder:@(Page relative URL address);required:true">@(URL address)</div>
+					<div data---="input__?.ispartial__type:checkbox" class="green b mt10">@(Is a partial content)</div>
+				</div>
+				<div class="col-md-3 m">
+					<div>
+						<div data---="input__?.template__dirsource:common.dependencies.templatespages;dirplaceholder:@(Search templates);dirempty:@(No template);icon:file-text-o" data-bind="?.lockedtemplate__disable">@(Template)</div>
+					</div>
+					<div data-bind="?.lockedtemplate__show:!value || user.sa">
+						<div data---="input__?.lockedtemplate2__type:checkbox" class="red b mt10">@(Lock this template for editors)</div>
+					</div>
+				</div>
+				<div class="col-md-3 m">
+					<div data---="input__?.parent__dirsource:pages.parents;icon:sitemap;dirplaceholder:@(Search pages)__''" data-bind="?.ispartial__disable">@(Parent)</div>
+					<div class="help">@(Affects sitemap and breadcrumb)</div>
+				</div>
+			</div>
+		</div>
+		<div data-bind="?.draft__show" class="hidden fs11" style="padding:8px 20px;background-color:red;color:white"><span style="color:white;float:right" class="link exec" data-exec="pagesform/removedraft"><i class="fa fa-times-circle mr5"></i>@(Remove draft)</span><i class="fa fa-warning mr5"></i>@(Page <b>content</b> is in draft mode).</div>
+		<div class="cmseditor" data---="cmseditor__?.body" data-import="url:@{#}/_pages/cmseditor.html;target:body"></div>
+		<div class="backups hidden hidden-xs bg-smoke" data-bind="?.id__show:!!value">
+			<div class="hidden" data-bind="?.id__show">
+				<div data---="input__?.draft__type:checkbox" class="nmb red b" data-bind="?.lockedcontent__show:!value">@(DRAFT)</div>
+			</div>
+			<div class="hidden" data-bind="user.sa__show">
+				<div data---="input__?.lockedcontent__type:checkbox" class="nmb b">@(LOCK)</div>
+			</div>
+			<div class="hidden" data-bind="user.sa__show">
+				<div data---="input__?.usedefault__type:checkbox" class="nmb b">@(DEFAULT CONTENT)</div>
+			</div>
+			<div class="hidden" data-bind="?.lockedcontent__hide">
+				<span class="link exec inline green" data-exec="cmseditor.instance.editCSS"><i class="fa fa-paint-brush mr5"></i>@(Edit page styles)</span>
+			</div>
+			<div class="hidden" data-bind="?.lockedcontent__hide">
+				<span class="link exec inline" data-exec="pagesform/backups"><i class="fa fa-clock-o mr5"></i>@(Restore a backup)</span>
+			</div>
+			<span class="link exec red linkshortcut" data-exec="pagesform/submit" style="float:right"><i class="fa fa-floppy-o mr5"></i>@(Quicksave)<span>CMD+S</span></span>
+			<span class="link exec linkshortcut" data-exec="pagesform/preview2" style="float:right;margin-right:15px" data-bind="?.ispartial__hide"><i class="fa fa-search mr5"></i>@(Preview)<span>F10</span></span>
+			<a href="javascript:void(0)" data-bind="pagesform.url__href:pagesform/preview" target="_blank" class="linkshortcut visible-lg" style="float:right;margin-top:0;margin-right:15px;" title="@(Open saved content)"><i class="fa fa-globe mr5"></i>@(Open website)</a>
+		</div>
+		<div class="padding">
+			<div class="row mt10">
+				<div class="col-md-4 m">
+					<div data---="input__?.title__maxlength:50">@(Title)</div>
+					<div class="help">@(Meta title, maximum 60 chars)</div>
+				</div>
+				<div class="col-md-4">
+					<div data---="input__?.description__maxlength:120">@(Description)</div>
+					<div class="help">@(Meta description, maximum 120 chars)</div>
+				</div>
+				<div class="col-md-4 m">
+					<div data---="input__?.keywords__icon:tags;maxlength:80;placeholder:@(company, our team, employees)">@(Keywords)</div>
+					<div class="help">@(Meta keywords, maximum 6 words seperated by comma)</div>
+				</div>
+			</div>
+			<div class="row mt10">
+				<div class="col-md-4 m">
+					<div data---="input__?.navigations__multiple:1;dirsource:common.dependencies.navigations" data-bind="?.ispartial__disable">@(Side navigations)</div>
+					<div class="help">@(Add side navigations)</div>
+				</div>
+				<div class="col-md-4 m">
+					<div data---="input__?.partial__multiple:1;dirsource:pages.partial">@(Nested partial pages)</div>
+					<div class="help">@(Join other partial pages with this)</div>
+				</div>
+				<div class="col-md-2 m">
+					<div data---="input__?.language__dirsource:common.dependencies.languages;dirplaceholder:@(Search language);dirempty:@(No language)">@(Language)</div>
+				</div>
+				<div class="col-md-2 m">
+					<div data---="input__?.icon__type:icon">@(Choose icon)</div>
+				</div>
+			</div>
+		</div>
+		<div class="padding bg-yellow npb">
+			<div class="row">
+				<div class="col-md-4 m">
+					<div data---="input__?.navigations2__multiple:1;dirsource:common.dependencies.navigations;icon:navicon" data-bind="?.ispartial__disable">@(Add to navigations)</div>
+					<div class="help">@(This page will be automatically appended into the selected navigations)</div>
+				</div>
+				<div class="col-md-4 m">
+					<div data---="input__?.signals__multiple:1;dirsource:common.dependencies.signals;icon:dot-circle-o">@(Signals)</div>
+					<div class="help">@(Signals can start special actions when the page is displayed)</div>
+				</div>
+				<div class="col-md-4 m">
+					<div class="pagesformcheckboxes">
+						<div data---="input__?.navicon__type:checkbox">@(Replace icon in navigations)</div>
+						<div data---="input__?.navname__type:checkbox">@(Replace name and language in navigations)</div>
+						<div data---="input__?.replacelink__type:checkbox">@(Replace older URL in all pages)</div>
+						<div data---="input__?.nocache__type:checkbox">@(Disable cache)</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div data-bind="?.id__show:value && value.length" class="hidden">
+			<hr class="nmt" />
+			<div class="padding">
+				<div class="row">
+					<div class="col-lg-2 col-md-3 m">
+						<div class="keyvalue">
+							<div class="key">@(# Id)</div>
+							<div class="value" data-bind="?.id__html:value"></div>
+						</div>
+					</div>
+					<div class="col-lg-2 col-md-3 m">
+						<div class="keyvalue">
+							<div class="key"><i class="fa fa-calendar"></i>@(Created)</div>
+							<div class="value" data-bind="?.dtcreated__html:Thelpers.time(value)"></div>
+						</div>
+					</div>
+					<div class="col-lg-2 col-md-3 m">
+						<div class="keyvalue">
+							<div class="key"><i class="fa fa-calendar"></i>@(Updated)</div>
+							<div class="value" data-bind="?.dtupdated__html:value ? Thelpers.time(value) : '@(unchanged)'"></div>
+						</div>
+					</div>
+					<div class="col-lg-6 m" data-bind="?.stats__show">
+						<div data---="nosqlcounter__?.stats__height:52"></div>
+						<div class="help"><i class="fa fa-chart-bar"></i>@(Stats of all views for the last period)</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div data---="error__?.response"></div>
+	</div>
+
+	<nav data---="validation__pagesform">
+		<button name="submit" disabled><i class="fa fa-check-circle"></i>@(SAVE)</button>
+		<button name="cancel">@(Cancel)</button>
+	</nav>
+
+</div>
+
+<form method="POST" target="cmspagepreviewiframe" id="cmspagepreview" action="@{#}/admin/preview/">
+	<input type="hidden" name="base64" />
+</form>
+
+<div data---="window__common.window___if:pagespreview;title:@(Live preview);scrollbar:0;icon:search" class="iframefull">
+	<iframe src="about:blank" name="cmspagepreviewiframe" frameborder="0" style="width:100%"></iframe>
+</div>
+
+<script>
+
+	PLUGIN('pagesform', function(exports) {
+
+		if (user.sa) {
+			WATCH('?.lockedtemplate2', function(path, value, type) {
+				type === 2 && SET('?.lockedtemplate', value);
+			});
+			WATCH('?.lockedcontent', function(path, value, type) {
+				value && SET('?.draft', false);
+				cmseditor.instance.lock(value);
+			});
+		}
+
+		WATCH('?.draft', function(path, value, type) {
+			type === 2 && BIND('?.url');
+		});
+
+		exports.preview = function(value) {
+			return value + (W.pagesform && W.pagesform.draft ? '?DRAFT=1' : '');
+		};
+
+		exports.preview2 = function() {
+
+			var model = CLONE('?');
+			var editor = cmseditor.instance;
+
+			model.pictures = editor.getPictures();
+			model.summary = editor.getSummary();
+			model.body = editor.getContent().replace(/(\r)?\n[\s\t]+(\r)?\n/g, '\n');
+			model.search = editor.getKeywords();
+			model.bodydraft = undefined;
+			model.bodyraw = undefined;
+			model.navigations2 = undefined;
+
+			var w = editor.getWidgets();
+			model.widgets = w.settings;
+			model.bodywidgets = w.widgets;
+
+			var locked = model.lockedtemplate2 === true;
+			model.lockedtemplate = locked;
+			model.lockedtemplate2 = undefined;
+
+			if (model.ispartial) {
+				model.navigations = null;
+				model.partial = null;
+				model.parent = '';
+			}
+
+			if (model.usedefault) {
+				model.widgets = [];
+				model.bodywidgets = [];
+				model.body = '';
+			}
+
+			model.stats = undefined;
+			model.css = cmseditor.css;
+
+			var model = encodeURIComponent(STRINGIFY(model));
+			var form = $('#cmspagepreview');
+			form.find('input').val(btoa(model));
+			form.submit();
+			SET('common.window', 'pagespreview');
+		};
+
+		exports.removedraft = function() {
+			SETTER('approve/show', '@(Are you sure you want to remove stored draft?)', '"trash-o" @(Yes)', function() {
+				SET('?.body', pagesform.bodycurrent);
+				SET('?.draft', false);
+				cmseditor.instance.setWidgetOptions(pagesform.widgets);
+			});
+		};
+
+		exports.show = function(com) {
+
+			var model = pagesform;
+			var items = pages.list;
+			var parent = [];
+			var partial = [];
+
+			com.reconfigure({ title: model.id ? '@(Edit page)' : '@(New page)' });
+
+			for (var i = 0, length = items.length; i < length; i++) {
+				var item = items[i];
+				if (item.id !== model.id) {
+					var target = item.ispartial ? partial : parent;
+					target.push({ id: item.id, name: item.name, url: item.ispartial ? null : item.url });
+				}
+			}
+
+			SET('pages.partial', partial);
+			SET('pages.parents', parent);
+			SET('?.lockedtemplate2', !!model.lockedtemplate, true);
+
+			WAIT('cmseditor.instance', function() {
+				cmseditor.instance.setWidgetOptions(model.draft ? model.dwidgets : model.widgets);
+				cmseditor.instance.lock(!!model.lockedcontent);
+			});
+
+			model.id && AJAX('GET [url]api/pages/{id}/stats/'.arg(model), '?.stats');
+			FUNC.loading(false, 1000);
+		};
+
+		exports.submit = function(hide) {
+
+			var model = CLONE('?');
+			var editor = cmseditor.instance;
+
+			model.pictures = editor.getPictures();
+			model.summary = editor.getSummary();
+			model.body = editor.getContent().replace(/(\r)?\n[\s\t]+(\r)?\n/g, '\n');
+			model.search = editor.getKeywords();
+			model.bodydraft = undefined;
+			model.bodyraw = undefined;
+
+			var w = editor.getWidgets();
+			model.widgets = w.settings;
+			model.bodywidgets = w.widgets;
+
+			var locked = model.lockedtemplate2 === true;
+			model.lockedtemplate = locked;
+			model.lockedtemplate2 = undefined;
+
+			if (model.ispartial) {
+				model.navigations = null;
+				model.partial = null;
+				model.parent = '';
+			}
+
+			if (model.usedefault) {
+				model.widgets = [];
+				model.bodywidgets = [];
+				model.body = '';
+			}
+
+			model.stats = undefined;
+			model.css = cmseditor.css;
+
+			var submit = function() {
+				var parts = { type: 'page', items: editor.getParts() };
+				FUNC.loading(true);
+				AJAX('POST [url]api/pages/ REPEAT', model, function(response) {
+					FUNC.loading(false, 1000);
+
+					if (response.success) {
+						SETTER('snackbar/success', '@(Page has been saved successfully.)');
+
+						if (typeof(hide) === 'function')
+							hide();
+						else
+							SET('?.lockedtemplate', locked);
+
+						EXEC('pages/refresh');
+
+						// Updates parts
+						parts.ownerid = response.value;
+						AJAX('POST [url]api/parts/', parts, NOOP);
+					}
+				});
+			};
+
+			if (model.lockedtemplate && !user.sa)
+				SETTER('approve/show', '@(Are you sure you want to use always this template?)', '@(Sure)', submit);
+			else
+				submit();
+		};
+
+		exports.backups = function(el) {
+
+			FUNC.loading(true);
+			AJAX('GET [url]api/pages/{0}/backups/'.format(GET('?.id')), function(response) {
+
+				FUNC.loading(false, 1000);
+
+				for (var i = 0, length = response.length; i < length; i++) {
+					var item = response[i];
+					item.name = '{0} <b class="badge badge-blue ml5"><i class="fa fa-user mr5"></i>{1}</b>'.format(item.date.format('@(dd. MMM yyyy - HH:mm)'), item.user);
+				}
+
+				response.quicksort('date', false);
+
+				SETTER('suggestion/show', 'left', el, response, function(value) {
+					FUNC.loading(true);
+					setTimeout(function() {
+						AJAX('GET [url]api/backups/pages/{id}_{stamp}/'.arg(value), function(body) {
+							cmseditor.instance.replace(body);
+							FUNC.loading(false, 1000);
+						});
+					}, 100);
+				});
+			});
+		};
+
+		WATCH('?.template', function(path, value, type) {
+			if (type === 2) {
+				cmseditor.instance.reconfigure('template:' + (value || ''));
+				cmseditor.instance.set(cmseditor.instance.getContent() || '');
+			}
+		}, true);
+	});
+
+</script>
