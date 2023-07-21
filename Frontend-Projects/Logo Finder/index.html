@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="index.css">
+    <link rel="icon" href="logo.png" type="image/x-icon">
+    <title>Logo Finder</title>
+    
+</head>
+<body class="bg-gradient-to-r from-violet-500 to-fuchsia-500 text-center p-12">
+    <h1 class="text-7xl text-white font-semibold drop-shadow-lg ">Logo Finder</h1>
+    <input type="text" id="urlInput" class="p-3 m-8 w-4/5 max-w-sm text-2xl font-bold rounded-lg drop-shadow-2xl" placeholder="Enter company website URL...">
+    <button onclick="findLogo()" class="bg-sky-700 px-4 py-2 text-white hover:bg-sky-800 sm:px-8 sm:py-3 text-2xl rounded-lg font-bold drop-shadow-2xl">Find Logo</button>
+    <div id="logoContainer" style="display:none;">
+        
+        <img id="logoImage" src="" alt="Company Logo" class="max-w-xs border-double p-2.5 mt-5 inline">
+        <br>
+        <button id="downloadLogo" onclick="downloadLogo()" class="bg-sky-700 px-4 py-2 text-white hover:bg-sky-800 sm:px-8 sm:py-3 text-2xl rounded-lg font-bold drop-shadow-2xl">Download Logo</button>
+    </div>
+    <script>
+        function findLogo() {
+            const url = document.getElementById('urlInput').value;
+            if (!url) {
+                alert('Please enter a URL');
+                return;
+
+            }
+            const logoAPI = `https://logo.clearbit.com/${url}`;
+            document.getElementById('logoImage').src = logoAPI;
+            document.getElementById('logoContainer').style.display = 'block';
+        }
+
+        function downloadLogo() {
+            const logoURL = document.getElementById('logoImage').src;
+            const a = document.createElement('a');
+            a.href = logoURL;
+            a.download = 'logo.png';
+            a.click();
+        }
+    </script>
+</body>
+</html>

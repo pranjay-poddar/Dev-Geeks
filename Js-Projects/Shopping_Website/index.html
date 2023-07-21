@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="Prac4(1).css" />
+    <title>Naitik's Collection</title>
+
+    <!-- Embedded (Internal) CSS -->
+    <style>
+      h2 {
+        font-size: 2rem;
+        color: darkviolet;
+        text-align: center;
+      }
+
+      #login {
+        width: 100%;
+        height: 40px;
+        border-radius: 40px;
+        background: transparent;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        font-size: 1rem;
+        font-weight: 600;
+      }
+
+      #login:hover {
+        height: 50px;
+        transition: 0.5s ease-in-out;
+      }
+    </style>
+  </head>
+
+  <body>
+    <section>
+      <!-- Inline CSS -->
+      <div class="form-box">
+        <form id="myForm">
+          <h2 style="color: #fff">Login</h2>
+          <div class="input-box">
+            <ion-icon name="mail-outline"></ion-icon>
+            <input type="email" id="email" required />
+            <label for="">Email</label>
+          </div>
+          <div class="input-box">
+            <ion-icon name="lock-closed-outline"></ion-icon>
+            <input type="password" id="password" required />
+            <label for="">Password</label>
+          </div>
+          <div class="forget">
+            <label for=""
+              ><input type="checkbox" id="check" required />Remember Me
+              <a href="#">Forget Password</a></label
+            >
+          </div>
+          <button
+            type="submit"
+            style="background-color: white"
+            id="login"
+            onclick="submitform()"
+          >
+            Log in
+          </button>
+          <div class="register">
+            <p>Don't have an account <a href="#">Register</a></p>
+          </div>
+        </form>
+      </div>
+    </section>
+    <script>
+      function submitform() {
+        var email = document.getElementById("email").value;
+        var password = document.getElementById("password").value;
+        if (
+          (email === "devgeeks@gmail.com") &&
+          (password === "devgeeks")
+        ) { 
+            location.href = "./home.html";
+        } else {
+          alert("Enter a valid Email id Or Password!!");
+        }
+      }
+    </script>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+  </body>
+</html>

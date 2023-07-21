@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta
+    name="description"
+    content="Sunnyside Agency Landing Page Solution by 0xabdulkhalid for FrontendMentor.io"
+  />
+  <meta
+    name="keywords"
+    content="Frontend Mentor, Sunnyside Agency Landing Page Challenge, 0xabdulkhalid"
+  />
+  <meta
+    property="og:title"
+    content="Sunnyside Agency Landing Page - Frontend Mentor"
+  />
+  <meta
+    property="og:description"
+    content="Sunnyside Agency Landing Page Solution by 0xabdulkhalid for FrontendMentor.io"
+  />
+  <meta name="theme-color" content="#3CBDFD" />
+  <meta name="msapplication-navbutton-color" content="#3CBDFD" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="#3CBDFD" />
+  <title>Sunnyside agency landing page | 0xabdulkhalid</title>
+  <link rel="stylesheet" href="./styles.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    rel="preload"
+    as="style"
+    href="https://fonts.googleapis.com/css2?family=Barlow:wght@600&family=Fraunces:opsz,wght@9..144,700;9..144,900&display=swap"
+  />
+  <link
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Barlow:wght@600&family=Fraunces:opsz,wght@9..144,700;9..144,900&display=swap"
+    media="print"
+    onload="this.media='all'"
+  />
+  <noscript>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Barlow:wght@600&family=Fraunces:opsz,wght@9..144,700;9..144,900&display=swap"
+    />
+  </noscript>
+</head>
+<body>
+
+  <header class="header">
+    <div class="header__container">
+      <a href="#">
+        <img
+          src="https://raw.githubusercontent.com/0xabdulkhalid/sunnyside-agency-landing-page/main/images/logo.svg"
+          alt="Sunnyside - Home"
+          width="124" 
+          height="24"
+        />
+      </a>
+      <nav aria-labelledby="primary-navigation">
+        <p id="primary-navigation" hidden>primary</p>
+        <button
+          type="button"
+          class="header__menu-button"
+          aria-expanded="false"
+          aria-controls="menu-list"
+        >
+          <span class="sr-only">Menu</span>
+          <img
+            src="https://raw.githubusercontent.com/0xabdulkhalid/sunnyside-agency-landing-page/main/images/icon-hamburger.svg"
+            alt=""
+            width="24" 
+            height="18"
+            class="header__icon"
+            aria-hidden="true"
+          />
+        </button>
+        <ul id="menu-list" class="header__list">
+          <li class="header__item">
+            <a href="#" class="header__link">About</a>
+          </li>
+          <li class="header__item">
+            <a href="#" class="header__link">Services</a>
+          </li>
+          <li class="header__item">
+            <a href="#" class="header__link">Projects</a>
+          </li>
+          <li class="header__item">
+            <a href="#" class="header__link">Contact</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="main__hero-container">
+      <h1 class="hero__heading">We are creatives</h1>
+      <img src="https://raw.githubusercontent.com/0xabdulkhalid/sunnyside-agency-landing-page/main/images/icon-arrow-down.svg" alt="" class="hero__arrow-image" width="36" height="114">
+    </div>
+    <section class="main__first-section">
+      <div class="section__block">
+        <h2 class="section__heading">Transform your brand</h2>
+        <p class="section__description">
+          We are a full-service creative agency specializing in helping brands grow fast.
+          Engage your clients through compelling visuals that do most of the marketing for you.
+        </p>
+        <a href="#" class="section__link">Learn more</a>
+      </div>
+      <picture class="section__picture">
+        <source
+          media="(min-width: 56em)"
+          srcset="https://raw.githubusercontent.com/0xabdulkhalid/sunnyside-agency-landing-page/main/images/desktop/image-transform.webp"
+        />
+        <img
+          src="https://raw.githubusercontent.com/0xabdulkhalid/sunnyside-agency-landing-page/main/images/mobile/image-transform.webp"
+          alt=""
+          class=""
+          width="750" 
+          height="624"
+        />
+      </picture>
+    </section>
+    <section class="main__second-section">
+      <div class="section__block">
+        <h2 class="section__heading">Stand out to the right audience</h2>
+        <p class="section__description">
+          Using a collaborative formula of designers, researchers, photographers, videographers, and copywriters, we’ll build and extend your brand in digital places.
+        </p>
+        <a href="#" class="section__link">Learn more</a>
+      </div>
+      <picture class="section__picture">
+        <source
+          media="(min-width: 56em)"
+          srcset="https://raw.githubusercontent.com/0xabdulkhalid/sunnyside-agency-landing-page/main/images/desktop/image-stand-out.webp"
+        />
+        <img
+          src="https://raw.githubusercontent.com/0xabdulkhalid/sunnyside-agency-landing-page/main/images/mobile/image-stand-out.webp"
+          alt=""
+          class=""
+          width="750" 
+          height="624"
+        />
+      </picture>
+    </section>
+    <div class="main__sub-container">
+      <section class="main__third-section">
+        <div class="section__block--secondary">
+          <h2 class="section__heading">Graphic Design</h2>
+          <p class="section__description">
+            Great design makes you memorable. We deliver artwork that underscores your brand message and captures potential clients’ attention.
+          </p>
+        </div>
+      </section>
+      <section class="main__fourth-section">
+        <div class="section__block--secondary">
+          <h2 class="section__heading">Photography</h2>
+          <p class="section__description">
+            Increase your credibility by getting the most stunning, high-quality photos that improve your business image.
+          </p>
+        </div>
+      </section>
+    </div>
+    
+    <section class="main__testimonals">
+      <h2 class="testimonals__heading">Client testimonials</h2>
+      <div class="testimonals__divider">
+        <figure class="testimonals__section">
+          <blockquote>We put our trust in Sunnyside and they delivered, making sure our needs were met and deadlines were always hit.</blockquote>
+          <figcaption>
+            <img src="https://raw.githubusercontent.com/0xabdulkhalid/sunnyside-agency-landing-page/main/images/image-emily.webp" alt="" width="144" height="144">
+            <div class="figcaption__text-block">
+              <p>
+                <span class="figcaption__user-name">Emily R.</span>
+                Marketing Director
+              </p>
+            </div>
+          </figcaption>
+        </figure>
+        <figure class="testimonals__section">
+          <blockquote>Sunnyside’s enthusiasm coupled with their keen interest in our brand’s success made it a satisfying and enjoyable experience.</blockquote>
+          <figcaption>
+            <img src="https://raw.githubusercontent.com/0xabdulkhalid/sunnyside-agency-landing-page/main/images/image-thomas.webp" alt="" width="144" height="144">
+            <div class="figcaption__text-block">
+              <p>
+                <span class="figcaption__user-name">Thomas S.</span>
+                Chief Operating Officer
+              </p>
+            </div>
+          </figcaption>
+        </figure>
+        <figure class="testimonals__section">
+          <blockquote>Incredible end result! Our sales increased over 400% when we worked with Sunnyside. Highly recommended!</blockquote>
+          <figcaption>
+            <img src="https://raw.githubusercontent.com/0xabdulkhalid/sunnyside-agency-landing-page/main/images/image-jennie.webp" alt="" width="144" height="144">
+            <div class="figcaption__text-block">
+              <p>
+                <span class="figcaption__user-name">Jennie F.</span>
+                Business Owner
+              </p>
+            </div>
+          </figcaption>
+        </figure>
+      </div>
+    </section>
+    <section class="main__illustrative-section" aria-hidden="true">
+      <picture class="illustrative__picture">
+        <source
+          media="(min-width: 56em)"
+          srcset="https://raw.githubusercontent.com/0xabdulkhalid/sunnyside-agency-landing-page/main/images/desktop/image-gallery-milkbottles.webp"
+        />
+        <img
+          src="https://raw.githubusercontent.com/0xabdulkhalid/sunnyside-agency-landing-page/main/images/mobile/image-gallery-milkbottles.webp"
+          alt=""
+          width="376" 
+          height="376"
+        />
+      </picture>
+      <picture class="illustrative__picture">
+        <source
+          media="(min-width: 56em)"
+          srcset="https://raw.githubusercontent.com/0xabdulkhalid/sunnyside-agency-landing-page/main/images/desktop/image-gallery-orange.webp"
+        />
+        <img
+          src="https://raw.githubusercontent.com/0xabdulkhalid/sunnyside-agency-landing-page/main/images/mobile/image-gallery-orange.webp"
+          alt=""
+          width="376" 
+          height="376"
+        />
+      </picture>
+      <picture class="illustrative__picture">
+        <source
+          media="(min-width: 56em)"
+          srcset="https://raw.githubusercontent.com/0xabdulkhalid/sunnyside-agency-landing-page/main/images/desktop/image-gallery-cone.webp"
+        />
+        <img
+          src="https://raw.githubusercontent.com/0xabdulkhalid/sunnyside-agency-landing-page/main/images/mobile/image-gallery-cone.webp"
+          alt=""
+          width="376" 
+          height="376"
+        />
+      </picture>
+      <picture class="illustrative__picture">
+        <source
+          media="(min-width: 56em)"
+          srcset="https://raw.githubusercontent.com/0xabdulkhalid/sunnyside-agency-landing-page/main/images/desktop/image-gallery-sugarcubes.webp"
+        />
+        <img
+          src="https://raw.githubusercontent.com/0xabdulkhalid/sunnyside-agency-landing-page/main/images/mobile/image-gallery-sugar-cubes.webp"
+          alt=""
+          width="376" 
+          height="376"
+        />
+      </picture>
+    </section>
+  </main>
+
+
+  <footer>
+    <div class="footer__home-link">
+      <a href="#">
+        <img
+          src="https://raw.githubusercontent.com/0xabdulkhalid/sunnyside-agency-landing-page/main/images/logo.svg"
+          alt="Sunnyside - Home"
+          width="124" 
+          height="24"
+        />
+      </a>
+    </div>
+    <nav class="footer__navigations">
+      <ul role="list" class="navigation__links">
+        <li role="listitem">
+          <a href="#" class="footer__link">About</a>
+        </li>
+        <li role="listitem">
+          <a href="#" class="footer__link">Services</a>
+        </li>
+        <li role="listitem">
+          <a href="#" class="footer__link">Projects</a>
+        </li>
+      </ul>
+    </nav>
+    <nav class="footer__socials" aria-label="socials">
+      <ul role="list" class="socials__links">
+        <li role="listitem">
+          <a href="#" aria-label="Facebook">
+            <img src="https://raw.githubusercontent.com/0xabdulkhalid/sunnyside-agency-landing-page/main/images/icon-facebook.svg" alt="" width="20" height="20">
+          </a>
+        </li>
+        <li role="listitem">
+          <a href="#" aria-label="Instagram">
+            <img src="https://raw.githubusercontent.com/0xabdulkhalid/sunnyside-agency-landing-page/main/images/icon-instagram.svg" alt="" width="24" height="18">
+          </a>
+        </li>
+        <li role="listitem">
+          <a href="#" aria-label="Twitter">
+            <img src="https://raw.githubusercontent.com/0xabdulkhalid/sunnyside-agency-landing-page/main/images/icon-twitter.svg" alt="" width="20" height="17">
+          </a>
+        </li>
+        <li role="listitem">
+          <a href="#" aria-label="Pinterest">
+            <img src="https://raw.githubusercontent.com/0xabdulkhalid/sunnyside-agency-landing-page/main/images/icon-pinterest.svg" alt="" width="20" height="20">
+          </a>
+        </li>
+      </ul>
+    </nav>
+
+    <div class="attribution">
+      Challenge by
+      <a
+        href="https://www.frontendmentor.io/"
+        target="_blank"
+        aria-describedby="Frontend Mentor Website"
+        >Frontend Mentor</a
+      >, Coded by
+      <a
+        href="https://github.com/0xabdulkhalid"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-describedby="Abdul khalid's Github profile"
+        >0xabdulkhalid</a
+      >
+    </div>
+  </footer>
+
+  <script src="./script.min.js"></script>
+</body>
+</html>

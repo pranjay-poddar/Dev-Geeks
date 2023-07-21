@@ -29,6 +29,7 @@ form button {
     font-size: 2rem;
     border: none;
     background: white;
+    border-radius: 15px;
 }
 
 form input:focus {
@@ -40,6 +41,7 @@ form button {
     background: white;
     cursor: pointer;
     transition: all 0.3s ease;
+    margin-left: -2rem;
 }
 
 form button:hover {

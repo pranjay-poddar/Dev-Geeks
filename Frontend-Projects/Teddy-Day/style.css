@@ -1,0 +1,253 @@
+body {
+    padding: 0;
+    margin: 0;
+    background: #F5B7B1;
+}
+
+.container {
+    height: 40vh;
+    width: 60vw;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.face {
+    position: relative;
+    height: 100px;
+    width: 120px;
+    border-radius: 45%;
+    background-color: rgb(233, 173, 83);
+    border: 1.7px solid rgb(134, 89, 52);
+    z-index: +1;
+}
+
+.e1,
+.e2 {
+    position: relative;
+    height: 27px;
+    width: 27px;
+    background-color: black;
+    border-radius: 50%;
+    float: left;
+    top: 35%;
+    left: 17px;
+    animation: a 1.5s infinite;
+}
+
+.e2 {
+    left: 35%;
+}
+
+.p1,
+.p2 {
+    position: relative;
+    height: 15px;
+    width: 15px;
+    background-color: white;
+    border-radius: 50%;
+    top: 10px;
+    left: 2px;
+}
+
+.mo {
+    position: relative;
+    height: 30px;
+    width: 40px;
+    border-radius: 47%;
+    background-color: blanchedalmond;
+    left: 37px;
+    top: 55px;
+}
+
+.nose {
+    position: relative;
+    height: 0;
+    width: 0;
+    border-top: 8px solid rgb(37, 19, 7);
+    border-right: 8px solid transparent;
+    border-left: 8px solid transparent;
+    left: 11px;
+    top: -15px;
+}
+
+.line {
+    position: relative;
+    height: 10px;
+    width: 2px;
+    background-color: black;
+    top: -1px;
+    left: 18.8px;
+    z-index: -1;
+}
+
+.mouth {
+    position: relative;
+    height: 10px;
+    width: 19px;
+    border-radius: 0 0 50px 50px;
+    background-color: rgb(240, 85, 85);
+    top: 18px;
+    left: 10px;
+}
+
+.er,
+.el {
+    position: relative;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    background-color: rgb(233, 173, 83);
+    border: 1.7px solid rgb(134, 89, 52);
+    float: left;
+    bottom: 40px;
+    right: 20px;
+    z-index: -1;
+}
+
+.el {
+    left: 55px;
+}
+
+.p3,
+.p4 {
+    position: relative;
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    background-color: white;
+    bottom: 8px;
+    left: 12px;
+}
+
+.err,
+.ell {
+    position: relative;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    background-color: rgb(255, 211, 144);
+    float: left;
+    bottom: 40px;
+    right: 20px;
+    top: 20%;
+    left: 10px;
+}
+
+.ell {
+    left: 3px;
+}
+
+@keyframes a {
+    40% {
+        transform: scaleY(0);
+    }
+}
+
+.body {
+    position: relative;
+    height: 100px;
+    width: 95px;
+    border-radius: 45%;
+    background-color: rgb(233, 173, 83);
+    border: 1.7px solid rgb(134, 89, 52);
+    top: 70px;
+    right: 110px;
+}
+
+.h1,
+.h2 {
+    position: relative;
+    height: 50px;
+    width: 25px;
+    border-radius: 43%;
+    background-color: rgb(233, 173, 83);
+    border: 1.7px solid rgb(134, 89, 52);
+    float: left;
+    bottom: 15%;
+    right: 10px;
+    transform-origin: top;
+}
+
+.h2 {
+    right: -50px;
+    bottom: -19%;
+    transform: rotate(-15deg);
+    z-index: -1;
+}
+
+.h1 {
+    bottom: -35%;
+    right: 7px;
+    transform: rotate(90deg);
+    animation: b 2.5s infinite;
+    z-index: -1;
+}
+
+.l1,
+.l2 {
+    position: relative;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    background-color: rgb(233, 173, 83);
+    border: 1.7px solid rgb(134, 89, 52);
+    float: left;
+    transform-origin: top;
+    top: 8px;
+    right: 14px;
+}
+
+.l2 {
+    right: -20px;
+}
+
+@keyframes b {
+    50% {
+        transform: rotate(150deg);
+    }
+}
+
+.b1,
+.b2 {
+    position: relative;
+    height: 10px;
+    width: 20px;
+    background-color: pink;
+    border-radius: 50%;
+    float: left;
+    top: 30%;
+    filter: blur(2px);
+}
+
+.b1 {
+    right: 65%;
+}
+
+.b2 {
+    top: 20px;
+}
+
+#txt {
+    text-align: center;
+    font-family: 'Pacifico', cursive;
+    margin-top: 50px;
+    font-size: 20px;
+}
+
+#title {
+    /* padding-top: 70px; */
+    font-size: 25px;
+    white-space: nowrap;
+    text-align: center;
+    margin-top: 0px;
+    font-family: 'Pacifico', cursive;
+}
+
+#dsc {
+    text-align: center;
+    margin: 20px 100px 100px 100px;
+    font-family: 'Pacifico', cursive;
+}

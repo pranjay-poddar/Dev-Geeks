@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Logo of the website -->
+    <link rel="shortcut icon"
+        href="https://cdn.iconscout.com/icon/premium/png-256-thumb/oscilloscope-1983482-1675666.png"
+        type="image/x-icon">
+
+    <!-- Title of the website -->
+    <title>Text Analyzer</title>
+
+    <!-- Main stylesheet -->
+    <link rel="stylesheet" href="./style.css" />
+</head>
+
+<body>
+    <div class="box"></div>
+
+    <!-- Main container of the website -->
+    <div class="container">
+        <div class="container-content">
+            <div class="text-entry">
+                <h2>Text Analyzer</h2>
+
+                <!-- Input section -->
+                <textarea name="" id="textarea" cols="30" rows="10"
+                    placeholder="Type or Paste your text here ..."></textarea>
+                <button type="button" id="process-btn">Process Text</button>
+            </div>
+
+            <!-- Output section -->
+            <div class="text-info">
+                <h2>Text Analysis</h2>
+                <ul class="text-info-list">
+                    <li>
+                        <p>Character Count:</p>
+                        <span id="char">0</span>
+                    </li>
+                    <li>
+                        <p>Word Count:</p>
+                        <span id="word">0</span>
+                    </li>
+                    <li>
+                        <p>Sentences:</p>
+                        <span id="sentences">0</span>
+                    </li>
+                    <li>
+                        <p>Spaces:</p>
+                        <span id="spaces">0</span>
+                    </li>
+                    <li>
+                        <p>Punctuations:</p>
+                        <span id="punctuations">0</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Developer of the project -->
+    <footer>
+        Developed By <a href="https://github.com/Avdhesh-Varshney">Avdhesh Varshney</a>
+    </footer>
+
+    <!-- Main javascript file -->
+    <script src="./script.js"></script>
+</body>
+
+</html>

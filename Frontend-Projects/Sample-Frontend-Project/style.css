@@ -1,0 +1,550 @@
+@import url('https://fonts.googleapis.com/css2?family=Alegreya:wght@800&display=swap');
+
+/* font-family: 'Alegreya', serif; */
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+.navbar {
+    min-height: 7vh;
+    border-bottom: 1px solid black;
+    background: black;
+}
+
+.navLogo {
+    font-size: 2rem;
+    color: aliceblue;
+    font-weight: bold;
+    margin-left: 2vw;
+}
+
+.navLinks {
+    width: 40vw;
+}
+
+.navLinks li {
+    list-style: none;
+    margin: 0vh auto;
+    font-weight: 300;
+    margin-top: 2vh;
+}
+
+.navLinks li a {
+    text-decoration: none;
+    color: white;
+    margin: auto;
+    font-weight: bolder;
+    font-size: 1.1rem;
+}
+
+.navLinks li:hover {
+    border-bottom: 4px solid black;
+}
+
+.navHeading {
+    margin: auto 0px;
+    width: 50vw;
+}
+
+.navSocial div {
+    margin: auto;
+}
+
+.navSocial {
+    width: 10vw;
+}
+
+header {
+    max-height: 80vh;
+    margin-top: 10vh;
+}
+
+.headerImg {
+    max-height: 80vh;
+}
+
+.headerInfo {
+    height: 40vh;
+    max-width: 30vw;
+}
+
+.headerInfo h1 {
+    font-size: 4rem;
+    font-family: 'Alegreya', serif;
+}
+
+.headerInfo p {
+    font-size: 1.2rem;
+    margin-bottom: 4vh;
+    text-align: justify;
+}
+
+.headerBtn {
+    height: 10vh;
+    font-size: 1.5rem;
+    width: 20vw;
+    background: black;
+    color: white;
+    border-radius: 10px;
+    font-family: 'Font Awesome 5 Brands';
+    border: 0px;
+    letter-spacing: 1px;
+    word-spacing: 2px;
+}
+
+.separator {
+    max-width: 98vw;
+    width: 99%;
+}
+
+
+.about {
+    max-height: 70vh;
+}
+
+.aboutImg {
+    max-height: 70vh;
+    /* height: 70vh; */
+}
+
+.aboutInfo {
+    height: 40vh;
+    max-width: 38vw;
+}
+
+.aboutInfo h1 {
+    font-size: 4rem;
+    font-family: 'Alegreya', serif;
+}
+
+.aboutInfo h3 {
+    font-size: 2rem;
+    font-family: 'Alegreya', serif;
+}
+
+.aboutInfo p {
+    font-size: 1.2rem;
+    margin-bottom: 4vh;
+    text-align: justify;
+}
+
+.aboutBtn {
+    font-family: 'Alegreya', serif;
+}
+
+.aboutBtn1,
+.aboutBtn2 {
+    height: 10vh;
+    width: 18vw;
+    border-radius: 10px;
+    font-family: 'Font Awesome 5 Brands';
+    border: 0px;
+    letter-spacing: 1px;
+    font-size: 1rem;
+}
+
+.aboutBtn1 {
+    background: black;
+    color: white;
+    letter-spacing: 2px;
+}
+
+.aboutBtn2 {
+    background: rgb(230, 230, 230);
+    color: black;
+    float: right;
+}
+
+.services {
+    height: 90vh;
+}
+
+.servicesTitle {
+    width: 30vw;
+    margin-left: 5vw;
+}
+
+.servicesTitle h1 {
+    font-size: 4rem;
+    font-family: 'Alegreya', serif;
+}
+
+.servicesTitle h3 {
+    font-size: 2rem;
+    font-family: 'Alegreya', serif;
+}
+
+.servicesDiscount {
+    border-radius: 0px 25px 25px 0px;
+    width: 20vw;
+    height: 90vh;
+    background-color: black;
+    color: white;
+    padding: 0px 4vw;
+
+}
+
+.servicesPortfolio {
+    border-radius: 0px 25px 25px 0px;
+    height: 90vh;
+    padding: 0px 4vw;
+    width: 20vw;
+    background-color: black;
+}
+
+.servicePortfolioImg,
+.serviceDiscountImg {
+    height: 30vh;
+    margin-top: 10vh;
+}
+
+.servicesDiscount h2,
+.servicesPortfolio h2 {
+    font-size: 2rem;
+    font-weight: bolder;
+    margin-bottom: 3vh;
+    color: white;
+    text-align: center;
+}
+
+.servicesDiscount p,
+.servicesPortfolio p {
+    font-size: 1.2rem;
+    margin-bottom: 4vh;
+    text-align: justify;
+    color: white;
+}
+
+.serviceDiscountImgContainer,
+.servicePortfolioImgContainer {
+    height: 45vh;
+}
+
+.serviceDiscountBtn,
+.servicePortfolioBtn {
+    height: 7vh;
+    width: 13vw;
+    border-radius: 10px;
+    font-family: 'Font Awesome 5 Brands';
+    border: 0px;
+    letter-spacing: 1px;
+    word-spacing: 2px;
+    font-size: 1.2rem;
+    border-radius: 10px;
+    font-weight: bold;
+    background-color: white;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+}
+
+.team {
+    height: 90vh;
+}
+
+.team h1 {
+    font-size: 4rem;
+    font-family: 'Alegreya', serif;
+}
+
+.teamImage {
+    height: 20vw;
+}
+
+.teamProfile {
+    margin: auto;
+}
+
+.teamMembers {
+    height: 90vh;
+}
+
+.teamName {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.teamData1,
+.teamData2 {
+    color: rgb(59, 59, 59);
+}
+
+.teamData1 {
+    margin-top: 2vh;
+}
+
+.login {
+    background-color: black;
+    color: white;
+    height: 90vh;
+}
+
+.loginImgContainer {
+    margin: auto 0px auto auto;
+}
+.loginImg{
+    max-height:80vh ;
+}
+
+.loginData {
+    margin: auto 4vw;
+}
+
+.loginData h2 {
+    font-size: 3rem;
+}
+
+.loginData h3 {
+    font-size: 1.2rem;
+    margin: 5vh 0vw;
+    font-weight: 100;
+    margin-bottom: 1rem;
+    margin-left: 1rem;
+}
+
+.loginForm label {
+    color: rgb(201, 201, 201);
+}
+
+.loginForm input {
+    color: white;
+    width: 15vw;
+    border: 0px;
+    background-color: black;
+    margin: 2vh 0vw 4vh 0vw;
+    border-bottom: 1px dashed rgb(201, 201, 201);
+}
+
+.loginBtn {
+    height: 7vh;
+    width: 17vw;
+    border-radius: 5px;
+    font-family: 'Font Awesome 5 Brands';
+    border: 0px;
+    letter-spacing: 1px;
+    word-spacing: 2px;
+    font-size: 1.2rem;
+    border-radius: 10px;
+    font-weight: bold;
+}
+
+.loginForget {
+    float: left;
+    margin-bottom: 5vh;
+}
+
+form.loginForm {
+    border: 2px solid grey;
+    padding: 10px 58px;
+    border-radius: 1rem;
+}
+
+.loginForm a {
+    text-decoration: none;
+    color: rgb(201, 201, 201);
+}
+
+.user {
+    height: 90vh;
+}
+
+.user h1 {
+    font-size: 4rem;
+}
+
+.userBox1 {
+    height: 47vh;
+    padding: 4.5vh 2vw;
+    width: 33vw;
+    color: white;
+    background-color: black;
+    border-radius: 0px 40px 40px 0px;
+}
+.userBox1 h3{
+    margin: 5vh 0vw;
+}
+.userBox1 p{
+    margin-bottom: 5vh;
+    word-spacing: 2px;
+    font-size: 1.1rem;
+    color: #d4d4d4;
+    text-align: justify;
+}
+
+.userBoxOther {
+    height: 47vh;
+    padding: 4.5vh 2vw;
+    width: 33vw;
+    border-radius: 0px 40px 40px 0px;
+    background-color:  rgb(201, 201, 201);
+}
+.userBoxes{
+    height: 80vh;
+}
+.userBoxOther h3{
+    margin: 5vh 0vw;
+}
+.userBoxOther p{
+    margin-bottom: 5vh;
+    word-spacing: 2px;
+    font-size: 1.1rem;
+    color: #2b2b2b;
+}
+.userBtn{
+    min-height: 10vh;
+   min-width: 18vw;
+    font-weight: bold;
+    font-size: 1.2rem;
+    border: 0px;
+    border-radius: 1rem;
+}
+.userBoxOther button{
+    background-color: black;
+    color: white;
+}
+.swiper {
+    width: 90vw;
+    height: 80vh;
+  }
+.blogBoxes{
+    grid-template-columns: repeat(2,1fr);
+    grid-row-gap: 20vh;
+    margin: 10vh auto;
+}
+.blog h1{
+    font-size: 4rem;
+    font-family: 'Alegreya', serif;
+} 
+.blogBtn button{
+    border: 0px;
+    height: 10vh;
+    width: 18vw;
+    font-weight: bold;
+    font-size: 1.2rem;
+    background-color:black ;
+    color: white;
+}
+.contact{
+    height: 90vh;
+    background-color:black ;
+    color: white;
+}
+
+
+.contactImg {
+    height: 80vh;
+}
+
+.contactForm {
+    max-width: 45vw;
+}
+
+.contactForm h1 {
+    font-size: 2rem;
+    margin: 2vh 0vw;
+}
+
+.contactForm h3 {
+    font-size: 3rem;
+}
+
+.contactForm p {
+    font-size: 1.2rem;
+    margin-bottom: 4vh;
+    color:  rgb(160, 160, 160);
+}
+
+.contactBtn {
+    height: 7vh;
+    width: 15vw;
+    border-radius: 10px;
+    font-family: 'Font Awesome 5 Brands';
+    border: 0px;
+    letter-spacing: 1px;
+    word-spacing: 2px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    float: left;
+    margin-top: 1rem;
+}
+
+.contactForm form input{
+    background-color: black;
+    border: 1px solid rgb(160, 160, 160);
+    padding-left: 2vw;
+    margin-bottom: 1rem;
+    width: 50%;
+    border-radius: 1rem;
+}
+.contactName{
+    height: 8vh;
+    width: 26vh;
+}
+.contactEmail{
+    height: 8vh;
+    width: 46vh;
+}
+
+.contactMessage{
+    background-color: black;
+    border: 1px solid rgb(160, 160, 160);
+    padding-left: 2vw;
+    padding-top: 2vh;
+    border-radius: 1rem;
+    width: 50%;
+}
+.footer{
+    height: 60vh;
+}
+.footerTitle{
+    margin: auto auto 2vh auto;
+    max-width: 30vw;
+    height: 40vh;
+}
+.footerTitle h2{
+    margin-bottom: 5vh;
+    font-size: 2rem;
+    font-weight: 600; 
+}
+
+.footerTitle i{
+    color: black;
+}
+.footerDownload img{
+    max-height: 10vh;
+}
+.footerTitle div{
+    margin: 2vh 0vw;
+    font-weight: 600;
+    font-size: 1.2rem;
+    color:  rgb(123, 123, 123);
+}
+.footerTitle p{
+    margin: 1vh 0vw;
+    color:  rgb(123, 123, 123);
+}
+.footerSocial div{
+    margin-right: 1vw;
+}
+.footerSubscribe input{
+    height: 7vh;
+    width: 17vw;
+    padding-left: 2vw;
+}
+.footerBtn{
+    background: black;
+    color: white;
+    height: 7vh;
+    width: 7vw;
+}
+hr{
+    margin-bottom: 5vh;
+}
+.userTitle{
+    margin-left: 2vw;
+}
+.loginData{
+    width: 24vw;
+}
