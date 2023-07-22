@@ -1,0 +1,139 @@
+@{navigation mainmenu:Main menu}
+@{navigation footer:Footer menu}
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=10" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<meta name="robots" content="all,follow" />
+
+		<style>
+			html,body { margin: 0; padding: 0; }
+			body { background-color: white; }
+
+			.CMS_hidden { display: none; }
+
+			.wb.wp { padding-left: 20px; padding-right: 20px; }
+			.wb.wm { margin-bottom: 20px; }
+			.wbi.wmi { margin-bottom: 15px; }
+			.wbi.wpi { padding-left: 20px; padding-right: 20px; }
+
+			h1 { font-family: Arial; margin: 0 0 20px 0; padding: 0; font-weight: 700; font-size: 30px; }
+			h2 { font-family: Arial; margin: 0 0 15px 0; padding: 0; font-weight: 700; font-size: 23px; }
+			h3 { font-family: Arial; margin: 0 0 10px 0; padding: 0; font-weight: 700; font-size: 18px; }
+
+			header { border-bottom: 1px solid #E0E0E0; height: 80px; }
+			header nav { margin: 5px 15px 0 30px; padding: 18px 0 18px 30px; float: right; }
+			header nav a { font-size: 14px; color: black; text-transform: uppercase; font-weight: bold; margin-left: 10px; padding: 5px 7px; display: inline-block; position: relative; font-family: Arial; border-radius: 2px; }
+			header nav a:first-child { margin-left: 0; }
+			header nav a:hover { text-decoration: none; color: #505050; }
+			header nav .selected { color: white !important; background-color: #78AE4E; }
+			header nav i { margin-right: 8px; }
+			header .logo { float: left; margin: 12px 0 10px 15px; width: 150px; }
+
+			.mobilemenu-visible header nav { display: block !important; }
+			.mobilemenu { position: absolute; right: 0; margin: 15px 20px 0 0; display: none; }
+			.mobilemenu button { border: 2px solid #404040; border-radius: 4px; outline: 0; cursor: pointer; width: 40px; height: 40px; background-color: transparent; color: #505050; font-size: 22px; text-align: center; padding: 0; }
+			.mobilemenu button i { transition: all 0.2s; }
+			.mobilemenu button:hover { color: black; }
+			.mobilemenu-visible .mobilemenu i { transform: rotate(-90deg); }
+			.mobilemenu-visible .mobilemenu button { color: #A0A0A0 !important; border-color: #A0A0A0 !important; }
+
+			.breadcrumb { margin: 5px 0 20px; padding: 8px 0; list-style-type: none; font: normal normal 11px Arial; }
+			.breadcrumb i { margin-right: 5px; }
+			.breadcrumb li { position: relative; display: inline-block; }
+			.breadcrumb li:after { content: '\f0da'; font-family: 'Font Awesome 5 Free'; margin: 0 8px; color: black; width: 12px; font-weight: 900; }
+			.breadcrumb li:last-child:after { content: ''; margin: 0; }
+			.breadcrumb li:last-child { font-weight: bold; }
+			.breadcrumb a { text-decoration: none; color: black; }
+			.breadcrumb a:hover { text-decoration: underline; }
+
+			footer { text-align: center; padding: 20px 0; margin: 50px auto 0; border-top: 1px solid #E0E0E0; font-size: 11px; color: gray; max-width: 500px; }
+			footer nav { margin-bottom: 10px; }
+			footer nav a { margin: 0 5px; font-size: 12px; font-weight: bold; color: black; }
+			footer > a { color: #A0A0A0; font-size: 10px; }
+
+			@media(max-width: 768px) {
+				h1 { line-height: 25px; font-size: 24px; margin-bottom: 15px; }
+				h2 { line-height: 22px; font-size: 20px; margin-bottom: 15px; }
+				h3 { line-height: 20px; font-size: 18px; margin-bottom: 10px; }
+				.row { margin-left: 0; margin-right: 0; }
+				.wp { padding-left: 15px; padding-right: 15px; }
+				.nowrap { overflow-x: auto; text-overflow: clip; overflow-scrolling: touch; }
+				header { border-radius: 0; box-shadow: none; margin: 0; padding: 15px 0 0 0; min-height: 100px; }
+				header .logo { float: none; display: block; width: 150px; margin-left: 0; }
+				header nav { display: none; float: none; border: 0; margin: 0 0 20px; padding: 0; background-color: white; box-shadow: 0 8px 20px rgba(0,0,0,0.2); border-top: 1px solid #E0E0E0; position: absolute; width: 100%; z-index: 5; }
+				header nav a { display: block; margin: 0; padding: 8px 25px; border-top: 1px solid #E0E0E0; color: black; border-radius: 0; }
+				header nav a:first-child { border-top: 0; }
+				footer { height: auto; padding-bottom: 30px; }
+				footer nav { float: none; text-align: center; }
+				footer .about { float: none; text-align: center; }
+				.mobilemenu { display: block; }
+			}
+
+		</style>
+
+		<link rel="icon" href="/favicon.ico" type="image/x-icon" />
+
+	</head>
+	<body data---="exec">
+
+		@{if repository.preview}
+			<br /><br /><br />
+			<div class="container">
+				<div id="CMS">
+					@{if repository.page && repository.page.body}
+						@{!repository.page.body}
+					@{else}
+						<div class="CMS_widgets" data-cms-category="Content,Columns"></div>
+					@{fi}
+				</div>
+			</div>
+			<br />
+		@{else}
+
+			<header>
+				<div class="container">
+					<div class="row">
+						<div class="mobilemenu">
+							<button id="mobilemenu"><i class="fa fa-navicon"></i></button>
+						</div>
+						<a href="/" class="logo"><img src="/logo.png" border="0" class="img-responsive" /></a>
+						<nav>
+							@{foreach m in MAIN.navigations.mainmenu.children}
+								<a href="@{m.url}"@{if m.contains(url)} class="selected"@{fi}>@{if m.icon}<i class="@{m.icon}"></i>@{fi}@{m.name}</a>
+							@{end}
+						</nav>
+					</div>
+				</div>
+			</header>
+
+			<div class="container">
+
+				<ul class="breadcrumb">
+					@{foreach m in repository.sitemap}
+						<li><a href="@{m.url}">@{if index === 0}<i class="fa fa-home"></i>@{fi}@{m.name}</a></li>
+					@{end}
+				</ul>
+
+			@{if repository.page && repository.page.body}
+				@{!repository.page.body}
+			@{fi}
+			</div>
+
+			<footer>
+				<nav>
+				@{foreach m in MAIN.navigations.footer.children}
+					<a href="@{m.url}">@{m.name}</a>
+				@{end}
+				</nav>
+				<div>All rights reserved &copy; @{NOW.getFullYear()}</div>
+				<a href="https://www.totaljs.com/cms/" target="_blank">Powered by <strong>Total.js CMS</strong></a>
+			</footer>
+		@{fi}
+
+	</body>
+</html>

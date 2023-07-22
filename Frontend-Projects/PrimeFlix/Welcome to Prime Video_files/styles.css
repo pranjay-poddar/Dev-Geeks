@@ -18805,7 +18805,8 @@ a._4tt9ZY._4tt9ZY.I9Bzd2 strong {
 
 .DVPAWebWidgetsCustomComponents_Image__image {
   max-width: 100%;
-  object-fit: contain
+  object-fit: contain;
+  border-radius: 30rem
 }
 
 .DVPAWebWidgetsCustomComponents_Loader__overlay {
@@ -19652,7 +19653,13 @@ a._4tt9ZY._4tt9ZY.I9Bzd2 strong {
 }
 
 .DVPAWebWidgetsCustomComponents_Text__text p:first-of-type {
-  margin-top: 0
+  justify-content: center;
+  width: 81%;
+  text-align: center;
+  margin: auto;
+  display: flex;
+  margin-top: 0;
+  width: 75%
 }
 
 .DVPAWebWidgetsCustomComponents_Text__text.DVPAWebWidgetsCustomComponents_Text__hasHeight {
@@ -20208,7 +20215,8 @@ hr.DVPAWebWidgetsCustomComponents_Divider__divider {
   margin-top: 24px;
   padding: 0 5% 0 0;
   width: 50%;
-  float: left
+  float: left;
+  text-align: center;
 }
 
 .DVPAWebWidgetsCustomComponents_Grid__grid .DVPAWebWidgetsCustomComponents_Grid__gridHeaderCopyTitle {
@@ -22522,7 +22530,8 @@ html[dir="rtl"] .DVPAWebWidgetsCustomComponents_Address__address .DVPAWebWidgets
   position: relative;
   z-index: 1;
   padding: 64px 5%;
-  color: #fff
+  color: #fff;
+  height: 46rem
 }
 
 .DVPAWebWidgetsCustomComponents_CustomMagnet__wrapper .DVPAWebWidgetsCustomComponents_CustomMagnet__inner:after {

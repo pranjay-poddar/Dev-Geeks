@@ -1,0 +1,198 @@
+<div data---="form__common.form__if:newslettersform;width:1200;reload:newslettersform/show;submit:newslettersform/submit;autofocus:true;icon:hash" class="hidden">
+
+	<div data-scope="newslettersform">
+		<div class="padding">
+			<div class="row">
+				<div class="col-md-4 m">
+					<div data---="input__?.name__required:true;maxlength:100;placeholder:@(Discount 50% for our services)">@(Subject)</div>
+					<div class="help">@(Enter a readable and short subject)</div>
+				</div>
+				<div class="col-md-4 m">
+					<div data---="input__?.template__dirsource:common.dependencies.templatesnewsletters;icon:paint-brush">@(Template)</div>
+				</div>
+				<div class="col-md-2 m">
+					<div data---="input__?.limit__type:number;required:1;align:center;maxlength:9">@(Daily limit)</div>
+				</div>
+				<div class="col-md-2" style="margin-top:22px">
+					<button class="button button-small exec b" data-exec="newslettersform/test" data-bind="?.template__disable:!value"><i class="fa fa-send"></i>Send test</button>
+				</div>
+			</div>
+		</div>
+		<hr class="nmt nmb" />
+		<div class="padding bg-yellow">
+			<div class="help nmt">@(Check the checkbox below if you want to send this newsletter to all registered subscribers.)</div>
+			<div data---="input__?.send__type:checkbox" class="b mt10 red">@(Send mail to all subscribers)</div>
+		</div>
+		<div class="cmseditor" data---="cmseditor__?.body" data-import="url:@{#}/_pages/cmseditor.html;target:body"></div>
+		<div class="backups hidden" data-bind="?.id__show"><span class="link exec" data-exec="newslettersform/backups"><i class="fa fa-clock-o mr5"></i>@(Restore a backup)</span></div>
+		<div data-bind="?.id__show:value && value.length" class="hidden">
+			<hr class="nmt" />
+			<div class="padding">
+				<div class="row">
+					<div class="col-lg-2 col-md-3 m">
+						<div class="keyvalue">
+							<div class="key">@(# Id)</div>
+							<div class="value" data-bind="?.id__html:value"></div>
+						</div>
+					</div>
+					<div class="col-lg-2 col-md-3 m">
+						<div class="keyvalue">
+							<div class="key"><i class="fa fa-calendar"></i>@(Created)</div>
+							<div class="value" data-bind="?.dtcreated__html:Thelpers.time(value)"></div>
+						</div>
+					</div>
+					<div class="col-lg-2 col-md-3 m">
+						<div class="keyvalue">
+							<div class="key"><i class="fa fa-calendar"></i>@(Updated)</div>
+							<div class="value" data-bind="?.dtupdated__html:value ? Thelpers.time(value) : '@(unchanged)'"></div>
+						</div>
+					</div>
+					<div class="col-lg-6 m" data-bind="?.stats__show">
+						<div data---="nosqlcounter__?.stats__height:56"></div>
+						<div class="help"><i class="fa fa-chart-bar"></i>@(Stats of all views for the last period)</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div data---="error__?.response"></div>
+	</div>
+
+	<nav data---="validation__newslettersform">
+		<button name="submit"><i class="fa fa-check-circle"></i>@(SAVE)</button>
+		<button name="cancel">@(Cancel)</button>
+	</nav>
+
+</div>
+
+<div data---="form__common.form2__if:newsletterstest;width:500;submit:newslettersform/submittest;reset:newslettertest.*;autofocus:true;enter:true;icon:envelope-o;title:@(Send a test)" class="hidden">
+	<script type="text/html">
+		<div class="padding">
+			<div data---="input__newsletterstest.email__icon2:envelope-o;maxlength:120;required:true;type:email__'@'">@(Email)</div>
+		</div>
+		<nav data---="validation__newsletterstest">
+			<button name="submit">@(SEND)</button>
+			<button name="cancel">@(Cancel)</button>
+		</nav>
+	</script>
+</div>
+
+<script>
+
+	PLUGIN('newslettersform', function(exports) {
+
+		exports.show = function(com) {
+			var model = GET('?');
+			com.reconfigure({ title: model.id ? '@(Edit newslettter)' : '@(New newslettter)' });
+			model.id && AJAX('GET [url]api/newsletters/{id}/stats/'.arg(model), '?.stats');
+			WAIT('cmseditor.instance', function() {
+				cmseditor.instance.setWidgetOptions(model.widgets);
+				cmseditor.instance.lock(false);
+			});
+		};
+
+		exports.submit = function(hide) {
+
+			var model = CLONE('?');
+			var editor = cmseditor.instance;
+
+			model.pictures = editor.getPictures();
+			model.summary = editor.getSummary();
+			model.body = editor.getContent().replace(/\n[\s\t]+\n/g, '\n');
+			model.search = editor.getKeywords();
+
+			var w = editor.getWidgets();
+			model.widgets = w.settings;
+			model.bodywidgets = w.widgets;
+			model.stats = undefined;
+
+			var parts = { type: 'newsletter', items: editor.getParts() };
+
+			var fn = function() {
+				FUNC.loading(true);
+				AJAX('POST [url]api/newsletters/ REPEAT', model, function(response) {
+					FUNC.loading(false, 1000);
+					if (response.success) {
+						SETTER('snackbar/success', '@(Newsletter has been saved successfully.)');
+						hide();
+
+						EXEC('newsletters/refresh');
+
+						// Updates parts
+						parts.ownerid = response.value;
+						AJAX('POST [url]api/parts/', parts, NOOP);
+
+						model.send && setTimeout(function() {
+							EXEC('newsletters/state');
+						}, 3000);
+					}
+				});
+			};
+
+			if (model.send)
+				SETTER('approve/show', '@(Are you sure you want to send this newsletter to all registered subscribers?)', '"envelope" @(Yes, send)', fn);
+			else
+				fn();
+		};
+
+		exports.backups = function(el) {
+
+			FUNC.loading(true);
+			AJAX('GET [url]api/newsletters/{0}/backups/'.format(GET('?.id')), function(response) {
+
+				FUNC.loading(false, 1000);
+
+				for (var i = 0, length = response.length; i < length; i++) {
+					var item = response[i];
+					item.name = '{0} <b class="badge badge-blue ml5"><i class="fa fa-user mr5"></i>{1}</b>'.format(item.date.format('@(dd. MMM yyyy - HH:mm)'), item.user);
+				}
+
+				response.quicksort('date', false);
+
+				SETTER('suggestion', 'show', 'left', el, response, function(value) {
+					FUNC.loading(true);
+					setTimeout(function() {
+						AJAX('GET [url]api/backups/newsletters/{id}_{stamp}/'.arg(value), function(body) {
+							cmseditor.instance.replace(body);
+							FUNC.loading(false, 1000);
+						});
+					}, 100);
+				});
+
+
+			});
+		};
+
+		exports.test = function() {
+			SET('common.form2', 'newsletterstest');
+		};
+
+		exports.submittest = function(hide) {
+
+			var model = CLONE('?');
+			var editor = cmseditor.instance;
+
+			model.pictures = editor.getPictures();
+			model.body = editor.getContent().replace(/\n[\s\t]+\n/g, '\n');
+			model.search = editor.getKeywords();
+			!model.name && (model.name = 'Test email');
+			hide();
+
+			FUNC.loading(true);
+			AJAX('POST [url]api/newsletters/test/?email=' + encodeURIComponent(newsletterstest.email), model, function() {
+				FUNC.loading(false, 500);
+				SETTER('snackbar/success', '@(Newsletter has been sent successfully.)');
+			});
+		};
+
+		WATCH('?.template', function(path, value, type) {
+
+			if (type === 2) {
+				cmseditor.instance.reconfigure('template:' + value);
+				cmseditor.instance.set('');
+			}
+
+		}, true);
+
+	});
+
+</script>
