@@ -1,4 +1,3 @@
-Video Player Android Application
 # Video Player Android Application
 The Video Player App is an Android application in java language that allows users to play videos on their mobile devices. It provides a user-friendly interface for viewing videos and supports various video formats.
 
