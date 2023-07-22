@@ -140,33 +140,83 @@ nav a{
 .formbox{
     font-size: 1.4vw;
     display: inline-block;
-    width: 30vw;
+   /* width: 30vw;  */
     height: 35vw;
     margin-right: 5vw;
     background-color: rgb(185, 187, 150);
     opacity: 0.8;
     border-radius: 0.5vw;
-    padding: 2vw;
+    padding: 3vw;
 }
 .formbox fieldset{
+ 
     border-radius: 1vw;
     border: 0.2vw solid black;
     height: 32vw;
 }
 .formbox div{
     margin: 1vw 0;
+    
+}
+input[type="text"], input[type="email"]{
+    width: 480px;
+}
+input[type="number"], input[type="date"]{
+    width: 270px;
+}
+input[type="date"]{
+    font-size: 20px;
+    
+}
+.input-cls{
+    height: 40px;
+    padding-top: 7px;
+    padding-left: 10px;
+    border-radius: 6px;
+   /* box-shadow: rgba(0, 0, 0, 0.25) 0px 10px 25px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+*/
+}
+.input-cls:hover{
+     box-shadow: rgba(0, 0, 0, 0.25) 0px 10px 25px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+
 }
 .sub{
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     margin-bottom: 0vw;
 }
-.submit{
-    display: inline-block;
+::placeholder{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: x-large;
+    color: black;
 }
+/*
+.submit .reset{
+   /* display: inline-block;    
+   width: 20px;
+}
+*/
 .sub input{
-    width: 13vw;
+    width: 200px;
 }
+input[value="SUBMIT"], input[value="RESET"]{
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+input[value="SUBMIT"]:hover{
+    background-color: rgb(176, 179, 131);
+    
+    font-weight: bolder;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+
+}
+input[value="RESET"]:hover{
+    background-color: rgb(176, 179, 131);
+    
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+
+}
+
 
 
 /*----- product box ------*/
