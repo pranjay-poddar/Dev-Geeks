@@ -1,0 +1,63 @@
+*{
+    font-family: 'Roboto', sans-serif;
+    padding:0;
+    margin:0;
+    border:0
+   
+}
+header{
+    background-color: rgb(25, 120, 197);
+}
+#header-logo{
+    width:70px;
+    height:70px;
+}
+#header-msg{
+    font-size: 25px;
+    color: white;
+}
+
+#btnOne{
+    background-color:rgb(25, 120, 197);
+    color:white;
+    border-radius: 12px;
+}
+#btnOne:focus,#btnOne:hover{
+    background-color: rgb(30, 78, 162);
+    box-shadow: none;
+    outline:none;
+}
+
+#tableHead{
+    background-color:rgb(25, 120, 197);
+}
+#searchInput{
+    height: calc(1.5em + .75rem + 2px);
+    padding: .375rem .75rem;
+    border-bottom: 1px solid black;
+}
+#searchInput:hover,#searchInput:focus{
+    box-shadow: none;
+    outline:none;
+}
+#sub-heading{
+    background-color: black;
+    color: white;
+    box-shadow: none;
+    outline: none;
+    padding: 20px;
+    
+}
+#bottom-heading{
+    background-color: black;
+    color: white;
+    box-shadow: none;
+    outline: none;
+    padding: 25px;
+}
+#one{
+    background-color: black;
+    color: white;
+    padding: 20px;
+}
+
