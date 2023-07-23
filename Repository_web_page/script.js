@@ -38,11 +38,7 @@ searchResult = (results) => {
   <a style="color:white;text-decoration:none;" href="${results.githublink}">GitHub Link</a>
   </button>` ;
 
-    const res = document.querySelector("span");
-    for (let i = 0; i < res.length; i++) {
-      res.style.display = "none";
-      res.style.flexDirection = "row";
-    }
+    
 
 
   }
