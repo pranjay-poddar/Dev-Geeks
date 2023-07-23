@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Mohasin Haque" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Yoga</title>
+</head>
+
+<body>
+    <section class="front-page">
+        <img class="hero" src="./assets/hero.png" alt="meditation" />
+        <nav>
+            <div class="logo">
+                <img src="./assets/logo.svg" alt="mind and body" />
+                <h1>mind & body</h1>
+            </div>
+            <div class="links">
+                <a href="#classes">classes</a>
+                <a href="#classes">practice</a>
+                <a href="#our-story">our story</a>
+            </div>
+            <svg width="44" height="18" viewBox="0 0 44 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <line class="line" y1="1" x2="44" y2="1" stroke="white" stroke-width="2" />
+                <line class="line" y1="9" x2="27" y2="9" stroke="white" stroke-width="2" />
+                <line class="line" y1="17" x2="11" y2="17" stroke="white" stroke-width="2" />
+            </svg>
+        </nav>
+        
+        <div class="selling-point">
+            <h2>Let your mind breathe.</h2>
+            <h3>
+                Get unlimited acces to yoga, pilates, and meditation classes that fit
+                the way you feel.
+            </h3>
+            <div class="ctas">
+                <button class="cta-sec">Explore classes</button>
+                <button class="cta-main">
+                    <a href="https://koalendar.com/e/meet-with-mohasin-haque" target="_blank">Sign up today</a>
+                </button>
+            </div>
+        </div>
+    </section>
+   <section class="about">
+        <div id="our-story" class="our-story">
+            <h2>About Us</h2>
+            <p>
+               Lorem ipsum dolor sit, amet consectetur adipisicing elit. Enim quos nisi nihil minima, rem molestias possimus inventore consequatur, esse minus aliquam aperiam perspiciatis eligendi quasi libero earum eveniet, non quo?
+            </p>
+        </div>
+        <img src="./assets/our-story.png" alt="our-story" />
+    </section>
+    <section id="classes" class="classes">
+        <div class="classes-description">
+            <h2>Classes tailored for you</h2>
+            <h3>It's time to heal your mind and body</h3>
+        </div>
+        <section id="Services-container">
+      <h1 class="h-primary center">Our Services</h1>
+      <div id="services">
+        <div class="box">
+          <img src="assets/download.jpeg" alt="" />
+          <h2 class="h-secondary center">Meditation</h2>
+          <p class="center">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nisi
+            repellat non ipsum maiores nulla assumenda doloremque aliquam
+          </p>
+        </div>
+        <div class="box">
+          <img src="assets/zumba.jpeg"alt="" />
+          <h2 class="h-secondary center">Zumba</h2>
+          <p class="center">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nisi
+            repellat non ipsum maiores nulla assumenda doloremque aliquam
+          </p>
+        </div>
+        <div class="box">
+          <img src="assets/aerobics.jpeg" alt="" />
+          <h2 class="h-secondary center">Aerobics</h2>
+          <p class="center">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nisi
+            repellat non ipsum maiores nulla assumenda doloremque aliquam
+          </p>
+        </div>
+      </div>
+    </section>
+    </section>
+ <div class="footer_c">
+      <p>Copyright &copy; </p>
+    </div>
+ 
+    <!-- gsap cdn for animation-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/gsap.min.js"
+        integrity="sha512-Mf/xUqfWvDIr+1B6zfnIDIiG7XHzyP/guXUWgV6PgaQoIFeXkJQR5XWh9fqAiCiRCpemabt3naV4jhDWVnuYDQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/ScrollTrigger.min.js"
+        integrity="sha512-YzMW3OzvgtVpIIPPpjnCy8wVTq5slHRrxnLH1oD5dkVjZf8+8DJYd+GYmmWXZNmroTqKXFFzFS3XZ/LBvaNgZg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+        const burger = document.querySelector("nav svg");
+
+burger.addEventListener("click", () => {
+    console.log("clicked");
+    if (burger.classList.contains("active")) {
+        gsap.to(".links", { x: "100%" });
+        gsap.to(".line", { stroke: "white" });
+        gsap.set("body", { overflow: "auto" });
+        gsap.set("body", { overflowX: "hidden" });
+    } else {
+        gsap.to(".links", { x: "0%" });
+        gsap.to(".line", { stroke: "black" });
+        gsap.fromTo(
+            ".links a",
+            { opacity: 0, y: 0 },
+            { opacity: 1, y: 20, delay: 0.25, stagger: 0.25 }
+        );
+        gsap.set("body", { overflow: "hidden" });
+    }
+    burger.classList.toggle("active");
+});
+
+const videos = gsap.utils.toArray(".video");
+gsap.set(videos, { opacity: 0 });
+
+videos.forEach((video) => {
+    ScrollTrigger.create({
+        trigger: video,
+        start: "top center",
+        end: "bottom center",
+        onEnter: () => {
+            gsap.to(video, { opacity: 1 });
+            video.play();
+        },
+        onEnterBack: () => video.play(),
+        onLeave: () => video.pause(),
+        onLeaveBack: () => video.pause(),
+    });
+});
+
+    </script>
+</body>
+
+</html>

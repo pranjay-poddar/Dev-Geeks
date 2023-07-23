@@ -1,0 +1,250 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  overflow-x: hidden;
+}
+
+:root {
+  --main-color: #f8b281;
+  --secondary-color: #1b1b1b;
+}
+
+@font-face {
+  font-family: "argonite";
+  src: url(./assets/stone\ orgonite.woff);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo h1 {
+  margin-left: 0.5rem;
+  font-size: 1rem;
+  font-family: "argonite", sans-serif;
+}
+
+.logo img {
+  width: 1.5rem;
+}
+
+section {
+  padding: 5%;
+}
+
+h2 {
+  font-size: 2.5rem;
+  line-height: 125%;
+  padding: 1rem 0rem;
+}
+
+h3 {
+  font-size: 1.25rem;
+  line-height: 125%;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+nav svg {
+  cursor: pointer;
+  z-index: 1;
+}
+
+.links {
+  position: absolute;
+  background: #fff;
+  width: 100%;
+  height: 100vh;
+  left: 0;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  transform: translateX(100%);
+}
+
+.links a {
+  color: var(--secondary-color);
+  font-size: 2rem;
+}
+
+.front-page {
+  min-height: 100vh;
+  color: #fff;
+}
+
+.selling-point {
+  margin-top: 25vh;
+  font-family: "argonite", sans-serif;
+  text-shadow: 0px 4px 12px rgba(0, 0, 0, 0.45);
+  text-align: center;
+}
+
+.selling-point h3 {
+  font-family: sans-serif;
+  text-shadow: 0px 4px 12px rgba(0, 0, 0, 0.45);
+}
+
+.ctas {
+  margin-top: 2rem;
+}
+
+.ctas button {
+  padding: 1rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 0.5rem;
+  box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.215);
+  margin: 1rem;
+  cursor: pointer;
+}
+
+.cta-main {
+  background-color: var(--main-color);
+  color: var(--secondary-color);
+}
+
+.cta-main a {
+  text-decoration: none;
+  color: var(--secondary-color);
+}
+
+.cta-sec {
+  background-color: var(--secondary-color);
+  color: #fff;
+}
+
+.hero {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.classes {
+  color: var(--secondary-color);
+  text-align: center;
+  font-family: "argonite", sans-serif;
+}
+
+.videos video {
+  width: 100%;
+  border-radius: 1rem;
+  margin-top: 1rem;
+}
+
+.pilates,
+.yoga,
+.meditation {
+  position: relative;
+}
+
+.videos h3 {
+  position: absolute;
+  color: var(--main-color);
+  text-shadow: 0px 2px 12px rgba(0, 0, 0, 0.405);
+  bottom: 10%;
+  left: 50%;
+  transform: translate(-50%, -10%);
+  font-size: 2rem;
+}
+
+.about {
+  color: var(--secondary-color);
+}
+
+.about h2 {
+  text-align: center;
+  font-family: "argonite", sans-serif;
+}
+
+.about p {
+  line-height: 150%;
+  font-size: 1.2rem;
+}
+
+.about img {
+  width: 100%;
+  margin-top: 2rem;
+}
+
+@media screen and (min-width: 768px) {
+  body {
+    padding: 0% 10% 10% 10%;
+  }
+
+  .videos {
+    display: flex;
+    gap: 2rem;
+  }
+
+  .about {
+    display: flex;
+    gap: 5rem;
+    justify-content: space-between;
+  }
+
+  .about img {
+    width: 50%;
+  }
+
+  .about h2 {
+    text-align: start;
+  }
+}
+
+/* services section */
+#services {
+  margin: 34px;
+  margin-top: 3px;
+  margin-bottom: 32px;
+  display: flex;
+  padding: 2px;
+  
+}
+#services .box {
+    /* border: 2px solid brown; */
+    padding: 20px;
+    margin: 2px 35px;
+    border-radius: 30px;
+    background-color:whitesmoke;
+    box-shadow: 2px 5px 10px -2px #000000b5;
+}
+#services .box img {
+  height: 187px;
+  margin: auto;
+  display: block;
+}
+#services .box p{
+    font-family: "Kaushan Script", cursive;
+}
+#services .box h2:hover {
+  font-size:2.5rem ;
+  
+}
+.footer_c p{
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: #f8b281;
+}
