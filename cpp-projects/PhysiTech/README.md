@@ -26,9 +26,35 @@ iv. Calculation of Force, momentum, impulse
 
 v. Applications of Dynamics Principles
 
+Thermodynamics:
+
+i.Laws of Thermodynamics
+
+ii.Explanation of Key Concepts
+
+iii. Applications of Thermodynamics
+
+iv. Calculation of Heat
+
+v. Calculation of Work
+
+Optics:
+
+i. Laws of Optics
+
+ii. Explanation of Key Concepts
+
+iii. Applications of Optics
+
+iv. Calculation of index of refraction and Snell's law
+
+v. Reflection and refraction calculations
+
+vi. Calculation of focal length and magnification
+
 <h2>Screenshots</h2>
 
-![image](https://github.com/Nikita06211/Dev-Geeks/assets/120494269/8974b38a-1a63-4e60-b9ae-4a8e9f160141)
+![image](https://github.com/Nikita06211/Dev-Geeks/assets/120494269/0cb428d7-5ba7-482e-9675-99bc56681b0d)
 ![image](https://github.com/Nikita06211/Dev-Geeks/assets/120494269/3da67791-f949-4dbb-b6ef-60e945bcf035)
 ![image](https://github.com/Nikita06211/Dev-Geeks/assets/120494269/d5602304-ca34-459b-9433-8689bbacfd73)
 ![image](https://github.com/Nikita06211/Dev-Geeks/assets/120494269/5dc9fd4f-5676-47e3-ad28-a93201eed2c0)
