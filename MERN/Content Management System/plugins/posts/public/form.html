@@ -1,0 +1,293 @@
+<div data---="form__common.form__if:postsform;width:1500;icon:newspaper-o;reload:postsform/show;submit:postsform/submit;autofocus:true" class="hidden">
+
+	<div data-scope="postsform">
+		<div class="padding" style="padding-bottom:10px">
+			<div class="row">
+				<div class="col-md-9 m">
+					<div data---="input__?.name__required:true;maxlength:100">@(Name)</div>
+				</div>
+				<div class="col-md-3 m">
+					<div data---="input__?.template__dirsource:common.dependencies.templatesposts;icon:paint-brush;required:true;empty:">@(Template)</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="tabmenu-container">
+			<div data---="input__?.ispublished__type:checkbox" class="b pull-left" style="margin-top:15px">@(Is published)</div>
+			<div class="pull-right">
+				<ul data---="tabmenu__?.type__null__'html'" class="tabmenu">
+					<li data-value="html"><i class="fa fa-paint-brush"></i>@(Designer)</li>
+					<li data-value="markdown"><i class="fab fa-markdown"></i>@(Markdown)</li>
+				</ul>
+			</div>
+			<div class="clearfix"></div>
+		</div>
+		<div data-bind="?.type__show:value==='html'">
+			<div class="cmseditor" data---="cmseditor__?.body" data-import="url:@{#}/_pages/cmseditor.html;target:body" style="border-top:0;padding-top:8px"></div>
+		</div>
+		<div data-bind="?.type__show:value==='markdown'__delay:500">
+
+			<div class="toolbar toolbar3">
+				<button class="exec" data-exec="?/toolbar" name="preview"><i class="fa fa-search"></i>@(Preview)</button>
+				<span></span>
+				<button class="exec" data-exec="?/toolbar" name="file"><i class="far fa-folder"></i>@(Browse file)</button>
+			</div>
+
+			<div class="padding npt">
+				<div data---="codemirror__?.body__minheight:300;parent:window;margin:550;required:1;tabs:true;trim:true"></div>
+				<div class="help"><i class="fab fa-markdown"></i><span class="link exec" data-path="common.top" data-value="'markdownhelp'">@(Markdown format)</span></div>
+			</div>
+			<hr class="nmt nmb" />
+		</div>
+		<div class="backups hidden" data-bind="?.id__show"><span class="link exec" data-exec="?/backups"><i class="fa fa-clock-o mr5"></i>@(Restore a backup)</span></div>
+		<div class="padding bg-smoke">
+			<div class="row mt10">
+				<div class="col-md-3 m">
+					<div data---="input__?.description__maxlength:300">@(Description)</div>
+					<div class="help">@(A quick summarization of this post.)</div>
+				</div>
+				<div class="col-md-3 m">
+					<div data---="input__?.signals__multiple:true;dirsource:common.dependencies.signals;icon:dot-circle-o">@(Signals)</div>
+					<div class="help">@(Signals can start a special action for visitors.)</div>
+				</div>
+				<div class="col-md-6">
+					<div class="row">
+						<div class="col-md-4 m">
+							<div data---="input__?.author__maxlength:30;icon:user">@(Author)</div>
+						</div>
+						<div class="col-md-4 m">
+							<div data---="input__?.language__icon:flag;dirsource:common.dependencies.languages;empty:">@(Language)</div>
+						</div>
+						<div class="col-md-4 m">
+							<div data---="input__?.date__type:date;icon:clock-o;placeholder:@(yyyy-MM-dd)">@(Publish date)</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div data-bind="?.id__show:value && value.length" class="hidden">
+			<hr class="nmt" />
+			<div class="padding">
+				<div class="row">
+					<div class="col-lg-2 col-md-3 m">
+						<div class="keyvalue">
+							<div class="key">@(# Id)</div>
+							<div class="value" data-bind="?.id__html:value"></div>
+						</div>
+					</div>
+					<div class="col-lg-2 col-md-3 m">
+						<div class="keyvalue">
+							<div class="key"><i class="fa fa-calendar"></i>@(Created)</div>
+							<div class="value" data-bind="?.dtcreated__html:Thelpers.time(value)"></div>
+						</div>
+					</div>
+					<div class="col-lg-2 col-md-3 m">
+						<div class="keyvalue">
+							<div class="key"><i class="fa fa-calendar"></i>@(Updated)</div>
+							<div class="value" data-bind="?.dtupdated__html:value ? Thelpers.time(value) : '@(unchanged)'"></div>
+						</div>
+					</div>
+					<div class="col-lg-6 m" data-bind="?.stats__show:value">
+						<div data---="nosqlcounter__?.stats__height:52"></div>
+						<div class="help"><i class="fa fa-chart-bar"></i>@(Stats of all views for the last period)</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div data---="error__?.response"></div>
+	</div>
+
+	<nav data---="validation__postsform">
+		<button name="submit"><i class="fa fa-check-circle"></i>@(SAVE)</button>
+		<button name="cancel">@(Cancel)</button>
+	</nav>
+
+</div>
+
+<div data---="window__common.window___if:postspreview;title:@(Live preview);reload:postsform/initpreview;icon:search;scrollbar:0" class="iframefull">
+	<iframe src="about:blank" frameborder="0" style="width:100%"></iframe>
+</div>
+
+<script>
+
+	PLUGIN('postsform', function(exports) {
+
+		exports.body = '';
+
+		exports.show = function(com) {
+			var model = GET('?');
+			com.reconfigure({ title: model.id ? '@(Edit post)' : '@(New post)' });
+			model.id && AJAX('GET [url]api/posts/{id}/stats/'.arg(model), '?.stats');
+			WAIT('cmseditor.instance', function() {
+				cmseditor.instance.setWidgetOptions(model.widgets);
+				cmseditor.instance.lock(false);
+			});
+		};
+
+		exports.initpreview = function(el) {
+
+			var model = GET('?');
+
+			if (!model.template) {
+				SETTER('snackbar/warning', '@(You need to choose a template)');
+				return;
+			}
+
+			var $frm = el.find('iframe');
+			var frm = $frm[0].contentWindow;
+			var doc = frm.document;
+
+			FUNC.loading(true);
+
+			AJAX('POST [url]api/posts/preview/', model, function(response) {
+				FUNC.loading(false, 500);
+				doc.open('text/html', 'replace');
+				doc.write(response);
+				doc.close();
+			});
+		};
+
+		exports.toolbar = function(el) {
+			var name = el instanceof jQuery ? el[0].name : el;
+			switch (name) {
+				case 'file':
+					refresh_filebrowser(function(file, name) {
+						name = name.replace(/\.[a-z]+$/i, '');
+						if ((/\.(jpg|png|gif|jpeg|svg)$/i).test(file))
+							file = '![{0}]({1})'.format(name, file);
+						else
+							file = '[{0}]({1})'.format(name, file);
+						exports.element.SETTER('.postsform.body/insert', file);
+					});
+					break;
+				case 'preview':
+					SET('common.window', 'postspreview');
+					break;
+			}
+		};
+
+		exports.submit = function(hide) {
+
+			FUNC.loading(true);
+
+			var model = CLONE('?');
+			var editor = cmseditor.instance;
+
+			// Clears cache
+			exports.markdown = '';
+			exports.html = '';
+
+			if (model.type === 'html') {
+				model.pictures = editor.getPictures();
+				model.summary = editor.getSummary();
+				model.body = editor.getContent().replace(/\n[\s\t]+\n/g, '\n');
+				model.search = editor.getKeywords();
+
+				var w = editor.getWidgets();
+				model.widgets = w.settings;
+				model.bodywidgets = w.widgets;
+
+			} else {
+				var pictures = model.body.match(/\(.*?\.(jpg|png|jpeg|gif|svg)\)/g);
+
+				model.pictures = [];
+				model.search = '';
+				model.summary = '';
+
+				if (pictures) {
+					for (var i = 0; i < pictures.length; i++)
+						model.pictures.push(pictures[i].replace(/\(|\)/g, '').trim());
+				}
+
+				var lines = model.body.split('\n');
+				for (var i = 0; i < lines.length; i++) {
+					var line = lines[i].trim();
+					var c = line.substring(0, 1);
+					if (c === '#') {
+						// title
+						model.search += (model.search ? ' ' : '') + line.substring(line.lastIndexOf('#') + 2).trim();
+					} else if (c === '-') {
+						// ul
+					} else if (c === '`') {
+						// code
+					} else if (c === '|') {
+						// table
+					} else if (!model.summary && c !== '!' && c !== '[')
+						model.summary = line;
+				}
+
+				model.widgets = null;
+				model.bodywidgets = null;
+			}
+
+			model.stats = undefined;
+
+			var parts = { type: 'post', items: editor.getParts() };
+
+			AJAX('POST [url]api/posts/ REPEAT', model, function(response) {
+				FUNC.loading(false, 1000);
+
+				if (response.success) {
+
+					hide();
+					SETTER('snackbar/success', '@(Post has been saved successfully.)');
+					EXEC('posts/refresh');
+
+					// Updates parts
+					parts.ownerid = response.value;
+					AJAX('POST [url]api/parts/', parts, NOOP);
+				}
+
+			});
+		};
+
+		exports.backups = function(el) {
+
+			FUNC.loading(true);
+			AJAX('GET [url]api/posts/{0}/backups/'.format(GET('?.id')), function(response) {
+
+				FUNC.loading(false, 1000);
+
+				for (var i = 0, length = response.length; i < length; i++) {
+					var item = response[i];
+					item.name = '{0} <b class="badge badge-blue ml5"><i class="fa fa-user mr5"></i>{1}</b>'.format(item.date.format('@(dd. MMM yyyy - HH:mm)'), item.user);
+				}
+
+				SETTER('suggestion/show', 'left', el, response, function(value) {
+					FUNC.loading(true);
+					AJAX('GET [url]api/backups/posts/{id}_{stamp}/'.arg(value), function(body) {
+						if (posts.form.type === 'html')
+							cmseditor.instance.replace(body);
+						else
+							SET('posts.form.body', body);
+						FUNC.loading(false, 1000);
+					});
+				});
+			});
+		};
+
+		WATCH('?.template', function(path, value, type) {
+			if (type === 2) {
+				cmseditor.instance.reconfigure('template:' + value);
+				cmseditor.instance.set(cmseditor.instance.get() || '');
+			}
+		}, true);
+
+		WATCH('?.type', function(path, value, type) {
+
+			if (value === 'html' && (type === 2 || type === 0) && W.cmseditor && W.cmseditor.instance) {
+				exports.markdown = GET('?.body');
+				cmseditor.instance.reconfigure('template:' + GET('?.template'));
+				cmseditor.instance.set('');
+				cmseditor.instance.autoresize();
+			}
+
+			if (value === 'markdown' && type === 2) {
+				exports.html = GET('?.body');
+				SET('?.body', exports.markdown);
+			}
+
+		}, true);
+	});
+
+</script>
