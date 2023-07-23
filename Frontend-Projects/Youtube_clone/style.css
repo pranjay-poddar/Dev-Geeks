@@ -187,9 +187,9 @@ body{
 
 .filter-options{
     flex: 0 0 auto;
-    padding: 8px 16px;
-    border-radius: 10px;
-    background: #f0f0f0;
+    padding: 7px 17px;
+    border-radius: 9px;
+    background: #f0f0f0f0;
     border: none;
     text-transform: capitalize;
     margin-right: 10px;

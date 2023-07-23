@@ -1,0 +1,127 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 20px;
+  background-color: #ffcf7f;
+}
+
+h1 {
+  text-align: center;
+  color: #442c24;
+}
+
+.container {
+  max-width: 600px;
+  text-align: center;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.course-list {
+  margin-bottom: 10px;
+}
+
+.course-list label {
+  color: #442c24;
+  font-weight: bold;
+}
+
+.course-list input[type="text"],
+.course-list input[type="number"],
+.course-list select {
+  width: 150px;
+  padding: 5px;
+  border-radius: 3px;
+  border: 1px solid #ff9c1a;
+}
+
+.course-list select {
+  width: 80px;
+}
+
+.add-course-btn {
+  display: block;
+  margin: 10px auto;
+  padding: 8px 16px;
+  background-color: #66b3ff;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.calculation-btn {
+  display: block;
+  margin: 10px auto;
+  padding: 8px 16px;
+  background-color: #ff751a;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.result {
+  margin-top: 20px;
+  font-weight: bold;
+  text-align: center;
+  color: #442c24;
+}
+
+.course-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  background-color: #ffd480;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.course-name {
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.delete-course-btn {
+  margin-left: auto;
+  background-color: #cc0000;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  padding: 5px 10px;
+  font-size: 12px;
+}
+
+.add-course-btn:hover {
+  background-color: #00802b;
+}
+
+.calculation-btn:hover {
+  background-color: #cc6600;
+}
+
+.delete-course-btn:hover {
+  background-color: #b30000;
+}
+
+
+.reset-btn {
+  margin: 10px auto;
+  padding: 8px 16px;
+  background-color: #999;
+  color: #442c24;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.reset-btn:hover {
+  background-color: #666;
+}

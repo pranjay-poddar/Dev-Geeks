@@ -1,69 +1,72 @@
 body {
-    background: linear-gradient(to right, #041b03, #88d885);
-}
-
-#app {
+    background: linear-gradient(to right, #5f5f63, #110041); 
+    padding-top: 200px;
+    }
+    
+    #app {
     font-family: Times New Roman;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
     text-align: center;
-    color: grey;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-.calculator {
+    background: rgba( 255, 255, 255, 0.25 );
+    box-shadow: 0 8px 8px 0 rgba( 31, 38, 30, 0.37 );
+    backdrop-filter: blur( 4.5px );
+    -webkit-backdrop-filter: blur( 4.5px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    }
+    
+    .calculator {
     width: 439px;
+    height: 439px;
     padding: 21px;
+    border: 1px solid rgb(250, 250, 250);
     border-radius: 5px;
     margin: 20px auto;
-    font-size: 16px;
+    font-size: 18px;
     background-color: #333333;
-}
-
-.input {
+    }
+    
+    .input {
     width: 420px;
     height: 50px;
     border-radius: 0px;
-    border: 1px solid black;
-    background-color: #333333;
+    border: 1px solid rgb(250, 250, 250);
+    background-color: #474646;
     color: #ccc7c7;
-    padding: 0 10px 0 5px;
-    margin: 0 0px 10px 0px;
+    padding: 0 10px 0 0;
+    margin: 0 0px 18px 0px;
     font-size: 28px;
-}
-
-.input:focus,
-.input:active {
+    }
+    
+    .input:focus,
+    .input:active {
     border-color: #03a9f4;
     box-shadow: 0 0 4px #03A9F4;
-}
-
-.button {
-    margin: 4px;
-    width: 64px;
+    }
+    
+    .button {
+    margin: 6px;
+    width: 70px;
     border: 1.1px solid #0d0d0d;
-    height: 33px;
+    height: 38px;
     border-radius: 5px;
     color: white;
     background-color: #784be2;
     cursor: pointer;
     outline: none;
-}
-
-.mode {
+    }
+    
+    .mode {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
-}
-
-.equal-sign {
+    }
+    
+    .equal-sign {
     background-color: green;
-    width: 133px;
-}
-
-.toggle-button {
+    width: 150px;
+    }
+    
+    .toggle-button {
     border: none;
     background-color: #333333;
     cursor: pointer;
@@ -71,12 +74,13 @@ body {
     font-size: 2rem;
     color: #fff;
     text-shadow: -1px -1px 0 rgba(0, 0, 0, 0.35);
-}
-
-p {
+    }
+    
+    p {
     margin-top: 0;
-}
-
-button::-moz-focus-inner {
+    }
+    
+    button::-moz-focus-inner {
     border-color: transparent;
-}
+    }
+    

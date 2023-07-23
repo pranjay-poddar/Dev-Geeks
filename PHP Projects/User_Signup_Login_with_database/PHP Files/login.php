@@ -109,7 +109,7 @@
                 <div class="row mt-3 mb-3 justify-content-center">
                     <div class="col">
                         <span class="text-warning">
-                            <?php if($invalid) echo "Email-ID doesn't exist! Kindly signup!" ?>
+                            <?php if($invalid) echo "Either Email-ID or password is incorrect! Please try again." ?>
                         </span>
                     </div>
                 </div>
