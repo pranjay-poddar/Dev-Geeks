@@ -15,7 +15,7 @@ Any document that outlines the features of a certain product is considered techn
     
  </ol>
  <h2 id="intro">Introduction</h2>
- <p align="justify"> Technical documentation is any document that explains the features of the respective product. In this project, we are going to create technical documentation of C++ by using HTML and CSS. The webpage has a menu section that helps to navigate to different sections of the webpage.
+ <p align="justify"> Technical documentation is any document that explains the features of the respective product. In this project, we are going to create technical documentation of Sorting Algorithms by using HTML and CSS. The webpage has a menu section that helps to navigate to different sections of the webpage.
 
 <h2 id="scope">Approach</h2>
  <p align="justify">
