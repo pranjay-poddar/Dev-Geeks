@@ -1,0 +1,516 @@
+@media only screen and (max-width: 1440px) {
+
+    .servicePortfolioImg,
+    .serviceDiscountImg {
+        margin-top: 0vh;
+    }
+
+    .serviceDiscountImgContainer,
+    .servicePortfolioImgContainer {
+        max-height: 45vh;
+        height: auto;
+    }
+
+    .servicesDiscount h2,
+    .servicesPortfolio h2 {
+        white-space: nowrap;
+    }
+
+    .userBox1,
+    .userBoxOther {
+        height: 50vh;
+    }
+
+    .userBtn {
+        height: 7vh;
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+
+    .navHeading {
+        width: auto;
+    }
+
+    .navLinks {
+        flex: auto;
+    }
+
+    .headerInfo h1,
+    .aboutInfo h1,
+    .servicesTitle h1,
+    .team h1,
+    .user h1,
+    .blog h1,
+    .contactForm h1 {
+        font-size: 3rem;
+    }
+
+    .loginData h2,
+    .servicesDiscount h2,
+    .servicesPortfolio h2,
+    .footerTitle h2 {
+        font-size: 1.2rem;
+    }
+
+    .footerTitle h2,
+    .servicesTitle h3,
+    .loginData h3,
+    .userBox1 h3,
+    .userBoxOther h3,
+    .contactForm h3 {
+        font-size: 1.1rem;
+    }
+
+    .headerInfo p,
+    .aboutInfo p,
+    .servicesDiscount p,
+    .servicesPortfolio p,
+    .teamData1,
+    .teamData2,
+    .userBox1 p,
+    .userBoxOther p,
+    .userBox1 p,
+    .userAbout,
+    .contactForm p,
+    .footerTitle p {
+        font-size: 1.2rem;
+    }
+
+
+    .contactForm h1 {
+        margin: 1.5vh 0vw;
+    }
+
+    .contactForm p {
+        margin-bottom: 2vh;
+    }
+
+    .contactForm form input {
+        margin: 1vh 0vw;
+    }
+
+    .contactName {
+        height: 5vh;
+        width: 25vh;
+    }
+
+    .contactEmail {
+        float: none;
+        height: 5vh;
+        width: 40vh;
+
+    }
+
+    .contactMessage {
+        margin: 1vh 0vw;
+        max-height: 18vh;
+        max-width: 40vw;
+    }
+
+    .contactImg {
+        height: 70vh;
+    }
+
+    .footerDownload img {
+        height: 7vh;
+    }
+
+}
+
+@media only screen and (max-width: 968px) {
+
+    .headerInfo {
+        height: auto;
+        max-width: 29vw;
+    }
+
+    .headerInfo h1 {
+        white-space: nowrap;
+    }
+
+    .aboutImg {
+        max-height: 50vh;
+    }
+
+    .servicePortfolioImg,
+    .serviceDiscountImg {
+        max-height: 25vh;
+    }
+
+    .userBox1 h3,
+    .userBoxOther h3 {
+        margin: 2vh 0vw;
+    }
+
+    .contactName {
+        max-width: 20vw;
+    }
+
+    .contactEmail {
+        max-width: 25vw;
+    }
+
+    .contactMessage {
+        max-width: 30vw;
+    }
+
+    .headerInfo h1,
+    .aboutInfo h1,
+    .servicesTitle h1,
+    .team h1,
+    .user h1,
+    .blog h1,
+    .contactForm h1 {
+        font-size: 2rem;
+    }
+
+    .loginData h2,
+    .servicesDiscount h2,
+    .servicesPortfolio h2,
+    .loginData h2,
+    .footerTitle h2 {
+        font-size: 1.5rem;
+        white-space: break-spaces;
+    }
+
+    .footerTitle h2,
+    .servicesTitle h3,
+    .loginData h3,
+    .userBox1 h3,
+    .userBoxOther h3,
+    .contactForm h3,
+    .aboutInfo h3 {
+        font-size: 1rem;
+    }
+
+    .headerInfo p,
+    .aboutInfo p,
+    .servicesDiscount p,
+    .servicesPortfolio p,
+    .teamData1,
+    .teamData2,
+    .userBox1 p,
+    .userBoxOther p,
+    .userBox1 p,
+    .userAbout,
+    .contactForm p,
+    .footerTitle p {
+        font-size: 1.0rem;
+    }
+
+    .footerDownload {
+        display: block;
+    }
+
+    .footerTitle {
+        margin: auto;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+
+    .headerInfo h1,
+    .aboutInfo h1,
+    .servicesTitle h1,
+    .team h1,
+    .user h1,
+    .blog h1,
+    .contactForm h1 {
+        font-size: 2rem;
+    }
+
+    .loginData h2,
+    .servicesDiscount h2,
+    .servicesPortfolio h2,
+    .loginData h2,
+    .footerTitle h2 {
+        font-size: 1.5rem;
+    }
+
+    .footerTitle h2,
+    .servicesTitle h3,
+    .loginData h3,
+    .userBox1 h3,
+    .userBoxOther h3,
+    .contactForm h3,
+    .aboutInfo h3 {
+        font-size: 1rem;
+    }
+
+    .headerInfo p,
+    .aboutInfo p,
+    .servicesDiscount p,
+    .servicesPortfolio p,
+    .teamData1,
+    .teamData2,
+    .userBox1 p,
+    .userBoxOther p,
+    .userBox1 p,
+    .userAbout,
+    .contactForm p,
+    .footerTitle p {
+        font-size: 1.0rem;
+    }
+
+    .navLogo {
+        font-size: 1.6rem;
+        margin-top: 1vh;
+    }
+
+    .navHeading i {
+        display: block;
+        float: right;
+        margin-top: 2vh;
+        margin-right: 2vw;
+    }
+
+    .navbar {
+        display: block;
+    }
+
+    .headerImg,
+    .aboutImg {
+        max-height: 35vh;
+    }
+
+    .navLinks {
+        width: auto;
+        text-align: center;
+    }
+
+    .navSocial {
+        display: none;
+    }
+
+    .header {
+        display: block;
+    }
+
+    .headerInfo {
+        max-width: 90vh;
+        padding: 0vh 5vw;
+    }
+
+    .navLinks {
+        display: none;
+    }
+
+    .navHeading {
+        padding-top: 1vh;
+    }
+
+    .headerBtn {
+        white-space: nowrap;
+        width: 38vw;
+        height: 7vh;
+    }
+
+    .headerImgContainer {
+        text-align: center;
+        margin-top: 5vh;
+    }
+
+    .about {
+        display: block;
+    }
+
+    .aboutImgContainer {
+        text-align: center;
+    }
+
+    .aboutInfo {
+        max-width: 90vw;
+        margin-top: 5vh;
+    }
+
+    .aboutBtn1,
+    .aboutBtn2 {
+        height: 8vh;
+        width: 40vw;
+    }
+
+    .services {
+        display: block;
+        height: auto;
+    }
+
+    .servicesTitle {
+        width: auto;
+        text-align: center;
+    }
+
+    .servicesTitle h3 {
+        font-size: 2rem;
+        margin-bottom: 5vh;
+    }
+
+    .servicesTitle h1 br {
+        content: ' ';
+    }
+
+    .servicesTitle h1 br::after {
+        content: ' ';
+    }
+
+    .servicesDiscount,
+    .servicesPortfolio {
+        width: 90vw;
+        height: auto;
+        padding: 3vh;
+        margin: 5vh auto;
+    }
+
+    .servicesDiscount h2,
+    .servicesPortfolio h2 {
+        display: inline-block;
+    }
+
+    .serviceDiscountBtn,
+    .servicePortfolioBtn {
+        width: 30vw;
+    }
+
+    .team {
+        height: auto;
+    }
+
+    .teamMembers {
+        height: auto;
+        display: block;
+    }
+
+    .teamProfile {
+        margin: 10vh auto;
+
+    }
+
+    .loginImg {
+        max-height: 30vh;
+    }
+
+    .loginData {
+        width: auto;
+    }
+
+    .loginBtn {
+        height: 6vh;
+        width: 30vw;
+    }
+
+    .swiper-slide {
+        max-width: 100vw;
+    }
+
+    .userBox1,
+    .userBoxOther {
+        width: 48vw;
+
+    }
+
+    .userBtn {
+        min-height: 6vh;
+    }
+
+    .blogBox1,
+    .blogBoxOther {
+        width: 40vw;
+    }
+
+    .userBox1,
+    .userBoxOther {
+        width: 38vw;
+        height: 57vh;
+    }
+
+    .blogBtn button {
+        height: 7vh;
+        width: 45vw;
+    }
+
+    .contact {
+        display: block;
+        height: auto;
+        margin: 5vh 0vw;
+        padding: 5vh 2vw;
+    }
+
+    .contactImg {
+        max-height: 40vh;
+    }
+
+    .contactImgContainer {
+        text-align: center;
+    }
+
+    .contactForm {
+        max-width: 60vw;
+        margin: 5vh auto;
+        padding: 5vh 2vw;
+
+        border: 1px solid rgb(110, 110, 110);
+    }
+
+    .contactBtn {
+        height: 6vh;
+        width: 40vw;
+    }
+
+    .footer {
+        display: block;
+        height: auto;
+        text-align: center;
+    }
+
+    .footerTitle {
+        margin: auto auto 2vh auto;
+        max-width: 80vw;
+        height: auto;
+    }
+
+    .footerInsta {
+        flex: auto;
+    }
+
+    .footerSocial {
+        width: 30vw;
+        text-align: center;
+        margin: auto;
+    }
+
+    .footerSubscribe input {
+        height: 5vh;
+        width: 30vw;
+    }
+
+    .footerBtn {
+        height: 5vh;
+        border: 0px;
+        width: 15vw;
+    }
+
+    .footerTitle h2 {
+        font-size: 1.5rem;
+        margin-top: 8vh;
+    }
+
+    .footerTitle div {
+        margin: 1vh 0vw;
+    }
+
+    .footerTitle div {
+        margin: 1vh auto;
+        font-size: 1rem;
+    }
+
+        
+}
+@media only screen and (max-width: 375px) {
+    *{
+        font-size: 50%;
+        overflow-x: hidden;
+    }
+    img{
+        max-width: 30vw;
+    }
+}

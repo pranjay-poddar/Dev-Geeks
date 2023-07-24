@@ -207,6 +207,9 @@ background-image: url("https://img.freepik.com/free-photo/modern-home-interior-w
   font-size: 22px;
 }
 
+.bg-light.d-flex.justify-content-start.align-items-center.p-5{
+  padding: 1rem !important;
+}
 
 @media screen and (min-width: 480px) {
     #leftsidebar {width: 200px; float: left;}
