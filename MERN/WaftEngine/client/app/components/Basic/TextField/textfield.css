@@ -1,0 +1,50 @@
+.textfield,
+.inputbox {
+  @apply block w-full py-2 px-3 transition-all bg-white border border-gray-200 rounded;
+}
+.textfield:hover,
+.inputbox:hover {
+  border-color: #c7c7c7;
+}
+.textfield:focus,
+.inputbox:focus {
+  outline: 0;
+  box-shadow: 0 0 0 2px #bee3f8;
+  border: 1px solid #63b3ed;
+}
+
+.textfield.inverted {
+  @apply bg-black border-black text-gray-200;
+}
+.textfield.inverted:focus {
+  @apply shadow-none border-gray-600;
+}
+
+.textfield.error {
+  @apply border-red-200 bg-red-50;
+}
+.textfield.error:focus {
+  @apply border-red-400;
+}
+.textfield.success {
+  @apply border-success bg-green-50;
+}
+.textfield.success:focus {
+  @apply border-success;
+}
+.textfield.warning {
+  @apply border-warning bg-yellow-50;
+}
+.textfield.warning:focus {
+  @apply border-warning;
+}
+.append,
+.prepend {
+  @apply absolute top-0 w-10 h-full inline-flex justify-center items-center;
+}
+.prepend {
+  @apply left-0;
+}
+.append {
+  @apply right-0;
+}

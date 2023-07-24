@@ -1,0 +1,67 @@
+.checkbox {
+  @apply relative select-none inline-flex items-center mr-5 justify-start mt-4;
+}
+
+.checkbox input[type='checkbox'] {
+  @apply hidden;
+}
+
+.checkbox .box {
+  @apply w-5 h-5 bg-white rounded border border-gray-300 mr-2 cursor-pointer inline-flex justify-center items-center relative transition-all;
+}
+
+.checkbox label {
+  @apply flex items-center justify-center cursor-pointer text-sm;
+}
+
+.checkbox label:hover .box {
+  @apply border-blue-500;
+}
+
+.checkbox .check-icon {
+  transition: all 0.2s cubic-bezier(0.12, 0.4, 0.29, 1.46) 0.1s;
+  transform: scale(0);
+  @apply text-white text-xs;
+}
+
+.checkbox input[type='checkbox']:checked + label .box {
+  @apply bg-blue-500 border-blue-500;
+}
+
+.checkbox input:checked + label > .box > .check-icon {
+  transform: scale(1);
+}
+.checkbox input:checked + label .box:after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 1px solid #1890ff;
+  border-radius: 2px;
+  animation: CheckboxEffect 0.36s ease-in-out;
+  content: '';
+  @apply border-blue-500;
+}
+
+@keyframes CheckboxEffect {
+  from {
+    transform: scale(1);
+    opacity: 0.6;
+  }
+  to {
+    transform: scale(2);
+    opacity: 0;
+  }
+}
+.label-inactive,
+.label-active {
+  @apply w-20 text-center rounded-full inline-block py-1 px-2 bg-gray-100 text-xs text-gray-400;
+}
+.label-active {
+  @apply bg-green-100 text-green-500 border-green-200;
+}
+
+.label-inactive {
+  @apply bg-red-100 text-red-500 border-red-200;
+}

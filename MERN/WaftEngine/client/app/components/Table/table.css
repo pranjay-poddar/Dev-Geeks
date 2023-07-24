@@ -1,0 +1,25 @@
+.table {
+  @apply w-full border-collapse;
+}
+.table th {
+  white-space: nowrap;
+}
+
+.table.table-border th,
+.table.table-border td {
+  @apply px-4 py-2 border;
+}
+
+.icon-edit,
+.icon-trash,
+.icon-button {
+  @apply w-8 h-8 inline-flex justify-center items-center leading-none cursor-pointer text-base rounded-full;
+}
+.icon-edit,
+.icon-button {
+  @apply text-primary hover:bg-blue-100;
+}
+
+.icon-trash {
+  @apply text-error hover:bg-red-100;
+}

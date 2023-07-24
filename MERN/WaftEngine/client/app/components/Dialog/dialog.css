@@ -1,0 +1,13 @@
+@keyframes slideDialog {
+  from {
+    top: calc(25% + 50px);
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+    top: 25%;
+  }
+}
+.slide-dialog {
+  animation: slideDialog 0.3s ease-in-out;
+}
