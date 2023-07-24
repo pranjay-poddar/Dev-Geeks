@@ -6,85 +6,265 @@
     font-family: "Inter";
     font-size: 36px;
 }
-
-.card {
-    width: 425px;
-    height: 557px;
-    border: 1px solid;
-    margin: 75px auto;
-    padding: 10px;
-    border-radius: 20px;
-    border: 3px solid #EC008C;
+body{
+    background-color: hsla(120, 60%, 70%, 0.3);
+   
+   
 }
+.topnav {
+    margin-top: 0px;
+    background-color: #333;
+    overflow: hidden;
+  }
+  .topnav h2{
+    float: left;
+    margin-left: 10px;
+    font-size: 30px;
+    color:#04AA6D;
+    height: 80px;
+    width: 150px;
+  }
 
-form {
+  /* Style the links inside the navigation bar */
+  .topnav a {
+    float: left;
+    margin-top: 25px;
+    margin-bottom: 20px;
+    margin-left: 50px;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 30px;
+  }
+  
+  /* Change the color of links on hover */
+  .topnav a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  
+  /* Create a right-aligned (split) link inside the navigation bar */
+  .topnav a.split {
+   
+    margin-right: 60px;
+    float: right;
+    background-color: #04AA6D;
+    color: white;
+    border-radius: 10%;
+  }
+
+
+.section {
+    position: absolute;
+    width: 400px;
+    height: 440px;
+    background: transparent;
+    border: 2px solid rgba(255,255,255, .5);
+    border-radius: 20px;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 30px #04AA6D;
     display: flex;
-    flex-direction: column;
+    margin-left: 500px;
+    margin-top: 80px;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
+    transform: scale(0);
+    transition:transform .5s ease, height .2s ease;
 }
 
-input {
-    display: block;
-    padding: 10px;
+.section.active-popup {
+    transform: scale(1);
+}
+
+.section.active {
+    height: 520px;
+}
+ .section .front-side{
+    width: 100%;
+    padding: 40px;
+}
+
+.section .front-side.Login {
+    transition: transform .18s ease;
+    transform: translateX(0);
+}
+
+.section.active .front-side.Login{
+    transition: none;
+    transform: translateX(-400px);
+}
+.section .front-side.Register{
+    position: absolute;
+    transition: none;
+    transform: translateX(400px);
+}
+.section.active .front-side.Register{
+    transition: transform .18s ease;
+    transform: translateX(0);
+
+
+}
+
+
+.section .icon-close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 45px;
+    height: 45px;
+    background:#04AA6D;
+    font-size: 2em;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom-left-radius: 20px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+
+.front-side.Login h2{
+    font-size: 2em;
+    color:#04AA6D;
+    text-align: center;
+}
+.front-side.Register h2{
+    font-size: 2em;
+    color:#04AA6D;
+    text-align: center;
+}
+
+.enter-input {
+    position: relative;
+   
+    width: 100%;
+    height: 50px;
+    border-bottom: 2px solid rgb(25, 23, 23);
+    margin: 30px 0;
+}
+
+.enter-input label {
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    transform: translateY(-50%);
+    font-size: 1em;
+    color:rgb(25, 23, 23);
+    font-weight: 500;
+    pointer-events: none ;
+    transition: .5s;
+}
+
+.enter-input input:focus~label,
+.enter-input input:valid~label {
+    top: -5px;
+}
+
+.enter-input input {
+    width: 100%;
+    height: 100%;
+    background: transparent;
     border: none;
-    border-bottom: 2px solid lightgray;
-    width: 75%;
-    margin-top: 50px;
-    font-size: 18px;
-    font-weight: 600;
-    color: rgb(116, 107, 107);
-    opacity: 0.8;
-}
-
-input:focus {
     outline: none;
-    color: black;
-    opacity: 0.8;
-    font-weight: 400;
-}
-
-button {
-    padding: 15px;
-    width: 55%;
-    border-radius: 25px;
-    border: none;
-    color: white;
-    font-size: 16px;
+    font-size: 1em;
+    color:rgb(25, 23, 23) ;
     font-weight: 600;
-    margin-top: 65px;
+    padding: 0 35px 0 5px;
+}
+
+.enter-input .icon{
+    position: absolute;
+    right: 8px;
+    font-size: 1.2em;
+    color:rgb(25, 23, 23)  ;
+    line-height: 57px;
+}
+
+.remember-forgot {
+    font-size: .9em;
+    color: rgb(25, 23, 23);
+    font-weight: 500;
+    margin: -15px 0 15px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.remember-forgot label input {
+    accent-color:rgb(25, 23, 23);
+    margin-right: 3px;
+}
+
+.remember-forgot a {
+    color: rgb(25, 23, 23);
+    text-decoration: none;
+}
+
+.remember-forgot a:hover {
+    text-decoration: underline;
+}
+
+.btn {
+    width: 100%;
+    height: 45px;
+    background: #04AA6D;
+    border: none;
+    outline: none;
+    border-radius: 6px;
     cursor: pointer;
-    background: linear-gradient(to right,#EC008C, #FC6767);
+    font-size: 1em;
+    color: #fff;
+    font-weight: 500;
 }
 
-button:hover {
-    background: linear-gradient(to right, #FC6767, #EC008C);
+.login-registration {
+    font-size: .9em;
+    color:#04AA6D;
+    text-align: center;
+    font-weight: 500;
+    margin: 25px 0 10px;
 }
 
-h2 {
-    font-family: Inter;
-    font-size: 14px;
+.login-registration p  {
+    color: rgb(25, 23, 23) ;
+    text-decoration: none;
+    font-weight: 600;
+}
+.login-registration p a {
+    color:#04AA6D ;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.login-registration p a:hover {
+    text-decoration: underline;
+}
+.divison h1{
+    color:#04AA6D;
+    text-align: center;
+    margin-top: 40px;
+    font-size: 40px;
+    
+}
+.divison .list-left img{
+    height: 500px;
+     width:500px;
+     margin-left: 150px;
+}
+.divison .list-left li{
+    font-size: 25px;
+    margin-left: 120px;
     font-weight: bold;
-    margin-top: 35px;
-    cursor: pointer;
+   
+}
+.divison .list-left p{
+    margin-right: 30px;
+    font-size: 25px;
+    margin-left: 140px;
+   
 }
 
-@media screen and (max-width: 576px) {
-    .card {
-        width: 300px;
-        height: 500px;
-        padding: 5px;
-    }
 
-    .title {
-        margin-top: 55px;
-    }
 
-    button {
-        margin-top: 50px;
-    }
-
-    h2 {
-        margin-top: 25px;
-    }
-}
