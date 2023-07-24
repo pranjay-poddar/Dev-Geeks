@@ -1,0 +1,49 @@
+<div data---="form__cmseditor.form__if:inject;width:800;submit:cmseditorinject/submit;reload:cmseditorinject/reload;title:@(Inject HTML);icon:code" class="hidden">
+
+	<div class="padding">
+		<div data---="codemirror__cmseditor.inject__height:300;required:true;tabs:true;trim:true">@(HTML)</div>
+		<div class="help">@(You can inject custom HTML.)</div>
+	</div>
+
+	<nav data---="validation__cmseditor.inject">
+		<button name="submit"><i class="fa fa-check-circle"></i>@(APPLY)</button>
+		<button name="cancel">@(Cancel)</button>
+	</nav>
+
+</div>
+
+<script>
+
+	PLUGIN('cmseditorinject', function(exports) {
+
+		exports.reload = function() {
+			SET('cmseditor.inject', '', true);
+		};
+
+		exports.submit = function(hide) {
+
+			var editor = cmseditor.instance;
+			var target = editor.getTarget();
+
+			if (!target.hclass('CMS_widgets')) {
+				var tmp = editor.getContainer(10);
+				if (!tmp)
+					return;
+				target = tmp;
+			}
+
+			var after = target.hclass('CMS_widget');
+			var content = '<div class="CMS_widget CMS_remove" data-cms-id="{1}" data-cms-widget="000000000000000000" data-cms-category="Custom"><div class="wm wp wb">{0}</div></div>'.format(cmseditor.inject, GUID(10));
+			if (after)
+				target.after(content);
+			else
+				target.append(content);
+
+			editor.change(true);
+			editor.resize();
+
+			hide();
+		};
+	});
+
+</script>

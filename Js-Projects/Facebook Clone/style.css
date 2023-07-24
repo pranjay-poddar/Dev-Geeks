@@ -1,0 +1,289 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Helvetica, Arial, sans-serif;
+    box-sizing: border-box;
+  }
+  
+  body {
+    background-color: #f0f2f5;
+    position: relative;
+    height: 115vh;
+    overflow-x: hidden;
+  }
+  
+  #container {
+    display: flex;
+  }
+  
+  #recent-logins {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    left: 20vw;
+    top: 13vh;
+    margin-right: 30vw;
+  }
+  
+  #facebook {
+    height: 70px;
+    width: 198px;
+    margin: -20px;
+  }
+  
+  #recent-logins > #title {
+    font-size: 28px;
+    font-weight: normal;
+    line-height: 32px;
+    margin-top: 20px;
+    margin-bottom: 5px;
+  }
+  
+  #recent-logins > #subtitle {
+    color: #606770;
+    font-size: 15px;
+    line-height: 15px;
+    margin-bottom: 20px;
+    font-weight: 400;
+  }
+  
+  #cards {
+    display: flex;
+  }
+  
+  #card-1,
+  #card-2 {
+    position: relative;
+    background-color: white;
+    margin-right: 10px;
+    border-radius: 5px;
+    margin-right: 20px;
+  }
+  
+  #card-1:hover,
+  #card-2:hover {
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: box-shadow 0.3s;
+  }
+  
+  #card-1-img,
+  #card-2-img {
+    height: 160px;
+    width: 160px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+  }
+  
+  #add-account {
+    color: #166fe5;
+  }
+  
+  .username {
+    font-size: 18px;
+    line-height: 22px;
+    padding: 12px;
+    text-align: center;
+    color: rgb(75, 79, 86);
+  }
+  
+  #cancel {
+    position: absolute;
+    left: 8px;
+    color: white;
+    top: 5px;
+    border-radius: 50%;
+    height: 20px;
+    width: 20px;
+    text-align: center;
+    background-color: rgb(63, 62, 62);
+    opacity: 0.5;
+  }
+  
+  #card-1:hover > #cancel {
+    background-color: white;
+    opacity: 1;
+    color: rgb(194, 193, 193);
+    height: 25px;
+    width: 25px;
+    line-height: 22px;
+    top: -5px;
+    left: -5px;
+    font-size: 25px;
+    transition: 0.3s;
+  }
+  
+  #login {
+    position: relative;
+    background-color: white;
+    height: 350px;
+    width: 400px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    top: 18vh;
+    justify-content: flex-start;
+    padding: 10px 10px 20px 10px;
+    align-items: center;
+    box-shadow: 0 5px 5px 3px gainsboro;
+  }
+  
+  #login > a {
+    margin: 18px 0;
+    text-decoration: none;
+    font-size: 15px;
+    color: #1877f2;
+  }
+  
+  #login > a:hover {
+    text-decoration: underline;
+    cursor: pointer;
+  }
+  
+  hr {
+    width: 95%;
+    height: 0.1%;
+    background-color: rgb(194, 193, 193);
+    border: none;
+  }
+  
+  #login > input[type="email"],
+  #login > input[type="password"] {
+    height: 35%;
+    margin: 8px 0;
+    border-radius: 5px;
+    padding-left: 10px;
+    font-size: 16px;
+    width: 95%;
+    border: 1.5px solid #eeeff0;
+  }
+  
+  #login > input[type="password"] {
+    margin-bottom: 12px;
+  }
+  
+  #login > input[type="email"]:focus,
+  #login > input[type="password"]:focus {
+    outline: none;
+    border: 1px solid blue;
+    box-shadow: 0 0 5px #719ece;
+    caret-color: blue;
+  }
+  
+  #login-button {
+    background-color: #1877f2;
+    color: white;
+    font-size: 20px;
+    border-radius: 5px;
+    border: none;
+    height: 120px;
+    font-weight: bold;
+    width: 95%;
+  }
+  
+  #login-button:hover {
+    background-color: #166fe5;
+    cursor: pointer;
+  }
+  
+  #create-new-account {
+    background-color: #42b72a;
+    color: white;
+    font-size: 18px;
+    border-radius: 5px;
+    border: none;
+    height: 100px;
+    font-weight: bold;
+    width: 60%;
+    margin-top: 20px;
+  }
+  
+  #create-new-account:hover {
+    background-color: #36a420;
+    cursor: pointer;
+  }
+  
+  p {
+    font-size: 15px;
+    position: absolute;
+    bottom: -45px;
+  }
+  
+  footer {
+    background-color: white;
+    position: absolute;
+    bottom: 0;
+    width: 100vw;
+    padding: 20px;
+    color: #a6a8aa;
+    font-size: 12px;
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+    word-spacing: 12px;
+    list-style: 20px;
+  }
+  
+  @media screen and (max-width: 1114px) {
+    #recent-logins {
+      left: 70px;
+      margin-right: 22vw;
+    }
+    #login {
+      right: 30px;
+    }
+  }
+  
+  @media screen and (max-width: 900px) {
+    body {
+      height: 170vh;
+    }
+    #container {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+  
+    #recent-logins {
+      margin-right: 0;
+      align-items: center;
+      left: 0;
+      top: 20px;
+    }
+  
+    #card-1 {
+      margin-right: 5px;
+    }
+  
+    #card-2 {
+      margin-left: 5px;
+      margin-right: 0px;
+    }
+  
+    #login {
+      text-align: center;
+      left: 0;
+      margin-right: 0;
+      margin-top: -30px;
+      top: 80px;
+    }
+  
+    #recent-logins,
+    #login {
+      position: relative;
+    }
+  
+    footer {
+      position: absolute;
+      padding: 20px;
+      width: 100vw;
+    }
+  }
+  
+  @media screen and (max-height: 670px) {
+    footer {
+      position: relative;
+      top: 100px;
+    }
+  }
+  
