@@ -1,0 +1,597 @@
+html {
+  scroll-behavior: smooth;
+  line-height: 1.15;
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: #0000;
+}
+img {
+  width: 100%;
+  height: unset;
+}
+*,
+::after,
+::before {
+  box-sizing: border-box;
+  border-style: solid;
+  border-width: 0;
+}
+*,
+body,
+h1,
+h2,
+h3,
+hr,
+iframe,
+ol,
+p,
+ul {
+  margin: 0;
+}
+a,
+hr {
+  color: inherit;
+}
+*,
+[class*="sr-only"],
+ol,
+ul {
+  padding: 0;
+}
+.footer__link,
+footer {
+  position: relative;
+}
+h1,
+h2,
+h3 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+ol,
+ul {
+  list-style: none;
+}
+abbr[title] {
+  text-decoration: underline dotted;
+}
+embed,
+iframe,
+img,
+object,
+svg {
+  vertical-align: bottom;
+}
+button,
+input,
+optgroup,
+select,
+textarea {
+  -webkit-appearance: none;
+  appearance: none;
+  vertical-align: middle;
+  color: inherit;
+  font: inherit;
+  background: 0 0;
+  padding: 0;
+  margin: 0;
+  border-radius: 0;
+  text-align: inherit;
+  text-transform: inherit;
+}
+[type="button"]:disabled,
+[type="reset"]:disabled,
+[type="submit"]:disabled,
+button:disabled {
+  cursor: default;
+}
+:-moz-focusring {
+  outline: auto;
+}
+select:disabled {
+  opacity: inherit;
+}
+[contenteditable]:focus {
+  outline: auto;
+}
+a,
+h2,
+h3 {
+  font-weight: 600;
+}
+button {
+  all: unset;
+}
+[type="button"],
+[type="reset"],
+[type="submit"],
+button,
+label[for] {
+  cursor: pointer;
+}
+
+a {
+  background-color: #0000;
+  text-decoration: none;
+}
+
+[class*="sr-only"] {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  ::before,
+  ::after {
+    animation-delay: -1ms !important;
+    animation-duration: 1ms !important;
+    animation-iteration-count: 1 !important;
+    background-attachment: initial !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0s !important;
+    transition-delay: 0s !important;
+  }
+}
+
+:root {
+  --very-light-gray---lt: hsl(0, 0%, 98%);
+  --very-light-grayish-blue---lt: hsl(236, 33%, 92%);
+  --light-grayish-blue---lt: hsl(233, 11%, 84%);
+  --dark-grayish-blue---lt: hsl(236, 9%, 61%);
+  --very-dark-grayish-blue---lt: hsl(235, 19%, 35%);
+  --filter-hover--lt: #ddd;
+  
+  --very-dark-blue---dt: hsl(235, 21%, 11%);
+  --very-dark-desaturated-blue---dt: hsl(235, 24%, 19%);
+  --light-grayish-blue---dt: hsl(234, 39%, 85%);
+  --light-grayish-blue-hover---dt: hsl(236, 33%, 92%);
+  --dark-grayish-blue---dt: hsl(234, 11%, 52%);
+  --very-dark-grayish-blue---dt: hsl(233, 14%, 35%);
+  --very-dark-grayish-blue---dt: hsl(237, 14%, 26%);
+  --filter-hover--dt: #ccc;
+  --check-bg: linear-gradient(180deg, hsl(192, 100%, 67%), hsl(280, 87%, 65%));
+}
+
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --body-bg: var(--very-light-gray---lt);
+    --text-color: var(--very-dark-grayish-blue---lt);
+    --text-strikethrough-color: var(--light-grayish-blue---lt);
+    --shadow: var(--very-light-grayish-blue---lt);
+    --todo-item-bg: white;
+    --todo-item-border-color: #eee;
+    --checker-border: #bbb;
+    --filter-blue: #305FBD;
+    --form-shadow: #fff5;
+    --theme-switch-bg: url(https://raw.githubusercontent.com/0xabdulkhalid/todo-app/main/images/icon-moon.svg);
+    --header-bg: url(https://raw.githubusercontent.com/0xabdulkhalid/todo-app/main/images/bg-mobile-light.jpg);
+    --filter-hover: var(--filter-hover--lt);
+    --rm-btn-filter: invert(29%) sepia(7%) saturate(2410%) hue-rotate(197deg) brightness(89%) contrast(84%);
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --body-bg: var(--very-dark-blue---dt);
+    --text-color: var(--light-grayish-blue---dt);
+    --todo-item-bg: #25273C;
+    --shadow: var(--very-dark-blue---dt);
+    --text-strikethrough-color: var(--dark-grayish-blue---dt);
+    --todo-item-border-color: #fff1;
+    --checker-border: #fff3;
+    --filter-blue: #568EFF;
+    --form-shadow: #0005;
+    --theme-switch-bg: url(https://raw.githubusercontent.com/0xabdulkhalid/todo-app/main/images/icon-sun.svg);
+    --header-bg: url(https://raw.githubusercontent.com/0xabdulkhalid/todo-app/main/images/bg-mobile-dark.jpg);
+    --filter-hover: var(--filter-hover--dt);
+    --rm-btn-filter: invert(54%) sepia(0%) saturate(23%) hue-rotate(171deg) brightness(159%) contrast(100%);
+  }
+}
+
+[color-scheme="light"] {
+  --body-bg: var(--very-light-gray---lt);
+  --text-color: var(--very-dark-grayish-blue---lt);
+  --text-strikethrough-color: var(--light-grayish-blue---lt);
+  --shadow: var(--very-light-grayish-blue---lt);
+  --todo-item-bg: white;
+  --todo-item-border-color: #eee;
+  --checker-border: #bbb;
+  --filter-blue: #305FBD;
+  --form-shadow: #fff5;
+  --theme-switch-bg: url(https://raw.githubusercontent.com/0xabdulkhalid/todo-app/main/images/icon-moon.svg);
+  --header-bg: url(https://raw.githubusercontent.com/0xabdulkhalid/todo-app/main/images/bg-mobile-light.jpg);
+  --filter-hover: var(--filter-hover--lt);
+  --rm-btn-filter: invert(29%) sepia(7%) saturate(2410%) hue-rotate(197deg) brightness(89%) contrast(84%);
+}
+
+[color-scheme="dark"] {
+  --body-bg: var(--very-dark-blue---dt);
+  --text-color: var(--light-grayish-blue---dt);
+  --todo-item-bg: #25273C;
+  --shadow: var(--very-dark-blue---dt);
+  --text-strikethrough-color: var(--dark-grayish-blue---dt);
+  --todo-item-border-color: #fff1;
+  --checker-border: #fff3;
+  --filter-blue: #568EFF;
+  --form-shadow: #0005;
+  --theme-switch-bg: url(https://raw.githubusercontent.com/0xabdulkhalid/todo-app/main/images/icon-sun.svg);
+  --header-bg: url(https://raw.githubusercontent.com/0xabdulkhalid/todo-app/main/images/bg-mobile-dark.jpg);
+  --filter-hover: var(--filter-hover--dt);
+  --rm-btn-filter: invert(54%) sepia(0%) saturate(23%) hue-rotate(171deg) brightness(159%) contrast(100%);
+}
+
+body {
+  min-height: 100vh;
+  font-family: 'Josefin Sans', sans-serif;
+  background: var(--body-bg);
+  position: relative;
+  padding-bottom: 8rem;
+}
+
+body,
+.header__theme-toggle,
+form,
+[class*=todo-list__item],
+.main__filters {
+  transition: all .3s cubic-bezier(.22,.61,.36,1);
+
+}
+
+header {
+  background: 100%/cover no-repeat var(--header-bg);
+  min-height: 12.5rem;
+  padding: 3rem 1.5rem;
+  display: grid;
+  place-items: center;
+  align-items: start;
+}
+
+.header__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  width: 100%;
+}
+
+.header__theme-toggle {
+  background: center / 70% no-repeat var(--theme-switch-bg) ;
+  aspect-ratio: 1/1;
+  width: 1.8rem;
+  margin: -.2rem;
+}
+
+.header__title {
+  font-size: 1.6rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .65rem;
+  color: white;
+}
+
+main {
+  display: grid;
+  place-items: center;
+  margin: -5.6rem 1.5rem 0 1.5rem;
+  font-size: .75rem;
+  gap: 1rem;
+  color: var(--text-color);
+}
+
+ul {
+  width: 100%;
+}
+
+form,
+[class*=todo-list__item],
+.main__filters {
+  background: var(--todo-item-bg);
+  width: 100%;
+  padding: .9rem 1.4rem;
+  display: flex;
+}
+
+.todo-list__item {
+  padding: 1.15rem 1.3rem;
+  position: relative;
+  border-bottom: 1px solid var(--todo-item-border-color);
+}
+
+.todo-list__item--action {
+  padding: 1rem 1.4rem;
+}
+
+.todo-list__item--action,
+.main__filters {
+  color: var(--dark-grayish-blue---lt);
+}
+
+.main__todo-list,
+form,
+.main__filters {
+  border-radius: .3rem;
+  overflow: hidden;
+}
+
+form {
+  box-shadow: 0 7px 10px var(--form-shadow);
+}
+
+input,
+main {
+  word-spacing: -.1rem;
+}
+
+[type=text] {
+  all: unset;
+}
+
+.form__decoration,
+.item__checker {
+outline: 1px solid var(--checker-border);
+border-radius: 50%;
+margin-right: .8rem;
+aspect-ratio: 1/1;
+width: 1.12rem;
+height: 1.12rem;
+}
+
+.item__checker {
+  margin-top: -.15rem;
+  cursor: pointer;
+}
+
+.item__checker, label {
+  transition: .4s ease;
+}
+
+.todo-list__item label,
+[type="text"] {
+  width: 82%;
+  word-break: break-all;
+}
+
+.item__checker:checked {
+  background: center / 50% no-repeat url(https://raw.githubusercontent.com/0xabdulkhalid/todo-app/main/images/icon-check.svg), var(--check-bg) !important;
+  outline: none;
+}
+
+.item__checker:checked + label {
+  text-decoration: line-through;
+  color: var(--text-strikethrough-color);
+}
+
+.item__remove {
+  width: .8rem;
+  height: .8rem;
+  background: url(https://raw.githubusercontent.com/0xabdulkhalid/todo-app/main/images/icon-cross.svg) no-repeat;
+  background-size: 100%;
+  position: absolute;
+  right: 1.2rem;
+  filter: var(--rm-btn-filter);
+}
+
+.filters__list {
+  gap: 1.1rem;
+  margin-left: 2.6rem;
+  font-size: .93rem;
+  font-weight: 700;
+  display: none;
+  visibility: hidden;
+}
+
+.action__list {
+  display: flex;
+  justify-content: space-between;
+}
+
+.main__todo-list {
+ box-shadow: 0 15px 25px var(--shadow);
+}
+
+.main__filters {
+  display: flex;
+  gap: 1rem;
+  font-size: .95rem;
+
+  justify-content: center;
+  padding: 1.1rem 1.4rem .9rem 1.6rem;
+  box-shadow: 0 5px 35px var(--shadow);
+  font-weight: 700;
+}
+
+.filter__btn--active {
+  color: var(--filter-blue) !important;
+}
+
+.item__remove--active {
+  transform: rotate(360deg) scale(2.8) translateX(-30rem);
+  transition: 1s;
+  filter: invert();
+}
+
+.todo-list__item--is-dragging {
+  background: #00f7;
+}
+
+.todo-list__item:hover {
+  z-index: 0;
+}
+
+.todo-list__item--hidden {
+  transition: .2s cubic-bezier(.22,.61,.36,1);
+  overflow: hidden;
+  padding: 0 1.7rem !important;
+  height: 0;
+  opacity: 0;
+  visibility: hidden;
+  border: 0 !important;
+  clip: rect(1px, 1px, 1px, 1px) !important;
+  -webkit-clip-path: inset(50%) !important;
+  clip-path: inset(50%) !important;
+  height: 1px !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  white-space: nowrap !important;
+}
+
+.main__drag-description {
+  font-size: .9rem;
+  margin-top: 1.6rem;
+}
+
+footer {
+  width: 100%;
+  text-align: center;
+  font-size: 0.775rem;
+  position: absolute;
+  bottom: 1rem;
+  color: var(--text-color);
+}
+
+button,
+a {
+  transition: 0.5s ease;
+}
+
+@media (min-width: 35em) {
+
+  @media (prefers-color-scheme: light) {
+    :root {
+      --header-bg: url(https://raw.githubusercontent.com/0xabdulkhalid/todo-app/main/images/bg-desktop-light.jpg);
+    }
+  }
+  
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --header-bg: url(https://raw.githubusercontent.com/0xabdulkhalid/todo-app/main/images/bg-desktop-dark.jpg);
+    }
+  }
+  
+  [color-scheme="light"] {
+    --header-bg: url(https://raw.githubusercontent.com/0xabdulkhalid/todo-app/main/images/bg-desktop-light.jpg);
+  }
+
+  [color-scheme="dark"] {
+      --header-bg: url(https://raw.githubusercontent.com/0xabdulkhalid/todo-app/main/images/bg-desktop-dark.jpg);
+  }
+
+
+  header {
+    min-height: 18.8rem;
+    padding-bottom: 9.4rem;
+    align-items: center;
+  }
+
+  .header__wrapper {
+    max-width: 33.7rem;
+  }
+
+  .header__title {
+    font-size: 2.4rem;
+    letter-spacing: 1rem;
+  }
+
+  .header__theme-toggle {
+    margin: .03rem -.3rem;
+    width: 2rem;
+  }
+
+  form {
+    padding: 1.28rem 1.6rem;
+  }
+
+  main {
+    font-size: 1.2rem;
+    max-width: 33.7rem;
+    margin: -9rem auto 0 auto;
+    word-spacing: -.2rem;
+    gap: 1.5rem;
+  }
+
+  .form__decoration,
+  .item__checker {
+    width: 1.5rem;
+    height: 1.5rem;
+    margin-right: 1.5rem;
+  }
+
+  .todo-list__item {
+    padding: 1.3rem 1.5rem;
+  }
+
+  .count__displayer {
+    font-size: 1rem;
+  }
+
+  label {
+    word-spacing: -.14rem;
+    letter-spacing: -.03rem;
+  }
+
+  .item__remove {
+    top: 1.6rem;
+  }
+
+  .item__checker:checked {
+    background-size: 39%;
+  }
+
+  .item__checker:hover {
+    background: center / 99% no-repeat url(https://raw.githubusercontent.com/0xabdulkhalid/todo-app/main/images/border.svg);
+    outline: none;
+  }
+
+  .todo-list__item--action {
+    padding: 1.1rem 1.4rem 1rem 1.4rem;
+    font-size: .85rem;
+    word-spacing: .1rem;
+  }
+
+  .filters__list { 
+    display: flex;
+    visibility: visible;
+  }
+
+  [class*="filter"] button:hover {
+    color: var(--filter-hover);
+  }
+
+  .main__filters {
+    display: none;
+    visibility: hidden;
+  }
+
+  footer {
+    font-size: 0.9rem;
+  }
+
+  .footer__link {
+    padding: 0.3rem;
+  }
+
+  .footer__link::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: var(--body-bg);
+    transition: 0.7s;
+    z-index: -1;
+    transform: rotate(-2deg);
+  }
+  .footer__link:hover {
+    filter: invert();
+  }
+  .footer__link:hover::before {
+    width: 100%;
+  }
+}

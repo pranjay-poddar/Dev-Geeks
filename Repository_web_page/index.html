@@ -11,11 +11,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="icon" href="https://github.com/" type="image/icon type">
     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="../css_files/translate.css">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap" rel="stylesheet">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
+     <link rel="stylesheet" href="go_to_top.css">
     <link rel="icon" href="./img/favicon.ico">
     <title>Dev Geeks||Repository</title>
     <meta name="description" content="Dev Geeks" />
@@ -26,11 +28,15 @@
     <meta property="og:url" content="https://pranjay-poddar.github.io/Dev-Geeks/Repository_web_page/index.html" />
     <meta property="og:title" content="Dev Geeks" />
     <meta property="og:description" content="Open Source repository for mini projects" />
+ <link rel="stylesheet" href="swiper-bundle.min.css">
 
+ <link rel="stylesheet" href="testimonial.css">
 </head>
 
 <body>
-
+  <button class="gotop">
+    <img src="https://github.com/pranjay-poddar/Dev-Geeks/assets/104543751/f1773a97-93d3-4d48-b52e-6bd815282fc0" alt="arrow up">
+  </button>
     <!-- SCROLL TP TOP -->
     <section>
     <div id="progress">
@@ -38,12 +44,9 @@
       </div>
     </section>
 
-
-    <section>
-        <div class="container">
-            <div class="row text-center">
-                <div class="col-12 my-3 text-center">
-                    <div id="poster" style="border-radius: 20px;">
+ <header>
+      <nav class="navbar">
+         <div id="poster" style="border-radius: 20px;">
                         <!-- <a href="https://github.com/pranjay-poddar"><img class="img-fluid" src="https://cdn.worldvectorlogo.com/logos/github-2.svg" alt="Dev geeks"></a> -->
                         <a href="https://github.com/pranjay-poddar" target="_blank"><div class="logo">
                             <i class="github-logo"></i>
@@ -52,8 +55,34 @@
                           </div>
                           </a>
                     </div>
-                </div>
-            </div>
+        <ul>
+           <li><a class="nava" href="../Devgeeks website/index.html#hero">Home</a></li>
+          <li><a class="nava" href="../Devgeeks website/index.html#about">About</a></li>
+          <li><a class="nava" href="../Devgeeks website/index.html#services">Projects</a></li>
+          <li><a class="nava" href="https://devgeeks-os.netlify.app/repository_web_page/">How to Contribute</a></li>
+          <li><a class="nava" href="../Devgeeks website/index.html#team">Team</a></li>
+           <li>
+            <div id="google_translate_element"></div>
+            <script src="js_files/translate.js"></script>
+
+        <script type="text/javascript">
+            function googleTranslateElementInit() {
+                new google.translate.TranslateElement(
+                    {pageLanguage: 'en'},
+                    'google_translate_element'
+                );
+            }
+        </script>
+
+        <script type="text/javascript" src= "https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
+        </script>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <section>
+        <div class="container">
+           
             <div class="row my-5">
                 <div class="col-md-6 col-12">
                     <h2>What is Dev Geeks?</h2>
@@ -216,7 +245,150 @@
             </div>
         </div>
     </section>
-    
+
+      <section class="tes">
+            <div class="slide-container1 swiper">
+              <h3>Testimonial</h3>
+              <h2>-What People Think-</h2>
+              <div class="slide-content">
+                  <div class="card-wrapper swiper-wrapper">
+  
+                      <div class="card swiper-slide">
+                      <div class="image-content">
+                          <span class="overlay"> </span>
+  
+                          <div class="card-image">
+                              <img src="https://github.com/pranjay-poddar/Dev-Geeks/assets/104543751/1fd10996-6fea-419e-b030-0533a7599c97" alt=" " class="card-img">
+                          </div>
+                      </div>
+                      <div class="card-content">
+                          <h2 class="name">Amelia </h2>
+                          <p class="description"> This app is awesome, you don't get unnecessary contents, there's a separate page for topics that you want to know or discuss about. It's so easy to use.</p>
+  
+                          <button class="button">view more</button>
+  
+                      </div>
+                      </div>
+  
+                      <div class="card swiper-slide">
+                          <div class="image-content">
+                              <span class="overlay"> </span>
+  
+                              <div class="card-image">
+                                  <img src="https://github.com/pranjay-poddar/Dev-Geeks/assets/104543751/28ef52d6-cc43-4b6f-bfc2-0f7e776e85d8" alt=" " class="card-img">
+                              </div>
+                          </div>
+                          <div class="card-content">
+                              <h2 class="name">Abigale</h2>
+                              <p class="description">It helps to Prepare and share your project for collaboration,Contribute to the betterment of a project via pull requests,Organize an event,Mentor others and much more.   </p>
+  
+                              <button class="button">view more</button>
+  
+                          </div>
+                          </div>
+  
+                          <div class="card swiper-slide">
+                              <div class="image-content">
+                                  <span class="overlay"> </span>
+  
+                                  <div class="card-image">
+                                      <img src="https://github.com/pranjay-poddar/Dev-Geeks/assets/104543751/a5be3c2c-5949-45cd-9ca6-fdcb6711a98d" alt=" " class="card-img">
+                                  </div>
+                              </div>
+                              <div class="card-content">
+                                  <h2 class="name">Caroline</h2>
+                                  <p class="description">Very useful app. It contains a variety of projects, ranging from web development to machine learning.Each project is designed to help developers learn and improve their skills. </p>  
+                                  <button class="button">view more</button>
+  
+                              </div>
+                              </div>
+  
+  
+                              <div class="card swiper-slide">
+                                  <div class="image-content">
+                                      <span class="overlay"> </span>
+  
+                                      <div class="card-image">
+                                          <img src="https://github.com/pranjay-poddar/Dev-Geeks/assets/104543751/d9b79dde-4f4c-426f-9aa0-5fc9df4e0095" alt=" " class="card-img">
+                                      </div>
+                                  </div>
+                                  <div class="card-content">
+                                      <h2 class="name">Pearl</h2>
+                                      <p class="description">This app is awesome, you don't get unnecessary contents., there's a separate page for topics that you want to know or discuss about It's so easy to use.</p>
+  
+                                      <button class="button">view more</button>
+  
+                                  </div>
+                                  </div>
+  
+  
+                                  <div class="card swiper-slide">
+                                      <div class="image-content">
+                                          <span class="overlay"> </span>
+  
+                                          <div class="card-image">
+                                              <img src="https://github.com/pranjay-poddar/Dev-Geeks/assets/104543751/0d285ddd-d66b-49c7-9c56-cdc9270940e0" alt=" " class="card-img">
+                                          </div>
+                                      </div>
+                                      <div class="card-content">
+                                          <h2 class="name">Eliza</h2>
+                                          <p class="description">Very useful app. It contains a variety of projects, ranging from web development to machine learning.Each project is designed to help developers learn and improve their skills.</p>
+                                          <button class="button">view more</button>
+  
+                                      </div>
+                                      </div>
+  
+  
+                                      <div class="card swiper-slide">
+                                          <div class="image-content">
+                                              <span class="overlay"> </span>
+  
+                                              <div class="card-image">
+                                                  <img src="https://github.com/pranjay-poddar/Dev-Geeks/assets/104543751/3bdf1907-4279-402a-8bd9-506a83497072" alt=" " class="card-img">
+                                              </div>
+                                          </div>
+                                          <div class="card-content">
+                                              <h2 class="name">Margarate</h2>
+                                              <p class="description">It helps to Prepare and share your project for collaboration,Contribute to the betterment of a project via pull requests,Organize an event,Mentor others and much more.</p>
+  
+                                              <button class="button">view more</button>
+  
+                                          </div>
+                                          </div>
+  
+                  </div>
+              </div>
+  
+              <div class="swiper-button-next swiper-navBtn"></div>
+              <div class="swiper-button-prev swiper-navBtn"></div>
+              <div class="swiper-pagination"></div>
+          </div>
+        </section>
+
+    <form id="newsin">
+        <div>
+           <h2>Subscribe to our Newsletter</h2>
+          </br>
+           <p>Make sure you don't miss any updates regarding our latest projects</p>
+        </div>
+
+     <div id="info" style="background-color:white">
+       <label for="nameuser">Name :</label>
+       <input id="nameuser" type="text" placeholder="Name" name="name" required>
+     </br>
+       <label for="nameuser">Email :</label>
+       <input id="nameuser" type="text" placeholder="Email address" name="mail" required>
+   </br> 
+       <label>
+         <input id="checkedbox" type="checkbox" checked="checked" name="subscribe"> Daily Newsletter
+       </label>
+     </div>
+
+     <div>
+       <input id="submitnews" type="submit" value="Subscribe">
+     </div>
+   </form>
+
     <!-- FOOTER SECTION -->
     <div class="section pt-2"><h3>CONTACT <span>US</span></h3>
         <div class="wrapper">
@@ -243,7 +415,7 @@
           </div>
           <div>
             <div class="footer-copyright p-2">
-              <h4>Developed with ❤️ by <span>Pranjay Poddar</span></h4>
+              <p>Developed with ❤️ by <span>Pranjay Poddar</span></p>
             </div>
           </div>
         </div>
@@ -254,7 +426,9 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <script src="script.js"></script>
-
+     <script src="go_to_top.js"></script>
+ <script src="swiper-bundle.min.js"></script>
+      <script src="testimonial.js"></script>
 </body>
 
 </html>
