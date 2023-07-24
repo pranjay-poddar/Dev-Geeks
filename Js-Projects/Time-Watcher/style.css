@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    text-align: center;
+    align-items: center;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+body {
+    background-color: skyblue;
+    color: #fff;
+    font-family: 'Fredericka the Great', cursive;
+}
+
+#container {
+    height: 90vh;
+    width: 100vh;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%;
+    background-color: salmon;
+    border: none;
+    border-radius: 2rem;
+    box-shadow: 7px 7px 14px #853617;
+    display: flex;
+    flex-direction: column;
+    gap: 3%;
+}
+
+#header {
+    display: flex;
+    align-items: center;
+}
+
+#header,
+#input-heading,
+#output-heading {
+    transition: left 0.5s top 0.3s;
+}
+
+img {
+    width: 50px;
+    height: 50px;
+    margin-top: 30px;
+    margin-right: 20px;
+}
+
+h1 {
+    font-size: 3rem;
+    color: black;
+    margin-top: 30px;
+    user-select: none;
+}
+
+p {
+    color: black;
+    margin-bottom: 5px;
+}
+
+a {
+    color: black;
+}
+
+h1:hover,
+h2:hover,
+a:hover {
+    text-decoration: underline;
+    transition: all 0.6s;
+}
+
+h2 {
+    font-size: 2rem;
+    color: black;
+    margin: 8px;
+    user-select: none;
+}
+
+#take-input,
+#show-output {
+    display: flex;
+    flex-direction: column;
+}
+
+#input,
+#output {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    justify-items: center;
+}
+
+input:nth-child(7) {
+    grid-column: 2;
+    grid-row: 3;
+}
+
+input {
+    width: 150px;
+    height: 40px;
+    padding: 2px;
+    margin: 4px;
+    background-color: #282828;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    font-size: 1.2rem;
+    color: skyblue;
+    cursor: pointer;
+}
+
+input:hover {
+    box-shadow: 0 2px 10px #050505;
+}
+
+input:focus::placeholder {
+    color: transparent;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+fieldset:nth-child(7) {
+    grid-column: 2;
+    grid-row: 3;
+}
+
+fieldset {
+    outline: none;
+    border: none;
+    background-color: #222222;
+    margin: 5px;
+    width: 20vh;
+    border-radius: 0.5rem;
+    user-select: none;
+}
+
+fieldset:hover {
+    box-shadow: 0 2px 10px #050505;
+}
+
+legend {
+    color: lightyellow;
+    font-weight: bolder;
+}
+
+.val {
+    font-weight: bolder;
+    letter-spacing: 3px;
+    margin: 3px;
+}
