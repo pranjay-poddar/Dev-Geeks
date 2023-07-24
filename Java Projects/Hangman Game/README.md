@@ -2,7 +2,7 @@
 The Hangman Game is a command-line word guessing game written in Java language. It randomly selects a word from a predefined list, and the player's objective is to guess the word one letter at a time. The player has a limited number of attempts before losing the game.
 
 ## Getting Started
-To play the Hangman game, you need to have Java installed on your system. If you don't have Java installed, you can download it from the official website: https://www.java.com/en/download/
+To play the Hangman game, you need to have Java installed on your system.
 
 ### Clone the Repository
 
