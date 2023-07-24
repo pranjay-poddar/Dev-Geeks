@@ -14,10 +14,18 @@ body{
     width: 80vmin;
     position: absolute;
     transform: translate(-50%, -50%);
-    top: 50%;
+    top: 33%;
     left: 50%;
     padding: 40px 20px;
     border-radius: 8px;
+}
+
+.heading {
+    margin: auto;
+    color: white;
+    display: flex;
+    justify-content: center;
+    margin-top: 4rem;
 }
 
 label{

@@ -1,0 +1,126 @@
+.todo-page {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+  }
+  
+  .todo-write {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 25px;
+    font-size: 15px;
+  }
+  
+  .Todos{
+    height: 85vh;
+    overflow-y: auto;
+  }
+  
+  .add-confirm-icon {
+    transform: scale(2);
+    cursor: pointer;
+  }
+  
+  h1{
+    font-size: 20px;
+  }
+  
+  .todo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+  }
+  
+  .edit-button,
+  .delete-button {
+    cursor: pointer;
+    margin-left: 10px;
+  }
+  
+  @media (min-width: 25px) and (max-width: 500px) {
+    .logout-icon {
+      margin-left: 25px;
+      cursor: pointer;
+      transform: scale(1.4);
+      background: red;
+      color: white;
+    }
+    .edit-delete-div {
+      display: flex;
+      flex-direction: row;
+    }
+    .todo > h1 {
+      border-radius: 10px;
+      width: 70vw;
+      background-color: rgb(211, 211, 211);
+      padding: 5px 10px;
+      word-wrap: break-word;
+    }
+    .add-edit-input {
+      height: 30px;
+      font-size: 25px;
+      margin-right: 25px;
+      width: 50vw;
+    }
+  }
+  
+  @media (min-width: 500px) and (max-width: 800px) {
+    .logout-icon {
+      margin-left: 25px;
+      cursor: pointer;
+      transform: scale(1.4);
+      background: red;
+      color: white;
+    }
+    .edit-delete-div {
+      display: flex;
+      flex-direction: row;
+    }
+    .todo > h1 {
+      border-radius: 10px;
+      width: 70vw;
+      line-height: 24px;
+      background-color: rgb(211, 211, 211);
+      padding: 5px 10px;
+      word-wrap: break-word;
+    }
+    .add-edit-input {
+      height: 30px;
+      font-size: 25px;
+      margin-right: 25px;
+    }
+  }
+  
+  @media (min-width: 801px) and (max-width: 4000px) {
+    .logout-icon {
+      cursor: pointer;
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      padding: 20px;
+      background: red;
+      color: white;
+    }
+    .edit-delete-div {
+      display: flex;
+      flex-direction: row;
+    }
+    .todo > h1 {
+      border-radius: 10px;
+      width: 500px;
+      background-color: rgb(211, 211, 211);
+      padding: 5px 10px;
+      word-wrap: break-word;
+    }
+    .add-edit-input {
+      height: 30px;
+      font-size: 25px;
+      margin-right: 25px;
+    }
+  }

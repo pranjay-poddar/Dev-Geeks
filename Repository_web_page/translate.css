@@ -1,0 +1,25 @@
+#google_translate_element select{
+  background:#f6edfd;
+  color:black;
+  border: none;
+  border-radius:3px;
+  padding:2px 6px;
+  }
+
+  /*google translate link | logo */
+    .goog-logo-link,.goog-te-gadget span,div#goog-gt-{
+    display:none!important;
+    }
+  .goog-te-gadget{
+    color:transparent!important;
+    font-size:0;
+  }
+
+  /* google translate banner-frame */
+
+  .goog-te-banner-frame{
+  display:none !important;
+  }
+
+  #goog-gt-tt, .goog-te-balloon-frame{display: none !important;}
+ .goog-text-highlight { background: none !important; box-shadow: none !important;}
