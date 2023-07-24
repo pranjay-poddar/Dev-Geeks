@@ -1,4 +1,4 @@
- <h1>Technical Documentation</h1>
+<h1>Technical Documentation</h1>
  
  <p align="center">
 <img src="https://img.shields.io/badge/Frontend-red">
@@ -29,6 +29,3 @@ The entire website will be split into two areas. The Documentation Menu menu on 
   ➢ CSS 3  <br>
   
  </p>
- 
- 
-
