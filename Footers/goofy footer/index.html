@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CSS Goey footer</title>
+  <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Open+Sans:400,700&amp;display=swap'>
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css'><link rel="stylesheet" href="./style.css">
+
+</head>
+<style>
+  body {
+  display: grid;
+  grid-template-rows: 1fr 10rem auto;
+  grid-template-areas: "main" "." "footer";
+  overflow-x: hidden;
+  background: #F5F7FA;
+  min-height: 100vh;
+  font-family: "Open Sans", sans-serif;
+}
+body .footer {
+  z-index: 1;
+  --footer-background:#ED5565;
+  display: grid;
+  position: relative;
+  grid-area: footer;
+  min-height: 12rem;
+}
+body .footer .bubbles {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1rem;
+  background: var(--footer-background);
+  filter: url("#blob");
+}
+body .footer .bubbles .bubble {
+  position: absolute;
+  left: var(--position, 50%);
+  background: var(--footer-background);
+  border-radius: 100%;
+  -webkit-animation: bubble-size var(--time, 4s) ease-in infinite var(--delay, 0s), bubble-move var(--time, 4s) ease-in infinite var(--delay, 0s);
+          animation: bubble-size var(--time, 4s) ease-in infinite var(--delay, 0s), bubble-move var(--time, 4s) ease-in infinite var(--delay, 0s);
+  transform: translate(-50%, 100%);
+}
+body .footer .content {
+  z-index: 2;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  grid-gap: 4rem;
+  padding: 2rem;
+  background: var(--footer-background);
+}
+body .footer .content a, body .footer .content p {
+  color: #F5F7FA;
+  text-decoration: none;
+}
+body .footer .content b {
+  color: white;
+}
+body .footer .content p {
+  margin: 0;
+  font-size: 0.75rem;
+}
+body .footer .content > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+body .footer .content > div > div {
+  margin: 0.25rem 0;
+}
+body .footer .content > div > div > * {
+  margin-right: 0.5rem;
+}
+body .footer .content > div .image {
+  align-self: center;
+  width: 4rem;
+  height: 4rem;
+  margin: 0.25rem 0;
+  background-size: cover;
+  background-position: center;
+}
+
+@-webkit-keyframes bubble-size {
+  0%, 75% {
+    width: var(--size, 4rem);
+    height: var(--size, 4rem);
+  }
+  100% {
+    width: 0rem;
+    height: 0rem;
+  }
+}
+
+@keyframes bubble-size {
+  0%, 75% {
+    width: var(--size, 4rem);
+    height: var(--size, 4rem);
+  }
+  100% {
+    width: 0rem;
+    height: 0rem;
+  }
+}
+@-webkit-keyframes bubble-move {
+  0% {
+    bottom: -4rem;
+  }
+  100% {
+    bottom: var(--distance, 10rem);
+  }
+}
+@keyframes bubble-move {
+  0% {
+    bottom: -4rem;
+  }
+  100% {
+    bottom: var(--distance, 10rem);
+  }
+}
+</style>
+<body>
+<div class="main"></div>
+<div class="footer">
+  <div class="bubbles">
+    <div class="bubble" style="--size:2.084555475307144rem; --distance:8.268012668014578rem; --position:87.15033512820567%; --time:2.884371331315718s; --delay:-3.7519808477038885s;"></div>
+    <div class="bubble" style="--size:3.308637504837062rem; --distance:7.136945238829502rem; --position:88.32559626633484%; --time:3.506938056151115s; --delay:-3.375651756096867s;"></div>
+    <div class="bubble" style="--size:4.401982265147366rem; --distance:7.410695291877589rem; --position:79.05243756593885%; --time:3.4385953265867566s; --delay:-3.755561019326855s;"></div>
+    <div class="bubble" style="--size:5.252894179390582rem; --distance:6.471107569988192rem; --position:0.44596596201512284%; --time:3.5113405771322905s; --delay:-3.7044205888708293s;"></div>
+    <div class="bubble" style="--size:5.647358868676347rem; --distance:9.226914401646287rem; --position:67.40393619663224%; --time:3.5893326236521603s; --delay:-2.565224449815178s;"></div>
+    <div class="bubble" style="--size:5.496954137403896rem; --distance:9.058153309276285rem; --position:63.282566800935456%; --time:3.780208288272552s; --delay:-2.4667826355868145s;"></div>
+    <div class="bubble" style="--size:3.198908606259092rem; --distance:6.551464714680452rem; --position:36.718161869450405%; --time:2.5615055612382425s; --delay:-3.463866142171843s;"></div>
+    <div class="bubble" style="--size:2.4000238871166903rem; --distance:7.388061035567443rem; --position:38.60072082961922%; --time:3.8094532137667834s; --delay:-3.3902338026955876s;"></div>
+    <div class="bubble" style="--size:5.673032636738631rem; --distance:7.657907100356686rem; --position:29.19433936840086%; --time:2.846396276588617s; --delay:-2.9784015109715978s;"></div>
+    <div class="bubble" style="--size:2.2247129064876026rem; --distance:7.698212206263948rem; --position:57.511426772850065%; --time:3.7065303695681187s; --delay:-2.729439279336876s;"></div>
+    <div class="bubble" style="--size:2.1956022003809883rem; --distance:8.456513309715326rem; --position:78.93030710490272%; --time:3.553131484130191s; --delay:-2.6940086756817694s;"></div>
+    <div class="bubble" style="--size:5.692088816919876rem; --distance:9.411642280919606rem; --position:74.48322551345747%; --time:2.460756860996583s; --delay:-3.802269790962703s;"></div>
+    <div class="bubble" style="--size:2.3212784692109363rem; --distance:7.668110655600669rem; --position:23.877198268704134%; --time:3.0019835622160107s; --delay:-3.1649447292182358s;"></div>
+    <div class="bubble" style="--size:5.205418513109599rem; --distance:9.74194799227747rem; --position:57.490023017885875%; --time:3.1265027356693476s; --delay:-3.742065161134342s;"></div>
+    <div class="bubble" style="--size:4.21934640549542rem; --distance:6.705274816261652rem; --position:83.53110395618148%; --time:2.1724257368786426s; --delay:-3.629005201715261s;"></div>
+    <div class="bubble" style="--size:2.985430705361905rem; --distance:9.790778691051745rem; --position:39.25653620576882%; --time:2.5042130545821935s; --delay:-3.772918407440988s;"></div>
+    <div class="bubble" style="--size:5.85856977959655rem; --distance:9.749028675113916rem; --position:54.941715354228805%; --time:3.808797243948501s; --delay:-2.726912782577649s;"></div>
+    <div class="bubble" style="--size:3.282762007011396rem; --distance:6.649238854397165rem; --position:26.767438532651745%; --time:3.2728342437744242s; --delay:-2.797973764268042s;"></div>
+    <div class="bubble" style="--size:2.955811966009522rem; --distance:9.274602194514854rem; --position:96.932488758096%; --time:3.203483498310365s; --delay:-3.2435488478462435s;"></div>
+    <div class="bubble" style="--size:2.0329485074394746rem; --distance:7.319702523302135rem; --position:54.997029936885085%; --time:3.931764163612594s; --delay:-3.10255883799147s;"></div>
+    <div class="bubble" style="--size:5.9369270830796275rem; --distance:6.583862460276665rem; --position:85.41862672415431%; --time:3.233397344986937s; --delay:-2.854502948766103s;"></div>
+    <div class="bubble" style="--size:5.992808370312354rem; --distance:6.551714751210637rem; --position:31.060450257580236%; --time:3.571060830479372s; --delay:-2.7201241914659513s;"></div>
+    <div class="bubble" style="--size:3.013110559222862rem; --distance:6.749659633276001rem; --position:45.622363275724645%; --time:2.966212065517383s; --delay:-2.618705571929437s;"></div>
+    <div class="bubble" style="--size:3.6351992417651253rem; --distance:9.787463109849234rem; --position:103.96671228534498%; --time:3.1051265024922206s; --delay:-2.821218991598125s;"></div>
+    <div class="bubble" style="--size:2.6730803539590084rem; --distance:7.603172847217391rem; --position:54.753506819790196%; --time:3.8271691840299007s; --delay:-3.603232309011753s;"></div>
+    <div class="bubble" style="--size:3.70563044025788rem; --distance:8.478629705948766rem; --position:9.497557917197044%; --time:3.8563810163214636s; --delay:-2.9154695803844155s;"></div>
+    <div class="bubble" style="--size:5.106836494799471rem; --distance:9.699586092015544rem; --position:-1.8532920541844455%; --time:2.970640800577769s; --delay:-2.696456464278364s;"></div>
+    <div class="bubble" style="--size:3.7050610930246926rem; --distance:7.970965046658087rem; --position:9.63269247359439%; --time:3.96946111344297s; --delay:-2.343123665027633s;"></div>
+    <div class="bubble" style="--size:2.6157736491043897rem; --distance:8.150822887464507rem; --position:-0.6184982186484245%; --time:2.634630637878845s; --delay:-2.4677935549170473s;"></div>
+    <div class="bubble" style="--size:5.292559490322828rem; --distance:8.029833988645692rem; --position:96.49334338132252%; --time:3.1681573319845673s; --delay:-2.6068289765148633s;"></div>
+    <div class="bubble" style="--size:2.2925876993028345rem; --distance:6.727631002756406rem; --position:39.29238309902833%; --time:2.574219226856169s; --delay:-3.639818191008147s;"></div>
+    <div class="bubble" style="--size:3.9246038855740784rem; --distance:6.01564773132259rem; --position:75.8173340767502%; --time:3.491907838628897s; --delay:-3.0832756834986377s;"></div>
+    <div class="bubble" style="--size:3.1487777193222506rem; --distance:6.784052820882594rem; --position:70.94107356789183%; --time:3.0037074116138607s; --delay:-2.183422364059106s;"></div>
+    <div class="bubble" style="--size:5.163466150795541rem; --distance:6.022035532435949rem; --position:-0.5503483957727902%; --time:3.517918059111767s; --delay:-2.767695108732702s;"></div>
+    <div class="bubble" style="--size:3.7101806653317695rem; --distance:8.172745474134224rem; --position:22.73113867495768%; --time:3.6916375337169667s; --delay:-3.136575946079564s;"></div>
+    <div class="bubble" style="--size:4.925753568789589rem; --distance:8.764851858312618rem; --position:91.31341354463505%; --time:3.575047874174082s; --delay:-2.4045508154328306s;"></div>
+    <div class="bubble" style="--size:3.870543744225677rem; --distance:6.508698174613976rem; --position:92.39578581096103%; --time:3.6086137441572896s; --delay:-2.5285981715592274s;"></div>
+    <div class="bubble" style="--size:4.954781151067026rem; --distance:9.179580788681267rem; --position:24.486284483002937%; --time:3.2821596078453825s; --delay:-2.097485286157273s;"></div>
+    <div class="bubble" style="--size:5.662753705033118rem; --distance:8.044699856638676rem; --position:74.83389735403699%; --time:2.501606340649093s; --delay:-3.496550148766789s;"></div>
+    <div class="bubble" style="--size:5.978842737382068rem; --distance:7.430168201538665rem; --position:14.709206683802869%; --time:3.999803671264673s; --delay:-3.7314536716143776s;"></div>
+    <div class="bubble" style="--size:4.503097300268367rem; --distance:6.860125203839215rem; --position:42.86528309785192%; --time:3.6564310904824753s; --delay:-3.113239337800465s;"></div>
+    <div class="bubble" style="--size:3.395612245737209rem; --distance:7.111539155332388rem; --position:79.61569236972785%; --time:2.415853432342916s; --delay:-2.0862550687627075s;"></div>
+    <div class="bubble" style="--size:2.7171516787859566rem; --distance:8.309417585164617rem; --position:95.7413454349976%; --time:2.5948212646090565s; --delay:-3.449206217902773s;"></div>
+  </div>
+  <div class="content">
+    <div>
+      <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. In quibusdam quidem doloremque ducimus, nesciunt placeat facilis nulla quos, consequuntur voluptatibus fugiat laboriosam tenetur amet at voluptatem delectus provident! Fugiat, quia!</div>
+    </div>
+    <div><a class="image" href="#" target="_blank" style="background-image: url(&quot;https://s3-us-west-2.amazonaws.com/s.cdpn.io/199011/happy.svg&quot;)"></a>
+      <p>©2023 Not Really</p>
+    </div>
+  </div>
+</div>
+<svg style="position:fixed; top:100vh">
+  <defs>
+    <filter id="blob">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur"></feGaussianBlur>
+      <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9" result="blob"></feColorMatrix>
+      
+    </filter>
+  </defs>
+</svg>
+
+  
+</body>
+</html>
