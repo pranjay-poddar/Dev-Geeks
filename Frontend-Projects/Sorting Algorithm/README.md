@@ -1,0 +1,2 @@
+Sorting is the process of organising data into meaningful order so that it may be more successfully analysed. A sorting algorithm is used to organise array/list items in a specified order.Sorting algorithms are common in introductory computer science classes because the ample supply of algorithms for the problem provides a structured approach to a wide assortment of core algorithm concepts. For example, data structures like heaps and binary trees, randomised algorithms best, worst, and
+average case analysis, time-space trade-offs, and upper and lower bounds
