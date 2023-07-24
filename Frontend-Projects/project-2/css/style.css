@@ -1,0 +1,179 @@
+/*CSS Reset*/
+*{
+    margin:0px;
+    padding: 0px;
+}
+/*CSS Variables*/
+:root{
+    --navbar-heigth: 59px;
+}
+/*Navigation Bar*/
+#navbar{
+    display: flex;
+    align-items: center;
+    position: absolute;
+    height: 63px;
+    top:0px;
+}
+/*Navigation Bar: Logo and Image */
+#logo{
+    margin: 0px 20px;
+}
+#logo img{
+    height:65px;
+    margin: 11px 20px;
+}
+#navbar ul{
+    display: flex;
+}
+#navbar::before{
+    content: "";
+    background-color: black;
+    z-index: -1;
+    position:absolute;
+    height: 100%;
+    width:100%;
+    opacity: 0.4;
+}
+#navbar ul li {
+list-style: none;
+font-size: 1.3rem;
+}
+#navbar ul li a{
+   display: block;
+   padding: 3px 22px;
+   border-radius: 20px;
+   text-decoration: none;
+   color:white;
+   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+ }
+ #navbar ul li a:hover{
+    background-color: white;
+    color:black;
+  }
+  /*Home Section*/
+  #home{
+  display: flex;
+  flex-direction:column;
+  align-items: center;
+  justify-content: center;
+  padding: -77px 200px;
+  height: 623px;
+  font-family: 'Ubuntu', sans-serif;
+  }
+  #home h1{
+      color:rgb(19, 17, 17);
+      text-align: center;
+  }
+  #home p{
+    color:rgb(19, 17, 17);
+    text-align: center;
+    font-size: 1.5rem;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+  #home::before{
+      content:"";
+      background:url('../bg2.jpg');
+      z-index: -1;
+      position: absolute;
+      height: 100%;
+      width:100%;
+  }
+  /*Services Section*/
+   #services{
+     display: flex;
+     margin:30px; 
+   }
+   #services .box{
+    border: 2px solid brown;
+    padding:3px;
+    margin:6px;
+    background-color: #c5bebe;
+    font-family :'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+    #services .box img{
+        height:100px;
+        margin: auto;
+        display: block;
+    }
+    /*Clients-Section*/
+    #client-section{
+        height:344px;
+    }
+    #clients{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    #clients img{
+    height:124px;
+    }
+    .client-item{
+        padding: 34px;
+    }
+    #client-section::before{
+        content: "";
+        position: absolute;
+        background:url('../bg1.png');
+        width: 100%;
+        height: 400px;
+        z-index: -1;
+        opacity: 0.5;
+    }
+    /*Contact section*/
+    #Contact{
+        position: relative;
+    }
+    #Contact::before{
+        content: "";
+        position: absolute;
+        height:100%;
+        width: 100%;
+        background: url('../contact.jpg') no-repeat center center/cover;
+        z-index: -1;
+        opacity:0.5;
+    }
+    .contact-box{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-bottom: 34px;
+    }
+    .contact-box input,
+    .contact-box textarea{
+        width:100%;
+        padding: 0.5rem;
+        border-radius: 9px;
+    }
+    .contact-box label{
+        font-size: 1.3rem;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+    footer{
+        background-color: black;
+        color:white;
+        padding:8px 20px;
+    }
+  /*Utility classes*/
+  .h-primary{
+      font-size: 3.2rem;
+      padding:12px;
+  }
+  .h-secondary center{
+    font-size: 2.8rem;
+    padding:12px;
+    margin:20px;
+    
+  } 
+  .btn{
+      padding: 6px 20px;
+      color:white;
+      border:2px solid white;
+      margin:17px;
+      background-color: brown;
+      border-radius: 10px;
+      cursor: pointer;
+  }
+  .center{
+      text-align: center;
+  }
