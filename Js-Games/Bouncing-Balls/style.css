@@ -1,0 +1,44 @@
+html,
+body {
+	margin: 0;
+	background: black;
+}
+
+html {
+	font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
+	height: 100%;
+}
+
+body {
+	overflow: hidden;
+	height: inherit;
+}
+
+h1 {
+	font-size: 3rem;
+	letter-spacing: -1px;
+	margin: 0;
+	position: absolute;
+	left: 50%;
+	top: 5%;
+	transform: translate(-50%, -50%);
+	color: transparent;
+	text-shadow: 0 0 1px white;
+}
+
+footer {
+	position: absolute;
+	left: 50%;
+	bottom: 0;
+	transform: translate(-50%, -50%);
+	color: white;
+}
+
+a {
+	text-decoration: none;
+	color: white;
+}
+
+a:hover {
+	text-decoration: underline;
+}
