@@ -1,6 +1,7 @@
 # Result 
 
-The results are as follows - 
+## The results are as follows - 
+
 
 ![image](https://github.com/Shreyg-27/Dev-Geeks/assets/98229024/fbf90466-c2b3-4109-954b-ee0329d4a450)
 
