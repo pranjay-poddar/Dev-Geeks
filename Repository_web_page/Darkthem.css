@@ -1,0 +1,74 @@
+/* Default light theme */
+body {
+    background-color: #f1f1f1;
+    color: #333;
+}
+
+/* Dark theme */
+body.dark-theme {
+    background-color: #333;
+    color: #f1f1f1;
+}
+
+/* Toggle switch styles */
+.theme-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 35px;
+    height: 19.833333333333333333333333333333333333333333333333333333333333333333333333px;
+}
+input:checked+.slider:before {
+    -webkit-transform: translateX(14.1px);
+    -ms-transform: translateX(14.1px);
+    transform: translateX(14.1px);
+}
+
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 15px;
+    width: 15px;
+    left: 4px;
+    bottom: 2.5px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+    border-radius: 50%;
+}
+
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+    border-radius: 34px;
+}
+
+
+
+input:checked+.slider {
+    background-color: #2c2c2c;
+}
+
+input:focus+.slider {
+    box-shadow: 0 0 1px #2c2c2c;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
