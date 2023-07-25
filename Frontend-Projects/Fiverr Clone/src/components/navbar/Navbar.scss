@@ -1,0 +1,101 @@
+.navbar{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #013914;
+    color: white;
+    transition: 0.5 all ease;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+
+    &.active{
+        background-color: white;
+        color:black;
+    }
+
+    .container{
+        width: 1300px;
+        display: flex;
+        justify-content: space-between;
+        padding: 20px 0px;
+        .logo{
+            font-size: 34px;
+            font-weight: bold;
+            .text{}
+            .dot{
+                color: #1dbf73;
+            }
+
+        }
+        .links{
+            display: flex;
+            align-items: center;
+            gap: 24px;
+            font-weight:500 ;
+            font-family: "Montserrat", sans-serif;
+
+            .user{
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                cursor: pointer;
+                position: relative;
+
+                img{
+                    width: 32px;
+                    height: 32px;
+                    border-radius: 50%;
+                    object-fit: cover;
+                }
+
+                .options{
+                    position: absolute;
+                    top: 50px;
+                    right: 0;
+                    padding: 20px;
+                    background: white;
+                    border-radius: 10px;
+                    border: 1px solid lightgray;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 10px;
+                    color: gray;
+                    width: 200px;
+                    font-weight: 300;
+                }
+            }
+
+            button{
+                color: white;
+                padding: 10px 20px;
+                border-radius: 5px;
+                border: 1px solid white;
+                cursor: pointer;
+                background-color: transparent;
+
+                &:hover{
+                  background-color: #1dbf73;
+                  border-color: #1dbf73;
+                }
+            }
+        }
+    }
+    hr{
+        width: 100%;
+        height: 0;
+        border: 0.5px solid rgb(228, 227, 227);
+    }
+
+    .menu{
+        width: 1300px;
+        padding: 10px 0px;
+        display: flex;
+        justify-content: space-around;
+        font-weight: 300;
+        color:gray ;
+        font-family: "Montserrat", sans-serif;
+
+
+    }
+}
