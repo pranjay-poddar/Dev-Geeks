@@ -1,0 +1,467 @@
+html {
+  scroll-behavior: smooth;
+  line-height: 1.15;
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: #0000;
+}
+img {
+  width: 100%;
+  height: unset;
+}
+*,
+::after,
+::before {
+  box-sizing: border-box;
+  border-style: solid;
+  border-width: 0;
+}
+*,
+body,
+h1,
+h2,
+h3,
+hr,
+iframe,
+ol,
+p,
+ul {
+  margin: 0;
+}
+a,
+hr {
+  color: inherit;
+}
+*,
+[class*="sr-only"],
+ol,
+ul {
+  padding: 0;
+}
+.footer__link,
+footer {
+  position: relative;
+}
+h1,
+h2,
+h3 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+ol,
+ul {
+  list-style: none;
+}
+abbr[title] {
+  text-decoration: underline dotted;
+}
+embed,
+iframe,
+img,
+object,
+svg {
+  vertical-align: bottom;
+}
+button,
+input,
+optgroup,
+select,
+textarea {
+  -webkit-appearance: none;
+  appearance: none;
+  vertical-align: middle;
+  color: inherit;
+  font: inherit;
+  background: 0 0;
+  padding: 0;
+  margin: 0;
+  border-radius: 0;
+  text-align: inherit;
+  text-transform: inherit;
+}
+[type="button"]:disabled,
+[type="reset"]:disabled,
+[type="submit"]:disabled,
+button:disabled {
+  cursor: default;
+}
+:-moz-focusring {
+  outline: auto;
+}
+select:disabled {
+  opacity: inherit;
+}
+[contenteditable]:focus {
+  outline: auto;
+}
+button {
+  all: unset;
+}
+[type="button"],
+[type="reset"],
+[type="submit"],
+button,
+label[for] {
+  cursor: pointer;
+}
+
+a {
+  background-color: #0000;
+  text-decoration: none;
+}
+
+[class*="sr-only"] {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  ::before,
+  ::after {
+    animation-delay: -1ms !important;
+    animation-duration: 1ms !important;
+    animation-iteration-count: 1 !important;
+    background-attachment: initial !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0s !important;
+    transition-delay: 0s !important;
+  }
+}
+
+:root {
+  --tomato: hsl(4, 100%, 67%);
+  --dark-slate-grey: hsl(234, 29%, 20%);
+  --charcoal-grey: hsl(235, 18%, 26%);
+  --grey: hsl(231, 7%, 60%);
+}
+
+main {
+  background: white;
+}
+
+body {
+  min-height: 100vh;
+  font-family: "Roboto", sans-serif;
+  position: relative;
+  color: var(--dark-slate-grey);
+}
+
+a,
+h2,
+h3,
+strong,
+label,
+.form__error-message-container,
+button {
+  font-weight: 700;
+}
+
+.form__content-wrapper {
+  max-width: 100%;
+  margin: 2.5rem 1.5rem 1.5rem;
+  display: flex;
+  gap: 1.3rem;
+  flex-direction: column;
+}
+
+.form__heading {
+  font-size: 2.5rem;
+}
+
+.form__description {
+  line-height: 1.3rem;
+}
+
+.list__items,
+.form__list {
+  display: flex;
+}
+
+.form__list {
+  flex-direction: column;
+  gap: 0.6rem;
+  margin-top: 0.5rem;
+}
+
+.list__items,
+.success-state__description {
+  line-height: 1.5rem;
+}
+
+.list__items::before {
+  content: "";
+  background: url(https://raw.githubusercontent.com/0xabdulkhalid/newsletter-signup-component/main/images/icon-list.svg) no-repeat;
+  width: 1.5rem;
+  height: 1.5rem;
+  display: inline-block;
+  margin-right: 0.9rem;
+}
+
+.main__form-section {
+  position: relative;
+}
+
+label {
+  font-size: 0.75rem;
+}
+
+.form__email {
+  display: block;
+  margin-top: 0.6rem;
+  width: 100%;
+  padding: 1.1rem 1.5rem;
+  border-radius: 0.5rem;
+  outline: 1px solid #bbb;
+  transition: 0.5s ease;
+}
+
+.form__error-message-container {
+  position: absolute;
+  top: 0.2rem;
+  right: 0;
+  font-size: 0.75rem;
+  color: var(--tomato);
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.5s ease;
+}
+
+.form__mail--invalid {
+  color: var(--tomato);
+  background: #ff625724;
+  outline: 1px solid #ff6a38;
+}
+
+.form__mail--invalid ~ .form__error-message-container {
+  visibility: visible;
+  opacity: 1;
+}
+
+button {
+  margin-top: 1.6rem;
+  width: 100%;
+  padding: 1.15rem 0;
+  text-align: center;
+  border-radius: 0.5rem;
+
+  transition: box-shadow 0.15s ease, background-position 0.55s ease-out;
+  background-image: linear-gradient(
+    90deg,
+    #242742 0%,
+    #242742 50%,
+    #ff477e 85%,
+    #ff6a38 100%
+  );
+  background-size: 500%;
+  background-position: left;
+  color: white;
+}
+
+.main__success-state {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 1.5rem;
+  position: relative;
+  gap: 1.5rem;
+  display: none;
+}
+
+.success-state__heading {
+  font-size: 2.5rem;
+  line-height: 2.5rem;
+  margin-top: -13rem;
+}
+
+.success-state__heading::before {
+  content: "";
+  width: 4rem;
+  height: 4rem;
+  background: center/100% url(https://raw.githubusercontent.com/0xabdulkhalid/newsletter-signup-component/main/images/icon-success.svg);
+  display: block;
+  margin-bottom: 2.7rem;
+}
+
+.success-state__dismiss-btn {
+  position: absolute;
+  bottom: 1.5rem;
+}
+
+.main__form--success {
+  display: none !important;
+}
+
+.main__form--success ~ .main__success-state {
+  display: flex;
+}
+
+footer {
+  display: none;
+}
+
+button,
+a {
+  transition: 0.5s ease;
+}
+
+.main__form,
+.main__success-state {
+  -webkit-animation: fade-in 1.4s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+  animation: fade-in 1.4s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+}
+
+@-webkit-keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@media (min-width: 35em) {
+  body {
+    display: grid;
+    place-items: center;
+    background: var(--dark-slate-grey);
+  }
+
+  main {
+    max-width: 31rem;
+    padding: 1rem;
+    border-radius: 1rem;
+  }
+
+  .main__header-image {
+    border-radius: 1rem;
+  }
+
+  .main__success-state {
+    min-height: unset;
+    margin: unset;
+    justify-content: unset;
+    flex-direction: column;
+    width: 29rem;
+    height: 29.5rem;
+    padding: 3rem 3.4rem 3rem 2.7rem;
+    gap: 1.2rem;
+  }
+
+  .success-state__heading {
+    margin: -1.5rem 0 0 0;
+    font-size: 3.5rem;
+    line-height: 3.5rem;
+  }
+
+  .success-state__dismiss-btn {
+    position: unset;
+    width: 103%;
+  }
+
+  footer {
+    display: block;
+    text-align: center;
+    font-size: 0.85rem;
+    position: absolute;
+    bottom: 1rem;
+    color: #fff;
+  }
+}
+
+@media (min-width: 56.25em) {
+  main {
+    padding: 1.5rem 1.2rem;
+    border-radius: 2rem;
+    max-width: 58rem;
+  }
+
+  .main__form {
+    display: flex;
+    flex-flow: row-reverse;
+    max-width: 99.5%;
+  }
+
+  .main__header-image {
+    width: unset;
+    border: unset;
+  }
+
+  .form__content-wrapper {
+    margin-left: 2.9rem;
+    margin-top: 5.3rem;
+    gap: 1.2rem;
+  }
+
+  .form__heading {
+    font-size: 3.46rem;
+    line-height: 2rem;
+  }
+
+  .form__description {
+    line-height: 1.6rem;
+    margin-top: 1rem;
+  }
+
+  .form__list {
+    margin: 0.1rem 0 1.4rem -0.1rem;
+  }
+
+  .main__form-section {
+    max-width: 23.4rem;
+  }
+
+  button:is(:focus-visible, :hover) {
+    background-position: right;
+    box-shadow: rgba(255, 106, 56, 0.2) 0px 1.3rem 2.375rem,
+      rgba(255, 106, 56, 0.12) 0px 1.05rem 0.75rem;
+  }
+
+  footer {
+    font-size: 0.9rem;
+  }
+
+  .footer__link {
+    padding: 0.2rem;
+  }
+
+  .footer__link::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: white;
+    transition: 0.7s;
+    z-index: -1;
+    transform: rotate(-2deg);
+  }
+  .footer__link:hover {
+    color: var(--dark-slate-grey);
+  }
+  .footer__link:hover::before {
+    width: 100%;
+  }
+}
+
+@media (max-height: 800px) {
+  footer {
+    display: none;
+  }
+}
