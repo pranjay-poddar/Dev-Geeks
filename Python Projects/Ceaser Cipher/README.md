@@ -29,3 +29,5 @@ The code consists of the following functions:
 4. The program will then perform encryption and decryption on the message using the provided key and display the results.
 
 ## Screenshot
+![Screenshot](https://github.com/amelia2802/Dev-Geeks/assets/49182604/bbd2b93f-03ae-4288-8945-95e68c37114a)
+
