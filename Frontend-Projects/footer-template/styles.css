@@ -1,0 +1,39 @@
+body{
+    background-color: aliceblue;
+    margin: 0px;
+}
+
+.empty{
+    height: 40vh;
+    background-color: transparent;
+}
+.main{
+    display: flex;
+    justify-content: space-between;
+    padding: 3% 5%;
+    text-align: left;
+}
+.foot{
+    background-color: rgb(135, 199, 255);
+    color: rgb(0, 22, 41);
+    font-size: 20px;
+    font-family: 'Josefin Sans', sans-serif;
+    text-align: center;
+    padding: 3% 5%;
+}
+
+a{
+    color: rgb(0, 44, 83);
+    text-decoration: none;
+}
+
+a:hover{
+    color: rgb(0, 98, 183);
+}
+
+@media screen and (max-width: 850px) {
+    .main{
+        flex-direction: column;
+        text-align: center;
+    }    
+}
