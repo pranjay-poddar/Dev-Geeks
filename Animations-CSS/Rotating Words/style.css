@@ -1,0 +1,59 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-size: 35px;
+    font-weight: 500;
+}
+
+body {
+    background-color: rgb(160, 207, 50);
+    height: 100vh;
+    display: grid;
+    place-items: center;
+}
+
+.container {
+    background-color: white;
+    height: 40px;
+    display: flex;
+    color: rgb(4, 94, 34);
+    box-sizing: content-box;
+    padding: 30px 30px;
+    box-shadow: 0 20px 25px rgba(0,0,0,0.2);
+    border-radius: 8px;
+}
+
+.rollwords {
+    overflow: hidden;
+    width: fit-content;
+}
+
+span {
+    display: block;
+    height: 100%;
+    padding-right: 10px;
+    width: auto;
+    padding-left: 10px;
+    color: rgb(160, 207, 50);
+    animation: spinit 4s infinite;
+}
+
+@keyframes spinit {
+    
+    0% {
+        transform: translateY(0%);
+    }
+    25% {
+        transform: translateY(-100%);
+    }
+    50% {
+        transform: translateY(-200%);
+    }
+    75% {
+        transform: translateY(-300%);
+    }
+    100% {
+        transform: translateY(-400%);
+    }
+}

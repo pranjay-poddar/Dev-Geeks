@@ -1,0 +1,88 @@
+@import url("https://fonts.googleapis.com/css2?family=Changa+One&display=swap");
+
+.welcome > h1 {
+  font-family: "Changa One";
+  font-weight: normal;
+  font-size: 50px;
+  color: black;
+  text-align: center;
+}
+
+.login-register-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 50%;
+  margin: 0 auto;
+  background: #ffffff;
+}
+
+.google-sign-in {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+  border: none;
+  border-radius: 4px;
+  background-color: #4286f472;
+  color: #fff;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 0 16px;
+  text-transform: uppercase;
+}
+
+.google-sign-in:hover{
+  background-color: #4286f4c4;
+}
+
+.google-sign-in img {
+  margin-right: 8px;
+  width: 18px;
+  height: 18px;
+}
+
+.or{
+  margin-bottom: 10px;
+}
+
+.login-register-container > input {
+  height: 30px;
+  width: 80%;
+  border: 1px solid gray;
+  outline: none;
+  margin-bottom: 15px;
+  font-size: 25px;
+  padding: 5px;
+}
+
+.login-register-container > button {
+  padding: 5px 20px;
+  border: none;
+  margin-bottom: 5px;
+  cursor: pointer;
+}
+
+.sign-in-register-button {
+  font-size: 20px;
+  margin-top: 10px;
+  font-family: "Changa One";
+  font-weight: normal;
+  color: black;
+}
+
+.sign-in-register-button:hover {
+  background-color: rgb(90, 90, 90);
+  color: #fff;
+}
+
+.create-account-button {
+  background: none;
+  margin-top: 10px;
+}
+
+.create-account-button:hover {
+  font-weight: bold;
+}
