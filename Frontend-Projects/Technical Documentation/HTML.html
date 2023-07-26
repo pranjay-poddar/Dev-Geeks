@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+	<div class="main-body">
+		<nav id="navbar">
+			<header>Documentation Menu</header>
+			<a href="#Intro" class="nav-link">
+				Sorting </a>
+
+			<a href="#SortingAlgos" class="nav-link">
+				 Sorting Algorithms</a>
+
+                        <a href="#History" class="nav-link">
+				History</a>
+
+			<a href="#Comparison" class="nav-link">
+				Comparison Sorting Algorithms</a>
+
+			<a href="#Efficiency" class="nav-link">
+				Efficiency</a>
+
+			<a href="#Bubble" class="nav-link">
+				Bubble Sort</a>
+
+			<a href="#Insertion" class="nav-link">
+				Insertion Sort</a>
+
+                        <a href="#Selection" class="nav-link">
+				Selection Sort</a>
+		</nav>
+
+		<main id="main-doc">
+			<section class="main-section" id="Intro">
+				<header>
+					What is Sorting?
+				</header>
+				<p>
+					Sorting is the process of organising data into meaningful order so that
+                                        it may be more successfully analysed.
+				</p>
+				
+			</section>
+
+			<section class="main-section" id="SortingAlgos">
+				<header>
+					Sorting Algorithms
+				</header>
+				<p>
+		      			A sorting algorithm is used to organise array/list items in a specified order.
+                                        Sorting algorithms are common in introductory computer science classes
+                                        because the ample supply of algorithms for the problem provides a structured
+                                        approach to a wide assortment of core algorithm concepts. For example, data
+                                        structures like heaps and binary trees, randomised algorithms, best, worst,
+                                        and average case analysis, time-space tradeoffs, and upper and lower bounds.
+
+				</p>
+			
+			</section>
+
+<section class="main-section" id="History">
+				<header>
+					History
+				</header>
+				<p>
+		      			Sorting has always been a focus of algorithmic research since the advent of
+computers, possibly due to the difficulties of addressing it effectively despite its
+simple, expression. Bubble sorting was explored as early as
+1956. Asymptotically efficient algorithms have been known since the midtwentieth
+century. New algorithms are actively being developed, with the widely
+used Timsort dating back to 2002 and the Sort library first appearing in 2000.
+Sedgewick Robert’s "Efficient Sorting- An Introduction", Computational
+Probability, New York Academic Press, is a scholarly research paper
+
+				</p>
+
+<p>
+		      			Donald Knuth in his book “The Art of Computer Programming” describes the
+insertion of values at or towards their desired location as letting "the value settle
+to its proper level", and that “this method of sorting has sometimes been called
+the sifting or sinking technique.” He also concluded that "the bubble sort seems
+to have nothing to recommend it, except a catchy name and the fact that it leads
+to some interesting theoretical problems".
+
+				</p>
+
+
+			
+			</section>
+
+
+
+			<section class="main-section" id="Comparison">
+				<header>
+					Comparison Sorting Algorithms
+				</header>
+				<p>
+					KINDS OF SORTING ALGORITHMS : <br>
+                                       There are two types of sorting algorithms – <br> <br>
+
+                                           COMPARISON SORTING ALGORITHMS- <br> 
+
+                                           A comparator is used to compare elements. In a comparison-based
+                                           sorting method, we compare array elements to decide which of two
+                                           elements will appear first in the sorted list. Comparison Sorting
+                                           Algorithms include Bubble Sort, Insertion Sort, and Selection Sort <br> <br>
+
+                                        NON-COMPARISON SORTING ALGORITHMS -<br> 
+
+                                          This type operates by making assumptions about the data it will sort.
+                                          Non-Comparison Sorting is the process, and the algorithms are
+                                          known as Non-Comparison Sorting Algorithms. They establish
+                                          specific data assumptions, so they don't need to make a comparison
+                                          judgement. Bucket sort, Counting sort and Radix sort are examples
+                                          of such algorithms.
+				</p>
+				
+					
+			</section>
+
+			<section class="main-section" id="Efficiency">
+				<header>
+					Efficiency of a Sorting algorithm
+				</header>
+				<p>
+					It is better to select the most efficient algorithm, when a problem can
+                                         solved with different methods. Any sorting algorithm's quality is
+                                         governed by its time complexity and space complexity.
+
+				</p>
+
+				<p>   TIME COMPLEXITY -<br>
+ The time duration to perform an algorithm in relation to the size of the input is its time complexity. In other words, it's an approximate estimate of how many simple operations were 
+performed overall by the programme. Every basic process is believed to require a set amount of
+                    time to complete. <br><br>
+
+                 SPACE COMPLEXITY -<br>
+                 Space complexity refers to the total memory used by the algorithm for
+                 a complete execution. Both the input and the auxiliary memory are
+                 included. The additional memory that the algorithm uses in addition to
+                 the input data is known as the auxiliary memory. Usually, while
+                  calculating an algorithm's space complexity, auxiliary memory is taken
+                 into account <br>
+				</p>
+			</section>
+
+			<section class="main-section" id="Bubble">
+				<header>
+					<strong>Bubble Sort </strong>
+				</header>
+
+				<p>
+					Bubble Sort, also called as Sinking sort is the simplest sorting method
+that functions by switching the neighbouring components frequently if
+they are they are not in the intended order. The algorithm, which is
+a Comparison Sorting algorithm, is named because of the way smaller
+or larger elements "bubble" to the top of the list. <br><br>
+WORKING <br><br>
+FIRST ITERATION -<br>
+Starting from the first index, the first and the second elements are
+compared. If the first element is greater than the second element, they
+are swapped. Now, the second and the third elements are compared and
+swapped if they not in order. The above process goes through to the end
+element. <br><br>
+REMAINING ITERATIONS -<br>
+The same process goes on for the remaining iterations. The biggest
+element among the unsorted elements is positioned at the conclusion of
+each iteration. Up until the final unsorted element is compared on each
+cycle. When all of the items in an array are put in their proper
+placements, the array is considered sorted. <br>
+				</p>
+
+				<p>
+					TIME COMPLEXITY -<br>
+WORST CASE COMPLEXITY - <br>
+Algorithm takes <br>
+(n-1) operations to take largest element to its position <br>
+(n-2) operations to take second largest element to its position <br>
+. <br>
+. <br>
+(1) operation to take the smallest element to its position <br>
+Now, (𝑛 − 1) + (𝑛 − 2) + (𝑛 − 3) + … 1 
+= (𝑛 − 1) (𝑛 − 1 + 1)/2 = 𝑛(𝑛 − 1)/2 = 𝑛2/2 – 𝑛/2
+= 𝑂 ( 𝑛2 ) <br><br>
+BEST CASE COMPLEXITY -<br>
+If array is already sorted, sorting is not necessary. It has to
+traverse through the elements once to recognise that array is
+already sorted. <br>
+= 𝑂 (𝑛) <br><br>
+AVERAGE CASE COMPLEXITY - <br>
+The number of comparisons is constant in Bubble Sort, so in
+average case there is n2 comparisons.<br><br>
+= 𝑂 ( 𝑛2 ) <br>
+
+
+				</p>
+			</section>
+
+			<section class="main-section" id="Insertion">
+				<header>
+				<strong>	Insertion Sort </strong>
+				</header>
+				<p>
+					The idea behind Insertion Sort is that elements are inserted in a
+sorted array. In a sense, there are sorted and unsorted portions
+of the array. Values are chosen and assigned to the appropriate
+positions in the array's sorted section from the unsorted part.
+WORKING -
+The insertion sort works by iterating from the first to the last
+index of the array .The current element is compared (key) to its
+predecessor. If the key element is smaller than its predecessor,
+it is compared to the elements before. Greater elements are
+moved one position up to make space for the swapped element
+				</p>
+
+				<p>
+					TIME COMPLEXITY -<br>
+WORST CASE COMPLEXITY -<br>
+Each element is compared to every other element, when the
+array is reverse sorted, so for every 𝑛th element, (𝑛 − 1) number
+of comparisons are made.
+= 𝑂 ( 𝑛2 ) <br> <br>
+BEST CASE COMPLEXITY -<br>
+If the array is already sorted, the outer loop runs for “n” number
+of times while the inner loop doesn’t run at all. So there are only
+“n” comparisons. Time complexity is linear as a result. <br>
+= 𝑂 (𝑛)<br><br>
+AVERAGE CASE COMPLEXITY - <br>
+It occurs when the array is jumbled (neither ascending not
+descending)
+= 𝑂 ( 𝑛2 ) <br>
+				</p>
+			</section>
+
+
+<section class="main-section" id="Selection">
+				<header>
+				<strong>	Selection Sort </strong>
+				</header>
+				<p> Selection Sort works on the principle that if (n-1) elements
+are at their correct positions then the nth element will also
+be at its correct place and as a result the array will be
+sorted(n is the number of elements). <br>
+WORKING -<br><br>
+The Selection sort works with the help of an outer loop
+which iterates between zero and one index less than the
+length of the array .The element is compared to its
+succeeding element. If the element is greater than its
+successor , it is swapped. The smallest element is moved
+to its correct position. This process works till the end of
+loop is reached. </p>
+<p>
+TIME COMPLEXITY - <br>
+WORST CASE COMPLEXITY - <br>
+In this algorithm we pick up an element and move to its correct
+position. We iterate over the array (n-1) times.<br>
+(𝑛 − 1) comparisons are made in 1st iteration <br>
+(𝑛 − 2) in the 2nd iteration <br>
+.  <br>
+. <br>
+(1 ) comparison in the last iteration <br>
+Total comparisons = (𝑛 − 1) + (𝑛 − 2) + (𝑛 − 3) + … 1 <br>
+= (𝑛 − 1) (𝑛 − 1 + 1)/2 = 𝑛(𝑛 − 1)/2 = 𝑛2/2 – 𝑛/2 <br>
+= 𝑂 ( 𝑛2 ) <br> <br>
+BEST CASE COMPLEXITY -<br>
+When the array has already been sorted <br>
+= 𝑂 (𝑛2) <br><br>
+AVERAGE CASE COMPLEXITY -<br>
+It occurs when the array is in jumbled order <br>
+= 𝑂 (𝑛2) <br>
+
+					
+</section>
+			
+
+		</main>
+	</div>
+</body>
+</html>

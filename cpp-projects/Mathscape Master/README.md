@@ -8,9 +8,10 @@ Features-:
 2. Triangle Solver
 3. Coordinate Geometry
 4. Solid Geometry
+5. Circle Properties/Calculations
 <h2>Screenshots</h2>
 
-![image](https://github.com/Nikita06211/Dev-Geeks/assets/120494269/51ecd1aa-0b19-418f-b5cf-7493fda8275f)
+![image](https://github.com/Nikita06211/Dev-Geeks/assets/120494269/e50aebb1-52fd-4019-bd08-c1b6c96234fd)
 
 ![image](https://github.com/Nikita06211/Dev-Geeks/assets/120494269/ecaabc9d-f630-4682-abdf-8157c3e2fe9e)
 
