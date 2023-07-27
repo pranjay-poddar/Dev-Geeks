@@ -45,5 +45,5 @@ Run the Streamlit app:
 streamlit run app.py
 ```
 
-Open your browser and go to http://localhost:8501/ to access the car price prediction app.  
+Open your browser and go to http://localhost:8501/ to access the sms-spam-classifier app.  
 
