@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Buy Now Form</title>
+    <style>
+      body {
+        background-image: linear-gradient(to right, #141e30, #243b55);
+      }
+      .container {
+        width: 600px;
+        color: white;
+        margin: 0 auto;
+        padding: 40px;
+        opacity: 80%;
+        backdrop-filter: blur(5px);
+        margin-top: 10px;
+        box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px,
+          rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px,
+          rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+      }
+
+      h2 {
+        text-align: center;
+        font-size: 45px;
+      }
+
+      .form-group {
+        margin-bottom: 10px;
+        background-color: transparent;
+      }
+
+      label {
+        display: block;
+        padding: 10px;
+      }
+
+      input[type="text"],
+      input[type="email"],
+      input[type="number"],
+      textarea {
+        box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px;
+        width: 100%;
+        padding: 10px;
+        background-color: transparent;
+      }
+
+      button[type="submit"] {
+        display: block;
+        padding: 15px;
+        margin: 20px auto;
+        width: 620px;
+        font-size: 20px;
+        border:none;
+        color: white;
+        background-color: #141e30;
+        box-shadow: rgba(0, 0, 0, 0.2) 0px 20px 30px;
+      }
+      button:hover {
+        box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset,
+          rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset,
+          rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset,
+          rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px,
+          rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px,
+          rgba(0, 0, 0, 0.09) 0px 32px 16px;
+      }
+      a {
+        color: white;
+        text-decoration: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h2>Buy Now</h2>
+      <form id="buyNowForm" onsubmit="validateForm(event)">
+        <div class="form-group">
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required />
+        </div>
+        <div class="form-group">
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required />
+        </div>
+        <div class="form-group">
+          <label for="address">Address:</label>
+          <textarea id="address" name="address" required></textarea>
+        </div>
+        <div class="form-group">
+          <label for="quantity">Quantity:</label>
+          <input type="number" id="quantity" name="quantity" min="1" required />
+        </div>
+        <button type="submit">Buy Now</button>
+        <button type="submit"><a href="addtocart.html">Add To Cart</a></button>
+      </form>
+    </div>
+
+    <script>
+      function validateForm(event) {
+        event.preventDefault();
+
+        var name = document.getElementById("name").value;
+        var email = document.getElementById("email").value;
+        var address = document.getElementById("address").value;
+        var quantity = document.getElementById("quantity").value;
+
+        if (name === "" || email === "" || address === "" || quantity === "") {
+          alert("Please fill in all the fields.");
+          return;
+        }
+
+        if (!validateEmail(email)) {
+          alert("Please enter a valid email address.");
+          return;
+        }
+
+        if (isNaN(quantity) || parseInt(quantity) <= 0) {
+          alert("Please enter a valid quantity.");
+          return;
+        }
+
+        // Form is valid, you can perform further actions here
+        alert("Form submitted successfully!");
+        document.getElementById("buyNowForm").reset();
+      }
+
+      function validateEmail(email) {
+        // Email validation regular expression
+        var regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return regex.test(email);
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,2 @@
+To use this project open index.html file in your browser. 
+To access all the images of the project use this following link https://drive.google.com/drive/folders/1imq9mld8Zb7n54-VRLt4i49CtPI8zjXY?usp=sharing
