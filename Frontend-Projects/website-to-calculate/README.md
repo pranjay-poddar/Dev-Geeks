@@ -20,7 +20,7 @@
    In this project, we have created  a calculator that includes the following features:
 1. Basic mathematical operations such as addition, subtraction, division, and multiplication will be performed. <br>
 2. Decimal operations will be performed. <br>
-3. In the case of an invalid expression, no result will be displayed. 
+3. In the case of an invalid expression, no result will be displayed. <br1>
 4. You can use the clear screen feature to clear the display screen at any moment.
 
 </p>
