@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(-180deg, rgba(255,255,255,0.50) 0%, rgba(0,0,0,0.50) 100%);
+    
+}
+* {box-sizing: border-box;}
+body h3{
+    text-align: center;
+    font-size: 30px;
+    
+}
+body h3 span{
+    color: #f15048;
+}
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+input[type=email], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type=submit] {
+  font-size: 20px;
+  background-color: #45a049;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color:  rgb(32, 213, 32);
+}
+
+.container {
+  border-radius: 5px;
+  background-color: #f15048;
+  padding: 20px;
+  margin-left: 300px;
+  margin-right: 300px;
+}
+</style>
+</head>
+<body>
+
+<h3><span>Contact</span> Us  📞</h3>
+
+<div class="container">
+  <form action="index.html">
+    <label for="fname">First Name  👤</label>
+    <input type="text" id="fname" name="firstname" placeholder="John">
+
+    <label for="lname">Last Name</label>
+    <input type="text" id="lname" name="lastname" placeholder="Doe">
+
+    <label for="email">Email 📧 </label>
+    <input type="email" id="email" name="email" placeholder="Enter your email">
+
+    <label for="subject">Subject 📜</label>
+    <textarea type="text" id="subject" name="subject" placeholder="Mention your issue/suggestions" style="height:200px"></textarea>
+
+    <input type="submit" value="Submit">
+  </form>
+</div>
+
+</body>
+</html>
