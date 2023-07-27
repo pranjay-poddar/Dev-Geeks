@@ -1,0 +1,249 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    text-align: center;
+    font-family: sans-serif;
+    min-height: 100vh;
+    color: #252525;
+    background: #fcfcfc;
+    padding: 3em 0;
+    font-weight: 300;
+    display: grid;
+    justify-content: center;
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}
+
+main {
+    display: grid;
+    place-items: center;
+    gap: 2em;
+}
+
+h2 {
+    font-size: 1.9rem;
+    letter-spacing: .1em;
+    font-weight: 400;
+}
+
+.main__titles {
+    background: #EDDFDE;
+    display: flex;
+    gap: 1em;
+    align-items: center;
+    position: relative;
+    width: 80%;
+    font-size: .9rem;
+    font-weight: 400;
+    padding: .3em 0;
+    text-transform: uppercase;
+    overflow: hidden;
+}
+
+.main__author-about {
+    font-size: .9rem;
+    width: 90%;
+}
+
+.main__projects-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+}
+
+.main__projects {
+    width: 80%;
+    height: 180px;
+    background:#EDDFDE;
+    transition: .7s ease;
+    border: 2px ridge #eee;
+    border-radius: 5px;
+}   
+
+.main__projects, .main__tech-stack, .main__titlemoji {
+    display: grid;
+    place-items: center;
+    gap: 1em;
+}
+
+.main__tech-stack {
+    height: 7em;
+}
+.main__tech-stack > p {
+    color: #f7f7f7;
+    background: #3f3f3f;
+    text-transform: uppercase;
+    padding: 1em 1.5em;
+    font-weight: 700;
+    letter-spacing: .1em;
+}
+
+.main__titlemoji {
+
+    position: absolute;
+    z-index: 1;
+    background: #EDDFDE;
+    left: 0;
+    padding: 0 15px;
+    font-size: 2rem;
+}
+
+.main__tech--animated {
+    animation: fade-in 2s cubic-bezier(.12,-0.12,0,1.95);
+    transform: scale(1.85);
+}
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+        transform: scale(1.5) translateY(-1em);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1.85);
+    }
+}
+
+.main__title--animated {
+    animation: slide 1s ease;
+    padding: 1em 1.5em;
+    padding-left: 5em;
+}
+
+@keyframes slide {
+    0% {
+        opacity: 0;
+        transform: scale(1.2) translateX(-8em);
+    }
+    100% {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+.attribution {
+    border-top: 1px solid #aaa;
+    width: 100%;
+    text-align: center;
+    margin-top: 1em;
+    padding: 1em 0;
+    font-size: .75rem;
+    position: fixed;
+    bottom: 0;
+    background: rgba(255,255,255,.2);
+    backdrop-filter: blur(5px);
+    transition: .5s ease;
+    z-index: 2;
+}
+
+.attribution, a {
+    color: #232323;
+}
+
+@media (min-width: 35.25em){    /*  FOR DESKTOPS  */
+
+    .main__author-name, .main__featured-heading {
+        width: 90%;
+        text-align: left;
+        font-size: 3.5rem;
+        font-weight: 400;
+    }
+
+    .main__featured-heading {
+        font-size: 2.5rem;
+        font-weight: 300;
+        margin-top: 1em;
+    }
+
+    .main__author-about {
+        text-align: start;
+    }
+
+    .main__titles {
+        width: 90%;
+    }
+    .main__projects-container {
+        display: grid;
+        width: 90%;
+        grid-template-columns: repeat(3, 1fr);
+        height: 12em;
+    }
+
+    .main__projects {
+        width: 100%;
+        height: 100%;
+    }
+
+    .main__projects:hover {
+        font-size: 1.1rem;
+        font-weight: 400;
+        letter-spacing: .01em;
+        background: #f8eae9;
+    }
+    .main__tech-stack {
+        display: flex;
+        gap: 1em;
+        position: relative;
+        padding-left: 19.5em;
+    }
+    .main__tech-stack > p{
+        width: 13em;
+        position: absolute;
+        left: 0;
+        z-index: 1;
+    }
+
+    img {
+        width: 100%;
+    }
+
+    .main__author-about {
+        font-size: 1rem;
+        line-height: 1.7em;
+    }
+
+    .main__tech--animated {
+        animation: fade-in 1s;
+        margin-left:2em;
+    }
+
+    .attribution {
+        font-size: 1rem;
+    }
+
+    .attribution:hover {
+        background: rgba(0,0,0,.5);
+        color: #ddd;
+    }
+
+    .attribution:hover a {
+        color: #f7f7f7;
+    }
+
+    @keyframes fade-in {
+        0% {
+            opacity: 0;
+            transform: scale(1.65) translateX(-8em);
+        }
+        100% {
+            opacity: 1;
+            transform: none;
+        }
+    }
+}

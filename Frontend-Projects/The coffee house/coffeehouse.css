@@ -176,15 +176,17 @@ section {
   color: #fff;
   background: var(--main-color);
   cursor: pointer;
+  border-radius: 10px;
 }
 .btn {
   margin-top: 1rem;
   display: inline-block;
-  padding: 0.9rem 3rem;
+  padding: 1.3rem 3rem;
   font-size: 1.7rem;
   color: #fff;
-  background: var(--main-color);
+  background: black;
   cursor: pointer;
+  border-radius: 1rem;
 }
 .btn:hover {
   letter-spacing: 0.2rem;
@@ -370,7 +372,7 @@ section {
 .home .content {
   max-width: 60rem;
   text-transform: none;
-  text-align:center;
+  text-align:left;
 }
 
 .home .content h3 {
@@ -381,12 +383,12 @@ section {
 .home .content h4 {
   font-size: 4rem;
   color: #fff;
-  text-align: center;
+  text-align: left;
 }
 .home .content h5 {
   font-size: 4rem;
   color: #fff;
-  text-align: center;
+  text-align: left;
 }
 .home .content p {
   font-size: 2rem;
@@ -859,6 +861,7 @@ label {
   color: #fff;
   border: var(--border);
   font-size: 2rem;
+  border-radius: 10px;
 }
 
 .footer .links a:hover {
