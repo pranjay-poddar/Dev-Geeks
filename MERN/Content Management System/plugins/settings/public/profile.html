@@ -1,0 +1,59 @@
+<div data---="form__common.form__if:profileform;width:600;submit:profileform/submit;reload:profileform/reload;autofocus:1;icon:far fa-user-circle;title:@(My profile)" class="hidden">
+
+	<div data-scope="profileform">
+		<div class="padding bg-smoke">
+			<div data---="input__?.name__placeholder:@(Peter Sirka);required:1;maxlength:30">@(User name)</div>
+			<div class="help">@(Enter your nickname or real name)</div>
+		</div>
+		<div class="padding npb">
+			<div class="alert m" data-bind="NAV.query.password__show"><i class="fa fa-warning mr5 red"></i>@(Don't forget to change your password.)</div>
+			<div class="row">
+				<div class="col-md-6 m">
+					<div data---="input__?.login__required:1__'@'">@(Login name)</div>
+					<div class="help">@(We recommend to use email address)</div>
+				</div>
+				<div class="col-md-6 m">
+					<div data---="input__?.password__maxlength:30;camouflage:*__GUID(10)">@(Login password)</div>
+					<div class="help"><span class="link exec" data-exec="profileform/password">@(Generate password)</span></div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<nav data---="validation__profileform">
+		<button name="submit"><i class="far fa-check-circle"></i>@(SAVE)</button>
+		<button name="cancel">@(Cancel)</button>
+	</nav>
+
+</div>
+
+<script>
+
+	PLUGIN('profileform', function(exports) {
+
+		exports.reload = function() {
+			SETTER('loading/show');
+			SETTER('loading/hide', 1000);
+			AJAX('GET /admin/api/profile/', '? @reset');
+		};
+
+		exports.password = function() {
+			SET('?.password', GUID(10));
+		};
+
+		exports.submit = function(hide) {
+			var model = GET('? @reset');
+			SETTER('loading/show');
+			AJAX('POST /admin/api/profile/', model, ASETTER('message/response', '@(Your profile has been saved successfully.)', function() {
+
+				if (common.page === 'admin')
+					EXEC('admin/refresh_admins');
+
+				NAV.query.password && NAV.redirect('/admin/');
+				SETTER('loading/hide', 1000);
+				hide();
+			}));
+		};
+	});
+
+</script>

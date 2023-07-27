@@ -279,6 +279,31 @@ header .buttons i:last-child:hover {
   object-fit: contain
 }
 
+.to-top {
+  background: #8a6cff;
+  position: fixed;
+  bottom: 12px;
+  right: 3px;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  display: flex;
+  font-size: 25px;
+  justify-content: center;
+  align-items:center;
+  color: black;
+  text-decoration: none;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.4s;
+}
+
+.to-top.active {
+  bottom: 12px;
+  pointer-events: auto;
+  opacity: 1;
+}
+
 @media screen and (max-width: 688px) {
   .lightbox .wrapper {
       padding:12px;

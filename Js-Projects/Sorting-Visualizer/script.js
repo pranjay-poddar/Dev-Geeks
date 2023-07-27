@@ -4,7 +4,7 @@ const MAX_VALUE = 250
 const MIN_VALUE = 5
 var DELAY = 200
 var ARRAY = []
-const PRIMARY_COLOR = 'turquoise';
+const PRIMARY_COLOR = '#FFC930BD';
 const SECONDARY_COLOR = 'red';
 
 
@@ -99,7 +99,7 @@ async function selectionSort(){
         array[min_index].style.backgroundColor = "grey";
     
         // Provide lightgreen color to the ith bar
-        array[i].style.backgroundColor = "rgb(0,255,34)";
+        array[i].style.backgroundColor = "#FFC930BD";
     }
 
     var message = document.getElementById("message")
@@ -141,12 +141,12 @@ async function bubbleSort(){
             }
 
             // Provide skyblue color to the (min-idx)th bar
-            array[j+1].style.backgroundColor = "rgb(0,255,34)";
+            array[j+1].style.backgroundColor = "#FFC930BD";
         
             // Provide lightgreen color to the ith bar
             array[j].style.backgroundColor = "grey";
         }
-        array[array.length - i - 1].style.backgroundColor = "rgb(0,255,34)";
+        array[array.length - i - 1].style.backgroundColor = "#FFC930BD";
     }
 
     var message = document.getElementById("message")
@@ -156,7 +156,7 @@ async function bubbleSort(){
 async function insertionSort(){
     let array = document.querySelectorAll('.bar')
 
-    array[0].style.backgroundColor = "rgb(0,255,34)"
+    array[0].style.backgroundColor = "#FFC930BD"
 
     for(var i=1; i<array.length; i++){
         var j = i-1
@@ -187,7 +187,7 @@ async function insertionSort(){
             )
             
             for(var k=i; k>=0; k--){
-                array[k].style.backgroundColor = "rgb(0,255,34)" 
+                array[k].style.backgroundColor = "#FFC930BD" 
             }
         }
 
@@ -202,7 +202,7 @@ async function insertionSort(){
         );
         
         // Provide light green color to the ith bar
-        array[i].style.backgroundColor = "rgb(0,255,34)";
+        array[i].style.backgroundColor = "#FFC930BD";
     }
 
     var message = document.getElementById("message")
@@ -262,7 +262,7 @@ async function partition(low, high){
     array[low].childNodes[0].innerText = temp2;
 
     array[low].style.backgroundColor = "pink";
-    array[j].style.backgroundColor = "green";
+    array[j].style.backgroundColor = "#FFC930BD";
 
     await new Promise((resolve) =>
         setTimeout(() => {
@@ -493,7 +493,7 @@ async function mergeSort() {
       }
     }
     for(let i=0; i<arrayBars.length; i++){
-        arrayBars[i].style.backgroundColor = "rgb(19, 208, 19)"
+        arrayBars[i].style.backgroundColor = "#FFC930BD"
     }
     var message = document.getElementById("message")
     message.innerHTML = "<h3>Generated Array Sorted</h3>"
