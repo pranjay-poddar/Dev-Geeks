@@ -19,8 +19,67 @@ Banker is a modern, minimalist banking website that provides 100% digital bankin
 
 ## Screenshots
 
-![image](https://github.com/PoulavBhowmick03/Dev-Geeks/assets/133862694/049daf91-0e32-4c5e-b88d-340f559d108c)
+Home page/Landing Page
+<img width="1438" alt="Screenshot 2023-07-06 at 1 50 49 PM" src="https://github.com/pranjay-poddar/Dev-Geeks/assets/102572480/6e4306a0-5b3e-42ae-aa61-331329bf3d3f">
+<br><br><br>
+Features section
+<img width="1438" alt="Screenshot 2023-07-06 at 1 50 59 PM" src="https://github.com/pranjay-poddar/Dev-Geeks/assets/102572480/796bef29-b7b9-49f0-bd9b-3df8bde00ea8">
+<br><br><br>
+Operations section
+<img width="1438" alt="Screenshot 2023-07-06 at 1 51 09 PM" src="https://github.com/pranjay-poddar/Dev-Geeks/assets/102572480/6409d2d2-b030-4573-98ad-5587f4894253">
+<br><br><br>
+Testimonals section
+<img width="1438" alt="Screenshot 2023-07-06 at 1 51 19 PM" src="https://github.com/pranjay-poddar/Dev-Geeks/assets/102572480/10e64f40-ad05-44fb-b3f1-a1f852aa6b1a">
+<br><br><br>
+Open account form
+<img width="1438" alt="Screenshot 2023-07-06 at 1 51 27 PM" src="https://github.com/pranjay-poddar/Dev-Geeks/assets/102572480/82552475-7416-40ea-aafa-c2585e4d3d68">
 
-![image](https://github.com/PoulavBhowmick03/Dev-Geeks/assets/133862694/b68b3b89-6d13-4f16-85a9-43da5c7f1ecc)
 
-![image](https://github.com/PoulavBhowmick03/Dev-Geeks/assets/133862694/9e1236cf-3b5d-4b47-9eb0-44267dc3ddcf)
+# Dependencies Required:
+
+ - Just a Browser which can support HTML5, CSS3, JavaScript
+
+### How to Run it Locally:
+
+- At first Clone the Repository by using the command:
+```
+  - git clone https://github.com/pranjay-poddar/Dev-Geeks.git
+```
+
+- Change Directory to 'Apple Ecommerce' By using:
+     - ``` cd Dev-Geeks ```
+- Always wiser to create different branch while doing updates rather doing in main
+     - ``` git branch unique ```
+     - ``` git checkout unique ```
+- Make necessary changes/update you need. 
+- After changes has been made.
+     - ``` git add . ```
+     - ``` git commit -m "Add any message" ```
+- Now, changes reflected by using push command.
+     - ```git push upstream unique``` 
+    
+    Thus, we can merge the changes which were made by you.After successful review of carefully observation of your code by reviewer your code will be merged to the main branch. 
+    Happy Coding 😀
+
+
+
+## **Built With**
+
+- ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)   
+- ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white) 
+- ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)  
+
+
+<br>
+
+## **Tools Used**
+
+- ![Google](https://img.shields.io/badge/google-DA4437?style=for-the-badge&logo=google&logoColor=white)
+- ![GitHub](https://img.shields.io/badge/github-0D1117.svg?style=for-the-badge&logo=github&logoColor=white)  
+- ![Visual Studio Code](https://img.shields.io/badge/Visual%20Studio%20Code-0078d7.svg?style=for-the-badge&logo=visual-studio-code&logoColor=white)   
+
+
+<br>
+
+
+

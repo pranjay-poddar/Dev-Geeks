@@ -1,0 +1,84 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    overflow-x: hidden;
+}
+
+body {
+    font-family: sans-serif;
+    color: #252525;
+    background: #eee;
+}
+
+main {
+    display: grid;
+    place-items: center;
+    min-height: 100vh;
+}
+
+h1 {
+    text-align: center;
+    font-size: 1.7rem;
+    text-transform: uppercase;
+    letter-spacing: .2em;
+    word-spacing: .1em;
+    animation: fade-in 2s;
+    cursor: pointer;
+}
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.attribution {
+    border-top: 1px solid #aaa;
+    width: 100%;
+    text-align: center;
+    margin-top: 1em;
+    padding: 1em 0;
+    position: fixed;
+    bottom: 0;
+    background: rgba(255,255,255,.2);
+    backdrop-filter: blur(5px);
+    transition: .5s ease;
+    font-size: .8rem;
+}
+
+.attribution, a {
+    color: #bbb;
+}
+.attribution:hover {
+    background: rgba(0,0,0,.3);
+}
+.attribution:hover a {
+    color: #eee;
+}
+
+@media (min-width: 35.25em){    /*  FOR TABLETS & ABOVE  */
+    h1 {
+        font-size: 5rem;
+        text-align: start;
+        width: 14.5em;
+    }
+    
+    .attribution {
+        font-size: 1rem;
+    }
+
+    span {
+        transition: .3s ease;
+    }
+
+    span:hover {
+        font-weight: 800;
+    }
+
+}

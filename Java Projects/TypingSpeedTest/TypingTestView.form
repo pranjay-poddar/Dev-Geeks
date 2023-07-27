@@ -1,0 +1,519 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="Typing.Speed.Test.TypingTestView">
+  <grid id="27dc6" binding="panelTopLevel" layout-manager="FormLayout">
+    <rowspec value="top:max(d;50px):noGrow"/>
+    <rowspec value="top:4dlu:noGrow"/>
+    <rowspec value="center:5px:noGrow"/>
+    <rowspec value="fill:200px:grow"/>
+    <rowspec value="center:5px:noGrow"/>
+    <rowspec value="bottom:23px:noGrow"/>
+    <colspec value="fill:4dlu:noGrow"/>
+    <colspec value="left:4dlu:noGrow"/>
+    <colspec value="fill:d:grow"/>
+    <colspec value="left:4dlu:noGrow"/>
+    <colspec value="fill:4dlu:noGrow"/>
+    <constraints>
+      <xy x="20" y="20" width="931" height="717"/>
+    </constraints>
+    <properties>
+      <minimumSize width="100" height="100"/>
+      <preferredSize width="850" height="520"/>
+    </properties>
+    <border type="etched"/>
+    <children>
+      <component id="dadd7" class="javax.swing.JLabel" binding="labelStatus">
+        <constraints>
+          <grid row="5" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+          <forms/>
+        </constraints>
+        <properties>
+          <maximumSize width="70" height="20"/>
+          <minimumSize width="70" height="20"/>
+          <preferredSize width="70" height="20"/>
+        </properties>
+      </component>
+      <grid id="77013" binding="panelCardContent" layout-manager="CardLayout" hgap="0" vgap="0" show="6f632">
+        <constraints>
+          <grid row="3" column="2" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+          <forms/>
+        </constraints>
+        <properties>
+          <minimumSize width="0" height="0"/>
+          <preferredSize width="0" height="0"/>
+        </properties>
+        <border type="none"/>
+        <children>
+          <grid id="62385" binding="panelInitalContent" layout-manager="FormLayout">
+            <rowspec value="center:max(d;4px):noGrow"/>
+            <rowspec value="top:4dlu:noGrow"/>
+            <rowspec value="center:d:grow"/>
+            <colspec value="fill:50px:noGrow"/>
+            <colspec value="left:5dlu:noGrow"/>
+            <colspec value="fill:d:grow"/>
+            <constraints>
+              <card name="cardInitial"/>
+            </constraints>
+            <properties>
+              <autoscrolls value="true"/>
+              <minimumSize width="0" height="0"/>
+              <preferredSize width="0" height="0"/>
+            </properties>
+            <border type="none"/>
+            <children>
+              <splitpane id="280f5" binding="splitterInitial">
+                <constraints>
+                  <grid row="0" column="0" row-span="3" col-span="3" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false">
+                    <preferred-size width="200" height="200"/>
+                  </grid>
+                  <forms/>
+                </constraints>
+                <properties>
+                  <minimumSize width="0" height="0"/>
+                  <orientation value="0"/>
+                </properties>
+                <border type="none"/>
+                <children>
+                  <grid id="eb382" binding="panelResultsAndPrompt" layout-manager="FormLayout">
+                    <rowspec value="top:4dlu:noGrow"/>
+                    <rowspec value="top:m:grow"/>
+                    <rowspec value="top:4dlu:noGrow"/>
+                    <rowspec value="center:17px:noGrow"/>
+                    <rowspec value="center:max(d;4px):noGrow"/>
+                    <colspec value="fill:d:grow"/>
+                    <constraints>
+                      <splitpane position="left"/>
+                    </constraints>
+                    <properties>
+                      <minimumSize width="200" height="100"/>
+                      <preferredSize width="200" height="100"/>
+                    </properties>
+                    <border type="none"/>
+                    <children>
+                      <component id="3dd36" class="javax.swing.JLabel" binding="labelPromptNext">
+                        <constraints>
+                          <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                          <forms/>
+                        </constraints>
+                        <properties>
+                          <text resource-bundle="i18n/TypingTest" key="labelPromptNext.text"/>
+                        </properties>
+                      </component>
+                      <scrollpane id="6a2c5" binding="scrollPaneInfo">
+                        <constraints>
+                          <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="7" hsize-policy="7" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+                          <forms defaultalign-horz="false" defaultalign-vert="false"/>
+                        </constraints>
+                        <properties/>
+                        <border type="none"/>
+                        <children>
+                          <component id="a53ea" class="javax.swing.JTextArea" binding="textAreaInfo">
+                            <constraints/>
+                            <properties>
+                              <editable value="false"/>
+                              <font name="Liberation Mono" size="14"/>
+                            </properties>
+                          </component>
+                        </children>
+                      </scrollpane>
+                    </children>
+                  </grid>
+                  <grid id="7405c" binding="panelGoAndSelector" layout-manager="FormLayout">
+                    <rowspec value="center:max(d;4px):noGrow"/>
+                    <rowspec value="top:4dlu:noGrow"/>
+                    <rowspec value="center:d:noGrow"/>
+                    <rowspec value="top:5dlu:noGrow"/>
+                    <rowspec value="center:16dlu:noGrow"/>
+                    <rowspec value="top:4dlu:noGrow"/>
+                    <rowspec value="center:16dlu:noGrow"/>
+                    <rowspec value="top:4dlu:noGrow"/>
+                    <rowspec value="center:16dlu:noGrow"/>
+                    <rowspec value="top:4dlu:noGrow"/>
+                    <rowspec value="center:max(d;4px):grow"/>
+                    <colspec value="fill:1px:noGrow"/>
+                    <colspec value="left:4dlu:noGrow"/>
+                    <colspec value="fill:100px:noGrow"/>
+                    <colspec value="left:4dlu:noGrow"/>
+                    <colspec value="fill:max(d;4px):grow"/>
+                    <constraints>
+                      <splitpane position="right"/>
+                    </constraints>
+                    <properties/>
+                    <border type="none"/>
+                    <children>
+                      <component id="265f0" class="javax.swing.JButton" binding="buttonGo">
+                        <constraints>
+                          <grid row="2" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                          <forms/>
+                        </constraints>
+                        <properties>
+                          <text resource-bundle="i18n/TypingTest" key="buttonGo.text"/>
+                        </properties>
+                      </component>
+                      <scrollpane id="cf3bf" binding="scrollPaneTextSelector">
+                        <constraints>
+                          <grid row="0" column="4" row-span="11" col-span="1" vsize-policy="7" hsize-policy="7" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+                          <forms defaultalign-horz="false" defaultalign-vert="false"/>
+                        </constraints>
+                        <properties/>
+                        <border type="none"/>
+                        <children>
+                          <component id="9a1a3" class="javax.swing.JList" binding="selectorList">
+                            <constraints/>
+                            <properties>
+                              <selectionMode value="0"/>
+                            </properties>
+                          </component>
+                        </children>
+                      </scrollpane>
+                      <component id="f2339" class="javax.swing.JRadioButton" binding="radioLvlHard">
+                        <constraints>
+                          <grid row="10" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="9" fill="0" indent="0" use-parent-layout="false"/>
+                          <forms defaultalign-vert="false"/>
+                        </constraints>
+                        <properties>
+                          <text resource-bundle="i18n/TypingTest" key="radioLvlHard.text"/>
+                        </properties>
+                      </component>
+                      <component id="9ee14" class="javax.swing.JLabel" binding="labelPickLvl">
+                        <constraints>
+                          <grid row="4" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                          <forms defaultalign-horz="false"/>
+                        </constraints>
+                        <properties>
+                          <text resource-bundle="i18n/TypingTest" key="label.pick-lvl.text"/>
+                        </properties>
+                      </component>
+                      <component id="42d78" class="javax.swing.JRadioButton" binding="radioLvlEasy">
+                        <constraints>
+                          <grid row="6" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                          <forms/>
+                        </constraints>
+                        <properties>
+                          <selected value="true"/>
+                          <text resource-bundle="i18n/TypingTest" key="radioLvlEasy.text"/>
+                        </properties>
+                      </component>
+                      <component id="fe4e6" class="javax.swing.JRadioButton" binding="radioLvlMedium">
+                        <constraints>
+                          <grid row="8" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                          <forms/>
+                        </constraints>
+                        <properties>
+                          <text resource-bundle="i18n/TypingTest" key="radioLvlMedium.text"/>
+                        </properties>
+                      </component>
+                    </children>
+                  </grid>
+                </children>
+              </splitpane>
+            </children>
+          </grid>
+          <grid id="6f632" binding="panelWorkingContent" layout-manager="FormLayout">
+            <rowspec value="center:max(d;4px):noGrow"/>
+            <rowspec value="top:4dlu:noGrow"/>
+            <rowspec value="center:20dlu:noGrow"/>
+            <rowspec value="top:4dlu:noGrow"/>
+            <rowspec value="center:20dlu:noGrow"/>
+            <rowspec value="top:4dlu:noGrow"/>
+            <rowspec value="center:20dlu:noGrow"/>
+            <rowspec value="top:4dlu:noGrow"/>
+            <rowspec value="center:d:grow"/>
+            <colspec value="fill:6dlu:noGrow"/>
+            <colspec value="left:5px:noGrow"/>
+            <colspec value="left:75px:noGrow"/>
+            <colspec value="left:5dlu:noGrow"/>
+            <colspec value="fill:80dlu:noGrow"/>
+            <colspec value="left:4dlu:noGrow"/>
+            <colspec value="fill:80dlu:noGrow"/>
+            <colspec value="left:4dlu:noGrow"/>
+            <colspec value="fill:80dlu:noGrow"/>
+            <colspec value="left:4dlu:noGrow"/>
+            <colspec value="fill:80dlu:noGrow"/>
+            <colspec value="left:4dlu:noGrow"/>
+            <colspec value="fill:max(d;4px):grow"/>
+            <colspec value="left:4dlu:noGrow"/>
+            <colspec value="fill:96px:noGrow"/>
+            <colspec value="left:6dlu:noGrow"/>
+            <colspec value="fill:5px:noGrow"/>
+            <constraints>
+              <card name="cardWorking"/>
+            </constraints>
+            <properties>
+              <autoscrolls value="true"/>
+              <minimumSize width="0" height="0"/>
+              <preferredSize width="0" height="0"/>
+            </properties>
+            <border type="none"/>
+            <children>
+              <splitpane id="83727" binding="splitterWorking">
+                <constraints>
+                  <grid row="8" column="2" row-span="1" col-span="13" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false">
+                    <preferred-size width="200" height="200"/>
+                  </grid>
+                  <forms defaultalign-horz="false" defaultalign-vert="false"/>
+                </constraints>
+                <properties>
+                  <orientation value="0"/>
+                </properties>
+                <border type="none"/>
+                <children>
+                  <scrollpane id="4a520" binding="scrollPaneExample">
+                    <constraints>
+                      <splitpane position="left"/>
+                    </constraints>
+                    <properties>
+                      <autoscrolls value="true"/>
+                      <horizontalScrollBarPolicy value="30"/>
+                      <verticalScrollBarPolicy value="20"/>
+                    </properties>
+                    <border type="none"/>
+                    <children>
+                      <component id="21b04" class="javax.swing.JTextArea" binding="textAreaExampleText">
+                        <constraints/>
+                        <properties>
+                          <autoscrolls value="true"/>
+                          <editable value="false"/>
+                          <focusable value="false"/>
+                          <lineWrap value="true"/>
+                          <wrapStyleWord value="true"/>
+                        </properties>
+                      </component>
+                    </children>
+                  </scrollpane>
+                  <scrollpane id="b4615" binding="scrollPaneTyping">
+                    <constraints>
+                      <splitpane position="right"/>
+                    </constraints>
+                    <properties>
+                      <autoscrolls value="true"/>
+                    </properties>
+                    <border type="none"/>
+                    <children>
+                      <component id="15e3d" class="javax.swing.JTextArea" binding="textAreaTyping">
+                        <constraints/>
+                        <properties>
+                          <autoscrolls value="true"/>
+                          <lineWrap value="true"/>
+                          <requestFocusEnabled value="true"/>
+                          <text value=""/>
+                          <wrapStyleWord value="true"/>
+                        </properties>
+                      </component>
+                    </children>
+                  </scrollpane>
+                </children>
+              </splitpane>
+              <component id="70d71" class="javax.swing.JLabel" binding="labelYou">
+                <constraints>
+                  <grid row="6" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                  <forms defaultalign-horz="false"/>
+                </constraints>
+                <properties>
+                  <font style="1"/>
+                  <horizontalAlignment value="11"/>
+                  <text resource-bundle="i18n/TypingTest" key="labelYou.text"/>
+                </properties>
+              </component>
+              <component id="e2855" class="javax.swing.JProgressBar" binding="progressBarLeader">
+                <constraints>
+                  <grid row="4" column="4" row-span="1" col-span="11" vsize-policy="0" hsize-policy="6" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+                  <forms defaultalign-horz="false" defaultalign-vert="false"/>
+                </constraints>
+                <properties>
+                  <stringPainted value="false"/>
+                </properties>
+              </component>
+              <component id="3020a" class="javax.swing.JProgressBar" binding="progressBarYou">
+                <constraints>
+                  <grid row="6" column="4" row-span="1" col-span="11" vsize-policy="0" hsize-policy="6" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+                  <forms defaultalign-horz="false" defaultalign-vert="false"/>
+                </constraints>
+                <properties>
+                  <indeterminate value="false"/>
+                  <stringPainted value="true"/>
+                </properties>
+              </component>
+              <component id="a82a" class="javax.swing.JLabel" binding="labelLeader">
+                <constraints>
+                  <grid row="4" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                  <forms defaultalign-horz="false"/>
+                </constraints>
+                <properties>
+                  <font style="1"/>
+                  <horizontalAlignment value="11"/>
+                  <text resource-bundle="i18n/TypingTest" key="labelLeader.text"/>
+                </properties>
+              </component>
+              <component id="a94c4" class="javax.swing.JLabel" binding="labelHeaderTime">
+                <constraints>
+                  <grid row="0" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                  <forms defaultalign-horz="false"/>
+                </constraints>
+                <properties>
+                  <text resource-bundle="i18n/TypingTest" key="labelTime.text"/>
+                </properties>
+              </component>
+              <component id="a1b67" class="javax.swing.JLabel" binding="labelTimePassed">
+                <constraints>
+                  <grid row="2" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                  <forms defaultalign-horz="false"/>
+                </constraints>
+                <properties>
+                  <font size="20" style="1"/>
+                  <text value="00:00"/>
+                </properties>
+              </component>
+              <component id="9444e" class="javax.swing.JLabel" binding="labelHeaderCharsTyped">
+                <constraints>
+                  <grid row="0" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                  <forms defaultalign-horz="false"/>
+                </constraints>
+                <properties>
+                  <text resource-bundle="i18n/TypingTest" key="labelCharsTyped.text"/>
+                </properties>
+              </component>
+              <component id="978fa" class="javax.swing.JLabel" binding="labelCharsTyped">
+                <constraints>
+                  <grid row="2" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                  <forms defaultalign-horz="false"/>
+                </constraints>
+                <properties>
+                  <font size="20" style="1"/>
+                  <text value="0"/>
+                </properties>
+              </component>
+              <component id="c6c3f" class="javax.swing.JLabel" binding="labelHeaderWordsTyped">
+                <constraints>
+                  <grid row="0" column="6" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                  <forms defaultalign-horz="false"/>
+                </constraints>
+                <properties>
+                  <text resource-bundle="i18n/TypingTest" key="labelWordsTyped.text"/>
+                </properties>
+              </component>
+              <component id="1161a" class="javax.swing.JLabel" binding="labelWordsTyped">
+                <constraints>
+                  <grid row="2" column="6" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                  <forms defaultalign-horz="false"/>
+                </constraints>
+                <properties>
+                  <font size="20" style="1"/>
+                  <text value="0"/>
+                </properties>
+              </component>
+              <component id="eead4" class="javax.swing.JLabel" binding="labelHeaderCharTypos">
+                <constraints>
+                  <grid row="0" column="8" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                  <forms defaultalign-horz="false"/>
+                </constraints>
+                <properties>
+                  <text resource-bundle="i18n/TypingTest" key="labelCharTypos.text"/>
+                </properties>
+              </component>
+              <component id="a654f" class="javax.swing.JLabel" binding="labelCharTypos">
+                <constraints>
+                  <grid row="2" column="8" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                  <forms defaultalign-horz="false"/>
+                </constraints>
+                <properties>
+                  <font size="20" style="1"/>
+                  <foreground color="-4521984"/>
+                  <text value="0"/>
+                  <visible value="false"/>
+                </properties>
+              </component>
+              <component id="b1b96" class="javax.swing.JLabel" binding="labelHeaderWordTypos">
+                <constraints>
+                  <grid row="0" column="10" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                  <forms defaultalign-horz="false"/>
+                </constraints>
+                <properties>
+                  <text resource-bundle="i18n/TypingTest" key="labelWordTypos.text"/>
+                </properties>
+              </component>
+              <component id="df5a2" class="javax.swing.JLabel" binding="labelWordTypos">
+                <constraints>
+                  <grid row="2" column="10" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                  <forms defaultalign-horz="false"/>
+                </constraints>
+                <properties>
+                  <font size="20" style="1"/>
+                  <foreground color="-4521984"/>
+                  <text value="0"/>
+                  <visible value="false"/>
+                </properties>
+              </component>
+              <component id="c0099" class="javax.swing.JButton" binding="buttonCancelTest">
+                <constraints>
+                  <grid row="2" column="14" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                  <forms/>
+                </constraints>
+                <properties>
+                  <text resource-bundle="i18n/TypingTest" key="buttonCancelTest.text"/>
+                </properties>
+              </component>
+            </children>
+          </grid>
+        </children>
+      </grid>
+      <component id="99019" class="javax.swing.JSeparator" binding="sepIniUpper">
+        <constraints>
+          <grid row="2" column="2" row-span="1" col-span="1" vsize-policy="6" hsize-policy="6" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+          <forms defaultalign-horz="false" defaultalign-vert="false"/>
+        </constraints>
+        <properties>
+          <visible value="true"/>
+        </properties>
+      </component>
+      <component id="a095e" class="javax.swing.JSeparator" binding="sepIniLower">
+        <constraints>
+          <grid row="4" column="2" row-span="1" col-span="1" vsize-policy="6" hsize-policy="6" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+          <forms defaultalign-horz="false" defaultalign-vert="false"/>
+        </constraints>
+        <properties/>
+      </component>
+      <grid id="f2a81" binding="panelTopHeader" layout-manager="FormLayout">
+        <rowspec value="center:d:grow"/>
+        <colspec value="fill:70dlu:noGrow"/>
+        <colspec value="left:4dlu:noGrow"/>
+        <colspec value="fill:d:grow"/>
+        <colspec value="left:4dlu:noGrow"/>
+        <colspec value="fill:70dlu:noGrow"/>
+        <constraints>
+          <grid row="0" column="2" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+          <forms defaultalign-horz="false" defaultalign-vert="false"/>
+        </constraints>
+        <properties/>
+        <border type="none"/>
+        <children>
+          <component id="7bbd3" class="javax.swing.JLabel" binding="labelHeader">
+            <constraints>
+              <grid row="0" column="2" row-span="1" col-span="2" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+              <forms defaultalign-horz="false" defaultalign-vert="false"/>
+            </constraints>
+            <properties>
+              <font size="26"/>
+              <text resource-bundle="i18n/TypingTest" key="labelHeader.text"/>
+            </properties>
+          </component>
+          <component id="a44c" class="javax.swing.JButton" binding="buttonToggleLanguage">
+            <constraints>
+              <grid row="0" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+              <forms defaultalign-horz="false"/>
+            </constraints>
+            <properties>
+              <text resource-bundle="i18n/TypingTest" key="buttonToggleLanguage.text"/>
+            </properties>
+          </component>
+        </children>
+      </grid>
+    </children>
+  </grid>
+  <buttonGroups>
+    <group name="groupLevelPick">
+      <member id="42d78"/>
+      <member id="fe4e6"/>
+      <member id="f2339"/>
+    </group>
+  </buttonGroups>
+</form>

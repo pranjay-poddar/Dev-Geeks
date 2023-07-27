@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>House Price prediction</title>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+  <style>
+    body {
+      background-color: #f1f1f1;
+      font-family: 'Arimo', sans-serif;
+      color: #333;
+    }
+
+    .login {
+      margin: 20px auto;
+      width: 300px;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 4px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+      font-family: 'Pacifico', cursive;
+      font-size: 24px;
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    input[type="text"] {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border-radius: 4px;
+      border: 1px solid #ccc;
+    }
+
+    button[type="submit"] {
+      width: 100%;
+      background-color: #4CAF50;
+      color: #fff;
+      border: none;
+      padding: 12px;
+      font-size: 16px;
+      cursor: pointer;
+      border-radius: 4px;
+    }
+
+    button[type="submit"]:hover {
+      background-color: #45a049;
+    }
+
+    .btn-block {
+      display: block;
+      width: 100%;
+    }
+
+    .btn-large {
+      font-size: 18px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="login">
+    <h1>House Price Prediction</h1>
+
+    <!-- Main Input For Receiving Query to our ML -->
+    <form action="{{ url_for('predict')}}" method="post">
+      <input type="text" name="Area" placeholder="Area" required="required" /><br>
+      <input type="text" name="bedrooms" placeholder="bedrooms" required="required" /><br>
+      <input type="text" name="bathroom" placeholder="bathroom" required="required" /><br>
+      <input type="text" name="stories" placeholder="stories" required="required" /><br>
+      <input type="text" name="parking" placeholder="parking" required="required" /><br>
+
+      <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+    </form>
+
+    <br>
+    <br>
+
+  </div>
+  
+  {{prediction_text}}
+</body>
+
+</html>
