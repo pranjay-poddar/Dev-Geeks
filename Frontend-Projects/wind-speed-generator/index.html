@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Alkatra&family=Cormorant+SC:wght@600&family=Montserrat:wght@500&display=swap"
+        rel="stylesheet">
+		<link rel="stylesheet" href="./styles.css">
+</head>
+
+<body>
+    <video playsinline autoplay muted loop id="video" src="https://player.vimeo.com/external/299968768.sd.mp4?s=b0bf33e4823817a366f1a8672e9a913e7b70c8b0&profile_id=164&oauth2_token_id=57447761">
+
+
+
+    </video>
+
+    <div class="overlay">
+        <h2>
+            <marquee><span id="h2">WELCOME TO OUR WEATHER APP </span></marquee>
+            <span id="clickme">
+                <p>CLICK ME</p>
+            </span>
+        </h2>
+    </div>
+
+    </div>
+
+    <div class="red_1">
+        <div style="display: flex; flex-wrap: wrap; width:100%;height:200px;">
+            <span id="h1">WRITE YOUR CITY AND GET THE WEATHER CONDITIONS</span>
+        </div>
+        <div class="red">
+
+            <div class="input">
+                <input id="cityname" type="text" placeholder="Search...." />
+                <button id="submit">Click</button>
+            </div>
+            <div id="card--container">
+                <div class="result " id="res11">
+                    <p id="city"></p>
+                    <div class="contains " style="display: flex; justify-content: center;">
+                        <span id="icon"></span>
+                        <h2 class="text_1"
+                            style="background-color:#ff1d58; width:100%; text-align: center; color:navy; "> Sky
+                            condition: </h2>
+                        <p id="sky"></p>
+                        <h2 class="text_1"
+                            style="background-color:#f75990; width:100%; text-align: center;  color:navy;"> Celcius:
+                        </h2>
+                        <p id="temp"></p>
+                        <h2 class="text_1"
+                            style="background-color:#fff685; width:100%; text-align: center;  color:navy;"> Wind speed:
+                        </h2>
+                        <p id="wind"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+<script src="./index.js"></script>
+</body>
+
+</html>

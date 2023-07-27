@@ -1,0 +1,79 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: cursive;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-evenly;
+    color: rgb(4, 53, 4);
+}
+
+.navbar h2 {
+    padding-top: 10px;
+    padding-bottom: 15px;
+    color: rgb(4, 53, 4);
+
+}
+.fixed-nav{
+    position: sticky;
+    top: 0;
+    left: 0;
+    background-color: white;
+    transition: all .5s ease-in-out;
+}
+.nav-list {
+    display: flex;
+    gap: 4rem;
+    margin-left: 30px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.nav-list li {
+    list-style: none;
+}
+
+.nav-list li a {
+    text-decoration: none;
+    color: rgb(4, 53, 4);
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 560px;
+}
+
+.container::before {
+    content: "";
+    position: absolute;
+    background: url('https://github.com/pranjay-poddar/Dev-Geeks/assets/123585591/b7dd52c7-d1dc-4e67-a5a1-62be295e58f3') no-repeat center center/cover;
+    top: 0;
+    left: 0;
+    height: 620px;
+    width: 100%;
+    z-index: -1;
+    opacity: .9;
+}
+.main{
+    position: relative;
+    height: 400px;
+}
+.main h2{
+    text-align: center;
+    padding-top: 15px;
+    color: rgb(4, 53, 4);
+}
+.notmain{
+    position: relative;
+    height: 400px;
+}
+.notmain h2{
+    text-align: center;
+    padding-top: 15px;
+    color: rgb(4, 53, 4);
+}

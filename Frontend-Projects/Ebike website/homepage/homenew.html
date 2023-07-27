@@ -48,41 +48,45 @@
         <div class="formbox">
             <fieldset>
                 <legend>
-                    LOGIN FORM
+
+                    LOGIN
+
                 </legend>
                 <form action="">
 
                     <div><label>NAME:
-                            <div>
-                                <input type="text" placeholder="enter your name" id="name">
+                            <div class="name">
+                                <input class="input-cls" type="text" placeholder="Enter your name" id="name">
                             </div>
                         </label>
                     </div>
                     <div><label>EMAIL:
-                            <div>
-                                <input type="email" placeholder="enter your email" id="email">
+                            <div class="email">
+                                <input class="input-cls" type="email" placeholder="Enter your email" id="email">
                             </div>
                         </label>
                     </div>
                     <div><label>CONTACT NO. :
-                            <div>
-                                <input type="text" placeholder="enter your phone number" id="number">
+                            <div class="contact">
+                                <input class="input-cls" type="text" placeholder="Enter your phone number" id="number">
                             </div>
                         </label>
                     </div>
                     <div><label>DATE OF BIRTH:
-                            <div>
-                                <input type="date" placeholder="enter your date of birth" id="dob">
+                            <div class="birth">
+
+                                <input class="input-cls" type="date" value="DD-MM-YYYY">
+
                             </div>
                         </label>
                     </div>
                     <div class="sub">
 
                         <div class="submit">
-                            <input type="submit" value="SUBMIT">
+                            <input class="input-cls" type="submit" value="SUBMIT">
                         </div>
-                        <div class="submit">
-                            <input type="reset" value="RESET">
+                        <div class="reset">
+                            <input class="input-cls" type="submit" value="RESET">
                         </div>
                     </div>
 
@@ -115,9 +119,9 @@
     </div>
 
     <!-- contact us -->
-    <div id="contactus">
-        <div id="logo2"><img src="../homepage/ebke_logo.png" alt="company logo"></div>
-        <div id="contact">
+    <div class="contactus">
+        <div class="logo2"><img src="../homepage/ebke_logo.png" alt="company logo"></div>
+        <div class="contact-box">
             <p>
                 <span class="msg">It's always a pleasure to assist you.</span><br>
                 <span>Contact us:-</span><br>
@@ -126,11 +130,29 @@
                 -67990<br>
                 <span>Email-</span> customer@ebike.com<br>
                 <br>
-                <span class="msg">
-                    Send us a message <br>
-                    Get in touch.
-                </span>
+                
             </p>
+        </div>
+        <div class="form">
+            <span class="msg">
+                Send us a message.
+                Get in touch.
+            </span>
+            <div class="name">
+                <input class="input-cls" type="text" placeholder="Your name" id="name">
+            </div>
+            <div class="email">
+                <input class="input-cls" type="email" placeholder="Your email" id="email">
+            </div>
+            <div class="message">
+    <!--            <input class="input-cls mssg" type="text" placeholder="Type your message" id="message">             -->
+
+                <textarea class="input-msg" placeholder="Type your message..." name="mesg" cols="62" rows="5"></textarea>
+            </div>
+            <div class="button">
+                <input class="input-cls btn" type="submit" value="SEND">        
+                
+            </div>
         </div>
     </div>
     <footer>
