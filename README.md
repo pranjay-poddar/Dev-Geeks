@@ -907,11 +907,23 @@ Happy Coding! -->
 -   Make a pull request! (compare your branch with the owner main branch)
 
 <br>
-<h1 align="center">
- <b>Contributors
-<a href="https://github.com/pranjay-poddar/Dev-Geeks/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=pranjay-poddar/Dev-Geeks&&max=817" />
-</a>
+
+##  Our Contributors
+
+Thank you for your interest in contributing to our project! We appreciate any contributions, whether it's bug fixes, new features, or documentation improvements.
+
+<details>
+  <summary> Find Contributors list here !!!</summary>
+    <div>
+      <a href="https://github.com/pranjay-poddar/Dev-Geeks/graphs/contributors">
+      <img src="https://contrib.rocks/image?repo=pranjay-poddar/Dev-Geeks&&max=817"/>
+      </a>
+    </div>
+</details>
+
+
+
+
 
 <!-- &max={number} -->
   <br>

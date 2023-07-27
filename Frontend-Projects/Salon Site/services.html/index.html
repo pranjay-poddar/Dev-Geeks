@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+* {
+  box-sizing: border-box;
+}
+body h1{
+    font-size: 40px;
+    color:#f15048 ;
+}
+body h3{
+    font-size: 20px;
+}
+.columns {
+  float: left;
+  width: 33.3%;
+  padding: 8px;
+}
+
+.price {
+  list-style-type: none;
+  border: 1px solid #eee;
+  margin: 0;
+  padding: 0;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.price:hover {
+  box-shadow: 0 8px 12px 0 rgba(0,0,0,0.2)
+}
+
+.price .header {
+  background-color: #111;
+  color: white;
+  font-size: 25px;
+}
+
+.price li {
+  border-bottom: 1px solid #eee;
+  padding: 20px;
+  text-align: center;
+}
+
+.price .grey {
+  background-color: #eee;
+  font-size: 20px;
+}
+
+.button {
+  background-color: brown;
+  border: none;
+  color: white;
+  padding: 10px 25px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+@media only screen and (max-width: 600px) {
+  .columns {
+    width: 100%;
+  }
+}
+</style>
+</head>
+<body>
+
+<h1 style="text-align:center">Our Services</h1>
+<h3 style="text-align:center; color: #111; ">Get pamper yourself! Feel happy and Be Happy</h3>
+
+<div class="columns">
+  <ul class="price">
+    <li class="header">Basic</li>
+    <li class="grey">Starting 50/-</li>
+    <li>20+ Services</li>
+    <li>Facials</li>
+    <li>Bridal Services</li>
+    <li>10+ Packages</li>
+    <li class="grey"><a href="basic.html" class="button">View</a></li>
+  </ul>
+</div>
+
+<div class="columns">
+  <ul class="price">
+    <li class="header" style="background-color: brown">Pro</li>
+    <li class="grey">Starting 500/-</li>
+    <li>15+ Services</li>
+    <li>Bride and Groom Packages</li>
+    <li>Makeup Services</li>
+    <li>10+ Packages</li>
+    <li class="grey"><a href="pro.html" class="button">View</a></li>
+  </ul>
+</div>
+
+<div class="columns">
+  <ul class="price">
+    <li class="header">Premium</li>
+    <li class="grey">Staring 800/-</li>
+    <li>20+ Services</li>
+    <li>Massages</li>
+    <li>Complete FullBody Care</li>
+    <li>5+ Packages</li>
+    <li class="grey"><a href="premium.html" class="button">View</a></li>
+  </ul>
+</div>
+
+</body>
+</html>
