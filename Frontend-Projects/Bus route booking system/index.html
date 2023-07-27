@@ -16,7 +16,9 @@ body, form {
     align-items: center;
     justify-content: center;
     height: 100vh;
-    background-color:whitesmoke;
+    background-image: url(https://img.freepik.com/premium-photo/book-bus-tickets-online-smartphone-which-bus-stop-tickets-bus-yellow-background_407474-2982.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
     flex-direction: column; /* Added */
   }
   
@@ -24,7 +26,7 @@ body, form {
   form {
     width: 450px;
     padding: 40px;
-    background-color:#9b1c05;
+    background-color: rgb(233, 233, 131);
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     margin-top: 20px; /* Added */
@@ -42,12 +44,16 @@ body, form {
     text-align: left;
     
   }
+  header span{
+    color: #9b1c05;
+    font-family:Copperplate, Papyrus, fantasy ;
+    }
   
   /* Style the form title */
   h1 {
     font-size: 24px;
     color: #333;
-   
+    font-family:Copperplate, Papyrus, fantasy ;
     text-align: left;
   }
   
@@ -83,11 +89,13 @@ body, form {
   /* Style the submit button */
   input[type="submit"] {
     height: 40px;
-    background-color:whitesmoke;
-    color: black;
+    width: 100px;
+    background-color: #9b1c05;
+    font-size: 15px;
+    color: white;
     font-weight: bold;
     border: none;
-    border-radius: 5px;
+    border-radius: 10px;
     cursor: pointer;
     transition: background-color 0.3s ease;
     margin-bottom: 10px;
@@ -95,7 +103,7 @@ body, form {
   
   /* Change submit button color on hover */
   input[type="submit"]:hover {
-    background-color:burlywood;
+    background-color: orangered;
   }
   
   
@@ -127,19 +135,19 @@ body, form {
     <h1 style="margin-right:500px;margin-top: -60%;"><pre><header>
       <h1 style="font-size: 80px; font-family: 'Times New Roman', Times, serif;">
    
-    RouteEase:</h1>
+    <span>Route</span>Ease:  🚌 </h1>
        Streamlining Bus Route 
-       Bookings for College Students</pre></h1>
+       <span>Bookings for College Students</span> 🧑‍🎓 </pre></h1>
   </header>
   
   <form action="#" method="post" id="loginForm">
-    <label for="user-type">Student/Admin</label>
+    <label for="user-type">Student/Admin  🧑‍🎓/👨🏻‍💻</label>
     <select id="user-type" name="user-type">
       <option value="student">Student</option>
       <option value="admin">Admin</option>
     </select>
     <br>
-    <label for="username">Username:</label>
+    <label for="username">Username 👤 </label>
     <input type="text" id="username" name="username" placeholder="Enter your username" required style="width: 95%;font-size: 15px;">
     <br>
     <label for="password" style="font-size: 18px;">Password:</label>
