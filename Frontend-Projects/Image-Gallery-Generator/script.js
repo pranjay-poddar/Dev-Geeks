@@ -4,11 +4,21 @@ const loadMoreBtn = document.querySelector(".gallery .load-more");
 const lightbox = document.querySelector(".lightbox");
 const downloadImgBtn = lightbox.querySelector(".uil-import");
 const closeImgBtn = lightbox.querySelector(".close-icon");
+const toTop = document.querySelector(".to-top");
 
 const apiKey = "kQdIkN07IqZI7byq9g2H4GbRbYH7m5JCdGXjaYznNbh0ekFxadxE4wcW";
 const perPage = 15;
 let currentPage = 1;
 let searchTerm = null;
+
+window.addEventListener("scroll",() => {
+    if(window.pageYOffset > 100) {
+        toTop.classList.add("active");
+    }
+    else {
+        toTop.classList.remove("active");
+    }
+})
 
 const downloadImg = (imgUrl) => {
 fetch(imgUrl).then(res => res.blob()).then(blob => {
