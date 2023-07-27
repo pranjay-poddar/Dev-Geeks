@@ -1,0 +1,1 @@
+const colorCodes = ["#ef9a9a","#ff5252","#f48fb1","#ff4081","#ce93d8","#e040fb","#b39ddb","#7c4dff","#9fa8da","#536dfe","#90caf9","#448aff","#81d4fa","#40c4ff","#80deea","#18ffff","#80cbc4","#64ffda","#a5d6a7","#69f0ae","#c5e1a5","#b2ff59","#e6ee9c","#eeff41","#fff59d","#ffff00","#ffe082","#ffd740","#ffcc80","#ffab40","#ffab91","#ff6e40","#bcaaa4","#eeeeee","#b0bec5"];
