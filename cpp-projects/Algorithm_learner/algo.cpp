@@ -1,4 +1,5 @@
 #include <iostream>
+#include<algorithm>
 using namespace std;
 
 // PRINTING ARRAY
@@ -10,6 +11,18 @@ void printArray(int arr[], int n)
         cout << arr[i];
     }
     return;
+}
+
+
+// PRINTING 2D ARRAY
+
+void print2D(int arr[][100],int rows, int col){
+    for(int i=0;i<rows;i++){
+        for(int j=0;j<col;j++){
+            cout<< arr[i][j]<<" ";
+        }
+        cout<<endl;
+    }
 }
 
 // SORTING
@@ -144,12 +157,93 @@ void BinarySearch(int arr[], int n, int key)
     }
 }
 
+// 2D Array
+
+void transpose(int arr[][100], int rows, int col){
+    cout<<"Creating a transpose matrix and initialising it with 0"<<endl;
+    int count=1;
+    int mat[col][100]={0};
+    for(int i=0;i<rows;i++){
+        for(int j=0;j<col;j++){
+            mat[j][i]=arr[i][j];
+            cout<<"step: "<<count<<endl;
+            print2D(mat, rows, col);
+            count++;
+        }
+    }
+
+}
+
+// MULTIPLICATION OF MATRICES
+
+void multiplication(int A[][100], int B[][100], int r1, int c1, int c2){
+    cout<<"Consider the resultant matrix C which is initialised with 0"<<endl;
+    int count=1;
+    int C[r1][100]={0};
+    for (int i = 0; i < r1; i++) {
+        for (int j = 0; j < c2; j++) {
+            C[i][j] = 0;
+            for (int k = 0; k < c1; k++) {
+                C[i][j] += A[i][k] * B[k][j];
+                cout<<endl<<"step "<<count<<": "<<endl;
+                print2D(C,r1,c2);
+                count++;
+            }
+        }
+    }
+
+}
+
+// SPIRAL MATRIX
+
+void Spiral(int mat[][100],int r, int c){
+    int top = 0, bottom = r - 1, left = 0, right = c - 1;
+    cout<<"The spiral order is: "<<endl;
+    while (top <= bottom && left <= right) {
+        // Print the top row from left to right
+        cout<<"Print the top row from left to right"<<endl;
+        for (int i = left; i <= right; i++)
+            cout << mat[top][i] << " ";
+        top++;
+        cout<<endl;
+
+        // Print the rightmost column from top to bottom
+        cout<<"Print the rightmost column from top to bottom"<<endl;
+        for (int i = top; i <= bottom; i++)
+            cout << mat[i][right] << " ";
+        right--;
+        cout<<endl;
+
+        // Print the bottom row from right to left
+        
+        if (top <= bottom) {
+            cout<<"Print the bottom row from right to left"<<endl;
+            for (int i = right; i >= left; i--)
+                cout << mat[bottom][i] << " ";
+            bottom--;
+            cout<<endl;
+        }
+
+        // Print the leftmost column from bottom to top
+        
+        if (left <= right) {
+            cout<<"Print the leftmost column from bottom to top"<<endl;
+            for (int i = bottom; i >= top; i--)
+                cout << mat[i][left] << " ";
+            left++;
+            cout<<endl;
+        }
+        
+    }
+}
+
 int main()
 {
     int choice;
     cout <<endl<< "====ALGORITHM SELECTION====" << endl<<endl;
     cout << "1. Sorting algorithms" << endl<<endl;
     cout << "2. Searching algorithms" << endl<<endl;
+    cout<<"3. 2D Array Algorithms"<<endl<<endl;
     cout << "Enter your choice" << endl;
     cin >> choice;
 
@@ -244,7 +338,7 @@ int main()
     }
 
     // SEARCHING ALGORITHMS
-    if (choice == 2)
+    else if (choice == 2)
     {
         int choice2;
         cout << "-----------------------------" << endl;
@@ -309,6 +403,115 @@ int main()
             cin >> key;
             BinarySearch(arr, n, key);
         }
+    }
+
+// 2D ARRAY ALGORITHMS
+
+    else if(choice==3){
+
+        int choice1;
+        cout << "-----------------------------" << endl;
+        cout << "2D ARRAY ALGORITHMS" << endl<<endl;
+        cout << "1. Transpose of Matrix" << endl<<endl;
+        cout << "2. Multiplication of Matrix" << endl<<endl;
+        cout << "3. Spiral Matrix" << endl<<endl;
+        cout << "Enter your choice" << endl;
+        cin >> choice1;
+
+        if(choice1==1){
+            cout << "-----------------------------" << endl;
+            cout<<"TRANSPOSE OF MATRIX"<<endl;
+            cout << "-----------------------------" << endl;
+            cout<<"DESCRIPTION"<<endl;
+            cout << "-----------------------------" << endl;
+            cout<<"The transpose of a matrix is an operation that involves swapping the rows and columns of a given matrix.\nGiven an m x n matrix, the transpose operation converts it into an n x m matrix, where the rows of the original matrix become the columns of the transposed matrix, and vice versa."<<endl;
+            cout << "-----------------------------" << endl;
+            cout<<"TIME COMPLEXITY"<<endl;
+            cout << "-----------------------------" << endl;
+            cout<<"The time complexity of the transpose operation is O(m * n), where 'm' is the number of rows and 'n' is the number of columns in the original matrix."<<endl;
+            cout << "-----------------------------" << endl;
+            cout<<"Enter number of rows: ";
+            int rows;
+            cin>>rows;
+            cout<<endl;
+            int col;
+            cout<<"Enter number of columns: ";
+            cin>>col;
+            cout<<endl;
+            cout<<"Enter elements of matrix";
+            int arr[rows][100];
+            for(int i=0;i<rows;i++){
+                for(int j=0;j<col;j++){
+                    cin>>arr[i][j];
+                }
+            }
+            transpose(arr,rows,col);
+        }
+
+        else if(choice1==2){
+            int r1,c1,c2;
+            cout << "-----------------------------" << endl;
+            cout<<"MULTIPLICATION OF MATRIX"<<endl;
+            cout << "-----------------------------" << endl;
+            cout<<"DESCRIPTION"<<endl;
+            cout << "-----------------------------" << endl;
+            cout<<"Matrix multiplication is an essential mathematical operation that combines two matrices to produce a new matrix.\nGiven two matrices A and B, where A is of size m x p and B is of size p x n, the product of A and B results in a new matrix C of size m x n."<<endl;
+            cout << "-----------------------------" << endl;
+            cout<<"TIME COMPLEXITY"<<endl;
+            cout << "-----------------------------" << endl;
+            cout<<"The time complexity of matrix multiplication is O(m * p * n), where 'm', 'p', and 'n' are the dimensions of matrices A, B, and C, respectively."<<endl;
+            cout << "-----------------------------" << endl;
+            cout<<"Enter rows of matrix A"<<endl;
+            cin>>r1;
+            cout<<"Enter columns of matrix A"<<endl;
+            cin>>c1;
+            cout<<"Rows of matrix B = Columns of matrix A"<<endl;
+            cout<<"Enter columns of matrix B"<<endl;
+            cin>>c2;
+            int A[r1][100];
+            int B[c1][100];
+            cout<<"Enter elements of matrix A"<<endl;
+            for(int i=0;i<r1;i++){
+                for(int j=0;j<c1;j++){
+                    cin>>A[i][j];
+                }
+            }
+            cout<<"Enter elements of matrix B"<<endl;
+            for(int i=0;i<c1;i++){
+                for(int j=0;j<c2;j++){
+                    cin>>B[i][j];
+                }
+            }
+            multiplication(A,B,r1,c1,c2);
+        }
+        else if(choice1==3){
+            int r,c;
+            cout << "-----------------------------" << endl;
+            cout<<"SPIRAL MATRIX"<<endl;
+            cout << "-----------------------------" << endl;
+            cout<<"DESCRIPTION"<<endl;
+            cout << "-----------------------------" << endl;
+            cout<<"Printing a matrix in a spiral order involves traversing the elements of the matrix in a clockwise spiral manner,\nstarting from the top-left corner and moving towards the center in a spiral path until all elements are visited.\nThe spiral order traversal is visualized as if following the boundary of the matrix."<<endl;
+            cout << "-----------------------------" << endl;
+            cout<<"TIME COMPLEXITY"<<endl;
+            cout << "-----------------------------" << endl;
+            cout<<"The time complexity for printing a matrix in a spiral order is O(m * n), where 'm' is the number of rows and 'n' is the number of columns in the matrix."<<endl;
+            cout << "-----------------------------" << endl;
+            cout<<"Enter the rows of matrix"<<endl;
+            cin>>r;
+            cout<<"Enter the columns of matrix"<<endl;
+            cin>>c;
+            int mat[r][100];
+            cout<<"Enter elements of matrix"<<endl;
+            for(int i=0;i<r;i++){
+                for(int j=0;j<c;j++){
+                    cin>>mat[i][j];
+                }
+            }
+            Spiral(mat,r,c);
+
+        }
+
     }
     return 0;
 }
