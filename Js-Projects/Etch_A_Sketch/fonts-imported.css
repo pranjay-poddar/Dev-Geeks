@@ -1,0 +1,20 @@
+@font-face {
+    font-family: "Baloo 2";
+    src: url("https://raw.githubusercontent.com/0xabdulkhalid/etch-a-sketch/main/fonts/Baloo2-VariableFont_wght.ttf");
+  }
+@font-face {
+    font-family: "Raleway";
+    src: url("https://raw.githubusercontent.com/0xabdulkhalid/etch-a-sketch/main/fonts/Raleway-Medium.ttf");
+  }
+@font-face {
+	font-family: "Poppins";
+	src: url("https://raw.githubusercontent.com/0xabdulkhalid/etch-a-sketch/main/fonts/Poppins-Regular.ttf");
+}
+@font-face {
+	font-family: "Comfortaa";
+	src: url("https://raw.githubusercontent.com/0xabdulkhalid/etch-a-sketch/main/fonts/Comfortaa-VariableFont_wght.ttf");
+}
+@font-face {
+	font-family: "Montserrat";
+	src: url("https://raw.githubusercontent.com/0xabdulkhalid/etch-a-sketch/main/fonts/Montserrat-VariableFont_wght.ttf");
+}

@@ -40,6 +40,11 @@ img{
     background-color: var(--brown-color);
     transition: all .3s;
     color: var(--cream-color);
+    text-align: center;
+    margin: auto;
+}
+.shopping-para{
+    text-align: center;
 }
 
 .button-dark{
@@ -56,6 +61,7 @@ img{
 
 .heading-dark{
     color: var(--brown-color);
+    text-align: center;
 }
 
 .heading-light{
@@ -114,10 +120,6 @@ img{
     font-family: var(--heading-font);
 }
 
-.title .button{
-    float: right;
-}
-
 
 /* offer section */
 #offer{
@@ -170,7 +172,8 @@ img{
 .collection-card-img{
     width: 150px;
     height: 100%;
-    border-radius: 5px;
+    border-radius: 20rem;
+    padding: 1rem;
 }
 
 .collection-card-info{
@@ -182,6 +185,7 @@ img{
 
 .collection-card-info p{
     font-size: .8rem;
+    text-align: center;
 }
 
 .collection-card button{

@@ -1,0 +1,341 @@
+
+/* -------------------------------------------------------------------*/
+body {
+    margin: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.hero {
+    background-color: #1f2937;
+    height: 450px;
+}
+
+/*   H E A D E R    P A R T    */
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    width: 79%;
+}
+.hero >.header-container {
+    display: flex;
+    justify-content: center;
+}
+h3 {
+    color: #f9faf8;
+    font-size: 24px;
+}
+ul {
+    display: flex;
+    gap: 26px;
+    align-items: center;
+}
+li {
+    list-style: none;
+}
+a {
+    color: #e5e7eb;
+    text-decoration: none;
+}
+
+/*   M A I N    P A R T   S T A R T  */
+
+.main {
+    display: flex;
+    justify-content: center;
+    gap: 8%;
+    align-items: center;
+}
+.mainTexts {
+    flex: initial;
+    width: 36%;
+}
+.mainTexts > h1 {
+    color: white;
+    font-size: 48px;
+    margin-bottom: 0;
+}
+.mainTexts > p {
+    color: #e5e7eb;
+    font-size: 18px;
+    margin: 0;
+}
+.mainTexts > button {
+    color: white;
+    background-color: #3882f6;
+    border-radius: 5px;
+    padding: 5px;
+    width: 100px;
+    margin-top: 10px;
+    border: 1px solid #3882f6;
+    transition: all .5s;
+}
+
+.placeholder-image {
+    width: 35%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: gray;
+    color: #e5e7eb;
+    height: 150px;
+}
+
+.placeholder-image >.img-back >p {
+    text-align: center;
+    margin-top: 20%
+}
+
+/*------- MIDDLE PART START ------*/
+
+.middle {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5px 0 62px;
+}
+
+.middle > h3 {
+    color: black;
+}
+
+.box-container {
+    display: flex;
+    width: 65%;
+    justify-content: space-evenly;
+    padding: 5px;
+}
+
+.boxes > p {
+    font-size: 14px;
+}
+
+.boxes {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.boxes > div {
+    border: 4px solid #3881f6cb;
+    width: 120px;
+    height: 120px;
+    border-radius: 10px;
+}
+
+.boxes > div:last-child {
+    border: none;
+    font-size: 12px;
+    text-align: center;
+    height: auto;
+  }
+
+/*------- MIDDLE PART END ------*/
+
+/*------- LOWER PART START ------*/
+* {
+    scroll-behavior: smooth;
+}
+.lower {
+    background-color: #e5e7eb;
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    height: 280px;
+}
+
+.lower >div > p {
+    font-size: 34px;
+    font-weight: lighter;
+    font-style: italic;
+    color: #1f2937;
+    margin-bottom: 0;
+}
+.lower > div {
+    width: 55%;
+}
+.lower >div >h4 {
+    text-align: right;
+    padding-right: 5%;
+    margin-top: -15px;
+}
+
+/*------- LOWER PART END ------*/
+
+/*------- SIGN-UP PART START ------*/
+
+.sign-up {
+    display: flex;
+    justify-content: center;
+    height: 250px;
+    align-items: center
+}
+
+.sign-up-container {
+    background-color: #3882f6;
+    width: 60%;
+    height: auto;
+    display: flex;
+    justify-content: space-around;
+    border-radius: 10px;
+    padding: 25px;
+    transition: 1s;
+}
+.sign-up-container>div> * {
+    margin: 0;
+}
+.sign-up-container >div >h4 {
+    color: white;
+    font-size: 14px;
+}
+.sign-up-container > div >p {
+    color: #e5e7eb;
+    font-size: 12px;
+}
+.sign-button {
+    align-self: center;
+}
+.sign-up-container >.sign-button >button {
+    background-color: #3882f6;
+    border-radius: 5px;
+    border: 1px solid #5294fd;
+    padding: 5px;
+    width: 85px;
+    color: white;
+    box-shadow: inset 0 -1px 3px white, 0 2px 5px whitesmoke;
+}
+
+/*------- SIGN-UP PART END ------*/
+
+/*------- FOOTER PART START ------*/
+
+footer {
+    background-color: #1f2937;
+    color: white;
+    font-size: 12px;
+    display: flex;
+    justify-content: center;
+    padding: 11px;
+}
+
+/*------- FOOTER PART END ------*/
+
+
+/*------- EXTRA-FX PART START ------*/
+.sign-up-container:hover {
+    box-shadow: 0 5px 10px grey;
+    margin-bottom: 30px;  
+}
+button:hover, .sign-button >button:hover {
+    box-shadow: 0 2px 5px white;
+}
+a:hover {
+    border-bottom: 1px groove white;
+    text-shadow: 0 0px 30px white, 0 0 50px white;
+}
+/*------- EXTRA-FX PART END ------*/
+
+@media only screen and (max-width: 854px) {
+    .hero {
+        height: auto;
+        align-items: center;
+    }
+    .header-container {
+        width: 100%;
+    }
+    .header > h3 {
+        font-size: 1.3em;
+    }
+    .header > ul {
+        font-size: .7em;
+    }
+    .header {
+        gap: 5%;
+        width: 95%;
+        justify-content: space-evenly;
+    }
+    .header > ul {
+        padding: 0;
+    }
+    .mainTexts {
+        width: 90%;
+    }
+    .mainTexts > h1 {
+       font-size: 2em;
+    }
+    .mainTexts > p {
+        font-size: .8em;
+    }
+    .mainTexts > button {
+        transform: scale(.9);
+    }
+    .main {
+        margin-top: 20px;
+        flex-direction: column;
+        align-items: center;
+        padding-bottom: 20px;
+    }
+    .placeholder-image {
+        order: 1;
+        width: 90%;
+    }
+    .mainTexts {
+        order: 2;
+    }
+    /* ----  END OF HEADER   ------ */
+
+    /* ---- MIDDLE ------ */
+    .middle {
+        height: auto;
+    }
+    .middle > h3 {
+        font-size: 1em;
+    }
+    .middle > .box-container {
+        flex-wrap: wrap;
+        gap: 11%;
+        width: 100%;
+    }
+    .boxes {
+       width: 100px;
+    }
+    /* --- END OF MIDDLE --- */
+
+    /* -- LOWER --  */
+    .lower > div {
+        width: 85%;
+        margin: 0;
+    }
+    .lower > div > p {
+        font-size: 1.2em;
+    }
+    .lower > div > h4 {
+        margin: 0;
+        font-weight: 500;
+        font-size: .9em;
+    }
+    /*---- END OF LOWER --- */
+    .sign-up {
+        height: 200px;
+    }
+    .sign-up-container {
+        width: 76%;
+    }
+    .sign-up-container > .dialogues > h4{
+       font-size: .8em;  
+    }
+    .dialogues > p {
+        font-size: .65em !important;
+    }
+    .sign-up-container > .sign-button{
+        transform: scale(.8);
+    }
+    /* --- END OF SIGN-UP CONTAINER --- */
+
+    footer {
+        position: absolute;
+        width: 100%;
+        height: 25px;
+    }
+    footer > .cont > p {
+        margin: 5px 0 0 0;
+    }
+}
