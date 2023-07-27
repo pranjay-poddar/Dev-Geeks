@@ -1,3 +1,7 @@
+const scoreDisplay = document.querySelector('.score')
+var audio = new Audio("background_sound.mp3");
+audio.play();
+
 var character = document.getElementById("character");
 var game = document.getElementById("game");
 var interval;
@@ -55,11 +59,13 @@ var blocks = setInterval(function(){
         game.appendChild(hole);
         currentBlocks.push(counter);
         counter++;
+        scoreDisplay.innerHTML = counter-5;
     }
     var characterTop = parseInt(window.getComputedStyle(character).getPropertyValue("top"));
     var characterLeft = parseInt(window.getComputedStyle(character).getPropertyValue("left"));
     var drop = 0;
     if(characterTop <= 0){
+        audio.pause();
         alert("Game over! Score: "+(counter-9)+",  Refresh to start again!");
         clearInterval(blocks);
         location.reload();

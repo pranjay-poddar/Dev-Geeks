@@ -78,6 +78,7 @@ h1{
     font-size: 17px;
     color: var(--White);
     margin: 1rem 0;
+    text-align: center;
 }
 
 h1:hover{
