@@ -13,7 +13,39 @@ body {
     padding-right: 0px;
     scroll-behavior: smooth;
 }
-
+.navbar {
+    /* max-width: 1300px; */
+    margin: 0 auto;
+  }
+  .nava {
+    text-decoration: none;
+    color: white;
+  }
+  ul {
+    list-style: none;
+  }
+  header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: #007bff;
+  }
+   nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+  }
+  nav ul {
+    display: flex;
+    gap: 3.5rem;
+  }
+  nav li {
+    font-size: 1.8rem;
+    border-bottom: 0.4rem transparent solid;
+    transition: 0.3s ease-in-out;
+  }
+ 
 ::-webkit-scrollbar {
     width: 10px;
     overflow-y: scroll;
@@ -198,7 +230,50 @@ body {
 .contri {
     width: 80%;
 }
+#newsin {
+  /* width: 75%; */
+  text-align: center;
+  padding-top: 100px;
+  border: 2px solid black;
+  /* padding: 50px; */
+  color: white;
+  padding-bottom: 10px;
+  margin: 100px;
+  border-radius: 15px;
+  background-color: #343A40;
+  box-shadow: 1px 2px 1.2px rgb(166, 112, 11);
+}
 
+#info {
+  text-align: center;
+  padding: 10px;
+  padding-left: 0px;
+  margin-top: 50px;
+  margin-bottom: 0px;
+  color: black;
+}
+
+#nameuser{
+  width: 75%;
+  border-radius: 15px;
+  padding: 10px;
+  margin: 10px;
+}
+
+#checkedbox {
+  padding: 50px;
+  margin: 10px;
+  position: relative;
+  left: 0;
+}
+
+#submitnews {
+  padding: 10px;
+  margin: 10px;
+  width: 200px;
+  border-radius: 50px;
+  cursor: pointer;
+}
 .btn{
     display: inline-block;
     font-weight: 400;

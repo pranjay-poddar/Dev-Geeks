@@ -1,0 +1,71 @@
+body{
+    background-color: #e8ebef;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.container{
+    width: 90%;
+    max-width: 900px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    text-align: center;
+}
+
+h1{
+    font-size:2.5em;
+    color:#222;
+    margin-top: 0;
+}
+
+p{
+    font-size: 1.2em;
+    color:#555;
+    margin-bottom: 20px;
+}
+
+.file-upload{
+    display: inline-block;
+    padding: 8px 20px;
+    font-size: 1.2em;
+    font-weight: bold;
+    color:#fff;
+    background-color: #3578e5;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+.file-upload:hover{
+    background-color: #2a66c2;
+}
+
+.file-upload input[type="file"]{
+    display: none;
+}
+
+.fa-cloud-upload{
+    margin-right: 10px;
+}
+
+.info p{
+    display: inline-block;
+}
+
+#name{
+    display: inline-block;
+    font-weight:bold;
+}
+
+pre{
+    border : 1px solid #ccc;
+    padding:10px;
+    background-color: #f8f8f8;
+    font-size: 1.2em;
+    line-height: 1.4;
+    white-space: pre-wrap;
+    overflow-x: auto;
+    margin-top: 20px;
+    text-align: initial;
+}
