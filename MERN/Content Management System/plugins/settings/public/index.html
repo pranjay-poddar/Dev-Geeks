@@ -1,0 +1,406 @@
+<style type="text/css">
+	.settings-user { border: 1px solid #E0E0E0; text-align: center; padding: 25px 10px; border-radius: var(--radius); cursor: pointer; }
+	.settings-user .initials { margin: 0 auto 10px; }
+	.settings-user:hover { background-color: #F5F5F5; }
+	.settings-user-permissions { font-size: 11px; color: gray; height: 36px; line-height: 16px; overflow: hidden; }
+	.settings-user .fa-times { position: absolute; color: red; right: 25px; top: 10px; cursor: pointer; }
+	.settings-keyvalue .ui-keyvalue-item-key { width: 55%; }
+	.settings-keyvalue .ui-keyvalue-item-value { margin-left: 55%; }
+	.settingspart .header { border-bottom: 1px solid #E0E0E0; }
+</style>
+
+<div data-scope="settings" class="settingspart">
+	<div class="header">
+		<label><i class="fa fa-cog"></i>@(Settings)</label>
+		<nav data---="validation__?">
+			<button class="exec" name="submit" data-exec="?/save" disabled><i class="fa fa-check-circle green"></i>@(<b>APPLY</b> SETTINGS)</button>
+		</nav>
+	</div>
+
+	<div data---="viewbox__common.page__parent:window;scrollbar:1;margin:45;scrollbarshadow:1" class="invisible">
+		<br />
+		<div class="container">
+			<br />
+			<div class="panel">
+				<label><i class="fa fa-globe"></i>@(Main settings)</label>
+				<div class="panelbody">
+					<div class="row">
+						<div class="col-md-4 m b">
+							<div data---="input__?.form.name__required:1;placeholder:@(Total.js Platform)">@(Website name)</div>
+						</div>
+						<div class="col-md-4 m b">
+							<div data---="input__?.form.url__required:1;placeholder:@(https://www.totaljs.com)">@(URL address)</div>
+						</div>
+						<div class="col-md-4 m">
+							<div data---="input__?.form.author__required:1;placeholder:@(Total Avengers)">@(Author)</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-4 m">
+							<div data---="input__?.form.emailsender__required:1;type:email__'@'">@(Email for sending)</div>
+						</div>
+						<div class="col-md-4 m">
+							<div data---="input__?.form.emailcontactform__required:1;type:email__'@'">@(Email for contact form)</div>
+						</div>
+						<div class="col-md-4 m">
+							<div data---="input__?.form.emailreply__required:1;type:email__'@'">@(Email for answers)</div>
+						</div>
+					</div>
+				</div>
+				<div class="panelbody bg-smoke" style="padding-bottom:14px">
+					<div data---="input__?.form.componentator__type:checkbox">@(Allow users to download widgets and templates from <b>componentator.com</b>)</div>
+				</div>
+			</div>
+		</div>
+		<br />
+		<br />
+
+		<div data-bind="user__show:value.sa">
+
+			<div class="container">
+
+				<div class="panel">
+					<label><i class="fa fa-wrench"></i>@(Additional settings)</label>
+					<div class="panelbody m settings-keyvalue">
+						<div class="alert m">
+							<div class="b"><i class="fa fa-warning"></i>@(IMPORTANT)</div>
+							@(All new values below must be confirmed manully via <i class="fa fa-keyboard-o"></i>ENTER).
+						</div>
+						<div class="row">
+							<div class="col-sm-6 m">
+								<div data---="keyvalue__?.form.languages__placeholderkey:@(A language name);placeholdervalue:en">@(Languages)</div>
+								<div class="help">@(Languages must be implemented manually)</div>
+							</div>
+							<div class="col-sm-6 m">
+								<div data---="keyvalue__?.form.signals__placeholderkey:@(A signal name);placeholdervalue:@(Type a value)">@(Signals)</div>
+								<div class="help">@(Signals can affect a behaviour in pages or posts)</div>
+							</div>
+						</div>
+						<hr class="nmt" />
+						<div class="row">
+							<div class="col-md-4 m">
+								<div data---="input__?.form.cookie__required:1;maxlength:30;camouflage:1">@(Cookie name)</div>
+								<div class="help">@(A cookie name for administration area)</div>
+							</div>
+							<div class="col-md-4 m">
+								<div data---="input__?.form.cdn__required:1;maxlength:150">@(CDN)</div>
+								<div class="help">@(Content delivery network for jComponent library)</div>
+							</div>
+							<div class="col-md-4 m">
+								<div data---="input__?.form.localization__placeholder:req.url.startsWith('/sk/') ? 'sk' \: 'en'">@(Localization)</div>
+								<div class="help">@(Generates a localization delegate, must return a language)</div>
+							</div>
+						</div>
+
+						<hr class="nmt" />
+						<div data---="input__?.form.memorizeall__type:checkbox">@(Cache entire render with the layout together)</div>
+					</div>
+
+					<div class="panelbody bg-smoke">
+						<div class="row">
+							<div class="col-md-4 m">
+								<div data---="input__?.form.smtp__icon:server;camouflage:1;placeholder:@(smtp.yourdomain.com)">@(SMTP server)</div>
+								<div class="help">@(IP address or hostname)</div>
+							</div>
+							<div class="col-md-8 m">
+								<div data---="input__?.form.smtpoptions__icon:code;camouflage:true;placeholder:@(SMTP options)">@(SMTP options)</div>
+								<div class="help">@(Options need to be defined in JSON format according) <a href="https://docs.totaljs.com/latest/en.html#api~FrameworkConfiguration~mail-smtp-options" target="_blank">Total.js specification</a></div>
+							</div>
+						</div>
+					</div>
+
+					<div class="panelbody">
+						<div class="panel">
+							<div class="pull-right" style="margin:5px 10px 0 0">
+								<div data---="togglebutton__?.form.allow_totalapi"></div>
+							</div>
+							<label class="bg-smoke"><i class="fab fa-node-js"></i>@(Total API)</label>
+							<div class="padding">
+								<p>@(With the <b>Total.js API key</b>, you can purchase templates, widgets, or the CMS can send SMS messages or email messages.)</p>
+								<div class="row">
+									<div class="col-md-4 m">
+										<div class="alert">@(You can obtain the Total.js API key on the link:) <a href="https://platform.totaljs.com/?open=api" class="b" target="_blank">https://platform.totaljs.com?open=api</a></div>
+									</div>
+									<div class="col-md-4">
+										<div data---="input__?.form.totalapi__maxlength:100;required:1;placeholder:@(Enter token);camouflage:•__''" data-bind="?.form.allow_totalapi__enabled">@(Total API key)</div>
+										<div class="help"><span class="link exec" data-exec="?/verifytotalapi"><i class="fa fa-angle-right mr5"></i>@(Verify API key)</span></div>
+									</div>
+								</div>
+								<div data---="checkbox__?.form.mail_api" data-bind="?.form.allow_totalapi__enabled">@(Enable sending mail messages via Total.js API)</div>
+								<div data-bind="%settingstotalapiresponse__template">
+									<script type="text/html">
+										{{ if value }}
+											<div class="mt10">
+												{{ if value.credits != null }}
+													<div class="nmb inline-message"><i class="fa fa-check-circle"></i> @(Total API key is <b>valid</b>. Balance:) <b>{{ value.credits | format(2) }} &euro;</b></div>
+												{{ else }}
+													<div class="nmb inline-message inline-message-error"><i class="fa fa-warning"></i> @(Total API key is <b>invalid</b>).</div>
+												{{ fi }}
+											</div>
+										{{ fi }}
+									</script>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="panelbody">
+						<div class="panel">
+							<div class="pull-right" style="margin:5px 10px 0 0">
+								<div data---="togglebutton__?.form.allow_tms"></div>
+							</div>
+							<label class="bg-smoke"><i class="fas fa-project-diagram"></i>@(Total.js Message Service (TMS))</label>
+							<div class="padding npb">
+								<p><i class="fas fa-circle mr5" data-bind="?.form.allow_tms__.green__.red:!value"></i>@(TMS allows you to publish and subscribe most important internal operations in the CMS.) <a href="https://docs.totaljs.com/tms/" target="_blank"><i class="fas fa-book mr5"></i>@(TMS documentation)</a>.</p>
+								<div class="row">
+									<div class="col-md-4 m">
+										<div class="alert" data-bind="?.form.url__text b:value + '/$tms/'">@(Endpoint for the Total.js Message Service app will be in the form <b></b>)</div>
+									</div>
+									<div class="col-md-4 m">
+										<div data---="input__?.form.secret_tms__maxlength:100;required:1;placeholder:@(Enter token);camouflage:•__''" data-bind="?.form.allow_tms__enabled">@(Security token)</div>
+										<div class="help"><span class="exec link" data-exec="?/tms_token"><i class="fas fa-retweet mr5"></i>@(Generate token)</span></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="panelbody">
+						<div class="padding">
+							<div class="row">
+								<div class="col-sm-3 m">
+									<div>
+										<h3 class="nmb"><i class="far fa-window-restore"></i>@(Backups)</h3>
+										<p>@(This operation will remove all backed up records from all database.)</p>
+										<button class="button button-small button-clear b exec" data-exec="settings/operation" data-name="backups"><i class="fa fa-trash-o mr5"></i>@(Clear backups)</button>
+									</div>
+								</div>
+								<div class="col-sm-3 m">
+									<div>
+										<h3 class="nmb"><i class="far fa-copy"></i>@(Unused files)</h3>
+										<p>@(This operation will remove all files which aren't used in the content.)</p>
+										<button class="button button-small button-clear b exec" data-exec="settings/operation" data-name="files"><i class="fa fa-trash-o mr5"></i>@(Clear unused files)</button>
+									</div>
+								</div>
+								<div class="col-sm-3 m">
+									<div>
+										<h3 class="nmb"><i class="far fa-chart-bar"></i>@(Counters)</h3>
+										<p>@(This operation will clear all today counters from all sections.)</p>
+										<button class="button button-small button-clear b exec" data-exec="settings/operation_clear" data-name="dashboard"><i class="fa fa-trash-o mr5"></i>@(Clear counters)</button>
+									</div>
+								</div>
+								<div class="col-sm-3 m">
+									<div>
+										<h3 class="nmb"><i class="far fa-clock"></i>@(Events)</h3>
+										<p>@(This operation will remove all recorded events in <b>Events section</b>.)</p>
+										<button class="button button-small button-clear b exec" data-exec="settings/operation" data-name="events"><i class="fa fa-trash-o mr5"></i>@(Clear events)</button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<br />
+		<hr />
+		<br />
+
+		<div class="container">
+			<div class="pull-right mt5">
+				<span class="exec highlight b link" data-exec="?/create"><i class="far fa-plus-circle green mr5"></i>@(Add user)</span>
+			</div>
+			<h3><i class="fa fa-users"></i>@(Administrators)</h3>
+			<div data-bind="?.form.users__template__show:value&&value.length" class="row">
+				<script type="text/html">
+					{{ foreach m in value }}
+					<div class="col-sm-3 m">
+						<div class="settings-user exec" data-id="{{ m.id }}" data-exec="?/edit">
+							{{ if !m.owner }}
+							<i class="fa fa-times red exec" data-exec="?/remove" data-prevent="true"></i>
+							{{ fi }}
+							<div>{{ m.name | initials }}</div>
+							<div class="settings-user-name{{ if m.owner }} b{{ fi }}">{{ m.name }}</div>
+							<div class="settings-user-permissions">{{ if m.sa }}@(Super administrator){{ else }}{{ m.permissions | settingspermissions }}{{ fi }}</div>
+						</div>
+					</div>
+					{{ end }}
+				</script>
+			</div>
+		</div>
+		<br />
+		<br />
+		<div class="bg-smoke padding" style="border-top:1px solid #E0E0E0">
+			<br />
+			<div class="row">
+				<div class="col-md-4 col-md-offset-4">
+					<nav data---="validation__?">
+						<button class="exec button" name="submit" data-exec="?/save" disabled><i class="fa fa-check-circle"></i>@(<b>APPLY</b> SETTINGS)</button>
+					</nav>
+				</div>
+			</div>
+			<br />
+		</div>
+
+	</div>
+</div>
+
+<div data---="importer__common.form__if:settingsadmin;url:@{#}/_settings/form.html"></div>
+
+<script>
+
+	PLUGIN('settings', function(exports) {
+
+		exports.save = function() {
+
+			// Prepare users
+			var data = CLONE(GETR('?.form'));
+
+			tmp = [];
+			Object.keys(data.signals).forEach(function(key) {
+				tmp.push({ name: key, id: data.signals[key] });
+			});
+			data.signals = tmp;
+
+			tmp = [];
+			Object.keys(data.languages).forEach(function(key) {
+				tmp.push({ name: key, id: data.languages[key] });
+			});
+			data.languages = tmp;
+
+			FUNC.loading(true);
+			AJAX('POST [url]api/settings/ REPEAT', data, FUNC.messageresponse('@(Settings have been saved successfully.)', function() {
+				refresh_dependencies();
+				SET('common.componentator', data.componentator);
+				SETTER('loading/hide');
+				if (data.name)
+					$('.logo').find('span').text(data.name);
+			}));
+		};
+
+		exports.reload = function() {
+			AJAX('GET [url]api/settings/', function(response) {
+
+				var tmp = {};
+
+				if ((/\d\.\d/).test(response.url))
+					response.url = location.protocol + '//' + location.hostname;
+
+				response.languages && response.languages.forEach(function(item) {
+					if (typeof(item) === 'string')
+						tmp[item] = item;
+					else
+						tmp[item.name] = item.id;
+				});
+				response.languages = tmp;
+
+				tmp = {};
+				response.signals && response.signals.forEach(function(item) {
+					if (typeof(item) === 'string')
+						tmp[item] = item;
+					else
+						tmp[item.name] = item.id;
+				});
+				response.signals = tmp;
+
+				for (var i = 0; i < response.users.length; i++) {
+					var usr = response.users[i];
+					usr.owner = usr.id === user.id;
+				}
+
+				SET('?.form', response, true);
+			});
+
+		};
+
+		exports.operation = function(el) {
+			var type = el.attrd('name');
+			SETTER('approve/show', '@(Are you sure you want to perform selected operation?)', '"play-o" @(Yes, continue)', function() {
+				AJAX('GET [url]api/{0}/clear/'.format(type), function() {
+					SETTER('snackbar/success', '@(Done, operation has been completed.)');
+				});
+			})
+		};
+
+		exports.operation_clear = function(el) {
+			var type = el.attrd('name');
+			var opt = {};
+			opt.element = el;
+			opt.items = [];
+			opt.items.push({ id: 'today', name: '@(Clear today)', icon: 'trash-o' });
+			opt.items.push({ id: 'month', name: '@(Clear this month)', icon: 'trash-o' });
+			opt.items.push({ id: 'year', name: '@(Clear this year)', icon: 'trash-o' });
+			opt.items.push('-');
+			opt.items.push({ id: 'all', name: '@(Clear all)', icon: 'trash-o' });
+			opt.callback = function(item) {
+				SETTER('approve/show', '@(Are you sure you want to perform selected operation?)', '"play-o" @(Yes, continue)', function() {
+					AJAX('GET [url]api/{0}/clear/'.format(type), { id: item.id }, function() {
+						SETTER('snackbar/success', '@(Done, the counters will be removed in 5 minutes.)');
+					});
+				});
+			};
+			SETTER('menu/show', opt);
+		};
+
+		exports.create = function() {
+			SETR('settingsadmin', {});
+			SET('common.form', 'settingsadmin');
+		};
+
+		exports.edit = function(el) {
+			var model = CLONE(settings.form.users.findItem('id', el.attrd('id')));
+			model.password = '';
+			SETR('settingsadmin', model);
+			SET('common.form', 'settingsadmin');
+		};
+
+		exports.remove = function(el) {
+
+			var users = settings.form.users;
+			var index = users.findIndex('id', el.parent().attrd('id'));
+			var user = users[index];
+
+			SETTER('approve/show', '@(Are you sure you want to remove the user <b>"{0}"</b>?)'.format(user.name), '"times-circle" @(Remove)', function() {
+				users.splice(index, 1);
+				exports.scope();
+				UPDATE('?.form.users');
+				CHANGE('?.form.url');
+			});
+		};
+
+		exports.tms_token = function() {
+			var model = GET('?.form');
+			if (model.allow_tms)
+				SET('?.form.secret_tms', Date.now() + GUID(30));
+		};
+
+		exports.verifytotalapi = function(el) {
+			var p = '%settingstotalapiresponse @hideloading';
+			var model = GET('?.form');
+			if (model.allow_totalapi) {
+				var data = {};
+				data.totalapi = model.totalapi;
+				if (data.totalapi) {
+					AJAX('POST /admin/api/totalapi/', data, ASETTER('message/response', '@(Total.js API key is valid)'));
+				} else
+					NUL(p);
+			}
+		};
+
+	});
+
+	Thelpers.settingspermissions = function(value) {
+		var builder = [];
+
+		if (value && value.length) {
+			for (var i = 0; i < value.length; i++) {
+				var role = common.permissions.findItem('id', value[i]);
+				role && builder.push(role.name);
+			}
+		}
+
+		return builder.join(', ') || DEF.empty;
+	};
+
+</script>
