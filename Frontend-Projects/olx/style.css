@@ -213,6 +213,10 @@ background-image: url("https://img.freepik.com/free-photo/modern-home-interior-w
   font-size: 22px;
 }
 
+.p-1 {
+  margin-top: 4px;
+}
+
 .bg-light.d-flex.justify-content-start.align-items-center.p-5{
   padding: 1rem !important;
 }
