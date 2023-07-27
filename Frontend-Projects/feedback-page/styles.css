@@ -1,0 +1,65 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: "Poppins" sans-serif;
+
+}
+body{
+    background-color:floralwhite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width:100vw;
+    height:100vh;
+}
+#div1{
+    text-align: center;
+    background-color:lightcoral;
+    width:40%;
+    height:40%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+}
+#div2{
+   
+    width:76%;
+    height:90%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  
+}
+#review1{
+    font-size: 20px;
+    text-align: center;
+}
+button{
+    margin-top: 20px;
+    width:20%;
+    height:8%;
+    color:white;
+    background-color: black;
+    transition: 1s;
+    margin-bottom: 20px;
+}
+button:hover{
+    transform: scale(1.2);
+    background-color: white;
+    color: black;
+}
+#emoji{
+    text-align: center;
+    cursor: pointer;
+    width:30%;
+    height:50%;
+   border-radius: 20px;
+    margin:20px;
+    font-size: 4rem;
+}
+#emoji:hover{
+background-color: white;
+}
