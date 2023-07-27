@@ -8,12 +8,7 @@ The Expense Tracker app is a user-friendly and efficient mobile application buil
 
 Step 1: Clone the repository
 
-Paste it in your terminal
-``` bash
-git clone https://github.com/aritroo/expense_tracker.git
-
-```
- Step 2: Install all the dependencies 
+Step 2: Install all the dependencies 
 
 Paste it in your terminal
 ``` bash
