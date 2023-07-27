@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+*{
+    margin:0px;
+    padding:0px;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+section{
+    min-height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.60),rgba(0,0,0,0.60)),url("../Image/img3.webp");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.container{
+    width: 85%;
+    margin: auto;
+}
+.container img{
+    width: 80px;
+    height:80px;
+    margin-top: 10px;
+   float: left;
+
+}
+nav{
+    height: 80px;
+}
+
+nav h1{
+    float: left;
+    line-height: 80px;
+    font-size: 35px;
+    font-size: inline;
+    color: brown;
+}
+nav ul{
+    float: right;
+    line-height: 80px;
+}
+nav ul li{
+    display: inline-block;
+    list-style: none;
+    padding:0px 5px;
+}
+nav ul li a{
+    color: #fff;
+    font-size: 25px;
+    text-decoration: none;
+    text-transform: uppercase;
+    border-radius: 5px;
+    padding: 7px 8px;
+}
+nav ul li a:hover{
+    background-color: brown;
+    transition: 0.5s ease;
+}
+nav ul li .active{
+    background-color: brown;
+}
+.article{
+    width: 50%;
+    margin: auto;
+    text-align: center;
+    transform: translateY(25vh);
+}
+.article h1{
+    font-size: 36px;
+   
+    font-family:Georgia, serif; ;
+    color: #fff ;
+    letter-spacing: 1.5px;
+    font-weight: 600;
+    margin-bottom: 25px;
+}
+.article p{
+    font-size: 18px;
+    color: black;
+    line-height: 1.5;
+    margin-bottom: 50px;
+}
+.article .btn{
+    color: #fff;
+    padding: 12px 25px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    text-decoration: none;
+    background-color: #f15048;
+    border-radius: 12px;
+}
+.article .btn:hover{
+    background-color:  #4399fa;
+    transition: 0.5s ease;
+}
