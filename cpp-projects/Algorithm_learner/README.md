@@ -18,9 +18,16 @@ i. Linear Search
 
 ii. Binary Search
 
+2D Array Algorithms-:
+
+i. Transpose of matrix
+
+ii. Multiplication of matrices
+
+iii. Spiral matrix
 <h2>SCREENSHOTS</h2>
 
-![image](https://github.com/Nikita06211/Dev-Geeks/assets/120494269/2291d2dd-6cd0-4149-8c3e-c1589068c9c9)
+![image](https://github.com/Nikita06211/Dev-Geeks/assets/120494269/55195190-bb88-40ad-a95c-419ea72e74a3)
 
 ![image](https://github.com/Nikita06211/Dev-Geeks/assets/120494269/1661a9ad-a331-44e2-bc85-848839cba310)
 
