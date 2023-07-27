@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+
+    <title>Weight</title>
+</head>
+ <style>
+
+body {
+  width: 100vw;
+  height: 100vh;
+
+  display: flex;
+  flex-direction: row;
+  place-items: center;
+  overflow-x: hidden;
+}
+
+form {
+  background-color: #bffc08;
+  padding: 80px;
+  width: 50%;
+  margin: 60px auto;
+  text-align: center;
+  place-items: center;
+  box-shadow: 0 10px 6px -6px #777;
+}
+
+label {
+  font-size: 26px;
+  font-weight: 500;
+}
+</style>
+<body>
+    <form>
+        <h2>Weight Converter</h2>
+        <label for="input">Input:</label>
+        <input type="number" id="input" name="input"><br>
+        <label for="from" >From:</label>
+        <select id="from" name="from" style=" margin-top: 2%; font-size: 20px;">
+            <option value="kg">kg</option>
+            <option value="ton">ton</option>
+            <option value="g">g</option>
+            <option value="lb">lb</option>
+        </select><br>
+        <label for="to">To:</label>
+        <select id="to" name="to" style="  margin-top: 2%; font-size: 20px;">
+            <option value="kg">kg</option>
+            <option value="ton">ton</option>
+            <option value="g">g</option>
+            <option value="lb">lb</option>
+        </select><br>
+        <input type="submit" value="Convert" style="margin-top: 2%;">
+    </form>
+  
+    <script type="text/javascript">
+        document.querySelector('form').addEventListener('submit', function(e) {
+			e.preventDefault();
+			let input = parseFloat(document.querySelector('#input').value);
+			let from = document.querySelector('#from').value;
+			let to = document.querySelector('#to').value;
+			let result;
+
+			if (from == to) {
+				result = input;
+			} else if (from == 'kg') {
+				if (to == 'ton') {
+					result = input / 1000;
+				} else if (to == 'g') {
+					result = input * 1000;
+				} else if (to == 'lb') {
+					result = input * 2.20462;
+				} 
+			} else if (from == 'ton') {
+				if (to == 'kg') {
+					result = input * 1000;
+				} else if (to == 'g') {
+					result = input * Math.pow(10, 6);
+				} else if (to == 'lb') {
+					result = input * 2204.62;
+				} 
+
+    		} else if (from == 'g') {
+    			if (to == 'kg') {
+    				result = input / 1000;
+    			} else if (to == 'ton') {
+    				result = input / Math.pow(10, 6);
+    			} else if (to == 'lb') {
+    				result = input * 0.00220462;
+    			} 
+    		} else if (from == 'lb') {
+    			if (to == 'kg') {
+    				result = input * 0.453592;
+    			} else if (to == 'g') {
+    				result = input * 453.592;
+    			} else if (to == 'ton') {
+    				result = input * 0.000453592;
+    			} 
+    		} 
+		document.querySelector('h2').textContent = result + ' ' + to;
+	});
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,120 @@
+html{
+    font-size: 62.5%;
+}
+@media(max-width:998px){
+    html{
+        font-size: 55%;
+    }
+}
+@media(max-width:768px){
+    html{
+        font-size: 45%;
+    }
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body, .container, .content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+body{
+    position: relative;
+    min-height: 100vh;
+    overflow: hidden;
+}
+.container{
+    width: 44rem;
+    padding: 3rem 3rem 3.8rem;
+    border-radius: 2rem;
+    flex-direction: column;
+    background-color: black;
+}
+.container img{
+    max-width: 28rem;
+    border:.5rem solid #0d0b00;
+    border-radius: 2em;
+}
+.container h1{
+    font-size: 5.8rem;
+    font-weight: 900;
+    margin: 3rem 0;
+    color: white;
+}
+.container .content{
+    flex-direction: column;   
+    width: 100%;
+    justify-content: space-between;
+}
+.content.disable{
+    cursor: no-drop;
+}
+.backvid{
+    position: absolute;
+     top: 0;
+    left: 0;
+    z-index: -10; 
+}
+.backvid .backvidcontent{
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    position: fixed;
+    top: 0;left: 0;
+    z-index: -10;
+} 
+.content .column{
+    padding: 0 .8rem;
+    border-radius: .5rem;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.content.disbale .column{
+    opacity: 0.6;
+    pointer-events: none;
+}
+.column select{
+    margin: .4rem;
+    padding-left: 1.1rem;
+    width: 100%;
+    height: 5rem;
+    outline: none;
+    font-size: 1.9rem;
+    border-radius: 2rem; 
+    background-color: #F8EFBA; 
+    color: rgb(102, 16, 16);
+    font-weight: 780;
+    transition: 0.5s;
+}
+.container .button 
+{
+    margin-top: 2rem;
+    width:100%;
+    border: none;
+    outline: none;
+    color: #3867d6;
+    font-weight: 700;
+    padding: 1.7rem 0 ;
+    border-radius: 3rem;
+    cursor: grab;
+    font-size: 3rem;
+    background-color: #F8EFBA;
+    transition: 0.5s;
+}
+.btn{
+    display: flex;
+    text-decoration: none;
+    align-items: center;
+    justify-content: center;
+    color: rgb(102, 16, 16);
+    transition: 0.8s;
+}
+.button:hover{
+    transform: translate(0,-.6rem);
+    background-color: #D6A2E8;
+} 

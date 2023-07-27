@@ -1,69 +1,159 @@
 body {
-    background: linear-gradient(to right, #041b03, #88d885);
-}
-
-#app {
+    background: linear-gradient(to right, #5f5f63, #110041); 
+    padding-top: 200px;
+    overflow: hidden;
+    }
+    .bubbles{
+        position: absolute;
+        bottom: -110px;
+        display: flex;
+        flex-wrap: wrap;
+        z-index: -1;
+        width: 100%;
+        justify-content: space-around;
+      }
+      .bubbles span{
+        height: 60px;
+        width: 60px;
+        background: rgba(255, 255, 255, 0.1);
+        animation: move 10s linear infinite;
+        position: relative;
+        overflow: hidden;
+      }
+      @keyframes move {
+        100%{
+          transform: translateY(-100vh);
+        }
+      }
+      .bubbles span.one{
+        animation-delay: 2.2s;
+        transform: scale(2.15);
+      }
+      .bubbles span.two{
+        animation-delay: 3.5s;
+        transform: scale(1.55);
+      }
+      .bubbles span.three{
+        animation-delay: 0.2s;
+        transform: scale(0.35);
+      }
+      .bubbles span.four{
+        animation-delay: 6s;
+        transform: scale(2.15);
+      }
+      .bubbles span.five{
+        animation-delay: 7s;
+        transform: scale(0.5);
+      }
+      .bubbles span.six{
+        animation-delay: 4s;
+        transform: scale(2.5);
+      }
+      .bubbles span.seven{
+        animation-delay: 3;
+        transform: scale(1.5);
+      }
+      .bubbles span:before{
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 60px;
+        width: 40%;
+        transform: skew(45deg) translateX(150px);
+        background: rgba(255, 255, 255, 0.15);
+        animation: mirror 3s linear infinite;
+      }
+      @keyframes mirror {
+        100%{
+          transform: translateX(-450px);
+        }
+      }
+      .bubbles span.one:before{
+        animation-delay: 1.5s;
+      }
+      .bubbles span.two:before{
+        animation-delay: 3.5s;
+      }
+      .bubbles span.three:before{
+        animation-delay: 2.5s;
+      }
+      .bubbles span.four:before{
+        animation-delay: 7.5s;
+      }
+      .bubbles span.five:before{
+        animation-delay: 4.5s;
+      }
+      .bubbles span.six:before{
+        animation-delay: 0.5s;
+      }
+      .bubbles span.seven:before{
+        animation-delay: 6s;
+      }
+    #app {
     font-family: Times New Roman;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
     text-align: center;
-    color: grey;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-.calculator {
+    background: rgba( 255, 255, 255, 0.25 );
+    box-shadow: 0 8px 8px 0 rgba( 31, 38, 30, 0.37 );
+    backdrop-filter: blur( 4.5px );
+    -webkit-backdrop-filter: blur( 4.5px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    }
+    
+    .calculator {
     width: 439px;
+    height: 439px;
     padding: 21px;
+    border: 1px solid rgb(250, 250, 250);
     border-radius: 5px;
     margin: 20px auto;
-    font-size: 16px;
+    font-size: 18px;
     background-color: #333333;
-}
-
-.input {
+    }
+    
+    .input {
     width: 420px;
     height: 50px;
     border-radius: 0px;
-    border: 1px solid black;
-    background-color: #333333;
+    border: 1px solid rgb(250, 250, 250);
+    background-color: #474646;
     color: #ccc7c7;
-    padding: 0 10px 0 5px;
-    margin: 0 0px 10px 0px;
+    padding: 0 10px 0 0;
+    margin: 0 0px 18px 0px;
     font-size: 28px;
-}
-
-.input:focus,
-.input:active {
+    }
+    
+    .input:focus,
+    .input:active {
     border-color: #03a9f4;
     box-shadow: 0 0 4px #03A9F4;
-}
-
-.button {
-    margin: 4px;
-    width: 64px;
+    }
+    
+    .button {
+    margin: 6px;
+    width: 70px;
     border: 1.1px solid #0d0d0d;
-    height: 33px;
+    height: 38px;
     border-radius: 5px;
     color: white;
     background-color: #784be2;
     cursor: pointer;
     outline: none;
-}
-
-.mode {
+    }
+    
+    .mode {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
-}
-
-.equal-sign {
+    }
+    
+    .equal-sign {
     background-color: green;
-    width: 133px;
-}
-
-.toggle-button {
+    width: 150px;
+    }
+    
+    .toggle-button {
     border: none;
     background-color: #333333;
     cursor: pointer;
@@ -71,12 +161,13 @@ body {
     font-size: 2rem;
     color: #fff;
     text-shadow: -1px -1px 0 rgba(0, 0, 0, 0.35);
-}
-
-p {
+    }
+    
+    p {
     margin-top: 0;
-}
-
-button::-moz-focus-inner {
+    }
+    
+    button::-moz-focus-inner {
     border-color: transparent;
-}
+    }
+    
