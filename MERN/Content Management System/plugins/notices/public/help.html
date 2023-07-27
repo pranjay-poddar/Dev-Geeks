@@ -1,0 +1,235 @@
+<div data---="form__common.top__if:markdownhelp;title:@(Markdown format);icon:far fa-question-circle;width:900;z-index:100" class="hidden">
+
+	<div class="padding markdown-small">
+		<div class="markdown">
+			<table class="table table-bordered" style="width:100%!important;table-layout:fixed">
+				<tr>
+					<td><pre># @(Heading 1)</pre></td>
+					<td>
+						<h1>Heading 1</h1>
+					</td>
+				</tr>
+				<tr>
+					<td><pre># @(Heading 2)</pre></td>
+					<td>
+						<h2>Heading 2</h2>
+					</td>
+				</tr>
+				<tr>
+					<td><pre># @(Heading 3)</pre></td>
+					<td>
+						<h3>Heading 3</h3>
+					</td>
+				</tr>
+				<tr>
+					<td><pre># @(Heading 4)</pre></td>
+					<td>
+						<h4>Heading 4</h4>
+					</td>
+				</tr>
+				<tr>
+					<td><pre>__@(strong)__</pre></td>
+					<td>@(formats text as <b>strong</b>)</td>
+				</tr>
+				<tr>
+					<td><pre>**@(italic)**</pre></td>
+					<td>@(Formats text as <i>italic</i>)</td>
+				</tr>
+				<tr>
+					<td><pre>_@(underline)_</pre></td>
+					<td>@(Formats text as <u>underline</u>)</td>
+				</tr>
+				<tr>
+					<td><pre>~@(line through)~</pre></td>
+					<td>@(Formats text as <s>line through</s>)</td>
+				</tr>
+				<tr>
+					<td><pre>[@(Link name)](@(url address))</pre></td>
+					<td>@(Creates a link in the form:) <a href="javascript:void(0)">@(Link name)</a></td>
+				</tr>
+				<tr>
+					<td><pre>![@(Image name)](@(url address to image source))</pre></td>
+					<td>
+						<div>@(Renders an image)</div>
+						<img src="https://www.totaljs.com/download/B20200120T000000011.png" class="img-responsive" style="width:40px" />
+					</td>
+				</tr>
+				<tr>
+					<td><pre>![+@(Image name)](@(url address to image source))</pre></td>
+					<td>
+						<div>@(Renders responsive image)</div>
+					</td>
+				</tr>
+				<tr>
+					<td><pre>![-@(Image name)](@(url address to image source)) ![-@(Image name)](@(url address to image source)) ![-@(Image name)](@(url address to image source))</pre></td>
+					<td>
+						<div>@(Makes a gallery from images)</div>
+					</td>
+				</tr>
+				<tr>
+					<td><pre>&lt;@(url address)&gt;</pre></td>
+					<td>@(Highlights text as a link)</a></td>
+				</tr>
+				<tr>
+					<td><pre>{@(keyword)} @(or) {@(keyword)}(@(type))</pre></td>
+					<td>@(Highlights text as a keyword:) <span class="keyword" data-type="type">@(keyword)</span></td>
+				</tr>
+				<tr>
+					<td><pre>:@(Font-Awesome icon name):</pre></td>
+					<td>@(Renders text an icon like this:) <i class="fa fa-home"></i></a></td>
+				</tr>
+				<tr>
+					<td><pre>&lt;br&gt;</pre></td>
+					<td>@(Adds a new line into the current paragraph)</td>
+				</tr>
+				<tr>
+					<td><pre>---</pre></td>
+					<td>
+						<hr class="line1" />
+					</td>
+				</tr>
+				<tr>
+					<td><pre>***</pre></td>
+					<td>
+						<hr class="line2" />
+					</td>
+				</tr>
+				<tr>
+					<td><pre>```video
+https://www.youtube.com/watch?v=AFFJ4Zil0Vc
+```</pre></td>
+					<td>
+						<div class="video">
+							<iframe width="560" height="315" src="https://www.youtube.com/embed/AFFJ4Zil0Vc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td><pre>```iframe
+https://www.totaljs.com
+```</pre></td>
+					<td>
+						<div class="iframe">
+							<iframe width="560" height="315" src="https://www.totaljs.com" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td><pre>| Column 1 | Column 2 :| Column 3 |: Column 4 :|
+| Row 1    | Row 1    :| Row 1    |: Row 1    :|
+| Row 2    | Row 2    :| Row 2    |: Row 2    :|
+| Row 3    | Row 3    :| Row 3    |: Row 3    :|
+</pre></td>
+					<td>
+						<table class="table table-bordered">
+							<thead>
+								<tr>
+									<th>Column 1</th>
+									<th class="right">Column 2</th>
+									<th>Column 3</th>
+									<th class="center">Column 4</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>Row 1</td>
+									<td class="right">Row 1</td>
+									<td>Row 1</td>
+									<td class="center">Row 1</td>
+								</tr>
+								<tr>
+									<td>Row 2</td>
+									<td class="right">Row 2</td>
+									<td>Row 2</td>
+									<td class="center">Row 2</td>
+								</tr>
+								<tr>
+									<td>Row 3</td>
+									<td class="right">Row 3</td>
+									<td>Row 3</td>
+									<td class="center">Row 3</td>
+								</tr>
+							</tbody>
+
+						</table>
+					</td>
+				</tr>
+
+				<tr>
+					<td><pre>&gt; @(The block quotation element)</pre></td>
+					<td>
+						<blockquote>@(The block quotation element)</blockquote>
+					</td>
+				</tr>
+				<tr>
+					<td><pre>&lt; @(Another block quotation element)</pre></td>
+					<td>
+						<section>@(Another block quotation element)</section>
+					</td>
+				</tr>
+				<tr>
+					<td><pre>`@(highlight as code)`</pre></td>
+					<td>
+						@(Highlights text as code): <code>@(highlight as code)</code>
+					</td>
+				</tr>
+				<tr>
+					<td><pre>```javascript
+var a = 0;
+```</pre></td>
+					<td>
+						<pre>
+<b>var</b> a = <span style="color:#2E5883">0</span>;</pre>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<pre>- @(text)
+- @(text)
+- @(text)</pre></td>
+					<td>
+						@(Makes unordered list):
+						<ul style="margin-top:10px">
+							<li>@(text)</li>
+							<li>@(text)</li>
+							<li>@(text)</li>
+						</ul>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<pre>1. @(text)
+1. @(text)
+1. @(text)</pre></td>
+					<td>
+						@(Makes ordered list):
+						<ol style="margin-top:10px">
+							<li>@(text)</li>
+							<li>@(text)</li>
+							<li>@(text)</li>
+						</ol>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<pre>a. @(text)
+a. @(text)
+a. @(text)</pre></td>
+					<td>
+						@(Makes ordered list):
+						<ol style="margin-top:10px" type="a">
+							<li>@(text)</li>
+							<li>@(text)</li>
+							<li>@(text)</li>
+						</ol>
+					</td>
+				</tr>
+			</table>
+		</div>
+	</div>
+
+	<nav>
+		<button name="cancel" style="min-width:100%">@(Close)</button>
+	</nav>
+
+</div>

@@ -1,0 +1,291 @@
+/* Colours */
+/* Sizes */
+/* Positions */
+/* Timings */
+/* Main stage sylings */
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+  }
+  
+  body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #377771;
+  }
+  
+  .container {
+    -webkit-mask-image: -webkit-radial-gradient(white, black);
+    display: flex;
+    background-color: #FFC9AD;
+    position: relative;
+    width: 380px;
+    height: 500px;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    animation: DayCycle 3s infinite cubic-bezier(0.41, 0.15, 0.64, 0.91) -1s;
+  }
+  
+  /* Custom animations */
+  @keyframes GroundLoop {
+    from {
+      left: -268.3333333333px;
+    }
+    to {
+      left: -518.3333333333px;
+    }
+  }
+  @keyframes CharacterSway {
+    0% {
+      transform: translate(0, 0);
+    }
+    55% {
+      transform: translate(125px, 0);
+    }
+    100% {
+      transform: translate(0, 0);
+    }
+  }
+  @keyframes CharacterMotion {
+    10% {
+      bottom: 0;
+    }
+    27.5% {
+      bottom: -65px;
+    }
+    50% {
+      bottom: 0;
+    }
+  }
+  @keyframes SwitchThatMood {
+    0% {
+      transform: rotate(-12deg) scaleY(1);
+    }
+    60% {
+      transform: rotate(195deg) scaleY(1);
+    }
+    85% {
+      transform: rotate(167deg) scaleY(0.8);
+    }
+    90% {
+      transform: rotate(168deg) scaleY(-1);
+    }
+    92% {
+      transform: rotate(168deg) scaleY(-0.8);
+    }
+    93.5% {
+      transform: rotate(168deg) scaleY(-1);
+    }
+    95% {
+      transform: rotate(168deg) scaleY(-0.9);
+    }
+    97.5% {
+      transform: rotate(168deg) scaleY(-1);
+    }
+    98% {
+      transform: rotate(168deg) scaleY(-0.95);
+    }
+    98.25% {
+      transform: rotate(168deg) scaleY(-1);
+    }
+    99.25% {
+      transform: rotate(168deg) scaleY(-0.98);
+    }
+    100% {
+      transform: rotate(168deg) scaleY(-1);
+    }
+  }
+  @keyframes MouthColours {
+    60% {
+      fill: #F08080;
+    }
+    85% {
+      fill: #CD6E6E;
+    }
+    86% {
+      fill: #F08080;
+    }
+  }
+  @keyframes EyeMove {
+    0% {
+      transform: rotate(0deg);
+    }
+    60% {
+      transform: rotate(720deg);
+    }
+    85% {
+      transform: rotate(680deg);
+    }
+    100% {
+      transform: rotate(720deg);
+    }
+  }
+  @keyframes SunMove {
+    from {
+      transform: translate(0, 0) rotate(90deg);
+    }
+    to {
+      transform: translate(-580px, 0) rotate(-90deg);
+    }
+  }
+  @keyframes DayCycle {
+    0% {
+      background-color: #FFAD85;
+    }
+    50% {
+      background-color: #FFC9AD;
+    }
+    100% {
+      background-color: #FFAD85;
+    }
+  }
+  @keyframes GroundColourCycle {
+    0% {
+      background-color: #FF6C47;
+    }
+    50% {
+      background-color: #FF8E72;
+    }
+    100% {
+      background-color: #FF6C47;
+    }
+  }
+  /* ...the rest */
+  .sun {
+    position: absolute;
+    top: -133.3333333333px;
+    right: -200px;
+    width: 200px;
+    height: 200px;
+    background-color: #FAFF70;
+    border-radius: 50%;
+    opacity: 0.5;
+    transform-origin: center bottom;
+    animation: SunMove 3s infinite cubic-bezier(0.41, 0.15, 0.64, 0.91) -1s;
+  }
+  
+  .bumps {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+  
+  .inner {
+    position: absolute;
+    bottom: -100px;
+    left: -268.3333333333px;
+    display: inline-flex;
+    white-space: nowrap;
+    animation: GroundLoop 3s linear infinite;
+  }
+  
+  .bump {
+    position: relative;
+    width: 250px;
+    height: 300px;
+    background-color: #FF8E72;
+    animation: GroundColourCycle 3s infinite cubic-bezier(0.41, 0.15, 0.64, 0.91) -1s;
+  }
+  .bump::after {
+    content: "";
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    background-color: #FFC9AD;
+    border-radius: 50%;
+    top: -50%;
+    left: -50%;
+    animation: DayCycle 3s infinite cubic-bezier(0.41, 0.15, 0.64, 0.91) -1s;
+  }
+  
+  .character {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    bottom: 115px;
+    left: 31.6666666667px;
+  }
+  
+  .head {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    border-radius: 50%;
+    background-color: #377771;
+    border: 20px solid #204642;
+    box-shadow: inset -10px 0 0 rgba(0, 0, 0, 0.1);
+    animation: CharacterSway 3s infinite cubic-bezier(0.4, -0.01, 0.65, 0.97), CharacterMotion 3s infinite cubic-bezier(0.76, 0.32, 0.17, 0.85);
+  }
+  
+  .mouth {
+    position: absolute;
+    width: 90%;
+    height: 50%;
+    border-radius: 30px;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  svg.mouth-shadow {
+    width: 100%;
+    height: 95%;
+    position: absolute;
+    top: 17%;
+    animation: SwitchThatMood 3s infinite cubic-bezier(0.4, -0.01, 0.65, 0.97), MouthShadowOpacity 3s cubic-bezier(0.4, -0.01, 0.65, 0.97);
+    transform-origin: center top;
+  }
+  svg.mouth-shadow path {
+    fill: rgba(0, 0, 0, 0.1);
+  }
+  
+  svg.flipper {
+    width: 100%;
+    height: 95%;
+    animation: SwitchThatMood 3s infinite cubic-bezier(0.4, -0.01, 0.65, 0.97);
+    transform-origin: center top;
+  }
+  svg.flipper path {
+    width: 100%;
+    height: 100%;
+    fill: #F08080;
+    animation: MouthColours 3s infinite cubic-bezier(0.4, -0.01, 0.65, 0.97);
+  }
+  
+  .eye {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background: linear-gradient(#F9F7F3, #eae4d6);
+    position: absolute;
+    top: -50px;
+    left: calc(50% - 45px);
+  }
+  .eye::after {
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: #204642;
+    border-radius: 50%;
+    left: calc(50% - 5px);
+    top: calc(50% - 5px);
+    transform-origin: 40% 60%;
+    animation: EyeMove 3s infinite;
+  }
+  .eye:nth-child(2) {
+    left: 50%;
+  }
+  .eye:nth-child(2)::after {
+    transform-origin: 30% 30%;
+  }
