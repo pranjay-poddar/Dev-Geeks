@@ -1,0 +1,192 @@
+/*
+    IMPORTING FONTS FROM RELATIVE SOURCE
+*/
+@font-face {
+    font-family: 'KumbhSans';
+    src: url(https://raw.githubusercontent.com/0xabdulkhalid/profile-card-component/main/fonts/KumbhSans.ttf) format("truetype-variations");
+    font-weight: 1 999;
+    font-display: swap;
+}
+
+
+
+/*
+    VARIABLE DECLARATION (GLOBAL SCOPE)
+*/
+:root {
+    --dark-cyan: hsl(185, 75%, 39%);
+    --very-dark-desaturated-blue: hsl(229, 23%, 23%);
+    --dark-grayish-blue: hsl(227, 10%, 46%);
+    --dark-grey: hsl(0, 0%, 59%);
+}
+
+/*
+    MIN-CSS RESET
+*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*
+    BODY SECTION
+*/ 
+body {
+    min-height: 100vh;
+    background-color:  var(--dark-cyan);
+    background-image: url(https://raw.githubusercontent.com/0xabdulkhalid/profile-card-component/main/images/bg-pattern-top.svg), url(https://raw.githubusercontent.com/0xabdulkhalid/profile-card-component/main/images/bg-pattern-bottom.svg);
+    background-position: right 40vw bottom 60vh, left 25vw top 50vh;
+    background-repeat: no-repeat, no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-rendering: optimizeSpeed;
+    font-family: 'KumbhSans', sans-serif;
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}
+
+
+/*
+    PROFILE CARD SECTION
+*/
+.profile-card {
+    width: 85%;
+    height: 23.2em;
+    display: grid;
+    grid-template-rows: .6fr 1fr;
+    background: white;
+    color: var(--dark-grayish-blue);
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 60px 80px rgba(0,0,0,.16);
+}
+
+.profile-card__banner-section {
+    overflow: hidden;
+}
+
+.profile-card__banner {
+    width: 100%;
+    transition: .7s ease;
+}
+
+
+.profile-card__profile {
+    display: grid;
+    position: relative;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr 100px;
+}
+
+.profile-card__avatar {
+    position: absolute;
+    top: -53px;
+    border: 5px solid #f7f7f7;
+    border-radius: 50%;
+    place-self: center;
+    transition: .7s ease;
+    width: 105px;
+    height: 105px;
+}
+
+.profile-card__bio {
+    grid-column: 1/-1;
+    place-self: center;
+    margin-top: 3.7em;
+}
+
+.profile-card__bio > * {
+    display: inline;
+    font-size: 1.3rem;
+}
+
+.profile-card__profile-age {
+    margin-left: 3px;
+}
+
+.profile-card__profile-location {
+    margin-top: 8px;
+    display: block;
+    text-align: center;
+    font-size: .8rem;
+}
+
+.profile-card__limestones {
+    text-align: center;
+    height: 100%;
+    border-top: 1px solid #dddddd;
+    display: grid;
+    place-items: center;
+    align-content: center;
+    letter-spacing: 0.1em;
+    font-size: .8rem;
+}
+
+.profile-card__limestones:nth-last-child(1){ padding-right: 2.6em;}
+
+.profile-card__limestones:nth-child(3){ padding-left: 3em;}
+
+.profile-card__profile-name,
+.profile-card__limestone-count {
+    color: var(--very-dark-desaturated-blue);
+    letter-spacing: normal;
+    font-size: 1.25rem;
+    margin-top: .6em;
+}
+
+.profile-card__profile-name {
+    font-size: 1.125rem;
+    margin: 0 0 5px 2px;
+}
+
+.profile-card:hover .profile-card__banner{
+    transform: scale(1.4) translateX(-15px);
+}
+
+/*
+    FOOTER SECTION
+*/
+.attribution {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    font-size: 0.85rem;
+    text-align: center;
+    margin: 2rem 0 1rem 0;
+    color: #eee;
+}
+.attribution__link {
+    color: #f7f7f7;
+    transition: .5s ease;
+    filter: brightness(.95);
+}
+.attribution__link:hover, .attribution__link:active {
+    color: #ffffff; 
+    filter: brightness(1.5);
+}
+
+/*
+    MEDIA QUERIES SECTION
+*/
+@media (min-width: 35em) {  /*  FOR TABLET */
+
+    body {
+        background-position: right 52vw bottom 35vh, left 48vw top 52vh;
+    }
+
+    .profile-card {
+        width: 21.9em;
+    }
+}
