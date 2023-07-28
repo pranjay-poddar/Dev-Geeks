@@ -1,0 +1,21 @@
+body{
+	margin:0;
+	background:#222;
+		background: url("https://media.istockphoto.com/id/1225819120/vector/beautiful-forest-landscape.jpg?s=612x612&w=0&k=20&c=aPt3_7WxLBQwBvtvG_RfZrP8uFDzguCtCyJHXrA4slU=");
+  background-repeat: no-repeat;
+  background-size: 1920px 740px;
+
+	/*margin:20px;*/
+}
+svg{
+	width:100%;
+	height:100%;
+	position:fixed;
+	top:0;
+	left:0;
+}
+span{
+	color:white;
+	font-family:sans-serif;
+	opacity:.3;
+}
