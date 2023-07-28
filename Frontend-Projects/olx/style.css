@@ -114,6 +114,10 @@ margin: 80px;
   border-radius: 16px;
 }
 
+h4.card-heading {
+  text-align: center;
+}
+
 .nike-bg-image-1 {
   background-image: url("https://assets.ccbp.in/frontend/intermediate-rwd/nike-shoes-1-img.png");
 }
@@ -168,6 +172,7 @@ background-image: url("https://img.freepik.com/free-photo/modern-home-interior-w
 .card-description {
   font-size: 16px;
   color: #594d6d;
+  text-align: center;
 }
 
 .badge {
@@ -200,11 +205,16 @@ background-image: url("https://img.freepik.com/free-photo/modern-home-interior-w
 .card-footer-container {
   display: flex;
   justify-content: space-between;
+  margin: auto;
 }
 
 .icon {
   color: white;
   font-size: 22px;
+}
+
+.p-1 {
+  margin-top: 4px;
 }
 
 .bg-light.d-flex.justify-content-start.align-items-center.p-5{
