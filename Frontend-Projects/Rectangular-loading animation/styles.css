@@ -1,0 +1,41 @@
+
+body{
+    z-index: 100;
+    width: 100vw;;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    overflow: hidden;
+}
+#div1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width:30%;
+    height: 10%;
+    font-size: 3rem;
+    background: white;
+  border-radius: 20px;
+    color: #2efa94;
+}
+#div2{
+
+    opacity: 0.5;
+    width:5%;
+    background-color: rgb(174, 0, 255);
+    height: 10%;
+    animation: animate 2s ease-in-out infinite;
+    animation-direction: alternate;
+    z-index: 200;
+    border-radius: 20px;
+}
+@keyframes animate {
+    0%{
+        transform: translateX(79px);
+    }
+    100%{
+        transform: translate(456px);
+    }
+}
