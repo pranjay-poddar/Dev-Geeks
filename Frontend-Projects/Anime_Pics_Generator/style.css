@@ -1,6 +1,7 @@
 body{
     margin: 0;
-    background: linear-gradient(to right, lightblue, yellow);
+    background: rgb(238,174,202);
+    background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
     display: flex;
     height: 100vh;
     justify-content: center;
@@ -9,7 +10,9 @@ body{
 }
 
 .container{
-    background: aliceblue;
+    background: rgb(238,174,202);
+    background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+    font-size: 30px;
     border-radius: 10px;
     box-shadow: 0 10px 20px rgba(0,0,0,0.3);
     text-align: center;
@@ -19,7 +22,7 @@ body{
 }
 
 .btn{
-    background-color: green;
+    background-color: #DB7093;
     color: aliceblue;
     padding: 10px 30px;
     font-size: 16px;
@@ -43,7 +46,7 @@ body{
 
 .anime-name{
     margin: 20px;
-    background-color: green;
+    background-color: #DB7093;
     color: aliceblue;
     padding: 10px;
     border-radius: 6px;
