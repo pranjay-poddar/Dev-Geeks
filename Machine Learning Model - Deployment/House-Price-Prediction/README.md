@@ -62,8 +62,4 @@ The dataset used in this project is subject to the licensing terms provided by K
 
 Contributions to this project are welcome. If you find any issues or have suggestions for improvements, please feel free to open an issue or submit a pull request.
 
-## Contact
-
-For any questions or inquiries, please contact [m.arpanareddy18@gmail.com]
-
 ---
