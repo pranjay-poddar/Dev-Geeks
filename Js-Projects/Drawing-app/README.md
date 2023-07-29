@@ -2,7 +2,7 @@
 
 The Drawing App is a web-based application that allows users to draw on a canvas using various tools and colors. It provides an interactive drawing experience with options for different shapes, brush sizes, and colors.
 
-![Drawing App Screenshot](./drawing-app-screenshot.jpeg)
+![Drawing App Screenshot](./images/drawing-app-screenshot.jpeg)
 
 ## Features
 
