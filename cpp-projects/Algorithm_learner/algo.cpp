@@ -1,4 +1,5 @@
 #include <iostream>
+#include <algorithm>
 using namespace std;
 
 // PRINTING ARRAY
@@ -10,6 +11,20 @@ void printArray(int arr[], int n)
         cout << arr[i];
     }
     return;
+}
+
+// PRINTING 2D ARRAY
+
+void print2D(int arr[][100], int rows, int col)
+{
+    for (int i = 0; i < rows; i++)
+    {
+        for (int j = 0; j < col; j++)
+        {
+            cout << arr[i][j] << " ";
+        }
+        cout << endl;
+    }
 }
 
 // SORTING
@@ -43,7 +58,7 @@ void BubbleSort(int arr[], int n)
             {
                 swap(arr[j], arr[j + 1]);
             }
-            cout << "step " << j+1 << ": ";
+            cout << "step " << j + 1 << ": ";
             printArray(arr, n);
             cout << endl;
         }
@@ -144,12 +159,213 @@ void BinarySearch(int arr[], int n, int key)
     }
 }
 
+// 2D Array
+
+void transpose(int arr[][100], int rows, int col)
+{
+    cout << "Creating a transpose matrix and initialising it with 0" << endl;
+    int count = 1;
+    int mat[col][100] = {0};
+    for (int i = 0; i < rows; i++)
+    {
+        for (int j = 0; j < col; j++)
+        {
+            mat[j][i] = arr[i][j];
+            cout << "step: " << count << endl;
+            print2D(mat, rows, col);
+            count++;
+        }
+    }
+}
+
+// MULTIPLICATION OF MATRICES
+
+void multiplication(int A[][100], int B[][100], int r1, int c1, int c2)
+{
+    cout << "Consider the resultant matrix C which is initialised with 0" << endl;
+    int count = 1;
+    int C[r1][100] = {0};
+    for (int i = 0; i < r1; i++)
+    {
+        for (int j = 0; j < c2; j++)
+        {
+            C[i][j] = 0;
+            for (int k = 0; k < c1; k++)
+            {
+                C[i][j] += A[i][k] * B[k][j];
+                cout << endl
+                     << "step " << count << ": " << endl;
+                print2D(C, r1, c2);
+                count++;
+            }
+        }
+    }
+}
+
+// SPIRAL MATRIX
+
+void Spiral(int mat[][100], int r, int c)
+{
+    int top = 0, bottom = r - 1, left = 0, right = c - 1;
+    cout << "The spiral order is: " << endl;
+    while (top <= bottom && left <= right)
+    {
+        // Print the top row from left to right
+        cout << "Print the top row from left to right" << endl;
+        for (int i = left; i <= right; i++)
+            cout << mat[top][i] << " ";
+        top++;
+        cout << endl;
+
+        // Print the rightmost column from top to bottom
+        cout << "Print the rightmost column from top to bottom" << endl;
+        for (int i = top; i <= bottom; i++)
+            cout << mat[i][right] << " ";
+        right--;
+        cout << endl;
+
+        // Print the bottom row from right to left
+
+        if (top <= bottom)
+        {
+            cout << "Print the bottom row from right to left" << endl;
+            for (int i = right; i >= left; i--)
+                cout << mat[bottom][i] << " ";
+            bottom--;
+            cout << endl;
+        }
+
+        // Print the leftmost column from bottom to top
+
+        if (left <= right)
+        {
+            cout << "Print the leftmost column from bottom to top" << endl;
+            for (int i = bottom; i >= top; i--)
+                cout << mat[i][left] << " ";
+            left++;
+            cout << endl;
+        }
+    }
+}
+
+void Rotate(int c, int r, int mat[][100])
+{
+
+    int arr[c][100] = {0};
+    cout << "Step 1: Transposed Matrix:" << endl
+         << endl;
+    for (int i = 0; i < r; i++)
+    {
+        for (int j = 0; j < c; j++)
+        {
+            arr[i][j] = mat[j][i];
+        }
+    }
+    print2D(arr, r, c);
+
+    cout << endl
+         << endl;
+    cout << "Step 2: Reverse Rows:" << endl
+         << endl;
+    for (int i = 0; i < r; i++)
+    {
+        int start = 0;
+        int end = c - 1;
+        while (start < end)
+        {
+            swap(arr[i][start], arr[i][end]);
+            start++;
+            end--;
+        }
+    }
+    print2D(arr, r, c);
+}
+
+int BSearch(int mat[][100], int c, int r, int target)
+{
+
+    int s = 0, e = r * c - 1;
+    int m = s + (e - s) / 2;
+    cout << "-----------------------------" << endl;
+    cout << "Consider the entire matrix as a one-dimensional array of length " << e << endl;
+    cout << "Compare target with middle element of array " << endl;
+
+    while (s <= e)
+    {
+        int element = mat[m / c][m % c];
+        cout << "Mid element is: " << element << endl;
+
+        if (target == element)
+        {
+            cout << "Element found at :"
+                 << "row: " << (m / c) << "column: " << (m % c) << endl;
+            return 1;
+        }
+        else if (target > element)
+        {
+            cout << target << " > " << element << endl;
+            s = m + 1;
+        }
+        else
+        {
+            cout << target << " < " << element << endl;
+            e = m - 1;
+        }
+        m = s + (e - s) / 2;
+        cout << "start: " << s << endl;
+        cout << "mid: " << m << endl;
+        cout << "end: " << e << endl;
+        cout << "-----------------------------" << endl;
+    }
+    cout << "Element not found" << endl;
+    return 0;
+}
+
+int staircase(int mat[][100], int r, int c, int target)
+{
+
+    cout << "Start from the top-right element of the matrix " << endl;
+
+    int rowstart = 0;
+    int rowend = r - 1;
+    int colend = c - 1;
+
+    while (rowstart < r && colend >= 0)
+    {
+        int element = mat[rowstart][colend];
+        cout << "Current element is: " << element << endl;
+        if (target == element)
+        {
+            cout << "Element found at row: " << rowstart << " and column: " << colend << endl;
+            return 1;
+        }
+        else if (target < element)
+        {
+            cout << "Moving leftward " << endl;
+            colend--;
+        }
+        else
+        {
+            cout<<"Moving downwards"<<endl;
+            rowstart++;
+        }
+    }
+    cout<<"Element not found "<<endl;
+    return 0;
+}
+
 int main()
 {
     int choice;
-    cout <<endl<< "====ALGORITHM SELECTION====" << endl<<endl;
-    cout << "1. Sorting algorithms" << endl<<endl;
-    cout << "2. Searching algorithms" << endl<<endl;
+    cout << endl
+         << "====ALGORITHM SELECTION====" << endl
+         << endl;
+    cout << "1. Sorting algorithms" << endl
+         << endl;
+    cout << "2. Searching algorithms" << endl
+         << endl;
+    cout << "3. 2D Array Algorithms" << endl
+         << endl;
     cout << "Enter your choice" << endl;
     cin >> choice;
 
@@ -159,10 +375,14 @@ int main()
 
         int choice1;
         cout << "-----------------------------" << endl;
-        cout << "SORTING ALGORITHMS" << endl<<endl;
-        cout << "1. Bubble sort" << endl<<endl;
-        cout << "2. Selection sort" << endl<<endl;
-        cout << "3. Insertion sort" << endl<<endl;
+        cout << "SORTING ALGORITHMS" << endl
+             << endl;
+        cout << "1. Bubble sort" << endl
+             << endl;
+        cout << "2. Selection sort" << endl
+             << endl;
+        cout << "3. Insertion sort" << endl
+             << endl;
         cout << "Enter your choice" << endl;
         cin >> choice1;
 
@@ -244,13 +464,16 @@ int main()
     }
 
     // SEARCHING ALGORITHMS
-    if (choice == 2)
+    else if (choice == 2)
     {
         int choice2;
         cout << "-----------------------------" << endl;
-        cout << "SEARCHING ALGORITHMS" << endl<<endl;
-        cout << "1. Linear Search" << endl<<endl;
-        cout << "2. Binary Search" << endl<<endl;
+        cout << "SEARCHING ALGORITHMS" << endl
+             << endl;
+        cout << "1. Linear Search" << endl
+             << endl;
+        cout << "2. Binary Search" << endl
+             << endl;
         cout << "Enter your choice" << endl;
         cin >> choice2;
 
@@ -308,6 +531,232 @@ int main()
             cout << "Enter element to be searched in array" << endl;
             cin >> key;
             BinarySearch(arr, n, key);
+        }
+    }
+
+    // 2D ARRAY ALGORITHMS
+
+    else if (choice == 3)
+    {
+
+        int choice1;
+        cout << "-----------------------------" << endl;
+        cout << "2D ARRAY ALGORITHMS" << endl
+             << endl;
+        cout << "1. Transpose of Matrix" << endl
+             << endl;
+        cout << "2. Multiplication of Matrix" << endl
+             << endl;
+        cout << "3. Spiral Matrix" << endl
+             << endl;
+        cout << "4. Matrix Rotation" << endl
+             << endl;
+        cout << "5. Matrix Search - Binary Search" << endl
+             << endl;
+        cout << "6. Matrix Search - Staircase Search" << endl
+             << endl;
+        cout << "Enter your choice" << endl;
+        cin >> choice1;
+
+        if (choice1 == 1)
+        {
+            cout << "-----------------------------" << endl;
+            cout << "TRANSPOSE OF MATRIX" << endl;
+            cout << "-----------------------------" << endl;
+            cout << "DESCRIPTION" << endl;
+            cout << "-----------------------------" << endl;
+            cout << "The transpose of a matrix is an operation that involves swapping the rows and columns of a given matrix.\nGiven an m x n matrix, the transpose operation converts it into an n x m matrix, where the rows of the original matrix become the columns of the transposed matrix, and vice versa." << endl;
+            cout << "-----------------------------" << endl;
+            cout << "TIME COMPLEXITY" << endl;
+            cout << "-----------------------------" << endl;
+            cout << "The time complexity of the transpose operation is O(m * n), where 'm' is the number of rows and 'n' is the number of columns in the original matrix." << endl;
+            cout << "-----------------------------" << endl;
+            cout << "Enter number of rows: ";
+            int rows;
+            cin >> rows;
+            cout << endl;
+            int col;
+            cout << "Enter number of columns: ";
+            cin >> col;
+            cout << endl;
+            cout << "Enter elements of matrix";
+            int arr[rows][100];
+            for (int i = 0; i < rows; i++)
+            {
+                for (int j = 0; j < col; j++)
+                {
+                    cin >> arr[i][j];
+                }
+            }
+            transpose(arr, rows, col);
+        }
+
+        else if (choice1 == 2)
+        {
+            int r1, c1, c2;
+            cout << "-----------------------------" << endl;
+            cout << "MULTIPLICATION OF MATRIX" << endl;
+            cout << "-----------------------------" << endl;
+            cout << "DESCRIPTION" << endl;
+            cout << "-----------------------------" << endl;
+            cout << "Matrix multiplication is an essential mathematical operation that combines two matrices to produce a new matrix.\nGiven two matrices A and B, where A is of size m x p and B is of size p x n, the product of A and B results in a new matrix C of size m x n." << endl;
+            cout << "-----------------------------" << endl;
+            cout << "TIME COMPLEXITY" << endl;
+            cout << "-----------------------------" << endl;
+            cout << "The time complexity of matrix multiplication is O(m * p * n), where 'm', 'p', and 'n' are the dimensions of matrices A, B, and C, respectively." << endl;
+            cout << "-----------------------------" << endl;
+            cout << "Enter rows of matrix A" << endl;
+            cin >> r1;
+            cout << "Enter columns of matrix A" << endl;
+            cin >> c1;
+            cout << "Rows of matrix B = Columns of matrix A" << endl;
+            cout << "Enter columns of matrix B" << endl;
+            cin >> c2;
+            int A[r1][100];
+            int B[c1][100];
+            cout << "Enter elements of matrix A" << endl;
+            for (int i = 0; i < r1; i++)
+            {
+                for (int j = 0; j < c1; j++)
+                {
+                    cin >> A[i][j];
+                }
+            }
+            cout << "Enter elements of matrix B" << endl;
+            for (int i = 0; i < c1; i++)
+            {
+                for (int j = 0; j < c2; j++)
+                {
+                    cin >> B[i][j];
+                }
+            }
+            multiplication(A, B, r1, c1, c2);
+        }
+        else if (choice1 == 3)
+        {
+            int r, c;
+            cout << "-----------------------------" << endl;
+            cout << "SPIRAL MATRIX" << endl;
+            cout << "-----------------------------" << endl;
+            cout << "DESCRIPTION" << endl;
+            cout << "-----------------------------" << endl;
+            cout << "Printing a matrix in a spiral order involves traversing the elements of the matrix in a clockwise spiral manner,\nstarting from the top-left corner and moving towards the center in a spiral path until all elements are visited.\nThe spiral order traversal is visualized as if following the boundary of the matrix." << endl;
+            cout << "-----------------------------" << endl;
+            cout << "TIME COMPLEXITY" << endl;
+            cout << "-----------------------------" << endl;
+            cout << "The time complexity for printing a matrix in a spiral order is O(m * n), where 'm' is the number of rows and 'n' is the number of columns in the matrix." << endl;
+            cout << "-----------------------------" << endl;
+            cout << "Enter the rows of matrix" << endl;
+            cin >> r;
+            cout << "Enter the columns of matrix" << endl;
+            cin >> c;
+            int mat[r][100];
+            cout << "Enter elements of matrix" << endl;
+            for (int i = 0; i < r; i++)
+            {
+                for (int j = 0; j < c; j++)
+                {
+                    cin >> mat[i][j];
+                }
+            }
+            Spiral(mat, r, c);
+        }
+
+        else if (choice1 == 4)
+        {
+
+            int c, r;
+            cout << "-----------------------------" << endl;
+            cout << "MATRIX ROTATION" << endl;
+            cout << "-----------------------------" << endl;
+            cout << "DESCRIPTION" << endl;
+            cout << "-----------------------------" << endl;
+            cout << "Matrix rotation is an algorithm that involves rotating the elements of a matrix in-place, either clockwise or counterclockwise, by 90 degrees.\nThis operation changes the orientation of the matrix while preserving its elements.\nThe algorithm modifies the matrix directly without requiring any additional data structures, making it memory-efficient." << endl;
+            cout << "-----------------------------" << endl;
+            cout << "TIME COMPLEXITY" << endl;
+            cout << "-----------------------------" << endl;
+            cout << "The matrix rotation algorithm involves two main operations:\ntransposing and reversing rows/columns,\nboth of which take O(m * n) time, where 'm' is the number of rows and 'n' is the number of columns in the matrix" << endl;
+            cout << "-----------------------------" << endl;
+            cout << "Enter the rows of matrix" << endl;
+            cin >> r;
+            cout << "Enter the columns of matrix" << endl;
+            cin >> c;
+            int mat[r][100];
+            cout << "Enter elements of matrix" << endl;
+            for (int i = 0; i < r; i++)
+            {
+                for (int j = 0; j < c; j++)
+                {
+                    cin >> mat[i][j];
+                }
+            }
+            Rotate(c, r, mat);
+        }
+
+        else if (choice1 == 5)
+        {
+
+            int c, r, target;
+            cout << "-----------------------------" << endl;
+            cout << "MATRIX SEARCH" << endl;
+            cout << "-----------------------------" << endl;
+            cout << "DESCRIPTION" << endl;
+            cout << "-----------------------------" << endl;
+            cout << "The Matrix Search using Binary Search algorithm is an efficient way to search for an element in a sorted matrix.\nThis algorithm is based on the principles of binary search and takes advantage of the sorted rows and columns of the matrix to achieve a time complexity of O(log(m * n)),\nwhere 'm' is the number of rows and 'n' is the number of columns in the matrix." << endl;
+            cout << "-----------------------------" << endl;
+            cout << "TIME COMPLEXITY" << endl;
+            cout << "-----------------------------" << endl;
+            cout << "The time complexity of the Matrix Search using Binary Search algorithm is O(log(m * n)), where 'm' is the number of rows and 'n' is the number of columns in the matrix" << endl;
+            cout << "-----------------------------" << endl;
+            cout << "Enter the rows of matrix" << endl;
+            cin >> r;
+            cout << "Enter the columns of matrix" << endl;
+            cin >> c;
+            int mat[r][100];
+            cout << "Enter elements of matrix" << endl;
+            for (int i = 0; i < r; i++)
+            {
+                for (int j = 0; j < c; j++)
+                {
+                    cin >> mat[i][j];
+                }
+            }
+            cout << "Enter the element to be searched" << endl;
+            cin >> target;
+
+            BSearch(mat, c, r, target);
+        }
+
+        else if (choice1 == 6)
+        {
+            int c, r, target;
+            cout << "-----------------------------" << endl;
+            cout << "MATRIX SEARCH" << endl;
+            cout << "-----------------------------" << endl;
+            cout << "DESCRIPTION" << endl;
+            cout << "-----------------------------" << endl;
+            cout << "The Staircase Algorithm, also known as the Staircase Traversal or Staircase Search algorithm, is an approach used to efficiently search for a target element in a two-dimensional matrix with a specific pattern of sorted rows and columns.\nThe algorithm is designed to exploit the sorted nature of the matrix and minimize the search space while searching for the target element." << endl;
+            cout << "-----------------------------" << endl;
+            cout << "TIME COMPLEXITY" << endl;
+            cout << "-----------------------------" << endl;
+            cout << "The time complexity of the Staircase Algorithm is O(m + n), where 'm' is the number of rows and 'n' is the number of columns in the matrix." << endl;
+            cout << "-----------------------------" << endl;
+            cout << "Enter the rows of matrix" << endl;
+            cin >> r;
+            cout << "Enter the columns of matrix" << endl;
+            cin >> c;
+            int mat[r][100];
+            cout << "Enter elements of matrix" << endl;
+            for (int i = 0; i < r; i++)
+            {
+                for (int j = 0; j < c; j++)
+                {
+                    cin >> mat[i][j];
+                }
+            }
+            cout << "Enter the element to be searched" << endl;
+            cin >> target;
+            staircase(mat,r,c,target);
         }
     }
     return 0;
