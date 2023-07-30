@@ -1,0 +1,42 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: black;
+}
+svg:nth-child(2){
+    filter: blur(40px);
+}
+h1{
+    color: white;
+    z-index: 100;
+    transform: translate(0px,-300px);
+}
+svg{
+    position: absolute;
+    width: 400px;
+    fill: none;
+}
+svg path{
+    d: path("M0,25 C150,110 150,-60 300,25");
+    stroke:white;
+    stroke-width: 50;
+    stroke-linecap: round;
+    transform: translate(50px,50%);
+    animation: animate 2s ease-in-out infinite;
+}
+@keyframes animate {
+    0%{
+        stroke:white;
+        d: path("M0,25 C150,110 150,-60 300,25");
+    }
+50%{
+        stroke: aqua;
+        d: path("M0,25 C160,-50 140,110 300,25");
+    }
+}
