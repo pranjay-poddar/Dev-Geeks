@@ -1,0 +1,100 @@
+/*=============== VARIABLES CSS ===============*/
+:root {
+  --biggest-font-size: 2.375rem;
+  --normal-font-size: .938rem;
+}
+
+@media screen and (min-width: 1024px) {
+  :root {
+    --biggest-font-size: 5rem;
+    --normal-font-size: 1rem;
+  }
+}
+
+/*=============== BASE ===============*/
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: poppins;
+  font-family: Ubuntu;
+}
+
+body {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: var(--normal-font-size);
+  font-weight: 500;
+  color: hsl(0, 0%, 100%);
+}
+
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/*=============== REUSABLE CSS CLASSES ===============*/
+.container {
+  max-width: 1024px;
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+}
+
+/*=============== HOME ===============*/
+.home {
+  background-color: #1d061a;
+  padding: 9rem 0 2rem;
+  height: 100vh;
+  display: grid;
+}
+
+.home__container {
+  display: grid;
+  align-content: center;
+  row-gap: 2.5rem;
+}
+
+.home__data {
+  text-align: left;
+}
+
+.home__title {
+  font-size: var(--biggest-font-size);
+  margin: .75rem 0;
+  text-shadow: 2px 2px 10px #830885;
+}
+
+.home__button {
+  margin-top: 2rem;
+  display: inline-block;
+  background-color: hsl(0, 0%, 100%);
+  color: #1d061a;
+  padding: .80rem 1.5rem;
+  border-radius: 3rem;
+  transition: .4s;
+  font-weight: 600;
+}
+
+.home__button:hover {
+  box-shadow: 0 4px 12px hsla(33, 18%, 90%, 0.2);
+}
+
+.home__img img {
+  width: 300px !important;
+  animation: floaty 1.8s infinite alternate;
+}
+
+.home__img {
+  justify-self: center;
+}
+
+.home__shadow {
+  width: 130px;
+  height: 20px;
+  background-color: hsla(0, 3%, 77%, 0.16);
+  margin: 0 auto;
+  border-radius: 50%;
+  filter: blur(7px);
+  animation: shadow 1.8s infinite alternate;
+}
+
