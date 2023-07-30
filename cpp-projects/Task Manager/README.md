@@ -1,6 +1,6 @@
 # Task Manager
 
-Task Manager is a simple command-line application written in C++ that allows users to manage tasks with their names and priorities. Users can add tasks, remove tasks, display the current task list, sort tasks by priority, save tasks to a file, and load tasks from a file.
+Task Manager is a command-line application written in C++ that allows users to manage tasks with their names and priorities. Users can add tasks, remove tasks, display the current task list, sort tasks by priority, save tasks to a file, and load tasks from a file.
 
 # Features
 
