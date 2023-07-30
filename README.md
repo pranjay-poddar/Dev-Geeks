@@ -865,10 +865,26 @@ Happy Coding! -->
 <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Python Projects/Image Classification">Image Classification</a></td>
 
 </tr> 
+<tr>
+<td align="center"> 279.</td>
+<td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Python Projects/Covid-Info">Covid-Info</a></td>
+
+</tr>
 
 <tr>
+<td align="center"> 283.</td>
+<td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Js-Projects/Lazy Loading">Lazy Loading</a></td>
+</tr>
+
+<tr>
+
 <td align="center"> 280.</td>
 <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Js-Projects/Random Cat Image Generator">Random Cat Image Generator</a></td>
+</tr>
+
+
+<td align="center"> 284.</td>
+<td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/cpp-projects/ATM Machine">ATM Machine</a></td>
 </tr>
 
 
