@@ -8,7 +8,7 @@
 
 body {
     font-family: 'Manrope', sans-serif;
-    background: hsl(266, 54%, 61%);
+    background: linear-gradient(#e66465, #9198e5);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -34,7 +34,7 @@ body {
 }
 
 .advice{
-    color: white;
+    color: #f04f4f;
     font-size: 18px;
     line-height: 1.6;
     letter-spacing: 1.1px;
@@ -52,7 +52,7 @@ body {
     left: 50%;
     bottom: -31px;
     transform: translateX(-50%);
-    background: hsl(150, 100%, 66%);
+    background: #9198e5;
     padding: 15px 17px;
     border-radius: 50%;
     border: none;
