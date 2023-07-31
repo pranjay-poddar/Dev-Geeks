@@ -1,0 +1,78 @@
+{
+  "id": "0c08e954-fbf4-41e6-9127-b25cdf078ccc",
+  "name": "Conversation 3 - 1.cold,cough and fever - no - (3-5) Days - Low - no for improvement",
+  "auto": true,
+  "condition": "",
+  "conditionalFollowupEvents": [],
+  "conditionalResponses": [],
+  "context": [
+    "Conversation3-1coldcoughandfever-no-3-5Days-Low-followup"
+  ],
+  "contexts": [
+    "Conversation3-1coldcoughandfever-no-3-5Days-Low-followup"
+  ],
+  "endInteraction": false,
+  "events": [],
+  "fallbackIntent": false,
+  "liveAgentHandoff": false,
+  "parentId": "03afd141-9d9f-4a3c-98e7-ed7ed947e9ca",
+  "followUpIntents": [],
+  "priority": 500000,
+  "responses": [
+    {
+      "action": "Conversation3.Conversation3-custom.Conversation3-1coldcoughandfever-custom-2.Conversation3-1coldcoughandfever-no-custom.Conversation3-1coldcoughandfever-no-3-5Days-custom-3.Conversation3-1coldcoughandfever-no-3-5Days-Low-custom-2",
+      "affectedContexts": [],
+      "parameters": [],
+      "defaultResponsePlatforms": {},
+      "messages": [
+        {
+          "type": "message",
+          "condition": "",
+          "speech": [
+            "Okay then follow the medicines as per the below."
+          ]
+        },
+        {
+          "type": "message",
+          "condition": "",
+          "speech": [
+            "1.Diominic BCA [2] tablets per day for fever."
+          ]
+        },
+        {
+          "type": "message",
+          "condition": "",
+          "speech": [
+            "Below course for the medicine is for 2 days so kindly contact me after 2 days."
+          ]
+        },
+        {
+          "type": "message",
+          "condition": "",
+          "speech": [
+            "If there is any improvement seen then contact me after 2 days else consult doctor."
+          ]
+        }
+      ],
+      "resetContexts": false
+    }
+  ],
+  "rootParentId": "4ff6d6f4-51ce-40cc-bea4-977e35b5b1e4",
+  "templates": [],
+  "userSays": [
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "2",
+          "userDefined": false
+        }
+      ],
+      "count": 0,
+      "id": "552415b9-44cb-4bb0-8984-72ba159ba9a3",
+      "updated": null
+    }
+  ],
+  "webhookForSlotFilling": false,
+  "webhookUsed": false
+}

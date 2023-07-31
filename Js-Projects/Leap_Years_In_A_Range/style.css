@@ -1,0 +1,89 @@
+/* Default settings */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    text-decoration: none;
+}
+
+body {
+    background-color: #7e5eff;
+}
+
+/* Fixing the styling of the container */
+.container {
+    background-color: #ffffff;
+    width: 90vw;
+    max-width: 37.5em;
+    position: absolute;
+    padding: 3em 1.8em;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%;
+    border-radius: 8px;
+    box-shadow: 0 1em 2em rgba(112, 90, 23, 0.3);
+}
+
+.row {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap: 1.8em;
+}
+
+/* Styling the input box */
+.input-wrapper {
+    width: 100%;
+}
+
+label {
+    font-weight: 600;
+    color: #000533;
+}
+
+input {
+    display: block;
+    width: 100%;
+    font-size: 1.3em;
+    color: #363a5f;
+    margin-top: 0.5em;
+    padding: 0.25em 0.5em;
+    border: none;
+    outline: none;
+    border-bottom: 2px solid #000533;
+}
+
+input:focus {
+    border-bottom-color: #7e5eff;
+}
+
+/* Styling the button */
+button {
+    font-size: 1.25em;
+    margin: 1.25em 0 1.75em 0;
+    width: 100%;
+    background-color: #7e5eff;
+    color: #000533;
+    border: none;
+    padding: 0.6em 0;
+    border-radius: 1.25em;
+}
+
+/* Styling the showing of the result */
+#result span {
+    display: block;
+    line-height: 2;
+    text-align: justify;
+    color: #363a5f;
+    margin-top: 1em;
+}
+
+#result b {
+    font-size: 1.2em;
+    display: block;
+    line-height: 1.4em;
+    font-weight: 600;
+    color: #000533;
+    text-align: center;
+}

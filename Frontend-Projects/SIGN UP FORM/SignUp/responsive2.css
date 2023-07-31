@@ -1,0 +1,55 @@
+@media screen and (max-width: 30rem){
+    main{
+        transform: scale(0.7);
+    }
+    
+    .signUp-Form{
+        margin: 0 auto;
+    }
+    
+    .prim-signUp-heading{
+        padding-top: 2.8rem;
+    }
+    
+    .doddle-side{
+        height: 100%;
+    }
+    
+    css-doodle {
+        height: 100%;
+    }
+    
+    .create_account{
+        padding-bottom: 2.4rem;
+    }
+}
+
+@media screen and (max-width: 45em) {
+    main{
+        transform: scale(0.7);
+    }
+    
+    .signUp-Form{
+        margin: 0 auto;
+    }
+    
+    .Signup-Side{
+        min-width: 35rem;
+    }
+    
+    .prim-signUp-heading{
+        padding-top: 2.8rem;
+    }
+    
+    .doddle-side{
+        height: 100%;
+    }
+    
+    css-doodle {
+        height: 100%;
+    }
+    
+    .create_account{
+        padding-bottom: 2.4rem;
+    }
+}

@@ -23,14 +23,15 @@ h1{
     margin-top: 20px;
     margin-left: 40px;
 }
-.name-email{
+.first-last{
     display: flex;
     margin-bottom: 30px;
 }
-.website-link{
+.email-link{
+    display: flex;
     margin-bottom: 30px;
 }
-.image-link{
+.discord{
     margin-bottom: 30px;
 }
 .gender{
@@ -40,6 +41,9 @@ h1{
     margin-bottom: 30px;
 }
 .name-box{
+    margin-right:15px;
+}
+.email-box{
     margin-right:15px;
 }
 #name{
@@ -60,19 +64,15 @@ h1{
 }
 #website{
     margin-top:5px;
+    margin-left:5px;
     height: 30px;
-    width: 560px;
+    width: 270px;
     border-radius: 5px;
     background-color: #F8FCFF;
     border: transparent;
 }
-#image{
-    margin-top:5px;
-    height: 30px;
-    width: 560px;
-    border-radius: 5px;
-    background-color: #F8FCFF;
-    border: transparent;
+.student-enrollment-form{
+    margin-left: 50px;
 }
 span{
     margin-right:20px;
@@ -84,7 +84,26 @@ form{
     margin-top: 120px;
     /* margin-right: 45px; */
 }
-#enroll-btn{
+.container{
+    border: transparent;
+     color: white;
+     border-radius: 5px;
+     font-size: 18px;
+     font-weight: bolder;
+     margin-right: 12px;
+}
+.btn{
+     padding: 10px 60px;
+     background:#0147FF;
+     border: 0;
+     outline: none;
+     cursor: pointer;
+     color: #fff;
+     font-size: 22px;
+     font-weight: 500;
+     border-radius: 30px;
+ }
+/*#enroll-btn{
     height:40px;
     width: 120px;
     background-color: #0147FF;
@@ -106,7 +125,7 @@ form{
     font-size: 18px;
     font-weight: bolder;
 
-}
+}*/
 .image-container{
     margin-top: 60px;
 }

@@ -1,0 +1,80 @@
+body{
+    margin: 0px;
+    padding: 0px;
+    background: url('images/gymnew.webp') !important;
+    background-repeat:no-repeat;
+    background-size: 1500px 1000px;
+}  
+.left{
+    position: absolute;
+    left:34px;
+    top:12px;
+    display: inline-block;
+}
+.left img{
+    height: 63px;
+    width:74px;
+}
+.left div{
+    text-align: center;
+}
+.middle{
+    display:block;
+    width:40%;
+    margin:28px auto;
+    
+}
+.right{
+    position:absolute;
+    right:34px;
+    top:30px;
+    display: inline-block;
+}
+.right button{
+    background-color: black;
+    padding: 5px;;
+    width:90%;
+    font-size: 20px;
+    border: 2px solid white ;
+    border-radius:10px ;
+    color: white;
+    cursor: pointer;
+}
+.navbar li{
+    display: inline-block;
+    padding:12px;
+}
+.navbar li a{
+    color:white;
+    font-size: 20px;
+    text-decoration: none;
+}
+.navbar li a:hover{
+     text-decoration: underline ;
+     color: aqua;
+}
+.container{
+    border: 2px solid grey;
+    padding:10px;
+    border-radius: 10px;
+    display: inline-block;
+    width:50%;
+    margin:80px;
+    text-align: center;
+}
+.details input,button{
+    display: inline-block;
+    font-size: 24px;
+    padding: 12px;
+    margin: 12px;
+    width:70%;
+    text-align: center;
+}
+.button{
+    width:70%;
+    background-color: black;
+    color:white
+}
+.container h1{
+    color: antiquewhite;
+}

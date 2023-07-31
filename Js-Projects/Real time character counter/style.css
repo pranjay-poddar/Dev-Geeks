@@ -1,0 +1,50 @@
+body{
+    margin:0;
+    padding:0;
+    background-color: #E0BBE4;
+    display:flex;
+    justify-content: center;
+    height: 100vh;
+    align-items: center;
+    font-family: monospace;
+}
+
+/* rgb(204, 154, 250); */
+/* rgb(180, 119, 238) */
+
+.container{
+    background-color: #FFDFD3;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 10px;
+    width: 40%;
+    box-shadow: 0px 2px 8px rgba(0,0,0,0.552);
+}
+
+.container h1{
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.349);
+}
+
+textarea{
+    box-sizing: border-box;
+    resize: none;
+    height: 100px;
+    width: 100%;
+    border: 1px solid grey;
+    border-radius: 5px;
+}
+
+.counter{
+    display:flex;
+    font-size: 18px;
+    justify-content: space-between;
+}
+
+.total{
+    font-weight: bold;
+    color: blue;
+}
+.remaining{
+    font-weight: bold;
+    color: red;
+}

@@ -1,29 +1,197 @@
 <!DOCTYPE html>
 <html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Google</title>
+		<link rel="stylesheet" type="text/css" href="index.css" />
+		<link
+			href="https://fonts.googleapis.com/icon?family=Material+Icons"
+			rel="stylesheet"
+		/>
+		<link rel="icon" href="./images/favicon.png" type="image/x-icon" />
+	</head>
+	<body>
+		<div class="header">
+			<a href="https://mail.google.com/mail/u/0/">Gmail</a>
+			<a href="images.html">Images</a>
+			<span class="material-icons apps" id="apps"> apps </span>
+			<img
+				src="https://lh3.googleusercontent.com/ogw/AOLn63GwdPSpgNKAyOvIE1vI0U-BnrtSltwjwWyQWXkAog=s32-c-mo"
+				class="profile"
+			/>
+		</div>
 
-<head>
-    <title>Google</title>
-    <link rel="stylesheet" href="./index.css">
-    <link rel="icon" href="./images/favicon.png" type="image/x-icon" />
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-</head>
+		<div class="apps_dropdown">
+			<div class="upper"></div>
+			<div class="middle"></div>
+			<div class="end">
+				<div>
+					<a href="https://workspace.google.com/marketplace?pann=ogb&authuser=0"
+						>more from google workspace marketplace</a
+					>
+				</div>
+			</div>
+		</div>
 
-<body>
-    <div class="container">
-        <div class="top-right">
-            <a id="images" href="./images.html">Images Search</a>
-            <a id="advance-search" href="./advancesearch.html">Advance Search</a>
-        </div>
-        <center><img id="heading" src="./images/google.png"></center>
-        <center>
-            <form action="https://google.com/search">
-                <input autofocus id="search-field" type="text" name="q">
-                <br>
-                <input id="search-button" type="submit" value="Google Search">
-                <input id="search-button" type="submit" name="btnI" value="I'm Feeling Lucky" formaction="https://google.com/search?q=%s&btnI=I%27m+Feeling+Lucky">
-            </form>
-        </center>
-    </div>
-</body>
+		<div class="account" hidden>
+			<div class="first">
+				<div class="owner">
+					<div class="owner_profile">
+						<img
+							src="images/account.png"
+							title="account"
+							alt="error laoding image"
+						/>
+						<span class="material-icons"> photo_camera </span>
+					</div>
+					<div>
+						<div class="details">
+							<p>rohan mittal</p>
+							<p>rohanmittal525@gmail.com</p>
+						</div>
+						<div>
+							<p>Manage your google account</p>
+						</div>
+					</div>
+				</div>
+				<div class="other_accounts">
+					<div class="other">
+						<img
+							src="images/account.png"
+							title="account"
+							alt="error laoding image"
+						/>
+						<div>
+							<p>2k21_co_391 rohan mittal</p>
+							<p>rohanmittal_co21a6_52@dtu.ac.in</p>
+						</div>
+					</div>
+					<div class="other">
+						<img
+							src="images/account.png"
+							title="account"
+							alt="error laoding image"
+						/>
+						<div>
+							<p>rohan mittal</p>
+							<p>rohanmittal728@gmail.com</p>
+						</div>
+					</div>
 
+					<div class="other">
+						<span class="material-icons"> person_add </span>
+						<div>
+							<p style="text-transform: none">Add another account</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="second">
+				<span class="material-icons"> logout </span>
+				<p>Sign out of all accounts</p>
+			</div>
+			<div class="third">
+				<p>privacy policy</p>
+				<div>&nbsp;</div>
+				<p>terms of services</p>
+			</div>
+		</div>
+
+		<div class="container">
+			<div class="img">
+				<img alt="error loading image" title="google" src="images/google.png" />
+			</div>
+			<div>
+				<div class="search_bar">
+					<form action="https://www.google.com/search">
+						<input type="text" id="search-field" name="q" autofocus />
+
+						<span class="material-icons icon"> search </span>
+						<div id="cat">
+							<img style="cursor: pointer" src="images/mic.png" />
+							<img style="cursor: pointer" src="images/lens.webp" />
+						</div>
+					</form>
+				</div>
+			</div>
+			<div class="dummy_btn">
+				<form action="https://www.google.com/search">
+					<input id="search-button" type="submit" value="Google Search" />
+					<input
+						id="search-button"
+						type="submit"
+						name="btnI"
+						value="I'm Feeling Lucky"
+						formaction="https://www.google.com/search?q=%s&btnI=I%27m+Feeling+Lucky"
+					/>
+				</form>
+			</div>
+
+			<div class="lang">
+				<p>Google offered in:</p>
+				<a href="">हिन्दी</a>
+				<a href="">বাংলা </a>
+				<a href="">తెలుగు </a>
+				<a href="">मराठी</a>
+				<a href="">தமிழ்</a>
+				<a href="">ગુજરાતી</a>
+				<a href="">ಕನ್ನಡ </a>
+				<a href="">മലയാളം</a>
+				<a href="">ਪੰਜਾਬੀ</a>
+			</div>
+		</div>
+
+		<div class="footer">
+			<div class="country">India</div>
+			<div class="footer_menu">
+				<ul>
+					<li>
+						<a
+							href="https://about.google/?utm_source=google-IN&utm_medium=referral&utm_campaign=hp-footer&fg=1"
+							>about</a
+						>
+					</li>
+					<li>
+						<a
+							href="https://www.google.com/intl/en_in/ads/?subid=ww-ww-et-g-awa-a-g_hpafoot1_1!o2&utm_source=google.com&utm_medium=referral&utm_campaign=google_hpafooter&fg=1"
+							>advertising</a
+						>
+					</li>
+					<li>
+						<a
+							href="https://www.google.com/services/?subid=ww-ww-et-g-awa-a-g_hpbfoot1_1!o2&utm_source=google.com&utm_medium=referral&utm_campaign=google_hpbfooter&fg=1"
+							>business</a
+						>
+					</li>
+					<li>
+						<a href="https://google.com/search/howsearchworks/?fg=1"
+							>how search works</a
+						>
+					</li>
+				</ul>
+				<ul>
+					<li>
+						<a href="https://policies.google.com/privacy?hl=en-IN&fg=1"
+							>privacy</a
+						>
+					</li>
+					<li>
+						<a href="https://policies.google.com/terms?hl=en-IN&fg=1">terms</a>
+					</li>
+					<li><a href="">settings</a></li>
+				</ul>
+			</div>
+		</div>
+
+		<script
+			src="https://code.jquery.com/jquery-3.7.0.js"
+			integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM="
+			crossorigin="anonymous"
+		></script>
+		<script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.min.js"></script>
+		<script src="https://unpkg.com/tippy.js@6/dist/tippy-bundle.umd.js"></script>
+		<script src="https://unpkg.com/@popperjs/core@2"></script>
+		<script type="text/javascript" src="google.js"></script>
+	</body>
 </html>

@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Coffee House</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />
+    <link rel="stylesheet" href="coffeehouse.css">
+    <link rel="shortcut icon" href="android-chrome-512x512.png" type="image/x-icon">
+</head>
+
+<body>
+    <header class="header">
+        <a href="#" class="logo">
+            <img src="finallogo.jpg" alt="logo" />
+        </a>
+        <nav class="navbar">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#menu">Menu</a>
+            <a href="#products">Products</a>
+            <a href="#review">Review</a>
+            <a href="#contact">Contact</a>
+            <a href="#blogs">Blogs</a>
+        </nav>
+
+        <div class="icons">
+            <div class="fas fa-search" id="search-btn"></div>
+            <div class="fas fa-shopping-cart" id="cart-btn"></div>
+            <div class="fas fa-bars" id="menu-btn"></div>
+        </div>
+        <div class="search-form">
+            <input type="search" id="search-box" placeholder="search here..." />
+            <label for="search-box" class="fas fa-search"></label>
+        </div>
+        <div class="cart-items-container">
+            <div class="cart">
+                <div class="cart-item">
+
+                    <main>
+                        <!-- Start DEMO HTML (Use the following code into your project)-->
+                    <div class="container"> 
+                    <div id="alerts"></div>
+                
+                    
+                        </div>
+                        <div class="cart-container">
+                            <h2>Cart</h2>
+                            <table class="goodtable">
+                            <thead>
+                                <tr>
+                                <th><strong>Product</strong></th>
+                                <th><strong>Price</strong></th>
+                            </tr>
+                            </thead>
+                            <tbody id="carttable">
+                            </tbody>
+                            </table>
+                            <hr>
+                            <table id="carttotals" class="goodtable">
+                            <tr>
+                                <td><strong>Items</strong></td>
+                                <td><strong>Total</strong></td>
+                            </tr>
+                            <tr>
+                                <td>x <span id="itemsquantity">0</span></td>
+                                
+                                <td>₹<span id="total">0</span></td>
+                            </tr>
+                        </table>
+                            <div class="cart-buttons">  
+                            <button id="emptycart" class="apple">Empty Cart</button>
+                            <button id="checkout" class="abcd">Checkout</button>
+                            </div>
+                        </div>
+                </div>
+            
+                    </main>
+                <!-- <div class="product">
+            <h3 class="productname">Product 1</h3>
+            <div>Product description excerpt...</div>
+            <div class="price">$5.05</div>
+            <button class="addtocart">Add To Cart</button>
+        </div> -->
+    
+                    
+        </div>
+    </header>
+
+
+    <body>
+        <section class="home" id="home">
+            <div class="content">
+                <h3><span>The Coffee House</span></h3>
+                <h4>Skillfully Roasted.</h4>
+                <h5>Artfully Blended.</h5>
+                <p><b><b>With brand new coffee knowledge and discoveries unveiling themselves each day, the journey into
+                            the world of coffee is an exciting and limitless adventure with room for us all to explore,
+                            connect and interact.</b></b></p>
+                <a href="#menu" class="btn">Get Yours Now</a>
+            </div>
+        </section>
+        <section class="about" id="about">
+            <h1 class="heading"><span>about</span> us</h1>
+            <div class="row">
+                <div class="image">
+                    <img src="coffee special.jpg" alt="about" />
+                </div>
+
+                <div class="content">
+                    <input type="checkbox" id="learn">
+                    <h3 class="productname">What makes our coffee special?</h3>
+                    <p>
+                        Transperancy, traceability and quality have been our focus since we started.We cup hundreds of
+                        samples to find the very best coffees India has to offer and the coffee we source, the coffee we
+                        like to drink!
+                        Our team of Q-Graders leads our sourcing to ensure high-quality specialty grade lots. We
+                        roast our coffee fresh on Probat machines with specific profiles designed to highlight
+                        unique flavours.Every batch is quality control evaluated prior to dispatch.
+                    </p>
+                    <div class="invisible-content">
+                        <p>
+                            We serve Counter Culture coffee, and the products we had are made to perfection. We
+                            also serve snacks and have a rotating menu of one-of-a-kind drinks that are unlike anything
+                            we’ve seen elsewhere. Each drink in this section had something unique about it, which makes
+                            for a great experience you can’t get anywhere else.</p>
+                            <label for="learn" class="btn">Show less</label>
+                    </div>
+                    <label for="learn" class="btn">Learn more</label>
+
+                </div>
+            </div>
+        </section>
+
+        <section class="menu" id="menu">
+
+            
+            <h1 class="heading">our <span>menu</span></h1>
+
+            <div class="box-container">
+                <div class="box">
+                    <img src="cappuccino.jpg" alt="menu1" class="image" />
+                    <h3 class ="productname" >Heart Loving Cappuccino </h3>
+                    <div class="price">₹160/-</div>
+                    <button class="addtocart" >add to cart</a>
+
+                </div>
+
+                <div class="box">
+                    <img src="kulhadcoffee.jpg" alt="menu2" class="image" />
+                    <h3  class ="productname" >Desi Kulhad Coffee  </h3>
+                    <div class="price">₹180/-</div>
+                    <Button href="#" class="addtocart">add to cart</Button>
+                </div>
+
+                <div class="box">
+                    <img src="dalgona.jpg" alt="menu3" class="image" />
+                    <h3 class ="productname" > Dalgona Coffee </h3>
+                    <div class="price">₹240/-</div>
+                    <Button href="#" class="addtocart">add to cart</Button>
+                </div>
+
+                <div class="box">
+                    <img src="frappe.jpg" alt="menu4" class="image" />
+                    <h3  class ="productname" > Frappe Coffee</h3>
+                    <div class="price">₹280/-</div>
+                    <Button href="#" class="addtocart">add to cart</Button>
+                </div>
+
+                <div class="box">
+                    <img src="hazelnut coffee.jpg" alt="menu5" class="image"/>
+                    <h3 class ="productname" >Hazelnut Cold Coffee </h3>
+                    <div class="price">₹250/-</div>
+                    <Button href="#" class="addtocart">add to cart</Button>
+                </div>
+
+                <div class="box">
+                    <img src="latte.jpg" alt="menu6" class="image" />
+                    <h3 class ="productname" >Latte </h3>
+                    <div class="price">₹280/-</div>
+                    <Button href="#" class="addtocart">add to cart</Button>
+                </div>
+
+                <div class="box">
+                    <img src="americano.jpg" alt="menu6" class="image" />
+                    <h3 class ="productname"> Americano </h3>
+                    <div class="price">₹280/-</div>
+                    <Button href="#" class="addtocart">add to cart</Button>
+                </div>
+
+                <div class="box">
+                    <img src="glace coffee.jpg" alt="menu6" class="image" />
+                    <h3  class ="productname" > Creamy Glace Coffee </h3>
+                    <div class="price">₹260/-</div>
+                    <Button href="#" class="addtocart">add to cart</Button>
+                </div>
+
+                <div class="box">
+                    <img src="mocha.jpg" alt="menu6" class="image"/>
+                    <h3 class ="productname" > Mocha </h3>
+                    <div class="price">₹280/-</div>
+                    <Button href="#" class="addtocart">add to cart</Button>
+                </div>
+                <div class="box">
+                    <img src="couple coffee.jpg" alt="menu6" class="image" />
+                    <h3  class ="productname"> Partner's Coffee </h3>
+                    <div class="price">₹350/-</div>
+                    <Button href="#" class="addtocart">add to cart</Button>
+                </div>
+                <div class="box">
+                    <img src="donuts.jpeg" alt="menu6" class="image" />
+                    <h3  class ="productname"> Chocolatey Donut </h3>
+                    <div class="price">₹150/-</div>
+                    <Button href="#" class="addtocart">add to cart</Button>
+                </div>
+                <div class="box">
+                    <img src="choco lava.jpg" alt="menu6" class="image" />
+                    <h3  class ="productname"> Molten Choco Lava Cake </h3>
+                    <div class="price">₹130/-</div>
+                    <Button href="#" class="addtocart">add to cart</Button>
+                </div>
+                <div class="box">
+                    <img src="brownie with ice cream.jpg" alt="menu6" class="image" />
+                    <h3 class ="productname">Hot Brownie with Sundae </h3>
+                    <div class="price">₹160/-<span>₹170/-</span></div>
+                    <Button href="#" class="addtocart">add to cart</Button>
+                </div>
+                <div class="box">
+                    <img src="muffin.jpg" alt="menu6" class="image"/>
+                    <h3  class ="productname"> Fluffy Muffins </h3>
+                    <div class="price">₹200/-<span>₹240/-</span></div>
+                    <Button href="#" class="addtocart">add to cart</Button>
+                </div>
+                <div class="box">
+                    <img src="croissant.jpg" alt="menu6" class="image"/>
+                    <h3  class ="productname"> Croissant </h3>
+                    <div class="price">₹210/-<span>₹230/-</span></div>
+                    <button class="btn" onclick="handle_addCartItem">add to cart</button>
+                </div>
+                <div class="box">
+                    <img src="fries.jpg" alt="menu6" class="image"/>
+                    <h3  class ="productname"> Salted Fries </h3>
+                    <div class="price">₹140/-<span>₹160/-</span></div>
+                    <Button href="#" class="addtocart">add to cart</Button>
+                </div>
+                <div class="box">
+                    <img src="garlic bread.jpeg" alt="menu6" class="image"/>
+                    <h3  class ="productname"  >Cheese Garlic Bread </h3>
+                    <div class="price">₹220/-<span>₹240/-</span></div>
+                    <Button href="#" class="addtocart">add to cart</Button>
+                </div>
+                <div class="box">
+                    <img src="sandwiches.jpg" alt="menu6" class="image"/>
+                    <h3  class ="productname">Grilled Sandwich </h3>
+                    <div class="price">₹250/-<span>₹280-</span></div>
+                    <Button href="#" class="addtocart">add to cart</Button>
+                </div>
+                <div class="box">
+                    <img src="vegetable wrap.jpg" alt="menu6" class="image"/>
+                    <h3  class ="productname" >Veg Wrap </h3>
+                    <div class="price">₹250/-<span>₹280/-</span></div>
+                    <Button href="#" class="addtocart">add to cart</Button>
+                </div>
+                <div class="box">
+                    <img src="nachos.jpg" alt="menu6" class="image"/>
+                    <h3  class ="productname"> Spicy Nachos with Dip </h3>
+                    <div class="price">₹200/-<span>₹220/-</span></div>
+                    <Button href="#" class="addtocart">add to cart</Button>
+                </div>
+            </div>
+        </section>
+
+        <section class="products" id="products">
+            <h1 class="heading">our <span>products</span></h1>
+            <div class="box-container">
+                <div class="box">
+                    <div class="icons">
+                        <a href="#" class="fas fa-shopping-cart"></a>
+                        <button onclick="Toggle1()" id="btnh1" class=btn><i class="fas fa-heart"></i></button>
+                        <a href="#" class="fas fa-eye"></a>
+                    </div>
+                    <div class="image">
+                        <img src="green coffee beans.jpg" alt="product1"  />
+                    </div>
+                    <div class="content">
+                        <h3  class ="productname"> Green Coffee Beans </h3>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <div class="price">₹1500</div>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="icons">
+                        <a href="#" class="fas fa-shopping-cart"></a>
+                        <button onclick="Toggle2()" id="btnh2" class=btn><i class="fas fa-heart"></i></button>
+                        <a href="#" class="fas fa-eye"></a>
+                    </div>
+                    <div class="image">
+                        <img src="coffee beans.jpg" alt="product2" />
+                    </div>
+                    <div class="content">
+                        <h3  class ="productname" >Red Coffee Beans </h3>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <div class="price">₹1200</div>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="icons">
+                        <a href="#" class="fas fa-shopping-cart"></a>
+                        <button onclick="Toggle3()" id="btnh3" class=btn><i class="fas fa-heart"></i></button>
+                        <a href="#" class="fas fa-eye"></a>
+                    </div>
+                    <div class="image">
+                        <img src="white coffee beans.jpg" alt="product3" />
+                    </div>
+                    <div class="content">
+                        <h3  class ="productname" >White Coffee Beans </h3>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <div class="price">₹1600</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="review" id="review">
+            <h1 class="heading">customer's <span>review</span></h1>
+            <div class="box-container">
+                <div class="box">
+                    <img src="a circle.png" alt="quote" />
+                    <p>
+                        They have an impressive array of food to choose from, including baked goods like muffins. The
+                        prices are reasonable, and both the coffee and food are excellent.
+                    </p>
+
+                    <h3>Zaeden</h3>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+                <div class="box">
+                    <img src="aashna circle.png" alt="quote" />
+                    <p>
+                        Our favourite thing about Coffee House is their hazelnut-cold coffee, and being able to get one
+                        for dinner is a bonus.
+                    </p>
+
+                    <h3>Aashna</h3>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                </div>
+                <div class="box">
+                    <img src="hanita circle.png" alt="quote" />
+                    <p>
+                        I was introduced to the brand quite by surprise through a friend. The taste is on point. Cheers
+                        to them for keeping up the highest standards of quality and consistency.
+                    </p>
+
+                    <h3>Yuvika</h3>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="contact" id="contact">
+            <h1 class="heading"><span>contact</span> us</h1>
+            <div class="icons-container">
+                <div class="icons">
+                    <i class="fas fa-phone"></i>
+                    <h3>Our Number</h3>
+                    <p> +123-456-7890 </p>
+                    <p>+111-222-3333</p>
+                </div>
+                <div class="icons">
+                    <i class="fas fa-envelope"></i>
+                    <h3>Our Email</h3>
+                    <p>coffeeshop@coffee.in</p>
+                    
+                </div>
+
+                <div class="icons">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <h3>Our Location</h3>
+                    <p>Delhi, India</p>
+
+                </div>
+            </div>
+            <div class="row">
+                <iframe class="map"
+                    src="https://www.google.com/maps/d/viewer?mid=1IEVwjHNKZcYI5LKHZfRSFXEKyzg&hl=en_US&ll=28.536795394594403%2C77.15845149999998&z=12"
+                    width="600" height="450" style="border: 0" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+                <form action="">
+                    <h3>get in touch</h3>
+                    <div class="inputBox">
+                        <span class="fas fa-user"></span>
+                        <input type="text" placeholder="name" />
+                    </div>
+                    <div class="inputBox">
+                        <span class="fas fa-envelope"></span>
+                        <input type="email" placeholder="email" />
+                    </div>
+                    <div class="inputBox">
+                        <span class="fas fa-phone"></span>
+                        <input type="text" placeholder="number" />
+                    </div>
+
+                    <textarea name="" placeholder="message" class="inputBox" id="" cols="100" rows="10"></textarea>
+
+                    
+            <button type="submit" class="btn" onclick="dosomething()" >Submit</button>
+                </form>
+            </div>
+        </section>
+
+        <section class="blogs" id="blogs">
+            <h1 class="heading">our <span>blogs</span></h1>
+            <div class="box-container">
+                <div class="box">
+                    <div class="image">
+                        <img src="coffeewine.jpg" alt="blog1">
+                    </div>
+                    <div class="content">
+                        <input type="checkbox" id="ch">
+                        <a href="#" class="title">Coffee Wine: What is it, and is it as weird as it sounds?</a>
+                        <span>By Kashish Nanda / 15th June, 2022</span>
+                        <p>Coffee lovers and wine enthusiasts, unite! Coffee and wine are what keep most of us going
+                            through the week. You can get the best of both worlds with a new drink on the block: coffee
+                            wine. Coffee wine is another alcoholic coffee drink, like Irish coffee. It is just what it
+                            sounds like: a combination of wine and coffee.
+                        </p>
+                        <div class="invisible-content">
+                            <p> Flavour notes from wine and coffee are
+                                combined into one drink for a rich, full-bodied flavour. Coffee wine is made from brewed
+                                coffee using a sweetened cold brew, yeast, enzymes, and acids, similar to the way to
+                                make coffee kombucha. The coffee goes through fermentation, during which yeast consumes
+                                sugars to produce alcohol. The drink ferments and ages for several months before you can
+                                drink it. The final drink is a wine that smells and tastes slightly like coffee.</p>
+                            <label for="ch" class="btn">Read less</label>
+                        </div>
+                        <label for="ch" class="btn">Read more</label>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="image">
+                        <img src="blog2.jpg" alt="blog1">
+                    </div>
+                    <div class="content">
+                        <input type="checkbox" id="check">
+                        <a href="#" class="title">How to Find High-Quality Coffee Beans</a>
+                        <span>By Akira Mehta / 22nd May, 2022</span>
+                        <p>
+
+                            There are two main types of coffee beans: Arabica and Robusta. The highest-quality variety,
+                            Arabica, makes up most of the world’s coffee. Robusta beans, often found in blends, are
+                            lower-priced, more bitter, and have twice as much caffeine. If you’re looking for
+                            high-quality coffee keep an eye out for 100% Arabica beans.
+
+                        </p>
+                        <div class="invisible-content">
+                            <p>
+                                Just as important as where it’s grown is where (and when!) the coffee is roasted. Most
+                                exported coffee is shipped green, because as soon as it’s roasted, coffee begins to lose
+                                freshness through contact with oxygen. To minimize the time between roasting and
+                                brewing, find roasters near you or roasters that ship their coffee beans out quickly.</p>
+                                <label for="check" class="btn">Read less</label>
+                        </div>
+                        <label for="check" class="btn">Read more</label>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="image">
+                        <img src="heartfcoffee.jpg" alt="blog1">
+                    </div>
+                    <div class="content">
+                        <input type="checkbox" id="che">
+                        <a href="#" class="title">Get in love with the first sip!</a>
+                        <span>By Naman Bansal / 29 January, 2023</span>
+                        <p>
+                            Coffee has always been close to my heart. If you ask me, I don’t really remember when
+                            exactly I fell in love, but I just did. The aroma, the taste, the flavour everything is so
+                            therapeutic. I am sure, like me, you have wondered what it is about coffee that we love so
+                            much. How is it even possible to love coffee so much?
+                        </p>
+                        <div class="invisible-content">
+                            <p>My love for coffee dates back at least a decade, when I used to sip some coffee here and
+                                there. It then grew into a weekly Saturday morning tradition, almost, when my friends
+                                would either come over to my place or we would all go out, meet at a coffee shop, and
+                                nonchalantly order the beverage of our choice, coffee. My love for coffee has developed
+                                over the years but has grown more than ever, especially in the past few years. I know it
+                                may seem kind of silly to some to love something like a beverage as much as I do, but
+                                then again, it’s more than just a "simple beverage" to me.</p>
+                            <label for="che" class="btn">Read less</label>
+                        </div>
+                        <label for="che" class="btn">Read more</label>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="footer">
+            <div class="share">
+                <a href="#" target="_blank" class="fab fa-facebook-f"></a>
+                <a href="#" target="_blank" class="fab fa-twitter"></a>
+                <a href="#" target="_blank" class="fab fa-instagram"></a>
+                <a href="#" target="_blank"
+                    class="fab fa-linkedin"></a>
+                <a href="#" target="_blank"
+                    class="fab fa-pinterest"></a>
+            </div>
+            <div class="links">
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#menu">Menu</a>
+                <a href="#products">Products</a>
+                <a href="#review">Review</a>
+                <a href="#contact">Contact</a>
+                <a href="#blogs">Blogs</a>
+            </div>
+
+            <div class="credit">
+                Created by <span>GSSoC'23 contributor</span> | All Rights Reserved
+            </div>
+        </section>
+        <script type="text/javascript" src="coffeehouse.js"></script>
+
+</body>
+
+</html>

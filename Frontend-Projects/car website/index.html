@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Carpooling</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous" />
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/5f59ca6ad3.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/ff57b0a3e3.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="https://drive.google.com/uc?export=view&id=1zoHBVeCXilE0J2xMCl6Um7o8gpn6f_cS" type="image/x-icon">
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+    <nav style="position:fixed;" class="w-100 navbar navbar-expand-lg navbar-dark bg-info">
+      <img class ="logo"src="https://drive.google.com/uc?export=view&id=1zoHBVeCXilE0J2xMCl6Um7o8gpn6f_cS" alt="logo">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="text-white collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav ml-5">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#FindARide">Find a Ride</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#OfferARide">Offer a Ride</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        More
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <a class="dropdown-item" href="#">My Rides</a>
+                        <a class="dropdown-item" href="#">My Bookings</a>
+                        <a class="dropdown-item" href="#AboutUs">About Us</a>
+                        <a class="dropdown-item" href="#HowItWorks">How it Works</a>
+                        <a class="dropdown-item" href="#SafetyGuidelines">Safety Guidelines</a>
+                        <a class="dropdown-item" href="#FAQS">FAQs</a>
+                        <a class="dropdown-item" href="#FOOTER">Contact Us</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <!-- Landing Page -->
+    <img class="hero" src="https://drive.google.com/uc?export=view&id=1P-Qj30W6lvOL_mf95ZFjZkj-MEwhHlCN" alt="hero section">
+    <div class="landing">
+        <div class="lp-left">
+            <!-- <h1 class="land-head">Welcome To The World Of Car Pooling</h1> -->
+            <h1 class="">Let's take the Hassle out of Daily Commute.</h1>
+            <h4>CarShare connecting people who need to travel with drivers who have empty seats.Trusted carpooling,fully insured.</h4>
+            <button class="landingBtn btn">Get Started</button>
+        </div>
+        <img class="bg-img" src="https://drive.google.com/uc?export=view&id=199VwPw-V51zDgWWMSXbFst5ejTYo1nPL" alt="Car Image">
+    </div>
+        
+    
+    <!-- Find a Ride -->
+    <div id="FindARide" class=" bg">
+        <h1 class="main-heading">Find a Ride</h1>
+        <form action="//www.google.com/maps" id="findForm">
+            <div class="formi">
+                <div class="mt-3 mb-3">
+                    <label style="font-size:20px;color:black;" for="fRf">From :</label>
+                    <!-- <input class="form-control" type="text" id="fRf" /> -->
+                    <input aria-label="From Location" class="form-control"id="oRf" name="saddr" placeholder="FROM" type="text">
+                    <p id="fRfErrMsg"></p>
+                </div>
+                <div class="mb-3">
+                    <label style="font-size:20px;color:black;" for="fRt">To :</label>
+                    <!-- <input class="form-control" type="text" id="fRt" /> -->
+                    <input aria-label="To Location" class="form-control" id="oRt" name="daddr" placeholder="TO" type="text">
+                    
+                    <p id="fRtErrMsg"></p>
+                </div>
+                <div class="mb-3">
+                    <label style="font-size:20px;color:black;" for="fRd">Date :</label>
+                    <input class="form-control" type="date" id="fRd" />
+                    <p id="fRdErrMsg"></p>
+                </div>
+                <div class="text-center">
+                <button id="FindRideBtn" type="submit" class="button1 btn btn-primary" data-toggle="modal" data-target="#staticBackdrop">
+                    Find
+                  </button>
+                </div>
+                  <!-- Modal -->
+                  <div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h1 class="modal-title" id="staticBackdropLabel">Finding</h1>
+                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                          </button>
+                        </div>
+                        <div class="modal-body">
+                            <h1 style="font-size: 15px;">Finding a ride and reach your destination safely</h1>
+                          
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                          <button type="button" class="btn btn-primary">Ok</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                
+            </div>
+        </form>
+    </div>
+    
+    <!-- Offer a Ride -->
+    <div id="OfferARide" class="bg2 ">
+        <h1 class="main-heading">Offer a Ride</h1>
+        <form action="//www.google.com/maps" id="offerForm">
+            <div class="formi">
+                <div class="mt-3 mb-3">
+                    <label style="font-size:20px;color:black;" for="oRf">From :</label>
+                    <!-- <input class="form-control" type="text" id="oRf" /> -->
+                    <input aria-label="From Location" class="form-control"id="oRf" name="saddr" placeholder="FROM" type="text">
+                    <p id="oRfErrMsg"></p>
+                </div>
+                <div class="mb-3">
+                    <label style="font-size:20px;color:black;" for="oRt">To :</label>
+                    <!-- <input class="form-control" type="text" id="oRt" /> -->
+                    <input aria-label="To Location" class="form-control" id="oRt" name="daddr" placeholder="TO" type="text">
+                    <p id="oRtErrMsg"></p>
+                </div>
+                <div class="mb-3">
+                    <label style="font-size:20px;color:black;" for="oRd">Date :</label>
+                    <input class="form-control" type="date" id="oRd" />
+                    <!-- <input class="form-control" type="date" id="oRd" /> -->
+                    <p id="oRdErrMsg"></p>
+                </div>
+               
+                <div class="text-center">
+                <button id="OfferRideBtn" type="submit" class="button1 btn btn-primary" data-toggle="modal" data-target="#staticBackdrop1">
+                    Offer
+                  </button>
+                </div>
+                  <!-- Modal -->
+                  <div class="modal fade" id="staticBackdrop1" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h1 class="modal-title" id="staticBackdropLabel">Offering</h1>
+                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                          </button>
+                        </div>
+                        <div class="modal-body">
+                            <h1 style="font-size: 15px;">Offering a ride and reach the destination safely</h1>
+                          
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                          <button type="button" class="btn btn-primary">Ok</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                
+            </div>
+        </form>
+    </div>
+    <!-- About Us -->
+    <div id="AboutUs" class=" bg3 ">
+        <h1 class="main-heading text-white">About Us</h1>
+        <p class="parabtus text-white">Our Carpooling platform that connects drivers and passengers for sustainable and affordable transportation. Our mission is to reduce traffic congestion, air pollution, and carbon emissions by promoting carpooling and shared mobility.<br />
+
+            Our platform allows drivers to offer their empty seats to passengers who are traveling in the same direction and want to share the ride. Passengers can search for available rides and book a seat for a lower cost than traditional modes of transportation.<br />
+
+            We are committed to providing a safe and reliable service for our users. All drivers and passengers are verified and undergo background checks to ensure their safety and security. Our platform also offers a rating and review system that allows users to rate and review their ride experience.</p>
+    </div>
+    <!-- How it works -->
+    <div id="HowItWorks" class=" howitworks">
+        <h1 style="color:white;font-weight:bold;" class="text-center">How it works</h1>
+        <div class="features">
+            <div class="mt-3 mb-3 feature-item">
+                <img class="feature-img" src="https://t4.ftcdn.net/jpg/02/36/55/83/240_F_236558358_CWjcBL416Wi0jMPQhZRfEeEPHQxa0TG2.jpg" />
+                <h3 class="hiwh">Sign Up and Create a Profile</h3>
+                <p class="hiwp">Create an account on our carpooling website by providing your personal details and contact information. Once registered, you can create a profile that includes your preferences, such as your home address, workplace, and commuting schedule</p>
+            </div>
+            <div class="mt-3 mb-3 feature-item">
+                <img class="feature-img" src="https://img.freepik.com/free-photo/homepage-concept-with-search-bar_23-2150040212.jpg?size=626&amp;ext=jpg" />
+                <h3 class="hiwh">Search for Rides</h3>
+                <p class="hiwp">Use our search functionality to find available rides that match your desired departure and destination locations, as well as the date and time of your commute. You can browse through the available ride listings and filter them based on your preferences</p>
+            </div>
+            <div class="mt-3 mb-3 feature-item">
+                <img class="feature-img" src="https://img.freepik.com/free-vector/taxi-app-concept-illustration_52683-36028.jpg?size=626&amp;ext=jpg" />
+                <h3 class="hiwh">Book a Ride</h3>
+                <p class="hiwp">Once you find a suitable ride, you can book a seat by contacting the driver or using our platform's booking system. Confirm the date, time, and meeting point with the driver to secure your spot in the carpool. Some rides may require a small contribution towards the fuel cost, which can be discussed with the driver</p>
+            </div>
+            <div class="mt-3 mb-3 feature-item">
+                <img class="feature-img" src="https://img.freepik.com/free-vector/carpool-concept-illustration_114360-9298.jpg?size=626&amp;ext=jpg" />
+                <h3 class="hiwh">Share the Ride</h3>
+                <p class="hiwp">On the day of the commute, meet the driver at the designated location and time. Share the ride with your fellow carpoolers, contributing to a greener and more sustainable transportation system. Enjoy the shared journey, save money, and reduce traffic congestion on the road</p>
+            </div>
+            <div class="mt-3 mb-3 feature-item">
+                <img class="feature-img" src="https://img.freepik.com/free-vector/client-review-web-screen-successful-4-4-star-business-opinion_1150-37483.jpg?size=626&amp;ext=jpg" />
+                <h3 class="hiwh">Rate and Review</h3>
+                <p class="hiwp">After the ride, you have the opportunity to rate and review the driver and overall carpooling experience. Your feedback helps maintain a reliable and trusted community of carpoolers, ensuring the quality and safety of future rides</p>
+            </div>
+        </div>
+    </div>
+    <!-- Safety Guidelines -->
+    <div id="SafetyGuidelines" class="safetyguidelines">
+        <h1 style="font-size:28px;color:#193f85;" class="hiwh text-center">Safety Guidelines</h1>
+        <div class="sg1">
+            <img src="https://img.freepik.com/premium-vector/osha-occupational-safety-health-administration-business-organization-vector_199064-806.jpg?size=626&amp;ext=jpg" class="sgimage" />
+            <div class="sg1sub">
+                <h4>1. Meet in Public Places</h4>
+                <p class="sgp">When meeting your carpool driver or passengers for the first time, choose a well-lit and public location for added safety. Consider meeting at a nearby parking lot, transit station, or other easily accessible public places.</p>
+
+                <h4>2. Verify User Profiles</h4>
+                <p class="sgp">Prior to booking a ride or accepting passengers, take the time to review and verify user profiles. Look for completed profiles with profile pictures and relevant information. This helps establish trust and accountability within the carpooling community.</p>
+
+                <h4>3. Communicate and Share Trip Details</h4>
+                <p class="sgp">Before the ride, communicate with your carpooling partners and share important trip details such as the meeting point, estimated departure time, and any specific requirements or preferences. Keep communication within the platform to maintain a record of conversations.</p>
+            </div>
+        </div>
+
+        <div class="sg1">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTQk5KjbN0hAqvMyguODlNX_ZKOd7fVsFITMw&amp;usqp=CAU" class="sgimage sgimg1" />
+            <div class="sg1sub">
+                <h4>4. Use a Reliable Rating System</h4>
+                <p class="sgp">Utilize the rating and review system provided by the carpooling platform. Rate and provide feedback on your experience with drivers and passengers to help build a reliable community. This system encourages responsible behavior and fosters a safe and trustworthy carpooling environment.</p>
+
+                <h4>5. Trust Your Instincts</h4>
+                <p class="sgp">While carpooling is generally safe, always trust your instincts. If you feel uncomfortable or notice any suspicious behavior, it's best to decline or discontinue the ride. Report any concerning incidents to the platform's support team for appropriate action.</p>
+                <h4>6. Buckle Up and Follow Traffic Rules</h4>
+                <p class="sgp">Ensure that all passengers and the driver wear seat belts throughout the journey. Encourage drivers to adhere to traffic rules and regulations, including speed limits and traffic signals, for a safe and comfortable ride.</p>
+            </div>
+        </div>
+
+        <div class="sg1">
+            <img src="https://img.freepik.com/free-photo/safety-first-sign-low-angle_23-2149919551.jpg?size=626&amp;ext=jpg" class="sgimage" />
+            <div class="sg1sub">
+                <h4>7. Maintain Open Communication</h4>
+                <p class="sgp">Promote open communication and respect among carpooling participants. Encourage everyone to notify each other of any changes in plans, delays, or cancellations as soon as possible. This helps maintain transparency and prevents confusion.</p>
+
+                <h4>8. Keep Personal Information Confidential</h4>
+                <p class="sgp">Respect the privacy of others and avoid sharing personal information such as home addresses, contact details, or financial information outside the carpooling platform. Use the platform's secure messaging system for all necessary communication.</p>
+
+                <h4>9. Report Inappropriate Behavior</h4>
+                <p class="sgp">If you encounter any inappropriate behavior or suspect a violation of the platform's terms of service, promptly report it to the platform's support team. They will investigate and take appropriate action to ensure the safety and well-being of the carpooling community.</p>
+            </div>
+        </div>
+        <div class="sg1">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ6bJYDQpFwxELyqt0X-gzPpx-PczJVnKV4Dw&amp;usqp=CAU" class="sgimage sgimg1" />
+            <div class="sg1sub">
+                <h4>10. Plan for Contingencies</h4>
+                <p class="sgp">Discuss contingency plans in case of unforeseen circumstances such as vehicle breakdowns, traffic disruptions, or changes in schedules. Establish a backup communication method or have emergency contact numbers readily available to handle such situations.</p>
+                <h4>11. Be Mindful of Personal Hygiene</h4>
+                <p class="sgp">Ensure personal hygiene when carpooling. Respect others' comfort by maintaining cleanliness, avoiding strong scents, and following basic hygiene practices. This helps create a pleasant and comfortable environment for everyone in the carpool.</p>
+
+                <h4>12. Keep Valuables Secure</h4>
+                <p class="sgp">When carpooling, keep your valuables secure and out of sight to prevent theft or misplacement. Avoid leaving valuable items unattended in the car. It's recommended to store personal belongings in designated areas or carry them with you when leaving the vehicle.</p>
+
+            </div>
+        </div>
+    </div>
+    <!-- FAQs -->
+    <div id="FAQS" class="faq">
+        <h1 style="font-weight:bold;" class="text-white text-center mt-5 mb-5">Frequently Asked Questions</h1>
+        <div class="question">
+            <h2>1. Is carpooling safe?</h2>
+            <p>Yes, carpooling can be a safe mode of transportation. However, it's important to follow safety guidelines, verify user profiles, and trust your instincts. Utilize the rating system and report any concerns to ensure a secure carpooling experience.</p>
+        </div>
+        <div class="question">
+            <h2>2. How do I book a ride?</h2>
+            <p>To book a ride, search for available rides on our platform, review the ride details, and contact the driver through the provided contact information or using our booking system. Confirm the ride details with the driver and make any necessary payment or contribution as agreed upon.</p>
+        </div>
+        <div class="question">
+            <h2>3. Can I cancel a booked ride?</h2>
+            <p>Yes, you can cancel a booked ride, but please do so as soon as possible to provide ample notice to the driver. Some rides may have specific cancellation policies, so it's important to review them before booking. Excessive cancellations may impact your rating and reputation within the carpooling community.</p>
+        </div>
+        <div class="question">
+            <h2>4. How do I become a driver?</h2>
+            <p>If you want to become a driver, you can create a driver profile on our platform. Provide your driving details, vehicle information, and any other required information. Once your profile is approved, you can start offering rides and accepting passengers.</p>
+        </div>
+        <div class="question">
+            <h2>5. What if there's a problem during a ride?</h2>
+            <p>If you encounter any issues during a ride, try to resolve them through open communication with the driver or other passengers. If the issue persists or if it's a safety concern, report it to our support team. We take such matters seriously and will investigate and take appropriate actions as necessary.</p>
+        </div>
+    </div>
+    <!-- Footer -->
+    <div id="FOOTER" class="footer">
+        <div class="bg1 pt-5 pb-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 text-md-left text-center col-md-6 col-lg-3">
+                        <div>
+                            <!-- <img class="image4 mb-3" src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-responsive-website/ecommerce-website-logo-img.png" /> -->
+                            <img class="logo1 "src="https://drive.google.com/uc?export=view&id=1zoHBVeCXilE0J2xMCl6Um7o8gpn6f_cS" alt="logo">
+                            <div class="d-flex flex-row justify-content-md-start justify-content-center">
+                                <div>
+                                    <i class="logo icons p-2 mr-2 fa-brands fa-google fa-2x"></i>
+                                </div>
+                                <div>
+                                    <i class="logo icons p-2 mr-2 fa-brands fa-twitter fa-2x"></i>
+                                </div>
+                                <div>
+                                    <i class="logo icons p-2 mr-2 fa-brands fa-instagram fa-2x"></i>
+                                </div>
+                                <div>
+                                    <i class="logo icons p-2 mr-2 fa-brands fa-linkedin fa-2x"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-6 col-lg-3">
+                        <h5 class="h">Get to know us</h5>
+                        <p class="pe">About us</p>
+                        <p class="pe">Career</p>
+                        <p class="pe">Press Releases</p>
+                        <p class="pe">Gift a smile</p>
+                    </div>
+                    <div class="col-6 col-md-6 col-lg-3">
+                        <h5 class="h">Contact with Us</h5>
+                        <p class="pe">Facebook</p>
+                        <p class="pe">Twitter</p>
+                        <p class="pe">Instagram</p>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <h5 class="h">Let Us Help You</h5>
+                        <p class="pe">100% Assistance</p>
+                        <p class="pe">Protection</p>
+                        <p class="pe">Your Account</p>
+                        <p class="pe">Help</p>
+                    </div>
+                    <div class="col-12 text-center">
+                        <hr class="line2 m-2" />
+                        <p class="pe"><i class="logo fa-regular fa-copyright"></i> 2023 Carpool website</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="/DTI-prototype-car-pooling-website/script.js"></script>
+</body>
+
+</html>

@@ -11,42 +11,129 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="icon" href="https://github.com/" type="image/icon type">
     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="../css_files/translate.css">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap" rel="stylesheet">
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="go_to_top.css">
+    <link rel="icon" href="./img/favicon.ico">
     <title>Dev Geeks||Repository</title>
     <meta name="description" content="Dev Geeks" />
-    <meta name="keywords" content="Dev geeks, hacktoberfest 2021, hack ,hacktoberfest, ds algo, algorithms, c++, pranjay poddar, SRM ,open source,development, html5, css3, javascript, js, angular, react, forms, animations, CSS animations, navbars , side navbars , footer, responsive footer, js projects, mini projects, ML projects"
-    />
-    
+    <meta name="keywords"
+        content="Dev geeks, hacktoberfest 2021, hack ,hacktoberfest, ds algo, algorithms, c++, pranjay poddar, SRM ,open source,development, html5, css3, javascript, js, angular, react, forms, animations, CSS animations, navbars , side navbars , footer, responsive footer, js projects, mini projects, ML projects" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <meta name="author" content="Pranjay Poddar" />
     <meta property="og:url" content="https://pranjay-poddar.github.io/Dev-Geeks/Repository_web_page/index.html" />
     <meta property="og:title" content="Dev Geeks" />
     <meta property="og:description" content="Open Source repository for mini projects" />
-
+    <link rel="stylesheet" href="swiper-bundle.min.css">
+    <link rel="stylesheet" href="Darkthem.css">
+    <link rel="stylesheet" href="testimonial.css">
+    <script src="Darktheme.js"></script>
 </head>
 
 <body>
-    
+    <button class="gotop">
+        <img src="https://github.com/pranjay-poddar/Dev-Geeks/assets/104543751/f1773a97-93d3-4d48-b52e-6bd815282fc0"
+            alt="arrow up">
+    </button>
+    <!-- SCROLL TP TOP -->
+    <section>
+        <div id="progress">
+            <span id="progress-value">&#x1F815;</span>
+        </div>
+    </section>
+
+    <header>
+        <nav class="navbar">
+            <div id="poster" style="border-radius: 20px;">
+                <!-- <a href="https://github.com/pranjay-poddar"><img class="img-fluid" src="https://cdn.worldvectorlogo.com/logos/github-2.svg" alt="Dev geeks"></a> -->
+                <a href="https://github.com/pranjay-poddar" target="_blank">
+                    <div class="logo">
+                        <i class="github-logo"></i>
+                        <span class="dev">Dev</span>
+                        <span class="geeks">Geeks</span>
+                    </div>
+                </a>
+            </div>
+            <ul>
+                <li><a class="nava" href="../Devgeeks website/index.html#hero">Home</a></li>
+                <li><a class="nava" href="../Devgeeks website/index.html#about">About</a></li>
+                <li><a class="nava" href="../Devgeeks website/index.html#services">Projects</a></li>
+                <li><a class="nava" href="https://devgeeks-os.netlify.app/repository_web_page/">How to Contribute</a>
+                </li>
+                <li><a class="nava" href="../Devgeeks website/index.html#team">Team</a></li>
+                
+                <li>
+                    <div id="google_translate_element"></div>
+                    <script src="js_files/translate.js"></script>
+
+                    <script type="text/javascript">
+                        function googleTranslateElementInit() {
+                            new google.translate.TranslateElement(
+                                { pageLanguage: 'en' },
+                                'google_translate_element'
+                            );
+                        }
+                    </script>
+
+                    <script type="text/javascript"
+                        src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
+                        </script>
+                </li>
+                <li>
+                    <div class="theme-toggle">
+                        <label class="switch">
+                            <input type="checkbox" id="toggleCheckbox">
+                            <span class="slider round"></span>
+                        </label>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </header>
     <section>
         <div class="container">
-            <div class="row text-center">
-                <div class="col-12 my-3 text-center">
-                    <div id="poster" style="border-radius: 20px;">
-                        <a href="https://github.com/pranjay-poddar"><img class="img-fluid" src="https://github.com/pranjay-poddar/Dev-Geeks/blob/main/Repository_images/dev%20geeks.gif" alt="Dev geeks"></a>
-                    </div>
-                </div>
-            </div>
+
             <div class="row my-5">
                 <div class="col-md-6 col-12">
                     <h2>What is Dev Geeks?</h2>
-                    <p>The Dev-Geeks repository is a collection of projects. It contains a variety of projects, ranging from web development to machine learning.Each project is designed to help developers learn and improve their skills in a particular area. The projects are written in a variety of languages, including Python, JavaScript, and HTML.The repository also includes tutorials and resources to help developers get started with the projects. The tutorials provide step-by-step instructions on how to set up the projects and how to use them. The resources provide additional information on the topics covered in the projects. The Dev-Geeks repository is a great resource for developers who are looking to learn and improve their skills. It provides a variety of projects that can help developers learn and improve their skills in a particular area. The tutorials and resources provided in the repository make it easy for developers to get started with the projects.</p>
-                    <br>
-                    Outcomes of Dev Geeks: 
-                    
-                     <ul>
+                    <p>The Dev-Geeks repository is a collection of projects. It contains a variety of projects, ranging
+                        from web development to machine learning. Each project is designed to help developers learn and
+                        improve their skills in a particular area. The projects are written in a variety of languages,
+                        including Python, JavaScript, and HTML. The repository also includes tutorials and resources to
+                        help developers get started with the projects. The tutorials provide step-by-step instructions
+                        on how to set up the projects and how to use them. The resources provide additional information
+                        on the topics covered in the projects. The Dev-Geeks repository is a great resource for
+                        developers who are looking to learn and improve their skills. It provides a variety of projects
+                        that can help developers learn and improve their skills in a particular area. The tutorials and
+                        resources provided in the repository make it easy for developers to get started with the
+                        projects.</p>
+
+
+                </div>
+                <div class="col-md-6 col-12">
+                    <h2>How Does It Work?</h2>
+                    <p>Dev Geeks is open to everyone in our global community!</p>
+                    <ul>
+                        <li>Maintainers determine if their open-source projects participate by adding the
+                            ‘hacktoberfest’ topic.</li>
+                        <li>
+                            <a href="https://github.com/pranjay-poddar" target="_blank">Quality Pull Requests</a> pull
+                            requests submitted on GitHub and GitLab are rewarded.
+                        </li>
+                        <li><a href="https://github.com/pranjay-poddar" target="_blank">Engaged maintenance</a> of
+                            Hacktoberfest tagged repositories are rewarded.</li>
+                    </ul>
+
+                    Outcomes of Dev Geeks:
+
+                    <ul>
                         <li>Prepare and share your project for collaboration</li>
                         <li>Contribute to the betterment of a project via pull requests</li>
                         <li>Organize an event</li>
@@ -54,23 +141,16 @@
                         <li>Contribute/Donate directly to open source projects</li>
                     </ul>
                 </div>
-                <div class="col-md-6 col-12">
-                    <h2>How Does It Work?</h2>
-                    <p>Dev Geeks is open to everyone in our global community!</p>
-                    <ul>
-                        <li>Maintainers determine if their open-source projects participate by adding the ‘hacktoberfest’ topic.</li>
-                        <li>
-                            <a href="https://github.com/pranjay-poddar">Quality Pull Requests</a> pull requests submitted on GitHub and GitLab are rewarded.</li>
-                        <li><a href="https://github.com/pranjay-poddar">Engaged maintenance</a> of Hacktoberfest tagged repositories are rewarded.</li>
-                    </ul>
-                </div>
             </div>
             <div class="row my-5">
                 <div class="col-md-6 col-12">
                     <h2>Rules:</h2>
                     <ul>
-                        <li>Pull requests can be made in any participating GitHub or GitLab hosted repository/projects. Look for the 'hacktoberfest' topic to know if a project is participating in Hacktoberfest.</li>
-                        <li>You can sign up anytime between October 1 and October 31. Just be sure to sign up on the official Hacktoberfest website for your pull requests to count.</li>
+                        <li>Pull requests can be made in any participating GitHub or GitLab hosted repository/projects.
+                            Look for the 'hacktoberfest' topic to know if a project is participating in Hacktoberfest.
+                        </li>
+                        <li>You can sign up anytime between October 1 and October 31. Just be sure to sign up on the
+                            official Hacktoberfest website for your pull requests to count.</li>
                     </ul>
                 </div>
                 <div class="col-md-6 col-12">
@@ -78,10 +158,13 @@
                     <ul>
                         <li>The pull request must contain commits you made yourself.</li>
                         <li>
-                            If a maintainer reports your pull request as spam, it will not be counted toward your participation in open source program.
+                            If a maintainer reports your pull request as spam, it will not be counted toward your
+                            participation in open source program.
                         </li>
-                        <li>If a maintainer reports behavior that’s not in line with the project’s code of conduct, you will be ineligible to participate.</li>
-                        <li>A pull request is considered approved once it has an overall approving review from maintainers, or has been merged by maintainers, or has been given the 'accepted' label.</li>
+                        <li>If a maintainer reports behavior that’s not in line with the project’s code of conduct, you
+                            will be ineligible to participate.</li>
+                        <li>A pull request is considered approved once it has an overall approving review from
+                            maintainers, or has been merged by maintainers, or has been given the 'accepted' label.</li>
                     </ul>
                 </div>
             </div>
@@ -93,47 +176,77 @@
         <div class="container admin my-5 p-4 bg-light" style="border-radius: 20px;">
             <h1 class="my-4 text-center">About Project Admin</h1>
             <div class="row">
-                <div class="col-md-6 col-12 text-center">
-                    <img class="img-fluid pranjay-img" src="img/project-admin.jfif" alt="pranjay-poddar" style="border-radius: 50%; margin-bottom: 50px;" height="200px" width="200px">
-                    <h2 class="text-center">Hello, I am Pranjay Poddar <img height='30px' width='30px' src='img/Hi.gif' alt='hii'></h2>
-                    <p>I am a software Engineer currently working at Paypal as SDE-1. I love making websites and Apps and have a keen interest in software development. I'm passionate about open source development,
-                        web development, web designing, and graphic designing.</p>
-                </div>
-                <div class="col-md-6 col-12 my-2 my-auto bg-light p-4" style="border-radius: 20px;">
-                    
-                    <div class="button-class">
-                        <p class="btn btn-primary buttonCustom">🌟 Software Engineer Inter at <a href="https://www.paypal.com/in/home" style="text-decoration: none; color:black; font-weight: bolder;">PayPal</a></p>
-                        <p class="btn btn-primary buttonCustom">🌟 Mentor at <a href="https://github.com/girlscript/winter-of-contributing" style="text-decoration: none; color:black; font-weight: bolder;">GWOC'21</a></p>
-                        <p class="btn btn-primary buttonCustom">💻 Contributor at <a href="https://github.com/Hack-Club-SRM/HCSSoC" style="text-decoration: none; color:black; font-weight: bolder;">HCSSOC'21</a></p>
-                        <p class="btn btn-primary buttonCustom">💻 Contributor at <a href="https://github.com/DevIncept" style="text-decoration: none; color:black; font-weight: bolder;">DCP'21</a></p>
-                        <p class="btn btn-primary buttonCustom">🌟 Mentor at <a href="https://verification.givemycertificate.com/v/5b8c96f3-d735-49a8-8d91-f4b34f8d5db3" style="text-decoration: none; color:black; font-weight: bolder;">Codeflow'22</a></p>
-                        <p class="btn btn-primary buttonCustom">💻 Contributor at <a href="https://gssoc.girlscript.tech/" style="text-decoration: none; color:black; font-weight: bolder;">GSSOC'22</a></p>
-                        <p class="btn btn-primary buttonCustom">🚩 Maintainer at <a href="https://hacktoberfest.com/" style="text-decoration: none; color:black; font-weight: bolder;">
-                            Hacktoberfest'21</a></p>
-                        <p class="btn btn-primary">🚩 Project Admin at <a href="https://soc.hackclubrait.co/#/Home" style="text-decoration: none; color:black; font-weight: bolder;">HSSOC'22</a></p>
+                <div class="col-md-8 col-12">
+                    <div class="row" style="align-items: center;">
+                        <img class="img-fluid pranjay-img" src="img/project-admin.jfif" alt="pranjay-poddar"
+                            style="border-radius: 50%;" height="150px" width="150px">
+                        <h3 class="text-center ml-3 mt-3 p-3">Hello, I am Pranjay Poddar <img height='30px' width='30px'
+                                src='img/Hi.gif' alt='hii'></h3>
+                        <p class="text-center" style="margin-top: 40px;">I am a software Engineer currently working at
+                            Paypal as SDE-1. I love making websites and Apps and have a keen interest in software
+                            development. I'm passionate about open source development,
+                            web development, web designing, and graphic designing.</p>
                     </div>
                     <div class="contacts">
-                        <h6>Contacts:</h6>
+                        <h4>Contacts:</h4>
                         <ul>
                             <li>
-                                <p><a href="https://pranjay.tech">Portfolio</a></p>
+                                <p><a href="https://pranjaypoddar.tech" target="_blank">Portfolio</a></p>
                             </li>
                             <li>
-                                <p><a href="https://pranjay-poddar.github.io/catalytic_originals/">Catalytic Original Website</a></p>
+                                <p><a href="https://www.linkedin.com/in/pranjay-poddar/" target="_blank">Linkedin</a>
+                                </p>
                             </li>
                             <li>
-                                <p><a href="https://tenor.com/official/pranjay_poddar">Official Tenor Page</a></p>
+                                <p><a href="https://github.com/pranjay-poddar" target="_blank">Github</a></p>
+                            </li>
+                            <li>
+                                <p><a href="https://www.instagram.com/pranjay_poddar/" target="_blank">Instagram</a></p>
                             </li>
                         </ul>
                     </div>
                 </div>
+                <div class="col-md-4 col-12 my-2 my-auto bg-light p-2" style="border-radius: 20px;">
+
+                    <div class="button-class">
+                        <p class="btn btn-primary buttonCustom">🌟 Software Engineer at <a
+                                href="https://www.paypal.com/in/home" target="_blank"
+                                style="text-decoration: none; color:black; font-weight: bolder;">PayPal</a></p>
+                        <p class="btn btn-primary buttonCustom">🌟 Mentor at <a
+                                href="https://github.com/girlscript/winter-of-contributing" target="_blank"
+                                style="text-decoration: none; color:black; font-weight: bolder;">GWOC'21</a></p>
+                        <p class="btn btn-primary buttonCustom">💻 Contributor at <a
+                                href="https://github.com/Hack-Club-SRM/HCSSoC" target="_blank"
+                                style="text-decoration: none; color:black; font-weight: bolder;">HCSSOC'21</a></p>
+                        <p class="btn btn-primary buttonCustom">💻 Contributor at <a href="https://github.com/DevIncept"
+                                target="_blank"
+                                style="text-decoration: none; color:black; font-weight: bolder;">DCP'21</a></p>
+                        <p class="btn btn-primary buttonCustom">🌟 Mentor at <a
+                                href="https://verification.givemycertificate.com/v/5b8c96f3-d735-49a8-8d91-f4b34f8d5db3"
+                                style="text-decoration: none; color:black; font-weight: bolder;">Codeflow'22</a></p>
+                        <p class="btn btn-primary buttonCustom">💻 Contributor at <a
+                                href="https://gssoc.girlscript.tech/" target="_blank"
+                                style="text-decoration: none; color:black; font-weight: bolder;">GSSOC'22</a></p>
+                        <p class="btn btn-primary buttonCustom">🚩 Maintainer at <a href="https://hacktoberfest.com/"
+                                target="_blank" style="text-decoration: none; color:black; font-weight: bolder;">
+                                Hacktoberfest'21</a></p>
+                        <p class="btn btn-primary">🚩 Project Admin at <a href="https://soc.hackclubrait.co/#/Home"
+                                target="_blank"
+                                style="text-decoration: none; color:black; font-weight: bolder;">HSSOC'22</a></p>
+                    </div>
+
+                </div>
             </div>
             <div class="row my-5 text-center">
                 <div class="col-md-6 col-12 text-center my-4 my-auto">
-                    <img class="img-fluid" src="https://github-readme-stats.vercel.app/api?username=pranjay-poddar&show_icons=true&count_private=true&title_color=ff0087&bg_color=fafbfc00&text_color=a2a2a2" alt="pranjay's github stats" />
+                    <img class="img-fluid"
+                        src="https://github-readme-stats.vercel.app/api?username=pranjay-poddar&show_icons=true&count_private=true&title_color=ff0087&bg_color=fafbfc00&text_color=a2a2a2"
+                        alt="pranjay's github stats" />
                 </div>
                 <div class="col-md-6 col-12 text-center my-4 my-auto">
-                    <img class="img-fluid stat" src="https://github-readme-stats.vercel.app/api/top-langs/?username=pranjay-poddar&title_color=ff0087&bg_color=fafbfc00&text_color=35b5ff" alt="pranjay's most languages used stats" />
+                    <img class="img-fluid stat"
+                        src="https://github-readme-stats.vercel.app/api/top-langs/?username=pranjay-poddar&title_color=ff0087&bg_color=fafbfc00&text_color=35b5ff"
+                        alt="pranjay's most languages used stats" />
                 </div>
             </div>
         </div>
@@ -143,15 +256,19 @@
     <section>
         <div class="container my-5 py-4 bg-dark text-white repo" style="border-radius: 20px;">
             <h1 class="text-center">About The Repository</h1>
-            <h3 class="text-center">Link: <a href="https://github.com/pranjay-poddar/Dev-Geeks">github.com/pranjay-poddar/Dev-Geeks</a></h3>
+            <h3 class="text-center">Link: <a href="https://github.com/pranjay-poddar/Dev-Geeks"
+                    target="_blank">github.com/pranjay-poddar/Dev-Geeks</a></h3>
             <br>
             <h6>
                 <ul>
                     <li>
-                        This repository is collection vibrant frontend projects, mini-projects, components, animations, games and much more!
+                        This repository is collection vibrant frontend projects, mini-projects, components, animations,
+                        games and much more!
                     </li>
                     <li>
-                        Repository has a very legible and comprehendible README.md for instructions to contribute. Issues are open as well and if needed, one can also create a new-issue. All valid/legit Pull-Requests Will be merged and labeled as hacktoberfest-accepeted
+                        Repository has a very legible and comprehendible README.md for instructions to contribute.
+                        Issues are open as well and if needed, one can also create a new-issue. All valid/legit
+                        Pull-Requests Will be merged and labeled as hacktoberfest-accepeted
                     </li>
                     <li>
                         Happy Coding!🚀
@@ -161,22 +278,29 @@
                     </li>
                 </ul>
             </h6>
-            <a href="https://github.com/pranjay-poddar/Dev-Geeks"><img src="./img/repo.PNG" alt="repo-pic" class="img-fluid text-center" style="border-radius: 20px;"></a>
+            <a href="https://github.com/pranjay-poddar/Dev-Geeks" target="_blank"><img src="./img/repo.PNG"
+                    alt="repo-pic" class="img-fluid text-center" style="border-radius: 20px;"></a>
             <div class="container my-5 values">
-                <h6 class="text-muted text-center">Click count to get live updates!</h6>
+                <h6 class="text-muted text-center mb-5">Click count to get live updates!</h6>
                 <div class="row">
 
                     <div class="col-12 col-md-4 text-center my-auto">
                         <h2>Closed Issues:</h2>
-                        <div id="value1"></div>
+                        <div id="value1" class="text-white"></div>
+                        <a href="https://github.com/pranjay-poddar/Dev-Geeks/issues" target="_blank"><button
+                                type="button" class="btn btn-secondary">Explore</button></a>
                     </div>
                     <div class="col-12 col-md-4 text-center my-auto">
                         <h2>Closed PRs:</h2>
-                        <div id="value3"></div>
+                        <div id="value3" class="text-white"></div>
+                        <a href="https://github.com/pranjay-poddar/Dev-Geeks/pulls" target="_blank"><button
+                                type="button" class="btn btn-secondary">Explore</button></a>
                     </div>
                     <div class="col-12 col-md-4 text-center my-auto">
                         <h2>Contributors:</h2>
-                        <div id="value2"></div>
+                        <div id="value2" class="text-white"></div>
+                        <a href="https://github.com/pranjay-poddar/Dev-Geeks/discussions" target="_blank"><button
+                                type="button" class="btn btn-secondary">Explore</button></a>
                     </div>
                 </div>
                 <!--                 <div class="row my-5">
@@ -190,21 +314,214 @@
             </div>
         </div>
     </section>
-    <div class="container-fluid">
-        <div class="row footer">
-            <div class="col-md-12 col-lg-12 col-xs-12 col-sm-12">
-                <h4 class="text-center"> Developed with <span style="color:red;">&hearts; </span> by <a href="https://github.com/pranjay-poddar">Pranjay Poddar</a></h4>
+
+    <section class="tes">
+        <div class="slide-container1 swiper">
+            <h3>Testimonial</h3>
+            <h2>-What People Think-</h2>
+            <div class="slide-content">
+                <div class="card-wrapper swiper-wrapper">
+
+                    <div class="card swiper-slide">
+                        <div class="image-content">
+                            <span class="overlay"> </span>
+
+                            <div class="card-image">
+                                <img src="https://github.com/pranjay-poddar/Dev-Geeks/assets/104543751/1fd10996-6fea-419e-b030-0533a7599c97"
+                                    alt=" " class="card-img">
+                            </div>
+                        </div>
+                        <div class="card-content">
+                            <h2 class="name">Amelia </h2>
+                            <p class="description"> This app is awesome, you don't get unnecessary contents, there's a
+                                separate page for topics that you want to know or discuss about. It's so easy to use.
+                            </p>
+
+                            <button class="button">view more</button>
+
+                        </div>
+                    </div>
+
+                    <div class="card swiper-slide">
+                        <div class="image-content">
+                            <span class="overlay"> </span>
+
+                            <div class="card-image">
+                                <img src="https://github.com/pranjay-poddar/Dev-Geeks/assets/104543751/28ef52d6-cc43-4b6f-bfc2-0f7e776e85d8"
+                                    alt=" " class="card-img">
+                            </div>
+                        </div>
+                        <div class="card-content">
+                            <h2 class="name">Abigale</h2>
+                            <p class="description">It helps to Prepare and share your project for
+                                collaboration,Contribute to the betterment of a project via pull requests,Organize an
+                                event,Mentor others and much more. </p>
+
+                            <button class="button">view more</button>
+
+                        </div>
+                    </div>
+
+                    <div class="card swiper-slide">
+                        <div class="image-content">
+                            <span class="overlay"> </span>
+
+                            <div class="card-image">
+                                <img src="https://github.com/pranjay-poddar/Dev-Geeks/assets/104543751/a5be3c2c-5949-45cd-9ca6-fdcb6711a98d"
+                                    alt=" " class="card-img">
+                            </div>
+                        </div>
+                        <div class="card-content">
+                            <h2 class="name">Caroline</h2>
+                            <p class="description">Very useful app. It contains a variety of projects, ranging from web
+                                development to machine learning.Each project is designed to help developers learn and
+                                improve their skills. </p>
+                            <button class="button">view more</button>
+
+                        </div>
+                    </div>
+
+
+                    <div class="card swiper-slide">
+                        <div class="image-content">
+                            <span class="overlay"> </span>
+
+                            <div class="card-image">
+                                <img src="https://github.com/pranjay-poddar/Dev-Geeks/assets/104543751/d9b79dde-4f4c-426f-9aa0-5fc9df4e0095"
+                                    alt=" " class="card-img">
+                            </div>
+                        </div>
+                        <div class="card-content">
+                            <h2 class="name">Pearl</h2>
+                            <p class="description">This app is awesome, you don't get unnecessary contents., there's a
+                                separate page for topics that you want to know or discuss about It's so easy to use.</p>
+
+                            <button class="button">view more</button>
+
+                        </div>
+                    </div>
+
+
+                    <div class="card swiper-slide">
+                        <div class="image-content">
+                            <span class="overlay"> </span>
+
+                            <div class="card-image">
+                                <img src="https://github.com/pranjay-poddar/Dev-Geeks/assets/104543751/0d285ddd-d66b-49c7-9c56-cdc9270940e0"
+                                    alt=" " class="card-img">
+                            </div>
+                        </div>
+                        <div class="card-content">
+                            <h2 class="name">Eliza</h2>
+                            <p class="description">Very useful app. It contains a variety of projects, ranging from web
+                                development to machine learning.Each project is designed to help developers learn and
+                                improve their skills.</p>
+                            <button class="button">view more</button>
+
+                        </div>
+                    </div>
+
+
+                    <div class="card swiper-slide">
+                        <div class="image-content">
+                            <span class="overlay"> </span>
+
+                            <div class="card-image">
+                                <img src="https://github.com/pranjay-poddar/Dev-Geeks/assets/104543751/3bdf1907-4279-402a-8bd9-506a83497072"
+                                    alt=" " class="card-img">
+                            </div>
+                        </div>
+                        <div class="card-content">
+                            <h2 class="name">Margarate</h2>
+                            <p class="description">It helps to Prepare and share your project for
+                                collaboration,Contribute to the betterment of a project via pull requests,Organize an
+                                event,Mentor others and much more.</p>
+
+                            <button class="button">view more</button>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="swiper-button-next swiper-navBtn"></div>
+            <div class="swiper-button-prev swiper-navBtn"></div>
+            <div class="swiper-pagination"></div>
+        </div>
+    </section>
+
+    <form id="newsin">
+        <div>
+            <h2>Subscribe to our Newsletter</h2>
+            </br>
+            <p>Make sure you don't miss any updates regarding our latest projects</p>
+        </div>
+
+        <div id="info" style="background-color:white">
+            <label for="nameuser">Name :</label>
+            <input id="nameuser" type="text" placeholder="Name" name="name" required>
+            </br>
+            <label for="nameuser">Email :</label>
+            <input id="nameuser" type="text" placeholder="Email address" name="mail" required>
+            </br>
+            <label>
+                <input id="checkedbox" type="checkbox" checked="checked" name="subscribe"> Daily Newsletter
+            </label>
+        </div>
+
+        <div>
+            <input id="submitnews" type="submit" value="Subscribe">
+        </div>
+    </form>
+
+    <!-- FOOTER SECTION -->
+    <div class="section pt-2">
+        <h3>CONTACT <span>US</span></h3>
+        <div class="wrapper">
+            <a href="https://www.youtube.com/catalyticoriginals" target="_blank" class="icon facebook">
+                <div class="tooltip">YouTube</div>
+                <span><i class="fab fa-youtube"></i></span>
+            </a>
+            <a href="https://twitter.com/PranjayPoddar" class="icon twitter">
+                <div class="tooltip">Twitter</div>
+                <span><i class="fab fa-twitter"></i></span>
+            </a>
+            <a href="https://www.instagram.com/pranjay_poddar/" target="_blank" class="icon instagram">
+                <div class="tooltip">Instagram</div>
+                <span><i class="fab fa-instagram"></i></span>
+            </a>
+            <a href="https://github.com/pranjay-poddar" target="_blank" class="icon github">
+                <div class="tooltip">Github</div>
+                <span><i class="fab fa-github"></i></span>
+            </a>
+            <a href="https://www.linkedin.com/in/pranjay-poddar/" target="_blank" class="icon linkedin">
+                <div class="tooltip">Linkedin</div>
+                <span><i class="fab fa-linkedin"></i></span>
+            </a>
+        </div>
+        <div>
+            <div class="footer-copyright p-2">
+                <p>Developed with ❤️ by <span>Pranjay Poddar</span></p>
             </div>
         </div>
     </div>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
     <script src="script.js"></script>
-
+    <script src="go_to_top.js"></script>
+    <script src="swiper-bundle.min.js"></script>
+    <script src="testimonial.js"></script>
 </body>
 
 </html>

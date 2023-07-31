@@ -1,0 +1,169 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --Soft-blue: hsl(215, 51%, 70%);
+    --Cyan: hsl(178, 100%, 50%);
+    --Very-dark-blue : hsl(216, 50%, 16%);
+    --Very-dark-blue : hsl(215, 32%, 27%);
+    --White: hsl(0, 0%, 100%);
+}
+
+body{
+    font-size: 18x;
+    background-color: hsl(217, 54%, 11%);
+    margin: 0 1rem;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Outfit';
+}
+
+.container{
+    background-color: var(--Very-dark-blue);
+    border-radius: .625rem;
+    margin: 1rem;
+    padding: 1.5rem;
+}
+
+figure{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+figure:hover > figcaption{
+    opacity: .5;
+    cursor: pointer;
+}
+
+figcaption{
+    background-color: var(--Cyan);
+    width: 252px;
+    height: 252px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    border-radius: .625rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--White);
+    opacity: 0;
+}
+
+figcaption img{
+    width: 15%;
+    opacity: 1;
+}
+
+img.equilibrium{
+    width: 100%;    
+    border-radius: .625rem;
+}
+
+div.equilibrium:hover{
+    background: var(--Cyan);
+}
+
+h1{
+    font-size: 17px;
+    color: var(--White);
+    margin: 1rem 0;
+    text-align: center;
+}
+
+h1:hover{
+    color: var(--Cyan);
+    cursor: pointer;
+}
+
+p.equilibrium{
+    color: var(--Soft-blue);
+    margin-bottom: 1rem;
+}
+
+div.ether{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+    font-size: 15px;
+}
+
+.price{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--Cyan);
+    font-weight: 600;
+
+}
+
+.price img{
+    margin-right: .6rem;
+}
+
+.days{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--Soft-blue);
+}
+
+.days span{
+    margin-left: .6rem;
+}
+
+hr{
+    color: var(--Soft-blue);
+    border: 1px solid;
+    margin-bottom: 1rem;
+}
+
+.end{
+    display: flex;
+    align-items: center;
+    margin-top: .2rem;
+    font-size: 15px;
+}
+
+.end img{
+    width: 11%;
+    border: 1px solid hsl(0, 0%, 100%);
+    border-radius: 50%;
+}
+
+.end p{
+    margin-left: 1rem;
+    color: var(--Soft-blue);
+}
+
+.end p span{
+    color: var(--White);
+}
+
+.end p span:hover{
+    color: var(--Cyan);
+    cursor: pointer;
+}
+
+
+@media screen and (max-width:600px){
+    .container{
+        max-width: 375px;
+    }
+}
+
+@media screen and (min-width:600px){
+    .container{
+        max-width: 300px;
+    }
+}

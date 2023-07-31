@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="index.js" defer></script>
+    <link rel="shortcut icon" href="./pencil.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Web Paint</title>
+</head>
+
+<body>
+    <header>
+        <h2> Web Paint </h2>
+        <div class="tools">
+            <button type="button" title="Eraser" onclick="erase()" class="btn"><i class="fa-solid fa-eraser"></i></button>
+            <button type="button" title="Save Sketch" onclick="onSave()" class="btn"><i class="fa-solid fa-floppy-disk"></i></button>
+            <button type="button" class="color-btn btn">
+                <input type="color" id="color-picker">
+                <label for="color-picker">
+                    <div></div>
+                    Color
+                </label>
+            </button>
+            <button onclick="sizeList()" class="size-btn btn"><i class="fa-solid fa-pen"></i><span>Size</span><i
+                    class="fa-solid fa-caret-down"></i>
+                <ul class="size-list">
+                    <li>
+                        <div class="size" style="--set-size:02px"></div>
+                    </li>
+                    <li>
+                        <div class="size" style="--set-size:05px"></div>
+                    </li>
+                    <li>
+                        <div class="size" style="--set-size:08px"></div>
+                    </li>
+                    <li>
+                        <div class="size" style="--set-size:10px"></div>
+                    </li>
+                    <li>
+                        <div class="size" style="--set-size:15px"></div>
+                    </li>
+                </ul>
+            </button>
+            <div class="color-palette">
+                <span class="color" style="--set-color:#000000"></span>
+                <span class="color" style="--set-color:#808080"></span>
+                <span class="color" style="--set-color:#800000"></span>
+                <span class="color" style="--set-color:#ff0000"></span>
+                <span class="color" style="--set-color:#ff4500"></span>
+                <span class="color" style="--set-color:#ffff00"></span>
+                <span class="color" style="--set-color:#008000"></span>
+                <span class="color" style="--set-color:#00a2e8"></span>
+                <span class="color" style="--set-color:#3f48cc"></span>
+                <span class="color" style="--set-color:#a349a4"></span>
+                <span class="color" style="--set-color:#ffffff"></span>
+                <span class="color" style="--set-color:#c3c3c3"></span>
+                <span class="color" style="--set-color:#b97a57"></span>
+                <span class="color" style="--set-color:#ffaec9"></span>
+                <span class="color" style="--set-color:#ffc90e"></span>
+                <span class="color" style="--set-color:#efe4b0"></span>
+                <span class="color" style="--set-color:#b5e61d"></span>
+                <span class="color" style="--set-color:#99d9ea"></span>
+                <span class="color" style="--set-color:#7092be"></span>
+                <span class="color" style="--set-color:#c8bfe7"></span>
+            </div>
+        </div>
+    </header>
+    <div class="canvas-container">
+        <canvas id="draw"></canvas>
+        
+    </div>
+</body>
+</html>

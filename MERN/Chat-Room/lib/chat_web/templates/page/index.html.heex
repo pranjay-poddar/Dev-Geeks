@@ -1,0 +1,100 @@
+
+<h2>Chat Room</h2>
+<div id="chat-box">
+<%= for message <- @messages do %>
+    <p><b><%= message.name %>:</b> <%= message.body %></p>
+  <% end %>
+</div>
+<form id="chat-form">
+  <input type="text" placeholder="Username" id="user-name" />
+  <textarea placeholder="Your comment" id="user-msg"></textarea>
+  <button id="post" type="submit">Post</button>
+</form>
+
+<style>
+h2{
+  font-size: 24px;
+  font-family: cursive;
+}
+
+#chat-box {
+  border: 1px #000 solid;
+  padding: 0 0 0 5px;
+  min-height: 450px;
+
+  overflow: scroll;
+  font-size: 16px;
+  font-family: cursive;
+}
+
+}
+
+#chat-form {
+  width:250px;
+  background-color: white;
+  font-size: 16px;
+  font-family: cursive;
+
+}
+
+#chat-form input[type="text"] {
+  width: 250px;
+  padding: 5px;
+  border: 1px solid #ccc;
+  margin-top: 5px;
+  font-size: 16px;
+  font-family: cursive;
+
+}
+
+#chat-form textarea {
+  width: 250px;
+  padding: 5px;
+  border: 1px solid #ccc;
+  margin-top: 5px;
+    font-size: 16px;
+      font-family: cursive;
+}
+
+ ::-webkit-scrollbar {
+     width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 5px;
+}
+
+
+#post{
+
+background-color: green;
+font-size: 16px;
+font-family: cursive;
+border: none;
+padding: 8px 15px;
+background-color: #2ecc71;
+color: #fff;
+font-size: 16px;
+font-weight: bold;
+text-transform: uppercase;
+letter-spacing: 1px;
+cursor: pointer;
+}
+button#post:hover {
+background-color: #27ae60;
+}
+
+#whole{
+  position: fixed;
+   top: 0;
+   left: 0;
+   width: 100%;
+   margin-top:20px;
+}
+
+</style>

@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SignIn Page</title>
+
+  <style>
+    body{
+        background-image: linear-gradient(to right,#0f0c29,#302b63,#24243e,rgb(69, 69, 107));
+    }
+    .body {
+      font-family: Arial, sans-serif;
+   
+      margin: 0;
+      padding: 20px;
+      height: 100%; 
+      margin-top: 100px;
+      transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+    
+    .container {
+                   max-width: 500px;
+      margin: 0 auto;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 5px;
+    
+      box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px, rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
+  
+    }
+    .body:hover{
+        transform: translateY(30px);
+   
+    }
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      /* color: linear-gradient(#0f0c29,#302b63,#24243e,rgb(69, 69, 107)); */
+      color: rgb(83, 69, 183);
+     }
+    
+    .form-group {
+      margin-bottom: 20px;
+    }
+    
+    .form-group label {
+      display: block;
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+    
+    .form-group input {
+      width: 95%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(19, 19, 19, 0.1);
+    }
+    
+    .form-group .error-message {
+      color: red;
+    }
+    
+    .form-group .success-message {
+      color: green;
+    }
+    
+    .form-group input.invalid {
+      border-color: red;
+    }
+    
+    .form-group input.valid {
+      border-color: green;
+    }
+    
+    button {
+      width: 100%;
+      padding: 10px;
+      background-image: linear-gradient(30deg,#0f0c29,#302b63,#24243e,rgb(69, 69, 107));
+      transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      color: #fff;
+      border: none;
+      font-weight:bolder ;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    
+    button:hover{
+      /* background-color: #45a049;
+       */
+       background-image: linear-gradient(30deg,#2e42f5,#e7e7f0,#9494ef,rgb(69, 69, 107));
+     color: black;
+      transform: translateY(5px);
+      box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px, rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
+  
+    }
+  </style>
+</head>
+<body>
+    <div class="body">
+  <div class="container">
+    <h2>Sign In Form</h2>
+    <form id="signup-form">
+     
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" id="email" required>
+        <span class="error-message"></span>
+      </div>
+      <div class="form-group">
+        <label for="password">Password:</label>
+        <input type="password" id="password" required>
+        <span class="error-message"></span>
+      </div>
+      <div class="form-group">
+        <label for="confirm-password">Confirm Password:</label>
+        <input type="password" id="confirm-password" required>
+        <span class="error-message"></span>
+      </div>
+      <div class="form-group">
+        <button type="submit">Sign Up</button>
+      </div>
+    </form>
+  </div>
+</div>
+  <script>
+    document.getElementById('signup-form').addEventListener('submit', function(event) {
+      event.preventDefault();
+      
+      // Clear error messages
+      var errorMessages = document.querySelectorAll('.error-message');
+      for (var i = 0; i < errorMessages.length; i++) {
+        errorMessages[i].innerHTML = '';
+      }
+      
+      // Clear validation styles
+      var inputs = document.querySelectorAll('input');
+      for (var i = 0; i < inputs.length; i++) {
+        inputs[i].classList.remove('invalid');
+        inputs[i].classList.remove('valid');
+      }
+      
+      // Perform form validation
+      
+      var emailInput = document.getElementById('email');
+      var passwordInput = document.getElementById('password');
+      var confirmPasswordInput = document.getElementById('confirm-password');
+      
+      var isValid = true;
+      
+    
+      
+      if (emailInput.value.trim() === '') {
+        setError(emailInput, 'Email is required');
+        isValid = false;
+      } else if (!validateEmail(emailInput.value.trim())) {
+        setError(emailInput, 'Invalid email format');
+        isValid = false;
+      }
+      
+      if (passwordInput.value.trim() === '') {
+        setError(passwordInput, 'Password is required');
+        isValid = false;
+      }
+      
+      if (confirmPasswordInput.value.trim() === '') {
+        setError(confirmPasswordInput, 'Confirm Password is required');
+        isValid = false;
+      } else if (passwordInput.value.trim() !== confirmPasswordInput.value.trim()) {
+        setError(confirmPasswordInput, 'Passwords do not match');
+        isValid = false;
+      }
+      
+      if (isValid) {
+        // Form submission logic goes here
+        alert('Login successfully!');
+      }
+    });
+    
+    function setError(input, message) {
+      input.classList.add('invalid');
+      var errorMessage = input.nextElementSibling;
+      errorMessage.innerHTML = message;
+    }
+    
+    function validateEmail(email) {
+      var re = /\S+@\S+\.\S+/;
+      return re.test(email);
+    }
+  </script>
+</body>
+
+
+</html>

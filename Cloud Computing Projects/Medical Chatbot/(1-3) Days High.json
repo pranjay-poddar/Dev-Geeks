@@ -1,0 +1,80 @@
+{
+  "id": "2229edb9-9161-477b-97e0-42f40839411b",
+  "name": "(1-3) Days High",
+  "auto": true,
+  "condition": "",
+  "conditionalFollowupEvents": [],
+  "conditionalResponses": [],
+  "context": [
+    "Conversation3-1coldcoughandfever-yes-1-3Days-followup"
+  ],
+  "contexts": [
+    "Conversation3-1coldcoughandfever-yes-1-3Days-followup"
+  ],
+  "endInteraction": false,
+  "events": [],
+  "fallbackIntent": false,
+  "liveAgentHandoff": false,
+  "parentId": "42fdf8c9-6831-4fdf-96d2-a17f20fd42b5",
+  "followUpIntents": [],
+  "priority": 500000,
+  "responses": [
+    {
+      "action": "Conversation3.Conversation3-custom.Conversation3-1coldcoughandfever-custom.Conversation3-1coldcoughandfever-yes-custom-2.Conversation3-1coldcoughandfever-yes-1-3Days-custom",
+      "affectedContexts": [
+        {
+          "name": "Conversation3-1coldcoughandfever-yes-1-3DaysHigh-followup",
+          "lifespan": 2
+        },
+        {
+          "name": "1-3DaysHigh-followup",
+          "lifespan": 2
+        }
+      ],
+      "parameters": [],
+      "defaultResponsePlatforms": {},
+      "messages": [
+        {
+          "type": "message",
+          "condition": "",
+          "speech": [
+            "Have you tried any home remedies or any medicines?"
+          ]
+        },
+        {
+          "type": "message",
+          "condition": "",
+          "speech": [
+            "1.Yes with improvement"
+          ]
+        },
+        {
+          "type": "message",
+          "condition": "",
+          "speech": [
+            "2.No"
+          ]
+        }
+      ],
+      "resetContexts": false
+    }
+  ],
+  "rootParentId": "4ff6d6f4-51ce-40cc-bea4-977e35b5b1e4",
+  "templates": [],
+  "userSays": [
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "1",
+          "userDefined": false
+        }
+      ],
+      "count": 0,
+      "id": "5a30c107-6976-43a4-90b2-bbe6f34f0335",
+      "updated": null
+    }
+  ],
+  "webhookForSlotFilling": false,
+  "webhookUsed": false
+}

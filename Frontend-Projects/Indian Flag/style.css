@@ -1,0 +1,196 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+body {
+  height:100vh;
+  display: flex;
+  flex-direction: column;
+  font-size: 15pt;
+  justify-content: space-between;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+}
+
+header {
+  height: 80px;
+  display: flex;
+  align-items: end;
+  justify-content: center;
+  text-align: center;
+  font-family: 'Luxurious Roman', cursive;
+  animation: colorChange 3s ease-in infinite, enter 4s ease-in;
+}
+
+@keyframes colorChange {
+  0% {
+    color: #FF9933;
+  }
+
+  33% {
+    color: #000080;
+  }
+
+  66% {
+    color: #138808;
+  }
+
+  100% {
+    color: #FF9933;
+  }
+}
+
+@keyframes enter {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.saffron, .white, .green {
+  height: 120px;
+  width: 500px;
+}
+
+.saffron {
+  background-color: #FF9933;
+  animation: stretch 2s ease-in;
+}
+
+.white {
+  background-color: white;
+}
+
+.green {
+  background-color: green;
+  animation: stretch 2s ease-in;
+}
+
+@keyframes stretch {
+  from {
+    width: 0px;
+    opacity: 0;
+  }
+
+  to {
+    width: 300px;
+    opacity: 1;
+  }
+}
+
+.chakra {
+  height: 120px;
+  width: 120px;
+  margin: 0px 190px;
+  position: absolute;
+  border-radius: 50%;
+  border: 5px solid darkblue;
+  animation: appear 2s ease-in;
+}
+
+@keyframes appear {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.flex {
+  display: flex;
+}
+
+#chakra-container{
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#chakra-container>div {
+  border: 2px solid darkblue;
+  position: absolute;
+  width: -webkit-fill-available;
+}
+
+ #one {
+  transform: rotate(0deg);
+}
+
+#two {
+  transform: rotate(15deg);
+}
+
+#three {
+  transform: rotate(30deg);
+}
+
+#four {
+  transform: rotate(45deg);
+}
+
+#five {
+  transform: rotate(60deg);
+}
+
+#six {
+  transform: rotate(75deg);
+}
+
+#seven {
+  transform: rotate(90deg);
+}
+
+#eight {
+  transform: rotate(105deg);
+}
+
+#nine {
+  transform: rotate(120deg);
+}
+
+#ten {
+  transform: rotate(135deg);
+}
+
+#eleven {
+  transform: rotate(150deg);
+}
+
+#twelve {
+  transform: rotate(165deg);
+}
+
+@keyframes spoke {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+footer {
+  height:50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(to right, #FF9933, #FFFFFF, green);
+}
