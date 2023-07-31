@@ -5,7 +5,10 @@
 .netlify-logo {
     height: 40px;
     padding: 25px;
-    margin-left: 85px;
+    margin: auto;
+    display: flex;
+    margin-top: 4rem;
+    margin-bottom: -3rem;
 }
 
 .container {
