@@ -1,0 +1,389 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Form"
+    android:background="@drawable/main_img2">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <ImageView
+                android:id="@+id/imageView7"
+                android:layout_width="136dp"
+                android:layout_height="156dp"
+                android:layout_marginLeft="@dimen/_100sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                app:srcCompat="@drawable/appl" />
+
+            <TextView
+                android:id="@+id/textView8"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/aplly"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textView12"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-light"
+                android:text="@string/personal"
+                android:textStyle="normal"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_13sdp"
+                android:textSize="@dimen/_14sdp"
+                android:textColor="#070303"/>
+
+            <EditText
+                android:id="@+id/editTextTextPersonName5"
+                android:layout_width="312dp"
+                android:layout_height="43dp"
+                android:layout_marginStart="@dimen/_25sdp"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:layout_marginEnd="@dimen/_25sdp"
+                android:background="@drawable/input_bg2"
+                android:drawableLeft="@drawable/baseline_person_24"
+                android:drawablePadding="@dimen/_10sdp"
+                android:ems="10"
+                android:hint="Enter Your Name"
+                android:inputType="textPersonName"
+                android:paddingLeft="@dimen/_10sdp"
+                android:paddingTop="@dimen/_5sdp"
+                android:paddingRight="@dimen/_5sdp"
+                android:paddingBottom="@dimen/_5sdp"
+                android:textAlignment="textStart"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.485"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.328" />
+
+            <EditText
+                android:layout_width="312dp"
+                android:layout_height="43dp"
+                android:background="@drawable/input_bg2"
+                android:paddingLeft="@dimen/_10sdp"
+                android:paddingTop="@dimen/_5sdp"
+                android:paddingRight="@dimen/_5sdp"
+                android:paddingBottom="@dimen/_5sdp"
+                android:layout_marginStart="@dimen/_25sdp"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:layout_marginEnd="@dimen/_25sdp"
+                android:id="@+id/date"
+                android:hint="Date Of Birth"
+                android:drawableLeft="@drawable/baseline_date_range_24"
+                android:drawablePadding="@dimen/_10sdp"/>
+
+            <EditText
+                android:id="@+id/editTextTextPersonName2"
+                android:layout_width="312dp"
+                android:layout_height="43dp"
+                android:layout_marginStart="@dimen/_25sdp"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:layout_marginEnd="@dimen/_25sdp"
+                android:background="@drawable/input_bg2"
+                android:drawablePadding="@dimen/_10sdp"
+                android:drawableLeft="@drawable/baseline_person_24"
+                android:paddingLeft="@dimen/_10sdp"
+                android:paddingTop="@dimen/_5sdp"
+                android:paddingRight="@dimen/_5sdp"
+                android:paddingBottom="@dimen/_5sdp"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:hint="Gender"/>
+
+            <EditText
+                android:id="@+id/editTextPhone2"
+                android:layout_width="312dp"
+                android:layout_height="43dp"
+                android:layout_marginStart="@dimen/_25sdp"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:layout_marginEnd="@dimen/_25sdp"
+                android:background="@drawable/input_bg2"
+                android:paddingLeft="@dimen/_10sdp"
+                android:paddingTop="@dimen/_5sdp"
+                android:paddingRight="@dimen/_5sdp"
+                android:paddingBottom="@dimen/_5sdp"
+                android:drawablePadding="@dimen/_10sdp"
+                android:ems="10"
+                android:hint="Contact Number"
+                android:drawableLeft="@drawable/baseline_call_24"/>
+
+            <EditText
+                android:id="@+id/editTextTextEmailAddress2"
+                android:layout_width="312dp"
+                android:layout_height="43dp"
+                android:layout_marginStart="@dimen/_25sdp"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:layout_marginEnd="@dimen/_25sdp"
+                android:background="@drawable/input_bg2"
+                android:paddingLeft="@dimen/_10sdp"
+                android:paddingTop="@dimen/_5sdp"
+                android:paddingRight="@dimen/_5sdp"
+                android:paddingBottom="@dimen/_5sdp"
+                android:drawablePadding="@dimen/_10sdp"
+                android:ems="10"
+                android:hint="Email Id"
+                android:drawableLeft="@drawable/baseline_email_24"/>
+
+            <EditText
+                android:id="@+id/editTextNumber"
+                android:layout_width="312dp"
+                android:layout_height="43dp"
+                android:layout_marginStart="@dimen/_25sdp"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:layout_marginEnd="@dimen/_25sdp"
+                android:background="@drawable/input_bg2"
+                android:paddingLeft="@dimen/_15sdp"
+                android:paddingTop="@dimen/_5sdp"
+                android:paddingRight="@dimen/_5sdp"
+                android:paddingBottom="@dimen/_5sdp"
+                android:drawablePadding="@dimen/_10sdp"
+                android:ems="10"
+                android:hint="Aadhar Number" />
+
+            <EditText
+                android:id="@+id/editTextTextPersonName4"
+                android:layout_width="312dp"
+                android:layout_height="43dp"
+                android:layout_marginStart="@dimen/_25sdp"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:layout_marginEnd="@dimen/_25sdp"
+                android:background="@drawable/input_bg2"
+                android:paddingLeft="@dimen/_15sdp"
+                android:paddingTop="@dimen/_5sdp"
+                android:paddingRight="@dimen/_5sdp"
+                android:paddingBottom="@dimen/_5sdp"
+                android:drawablePadding="@dimen/_10sdp"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:hint="Father Name" />
+            <TextView
+                android:id="@+id/edu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-light"
+                android:text="@string/edu"
+                android:textStyle="normal"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_13sdp"
+                android:textSize="@dimen/_14sdp"
+                android:textColor="#070303"/>
+
+            <EditText
+                android:id="@+id/editTextTextPersonName6"
+                android:layout_width="312dp"
+                android:layout_height="43dp"
+                android:layout_marginStart="@dimen/_25sdp"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:layout_marginEnd="@dimen/_25sdp"
+                android:background="@drawable/input_bg2"
+                android:paddingLeft="@dimen/_15sdp"
+                android:paddingTop="@dimen/_5sdp"
+                android:paddingRight="@dimen/_5sdp"
+                android:paddingBottom="@dimen/_5sdp"
+                android:drawablePadding="@dimen/_10sdp"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:hint="Name of Educational Institution"/>
+
+            <EditText
+                android:id="@+id/editTextNumber2"
+                android:ems="10"
+                android:hint="Enrolment Number"
+                android:layout_width="312dp"
+                android:layout_height="43dp"
+                android:layout_marginStart="@dimen/_25sdp"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:layout_marginEnd="@dimen/_25sdp"
+                android:background="@drawable/input_bg2"
+                android:paddingLeft="@dimen/_15sdp"
+                android:paddingTop="@dimen/_5sdp"
+                android:paddingRight="@dimen/_5sdp"
+                android:paddingBottom="@dimen/_5sdp"
+                android:drawablePadding="@dimen/_10sdp"/>
+
+            <EditText
+                android:id="@+id/editTextTextPersonName7"
+                android:layout_width="312dp"
+                android:layout_height="43dp"
+                android:layout_marginStart="@dimen/_25sdp"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:layout_marginEnd="@dimen/_25sdp"
+                android:background="@drawable/input_bg2"
+                android:paddingLeft="@dimen/_15sdp"
+                android:paddingTop="@dimen/_5sdp"
+                android:paddingRight="@dimen/_5sdp"
+                android:paddingBottom="@dimen/_5sdp"
+                android:drawablePadding="@dimen/_10sdp"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:hint="Year of Study"/>
+            <TextView
+                android:id="@+id/Fin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-light"
+                android:text="@string/fin"
+                android:textStyle="normal"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_13sdp"
+                android:textSize="@dimen/_14sdp"
+                android:textColor="#070303"/>
+
+            <EditText
+                android:id="@+id/editTextTextPersonName8"
+                android:layout_width="312dp"
+                android:layout_height="43dp"
+                android:layout_marginStart="@dimen/_25sdp"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:layout_marginEnd="@dimen/_25sdp"
+                android:background="@drawable/input_bg2"
+                android:paddingLeft="@dimen/_10sdp"
+                android:paddingTop="@dimen/_5sdp"
+                android:paddingRight="@dimen/_5sdp"
+                android:paddingBottom="@dimen/_5sdp"
+                android:drawablePadding="@dimen/_10sdp"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:hint="Annual Household Income"/>
+
+            <EditText
+                android:id="@+id/editTextTextPersonName9"
+                android:layout_width="312dp"
+                android:layout_height="43dp"
+                android:layout_marginStart="@dimen/_25sdp"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:layout_marginEnd="@dimen/_25sdp"
+                android:background="@drawable/input_bg2"
+                android:paddingLeft="@dimen/_10sdp"
+                android:paddingTop="@dimen/_5sdp"
+                android:paddingRight="@dimen/_5sdp"
+                android:paddingBottom="@dimen/_5sdp"
+                android:drawablePadding="@dimen/_10sdp"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:hint="Living Expenses"/>
+
+            <EditText
+                android:id="@+id/editTextTextPersonName11"
+                android:layout_width="312dp"
+                android:layout_height="43dp"
+                android:layout_marginStart="@dimen/_25sdp"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:layout_marginEnd="@dimen/_25sdp"
+                android:background="@drawable/input_bg2"
+                android:paddingLeft="@dimen/_10sdp"
+                android:paddingTop="@dimen/_5sdp"
+                android:paddingRight="@dimen/_5sdp"
+                android:paddingBottom="@dimen/_5sdp"
+                android:drawablePadding="@dimen/_10sdp"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:hint="Father Occupation"/>
+
+            <EditText
+                android:id="@+id/editTextTextPersonName12"
+                android:layout_width="312dp"
+                android:layout_height="43dp"
+                android:layout_marginStart="@dimen/_25sdp"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:layout_marginEnd="@dimen/_25sdp"
+                android:background="@drawable/input_bg2"
+                android:paddingLeft="@dimen/_10sdp"
+                android:paddingTop="@dimen/_5sdp"
+                android:paddingRight="@dimen/_5sdp"
+                android:paddingBottom="@dimen/_5sdp"
+                android:drawablePadding="@dimen/_10sdp"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:hint="Mother Occupation"/>
+            <TextView
+                android:id="@+id/Sch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-light"
+                android:text="@string/sch"
+                android:textStyle="normal"
+                android:layout_marginLeft="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_13sdp"
+                android:textSize="@dimen/_14sdp"
+                android:textColor="#070303"/>
+
+            <EditText
+                android:id="@+id/editTextTextMultiLine"
+                android:layout_width="312dp"
+                android:layout_height="70dp"
+                android:layout_marginStart="@dimen/_25sdp"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:layout_marginEnd="@dimen/_25sdp"
+                android:background="@drawable/input_bg2"
+                android:paddingLeft="@dimen/_15sdp"
+                android:paddingTop="@dimen/_5sdp"
+                android:paddingRight="@dimen/_5sdp"
+                android:paddingBottom="@dimen/_5sdp"
+                android:drawablePadding="@dimen/_10sdp"
+                android:ems="10"
+                android:gravity="start|top"
+                android:inputType="textMultiLine"
+                android:hint="Details of any Scholarship"
+                />
+            <TextView
+                android:id="@+id/reason"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-light"
+                android:text="@string/re"
+                android:textStyle="normal"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_13sdp"
+                android:textSize="@dimen/_14sdp"
+                android:textColor="#070303"/>
+
+            <EditText
+                android:id="@+id/editTextTextMultiLine2"
+                android:layout_width="312dp"
+                android:layout_height="70dp"
+                android:layout_marginStart="@dimen/_25sdp"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:layout_marginEnd="@dimen/_25sdp"
+                android:background="@drawable/input_bg2"
+                android:paddingLeft="@dimen/_15sdp"
+                android:paddingTop="@dimen/_5sdp"
+                android:paddingRight="@dimen/_5sdp"
+                android:paddingBottom="@dimen/_5sdp"
+                android:drawablePadding="@dimen/_10sdp"
+                android:ems="10"
+                android:gravity="start|top"
+                android:inputType="textMultiLine"
+                android:hint="Why you require financial assistance"/>
+
+            <Button
+                android:id="@+id/Applications"
+                android:layout_width="165dp"
+                android:layout_height="53dp"
+                android:layout_marginLeft="@dimen/_80sdp"
+                android:background="@drawable/submit"
+                android:text="@string/Submit"
+                android:textSize="@dimen/_15ssp"
+                android:layout_marginBottom="20dp"
+                android:layout_marginTop="@dimen/_20sdp"
+                />
+
+
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
