@@ -34,7 +34,7 @@
      </thead>
     <tbody>
          <tr>
-            <td><a href="https://github.com/pranjay-poddar/Dev-Geeks"</a>Project</td>
+            <td><a href="https://github.com/pranjay-poddar/Dev-Geeks"></a>Project</td>
             <td><img alt="Stars" src="https://img.shields.io/github/stars/pranjay-poddar/Dev-Geeks?style=flat&logo=github"/></td>
              <td><img alt="Forks" src="https://img.shields.io/github/forks/pranjay-poddar/Dev-Geeks?style=flat&logo=github"/></td>
             <td><img alt="Issues" src="https://img.shields.io/github/issues/pranjay-poddar/Dev-Geeks?style=flat&logo=github"/></td>
@@ -713,11 +713,8 @@ Happy Coding! -->
 <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Js-Projects/Colovaria"> Colovaria </a></td>
 <td align="center">235.</td>
 <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Java%20Projects/Inventory%20Management%20System">Inventory Management System</a></td>
-<td align="center"> 236</td>
+<td align="center">236.</td>
 <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Js-Games/Pacman"> Pacman Game </a></td>
-
-<td align="center"> 236.</td>
-<td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Frontend-Projects/FIght%20Game"> Fight Game </a></td>
 </tr>	
 
 
@@ -754,7 +751,7 @@ Happy Coding! -->
 <td align="center"> 248.</td>
 <td align="center"><a href="https://github.com/Sriparno08/Dev-Geeks/tree/add-project/Animations-CSS/Text%20Animation">Text Animation</a></td>
 </tr>
-
+  
 <tr align="center">
 <td align="center"> 249.</td>
 <td align="center"><a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Js-Games/ChessGrand">ChessGrand</a></td>
@@ -771,9 +768,126 @@ Happy Coding! -->
 <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Frontend-Projects/Hyundai_Clone"> Hyundai Clone </a></td>
 <td align="center"> 254.</td>
 <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Frontend-Projects/QrComponent"> QrComponent </a></td>
+  
 <td align="center"> 255.</td>
 <td align="center"><a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Js-Games/Mexico Escape">Mexico Escape</a></td>
+
+<td align="center"> 255.</td>
+<td align="center"><a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Js-Games/Planet Defense">Planet Defense</a></td>
+
+<td align="center"> 256.</td>
+<td align="center"><a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Js-Games/Spider_Man_Go">Spider Man Go</a></td>
+<td align="center"> 257.</td>
+<td align="center"><a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Js-Games/ATLAS">ATLAS</a></td>
 </tr>
+
+<tr align="center">
+  <td align="center"> 257.</td>
+  <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Frontend-Projects/FIght%20Game"> Fight Game </a></td>
+  <td align="center"> 258.</td>
+  <td align="center"><a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Js-Games/Quiz_Game">Quiz_Game</a></td>
+  <td align="center"> 259.</td>
+  <td align="center"><a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/PHP%20Projects/User_Signup_Login_with_database">PHP-Signup-Login</a></td>
+  <td align="center"> 260.</td>
+  <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Flutter Projects/Instagram Clone"> Flutter Instagram Clone </a></td>  
+ </tr>
+  
+
+ <tr align="center">
+  <td align="center"> 261. </td>
+  <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Js-Games/Etch-a-Sketch"> Etch-a-Sketch </a> </td>
+  <td align="center"> 262.</td>
+  <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Flutter Projects/Instagram Clone"> Flutter Instagram Clone </a></td>
+  <td align="center"> 263.</td>
+  <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Js-Projects/Facebook%20Clone"> Facebook Clone </a></td>
+  <td align="center"> 264.</td>  
+  <td align="center"><a href="./Python Projects/Circle using Turtle">Circle using Turtle</a></td>
+  <td align="center"> 265. </td>
+<td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Js-Games/Etch-a-Sketch"> Etch-a-Sketch </a> </td>
+</tr>
+  
+<tr align="center">
+
+  <td align="center"> 266.</td>  
+  <td align="center"><a href="./Python Projects/SMTP mailing">SMTP mailing</a></td>
+  <td align="center"> 267.</td>
+  <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Js-Games/Platform_Game">Platform Game</a></td>
+  <td align="center"> 261.</td>
+  <td align="center"><a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Js-Games/Mastermind">Mastermind</a></td>
+  <td align="center"> 268.</td>
+
+  <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Python Projects/Forex Exchanger">Web-Image Filter</a></td>
+  <td align="center"> 272.</td>
+  <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Js-Games/Cubula">Cubula</a></td>
+
+  <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Python Projects/Forex Exchanger">Forex Exchanger</a></td>
+  <td align="center"> 270.</td>
+  <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Animations-CSS/404-Page Character">404-Page Character</a></td>
+<td align="center"> 273.</td>
+  <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Js-Games/Geoguess">Geoguess</a></td>
+
+
+<td align="center"> 277.</td>
+  <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Python Projects/Jarvis Voice Assistant">Jarvis Voice Assistant</a></td>
+
+
+  <td align="center"> 276.</td>
+  <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Python projects/Medi Scraper">Medi Scraper</a></td>
+
+  <td align="center"> 275.</td>
+  <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Python Projects/AI Image Generator">Geoguess</a></td>
+
+
+  <td align="center"> 274.</td>
+  <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Python Projects/CollegeGPACalculator">College GPA Calculator</a></td>
+
+  <td align="center"> 278.</td>
+  <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/cpp-projects/Vaccine Management System">Vaccine Management System</a></td>
+
+
+
+
+</tr>  
+
+
+
+<tr align="center">
+<td align="center"> 256.</td>  
+<td align="center"><a href="https://github.com/Nishitbaria/Dev-Geeks/tree/Test/Frontend-Projects/razorpayClone">RazorpayClone</a></td>
+<td align="center"> 265.</td>
+<td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Js-Games/Aim training">Aim training</a></td>
+<td align="center"> 263.</td>
+<td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Js-Games/Alien Shooting">Alien Shooting</a></td>
+<td align="center"> 264.</td>
+<td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/testing/Js-Projects/Password_Validation">Password Validation</a></td>
+
+<td align="center"> 264.</td>
+<td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Python Projects/Image Classification">Image Classification</a></td>
+
+</tr> 
+<tr>
+<td align="center"> 279.</td>
+<td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Python Projects/Covid-Info">Covid-Info</a></td>
+
+</tr>
+
+<tr>
+<td align="center"> 283.</td>
+<td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Js-Projects/Lazy Loading">Lazy Loading</a></td>
+</tr>
+
+<tr>
+
+<td align="center"> 282.</td>
+<td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Js-Projects/Accordion Template">Accordion Template</a></td>
+</tr>
+
+
+<td align="center"> 284.</td>
+<td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/cpp-projects/ATM Machine">ATM Machine</a></td>
+</tr>
+
+
 </table>
 
 
@@ -814,18 +928,33 @@ Happy Coding! -->
 -   Make a pull request! (compare your branch with the owner main branch)
 
 <br>
-<h1 align="center">
- <b>Contributors
-<h1>
-<a href="https://github.com/pranjay-poddar/Dev-Geeks/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=pranjay-poddar/Dev-Geeks&&max=817" />
-</a>
+
+##  Our Contributors
+
+Thank you for your interest in contributing to our project! We appreciate any contributions, whether it's bug fixes, new features, or documentation improvements.
+
+<details>
+  <summary> Find Contributors list here !!!</summary>
+    <div>
+      <a href="https://github.com/pranjay-poddar/Dev-Geeks/graphs/contributors">
+      <img src="https://contrib.rocks/image?repo=pranjay-poddar/Dev-Geeks&&max=817"/>
+      </a>
+    </div>
+</details>
+
+
+
+
 
 <!-- &max={number} -->
   <br>
   <h4 align="center">
-   <a target="_blank"href="https://www.linkedin.com/in/pranjay-poddar/"><img src="https://forthebadge.com/images/badges/built-with-love.svg" alt="Built with love" /></a><br>
-  By<a href="https://github.com/pranjay-poddar"> Pranjay Poddar </a>&copy; MIT License</h4>
+   <a target="_blank"href="https://www.linkedin.com/in/pranjay-poddar/"><img src="https://forthebadge.com/images/badges/built-with-love.svg" alt="Built with love" />
+   </a>
+   <br>
+   By
+   <a href="https://github.com/pranjay-poddar"> Pranjay Poddar </a>&copy; MIT License
+   </h4>
 	<br>
 
 <h4 align="center">Connect Project Admin </h4>
@@ -836,3 +965,15 @@ Happy Coding! -->
   <a href="mailto:pranjaypoddar@gmail.com?subject=Hello,%20From%20Github"><img src="https://img.shields.io/badge/gmail-%23D14836.svg?&style=for-the-badge&logo=gmail&logoColor=white" /></a>&nbsp;&nbsp;&nbsp;&nbsp;
   <a href="https://www.instagram.com/pranjay_poddar/"><img src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white" /></a>&nbsp;&nbsp;&nbsp;&nbsp;
 </p>
+
+
+
+</h1>
+
+<div align="center">
+ <a style="text-decoration:none;" href="#top">
+ 🔝
+ <br>
+  Back to top
+ </a> 
+</div>

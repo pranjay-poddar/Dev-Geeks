@@ -1,0 +1,173 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: large;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-family: 'Rubik', sans-serif;
+  }
+  body{
+   background-color: #fefee3;
+  }
+  h1{
+    font-size: 2em;
+    text-align: center;
+  }
+  nav {
+    background-color: #03045e;
+    color: white;
+    height: 20%;
+    display: flex;
+    padding: 1% 5%;
+  }
+  
+  nav .arr_inputs {
+    display: inline-block;
+    flex-direction: column;
+    flex: 1;
+  }
+  
+  nav .arr_inputs #arr_size {
+    padding: 2% 0%;
+  }
+  
+  nav .arr_inputs #arr_speed {
+    padding: 2% 0%;
+  }
+  
+  nav .arr_inputs #arr_generate {
+    padding: 1%;
+    color: rgb(10, 84, 245);
+    border: 2px solid;
+    background-color: transparent;
+    transition: all 0.25s;
+  }
+  
+  nav .arr_inputs #arr_generate:hover {
+    color: white;
+    border-color: aqua;
+    cursor: pointer;
+    box-shadow: 0 0.5em 0.5em -0.4em aqua;
+    transform: translateY(-0.25em);
+    
+  }
+  
+  nav .names {
+    display: inline-block;
+    display: flex;
+    flex-direction: column;
+    height: 200px;
+    justify-content: space-evenly;
+  }
+  
+  nav .names .nav-heading {
+    display: inline-block;
+    font-size: xxx-large;
+    padding: 3% 0%;
+  }
+  
+  nav .names .algorithms {
+    padding: 1 1 auto;
+    flex-direction: row;
+  }
+  
+  nav .names .algorithms button {
+    display: block;
+    padding: 1% ;
+    margin: 1%;
+
+    color: rgb(10, 84, 245);
+    border: 2px solid;
+    background-color: transparent;
+    transition: all 0.25s;
+  }
+  
+  nav .names .algorithms button:hover {
+   
+    cursor: pointer;
+
+    color: white;
+    border-color: aqua;
+    cursor: pointer;
+    box-shadow: 0 0.5em 0.5em -0.4em aqua;
+    transform: translateX(-0.25em);
+
+  }
+  
+  nav .names .algorithms .butt_locked {
+    background-color: transparent;
+    cursor: pointer;
+  }
+  
+  nav .names .algorithms .butt_locked:hover {
+    background-color: transparent;
+    cursor: pointer;
+  }
+  
+  nav .names .algorithms .butt_selected {
+    background-color: white;
+    color: green;
+  }
+  
+  nav .names .algorithms .butt_selected:hover {
+    background-color: white;
+    cursor: pointer;
+  }
+  
+  nav .names .algorithms .butt_unselected:hover {
+    background-color: blue;
+    cursor: pointer;
+  }
+  
+  section {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 20% 60% 20%;
+        grid-template-columns: 20% 60% 20%;
+  }
+  
+  section .Complexity_Containers {
+    margin-top: 20%;
+  }
+  
+  section .Complexity_Containers .Pair_Definitions {
+    margin-top: 20%;
+  }
+  
+  section .Complexity_Containers .Pair_Definitions p {
+    display: inline;
+  }
+  
+  section .Complexity_Containers .Pair_Definitions p.Sub_Heading {
+    font-size: medium;
+    text-transform: none;
+  }
+  
+  section #Info_Cont1 {
+    padding: 20% 10%;
+  }
+  
+  section #Info_Cont1 h3 {
+    text-decoration: underline;
+  }
+  
+  section #array_container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    height: 70vh;
+  }
+  
+  section #Info_Cont2 {
+    padding: 20% 10%;
+  }
+  
+  section #Info_Cont2 h3 {
+    text-decoration: underline;
+  }
+  
+  .hide {
+    display: none;
+  }

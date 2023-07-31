@@ -1,0 +1,114 @@
+/* @import Google font - Poppins */
+@import url('htpps://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: #4285F4;
+}
+
+.wrapper{
+    overflow: hidden;
+    background: #fff;
+    width: 450px;
+    padding: 28px;
+    border-radius: 7px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.06);
+}
+
+.wrapper .pass-field {
+    height: 65px;
+    width: 100%;
+    position: relative;
+}
+
+.pass-field input{
+    width: 100%;
+    height: 100%;
+    padding: 0 16px;
+    outline: none;
+    font-size: 1.3rem;
+    border-radius: 5px;
+    border: 1px solid #999;
+}
+
+.pass-field input:focus{
+    padding: 0 16px;
+    border: 2px solid #4285F4;
+}
+
+.pass-field i {
+    right: 18px;
+    position: absolute;
+    top: 50%;
+    font-size: 1.2rem;
+    cursor: pointer;
+    color: #999;
+    transform: translateY(-50%);
+}
+
+.wrapper .content {
+    margin: 20px 0 10px;
+}
+
+.content p {
+    font-size: 1.3rem;
+}
+
+.content .requirement-list {
+    margin-top: 20px;
+}
+
+.requirement-list li {
+    list-style: none;
+    font-size: 1.3rem;
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.requirement-list li i{
+    font-size: 0.6rem;
+    color: #aaa;
+    width: 20px;
+}
+
+.requirement-list li.valid i{
+    font-size: 1.2rem;
+    color: #4285F4;
+}
+
+.requirement-list li span {
+    margin-left: 12px;    
+    color: #333;
+}
+
+.requirement-list li.valid span {
+    color: #999; 
+}
+
+@media screen and (max-width: 500px) {
+    body, .wrapper {
+      padding: 15px;
+    }
+    .wrapper .pass-field {
+      height: 55px;
+    }
+    .pass-field input, .content p  {
+      font-size: 1.15rem;
+    }
+    .pass-field i, .requirement-list li {
+      font-size: 1.1rem;
+    }
+    .requirement-list li span {
+      margin-left: 7px;
+    }
+  }

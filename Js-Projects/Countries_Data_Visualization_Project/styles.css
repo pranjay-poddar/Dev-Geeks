@@ -1,0 +1,165 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    overflow-x: hidden;
+}
+
+body {
+    text-align: center;
+    font-family: sans-serif;
+    min-height: 100vh;
+    color: #252525;
+    background: #eee;
+    padding-bottom: 2em;
+}
+
+h1 {
+    font-size: 2.1rem;
+    text-transform: uppercase;
+    letter-spacing: .4em;
+    word-spacing: .2em;
+    margin-bottom: .20em;
+}
+
+.main__hero-section {
+    background: linear-gradient(to bottom, rgba(20,150,255,0.5), rgba(0,0,0,.3)), url(https://raw.githubusercontent.com/0xabdulkhalid/30-days-of-javascript-solutions/main/day-26/images/globe.webp);
+    background-size:100%, cover;
+    background-position: 100%, 35% 40%;
+    height: 27em;
+    display: grid;
+    place-items: center;
+    align-content: center;
+    color: white;
+    position: relative;
+}
+
+.main__countries-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: start;
+    gap: 1em;
+    padding: 3em 5em;
+}
+
+.main__country-component {
+    width: 7.5em;
+    height: 7.5em;
+    text-transform: uppercase;
+    background: linear-gradient(to bottom, rgba(20,150,255,0.55), rgba(0,0,0,.47)), url(https://raw.githubusercontent.com/0xabdulkhalid/30-days-of-javascript-solutions/main/day-26/images/map.webp);
+    background-size:100%, cover;
+    display: grid;
+    place-items: center;
+    color: white;
+    font-weight: bold;
+    padding: 1em;
+    transition: .3s ease;
+    cursor: pointer;
+}
+
+.main__country-component:hover {
+    transform: translateY(-.5em);
+    background-position: 50%;
+    font-size: 1.1rem;
+    padding: .58em;
+    box-shadow: 0 10px 10px rgba(0,0,0,.2);
+}
+
+.get-started {
+    background: #f7f7f7;
+    padding: 2em;
+    margin: 2em auto;
+}
+
+.main__hero-section > div {
+    margin-top: 2.5em;
+}
+
+.main__hero-section p {
+    font-weight: bold;
+}
+
+.main__query-feedback {
+    position: absolute;
+    bottom: 1em;
+    font-weight: 300 !important;
+}
+
+.main__highlighted {
+    text-decoration: underline;
+}
+
+#countries-count {
+    color: white !important;
+}
+
+.main__query-feedback > span {
+    font-weight: 400;
+    font-size: 1.3rem;
+}
+
+.btn--clicked {
+    transform: scale(.99) translateY(15px);
+    box-shadow: unset;
+}
+
+label {
+    all: unset;
+    padding: 10px 15px;
+    color: #252525;
+    transition: .35s ease;
+    margin-left: 1em;
+    background: #eee;
+    text-transform: uppercase;
+    border-radius: 5px;
+    font-size: .8rem;
+    cursor: pointer;
+}
+
+[alt="sort"]{
+    width: 1em;
+}
+
+label:hover {
+    background: #252525;
+    color: #f7f7f7;
+}
+
+[type="text"] {
+    all: unset;
+    background: #f7f7f7;
+    border-radius: 5em;
+    padding: .5em .8em;
+    width: 20em;
+    border: 1px solid #ddd;
+    color: #131313;
+}
+
+input:focus {
+    box-shadow: inset 0 0 5px rgba(0,0,0,.4);
+}
+
+.attribution {
+    border-top: 1px solid #aaa;
+    width: 100%;
+    text-align: center;
+    margin-top: 1em;
+    padding: 1em 0;
+    position: fixed;
+    bottom: 0;
+    background: rgba(255,255,255,.2);
+    backdrop-filter: blur(5px);
+    transition: .5s ease;
+}
+
+.attribution, a {
+    color: #232323;
+}
+.attribution:hover {
+    background: rgba(0,0,0,.3);
+}
+.attribution:hover a {
+    color: #eee;
+}
