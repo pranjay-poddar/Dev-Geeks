@@ -1,0 +1,718 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #ece8fc;
+  }
+  .pill {
+    position: relative;
+    width: 160px;
+    height: 335px;
+    background: linear-gradient(to bottom, #312952 0%, #5A4A94 35%, #7B6BC6 100%);
+    border-radius: 100px;
+    overflow: hidden;
+  }
+  
+  .lanternHills {
+    position: absolute;
+    bottom: -1px;
+    width: 225px;
+    left: -25px;
+  }
+  
+  .star {
+    background-color: white;
+    position: absolute;
+    border-radius: 50%;
+  }
+  
+  .star1 {
+    width: 1px;
+    height: 1px;
+    transform: scale(1.1);
+    left: 9px;
+    top: 115px;
+  }
+  
+  .star2 {
+    width: 3px;
+    height: 3px;
+    transform: scale(1.1);
+    left: 20px;
+    top: 117px;
+  }
+  
+  .star3 {
+    width: 2px;
+    height: 2px;
+    transform: scale(1.1);
+    left: 118px;
+    top: 109px;
+  }
+  
+  .star4 {
+    width: 1px;
+    height: 1px;
+    transform: scale(1.1);
+    left: 66px;
+    top: 166px;
+  }
+  
+  .star5 {
+    width: 2px;
+    height: 2px;
+    transform: scale(1.1);
+    left: 55px;
+    top: 169px;
+  }
+  
+  .star6 {
+    width: 3px;
+    height: 3px;
+    transform: scale(1.1);
+    left: 64px;
+    top: 9px;
+  }
+  
+  .star7 {
+    width: 2px;
+    height: 2px;
+    transform: scale(1.1);
+    left: 19px;
+    top: 156px;
+  }
+  
+  .star8 {
+    width: 3px;
+    height: 3px;
+    transform: scale(1.1);
+    left: 21px;
+    top: 118px;
+  }
+  
+  .star9 {
+    width: 1px;
+    height: 1px;
+    transform: scale(1.1);
+    left: 116px;
+    top: 92px;
+  }
+  
+  .star10 {
+    width: 2px;
+    height: 2px;
+    transform: scale(1.1);
+    left: 110px;
+    top: 15px;
+  }
+  
+  .star11 {
+    width: 1px;
+    height: 1px;
+    transform: scale(1.1);
+    left: 154px;
+    top: 209px;
+  }
+  
+  .star12 {
+    width: 2px;
+    height: 2px;
+    transform: scale(1.1);
+    left: 43px;
+    top: 6px;
+  }
+  
+  .star13 {
+    width: 1px;
+    height: 1px;
+    transform: scale(1.1);
+    left: 14px;
+    top: 210px;
+  }
+  
+  .star14 {
+    width: 2px;
+    height: 2px;
+    transform: scale(1.1);
+    left: 71px;
+    top: 34px;
+  }
+  
+  .star15 {
+    width: 3px;
+    height: 3px;
+    transform: scale(1.1);
+    left: 65px;
+    top: 194px;
+  }
+  
+  .star16 {
+    width: 2px;
+    height: 2px;
+    transform: scale(1.1);
+    left: 41px;
+    top: 49px;
+  }
+  
+  .star17 {
+    width: 1px;
+    height: 1px;
+    transform: scale(1.1);
+    left: 76px;
+    top: 149px;
+  }
+  
+  .star18 {
+    width: 2px;
+    height: 2px;
+    transform: scale(1.1);
+    left: 63px;
+    top: 136px;
+  }
+  
+  .star19 {
+    width: 1px;
+    height: 1px;
+    transform: scale(1.1);
+    left: 54px;
+    top: 132px;
+  }
+  
+  .star20 {
+    width: 1px;
+    height: 1px;
+    transform: scale(1.1);
+    left: 17px;
+    top: 198px;
+  }
+  
+  .star21 {
+    width: 2px;
+    height: 2px;
+    transform: scale(1.1);
+    left: 98px;
+    top: 85px;
+  }
+  
+  .star22 {
+    width: 1px;
+    height: 1px;
+    transform: scale(1.1);
+    left: 58px;
+    top: 74px;
+  }
+  
+  .star23 {
+    width: 3px;
+    height: 3px;
+    transform: scale(1.1);
+    left: 98px;
+    top: 39px;
+  }
+  
+  .star24 {
+    width: 3px;
+    height: 3px;
+    transform: scale(1.1);
+    left: 23px;
+    top: 126px;
+  }
+  
+  .star25 {
+    width: 1px;
+    height: 1px;
+    transform: scale(1.1);
+    left: 23px;
+    top: 138px;
+  }
+  
+  .lanternX1 {
+    position: absolute;
+    bottom: -80px;
+    left: 14px;
+    transform: translateX(0);
+    animation-name: lanternX1;
+    animation-duration: 8s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+  }
+  
+  .lanternY1 {
+    display: inline block;
+    width: 54px;
+    z-index: 54000;
+    animation-name: lanternY;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    transform: translateY(0);
+    animation-delay: 2s;
+  }
+  
+  @keyframes lanternX1 {
+    50% {
+      transform: translateX(24px);
+    }
+  }
+  @keyframes lanternY {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-200px);
+    }
+    100% {
+      transform: translateY(-400px);
+    }
+  }
+  .lanternX2 {
+    position: absolute;
+    bottom: -80px;
+    left: 67px;
+    transform: translateX(0);
+    animation-name: lanternX2;
+    animation-duration: 8s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+  }
+  
+  .lanternY2 {
+    display: inline block;
+    width: 50px;
+    z-index: 50000;
+    animation-name: lanternY;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    transform: translateY(0);
+    animation-delay: 6s;
+  }
+  
+  @keyframes lanternX2 {
+    50% {
+      transform: translateX(14px);
+    }
+  }
+  @keyframes lanternY {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-200px);
+    }
+    100% {
+      transform: translateY(-400px);
+    }
+  }
+  .lanternX3 {
+    position: absolute;
+    bottom: -80px;
+    left: 74px;
+    transform: translateX(0);
+    animation-name: lanternX3;
+    animation-duration: 9s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+  }
+  
+  .lanternY3 {
+    display: inline block;
+    width: 48px;
+    z-index: 48000;
+    animation-name: lanternY;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    transform: translateY(0);
+    animation-delay: 6s;
+  }
+  
+  @keyframes lanternX3 {
+    50% {
+      transform: translateX(69px);
+    }
+  }
+  @keyframes lanternY {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-200px);
+    }
+    100% {
+      transform: translateY(-400px);
+    }
+  }
+  .lanternX4 {
+    position: absolute;
+    bottom: -80px;
+    left: 63px;
+    transform: translateX(0);
+    animation-name: lanternX4;
+    animation-duration: 9s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+  }
+  
+  .lanternY4 {
+    display: inline block;
+    width: 74px;
+    z-index: 74000;
+    animation-name: lanternY;
+    animation-duration: 7s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    transform: translateY(0);
+    animation-delay: 2s;
+  }
+  
+  @keyframes lanternX4 {
+    50% {
+      transform: translateX(22px);
+    }
+  }
+  @keyframes lanternY {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-200px);
+    }
+    100% {
+      transform: translateY(-400px);
+    }
+  }
+  .lanternX5 {
+    position: absolute;
+    bottom: -80px;
+    left: 96px;
+    transform: translateX(0);
+    animation-name: lanternX5;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+  }
+  
+  .lanternY5 {
+    display: inline block;
+    width: 78px;
+    z-index: 78000;
+    animation-name: lanternY;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    transform: translateY(0);
+    animation-delay: 4s;
+  }
+  
+  @keyframes lanternX5 {
+    50% {
+      transform: translateX(35px);
+    }
+  }
+  @keyframes lanternY {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-200px);
+    }
+    100% {
+      transform: translateY(-400px);
+    }
+  }
+  .lanternX6 {
+    position: absolute;
+    bottom: -80px;
+    left: 40px;
+    transform: translateX(0);
+    animation-name: lanternX6;
+    animation-duration: 8s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+  }
+  
+  .lanternY6 {
+    display: inline block;
+    width: 75px;
+    z-index: 75000;
+    animation-name: lanternY;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    transform: translateY(0);
+    animation-delay: 3s;
+  }
+  
+  @keyframes lanternX6 {
+    50% {
+      transform: translateX(41px);
+    }
+  }
+  @keyframes lanternY {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-200px);
+    }
+    100% {
+      transform: translateY(-400px);
+    }
+  }
+  .lanternX7 {
+    position: absolute;
+    bottom: -80px;
+    left: 38px;
+    transform: translateX(0);
+    animation-name: lanternX7;
+    animation-duration: 7s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+  }
+  
+  .lanternY7 {
+    display: inline block;
+    width: 77px;
+    z-index: 77000;
+    animation-name: lanternY;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    transform: translateY(0);
+    animation-delay: 5s;
+  }
+  
+  @keyframes lanternX7 {
+    50% {
+      transform: translateX(13px);
+    }
+  }
+  @keyframes lanternY {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-200px);
+    }
+    100% {
+      transform: translateY(-400px);
+    }
+  }
+  .lanternX8 {
+    position: absolute;
+    bottom: -80px;
+    left: 75px;
+    transform: translateX(0);
+    animation-name: lanternX8;
+    animation-duration: 7s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+  }
+  
+  .lanternY8 {
+    display: inline block;
+    width: 74px;
+    z-index: 74000;
+    animation-name: lanternY;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    transform: translateY(0);
+    animation-delay: 2s;
+  }
+  
+  @keyframes lanternX8 {
+    50% {
+      transform: translateX(18px);
+    }
+  }
+  @keyframes lanternY {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-200px);
+    }
+    100% {
+      transform: translateY(-400px);
+    }
+  }
+  .lanternX9 {
+    position: absolute;
+    bottom: -80px;
+    left: 3px;
+    transform: translateX(0);
+    animation-name: lanternX9;
+    animation-duration: 7s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+  }
+  
+  .lanternY9 {
+    display: inline block;
+    width: 65px;
+    z-index: 65000;
+    animation-name: lanternY;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    transform: translateY(0);
+    animation-delay: 3s;
+  }
+  
+  @keyframes lanternX9 {
+    50% {
+      transform: translateX(14px);
+    }
+  }
+  @keyframes lanternY {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-200px);
+    }
+    100% {
+      transform: translateY(-400px);
+    }
+  }
+  .lanternX10 {
+    position: absolute;
+    bottom: -80px;
+    left: 99px;
+    transform: translateX(0);
+    animation-name: lanternX10;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+  }
+  
+  .lanternY10 {
+    display: inline block;
+    width: 55px;
+    z-index: 55000;
+    animation-name: lanternY;
+    animation-duration: 7s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    transform: translateY(0);
+    animation-delay: 6s;
+  }
+  
+  @keyframes lanternX10 {
+    50% {
+      transform: translateX(62px);
+    }
+  }
+  @keyframes lanternY {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-200px);
+    }
+    100% {
+      transform: translateY(-400px);
+    }
+  }
+  /* --------Social Icons-------- */
+  /* Color Variables */
+  /* Social Icon Mixin */
+  .social-icons {
+    display: flex;
+    position: absolute;
+    bottom: 25px;
+    right: 25px;
+  }
+  
+  .social-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 40px;
+    height: 40px;
+    margin: 0 0.7rem;
+    border-radius: 50%;
+    cursor: pointer;
+    font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+    font-size: 1.5rem;
+    text-decoration: none;
+    transition: all 0.15s ease;
+  }
+  .social-icon:hover {
+    color: #fff;
+  }
+  .social-icon:hover .tooltip {
+    visibility: visible;
+    opacity: 1;
+    transform: translate(-50%, -150%);
+  }
+  .social-icon:active {
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.5) inset;
+  }
+  .social-icon--twitter {
+    background: #2b97f1;
+    color: #fff;
+  }
+  .social-icon--twitter .tooltip {
+    background: #2b97f1;
+    color: currentColor;
+  }
+  .social-icon--twitter .tooltip:after {
+    border-top-color: #2b97f1;
+  }
+  .social-icon--codepen {
+    background: #000;
+    color: #fff;
+  }
+  .social-icon--codepen .tooltip {
+    background: #000;
+    color: currentColor;
+  }
+  .social-icon--codepen .tooltip:after {
+    border-top-color: #000;
+  }
+  .social-icon i {
+    position: relative;
+    top: 1px;
+  }
+  
+  /* Tooltips */
+  .tooltip {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    padding: 0.4rem 0.6rem;
+    border-radius: 40px;
+    font-size: 0.4rem;
+    font-weight: bold;
+    opacity: 0;
+    pointer-events: none;
+    text-transform: uppercase;
+    transform: translate(-50%, -100%);
+    transition: all 0.3s ease;
+    z-index: 1;
+  }
+  .tooltip:after {
+    display: block;
+    position: absolute;
+    bottom: 1px;
+    left: 50%;
+    width: 0;
+    height: 0;
+    content: "";
+    border: solid;
+    border-width: 10px 10px 0 10px;
+    border-color: transparent;
+    transform: translate(-50%, 100%);
+  }
