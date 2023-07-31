@@ -26,9 +26,9 @@ This C++ program provides a simple command-line calculator with various engineer
 # Available Operations
 
 - Basic Arithmetic
-- 
+ 
 - Trigonometric Functions
-- 
+  
 - Unit Conversions
 
 - Vector Operations
