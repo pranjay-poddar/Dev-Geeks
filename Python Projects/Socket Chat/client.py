@@ -20,12 +20,9 @@ UID = ''
 
 
 def validate_user(user_input):
-	"""
-	Function that validates the user input
-	"""
 	
-	len_test = lambda x: 5 <= x <= 30 #test length
-	str_regex = re.compile('^([0-9a-z]|-)+$', re.I) #test valid characters
+	len_test = lambda x: 5 <= x <= 30
+	str_regex = re.compile('^([0-9a-z]|-)+$', re.I)
 	str_match = str_regex.match(str(user_input))
 	
 	if len_test(len(user_input)) and bool(str_match):
@@ -35,14 +32,11 @@ def validate_user(user_input):
 
 
 def check_user_file():
-	"""
-	Function that checks the existence of a local file for the user
-	"""
 	global UID
 	try:
 		usr_file_path = Path(str(Path.home()) + PATH + '\\python_chatroom.txt')
 		if os.path.exists(usr_file_path):
-			#user exists, read file
+			
 			usr_file = open(usr_file_path, "r")
 			lines = usr_file.readlines()
 			usr_file.close()
@@ -53,7 +47,7 @@ def check_user_file():
 			fetched_dt = datetime.strptime(aux, '%Y-%m-%d %H:%M:%S')
 			dt_today = datetime.now()
 
-			#get last login
+		
 			last_login = str((dt_today - fetched_dt).days) + " days(s) ago."
 			
 			print('Welcome back!\nYour previous username: ', previous_username)
@@ -75,11 +69,7 @@ def check_user_file():
 
 
 def handle_session():
-	"""
-	Handle the chat session for the client
-	"""
 	while True:
-		#read user input and sanitize with bleach
 		message = bleach.clean(input(f'{my_username} > '))
 
 		if message:
@@ -89,20 +79,19 @@ def handle_session():
 
 		try:
 			while True:
-				#receive communication
 				msg_header = client_socket.recv(HEADER_LENGTH)
 
 				if  len(msg_header) == 0:
 					print("Connection closed by the server.")
 					sys.exit()
 
-				#get username from received message
+				
 				username_length = int(msg_header.decode(FORMAT).strip())
 				username = client_socket.recv(username_length).decode(FORMAT)
 				aux = username.split(" ")
 				username = ' '.join(aux[:len(aux)-1])
 				
-				#get the rest of the message
+				
 				message_header = client_socket.recv(HEADER_LENGTH)
 				message_length = int(message_header.decode(FORMAT).strip())
 				message = client_socket.recv(message_length).decode(FORMAT)
@@ -110,7 +99,7 @@ def handle_session():
 				print(f'{username} > {message}')
 
 		except IOError as e:
-			#ignore common irrelevant errors
+			
 			if e.errno != errno.EAGAIN and e.errno != errno.EWOULDBLOCK:
 				print('Error: {}'.format(str(e)))
 				sys.exit()
@@ -140,5 +129,5 @@ if __name__ == "__main__":
 	username_header = f'{len(initial_data):<{HEADER_LENGTH}}'.encode(FORMAT)
 	client_socket.send(username_header + initial_data)
 
-	#start session
+	
 	handle_session()
