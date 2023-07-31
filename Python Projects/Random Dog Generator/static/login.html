@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Dog Generator</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="nav">
+        Random Dog Generator
+    </div>
+    <div class="main cen top_gap">
+        <div class="rolling_dogs"></div>
+        <form action="/home">
+            <label for="fname">Username:</label>
+            <br>
+            <input type="text" id="fname" name="fname" maxlength = "10">
+            <br>
+            <input type="submit" value="Submit" class="btn">
+        </form>
+    </div>
+</body>
+</html>
