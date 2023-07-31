@@ -1,0 +1,34 @@
+"C:\Program Files\JetBrains\CLion 2021.3.2\bin\cmake\win\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Debug "-DCMAKE_MAKE_PROGRAM=C:/Program Files/JetBrains/CLion 2021.3.2/bin/ninja/win/ninja.exe" -G Ninja "D:\Restaurant Management System"
+-- The C compiler identification is GNU 11.2.0
+-- Detecting C compiler ABI info
+CMake Warning (dev) in D:/Restaurant Management System/cmake-build-debug/CMakeFiles/CMakeTmp/CMakeLists.txt:
+  No project() command is present.  The top-level CMakeLists.txt file must
+  contain a literal, direct call to the project() command.  Add a line of
+  code such as
+
+    project(ProjectName)
+
+  near the top of the file, but after cmake_minimum_required().
+
+  CMake is pretending there is a "project(Project)" command on the first
+  line.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Error at C:/Program Files/JetBrains/CLion 2021.3.2/bin/cmake/win/share/cmake-3.21/Modules/CMakeDetermineCompilerABI.cmake:49 (try_compile):
+  The test project needs language CXX which is not enabled.
+Call Stack (most recent call first):
+  C:/Program Files/JetBrains/CLion 2021.3.2/bin/cmake/win/share/cmake-3.21/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)
+  CMakeLists.txt:2 (project)
+
+
+CMake Error: CMAKE_C_COMPILER not set, after EnableLanguage
+CMake Error: CMAKE_CXX_COMPILER not set, after EnableLanguage
+CMake Error at C:/Program Files/JetBrains/CLion 2021.3.2/bin/cmake/win/share/cmake-3.21/Modules/CMakeDetermineCompilerABI.cmake:49 (try_compile):
+  Failed to configure test project build system.
+Call Stack (most recent call first):
+  C:/Program Files/JetBrains/CLion 2021.3.2/bin/cmake/win/share/cmake-3.21/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)
+  CMakeLists.txt:2 (project)
+
+
+-- Configuring incomplete, errors occurred!
+See also "D:/Restaurant Management System/cmake-build-debug/CMakeFiles/CMakeOutput.log".
