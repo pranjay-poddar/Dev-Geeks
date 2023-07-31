@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+  <title>Login Page</title>
+</head>
+
+<body>
+
+  <header>
+    WELCOME TO LOGIN PAGE
+  </header>
+
+  <main>
+    <div id="form">
+      <p id="lpage">
+        Login Page
+      </p>
+      <form method="get">
+
+        <input type="text" placeholder="First Name" autocomplete="on" onkeyup="this.value = this.value.toUpperCase();"
+          required>
+
+        <input type="text" autocomplete="on" placeholder="Last Name" onkeyup="this.value = this.value.toUpperCase();"
+          required>
+
+        <input type="email" autocomplete="on" placeholder="Enter Your Email"
+          onkeyup="this.value = this.value.toLowerCase();" required>
+
+        <input type="password" placeholder="Enter Your Password" required>
+
+        <input type="tel" placeholder="Enter your Phone Number">
+
+        <p id="signup">Don't have an account? <span>Sign up</span></p>
+
+        <input type="submit" value="Login" id="loginBtn">
+
+      </form>
+
+    </div>
+  </main>
+
+  <footer>
+    <code><p>&copy; Copyright CodeWithCrazy </p>
+      2023 |  All Rights Reserved
+  </code>
+
+  </footer>
+
+</body>
+
+</html>

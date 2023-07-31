@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Raining</title>
+    
+    <style type="text/css" media="all">
+      *{
+        margin: 0;
+        padding: 0;
+      }
+      body{
+        height: 100vh;
+        width: 100vw;
+        background-color: black;
+      }
+      main{
+        height: 100%;
+        width: 100%;
+        background-size: cover;
+      }
+      section{
+        height: 100%;
+        width: 100%;
+        background-image: url(rain.png);
+        animation: rain 1ms linear infinite;
+      }
+      @keyframes rain {
+        0%{background-position: 0% 0%;}
+        100%{background-position: 20% 100%;}
+      }
+    </style>
+</head>
+<body>
+  <main id="main">
+    <section>
+    </section>
+  </main>
+  <script>
+    const main = document.getElementById("main");
+    const DesktopImages = [
+      "https://images.unsplash.com/photo-1506606401543-2e73709cebb4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
+      "https://images.unsplash.com/photo-1496144500784-f81a98b4f391?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1325&q=80",
+      "https://images.unsplash.com/photo-1583262737182-0c5c88fba03f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1141&q=80"
+    ]
+    const mobileImages = [
+      "https://images.unsplash.com/photo-1548317202-26d94742e8d8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=465&q=80",
+      "https://images.unsplash.com/photo-1498036882173-b41c28a8ba34?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=464&q=80",
+      "https://images.unsplash.com/photo-1642019341061-f81d61659c62?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=387&q=80",
+      "https://images.unsplash.com/photo-1642019181921-17d27ac918f8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=387&q=80"
+    ]
+
+    const getRndInteger = (min, max) => {
+      max--;
+      return Math.floor(Math.random() * (max - min + 1) ) + min;
+    }
+
+    const renderImage = (imageArray,index) => {
+      const image = imageArray[index];
+      main.style.backgroundImage = `url(${image})`
+    }
+
+    if(window.innerWidth<=425){
+      let value = getRndInteger(0,mobileImages.length);
+      renderImage(mobileImages, value )
+    }
+    else{
+      value =  getRndInteger(0,DesktopImages.length);
+      renderImage(DesktopImages, value)
+    }
+  </script>
+</body>
+</html>
