@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+    <title>Sum of N  Calculator</title>
+    
+</head>
+<style>
+* {
+  font-family: "Ubuntu", sans-serif;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+ 
+  display: flex;
+  flex-direction: row;
+  place-items: center;
+  overflow-x: hidden;
+}
+
+form {
+  background-color: #bffc08;
+  padding: 80px;
+  width: 50%;
+  margin: 60px auto;
+  text-align: center;
+  place-items: center;
+  box-shadow: 0 10px 6px -6px #777;
+}
+.calculator-name-header{
+     text-align: center;
+    font-size: 28px;
+}
+label {
+  font-size: 26px;
+  font-weight: 500;
+}
+</style>
+<body >
+    <section>
+  
+    <form id="calc" class="form-horizontal">
+          <div class="calculator-name-header">
+        <span>Sum of N Fibonacci Calculator</span>
+    </div>
+    <br>
+    <br>
+        <div class="left">
+            <label class="label" for="subtotal">Enter the Value of N: </label> <input
+                style="font-size: 22px; margin-bottom: 8px;" type="number" id="subtotal" name="subtotal">
+            <br />
+            
+        </div>
+        
+        <button type="button" id="submit">Submit</button><br><br><br>
+
+        <div class="result-container">
+            <div class="outterbox1">Sum
+                <div class="box"> <span id="sum"></span></div>
+            </div>
+   
+            <div class="outterbox2"> Nth Fibonacci Number
+               <div class="box"> <span id="nth"></span></div>
+           </div>
+         
+       </div>
+    </form>
+    </section>
+    <section>
+          
+    <form id="calc" class="form-horizontal">
+          <div class="calculator-name-header">
+      
+      <span>Sum of n numbers calculator</span>
+     
+    </div>
+    <br>
+    <br>
+        <label for="cal">Please enter the Value of N</label>
+        <br/>
+        <input type="number" name="num1" id="num1" placeholder="First Term">
+        <br/>
+        <br/>
+        <select name="cal" id="cal" >
+          <option disabled selected value="nothing">Choose the Sum</option>
+            <option value="natural">Sum of N natural numbers</option>
+            <option value="even">Sum of N even numbers</option>
+            <option value="odd">Sum of N odd numbers</option>
+            <option value="square">Sum of square of N numbers</option>
+            <option value="cube">Sum of cube of N numbers</option>
+          
+        </select><br/><br/>
+         
+       
+       
+        <button type="button" id="submit1">Submit</button><br><br><br>
+  
+        <div class="outterbox">
+            <div class="box" id="resultbox"><span id="resultCalculator" ></span></div>
+        </div>
+  
+    </form>
+    </section>
+    <script>
+                        document.querySelector("#submit").addEventListener("click",function(){
+
+                    let n= document.getElementById("subtotal").value;
+                    let sum=1;
+                    
+                    let first=0;
+                    let second=1;
+                    let s=0;
+                    if(n==1){
+                        sum=0;
+                        second=0;
+
+                    }else if(n==2){
+                        sum=1;
+                        second=1;
+                    }
+                    else{
+                    for(let i=3;i<=n;i++){
+                s=first+second;
+                        sum+=s;
+                        first=second;
+                            
+                        second=s;
+                    }
+                    }
+                    document.getElementById("sum").innerHTML=sum;
+                    document.getElementById("nth").innerHTML=second;
+                })
+    </script>
+    <script>
+        document.querySelector("#submit1").addEventListener("click",function(){
+    console.log("hi");
+    const operation = document.getElementById("cal");
+    const valOpe = operation.value;
+    
+    let n= document.getElementById("num1").value;
+    if(valOpe=="natural"){
+        console.log("Helo");
+        let sum1=0;
+        for(let i=1;i<=n;i++){
+            sum1+=i;
+        }
+        document.getElementById("resultCalculator").innerHTML="Sum of first "+n+" natural numbers is "+sum1;
+    }
+    else if(valOpe=="odd"){
+        let sum2=0;
+        for(let i=1;i<(2*n+1);i++){
+            if(i%2!=0){
+            sum2+=i;}
+        }
+    
+        document.getElementById("resultCalculator").innerHTML="Sum of first "+n+" odd natural numbers is "+ sum2;
+    }else if(valOpe=="even"){
+        let sum3=0;
+        for(let i=1;i<(2*n+1);i++){
+            if(i%2==0){
+            sum3+=i;}
+        }
+        document.getElementById("resultCalculator").innerHTML="Sum of first "+n+" even natural numbers is "+ sum3;
+    }
+    else if(valOpe=="cube"){
+        let sum4=0;
+        for(let i=1;i<=n;i++){
+            sum4+=i*i*i;
+        }
+        document.getElementById("resultCalculator").innerHTML="Sum of cube of first "+n+" natural numbers is "+ sum4;
+    }
+    else if(valOpe=="square"){
+        let sum5=0;
+        for(let i=1;i<=n;i++){
+            sum5+=i*i;
+        }
+        document.getElementById("resultCalculator").innerHTML="Sum of square of first "+n+" natural numbers is "+ sum5;
+    }
+
+})
+    </script>
+    
+
+</body>
+
+</html>
