@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="https://ik.imagekit.io/5bndldf5v/musicplayer-favicon/favicon.png" type="image/x-icon">
+    <title>CrazyMusic</title>
+</head>
+<body>
+    <!-- Loader  -->
+    <div id="loader">
+        <h1> Loading...</h1>
+    </div>
+
+    <!-- Music Player -->
+    <div id="mainContainer">
+        <nav id="navbar">
+            <div id="searchContainer">
+                <input type="text" name="" id="" placeholder="Search Song">
+                <img src="https://cdn-icons-png.flaticon.com/512/2801/2801881.png" alt="search" id="searchImg" >
+            </div>
+            <div class="container">
+                <img src="https://cdn-icons-png.flaticon.com/512/25/25694.png" alt="Home">
+                <div>Home</div>
+            </div>
+            <div class="container">
+                <img src="https://cdn-icons-png.flaticon.com/512/727/727218.png" alt="Music">
+                <div>Music</div>
+            </div>
+            <div class="container">
+                <img src="https://cdn-icons-png.flaticon.com/512/2997/2997933.png" alt="Add Music">
+                <div>Add Music</div>
+            </div>
+        </nav>
+        <main>
+            <header id="headerContainer">
+                <div id="logo">
+                    CrazeMusic
+                </div>
+            </header>
+            <div id="songListContainer">
+                <!-- Content goes here -->
+                
+            </div>
+        </main>
+    </div>
+    <div id="playerContainer">
+        <div id="barContainer">
+            <div class="time">
+                <span id="initialTime"></span>
+            </div>
+            <div id="progressBar">
+                <input type="range" id="progressInput" value="0" step="any">
+            </div>
+            <div class="time">
+                <span id="totalTime"></span>
+            </div>
+        </div>
+        <div id="infoContainer">
+            <div id="info">
+                <div id="songImgContainer">
+                    <span id="songImg">
+                        <img src="https://cdn-icons-png.flaticon.com/512/2995/2995101.png" alt="CrazeMusic">
+                    </span>
+                </div>
+                <div id="songNameContainer">
+                    <span id="songName"></span>
+                </div>
+            </div>
+            <div id="controller">
+                <!-- <div class="controlBtn">
+                    <img src="https://cdn-icons-png.flaticon.com/128/8191/8191664.png" alt="Shuffle" id="handleShuffle">
+                </div> -->
+                <div class="controlBtn">
+                    <img src="https://cdn-icons-png.flaticon.com/128/254/254437.png" alt="Previous" id="handlePrev">
+                </div>
+                <div class="controlBtn" id="playPauseContainer">
+                    <img src="https://cdn-icons-png.flaticon.com/128/16/16427.png" alt="Pause" id="handlePause">
+                    <img src="https://cdn-icons-png.flaticon.com/128/0/375.png" alt="Play" id="handlePlay">
+                </div>
+                <div class="controlBtn">
+                    <img src="https://cdn-icons-png.flaticon.com/128/254/254428.png" alt="Next" id="handleNext">
+                </div>
+            </div>
+            <div id="options">
+                <div class="controlBtn">
+                    <img src="https://cdn-icons-png.flaticon.com/128/2111/2111432.png" alt="github">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="./main.js"></script>
+</body>
+</html>
