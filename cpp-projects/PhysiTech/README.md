@@ -66,6 +66,24 @@ v. Calculation of capacitance and inductance.
 
 vi. Calculation of electric field and electric potential.
 
+Fluid Mechanics
+
+i. Fluid properties and fluid statics
+
+ii. Fluid dynamics and Bernoulli's principle
+
+iii. Viscosity and laminar/turbulent flow
+
+iv. Fluid flow in pipes and channels
+
+v. Applications of fluid mechanics in engineering and everyday life
+
+vi. Calculation of Pressure
+
+vii. Calculation of Buoyant Force
+
+viii. Calculation of Flow Rate
+
 <h2>Screenshots</h2>
 
 ![image](https://github.com/pranjay-poddar/Dev-Geeks/assets/120494269/f419cb0d-6a37-49a7-af87-3775011787e5)
