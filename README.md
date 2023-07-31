@@ -820,6 +820,8 @@ Happy Coding! -->
   <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Python Projects/Forex Exchanger">Forex Exchanger</a></td>
   <td align="center"> 270.</td>
   <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Animations-CSS/404-Page Character">404-Page Character</a></td>
+  <td align="center"> 271.</td>
+  <td align="center" <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Fake-News-Detection>Fake-News-Detection</a></td>
 
 </tr>  
 
