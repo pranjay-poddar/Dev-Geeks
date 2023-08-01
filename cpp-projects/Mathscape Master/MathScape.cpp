@@ -473,12 +473,28 @@ void Ellipse()
     }
 }
 
+void polygon()
+{
+
+    int numSides;
+    cout << "Enter the number of sides in the polygon: ";
+    cin>>numSides;
+    double sideLength;
+    cout << "Enter the length of each side: ";
+    cin>>sideLength;
+
+    // Calculate the area of the regular polygon using the formula
+    double area = (numSides * pow(sideLength, 2)) / (4 * tan(M_PI / numSides));
+
+    cout << "Area of the " << numSides << "-sided polygon: " << area << endl;
+}
+
 int main()
 {
 
     cout << "\n====WELCOME TO MATHSCAPE MASTER====" << endl
          << endl;
-    cout << "1. Volume Calculation\n\n2. Surface Area Calculation\n\n3. Triangle Solver\n\n4. 2D Distance Calculator\n\n5. Circle Properties/Calculations\n\n6. Ellipse Properties" << endl;
+    cout << "1. Volume Calculation\n\n2. Surface Area Calculation\n\n3. Triangle Solver\n\n4. 2D Distance Calculator\n\n5. Circle Properties/Calculations\n\n6. Ellipse Properties\n\n7. Polygon Area" << endl;
     int choice;
     cout << endl;
     cout << "Enter Your Choice" << endl;
@@ -502,6 +518,9 @@ int main()
         break;
     case 6:
         Ellipse();
+        break;
+    case 7:
+        polygon();
         break;
     default:
         cout << "Invalid Choice" << endl;
