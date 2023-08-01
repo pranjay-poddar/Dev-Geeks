@@ -80,4 +80,5 @@ To use this Fake News Detection project, follow these steps:
 5. Train the LSTM model on the preprocessed data.
 6. Evaluate the model's performance using the evaluation scripts.
 7. Visualize the results and insights gained from the analysis.
-8. Flask is used to view the website run the code run section and inp
+8. Flask is used to view the website run the code run section and input your news articles, get the results as real or fake.
+
