@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap'); 
+
+body{
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size:140%;
+    background-color: #222629;
+    color: #ffffff;
+}
+
+#title{
+    position:fixed;
+    text-align: center;
+    background-color: #86c232;
+    top:0;
+    right:0;
+    left:0;
+}
+
+
+@media (min-width:450px){
+.options{
+    margin-top: 130px;
+    display: flex;
+    justify-content: center ;
+}
+
+.one, .two{
+    display: block;
+    color: #ffffff;
+    padding: 0px 30px 30px 30px;
+}
+
+.one{
+    text-align: end;
+    border-right: 3px solid #ffffff;
+}
+
+.two{
+    text-align: start;
+}
+
+.one:hover, .two:hover{
+    font-size: 105%; 
+}
+
+a{
+    text-decoration: none;
+    color: #ffffff;
+    border: 1px solid #ffffff;
+    border-radius: 7px;
+    padding: 5px;
+
+}
+
+a:hover{
+    color: black;
+    background-color: #ffffff;
+}
+}
+
+@media (min-width: 375px) and (max-width: 449px){
+    body{
+        font-size: 100%;
+    }
+    
+    
+    
+    .options{
+        margin-top: 70px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .one, .two{
+        text-align: center;
+    }
+
+    .one{
+        padding-bottom: 40px;
+        border-bottom: 3px solid #ffffff;
+    }
+
+    .two{
+        margin-top: 20px;
+    }
+
+    .one:hover, .two:hover{
+        font-size: 105%; 
+    }
+    
+    a{
+        text-decoration: none;
+        color: #ffffff;
+        border-radius: 7px;
+        padding: 5px;
+    
+    }
+    
+    
+
+}
+
+
