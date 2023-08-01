@@ -1,0 +1,58 @@
+
+body{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+    background-color:black;
+    
+
+}
+#div1{
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height:8px;
+    width: 500px;
+    margin-top: 10px;
+    color: white;
+    background-color: black;
+    
+ 
+    font-size: 5rem;
+    border-radius: 300px;
+  
+    animation: animate 2s ease-in-out infinite ;
+}
+#div12{
+color: white;
+transform: translateY(280px);
+font-size: 9rem;
+}
+@keyframes animate {
+    0%{
+
+width: 100px;
+    }
+    25%{
+
+width: 500px;
+    }
+    50%{
+
+width: 1000px;
+    }
+    75%{
+
+width: 1400px;
+    }
+    100%{
+
+width: 1600px;
+    }
+    
+}
