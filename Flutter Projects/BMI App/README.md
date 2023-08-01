@@ -1,16 +1,11 @@
-# BMI Calculator App
+# BMI CALCULATOR APPLICATION
 
-This simple Flutter app calculates your Body Mass Index (BMI) based on your height and weight. The app is kept within the `main.dart` file and features a user-friendly interface.
+**BMI CALCULATOR APPLICATION** is a user-friendly and intuitive mobile application designed to help individuals track and manage their Body Mass Index (BMI) effectively. With a focus on promoting a healthy lifestyle, the app empowers users to monitor their weight and stay informed about their overall health. 
 
-## Features:
 
-- Input fields for height and weight data using sliders
-- Instant BMI calculation upon height or weight adjustment
-- Display of calculated BMI with two decimal places
-- Support for both metric (centimeters and kilograms) measurements
-- Responsive design for various screen sizes
-- Minimalistic and intuitive user interface
+## Screenshots
 
-To run the app, ensure you have Flutter and Dart SDK installed on your computer. Then, copy the code from `main.dart` into your Flutter project's `main.dart` file and run the app using `flutter run` command.
+| Home Screen | Results Screen | 
+| ------- | ----------- |
+|![home](https://github.com/aritroo/Dev-Geeks/assets/91552411/2cd57efa-89b9-48bb-a424-a9f508b8d2f0) |![result](https://github.com/aritroo/Dev-Geeks/assets/91552411/613a3b5a-7626-4e98-8884-258bcd29d418)|
 
-Enjoy calculating your BMI on the go with this handy Flutter app!
