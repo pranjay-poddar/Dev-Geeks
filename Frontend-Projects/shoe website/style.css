@@ -1,0 +1,498 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Merriweather', sans-serif;
+}
+
+
+
+h1 { 
+    font-size: 50px;
+    color: #222;
+    line-height: 64px;
+}
+
+h2 { 
+    font-size: 46px;
+    color: #222;
+    line-height: 54px;
+    font-family: Ubuntu;
+}
+h4 { 
+    
+    font-size: 20px;
+    color: #222;
+    font-family:Ubuntu ;
+   
+}
+h6 { 
+    font-weight: 700;
+    font-size: 12px;
+    color: #222;
+   
+}
+p{
+    font-size: 16px;
+    color: #465b52;
+    margin: 15px 0 20px 0;
+}
+
+.section-p1{
+    padding: 40px 80px;
+}
+.section-m1{
+    margin: 40px 0;
+}
+
+button.normal{
+    font-size: 14px;
+    font-weight: 600;
+    padding: 30px 30px ;
+    color: #000;
+    background-color: #fff;
+    border-radius: 4px;
+    cursor:pointer;
+    border: none;
+    outline: none;
+    transition: 0.3s;
+}
+
+
+body{
+    width: 100%;
+}
+/*header start*/
+
+#header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 80px;
+    background-color:#e3e6f3;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
+    z-index: 999;
+    position:sticky;
+    top: 0;
+    left: 0;
+
+
+}
+#navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+#navbar li{
+    list-style: none;
+    padding: 0 20px;
+    position: relative;
+
+}
+#navbar li a{
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 560;
+    color: #1a1a1a;
+    transition: 0.3s ease;
+    font-family: Ubuntu;
+
+}
+#navbar li a:hover,
+#navbar li a.active{
+    color: #088178;
+}
+#navbar li a.active::after,
+#navbar li a:hover::after{
+    content: "";
+    width: 30%;
+    height: 2px;
+    background-color: #088178;
+    position: absolute;
+    bottom: -4px;
+    left: 20px;
+}
+#mobile{
+    display: none;
+    align-items: center;
+    }
+
+#close{
+    display: none;
+}
+/* home page*/
+#hero{
+    background-image: url("https://github.com/pranjay-poddar/Dev-Geeks/assets/104543751/a6f323e0-bf46-4c01-a762-caa2edf39812");
+    height: 90vh;
+    width: 100%;
+    background-position: top 25% right 0;
+    background-size: cover;
+    padding: 0 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+
+}
+#hero h4{
+    padding-bottom: 15px;
+
+}
+#hero h2{
+    padding-bottom: 15px;
+    color: #088178;
+
+}
+#hero button{
+    padding-top: 5px;
+   background-color: #a9ac05;
+    border: 0;
+    color: #088178;
+    background-color: transparent;
+    padding: 15px 80px 14px 65px  ;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 15px;
+}
+/*Features page*/
+
+#features{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+#features .fe-box{
+    width: 180px;
+    text-align: center;
+    padding: 25px 15px;
+    box-shadow: 20px 20px 34px rgb(0, 0, 0, 0.03) ;
+    border: 1px solid #465b52;
+    border-radius: 4px;
+    margin: 15px 0;
+}
+#features .fe-box:hover{
+    box-shadow: 10px 10px 34px rgb(70, 62, 221, 0.2) ;
+
+}
+#features .fe-box h6{
+    padding:9px 8px 6px 8px ;
+    line-height: 1;
+    border-radius: 4px;
+    color: #088178;
+    background-color: #e3e6f3;
+}
+#features .fe-box img{
+    width: 100%;
+    margin: auto;
+
+}
+#features .fe-box:nth-child(2) h6{
+    background-color: #e3e6f3;
+}
+
+#features .fe-box:nth-child(3) h6{
+    background-color: #f3b407;
+}
+
+#features .fe-box:nth-child(4) h6{
+    background-color: #13f1df;
+}
+#features .fe-box:nth-child(5) h6{
+    background-color: #da8231;
+}
+#features .fe-box:nth-child(6) h6{
+    background-color: #84eb0f;
+}
+
+#product1{
+    text-align: center;
+    padding: 100px 50px  ;
+   
+}
+#product1 .pro-container{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 20px;
+    flex-wrap: wrap;
+}
+
+
+#product1 .pro{
+    width: 23%;
+    min-width: 250px;
+    padding: 10px 12px ;
+    border: 1px solid #cce7d0;
+    border-radius: 25px;
+    cursor: pointer;
+    box-shadow: 20px 20px 30px rgba(5, 0, 0, 0.02);
+    margin: 15px 0;
+    position: relative;
+
+}
+#product1 .pro:hover{
+    box-shadow:10px 20px 30px rgba(8, 0, 1, 0.2)
+
+}
+#product1 .pro img{
+    width: 100%;
+    border-radius: 20px;
+}
+#product1 .pro .des{
+    text-align: start;
+    padding: 10px 0;
+    
+}
+#product1 .pro .des span{
+    color:#088178 ;
+    font-size: 15px;
+}
+#product1 .pro .des h5{
+    padding-top: 7px;
+    color: #1a1a1a;
+    font-size: 14px;
+}
+
+#product1 .pro .des i{
+    font-size: 12px;
+    color:rgba(255, 209, 5)
+
+}
+#product1 .pro .des h4{
+    padding-top: 7px ;
+    font-size: 12px;
+    font-weight: 700 ;
+    color: #088178;
+    
+}
+#product1 .pro .cart {
+    width: auto;
+    height: auto;
+   
+    border-radius:10%;
+    font-weight:700;
+    color:#088178;
+    border-color:1px solid #cce7d0 ;
+    position: absolute;
+    bottom: 20px;
+    right: 10px;
+}
+
+#banner{
+    display: flex;
+    align-items:center;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    background-image: url("https://github.com/pranjay-poddar/Dev-Geeks/assets/104543751/ae9d8160-ba01-44f6-92db-500cdef7cd45");
+    width: 100%;
+    height: 40vh;
+    background-size: cover;
+    background-position: center;
+
+}
+
+#banner h4{
+    color: white;
+    font-size: 16px;
+}
+
+#banner h2{
+    color:#fff ;
+    font-size: 30px ;
+    padding: 10px 0;
+}
+
+#banner h2 span{
+    color: #ef3636;
+}
+#banner button:hover{
+    background: #088178;
+    color: #fff;
+}
+#sm-banner{
+    display: flex;
+ 
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+#sm-banner .banner-box{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; 
+    justify-content: center;
+    min-width:  580px;
+    height: 50vh;
+    background-image: url("https://github.com/pranjay-poddar/Dev-Geeks/assets/104543751/a6f323e0-bf46-4c01-a762-caa2edf39812");
+    background-size: cover;
+    background-position:center;
+    padding: 30px;
+    
+}
+#sm-banner  h4{
+    color: #fff;
+    font-size: 20px;
+    font-weight: 800;
+    
+}
+#sm-banner  h2{
+    color: #fff;
+    font-size: 28px;
+    font-weight: 800;
+    
+}
+
+#sm-banner span{
+    color: #fff;
+    font-size: 14px;
+    font-weight: 500;
+    padding-bottom: 15px;
+}
+
+button.white{
+    font-size: 13px;
+    font-weight: 600;
+    padding: 11px 18px ;
+    color: #000;
+    background-color: #fff;
+    border-radius: 4px;
+    cursor:pointer;
+    border: 1px solid #fff;
+    outline: none;
+    transition: 0.2s;
+}
+#sm-banner .banner-box:hover button{
+    color: #fff;
+    background-color: #088178;
+}
+#sm-banner .banner-box2{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; 
+    justify-content: center;
+    min-width:  580px;
+    height: 50vh;
+    background-image: url("https://github.com/pranjay-poddar/Dev-Geeks/assets/104543751/4e8a58ef-d102-4f4f-8f23-962d31368c1c");
+    background-size: cover;
+    background-position:center;
+    padding: 30px;
+}
+#banner3{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0 80px;
+}
+#banner3 .banner-box{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; 
+    justify-content: center;
+    min-width:30%;
+    height: 30vh;
+    background-image: url("https://github.com/pranjay-poddar/Dev-Geeks/assets/104543751/70e74aab-31ff-4071-9092-923783faed88");
+    background-size: cover;
+    background-position:center;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+#banner3  h2{
+    color: #fff;
+    font-weight: 900;
+    font: size 22px; 
+}
+
+#banner3  h3{
+    color: #d14d4d;
+    font-weight: 800;
+    font-size: 15px; 
+}
+#banner3 .banner-box2{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; 
+    justify-content: center;
+    min-width:30%;
+    height: 30vh;
+    background-image: url("https://github.com/pranjay-poddar/Dev-Geeks/assets/104543751/ae9d8160-ba01-44f6-92db-500cdef7cd45");
+    background-size: cover;
+    background-position:center;
+    padding: 20px;
+    margin-bottom: 20px;
+
+}
+#banner3 .banner-box3{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; 
+    justify-content: center;
+    min-width:30%;
+    height: 30vh;
+    background-image: url("https://github.com/pranjay-poddar/Dev-Geeks/assets/104543751/a6f323e0-bf46-4c01-a762-caa2edf39812");
+    background-size: cover;
+    background-position:center;
+    padding: 20px;
+    margin-bottom: 20px;
+
+}
+
+
+footer{
+    background-color: #e3e6f3;
+    color: #fff;
+    padding: 50px 0;
+    font-size: 14px;
+}
+
+footer .container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+
+}
+
+footer .linksContainer{
+    margin-left: 100px;
+}
+
+
+
+/*miscellaneous codes of home page*/
+
+.shop{
+    margin-top: 50px;
+}
+
+.offer{
+    color: #d80a0a;
+}
+#bar{
+    cursor: pointer;
+}
+.about {
+  color: #1b1b1b;
+  padding: 0% 10% 10% 10%;
+  background-color: #e3e6f3;
+  display: flex;
+    gap: 5rem;
+    justify-content: space-between;
+}
+
+.about h2 {
+  text-align: center;
+  font-family: "argonite", sans-serif;
+}
+
+.about p {
+  line-height: 150%;
+  font-size: 1.2rem;
+}
+
+.about img {
+  width: 50%;
+  margin-top: 2rem;
+}
+

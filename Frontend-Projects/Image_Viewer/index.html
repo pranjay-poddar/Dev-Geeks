@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Image Viewer</title>
+</head>
+
+<body>
+    <div class="container">
+        <h2>Online Image Viewer</h2>
+        <div class="input-section">
+            <input type="text" id="imageLink" placeholder="Enter Image Link">
+            <button onclick="showImage()">Show Image</button>
+        </div>
+        <div class="image-container" id="imageContainer">
+            <!-- Image will be displayed here -->
+            <img src="https://dfstudio-d420.kxcdn.com/wordpress/wp-content/uploads/2019/06/digital_camera_photo-980x653.jpg" id="image" alt="Image">
+        </div>
+    </div>
+
+    <script src="./main.js"></script>
+
+</body>
+
+</html>
