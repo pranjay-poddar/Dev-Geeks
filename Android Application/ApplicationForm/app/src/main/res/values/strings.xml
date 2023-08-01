@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Application Form</string>
+    <string name="aplly">APPLICATION FORM</string>
+    <string name="personal">1. Personal Information</string>
+    <string name="edu">2. Educational Details:</string>
+    <string name="fin">3. Financial Information:</string>
+    <string name="sch">Details of any Scholarships or Grants received:</string>
+    <string name="re">4. Briefly explain why you require financial assistance and how it will benefit your educational journey:</string>
+    <string name="Submit">SUBMIT</string>
+    <string name="logo">TODO</string>
+</resources>
