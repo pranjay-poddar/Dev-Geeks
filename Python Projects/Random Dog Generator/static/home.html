@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Dog Generator</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="nav">
+        Random Dog Generator
+    </div>
+    <div class="main cen">
+        <div class="status">
+            <div class="box cen col">
+                <div class="status_emoji">🐶</div>
+                <div class="value">{{ total_dogs_generated }}</div>
+                <div class="title">Total Dogs</div>
+            </div>
+            <div class="box cen col">
+                <div class="status_emoji">💁</div>
+                <div class="value">{{ name }}</div>
+                <div class="title">Username</div>
+            </div>
+            <div class="box cen col">
+                <div class="status_emoji">🔑</div>
+                <div class="value">{{ no_of_logins }}</div>
+                <div class="title"># of Logins</div>
+            </div>
+            <div class="box cen col">
+                <div class="status_emoji">🐕</div>
+                <div class="value">{{ dogs_generated }}</div>
+                <div class="title">Dogs You Generated</div>
+            </div>
+        </div>
+        <div class="random_dog cen col">
+            <img src="{{ dog_img_link }}" alt="">
+        </div>
+    </div>
+
+    <div class="buttons cen">
+        <form action="/get_dog" method="get"><button type="submit" class="btn">Get Random Dog</button></form>
+        <form action="/" method="get"><button type="submit" class="btn_log">LogOut</button></form>   
+    </div>
+        
+    <table>
+        <tr>
+          <th>Rank</th>
+          <th>Username</th>
+          <th>Dog Generated</th>
+        </tr>
+
+        {% for i in data %}
+            <tr>
+                <td>#</td>
+                <td>{{ i[0] }}</td>
+                <td>{{ i[1] }}</td>
+            </tr>
+        {% endfor %}
+
+      </table>
+</body>
+</html>
