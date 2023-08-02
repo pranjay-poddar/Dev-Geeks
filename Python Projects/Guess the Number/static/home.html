@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number Guess App</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+    <nav>
+        <div class="navtext">Number Guess Game</div>
+    </nav>
+    <div class="content">
+        <h3>A.I. has picked a number</h3>
+        <h3>Good luck guessing it</h3>
+    </div>
+    
+    <div class="game">
+        <form action="/" method="post" id="inp">
+            <input type="number" name="number_guess" id="number_guess" onblur="this.focus()" autofocus required >
+            <button type="submit" id="check_btn">Check</button>
+        </form>
+        <form action="/reset" method="get" id="reset">
+            <button type="submit" id="reset_btn">Reset</button>
+        </form>
+    </div>
+
+    <hr>
+        
+    <div class="result">
+        {% for result in results_get %}
+            {% if "low" in result %}
+                <div class="check_line_yellow">
+                    <span>{{ result }}</span>
+                </div>
+            {% elif "high" in result %}
+                <div class="check_line_red">
+                    <span>{{ result }}</span>
+                </div>
+            {% else %}
+                <div class="check_line_green">
+                    <span>{{ result }}</span>
+                </div>
+            {% endif %}
+        {% endfor %}
+    </div>
+
+</body>
+</html>

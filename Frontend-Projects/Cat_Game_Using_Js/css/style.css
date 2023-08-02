@@ -1,0 +1,82 @@
+/* Remove Scrollbar */
+body::-webkit-scrollbar {
+   display: none;
+} /* Chrome, Safari and Opera */
+body {
+   -ms-overflow-style: none;
+}  /* IE and Edge */
+html {
+   scrollbar-width: none;
+}  /* Firefox */
+
+* {
+   box-sizing: border-box;
+   margin: 0;
+   padding: 0;
+}
+
+body {
+   font-family: 'Urbanist', sans-serif;
+}
+
+/* Color Scheme */
+.accent-color-1 {
+   color: #b19f9e;
+}
+.accent-color-2 {
+   color: #a16e83;
+}
+
+/* Game Board */
+.game{
+   width: 600px;
+   height: 300px;
+   border: 1px solid white;
+   margin: auto;
+}
+#scoreboard, #highestScore{
+   font-size: 1.5em;
+}
+
+/* Kitty */
+#kitty {
+   position: relative;
+   font-size: 50px;
+   top: 190px;
+   color: grey;
+}
+.animate{
+   animation: jump 0.3s linear;
+}
+@keyframes jump{
+   0%{top: 150px;}
+   30%{top: 100px;}
+   70%{top: 100px;}
+   100%{top: 150px;}
+}
+
+/* Pepper */
+#pepper{
+   color: red;
+   font-size: 1.5em;
+   position: relative;
+   top: 160px;
+   left: 500px;
+   animation: pepper 1s infinite linear;
+}
+@keyframes pepper{
+   0%{left: 570px}
+   100%{left: -10px}
+}
+
+/* Start */
+.start-btn {
+   background-color: #a16e83;
+   color: #dac1c0;
+}
+
+/* GitHub */
+ .github_icon {
+    margin: 20px 10px;
+    font-size: 2em;
+}
