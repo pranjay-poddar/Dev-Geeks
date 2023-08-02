@@ -1,0 +1,10 @@
+{
+    "name":"exchange rate",
+    "description":"",
+    "version":"3.0",
+    "manifest_version":3,
+    "action":{
+        "default_popup":"popup.html",
+        "default_icon":"logo.png"
+    }
+}
