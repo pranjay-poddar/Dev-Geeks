@@ -1,0 +1,188 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
+body {
+  margin: 0;
+ 
+  font-family: 'Satisfy', cursive;
+ 
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  
+  background-image: linear-gradient(to right, #eea2a2 0%, #bbc1bf 19%, #57c6e1 42%, #b49fda 79%, #7ac5d8 100%);
+}
+
+code {
+ 
+   
+    font-family: 'Satisfy', cursive;
+    
+}
+.rock {
+  
+  background-image: linear-gradient(to top, #c79081 0%, #dfa579 100%);
+}
+.ghost {
+ 
+  background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
+}
+.electric {
+  
+  background-image: linear-gradient(to right, #f83600 0%, #f9d423 100%);
+}
+.bug {
+  
+  background-image: linear-gradient(to top, #e6b980 0%, #eacda3 100%);
+}
+.poison {
+  
+  background-image: linear-gradient(to top, #df89b5 0%, #bfd9fe 100%);
+}
+.normal {
+ 
+  background-image: linear-gradient(-225deg, #E3FDF5 0%, #FFE6FA 100%);
+}
+.fairy {
+ 
+  background-image: linear-gradient(to top, #ff9a9e 0%, #fecfef 99%, #fecfef 100%);
+}
+.fire {
+  
+  background-image: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
+}
+.grass {
+  
+  background-image: linear-gradient(120deg, #d4fc79 0%, #96e6a1 100%);
+}
+.water {
+  
+  background-image: linear-gradient(120deg, #89f7fe 0%, #66a6ff 100%);
+}
+.ground{
+  
+background-image: linear-gradient(315deg, #772f1a 0%, #f2a65a 74%);
+
+}
+
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 3rem 1rem;
+}
+.app-container h1{
+  width: 0ch;
+  color: rgb(38, 16, 236);
+  overflow: hidden;
+  white-space: nowrap;
+  animation: text 4s steps(15) infinite alternate;
+  
+
+}
+@keyframes text{
+  0%{
+    width: 0ch;
+    
+  }
+  50%{
+    width:15ch;
+    color:rgb(218, 55, 5);
+  }
+}
+.pokemon-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.all-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+
+
+.thumb-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem 0.2rem;
+  margin: 0.3rem;
+  border: 1px solid #efefef;
+  border-radius: 2rem;
+  min-width: 160px;
+  text-align: center;
+  box-shadow: 0 3px 15px rgba(0, 0, 0, 0.089);
+}
+.thumb-container :hover{
+  margin: 0.7rem 0;
+  
+}
+
+h3 {
+  margin-bottom: 0.2rem;
+}
+.thumb-container .number {
+  border-radius: 1rem;
+  padding: 0.2rem 0.4rem;
+  background-color: rgba(255,255,255,0.3);
+}
+.thumb-container img {
+  width: 120px;
+  height: 120px;
+}
+
+.thumb-container small {
+  text-transform: capitalize;
+}
+.detail-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.detail-wrapper button {
+  color: rgb(22, 22, 22);
+  padding: .5rem;
+  margin-top: 1rem;
+  border: none;
+  border-radius: 0.2rem;
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0.185);
+}
+.load-more {
+  
+  background-color: #76daff;
+background-image: linear-gradient(315deg, #76daff 0%, #fcd000 74%);
+  border-radius: 6px;
+  border: 1px solid #c6c6c6;
+  color: #444;
+  padding: 0.5rem 1.5rem;
+  min-width: 20%;
+  margin-top: 1rem;
+  
+  font-family: 'Satisfy', cursive;
+  
+}
+button:hover{
+  background-color: #ff0000;
+  background-image: linear-gradient(315deg, #ff0000 0%, #ffed00 74%);
+}
+.pokeinfo{
+  margin: 0 25px;
+  
+  font-family: 'Satisfy', cursive;
+  background-image: linear-gradient(180deg, #2af598 0%, #009efd 100%);
+}
+.pokeinfo:hover{
+  background-image: linear-gradient(-20deg, #ddd6f3 0%, #faaca8 100%, #faaca8 100%);
+}
+h3{
+  text-decoration: underline;
+}
