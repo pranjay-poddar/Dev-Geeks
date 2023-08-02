@@ -599,6 +599,349 @@ void Electromagnetism()
     }
 }
 
+void Fluid()
+{
+
+    int choice;
+    double force, area, pressure;
+    double densityFluid, volumeDisplaced, accelerationGravity, buoyantForce;
+    double crossSectionalArea, velocity, flowRate;
+    map<string, string> FluidProperties = {
+        {"Density", " : Density is the mass of a fluid per unit volume. It is typically measured in kilograms per cubic meter (kg/m³)."},
+        {"Pressure", " : Pressure is the force exerted by a fluid per unit area. It is typically measured in Pascals (Pa)."},
+        {"Viscosity", " : Viscosity is the measure of a fluid's resistance to flow. It is a property that determines whether a fluid is thick (high viscosity) or thin (low viscosity)."},
+        {"Surface Tension", " : Surface tension is the force that causes the surface of a liquid to behave like a stretched elastic membrane."},
+    };
+
+    map<string, string> FluidStatics = {
+        {"Pascal's Law", " : Pascal's law states that when there is an increase in pressure at any point in a confined fluid, there is an equal increase at every other point in the container."},
+        {"Archimedes' Principle", " : Archimedes' principle states that the buoyant force on an object submerged in a fluid is equal to the weight of the fluid displaced by the object."},
+    };
+
+    map<string, string> FluidDynamics = {
+        {"Bernoulli's Principle", " : Bernoulli's principle states that in a steady flow of fluid, an increase in the speed of the fluid occurs simultaneously with a decrease in pressure or a decrease in the fluid's potential energy."},
+        {"Continuity Equation", " : The continuity equation states that the mass flow rate of a fluid in a closed system remains constant."},
+    };
+
+    map<string, string> FlowTypes = {
+        {"Laminar Flow", " : Laminar flow is a smooth, orderly flow of fluid in parallel layers with little or no mixing between the layers."},
+        {"Turbulent Flow", " : Turbulent flow is a chaotic, irregular flow of fluid characterized by eddies and swirls."},
+    };
+
+    map<string, string> FluidFlow = {
+        {"Flow in Pipes", " : Fluid flow in pipes is essential in engineering applications, such as water distribution systems and oil pipelines."},
+        {"Flow in Channels", " : Fluid flow in channels is relevant to the design of rivers, canals, and open-channel flow systems."},
+    };
+
+    map<string, string> Applications = {
+        {"Aerodynamics", " : Aerodynamics deals with the study of air and fluid flow around objects, such as airplanes and cars."},
+        {"Hydraulics", " : Hydraulics is the use of fluid mechanics in engineering applications, such as construction equipment and hydraulic lifts."},
+        {"Weather Forecasting", " : Fluid mechanics plays a crucial role in understanding weather patterns and atmospheric conditions."},
+        {"Blood Flow", " : Fluid mechanics is used to study blood flow in the human body and its impact on cardiovascular health."},
+    };
+
+    cout << "-------------------------------------------" << endl;
+    cout << "FLUID MECHANICS" << endl;
+    cout << "-------------------------------------------" << endl;
+    cout << "1. Fluid Properties\n\n2. Fluid Statics\n\n3. Fluid Dynamics\n\n4. Types of Flow\n\n5. Fluid Flow in Pipes and Channels\n\n6. Applications of Fluid Mechanics\n\n7. Calculation of Pressure\n\n8. Calculation of Buoyant Force\n\n9. Calculation of Flow Rate" << endl;
+    cout << "Enter choice: ";
+    cin >> choice;
+
+    switch (choice)
+    {
+    case 1:
+        cout << "-------------------------------------------" << endl;
+        cout << "Fluid Properties" << endl;
+        cout << "-------------------------------------------" << endl;
+        for (const auto &property : FluidProperties)
+        {
+            cout << property.first << property.second << endl;
+            cout << "-------------------------------------------" << endl;
+        }
+        break;
+
+    case 2:
+        cout << "-------------------------------------------" << endl;
+        cout << "Fluid Statics" << endl;
+        cout << "-------------------------------------------" << endl;
+        for (const auto &statics : FluidStatics)
+        {
+            cout << statics.first << statics.second << endl;
+            cout << "-------------------------------------------" << endl;
+        }
+        break;
+
+    case 3:
+        cout << "-------------------------------------------" << endl;
+        cout << "Fluid Dynamics" << endl;
+        cout << "-------------------------------------------" << endl;
+        for (const auto &dynamics : FluidDynamics)
+        {
+            cout << dynamics.first << dynamics.second << endl;
+            cout << "-------------------------------------------" << endl;
+        }
+        break;
+
+    case 4:
+        cout << "-------------------------------------------" << endl;
+        cout << "Types of Flow" << endl;
+        cout << "-------------------------------------------" << endl;
+        for (const auto &flow : FlowTypes)
+        {
+            cout << flow.first << flow.second << endl;
+            cout << "-------------------------------------------" << endl;
+        }
+        break;
+
+    case 5:
+        cout << "-------------------------------------------" << endl;
+        cout << "Fluid Flow in Pipes and Channels" << endl;
+        cout << "-------------------------------------------" << endl;
+        for (const auto &fluidFlow : FluidFlow)
+        {
+            cout << fluidFlow.first << fluidFlow.second << endl;
+            cout << "-------------------------------------------" << endl;
+        }
+        break;
+
+    case 6:
+        cout << "-------------------------------------------" << endl;
+        cout << "Applications of Fluid Mechanics" << endl;
+        cout << "-------------------------------------------" << endl;
+        for (const auto &application : Applications)
+        {
+            cout << application.first << application.second << endl;
+            cout << "-------------------------------------------" << endl;
+        }
+        break;
+
+    case 7:
+        cout << "-------------------------------------------" << endl;
+        cout << "Calculation of Pressure" << endl;
+        cout << "-------------------------------------------" << endl;
+        cout << "Enter the force (N): ";
+        cin >> force;
+        cout << "Enter the area (m^2): ";
+        cin >> area;
+        pressure = force / area;
+        cout << "The pressure is: " << pressure << " Pa" << endl;
+        cout << "-------------------------------------------" << endl;
+        break;
+
+    case 8:
+        cout << "-------------------------------------------" << endl;
+        cout << "Calculation of Buoyant Force" << endl;
+        cout << "-------------------------------------------" << endl;
+        cout << "Enter the density of the fluid (kg/m^3): ";
+        cin >> densityFluid;
+        cout << "Enter the volume of the fluid displaced (m^3): ";
+        cin >> volumeDisplaced;
+        cout << "Enter the acceleration due to gravity (m/s^2): ";
+        cin >> accelerationGravity;
+        buoyantForce = densityFluid * volumeDisplaced * accelerationGravity;
+        cout << "The buoyant force is: " << buoyantForce << " N" << endl;
+        cout << "-------------------------------------------" << endl;
+        break;
+
+    case 9:
+        cout << "-------------------------------------------" << endl;
+        cout << "Calculation of Flow Rate" << endl;
+        cout << "-------------------------------------------" << endl;
+        cout << "Enter the cross-sectional area (m^2): ";
+        cin >> crossSectionalArea;
+        cout << "Enter the velocity of the fluid (m/s): ";
+        cin >> velocity;
+        flowRate = crossSectionalArea * velocity;
+        cout << "The flow rate is: " << flowRate << " m^3/s" << endl;
+        cout << "-------------------------------------------" << endl;
+        break;
+    }
+
+}
+
+void MechanicsOfMaterials(){
+
+    map<string, string> StressStrain = {
+        {"Stress", " : Stress is the force applied to a material per unit area. It measures the internal resistance of a material to deformation."},
+        {"Strain", " : Strain is the ratio of the change in length of a material to its original length. It quantifies the material's deformation under stress."},
+    };
+
+    map<string, string> ElasticityHookeLaw = {
+        {"Elasticity", " : Elasticity is the ability of a material to return to its original shape after the stress is removed."},
+        {"Hooke's Law", " : Hooke's Law states that the stress applied to a material is directly proportional to the strain it experiences, as long as the material remains within its elastic limit."},
+    };
+
+    map<string, string> MechanicalProperties = {
+        {"Young's Modulus", " : Young's Modulus is a measure of a material's stiffness. It relates stress to strain for the material within its elastic limit."},
+        {"Yield Strength", " : Yield Strength is the maximum stress a material can withstand without permanent deformation."},
+        {"Ultimate Tensile Strength", " : Ultimate Tensile Strength is the maximum stress a material can withstand before fracturing."},
+        {"Elongation", " : Elongation is the percentage increase in length of a material when subjected to tensile forces."},
+        {"Hardness", " : Hardness is a measure of a material's resistance to deformation, such as indentation or scratching."},
+    };
+
+    map<string, string> BendingTorsionShear = {
+        {"Bending", " : Bending is the deformation of a material due to an applied load, resulting in curvature."},
+        {"Torsion", " : Torsion is the twisting of a material when subjected to torque."},
+        {"Shear", " : Shear is the deformation of a material parallel to the applied force."},
+    };
+
+    map<string, string> FailureCriteria = {
+        {"Factor of Safety", " : Factor of Safety is the ratio of the ultimate strength of a material to the applied working stress. It ensures the safety of structures."},
+        {"Mohr's Circle", " : Mohr's Circle is a graphical representation of stress states to determine principal stresses and predict failure."},
+    };
+
+    map<string, string> StructuralAnalysis = {
+        {"Static Analysis", " : Static Analysis determines the stresses and deformations of structures under external loads."},
+        {"Stress Analysis", " : Stress Analysis assesses the stress distribution in a structure to ensure it remains within safe limits."},
+    };
+
+    int choice;
+    cout << "-------------------------------------------" << endl;
+    cout << "MECHANICS OF MATERIALS" << endl;
+    cout << "-------------------------------------------" << endl;
+    cout << "1. Stress and Strain\n\n2. Elasticity and Hooke's Law\n\n3. Mechanical Properties of Materials\n\n4. Bending, Torsion, and Shear\n\n5. Failure Criteria\n\n6. Structural Analysis\n\n7. Sample Calculations" << endl;
+    cout << "Enter choice: ";
+    cin >> choice;
+
+    switch (choice)
+    {
+    case 1:
+        cout << "-------------------------------------------" << endl;
+        cout << "Stress and Strain" << endl;
+        cout << "-------------------------------------------" << endl;
+        for (const auto &ss : StressStrain)
+        {
+            cout << ss.first << ss.second << endl;
+            cout << "-------------------------------------------" << endl;
+        }
+        break;
+
+    case 2:
+        cout << "-------------------------------------------" << endl;
+        cout << "Elasticity and Hooke's Law" << endl;
+        cout << "-------------------------------------------" << endl;
+        for (const auto &eh : ElasticityHookeLaw)
+        {
+            cout << eh.first << eh.second << endl;
+            cout << "-------------------------------------------" << endl;
+        }
+        break;
+
+    case 3:
+        cout << "-------------------------------------------" << endl;
+        cout << "Mechanical Properties of Materials" << endl;
+        cout << "-------------------------------------------" << endl;
+        for (const auto &mp : MechanicalProperties)
+        {
+            cout << mp.first << mp.second << endl;
+            cout << "-------------------------------------------" << endl;
+        }
+        break;
+
+    case 4:
+        cout << "-------------------------------------------" << endl;
+        cout << "Bending, Torsion, and Shear" << endl;
+        cout << "-------------------------------------------" << endl;
+        for (const auto &bts : BendingTorsionShear)
+        {
+            cout << bts.first << bts.second << endl;
+            cout << "-------------------------------------------" << endl;
+        }
+        break;
+
+    case 5:
+        cout << "-------------------------------------------" << endl;
+        cout << "Failure Criteria" << endl;
+        cout << "-------------------------------------------" << endl;
+        for (const auto &fc : FailureCriteria)
+        {
+            cout << fc.first << fc.second << endl;
+            cout << "-------------------------------------------" << endl;
+        }
+        break;
+
+    case 6:
+        cout << "-------------------------------------------" << endl;
+        cout << "Structural Analysis" << endl;
+        cout << "-------------------------------------------" << endl;
+        for (const auto &sa : StructuralAnalysis)
+        {
+            cout << sa.first << sa.second << endl;
+            cout << "-------------------------------------------" << endl;
+        }
+        break;
+
+    case 7:
+        double force, crossSectionalArea, stress, changeInLength, originalLength, strain, youngsModulus, shearStress;
+        cout << "-------------------------------------------" << endl;
+        cout << "Sample Calculations" << endl;
+        cout << "-------------------------------------------" << endl;
+        int calculationChoice;
+        cout << "1. Calculation of Stress\n2. Calculation of Strain\n3. Calculation of Young's Modulus\n4. Calculation of Shear Stress" << endl;
+        cout << "Enter choice: ";
+        cin >> calculationChoice;
+        switch (calculationChoice)
+        {
+            case 1:
+            cout << "-------------------------------------------" << endl;
+            cout << "Calculation of Stress" << endl;
+            cout << "-------------------------------------------" << endl;
+            cout << "Enter the force (N): ";
+            cin >> force;
+            cout << "Enter the cross-sectional area (m^2): ";
+            cin >> crossSectionalArea;
+            stress = force / crossSectionalArea;
+            cout << "The stress is: " << stress << " Pa" << endl;
+            cout << "-------------------------------------------" << endl;
+            break;
+
+            case 2:
+            cout << "-------------------------------------------" << endl;
+            cout << "Calculation of Strain" << endl;
+            cout << "-------------------------------------------" << endl;
+            cout << "Enter the change in length (m): ";
+            cin >> changeInLength;
+            cout << "Enter the original length (m): ";
+            cin >> originalLength;
+            strain = changeInLength / originalLength;
+            cout << "The strain is: " << strain << endl;
+            cout << "-------------------------------------------" << endl;
+            break;
+
+            case 3:
+            cout << "-------------------------------------------" << endl;
+            cout << "Calculation of Young's Modulus" << endl;
+            cout << "-------------------------------------------" << endl;
+            cout << "Enter the stress (Pa): ";
+            cin >> stress;
+            cout << "Enter the strain: ";
+            cin >> strain;
+            youngsModulus = stress / strain;
+            cout << "Young's Modulus is: " << youngsModulus << " Pa" << endl;
+            cout << "-------------------------------------------" << endl;
+            break;
+
+            case 4:
+            cout << "-------------------------------------------" << endl;
+            cout << "Calculation of Shear Stress" << endl;
+            cout << "-------------------------------------------" << endl;
+            double shearForce;
+            cout << "Enter the shear force (N): ";
+            cin >> shearForce;
+            shearStress = shearForce / crossSectionalArea;
+            cout << "Shear Stress is: " << shearStress << " Pa" << endl;
+            cout << "-------------------------------------------" << endl;
+            break;
+
+            default:
+            cout << "Invalid choice!" << endl;
+        }
+        break;
+default:
+        cout << "Invalid choice!" << endl;
+    }
+}
+
     int main()
     {
         int choice;
@@ -606,7 +949,7 @@ void Electromagnetism()
              << endl;
         cout << "WELCOME TO PHYSITECH" << endl
              << endl;
-        cout << "1. Kinematics\n\n2. Dynamics\n\n3. Thermodynamics\n\n4. Optics\n\n5. Electromagnetism" << endl
+        cout << "1. Kinematics\n\n2. Dynamics\n\n3. Thermodynamics\n\n4. Optics\n\n5. Electromagnetism\n\n6. Fluid Mechanics\n\n7. Mechanics of Materials" << endl
              << endl;
         cout << "Enter your choice: ";
         cin >> choice;
@@ -628,6 +971,11 @@ void Electromagnetism()
         case 5:
             Electromagnetism();
             break;
+        case 6:
+            Fluid();
+            break;
+        case 7:
+            MechanicsOfMaterials();
         }
 
         return 0;
