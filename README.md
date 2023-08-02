@@ -827,6 +827,10 @@ Happy Coding! -->
   <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Js-Games/Geoguess">Geoguess</a></td>
 
 
+<td align="center"> 277.</td>
+  <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Python Projects/Jarvis Voice Assistant">Jarvis Voice Assistant</a></td>
+
+
   <td align="center"> 276.</td>
   <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Python projects/Medi Scraper">Medi Scraper</a></td>
 
@@ -836,6 +840,9 @@ Happy Coding! -->
 
   <td align="center"> 274.</td>
   <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Python Projects/CollegeGPACalculator">College GPA Calculator</a></td>
+
+  <td align="center"> 278.</td>
+  <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/cpp-projects/Vaccine Management System">Vaccine Management System</a></td>
 
 
 
@@ -858,6 +865,37 @@ Happy Coding! -->
 <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Python Projects/Image Classification">Image Classification</a></td>
 
 </tr> 
+<tr>
+<td align="center"> 279.</td>
+<td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Python Projects/Covid-Info">Covid-Info</a></td>
+
+</tr>
+
+<tr>
+<td align="center"> 283.</td>
+<td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Js-Projects/Lazy Loading">Lazy Loading</a></td>
+</tr>
+
+<tr>
+
+
+
+<td align="center"> 281.</td>  
+<td align="center"><a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Js-Projects/Chuck Norris">Chuck Norris</a></td>
+
+<td align="center"> 280.</td>
+<td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Js-Projects/Random Cat Image Generator">Random Cat Image Generator</a></td>
+
+
+<td align="center"> 282.</td>
+<td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Js-Projects/Accordion Template">Accordion Template</a></td>
+
+</tr>
+
+
+<td align="center"> 284.</td>
+<td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/cpp-projects/ATM Machine">ATM Machine</a></td>
+</tr>
 
 
 </table>
@@ -900,11 +938,23 @@ Happy Coding! -->
 -   Make a pull request! (compare your branch with the owner main branch)
 
 <br>
-<h1 align="center">
- <b>Contributors
-<a href="https://github.com/pranjay-poddar/Dev-Geeks/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=pranjay-poddar/Dev-Geeks&&max=817" />
-</a>
+
+##  Our Contributors
+
+Thank you for your interest in contributing to our project! We appreciate any contributions, whether it's bug fixes, new features, or documentation improvements.
+
+<details>
+  <summary> Find Contributors list here !!!</summary>
+    <div>
+      <a href="https://github.com/pranjay-poddar/Dev-Geeks/graphs/contributors">
+      <img src="https://contrib.rocks/image?repo=pranjay-poddar/Dev-Geeks&&max=817"/>
+      </a>
+    </div>
+</details>
+
+
+
+
 
 <!-- &max={number} -->
   <br>

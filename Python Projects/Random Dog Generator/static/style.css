@@ -1,0 +1,146 @@
+body {
+    background-color: #34495e;
+    padding: 0;
+    margin: 0;
+}
+
+.cen {
+    display: flex;
+    align-content: center;
+    text-align: center;
+    justify-content: center;
+}
+
+.col {
+    flex-direction: column;
+}
+
+.main {
+    display: flex;
+}
+
+.status {
+    display:grid;
+    grid-template-columns: 150px 150px;
+    grid-row: auto auto;
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+}
+
+.status_emoji {
+    font-size: 45px;
+}
+
+.value {
+    font-size: 25px;
+    color: antiquewhite;
+    margin-top: 5px;
+}
+
+.title {
+    margin-top: 5px;
+    font-size: 15px;
+    color: antiquewhite;
+}
+
+.box {
+    background-color: #2c3e50;
+    width: 150px;
+    height: 150px;
+    margin-top: 20px;
+}
+
+.random_dog img {
+    height: 200px;
+    border-radius: 5%;
+    margin-left: 50px;
+}
+
+.buttons {
+    margin-top: 20px;
+    row-gap: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.btn {
+    height: 30px;
+    border-radius: 5px;
+    font-size: 15px;
+    background-color: antiquewhite;
+    color: #2c3e50;
+}
+
+.btn_log {
+    height: 30px;
+    border-radius: 5px;
+    font-size: 15px;
+    background-color: antiquewhite;
+    color: #2c3e50;
+}
+
+table {
+    margin: auto;
+    width: 80%;
+    margin-top: 20px;
+}
+
+th, td {
+    color: antiquewhite;
+    border: 1px solid;
+}
+
+td {
+    text-align: center;
+    height: 25px;
+    font-size: 15px;
+}
+
+th {
+    background-color: antiquewhite;
+    color: #2c3e50;
+    height: 30px;
+    font-size: 20px;
+}
+
+
+tbody tr:nth-child(odd) {
+    background-color: #34495e;
+}
+  
+tbody tr:nth-child(even) {
+    background-color: #2c3e50;
+}
+
+
+
+/* //////////////////////////////////////////////// */
+
+.top_gap {
+    margin-top: 50px;
+}
+
+.nav {
+    font-size: 35px;
+    font-weight: 600;
+    color: antiquewhite;
+    background-color: #2c3e50;
+    height: 70px;
+    text-align: center;
+    line-height: 70px;
+}
+
+/* form {
+    margin-top: 20px;
+} */
+
+label {
+    font-size: 20px;
+    font-weight: 600;
+    color: antiquewhite
+}
+
+input[type="text"] {
+    margin: 10px;
+    font-size: 30px;
+}
