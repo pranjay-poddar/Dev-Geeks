@@ -1,0 +1,119 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+body{
+    min-height: 100vh;
+    background-color: aliceblue;
+}
+
+.side-nav{
+    position: absolute;
+    background-color: blueviolet;
+    width: 65px;
+    height: 100vh;
+    overflow: hidden;
+    transition: 0.5s;
+}
+
+.side-nav:hover{
+    width: 250px;
+}
+
+.side-nav ul{
+    position: relative;
+    height: 100vh;
+}
+
+.side-nav ul li{
+    list-style: none;
+}
+
+.side-nav ul li:hover{
+    background-color: rgb(97, 37, 153);
+}
+
+
+.side-nav ul li a{
+    position: relative;
+    display: flex;
+    white-space: nowrap;
+    text-decoration: none;
+}
+
+.side-nav ul li a .icon{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 65px;
+    height: 65px;
+    font-size: 1.5em;
+    color: white;
+}
+
+.side-nav ul li a .text{
+    position: relative;
+    display: flex;
+    height: 65px;
+    align-items: center;
+    font-size: 1em;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+ .title{
+    margin-bottom: 30px;
+}
+
+.title:hover{
+    background-color: blueviolet !important;
+}
+
+.title .icon{
+    font-size: 2em;
+}
+
+.title .text{
+    font-size: 1.2em;
+    font-weight: 500;
+}
+
+.bottom{
+    position: absolute;
+    width: 250px;
+    bottom: 0px;
+}
+
+h1{
+    position: absolute;
+    left: 25%;
+    top: 30%;
+    background: linear-gradient(
+        to right,
+        #d3c1f9 20%,
+        #00affa 30%,
+        #0190cd 70%,
+        #764ada 80%
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-fill-color: transparent;
+    background-size: 500% auto;
+    animation: textshine 5s ease-in-out infinite alternate;
+}
+
+@keyframes textshine{
+    0%{
+        background-position: 0% 50%;
+    }
+    100%{
+        background-position: 50% 100%;
+    }
+}
+
