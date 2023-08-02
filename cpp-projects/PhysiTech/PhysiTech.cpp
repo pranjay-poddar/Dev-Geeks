@@ -758,6 +758,190 @@ void Fluid()
     }
 
 }
+
+void MechanicsOfMaterials(){
+
+    map<string, string> StressStrain = {
+        {"Stress", " : Stress is the force applied to a material per unit area. It measures the internal resistance of a material to deformation."},
+        {"Strain", " : Strain is the ratio of the change in length of a material to its original length. It quantifies the material's deformation under stress."},
+    };
+
+    map<string, string> ElasticityHookeLaw = {
+        {"Elasticity", " : Elasticity is the ability of a material to return to its original shape after the stress is removed."},
+        {"Hooke's Law", " : Hooke's Law states that the stress applied to a material is directly proportional to the strain it experiences, as long as the material remains within its elastic limit."},
+    };
+
+    map<string, string> MechanicalProperties = {
+        {"Young's Modulus", " : Young's Modulus is a measure of a material's stiffness. It relates stress to strain for the material within its elastic limit."},
+        {"Yield Strength", " : Yield Strength is the maximum stress a material can withstand without permanent deformation."},
+        {"Ultimate Tensile Strength", " : Ultimate Tensile Strength is the maximum stress a material can withstand before fracturing."},
+        {"Elongation", " : Elongation is the percentage increase in length of a material when subjected to tensile forces."},
+        {"Hardness", " : Hardness is a measure of a material's resistance to deformation, such as indentation or scratching."},
+    };
+
+    map<string, string> BendingTorsionShear = {
+        {"Bending", " : Bending is the deformation of a material due to an applied load, resulting in curvature."},
+        {"Torsion", " : Torsion is the twisting of a material when subjected to torque."},
+        {"Shear", " : Shear is the deformation of a material parallel to the applied force."},
+    };
+
+    map<string, string> FailureCriteria = {
+        {"Factor of Safety", " : Factor of Safety is the ratio of the ultimate strength of a material to the applied working stress. It ensures the safety of structures."},
+        {"Mohr's Circle", " : Mohr's Circle is a graphical representation of stress states to determine principal stresses and predict failure."},
+    };
+
+    map<string, string> StructuralAnalysis = {
+        {"Static Analysis", " : Static Analysis determines the stresses and deformations of structures under external loads."},
+        {"Stress Analysis", " : Stress Analysis assesses the stress distribution in a structure to ensure it remains within safe limits."},
+    };
+
+    int choice;
+    cout << "-------------------------------------------" << endl;
+    cout << "MECHANICS OF MATERIALS" << endl;
+    cout << "-------------------------------------------" << endl;
+    cout << "1. Stress and Strain\n\n2. Elasticity and Hooke's Law\n\n3. Mechanical Properties of Materials\n\n4. Bending, Torsion, and Shear\n\n5. Failure Criteria\n\n6. Structural Analysis\n\n7. Sample Calculations" << endl;
+    cout << "Enter choice: ";
+    cin >> choice;
+
+    switch (choice)
+    {
+    case 1:
+        cout << "-------------------------------------------" << endl;
+        cout << "Stress and Strain" << endl;
+        cout << "-------------------------------------------" << endl;
+        for (const auto &ss : StressStrain)
+        {
+            cout << ss.first << ss.second << endl;
+            cout << "-------------------------------------------" << endl;
+        }
+        break;
+
+    case 2:
+        cout << "-------------------------------------------" << endl;
+        cout << "Elasticity and Hooke's Law" << endl;
+        cout << "-------------------------------------------" << endl;
+        for (const auto &eh : ElasticityHookeLaw)
+        {
+            cout << eh.first << eh.second << endl;
+            cout << "-------------------------------------------" << endl;
+        }
+        break;
+
+    case 3:
+        cout << "-------------------------------------------" << endl;
+        cout << "Mechanical Properties of Materials" << endl;
+        cout << "-------------------------------------------" << endl;
+        for (const auto &mp : MechanicalProperties)
+        {
+            cout << mp.first << mp.second << endl;
+            cout << "-------------------------------------------" << endl;
+        }
+        break;
+
+    case 4:
+        cout << "-------------------------------------------" << endl;
+        cout << "Bending, Torsion, and Shear" << endl;
+        cout << "-------------------------------------------" << endl;
+        for (const auto &bts : BendingTorsionShear)
+        {
+            cout << bts.first << bts.second << endl;
+            cout << "-------------------------------------------" << endl;
+        }
+        break;
+
+    case 5:
+        cout << "-------------------------------------------" << endl;
+        cout << "Failure Criteria" << endl;
+        cout << "-------------------------------------------" << endl;
+        for (const auto &fc : FailureCriteria)
+        {
+            cout << fc.first << fc.second << endl;
+            cout << "-------------------------------------------" << endl;
+        }
+        break;
+
+    case 6:
+        cout << "-------------------------------------------" << endl;
+        cout << "Structural Analysis" << endl;
+        cout << "-------------------------------------------" << endl;
+        for (const auto &sa : StructuralAnalysis)
+        {
+            cout << sa.first << sa.second << endl;
+            cout << "-------------------------------------------" << endl;
+        }
+        break;
+
+    case 7:
+        double force, crossSectionalArea, stress, changeInLength, originalLength, strain, youngsModulus, shearStress;
+        cout << "-------------------------------------------" << endl;
+        cout << "Sample Calculations" << endl;
+        cout << "-------------------------------------------" << endl;
+        int calculationChoice;
+        cout << "1. Calculation of Stress\n2. Calculation of Strain\n3. Calculation of Young's Modulus\n4. Calculation of Shear Stress" << endl;
+        cout << "Enter choice: ";
+        cin >> calculationChoice;
+        switch (calculationChoice)
+        {
+            case 1:
+            cout << "-------------------------------------------" << endl;
+            cout << "Calculation of Stress" << endl;
+            cout << "-------------------------------------------" << endl;
+            cout << "Enter the force (N): ";
+            cin >> force;
+            cout << "Enter the cross-sectional area (m^2): ";
+            cin >> crossSectionalArea;
+            stress = force / crossSectionalArea;
+            cout << "The stress is: " << stress << " Pa" << endl;
+            cout << "-------------------------------------------" << endl;
+            break;
+
+            case 2:
+            cout << "-------------------------------------------" << endl;
+            cout << "Calculation of Strain" << endl;
+            cout << "-------------------------------------------" << endl;
+            cout << "Enter the change in length (m): ";
+            cin >> changeInLength;
+            cout << "Enter the original length (m): ";
+            cin >> originalLength;
+            strain = changeInLength / originalLength;
+            cout << "The strain is: " << strain << endl;
+            cout << "-------------------------------------------" << endl;
+            break;
+
+            case 3:
+            cout << "-------------------------------------------" << endl;
+            cout << "Calculation of Young's Modulus" << endl;
+            cout << "-------------------------------------------" << endl;
+            cout << "Enter the stress (Pa): ";
+            cin >> stress;
+            cout << "Enter the strain: ";
+            cin >> strain;
+            youngsModulus = stress / strain;
+            cout << "Young's Modulus is: " << youngsModulus << " Pa" << endl;
+            cout << "-------------------------------------------" << endl;
+            break;
+
+            case 4:
+            cout << "-------------------------------------------" << endl;
+            cout << "Calculation of Shear Stress" << endl;
+            cout << "-------------------------------------------" << endl;
+            double shearForce;
+            cout << "Enter the shear force (N): ";
+            cin >> shearForce;
+            shearStress = shearForce / crossSectionalArea;
+            cout << "Shear Stress is: " << shearStress << " Pa" << endl;
+            cout << "-------------------------------------------" << endl;
+            break;
+
+            default:
+            cout << "Invalid choice!" << endl;
+        }
+        break;
+default:
+        cout << "Invalid choice!" << endl;
+    }
+}
+
     int main()
     {
         int choice;
@@ -765,7 +949,7 @@ void Fluid()
              << endl;
         cout << "WELCOME TO PHYSITECH" << endl
              << endl;
-        cout << "1. Kinematics\n\n2. Dynamics\n\n3. Thermodynamics\n\n4. Optics\n\n5. Electromagnetism\n\n6. Fluid Mechanics" << endl
+        cout << "1. Kinematics\n\n2. Dynamics\n\n3. Thermodynamics\n\n4. Optics\n\n5. Electromagnetism\n\n6. Fluid Mechanics\n\n7. Mechanics of Materials" << endl
              << endl;
         cout << "Enter your choice: ";
         cin >> choice;
@@ -790,6 +974,8 @@ void Fluid()
         case 6:
             Fluid();
             break;
+        case 7:
+            MechanicsOfMaterials();
         }
 
         return 0;
