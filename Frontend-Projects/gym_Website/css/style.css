@@ -12,7 +12,31 @@
   -webkit-transition: all .2s linear;
   transition: all .2s linear;
 }
-
+/* SCROLL TO TOP */
+#progress {
+  z-index: 100001;
+  position: fixed;
+  bottom: 20px;
+  right: 10px;
+  height: 50px;
+  width: 50px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  box-shadow: 0 0 30px rgba(255, 3, 3, 0.2);
+  cursor: pointer;
+}
+#progress-value {
+  display: block;
+  height: calc(100% - 15px);
+  width: calc(100% - 15px);
+  background-color: #000;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-size: 28px;
+  color: white;
+}
 html {
   font-size: 62.5%;
   scroll-behavior: smooth;
