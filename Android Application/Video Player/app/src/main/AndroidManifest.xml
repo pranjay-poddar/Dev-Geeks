@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@drawable/app"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.VideoPlayer"
+        tools:targetApi="31">
+        <activity
+            android:name=".shayad"
+            android:exported="false" />
+        <activity
+            android:name=".mann"
+            android:exported="false" />
+        <activity
+            android:name=".kesariya"
+            android:exported="false" />
+        <activity
+            android:name=".khani"
+            android:exported="false" />
+        <activity
+            android:name=".heer"
+            android:exported="false" />
+        <activity
+            android:name=".bandeya"
+            android:exported="false" />
+        <activity
+            android:name=".bairiya"
+            android:exported="false" />
+        <activity
+            android:name=".chal"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="false" />
+        <activity
+            android:name=".splash_screen"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
