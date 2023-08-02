@@ -34,11 +34,11 @@ a{
 }
 
 .qr-text{
-    padding: 1rem;
+    padding: 1.2rem 1.3rem;
     display: block;
     background: #181b29;
     border: 1px solid #414866;
-    border-radius: 4px;
+    border-radius: 1rem;
     width: 100%;
     margin: 0.5rem 0 1rem 0;
     color: #fff;
@@ -51,12 +51,13 @@ a{
 }
 
 #qr-code{
-    height: 500px;
-    width: 500px;
+    height: 390px;
+    width: 390px;
     display: flex;
     align-items: center;
     justify-content: center;
     border: 1px solid #414866;
+    border-radius: 1rem;
 }
 
 #qr-code img, #qr-code canvas{
@@ -76,8 +77,9 @@ a{
     color: #fff;
     background: #181b29;
     border: 1px solid #414866;
-    border-radius: 4px;
+    border-radius: 0.6rem;
     outline: none;
+    padding: 10px;
 }
 
 .btn{
@@ -85,7 +87,7 @@ a{
     max-width: 200px;
     padding: 14px;
     background: rgb(106, 43, 255);
-    border-radius: 4px;
+    border-radius: 1rem;
     border: none;
     display: flex;
     align-items: center;
