@@ -32,7 +32,6 @@ This project is an autocomplete search bar implemented in JavaScript that provid
 - What does JS stands for?
 
 ## DEMO
+![a5b6087c-0099-416b-a789-11072ad40b5a](https://github.com/Yashika-Agrawal/Dev-Geeks/assets/97408966/6f17c36d-7412-4502-8498-fb5380e617f2)
+![713422db-b795-4806-bf0b-2bea2ad19078](https://github.com/Yashika-Agrawal/Dev-Geeks/assets/97408966/a2ad879d-90a6-47f3-b1ad-841316dd90ab)
 
-[image](./img1.jpeg)
-
-[image](./img.jpeg)
