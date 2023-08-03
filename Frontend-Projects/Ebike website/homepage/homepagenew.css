@@ -189,19 +189,16 @@ input[type="date"]{
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: x-large;
     color: black;
+
 }
-/*
-.submit .reset{
-   /* display: inline-block;    
-   width: 20px;
-}
-*/
+
 .sub input{
     width: 200px;
 }
 input[value="SUBMIT"], input[value="RESET"]{
     font-weight: bold;
     letter-spacing: 2px;
+
 }
 input[value="SUBMIT"]:hover{
     background-color: rgb(176, 179, 131);   
@@ -214,7 +211,22 @@ input[value="RESET"]:hover{
     
     box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 
+
 }
+input[value="SUBMIT"]:hover{
+    background-color: rgb(176, 179, 131);
+    
+    font-weight: bolder;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+
+}
+input[value="RESET"]:hover{
+    background-color: rgb(176, 179, 131);
+    
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+
+}
+
 
 
 
