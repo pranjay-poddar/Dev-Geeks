@@ -33,13 +33,13 @@ header .nav-container{
 header .nav-container .logo {
     display: flex;
     min-width: 137px;
-    justify-content: flex-end;
+    margin-left: -5rem;
 }
 
 header .nav-container .logo{
     display: flex;
     min-width: 137px;
-    justify-content: flex-end;
+    margin-left: -5rem;
 
 }
 
@@ -61,6 +61,7 @@ header .search .search-container{
     border-radius: 2px;
     box-shadow: 0 2px 4px 0 rgb(0 0 0 / 23% );
     display: flex; 
+    margin-left: 7rem;
 }
 
 header .search .search-container input {
@@ -103,6 +104,7 @@ header .become-seller{
     color: white;
     font-size: 16px;
     font-weight: 500;
+    margin-left: 12rem;
 
 }
 
