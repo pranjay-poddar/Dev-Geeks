@@ -1,6 +1,6 @@
 .logo #agent{
-    width: 130px;
-    padding: 5px;
+    width: 65px;
+    border-radius: 10rem;
 }
 
 *{
@@ -11,8 +11,9 @@
 
 .navbar{
     display: flex;
-    padding: 20px;
+    padding: 5px;
     align-items: center;
+    background-color: #622a72;
 }
 
 nav{
