@@ -1,0 +1,106 @@
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #f0f2f5;
+    color: #333;
+    margin: 0;
+    padding: 0;
+  }
+  
+
+  #loancal {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  }
+  
+ 
+  h1 {
+    text-align: center;
+    font-size: 48px;
+    margin-bottom: 30px;
+    color: #007bff;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    background: linear-gradient(to right, #007bff, #00a1ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+ 
+  input[type="number"] {
+    width: 90%;
+    padding: 16px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 10px;
+    background-color: #f5f7fa;
+    font-size: 20px;
+    color: #333;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  input[type="number"]::placeholder {
+    color: #aaa;
+  }
+  
+ 
+  #calculate-btn {
+    width: 100%;
+    padding: 16px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 24px;
+    text-transform: uppercase;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s, transform 0.2s;
+  }
+  
+  #calculate-btn:hover {
+    background-color: #0056b3;
+    transform: translateY(-4px);
+  }
+  
+  
+  h2#payment {
+    text-align: center;
+    font-size: 36px;
+    margin-top: 40px;
+    color: #007bff;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    background: linear-gradient(to right, #007bff, #00a1ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: fadeIn 1s;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+
+  footer {
+    text-align: center;
+    margin-top: 30px;
+    color: #999;
+  }
+  
+  
+  @media (max-width: 768px) {
+    #loancal {
+      width: 90%;
+    }
+  }
+  
