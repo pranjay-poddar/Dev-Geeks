@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Google Clone</title>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+</head>
+
+<body>
+    <div class="grid_container" id="mainContainer">
+
+        <!-- Header start -->
+        <header class="main_header">
+
+            <!-- Tablet Navbar -->
+            <nav class="mobile_nav">
+                <ul class="mobile_menu">
+                    <li class="mobile_menu-item">
+                        <div class="burger_button" id="burger_btn">
+                            <svg style="fill: #757575; width: 24px; height: 24px">
+                                <path d="M0 0h24v24H0z" fill="none"></path>
+                                <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"></path>
+                            </svg>
+                        </div>
+                    </li>
+                    <li class="mobile_menu-item">
+                        <a href="#" class="mobile-item-link active" id="allBtn">ALL</a>
+                    </li>
+                    <li class="mobile_menu-item">
+                        <a href="#" class="mobile-item-link" id="imagesBtn">IMAGES</a>
+                    </li>
+                    <li class="mobile_menu-item">
+                        <figure class="google_apps">
+                            <img src="https://dl.dropbox.com/s/qe98k2xvmqivxwz/google_apps.png" class="google_apps-img">
+                        </figure>
+                    </li>
+                    <li class="mobile_menu-item">
+                        <figure class="user" id="me">
+                            <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cGVyc29ufGVufDB8fDB8fHww&auto=format&fit=crop&w=600&q=60"
+                                class="user-img">
+                        </figure>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <!-- Header end -->
+
+        <!-- Main Section start -->
+        <main class="main_section">
+            <section class="logo">
+                <figure class="google">
+                    <img src="https://dl.dropbox.com/s/vjlzm7zjnyjo84p/logo.png" class="google-img">
+                </figure>
+            </section>
+            <section class="search">
+                <!--  Search -->
+                <div class="mobile_search">
+                    <div class="search_bar">
+
+                        <input type="search" name="q" id="mySearch">
+
+                        <svg class="voice-search-svg" width="24" height="24">
+                            <path
+                                d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z">
+                            </path>
+                        </svg>
+
+                        <svg class="search-svg" width="24" height="24">
+                            <path
+                                d="M12 14c1.66 0 2.99-1.34 2.99-3L15 5c0-1.66-1.34-3-3-3S9 3.34 9 5v6c0 1.66 1.34 3 3 3zm5.3-3c0 3-2.54 5.1-5.3 5.1S6.7 14 6.7 11H5c0 3.41 2.72 6.23 6 6.72V21h2v-3.28c3.28-.48 6-3.3 6-6.72h-1.7z">
+                            </path>
+                        </svg>
+                    </div>
+                </div>
+            </section>
+
+            <!-- features-buttons -->
+            <section class="features-buttons">
+
+                <div class="item" onclick="visit(0)">
+                    <img src="https://dl.dropbox.com/s/vkru8ow2ir1k7fb/weather.png">
+                    <div class="text">Weather</div>
+                </div>
+
+                <div class="item" onclick="visit(1)">
+                    <img src="https://dl.dropbox.com/s/efww93w2yq5qqok/achevement.png">
+                    <div class="text">Sports</div>
+                </div>
+
+                <div class="item" onclick="visit(2)">
+                    <img src="https://dl.dropbox.com/s/jvshzo4e0u431ll/play_button.png">
+                    <div class="text">What to watch</div>
+                </div>
+
+                <div class="item" onclick="visit(3)">
+                    <img src="https://dl.dropbox.com/s/hmq8jvt9cx829zp/restaurant.png">
+                    <div class="text">Restaurants</div>
+                </div>
+
+            </section>
+
+            <!-- Language-section -->
+            <section class="language-section">
+                <div class="offered-in">
+                    Google offered in:
+                </div>
+
+                <div class="langs">
+                    <a href="#">हिन्दी</a>
+                    <a href="#">বাংলা</a>
+                    <a href="#">తెలుగు</a>
+                    <a href="#">मराठी</a>
+                    <a href="#">தமிழ்</a>
+                    <a href="#">ગુજરાતી</a>
+                    <a href="#">ಕನ್ನಡ</a>
+                    <a href="#">മലയാളം</a>
+                    <a href="#">ਪੰਜਾਬੀ</a>
+                </div>
+
+            </section>
+
+        </main>
+        <!-- Main Section end -->
+
+        <!-- Footer start -->
+        <footer class="footer">
+            <div class="country">India</div>
+            <div class="main_footer">
+                <div class="footer_top">
+                    <a href="#" class="footer-link">Settings</a>
+                    <a href="#" class="footer-link">Privacy</a>
+                    <a href="#" class="footer-link">Terms</a>
+                </div>
+                <div class="footer_bottom">
+                    <a href="#" class="footer-link">Advertising</a>
+                    <a href="#" class="footer-link">Business</a>
+                    <a href="#" class="footer-link">About</a>
+                </div>
+            </div>
+        </footer>
+        <!-- Footer end -->
+
+    </div>
+
+    <iframe id="myFrame"></iframe>
+
+</body>
+
+</html>

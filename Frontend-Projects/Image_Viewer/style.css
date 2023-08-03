@@ -1,0 +1,39 @@
+body {
+    font-family: Arial, sans-serif;
+    
+}
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.input-section {
+    display: flex;
+}
+
+.input-section input {
+    flex: 1;
+    padding: 10px;
+}
+
+.input-section button {
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+.image-container {
+    margin-top: 20px;
+}
+
+.image-container iframe {
+    width: 100%;
+    height: 400px;
+}
+#image{
+    width: 100%;
+}
