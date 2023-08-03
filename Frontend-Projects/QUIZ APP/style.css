@@ -9,6 +9,7 @@ header {
     justify-content: space-between;
     background-color: #218380;
     color: #ffffff;
+    margin:-8px;
     padding: .6rem;
 
 }
@@ -19,8 +20,12 @@ header div {
     padding-inline: .5rem;
 }
 
-
-
+h2 {
+    text-align: center;
+}
+p {
+    text-align: center;
+}
 .container1 {
     display: block;
     text-align: left;

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Portfolio</title>
+    <link href="styles.css" rel="stylesheet" type="text/css" />
+    <link rel="icon" href="https://img.freepik.com/free-vector/businessman-character-avatar-isolated_24877-60111.jpg?size=626&ext=jpg&ga=GA1.2.1038160083.1686384973&semt=sph">
+  </head>
+  <body>
+    <main class='main'>
+      <nav class='navBar'>
+        <h1>Your Name Portfolio</h1>
+        <div class='navigationMenu'>
+          <a href="#aboutMe">About Me</a>
+          <a href="#skills">Skills</a>
+          <a href="#projects">Projects</a>
+          <a href="#contactForm">Let's Connect!</a>
+        <div>
+      </nav>
+      <section class='heroSection'>
+        <img 
+        class='profileImage'
+        src='https://cdni.iconscout.com/illustration/premium/thumb/researcher-working-on-computer-3277588-2764204.png?f=webp'/>
+        <div class='herosectionDetails'>
+          <h1>Your Name</h1>
+          <h3>Course of study (You can add your photo there.)</h3>
+        </div>
+      </section>
+      <section class='aboutMe' id='aboutMe'>
+        <h1>What I do...</h1>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing 
+          elit. Consequuntur voluptatibus distinctio eum amet 
+          dolorem explicabo est enim aliquid minus at ducimus 
+          aspernatur ipsum, expedita dolorum sit ex.
+        </p>
+      </section>
+      <section class='skillsAndProjects'>
+        <div class='skills' id='skills'>
+          <h1 class='cardHeading'>Skills</h1>
+          <img title='HTML' src='https://www.freeiconspng.com/thumbs/html5-icon/html5-icon-1.png'>
+          <img title='CSS' src='https://cdn-icons-png.flaticon.com/512/5968/5968242.png'>
+          <img title='Javascript' src='https://cdn.iconscout.com/icon/free/png-256/free-javascript-2038874-1720087.png'>
+          <img title='Bootstrap' src='https://raw.githubusercontent.com/themedotid/bootstrap-icon/HEAD/docs/bootstrap-icon-css.png'>
+          <img title='Node.JS' src='https://p1.hiclipart.com/preview/885/534/395/green-grass-nodejs-javascript-react-mean-angularjs-logo-symbol-png-clipart.jpg'>
+          <img title='React' src='https://cdn.iconscout.com/icon/free/png-256/free-react-1-282599.png?f=webp'>
+          <img title='jquery' src='https://e7.pngegg.com/pngimages/662/163/png-clipart-jquery-logo-web-development-jquery-ui-javascript-computer-icons-jqlogo-emblem-label.png'>
+          <img title='MongoDB' src='https://w7.pngwing.com/pngs/429/921/png-transparent-mongodb-plain-wordmark-logo-icon.png'>
+        </div>
+        <div class='projects' id='projects'>
+          <h1 class='cardHeading'>Projects</h1>
+          <div class='projectContainer'>
+            <img src='https://img.freepik.com/free-vector/businessman-character-avatar-isolated_24877-60111.jpg?size=626&ext=jpg&ga=GA1.2.1038160083.1686384973&semt=sph'/>
+            <div class='projectDescription'>
+              <h4>Project 1</h4>
+              <p>Lorem ipsum dolor sit amet consectetur, 
+                adipisicing elit. Aspernatur quaerat
+              </p>
+            </div>
+            <img src='https://img.freepik.com/free-vector/businessman-character-avatar-isolated_24877-60111.jpg?size=626&ext=jpg&ga=GA1.2.1038160083.1686384973&semt=sph'/>
+            <div class='projectDescription'>
+              <h4>Project 2</h4>
+              <p>Lorem ipsum dolor sit amet consectetur, 
+                adipisicing elit. Aspernatur quaerat
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class='contactForm' id='contactForm'>
+        <h1>Let's Connect!</h2>
+        <div class='formGroup'>
+          <label for='name'>Enter Full Name</label><br/>
+          <input type='text' id='name' placeholder='Full Name'/>
+        </div>
+        <div class='formGroup'>
+          <label for='email'>Enter Email Address</label><br/>
+          <input type='text' id='email' placeholder='Email ID'/>
+        </div>
+        <div class='formGroup'>
+          <label for='message'>Message</label><br/>
+          <textarea placeholder="Send some message!" id="message" name="w3review" rows="4" cols="50"></textarea>
+        </div>
+        <button class='submitButton' onClick={submit()}>Connect</button>
+      </section>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
