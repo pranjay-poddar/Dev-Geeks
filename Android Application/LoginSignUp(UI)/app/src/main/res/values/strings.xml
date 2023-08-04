@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Login-SignUp</string>
+    <string name="Login">REGISTERED USER LOGIN</string>
+    <string name="Register">NEW USER REGISTRATION</string>
+    <string name="welcome">WELCOME</string>
+    <string name="register_">REGISTERED USER</string>
+    <string name="forget">FORGET PASSWARD?</string>
+    <string name="submit">LOGIN</string>
+    <string name="New_Registration">New Registration</string>
+    <string name="Submit">SUBMIT</string>
+</resources>

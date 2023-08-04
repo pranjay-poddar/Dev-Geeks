@@ -1,0 +1,112 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-size: 40px;
+}
+
+body {
+    background-color: #000033;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    min-height: 100vh;
+}
+
+.clock { /*clock body structure */ 
+    height: 400px;
+    width: 400px;
+    background-color: white;
+    font-family: 'Times New Roman', Times, serif;
+    border-radius: 50%;
+    border: 7px solid grey;
+    position: relative;
+}
+
+.clock::after { /*for the circle pin at the center of the clock */
+    content: "";
+    position: absolute;
+    background-color: black;
+    width: 15px;
+    height: 15px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 10;
+    border-radius: 50%;
+}
+
+.clock .number { /*structure and properties of numbers on the clock */
+    --rotation: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    color: #000033;
+    transform: rotate(var(--rotation));
+}
+.clock .n1{ --rotation: 30deg;} /*alignment of all the numbers */
+.clock .n2{ --rotation: 60deg;}
+.clock .n3{ --rotation: 90deg;}
+.clock .n4{ --rotation: 120deg;}
+.clock .n5{ --rotation: 150deg;}
+.clock .n6{ --rotation: 180deg;}
+.clock .n7{ --rotation: 210deg;}
+.clock .n8{ --rotation: 240deg;}
+.clock .n9{ --rotation: 270deg;}
+.clock .n10{ --rotation: 300deg;}
+.clock .n11{ --rotation: 330deg;}
+.clock .n12{ --rotation: 360deg;}
+    
+.clock .hand {
+    position: absolute;
+    width: 10px;
+    height: 50%;
+    bottom: 50%;
+    left: 50%;
+    border-radius: 10px;
+    z-index: 7;
+    transform-origin: bottom;
+    transform: translateX(-50%);
+}
+
+.clock .hand.hour {
+  width: 10px;
+  height: 30%;
+  background: black;
+  transform: rotate(290deg);
+}
+
+.clock .hand.minute {
+  width: 7px;
+  height: 35%;
+  background: black;
+  transform: rotate(30deg);
+  animation: rotationMinute 3600s linear infinite;
+}
+
+.clock .hand.second {
+  width: 5px;
+  height: 45%;
+  background: red;
+  animation: rotationSecond 60s linear infinite;
+}
+
+@keyframes rotationSecond {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes rotationMinute {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+
+}

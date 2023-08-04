@@ -1,0 +1,58 @@
+article a {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 150px;
+  height: 150px;
+  background: linear-gradient(#c00 50%, #0000 0);
+  clip-path: polygon(0 0, 100% 0, 100% 50%, 0% 50%);
+  color: #fff;
+  transform-origin: 50% 0;
+  transform: translate(50%, 0) rotate(45deg);
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: flex-end;
+  padding-bottom: 80px;
+  box-sizing: border-box;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-size: 10.5px;
+  text-decoration: none;
+  line-height: 1.5;
+}
+
+body {
+  font-family: 'Inter',Helvetica, Arial, sans-serif;
+  overflow-x: hidden;
+}
+
+h1,
+h2 {
+  font-weight: 400;
+}
+
+p,
+div {
+  font-weight: 300;
+}
+
+article {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+h1 {
+  font-size: 2em;
+  min-width: 99%;
+  margin: 2vmin;
+}
+
+section {
+  margin: 2vmin;
+}
+
+.flag {
+  box-shadow: 0 0 0 0.5px;
+  abox-shadow: 5px 5px 10px #ccc;
+}
