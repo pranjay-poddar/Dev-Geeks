@@ -1,0 +1,60 @@
+body
+{
+    font-family: sans-serif;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.5em;
+    top: 15%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+#gradient {
+    height: 100vh;
+    width: 100vw;
+    background: radial-gradient(#94F6FF, #148F8D);
+}
+
+h1
+{
+    font: 600 3.5em 'Raleway', sans-serif;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.5em;
+    width: 100%;
+}
+
+h3 
+{
+    font: 900 1em 'Raleway', sans-serif;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    text-transform: none;
+    letter-spacing: 0.01em;
+}
+
+@media only screen and (max-width: 800px)
+{
+    body
+    {
+        letter-spacing: 0;
+    }
+    h1 
+    {
+        font-size: 30px;
+        font-family: 'Times New Roman', Times, serif;
+    }
+    h2 
+    {
+        font-size: 20px;
+        font-family: 'Times New Roman', Times, serif;
+    }
+    h3 
+    {
+        font-size: 30px;
+        font-family: 'Times New Roman', Times, serif;
+    }
+}
