@@ -1,0 +1,82 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    background-color: black;
+    font-size: 35px;
+    color: white;
+}
+
+.inc,
+.dec {
+    text-align: center;
+    background-color: black;
+    color: white;
+    height: 10vh;
+    width: 20vw;
+    margin: auto auto;
+    border: 5px solid red;
+    /* border-radius: 25%; */
+}
+
+.inc:hover,
+.dec:hover {
+    animation: change 5s linear infinite alternate;
+
+}
+
+@keyframes change {
+    25% {
+        border-bottom-color: rgb(0, 161, 161);
+        border-right-color: rgb(200, 255, 0);
+        border-top-color: rgb(47, 0, 255);
+        border-left-color: rgb(255, 72, 0);
+    }
+
+    50% {
+        border-right-color: rgb(0, 161, 161);
+        border-top-color: rgb(200, 255, 0);
+        border-left-color: rgb(47, 0, 255);
+        border-bottom-color: rgb(255, 72, 0);
+    }
+
+    75% {
+        border-top-color: rgb(0, 161, 161);
+        border-left-color: rgb(200, 255, 0);
+        border-bottom-color: rgb(47, 0, 255);
+        border-right-color: rgb(255, 72, 0);
+    }
+
+    100% {
+        border-left-color: rgb(0, 161, 161);
+        border-bottom-color: rgb(200, 255, 0);
+        border-right-color: rgb(47, 0, 255);
+        border-top-color: rgb(255, 72, 0);
+    }
+}
+
+p {
+    text-align: center;
+    margin-bottom: 5vh;
+    font-weight: 500;
+}
+
+.center_div {
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    margin: 30vh auto;
+}
+
+.content{
+    height: inherit;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 66px;
+    font-weight: bold;
+}
