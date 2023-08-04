@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>The Impossible Game.</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<html>
+
+    <head>
+        <meta charset="utf-8" />
+        <title>Impossible game</title>
+        <link rel="stylesheet" href="./style.css" />
+        <link rel="stylesheet preload prefetch" href="https://fonts.googleapis.com/css?family=Orbitron:700" as="style" type="text/css" crossorigin="anonymous">
+    </head>
+
+    <body id = "game-interface">
+        <div style="display:none;">
+            <img id="city" src="https://www.dropbox.com/s/1t4dgtwi326xqcj/cyberpunk-city.png?raw=1" />
+            <img id="city-reverse" src="https://www.dropbox.com/s/exjklzi9u3imwdk/cyberpunk-city-reverse.png?raw=1"/>
+            <audio id='backGroundMusic'><source src='https://www.dropbox.com/s/2t2sf02z7pt2y6v/White%20Bat%20Audio%20-%20Inception.mp3?raw=1'/></audio>
+            <audio id='deathSound'><source src='https://www.dropbox.com/s/atqwpuraxkqj8au/esm_8bit_explosion_medium_bomb_boom_blast_cannon_retro_old_school_classic_cartoon.mp3?raw=1'/></audio>
+        </div>
+        <div id = "canvas-set">
+            <canvas id="canvas-game"></canvas>    
+            <canvas id="canvas-background"></canvas>    
+        </div>
+        
+        <script src="./impossible-game.js"></script>
+
+    </body>
+
+</html>
+<!-- partial -->
+  <script  src="./script.js"></script>
+
+</body>
+</html>
