@@ -1,0 +1,77 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #ffd1dc;
+  
+  }
+  
+  #score {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  #imageContainer {
+    margin-bottom: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid;
+  }
+  
+  #image {
+    max-width: 100%;
+    max-height: 100%;
+  }
+  
+  #inputContainer {
+    margin-bottom: 20px;
+  }
+  
+  #guessInput {
+    padding: 5px;
+    font-size: 16px;
+    border:3px solid #d7aefb;
+    margin-bottom:5px;
+  }
+  
+  #submitBtn,
+  #changePictureBtn {
+    padding: 5px 10px;
+    font-size: 16px;
+    margin-right: 10px;
+    border:2px solid #d7aefb;
+    background-color: #d7aefb;
+  }
+  
+  #submitBtn:hover{
+    background-color: #a2ded0;
+    border: 2px solid #a2ded0;
+  }
+  
+  #changePictureBtn:hover{
+    background-color: #a2ded0;
+    border: 2px solid #a2ded0;
+  }
+  
+  #message {
+    font-weight: bold;
+  }
+  
+  #scoreList {
+    margin-top: 20px;
+  }
+  
+  #scoreItems {
+    list-style: none;
+    padding: 0;
+  }
+  
+  #startOverBtn {
+    margin-top: 20px;
+    padding: 5px 10px;
+    font-size: 16px;
+    background-color:#ff69b4;
+  }
+  

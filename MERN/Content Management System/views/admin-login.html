@@ -1,0 +1,116 @@
+@{layout('')}
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>@{config.name} v@{config.version}</title>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=10" />
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="#A0A0A0" />
+	<meta name="apple-mobile-web-app-title" content="@{config.name}" />
+	<meta name="format-detection" content="telephone=no" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, viewport-fit=cover" />
+	<meta name="robots" content="all,follow" />
+	<link rel="apple-touch-icon" href="/icon.png" />
+	<link rel="stylesheet" href="@{'%cdn'}/spa.min@18.css" />
+	<script src="@{'%cdn'}/spa.min@18.js"></script>
+	<style type="text/css">
+		/*auto*/
+
+		html,body { overflow: hidden; height: 100%; }
+		body { background-color: #F0F0F0; color: black; background: radial-gradient(#FFFFFF, #C0C0C0); }
+		.panel { max-width: 320px; width: 100%; position: absolute; left: 50%; top: 50%; margin: -300px 0 0 -140px; background-color: white; border: 1px solid #E0E0E0; border-radius: 3px; transition: all 0.5s; transform: scale(1.5); }
+		.padding { padding: 20px; }
+		.panelshow { transform: scale(1); }
+		#login { padding: 0; margin: 0; }
+
+		h1 { color: black; margin: 0; padding: 20px 0 15px; font-family: Arial; text-align: center; border-bottom: 1px solid #E0E0E0; border-radius: 4px 4px 0 0; font-size: 18px; }
+		h1 .fa { margin-right: 10px; }
+
+		.alert { background-color: #fffad7; border: 1px solid #EDE8C8; padding: 15px; border-radius: 2px; color: #988e56; font-size: 12px; line-height: 14px; }
+		.alert i { margin-right: 5px; }
+
+		.hidden { display: none; }
+		.m { margin-bottom: 15px; }
+
+		button { background-color: #4285F4; border: 0; color: white; cursor: pointer; outline: 0; width: 100%; border-radius: 3px; height: 34px; text-transform: uppercase; font-weight: bold; font-size: 12px; }
+		button:hover { box-shadow: 0 2px 5px rgba(0,0,0,0.1); opacity: 0.9; }
+		button:disabled { background-color: #F0F0F0; color: silver; cursor: not-allowed; box-shadow: none; opacity: 1; }
+		button .fa { margin-right: 5px; }
+		footer { font-size: 11px; text-align: center; color: #A0A0A0; margin: 20px 0 0 0; }
+
+		.ui-error { padding: 5px 0 !important; font-size: 12px !important; margin-bottom: 15px !important; }
+
+		.keyvalue { line-height: 17px; font-size: 12px; color: black; }
+		.keyvalue .value { margin-left: 85px; text-align: right; }
+		.keyvalue .key { float: left; width: 100px; }
+		.keyvalue > * { text-overflow: ellipsis; white-space: nowrap; overflow: hidden; }
+
+		@media(max-width: 768px) {
+			.panel { margin: 20px; left: 0; position: relative; top: 0; width: auto; max-width: 1000px; }
+		}
+
+	</style>
+	@{import('admin-ui.css', 'admin-ui.js')}
+</head>
+<body>
+
+	<div class="panel">
+		<h1><i class="fa fa-lock"></i>@{'%name'}</h1>
+		<div class="padding">
+
+			@{if !PREF.usersinitialized}
+				<div class="alert m">
+					<div class="m"><i class="fa fa-lock"></i>@(Your default credentials are below. You can change them after you sign in.)</div>
+					<div class="keyvalue">
+						<div class="key">@(Name)</div>
+						<div class="value b">@{PREF.users[0].login}</div>
+					</div>
+					<div class="keyvalue">
+						<div class="key">@(Password)</div>
+						<div class="value b">@{PREF.users[0].passwordinit}</div>
+					</div>
+				</div>
+			@{fi}
+			<form method="POST" action="/" id="login">
+				<div class="m" data--="input__form.name__icon2:user;required:1;autofocus:1;autofill:1">@(Login name)</div>
+				<div class="m" data--="input__form.password__icon2:lock;required:1;type:password;autofill:1">@(Password)</div>
+				<div data---="error__form.response"></div>
+				<div data---="validation__form" style="margin-top:20px">
+					<button name="submit" disabled="disabled"><i class="fa fa-lock"></i>@(Login)</button>
+				</div>
+			</form>
+			<footer>
+				<div>All rights reserved &copy; 2020-@{NOW.getFullYear()}</div>
+				<a href="https://www.totaljs.com" target="_blank">www.totaljs.com</a>
+			</footer>
+		</div>
+	</div>
+
+	<script>
+
+		$('#login').submit(function(e) {
+			e.preventDefault();
+		});
+
+		setTimeout(function() {
+			$('.panel').aclass('panelshow');
+		}, 200);
+
+		$(document).on('keyup', 'input', function(e) {
+			e.which === 13 && $('button').trigger('click');
+		});
+
+		$(document).on('click', 'button', function() {
+			if (!CAN('form.*') || BLOCKED('adminlogin', 2000))
+				return;
+			AJAX('POST /api/login/admin/', GET('form @reset'), function(response) {
+				SET('form.response', response);
+				response.success && location.reload(true);
+			});
+		});
+	</script>
+
+</body>
+</html>

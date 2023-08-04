@@ -1,0 +1,58 @@
+<div data---="form__common.form__if:pagesglobals;width:800;height:480;reload:pagesglobals/reload;submit:pagesglobals/submit;icon:clone;title:@(Edit global variables)" class="hidden">
+	<div data-scope="pagesglobals">
+		<div class="padding bg-smoke">
+			<p class="nmt">@(Globals variables can contain preddefined values for the page content. In other words: you can define some keys with the content onetime and use them in different pages.)</p>
+			<div class="help">@(System replaces all <code>$key</code> for a value in all pages which are rendered.)</div>
+		</div>
+		<div class="padding">
+			<div data---="codemirror__?.body__height:300;icon:keyboard-o;type:totaljsresources;tabs:true;trim:true">@(Global variables)</div>
+			<div class="row fs12 mt10">
+				<div class="col-xs-6">
+					<span class="link exec" data-exec="?/upload"><i class="fa fa-folder-o mr5"></i>@(Browse files)</span>
+				</div>
+				<div class="col-xs-6 right">
+					<div class="help nmt">@(Variables are stored in <code>MAIN.variables</code>)</div>
+				</div>
+			</div>
+		</div>
+		<div data---="error__?.response"></div>
+	</div>
+	<nav data---="validation__pagesglobals">
+		<button name="submit"><i class="fa fa-check-circle"></i>@(SAVE)</button>
+		<button name="cancel">@(Cancel)</button>
+	</nav>
+</div>
+
+<script>
+
+	PLUGIN('pagesglobals', function(exports) {
+
+		exports.reload = function() {
+			AJAX('GET [url]api/pages/globals/', function(response) {
+				if (!response.body)
+					response.body = '@(keyA)      : @(value)\n@(keyB)      : @(value)';
+				SETR('?', response);
+				FUNC.loading(false, 1000);
+			});
+		};
+
+		exports.upload = function() {
+			refresh_filebrowser(function(file) {
+				SETTER('.pagesglobals.body/insert', file);
+			});
+		};
+
+		exports.submit = function() {
+			FUNC.loading(true);
+			AJAX('POST [url]api/pages/globals/ REPEAT', GETR('?'), function(response) {
+				FUNC.loading(false, 1000);
+				if (response.success) {
+					SETTER('snackbar/success', '@(Globals variables have been saved successfully.)');
+					NULL('common.form');
+				}
+			});
+		};
+
+	});
+
+</script>
