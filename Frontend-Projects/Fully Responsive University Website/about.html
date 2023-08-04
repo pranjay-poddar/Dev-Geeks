@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="with=device-width, initial-scale=1.0">
+
+    <title>SRM University</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital@1&family=Poppins:wght@400;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+</head>
+
+<body>
+    <section class="sub-header">
+        <nav>
+            <a href="index.html"><img src="https://srmap.edu.in/wp-content/uploads/2019/11/SRMAP-Logo-2.png?x87898"></a>
+            <div class="nav-links" id="navLinks">
+                <i class="fa-solid fa-xmark" onclick="hideMenu()"></i> <!--X icon-->
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="about.html">ABOUT</a></li>
+                    <li><a href="course.html">COURSE</a></li>
+                    <li><a href="blog.html">BLOG</a></li>
+                    <li><a href="contact.html">CONTACT</a></li>
+                </ul>
+            </div>
+            <i class="fa-solid fa-bars" onclick="showMenu()"></i> <!--bar icon-->
+        </nav>
+
+        <h1>About Us</h1>
+    </section>
+
+<!-- -------About Us Content------- -->
+    <section class="about-us">
+        <div class="row">
+            <div class="about-col">
+                <h1>We are the world's fastest innovative growing university</h1>
+                <p>SRM University-AP, Andhra Pradesh, is a multi-disciplinary research-intensive institute combining academic rigour, evolving research ecosystem,
+                     entrepreneurial heritage, and pioneering faculty. As a leading tertiary education institution, SRM AP has been challenging the conventional
+                      learning ecosystem since its inception to create a novel avenue where passion for wisdom meets purpose and excellence.</p>
+                <a href="" class="hero-btn red-btn">EXPLORE NOW</a>
+            </div>
+            <div class="about-col">
+                <img src="https://srmap.edu.in/wp-content/uploads/2022/01/Infrastructure-top-banner.jpg?x87898">
+            </div>
+            
+        </div>
+        
+
+    </section>
+
+    <!-- ----Footer---- -->
+    <section class="footer">
+        <h1>About Us</h1>
+        <h2>A place for learning. A place for research. A place for innovation.</h2>
+        <div class="foot-row">
+            <div class="abt-col">
+                <h2>100%</h2>
+                <p>Faculty with international <br>exposure</p>
+            </div>
+            <div class="abt-col">
+                <h2>50+</h2>
+                <p>Laboratories to enable <br>inventions</p>
+            </div>
+            <div class="abt-col">
+                <h2>100 acre</h2>
+                <p>Campus designed by world <br>renowned architects</p>
+            </div>
+            <div class="abt-col">
+                <h2>60+</h2>
+                <p>Collaborations with the <br>world's best universities</p>
+            </div>
+        </div>
+        <div class="icons">
+            <a href="https://www.instagram.com/srmuap/?hl=en" target="_blank"><i class="fa-brands fa-instagram" ></i></a>
+            <a href="https://twitter.com/SRMUAP?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+            <a href="https://www.facebook.com/SRMUAP/" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+            <a href="https://www.linkedin.com/school/srmuap/?originalSubdomain=in" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+        </div>
+        <p>Made By Ayush Kumar</p>
+        <p style="border-top: 2px solid black;">SRM University, Andhra Pradesh © 2023 All rights reserved.</p>
+    </section>
+
+
+    <!-- ----JavaScript for Toggle Menu---- -->
+    <script>
+        var navLinks = document.getElementById("navLinks");
+
+        function showMenu() {
+            navLinks.style.right = "0";
+        }
+        function hideMenu() {
+            navLinks.style.right = "-200px";
+        }
+    </script>
+
+</body>
+
+</html>

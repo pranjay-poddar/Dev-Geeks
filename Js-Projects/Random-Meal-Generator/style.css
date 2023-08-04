@@ -1,0 +1,136 @@
+/* Adding google font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+/* Default settings */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Poppins', sans-serif;
+}
+
+body {
+	background: -webkit-linear-gradient(left, #fff, #a245a2);
+	padding: 30px 0;
+	min-height: 100vh;
+	transition: all 0.2s;
+	align-items: center;
+	text-align: center;
+}
+
+h1 {
+	font-weight: normal;
+	padding-bottom: 1.4rem;
+	color: #a245a2;
+}
+
+h4 {
+	font-weight: normal;
+	color: #a245a2;
+	padding-bottom: 2rem;
+}
+
+#get_meal {
+	margin: 1rem;
+	padding: 15px;
+	border: none;
+	outline: none;
+	border-radius: 10px;
+	font-size: 1.4rem;
+	background: rgba(255, 255, 255, 0.25);
+	transition: all 0.4s;
+	cursor: pointer;
+}
+
+#get_meal:hover {
+	font-size: 1.6rem;
+	padding: 18px;
+	color: #a245a2;
+	box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.4);
+}
+
+.row-meal {
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+}
+
+img {
+	padding: 1rem;
+	position: relative;
+	max-width: 70%;
+	height: 50%;
+	border: 2px solid coral;
+	outline: none;
+	transition: all 0.4s;
+	border-radius: 1.4rem;
+	align-items: center;
+}
+
+img:hover {
+	padding: 0;
+}
+
+.five p {
+	margin: 1rem;
+	font-size: 1.6rem;
+	letter-spacing: 2px;
+}
+
+.five ul {
+	text-decoration: none;
+	list-style: none;
+	font-size: 1.2rem;
+	letter-spacing: 2px;
+	margin: 1rem;
+}
+
+hr {
+	margin: 2.5rem 0;
+}
+
+.seven h4,
+.row2 h1 {
+	font-size: 2rem;
+	color: #a245a2;
+	font-weight: normal;
+}
+
+.seven h4:hover {
+	text-decoration: underline;
+}
+
+.seven p {
+	font-size: larger;
+	letter-spacing: 2px;
+	margin: 0 3rem;
+}
+
+.videoWrapper {
+	padding: 2% 10% 40%;
+	border: 2px solid crimson;
+	position: relative;
+}
+
+.videoWrapper iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.developer {
+	margin-bottom: 1.2rem;
+	transition: all 0.3s;
+	color: #a245a2;
+}
+
+.developer a {
+	text-decoration: none;
+	color: #a245a2;
+}
+
+.developer a:hover {
+	text-decoration: underline;
+}
