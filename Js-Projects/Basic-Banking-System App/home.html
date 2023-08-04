@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Banking System Website - Shubhanshu</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>  
+	<header>
+		<div class="logo">
+			<img src="Assets/img/logo.png" alt="My Bank App Logo">		
+			<h1><span>GRIP</span> BANK</h1> 
+		</div>
+		<nav>
+			<ul>
+				<li><a href="index.html">Home</a></li>
+				<li><a href="#about">About Me</a></li>
+				<li><a href="#contact">Contact Us</a></li>
+			</ul>
+		</nav>
+	</header>
+	<main>
+		<section id="send-money">
+			<h2>Send Money</h2>
+			<form>
+				<label for="recipient">Recipient:</label>
+				<input type="text" placeholder="Enter Recipient name" id="recipient" name="recipient" required>
+				<label for="email">Email:</label>
+				<input type="email" placeholder="Enter email" id="email" name="email" required>
+				<label for="amount">Amount:</label>
+				<input type="number" placeholder="Enter Amount" id="amount" name="amount" required>
+				<button type="submit" id="send-money-btn">Send</button>
+			</form>
+		</section>
+
+		<section id="add-user">
+			<h2>Add User</h2>
+			<form>
+			  <label for="username">Username:</label>
+			  <input type="text" placeholder="Enter your username" id="username" name="username" required>
+			  <label for="email">Email:</label>
+			  <input type="email" placeholder="Enter your email" id="email" name="email" required>
+			  <label for="balance">Initial balance:</label>
+			  <input type="number" placeholder="Enter amount" id="balance" name="balance" required>
+			  <button type="submit" id="add-user-btn">Add User</button>
+			</form>
+		  </section>
+
+		  <section id="user-add">
+			<h2>User Details</h2>
+			<table>
+				<thead>
+					<tr>
+						<th>Recipient</th>
+						<th>Email</th>
+						<th>Amount</th>
+					</tr>
+				</thead>
+				<table id="user-list">
+					<tbody>
+					  <!-- User rows will be added here dynamically -->
+					</tbody>
+				  </table>
+
+			</table>
+			<button id="clear-user">Clear Users</button>
+		</section>
+
+		<section id="transaction-history">
+			<h2>Transaction History</h2>
+			<table>
+				<thead>
+					<tr>
+						<th>Date</th>
+						<th>Recipient</th>
+						<th>Email</th>
+						<th>Amount</th>
+					</tr>
+				</thead>
+				<tbody>
+					<!-- Transaction history rows will be added dynamically by JavaScript -->
+				</tbody>
+			</table>
+			<button id="clear-history">Clear History</button>
+		</section>
+	</main>
+
+	<!-- About section  --> 
+	<section id="about">
+		<h2>About Our Bank</h2>
+		<div class="about-content">
+			<div class="about-text">
+				<p>We are a trusted financial institution that has been serving our customers for over 50 years. We offer a wide range of banking services including checking accounts, savings accounts, loans, and more.</p>
+				<p>Our mission is to provide our customers with the highest level of customer service and support. We believe that everyone should have access to the financial tools they need to achieve their goals, which is why we offer competitive rates and fees.</p>
+				<p>At our bank, we prioritize security and privacy. We use the latest technology and security measures to ensure that our customers' information is always safe and secure.</p>
+			</div>
+			<div class="about-image">
+				<img src="Assets/img/Bank.jpg" alt="About Us Image">
+			</div>
+		</div>
+	</section>
+
+    <!-- Contact form section 	 -->
+	<section id="contact">
+		<h2>Contact Us</h2>
+		<form action="submit-form.php" method="POST">
+		  <div class="form-group">
+			<label for="name">Name:</label>
+			<input type="text" id="name" name="name" required>
+		  </div>
+		  <div class="form-group">
+			<label for="email">Email:</label>
+			<input type="email" id="email" name="email" required>
+		  </div>
+		  <div class="form-group">
+			<label for="subject">Subject:</label>
+			<input type="text" id="subject" name="subject" required>
+		  </div>
+		  <div class="form-group">
+			<label for="message">Message:</label>
+			<textarea id="message" name="message" required></textarea>
+		  </div>
+		  <button type="submit">Submit</button>
+		</form>
+	</section>\
+
+	<footer>
+		<p>Design & Developed By Shubhanshu✌️<br>&copy; 2023 GRIP Bank. All rights reserved.</p>
+	</footer>
+	<script src="script.js"></script>
+</body>
+</html>

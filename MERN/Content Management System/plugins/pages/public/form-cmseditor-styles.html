@@ -1,0 +1,26 @@
+<div data---="form__cmseditor.form__if:styles;width:800;submit:cmseditorstyles/submit;title:@(Page styles);icon:code" class="hidden">
+
+	<div class="padding">
+		<div data---="codemirror__cmseditor.styles__height:500;type:css;tabs:true;trim:true">@(Styles)</div>
+		<div class="help">@(CMS performs auto-vendor prefixes automatically.)</div>
+	</div>
+
+	<nav data---="validation__cmseditor.styles">
+		<button name="submit"><i class="fa fa-check-circle"></i>@(APPLY)</button>
+		<button name="cancel">@(Cancel)</button>
+	</nav>
+
+</div>
+
+<script>
+
+	PLUGIN('cmseditorstyles', function(exports) {
+		exports.submit = function(hide) {
+			cmseditor.css = cmseditor.styles;
+			cmseditor.instance.setCSS();
+			cmseditor.instance.change(true);
+			hide();
+		};
+	});
+
+</script>
