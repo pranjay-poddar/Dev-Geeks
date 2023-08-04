@@ -1,0 +1,31 @@
+.header{
+    display: flex;
+    justify-content: space-between;
+}
+.logo{
+    width: 10rem;
+    height: 3rem;
+}
+.header-list{
+    list-style: none;
+    color: white;
+    gap: 2rem;
+    display: flex;
+}
+.header-list>li:hover{
+    cursor: pointer;
+    color: var(--orange);
+}
+@media screen and (max-width:760px){
+    .header>:nth-child(2)
+    {
+        z-index: 99;
+        right: 2rem;
+        position: fixed;
+    }
+    .header-list{
+        flex-direction: column;
+        padding: 2rem;
+        background-color: var(--appColor);
+    }
+}

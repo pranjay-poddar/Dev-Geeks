@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+ 
+    <title>Area Calculator</title>
+  </head>
+  <style>
+
+body {
+  width: 100vw;
+  height: 100vh;
+
+  display: flex;
+  flex-direction: row;
+  place-items: center;
+  overflow-x: hidden;
+}
+
+form {
+  background-color: #bffc08;
+  padding: 80px;
+  width: 50%;
+  margin: 60px auto;
+  text-align: center;
+  place-items: center;
+  box-shadow: 0 10px 6px -6px #777;
+}
+
+label {
+  font-size: 26px;
+  font-weight: 500;
+}
+</style>
+  <body>
+
+    <form id="calc" class="form-horizontal">
+          
+      <h1>Area calculator</h1>
+    
+      <label for="cal">Enter the shape: </label><br />
+      <select name="cal" id="cal" onchange="track()">
+        <option value="Square">Square</option>
+        <option value="Rectangle">Rectangle</option>
+        <option value="Triangle">Triangle</option>
+        <option value="Rhombus">Rhombus</option>
+        <option value="Parallelogram">Parallelogram</option>
+        <option value="circle">Circle</option>
+        <option value="trapezium">Trapezium</option></select
+      ><br /><br />
+
+      <input type="number" name="num1" id="num1" placeholder="side" />
+
+      <input
+        type="number"
+        name="num2"
+        id="num2"
+        placeholder="side"
+        style="display: none"
+      />
+      
+      <input
+        type="number"
+        name="num3"
+        id="num3"
+        placeholder="side"
+        style="display: none"
+      /><br /><br />
+      <button type="button" onclick="areaCalculator()">Submit</button
+      ><br /><br /><br />
+
+      <div class="outterbox">
+        <div class="box"><span id="resultCalculator"></span></div>
+      </div>
+    </form>
+
+    <script type="text/javascript">
+      const track = () => {
+        const op = document.getElementById("cal");
+        const valOp = op.value;
+
+        const num1 = document.getElementById("num1");
+        const num2 = document.getElementById("num2");
+        const num3 = document.getElementById("num3");
+        switch (valOp) {
+          case "Square":
+            num2.style.display = "none";
+            num3.style.display = "none";
+            num1.placeholder = "Side";
+            num1.value = "";
+            break;
+          case "Rectangle":
+            num2.style.display = "inline";
+            num3.style.display = "none";
+            num1.placeholder = "length";
+            num2.placeholder = "breadth";
+            num1.value = "";
+            num2.value = "";
+            break;
+          case "Rhombus":
+            num2.style.display = "inline";
+            num3.style.display = "none";
+            num1.placeholder = "diagonal 1";
+            num2.placeholder = "diagonal 2";
+            num1.value = "";
+            num2.value = "";
+            break;
+          case "Parallelogram":
+            num2.style.display = "inline";
+            num3.style.display = "none";
+            num1.placeholder = "height";
+            num2.placeholder = "base";
+            num1.value = "";
+            num2.value = "";
+            break;
+          case "Triangle":
+            num2.style.display = "inline";
+            num3.style.display = "none";
+            num1.placeholder = "base";
+            num2.placeholder = "height";
+            num1.value = "";
+            num2.value = "";
+            break;
+          case "circle":
+            num2.style.display = "none";
+            num1.placeholder = "radius";
+            num3.style.display = "none";
+            num1.value = "";
+          break;  
+          case "trapezium":
+            num2.style.display = "inline";  
+            num3.style.display = "inline";
+            num1.placeholder = "parallel side 1";
+            num2.placeholder = "parallel side 2";
+            num3.placeholder = "height";
+            num1.value = num2.value = num3.value = "";
+          break;  
+        }
+      };
+
+      const areaCalculator = () => {
+        // console.log("clicked");
+        const operation = document.getElementById("cal");
+        const valOpe = operation.value;
+
+        // console.log(valOpe);
+
+        const number1 = parseInt(document.getElementById("num1").value);
+        const number2 = parseInt(document.getElementById("num2").value);
+        const number3 = parseInt(document.getElementById("num3").value);
+
+        console.log(number1);
+        console.log(number2);
+
+        switch (valOpe) {
+          case "Square":
+            document.getElementById(
+              "resultCalculator"
+            ).innerHTML = `Side * Side = ${number1 * number1}`;
+            break;
+          case "Rectangle":
+            document.getElementById(
+              "resultCalculator"
+            ).innerHTML = `Length * Breadth = ${number1 * number2}`;
+            break;
+          case "Rhombus":
+            document.getElementById(
+              "resultCalculator"
+            ).innerHTML = `1/2 * d1 * d2 = ${(1 / 2) * number1 * number2}`;
+            break;
+          case "Parallelogram":
+            document.getElementById(
+              "resultCalculator"
+            ).innerHTML = `Height * Base = ${number1 * number2}`;
+            break;
+          case "Triangle":
+            document.getElementById(
+              "resultCalculator"
+            ).innerHTML = `1/2 * base * height = ${
+              (1 / 2) * number1 * number2
+            }`;
+            break;
+          case "circle":
+            document.getElementById("resultCalculator").innerHTML = `&pi; * r * r = ${number1 * number1 * 3.14}`;
+            break; 
+          case "trapezium":
+            document.getElementById("resultCalculator").innerHTML = `1/2 * (b1 + b2) * height = ${.5 * (number1 + number2) * number3}`;   
+          default:
+            return;
+        }
+      };
+
+      document.getElementById("calc").addEventListener("submit", (e) => {
+        e.preventDefault();
+        areaCalculator();
+      });
+      document.body.addEventListener("keyup", (e) => {
+        if (e.keyCode == 13) {
+          areaCalculator();
+        }
+      });
+    </script>
+  </body>
+</html>

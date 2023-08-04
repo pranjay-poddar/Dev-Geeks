@@ -1,3 +1,4 @@
+// SCROLL TO TOP BUTTON
 let calcScrollValue = () => {
     let scrollProg = document.getElementById("progress");
     let pos = document.documentElement.scrollTop;
@@ -18,3 +19,20 @@ let calcScrollValue = () => {
   
   window.onscroll = calcScrollValue;
   window.onload = calcScrollValue;
+
+  // DARK MODE BUTTON
+const darkModeToggle = document.getElementById('dark-mode-toggle');
+const body = document.body;
+
+// Check if the user has a preferred color scheme set
+const prefersDarkMode = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+// Apply the initial theme based on user preference
+if (prefersDarkMode) {
+  body.classList.add('dark-mode');
+}
+
+// Toggle dark mode
+darkModeToggle.addEventListener('click', () => {
+  body.classList.toggle('dark-mode');
+});

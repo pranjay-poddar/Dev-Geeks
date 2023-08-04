@@ -1,0 +1,339 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins&family=Source+Sans+Pro&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.row {
+  margin: 0px;
+}
+
+/* left banner */
+.banner .banner-left {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding-left: 100px;
+}
+
+.banner .banner-left img {
+  position: absolute;
+  left: 100px;
+  top: 33px;
+  width: 100px;
+  cursor: pointer;
+}
+
+.banner .banner-left h1 {
+  color: #0e2368;
+  font-weight: bolder;
+  font-family: "Source Sans Pro", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 62px;
+  line-height: 69px;
+}
+
+.banner .banner-left h1 span {
+  color: #e23744;
+}
+
+.banner .banner-left p {
+  color: #444957;
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16.4447px;
+  line-height: 27px;
+}
+
+.banner .banner-left .btn {
+  width: fit-content;
+  background-color: #e23744;
+  color: #fff;
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 36px;
+  letter-spacing: 0.01em;
+  border-radius: 30px;
+  padding: 5px 20px;
+}
+
+/* right banner */
+.banner .banner-right {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  padding: 0;
+}
+
+.banner .banner-right img {
+  height: 100vh;
+}
+
+.banner .banner-right .btn {
+  color: #fff;
+  border: 1px solid #fff;
+  border-radius: 30px;
+  position: absolute;
+  top: 30px;
+  right: 30px;
+}
+
+/* about section */
+.about {
+  margin: 100px 0;
+  background: linear-gradient(
+    90.07deg,
+    rgba(30, 42, 93, 0.04) 30.91%,
+    rgba(48, 62, 130, 0.04) 64.79%,
+    rgba(60, 80, 157, 0.04) 91.94%
+  );
+}
+
+.about .about-left {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.about .about-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  width: 30%;
+}
+
+.about .about-right h1 {
+  color: #0e2368;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 45px;
+  line-height: 27px;
+}
+
+.about .about-right p {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 27px;
+  color: #444957;
+  margin: 20px 0;
+}
+
+.about .about-right .btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 3px 26px;
+  width: 132px;
+  height: 42px;
+  background: #e23744;
+  color: #fff;
+  border-radius: 21px;
+}
+
+/* article section */
+.article {
+  margin: 100px 15px;
+}
+
+.article h1 {
+  font-family: "Source Sans Pro";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 56px;
+  line-height: 42px;
+  letter-spacing: 0.04em;
+  color: #0e2368;
+  padding: 70px;
+}
+
+.article .down {
+  padding: 30px;
+}
+
+.article .down .heading {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 21px;
+  line-height: 27px;
+  color: #0e2368;
+}
+
+.article .down p {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 27px;
+  letter-spacing: -0.02em;
+  color: #444957;
+}
+
+.article .down .btn {
+  border: 1px solid #424961;
+  border-radius: 30px;
+  color: #424961;
+}
+
+/* footer section */
+.footer {
+  background: #f8f8f8;
+  padding: 50px;
+}
+
+.footer h5,
+p {
+  font-family: "Source Sans Pro";
+  font-style: normal;
+}
+
+.footer h5 {
+  font-weight: 600;
+  font-size: 18.8433px;
+  line-height: 27px;
+  letter-spacing: 0.03em;
+  color: #0e2368;
+}
+
+.footer p {
+  font-weight: 400;
+  font-size: 14.6559px;
+  line-height: 23px;
+  color: #646874;
+}
+
+.footer .col-lg-3 {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: start;
+  padding: 20px;
+}
+
+.footer .food-truck {
+  justify-content: center;
+}
+
+.footer .social img {
+  margin-right: 30px;
+  cursor: pointer;
+}
+
+.footer .spcl {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* media queries */
+@media (max-width: 1300px) {
+  .banner .banner-left h1 {
+    font-size: 60px;
+    line-height: 60px;
+  }
+  .banner .banner-right img {
+    height: 90vh;
+  }
+}
+
+@media (max-width: 1130px) {
+  .banner .banner-left h1 {
+    font-size: 55px;
+    line-height: 55px;
+  }
+  .banner .banner-right img {
+    height: 80vh;
+  }
+}
+
+@media (max-width: 1050px) {
+  .banner .banner-left img {
+    width: 80px;
+  }
+  .banner .banner-left h1 {
+    font-size: 50px;
+    line-height: 50px;
+  }
+  .banner .banner-right img {
+    height: 70vh;
+  }
+}
+
+@media (max-width: 935px) {
+  .article .down {
+    text-align: center;
+  }
+  .banner .banner-left {
+    justify-content: flex-end;
+  }
+  .banner .banner-left h1 {
+    font-size: 45px;
+    line-height: 45px;
+  }
+  .banner .banner-right img {
+    height: 60vh;
+  }
+}
+
+@media (max-width: 767px) {
+  .banner {
+    flex-direction: column-reverse;
+  }
+  .banner .banner-left {
+    align-items: center;
+    text-align: center;
+    margin-top: 50px;
+    padding: 0;
+  }
+  .banner .banner-left img {
+    display: none;
+  }
+  .banner .banner-right img {
+    width: 100%;
+    height: 100%;
+  }
+  .about .about-left {
+    display: none;
+  }
+  .about .about-right {
+    width: 100%;
+    align-items: center;
+    text-align: center;
+    padding: 80px;
+  }
+  .article .down {
+    padding: 20px;
+    text-align: center;
+  }
+  .footer .food-truck {
+    align-items: center;
+  }
+}
+
+@media (max-width: 400px) {
+  .footer .spcl .up h5 {
+    display: none;
+  }
+  .footer .spcl .up .social {
+    margin-bottom: 10px;
+  }
+  .footer .spcl .up .social img {
+    margin: 20px;
+  }
+  .footer .spcl {
+    justify-content: center;
+    align-items: center;
+  }
+  .article h1 {
+    line-height: 50px;
+  }
+}

@@ -1,0 +1,50 @@
+<div data---="form__common.form__if:subscribersimport;width:600;submit:subscribersimport/submit;autofocus:true;title:@(Import subscribers);icon:address-book-o" class="hidden">
+
+	<div class="padding" data-scope="subscribersimport">
+		<div data-bind="?.importing__show:!value">
+			<div data---="input__?.body__required:true;type:multiline;height:200;placeholder:@(Put all new email addresses)">@(Email addresses)</div>
+		</div>
+		<div data-bind="?.importing__show:value">
+			<div data---="progress__?.progress"></div>
+			<div class="help"><i class="fa fa-spin fa-refresh mr5"></i>@(Importing ...)</div>
+		</div>
+	</div>
+
+	<nav data---="validation__subscribersimport">
+		<button name="submit"><i class="fa fa-check-circle"></i>@(IMPORT)</button>
+		<button name="cancel">@(Cancel)</button>
+	</nav>
+
+</div>
+
+<script>
+	PLUGIN('subscribersimport', function(exports) {
+
+		exports.submit = function(hide) {
+
+			SET('?.progress', 0);
+			SET('?.importing', true);
+
+			var data = {};
+			var arr = GET('?.body').replace(/\n|\r|;/g, ',').replace(/["']/g, '').trim().split(',');
+			var count = 0;
+
+			arr.limit(100, function(items, next) {
+				data.email = items.join(',');
+				data.source = 'Imported';
+				AJAX('POST /api/subscribers/', data, function() {
+					count += items.length;
+					SET('?.progress', ((count / arr.length) * 100) >> 0);
+					setTimeout(next, 50);
+				});
+			}, function() {
+				SETTER('snackbar/success', '@(Email addresses have been imported successfully.)');
+				setTimeout(function() {
+					SET('?.importing', false);
+					EXEC('subscribers/refresh');
+					hide();
+				}, 1000);
+			});
+		};
+	});
+</script>
