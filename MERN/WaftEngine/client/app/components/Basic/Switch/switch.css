@@ -1,0 +1,22 @@
+.switch {
+  @apply inline-flex items-center;
+}
+.switch .button {
+  @apply border px-2.5 bg-gray-200 rounded-full w-10 h-5 relative;
+}
+.switch .thumb {
+  @apply w-4 h-4 absolute rounded-full top-px left-px bg-gray-500;
+}
+.switch .label {
+  @apply pl-2 cursor-pointer select-none;
+}
+.switch .thumb.checked {
+  @apply left-auto right-px bg-white;
+}
+.switch .button.checked {
+  @apply bg-success;
+}
+.switch .button[disabled],
+.switch .label[disabled] {
+  @apply opacity-50;
+}

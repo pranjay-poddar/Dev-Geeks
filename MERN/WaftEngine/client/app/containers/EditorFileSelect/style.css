@@ -1,0 +1,29 @@
+.mediaCheck{
+  display: none;
+  top:0.25rem;
+  right: 0.25rem;
+}
+
+.mediaCont:hover .mediaCheck{
+  display: block;
+}
+
+.media_btn .blink {
+  animation: blink 1s linear infinite;
+}
+
+.media_btn .blink:hover{
+  animation: normal;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}

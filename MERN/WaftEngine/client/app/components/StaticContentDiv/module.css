@@ -1,0 +1,47 @@
+.ckEditor p > img {
+  margin-right: 40px;
+  margin-bottom: 40px;
+}
+.ckEditor a {
+  color: #0291dd !important;
+}
+.ckEditor li {
+  list-style-position: outside !important;
+  font-size: 16px !important;
+  margin-bottom: 10px;
+  padding-left: 10px;
+}
+.ckEditor ol {
+  list-style-type: decimal !important;
+  margin-bottom: 20px;
+  margin-left: 40px;
+}
+.ckEditor ul {
+  list-style-type: disc !important;
+  margin-bottom: 20px;
+  margin-left: 40px;
+}
+.ckEditor .marker {
+  background: yellow !important;
+}
+.ckEditor blockquote {
+  border-left: 4px solid #0291dd;
+  padding: 0 20px;
+  margin: 20x;
+}
+.ckEditor blockquote p {
+  font-size: 24px !important;
+}
+.ckEditor ol p,
+.ckEditor ul p {
+  display: inline !important;
+}
+.ckEditor img {
+  width: auto !important;
+  height: auto !important;
+}
+.ckEditor table,
+.ckEditor td {
+  border: 1px solid #ccc;
+  padding: 4px;
+}

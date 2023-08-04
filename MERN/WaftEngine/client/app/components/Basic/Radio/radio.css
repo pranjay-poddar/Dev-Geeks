@@ -1,0 +1,46 @@
+.radioBtn input[type='radio'] {
+  display: none;
+}
+.radioBtn input[type='radio'] + label {
+  position: relative;
+  display: inline-block;
+  padding-left: 1.5rem;
+  margin-right: 2rem;
+  cursor: pointer;
+  line-height: 1.3;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+.radioBtn input[type='radio'] + label:before,
+.radioBtn input[type='radio'] + label:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1rem;
+  height: 1rem;
+  text-align: center;
+  color: white;
+  font-family: Times;
+  border-radius: 50%;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.radioBtn input[type='radio'] + label:before {
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  box-shadow: inset 0 0 0 0.2rem white, inset 0 0 0 1rem white;
+  @apply border;
+}
+.radioBtn input[type='radio'] + label:hover:before {
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  box-shadow: inset 0 0 0 0.3rem white, inset 0 0 0 1rem #c6c6c6;
+}
+.radioBtn input[type='radio']:checked + label:before {
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  box-shadow: inset 0 0 0 0.2rem white, inset 0 0 0 1rem #1890ff;
+  @apply border;
+  border-color: #1890ff;
+}

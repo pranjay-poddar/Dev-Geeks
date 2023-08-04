@@ -1,0 +1,3 @@
+.ProfileNav .active{
+    @apply bg-primary text-white;
+}

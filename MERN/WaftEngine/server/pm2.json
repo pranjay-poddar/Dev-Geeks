@@ -1,0 +1,25 @@
+{
+  "apps": [
+    {
+      "name": "WAFT-ENGINE-SERVER",
+      "script": "index.js",
+      "merge_logs": true,
+      "watch": true,
+      "ignore_watch": [".certs", ".docker", "node_modules", ".idea", ".env", ".git", "admin/node_modules", "public", "lib/configs/*.json"],
+      "log_date_format": "YYYY-MM-DD HH:mm Z",
+      "instances": 1,
+      "exec_mode": "cluster",
+      "env": {
+        "PORT": 5050,
+        "NODE_ENV": "development"
+      },
+      "env_production": {
+        "NODE_ENV": "production"
+      },
+      "env_staging": {
+        "NODE_ENV": "staging"
+      },
+      "help": "http://pm2.keymetrics.io/docs/usage/application-declaration"
+    }
+  ]
+}

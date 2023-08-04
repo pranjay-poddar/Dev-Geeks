@@ -1,0 +1,41 @@
+.button {
+  @apply py-2 px-4 transition-all text-white inline-flex gap-2 rounded items-center justify-center text-sm;
+}
+.button[disabled] {
+  pointer-events: none;
+  opacity: 0.65;
+}
+.button.primary {
+  @apply bg-primary;
+}
+.button.secondary {
+  @apply bg-secondary;
+}
+.button.success {
+  @apply bg-success;
+}
+.button.error {
+  @apply bg-error;
+}
+.button.warning {
+  @apply bg-warning text-black;
+}
+.button.info {
+  @apply bg-info text-black;
+}
+.button.light {
+  @apply bg-light text-black;
+}
+.button.dark {
+  @apply bg-dark;
+}
+.button.link {
+  @apply text-link underline bg-none;
+}
+.button.active,
+.button:active {
+  @apply bg-opacity-70 !important;
+}
+.button:focus {
+  @apply outline-2 outline-black;
+}

@@ -1,0 +1,4 @@
+.menu-item.active {
+  box-shadow: -2px 0 0 #2563eb;
+  @apply bg-black bg-opacity-30;
+}

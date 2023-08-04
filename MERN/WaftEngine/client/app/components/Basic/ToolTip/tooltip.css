@@ -1,0 +1,124 @@
+.tooltip {
+  @apply inline-block relative;
+}
+.tooltipBox {
+  @apply bg-white absolute z-20 py-1 px-2 w-40 text-center border border-gray-500 rounded transition-all ease-in-out opacity-0 invisible;
+}
+.tooltipText {
+  @apply text-sm text-gray-700;
+}
+
+.top {
+  @apply left-1/2 -translate-x-1/2 -translate-y-2;
+  bottom: calc(100% + 10px);
+}
+.right {
+  @apply top-1/2 -translate-y-1/2 translate-x-2;
+  left: calc(100% + 10px);
+}
+.bottom {
+  @apply left-1/2 -translate-x-1/2 translate-y-2;
+  top: calc(100% + 10px);
+}
+.left {
+  @apply top-1/2 -translate-y-1/2 -translate-x-2;
+  right: calc(100% + 10px);
+}
+
+/* arrow common styles */
+.tooltipBox:before,
+.tooltipBox:after {
+  position: absolute;
+  content: '';
+  width: 0;
+  height: 0;
+}
+.tooltipBox.top:before,
+.tooltipBox.top:after,
+.tooltipBox.bottom:before,
+.tooltipBox.bottom:after {
+  left: 50%;
+  transform: translateX(-50%);
+  border-top-color: #ffffff;
+}
+.tooltipBox.left:before,
+.tooltipBox.left:after,
+.tooltipBox.right:before,
+.tooltipBox.right:after {
+  top: 50%;
+  transform: translateY(-50%);
+  border-left-color: #ffffff;
+}
+
+/* arrow width */
+.tooltipBox.top:after,
+.tooltipBox.right:after,
+.tooltipBox.bottom:after,
+.tooltipBox.left:after {
+  border: 6px solid transparent;
+}
+
+.tooltipBox.top:before,
+.tooltipBox.right:before,
+.tooltipBox.bottom:before,
+.tooltipBox.left:before {
+  border: 7px solid transparent;
+}
+
+/* arrow color */
+.tooltipBox.top:after {
+  border-top-color: #ffffff;
+}
+.tooltipBox.top:before {
+  border-top-color: #71717a;
+}
+.tooltipBox.right:after {
+  border-right-color: #ffffff;
+}
+.tooltipBox.right:before {
+  border-right-color: #71717a;
+}
+.tooltipBox.bottom:after {
+  border-bottom-color: #ffffff;
+}
+.tooltipBox.bottom:before {
+  border-bottom-color: #71717a;
+}
+.tooltipBox.left:after {
+  border-left-color: #ffffff;
+}
+.tooltipBox.left:before {
+  border-left-color: #71717a;
+}
+
+/* arrow position */
+.tooltipBox.top:before,
+.tooltipBox.top:after {
+  top: 100%;
+}
+.tooltipBox.right:before,
+.tooltipBox.right:after {
+  right: 100%;
+}
+.tooltipBox.bottom:before,
+.tooltipBox.bottom:after {
+  bottom: 100%;
+}
+.tooltipBox.left:before,
+.tooltipBox.left:after {
+  left: 100%;
+}
+
+/* on click */
+.tooltip:hover .tooltipBox {
+  visibility: visible;
+  opacity: 1;
+}
+.tooltip:hover .tooltipBox.top,
+.tooltip:hover .tooltipBox.bottom {
+  @apply -translate-x-1/2 translate-y-0;
+}
+.tooltip:hover .tooltipBox.left,
+.tooltip:hover .tooltipBox.right {
+  @apply translate-x-0 -translate-y-1/2;
+}
