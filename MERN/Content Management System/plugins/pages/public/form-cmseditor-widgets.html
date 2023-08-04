@@ -1,0 +1,255 @@
+<style>
+	/*auto*/
+	.ui-widgetlist { border-bottom: 1px solid #E0E0E0; font-size: 14px; color: black; position: relative; }
+	.ui-widgetlist ul { list-style-type: none; width: 100%; height: 100%; margin: 0; padding: 20px 10px; }
+	.ui-widgetlist li { border: 0; padding: 5px 10px; cursor: pointer; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; position: relative; display: inline-block; width: 20%; transition: all 0.3s; }
+	.ui-widgetlist li img { display: block; max-width: 100%; height: auto; border-radius: var(--radius); }
+	.ui-widgetlist li:hover .ui-widgetlist-picture { background-color: #E0E0E0; border-color: #4299F7; }
+	.ui-widgetlist li .fa { width: 22px; font-size: 12px; border-right: 1px solid #E0E0E0; margin-right: 7px; color: #A0A0A0; }
+	.ui-widgetlist-name { font-size: 11px; margin-top: 5px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; line-height: 13px; }
+	.ui-widgetlist-name b { font-size: 12px; }
+	.ui-widgetlist-picture { background-color: #F8F8F8; padding: 10px; border-radius: var(--radius); border: 1px solid #E0E0E0; }
+	.ui-widgetlist-selected { background-color: #FFE7A4 !important; font-weight: bold; }
+	.ui-widgetlist-search-empty { height: 34px; }
+	.ui-widgetlist-search { border-bottom: 1px solid #E0E0E0; height: 34px; background-color: #F5F5F5; position: absolute; width: 100%; }
+	.ui-widgetlist-search input { width: 100%; outline: 0; background-color: #F5F5F5; font: normal normal 12px Arial; border: 0; margin: 0; padding: 0; }
+	.ui-widgetlist-search span { float: left; width: 30px; text-align: center; height: 30px; padding: 8px 0 0 0; margin-left: 7px; font-size: 12px; color: #A0A0A0; }
+	.ui-widgetlist-search .fa-times { color: red; cursor: pointer; }
+	.ui-widgetlist-search div { margin-left: 40px; padding: 5px 10px 0 0; }
+	.ui-widgetlist-invalid { border-color: #E1A1A1; background-color: #FFF3F3 !important; }
+	.ui-widgetlist-invalid .ui-widgetlist-search { border-color: #E1A1A1; }
+	.ui-widgetlist.ui-disabled input { background-color: #F0F0F0; color: gray; }
+	.ui-widgetlist.ui-disabled .ui-widgetlist-search { background-color: #F0F0F0; }
+	.ui-widgetlist.ui-disabled ul { color: gray; overflow: hidden; }
+	.ui-widgetlist.ui-disabled li:hover { background-color: white; }
+	.ui-widgetlist.ui-disabled li { cursor: not-allowed; }
+	.ui-widgetlist.ui-disabled .ui-widgetlist-selected { background-color: #D0D0D0 !important; }
+	.ui-widget-avatar { text-align: center; padding: 13px 0; }
+	.ui-widget-avatar div { position: relative; display: inline-block; }
+	@media(max-width: 768px) {
+		.ui-widgetlist li { width: 33%; }
+	}
+</style>
+
+<div data---="form__cmseditor.form__if:widgets;width:1024;autofocus:true;reload:cmseditorwidgets/reload;icon:plug;title:@(Widgets)" class="hidden">
+	<div data---="widgetlist__null__search:@(Search widgets);datasource:cmseditor.widgets;height:600;exec:cmseditorwidgets/select"></div>
+	<div class="padding bg-smoke" style="padding-top:13px">
+		<div class="help pull-right"><span class="link exec" data-exec="cmseditorwidgets/inject"><i class="fa fa-code"></i>@(Inject custom HTML)</span></div>
+		<div data-bind="common.componentator__show" class="hidden help pull-left"><span class="link exec" data-exec="cmseditorwidgets/import"><i class="fa fa-download"></i>@(Download existing widgets)</span></div>
+		<div class="clearfix"></div>
+	</div>
+
+	<nav>
+		<button name="cancel" style="width:100%">@(Cancel)</button>
+	</nav>
+
+</div>
+
+<script>
+
+	PLUGIN('cmseditorwidgets', function(exports) {
+
+		exports.reload = function() {
+			SETTER('widgetlist/reset');
+		};
+
+		exports.inject = function() {
+			SET('cmseditor.form', 'inject');
+		};
+
+		exports.import = function() {
+			// current category
+			var category = cmseditor.instance.widgetscategory;
+			category && category.length && SET('widgets.externaltab', category[0]);
+			SET('common.form3', 'widgetsimport');
+		};
+
+		exports.select = function(id) {
+			var item = cmseditor.widgets.findItem('id', id);
+			var is = item.istemplate;
+			var editor = cmseditor.instance;
+
+			SET('cmseditor.form', '');
+
+			var target = editor.getTarget();
+			if (!target.hclass('CMS_widgets')) {
+				var tmp = editor.getContainer(10);
+				if (!tmp)
+					return;
+				target = tmp;
+			}
+
+			var after = target.hclass('CMS_widget');
+			FUNC.loading(true);
+			AJAX('GET [url]api/widgets/{0}/editor/'.format(id), function(response) {
+
+				var slug = 'w-' + item.name.slug().replace(/\-/g, '');
+				var content = ('<div class="CMS_widget CMS_remove ' + slug + '" data-cms-id="{0}" data-cms-name="{4}" data-cms-widget="{1}" data-cms-category="{3}">{2}</div>').format(Date.now().toString(36), id, response.body, response.category, item.name);
+
+				if (after)
+					target.after(content);
+				else
+					target.append(content);
+
+				editor.change(true);
+				editor.resize();
+				FUNC.loading(false, 500);
+			});
+		};
+
+	});
+
+	COMPONENT('widgetlist', function(self, config, cls) {
+
+		var Eitems = null;
+		var skip = false;
+		var cls2 = '.' + cls;
+
+		self.datasource = EMPTYARRAY;
+		self.template = Tangular.compile('<li data-search="{{ search }}" data-index="{{ index }}"><div class="{0}-picture">{{ if picture }}<img src="{{ picture }}" alt="{{ text }}" border="0" />{{ else }}<div class="ui-widget-avatar"><div class="avatar" data-a="widget">{{ text }}</div></div>{{ fi }}</div><div class="{0}-name"><b>{{ text }}</b><br />{{ category }}</div></li>'.format(cls));
+		self.nocompile();
+
+		self.reset = function() {
+			setTimeout(function() {
+				Eitems.prop('scrollTop', 0);
+			}, 100);
+		};
+
+		self.make = function() {
+
+			self.aclass(cls);
+			self.append(''.format(cls));
+			self.html('<div class="{0}-search"><span><i class="fa fa-search {0}-search-icon"></i></span><div><input type="text" placeholder="{1}" /></div></div><div><div class="{0}-search-empty"></div><div class="{0}-scrollbar"><div><ul></ul></div></div>'.format(cls, config.search, config.height || '200'));
+			Eitems = self.find('ul');
+
+			var area = self.find(cls2 + '-scrollbar');
+			area.css('height', config.height);
+			self.scrollbar = new SCROLLBAR(area, { visibleY: true, orientation: 'y' });
+
+			self.watch(config.datasource, self.bind, true);
+
+			self.event('click', 'li', function() {
+
+				if (config.disabled)
+					return;
+
+				var index = +this.getAttribute('data-index');
+				var value = self.datasource[index];
+
+				skip = true;
+
+				if (config.multiple) {
+					var selected = self.get() || [];
+					if (selected.indexOf(value.value) === -1)
+						selected.push(value.value);
+					else
+						selected = selected.remove(value.value);
+					self.set(selected);
+					config.exec && EXEC(self.makepath(config.exec), selected);
+				} else {
+					self.set(value.value);
+					config.exec && EXEC(self.makepath(config.exec), value.value);
+				}
+
+				self.change(true);
+			});
+
+			self.event('click', '.fa-times', function() {
+				if (!config.disabled) {
+					self.find('input').val('');
+					self.search();
+				}
+			});
+
+			if (typeof(config.search) === 'string') {
+				self.event('keydown', 'input', function() {
+					if (!config.disabled)
+						setTimeout2(self.id, self.search, 500);
+				});
+			}
+		};
+
+		self.search = function() {
+			var search = config.search ? self.find('input').val().toSearch() : '';
+			var first;
+			Eitems.find('li').each(function() {
+				var el = $(this);
+				el.tclass('hidden', el.attrd('search').indexOf(search) === -1);
+				if (!first && el.hclass(cls + '-selected'))
+					first = el;
+			});
+			self.find(cls2 + '-search-icon').tclass('fa-search', search.length === 0).tclass('fa-times', search.length > 0);
+			self.scrollbar.resize();
+			skip = false;
+		};
+
+		self.bind = function(path, value) {
+
+			var kt = config.text || 'name';
+			var kv = config.value || 'id';
+			var ki = config.icon || 'icon';
+			var builder = [];
+
+			self.datasource = [];
+			value && value.forEach(function(item, index) {
+
+				var text;
+				var value;
+				var icon = null;
+
+				if (typeof(item) === 'string') {
+					text = item;
+					value = self.parser(item);
+				} else {
+					text = item[kt];
+					value = item[kv];
+					icon = item[ki];
+				}
+
+				var item = { picture: item.picture, category: item.category, text: text, value: value, index: index, search: text.toSearch(), icon: icon };
+				self.datasource.push(item);
+				builder.push(self.template(item));
+			});
+
+			Eitems.empty().append(builder.join(''));
+			self.search();
+
+			setTimeout(function() {
+				SETTER('avatar/refresh');
+			}, 500);
+		};
+
+		self.setter = function(value) {
+
+			var selected = {};
+			var ds = self.datasource;
+			var dsl = ds.length;
+
+			if (value != null) {
+				if (config.multiple) {
+					for (var i = 0, length = value.length; i < length; i++) {
+						for (var j = 0; j < dsl; j++) {
+							if (ds[j].value === value[i])
+								selected[j] = true;
+						}
+					}
+				} else {
+					for (var j = 0; j < dsl; j++) {
+						if (ds[j].value === value)
+							selected[j] = true;
+					}
+				}
+			}
+
+			Eitems.find('li').each(function() {
+				var el = $(this);
+				var index = +el.attrd('index');
+				var is = selected[index] !== undefined;
+				el.tclass(cls + '-selected', is);
+			});
+
+			self.search();
+		};
+	});
+
+</script>

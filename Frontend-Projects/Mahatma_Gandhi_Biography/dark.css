@@ -1,0 +1,11 @@
+.dark-mode {
+    background-color: #333;
+    color: #fff;
+    position: relative;
+  }
+  
+  .dark-mode .figure-caption {
+    color: #ccc;
+  }
+  
+  

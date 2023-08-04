@@ -1,0 +1,302 @@
+INPUT {
+	FONT-WEIGHT: normal; FONT-SIZE: 8pt; FONT-FAMILY: Verdana,Arial,helvetica,sans-serif
+}
+TEXTAREA {
+	FONT-WEIGHT: normal; FONT-SIZE: 8pt; FONT-FAMILY: Verdana,Arial,helvetica,sans-serif
+	BACKGROUND-COLOR: #D3D3D3;COLOR: #000000
+}
+SELECT,OPTION,LI {
+	FONT-WEIGHT: normal; FONT-SIZE: 8pt; FONT-FAMILY: Verdana,Arial,helvetica,sans-serif
+}
+DIV.notebook {
+	BORDER-RIGHT: midnightblue thin inset; DISPLAY: none; BORDER-LEFT: midnightblue thin inset; WIDTH: 90%; BORDER-BOTTOM: midnightblue thin inset; HEIGHT: auto; BACKGROUND-COLOR: #ffffff
+}
+TABLE.notebook {
+	BORDER-RIGHT: 0px; BORDER-TOP: 0px; BORDER-LEFT: 0px; WIDTH: 90%; BORDER-BOTTOM: 0px
+}
+BODY.Grad {
+filter:progid:DXImageTransform.Microsoft.Gradient(GradientType=0,StartColorStr="#00AAAA",EndColorStr="#00D9D9");
+}
+BODY.SC{
+	FONT-WEIGHT: BOLD; FONT-SIZE: 10pt; FONT-FAMILY: Verdana,Arial,helvetica,sans-serif;
+	BACKGROUND-COLOR: white; COLOR: #000000
+}
+BODY.Log {
+filter:progid:DXImageTransform.Microsoft.Gradient(GradientType=0,StartColorStr="#E1EFFF",EndColorStr="#E8F3FF");
+}
+BODY.Res {
+filter:progid:DXImageTransform.Microsoft.Gradient(GradientType=0,StartColorStr="#BEDEDE",EndColorStr="#DCEDED");
+}
+
+BODY.Sub {
+filter:progid:DXImageTransform.Microsoft.Gradient(GradientType=0,StartColorStr="#D8D8D8",EndColorStr="#D8D8D8");
+}
+BODY.Sess {
+filter:progid:DXImageTransform.Microsoft.Gradient(GradientType=0,StartColorStr="#D3D3D3",EndColorStr="#D3D3D3");
+}
+
+DIV.scrollbar {
+	OVERFLOW: auto; WIDTH: 100%; HEIGHT: 100%
+}
+H3.Top {
+	FONT: bold italic 9pt Verdana,Arial,Helvetica,sans-serif; CURSOR: default;
+	BACKGROUND-COLOR: #FFAEAE;
+}
+
+
+TD.results {
+	FONT-SIZE: 9pt; FONT-FAMILY: verdana; BACKGROUND-COLOR: #ECF8FF
+}
+TH.results {
+	FONT-SIZE: 9pt; FONT-FAMILY: verdana
+}
+TH.results {
+	FONT-WEIGHT: bold; BACKGROUND-COLOR: #ECF8FF
+}
+TH.End {
+	FONT-SIZE: 9pt; FONT-FAMILY: verdana
+}
+TH.End {
+	FONT-WEIGHT: bold;
+}
+H5.Version {
+	FONT: bold 9pt Arial,Helvetica,sans-serif; COLOR:#000000
+}/*
+.row_odd {
+	FONT-WEIGHT: normal; FONT-SIZE: 10pt; FONT-FAMILY: Verdana,Arial,helvetica,sans-serif
+}
+.row_even {
+	FONT-WEIGHT: normal; FONT-SIZE: 10pt; FONT-FAMILY: Verdana,Arial,helvetica,sans-serif
+}
+
+TR.row_odd {
+	FONT-SIZE: 8pt; BACKGROUND-COLOR: #FFDDCC 
+}
+TR.row_even {
+	FONT-SIZE: 8pt; BACKGROUND-COLOR: #FFE9D2
+}
+TH.row_even {
+	FONT-SIZE: 8pt; BACKGROUND-COLOR: #ECF8FF; width: 60%; FONT-WEIGHT: BOLD
+}
+TD.row_even {
+	FONT-SIZE: 8pt; BACKGROUND-COLOR: #ECF8FF; width: 70%; FONT-WEIGHT: BOLD
+}
+
+TR.row_title {
+	FONT-SIZE: 8pt; BACKGROUND-COLOR: #FF6F6F
+	BACKGROUND-COLOR: #8B0000
+	BORDER-RIGHT: #8B00002px outset; 
+	BORDER-TOP: #8B00002px outset; 
+	BORDER-LEFT: #8B00002px outset; 
+	BORDER-BOTTOM: #8B00002px outset; 
+
+}
+TH.row_title {
+	FONT-SIZE: 8pt; 
+	BACKGROUND-COLOR: 
+	BORDER-RIGHT: #8B00002px outset; 
+	BORDER-TOP: #8B00002px outset; 
+	BORDER-LEFT: #8B00002px outset; 
+	BORDER-BOTTOM: #8B00002px outset; 
+
+}
+.row_title {
+	FONT-SIZE: 8pt; BACKGROUND-COLOR: #FF6A22; COLOR: #330000
+}*/
+.row_even {
+	FONT-SIZE: 8pt; 
+	BACKGROUND-COLOR: #EAEAEA; 
+	FONT-WEIGHT: Normal;
+	FONT-FAMILY: Verdana,Arial,helvetica,sans-serif
+}
+.row_odd {
+	FONT-SIZE: 8pt; 
+	BACKGROUND-COLOR: #D3D3D3; 
+	FONT-WEIGHT: Normal;
+	FONT-FAMILY: Verdana,Arial,helvetica,sans-serif
+}
+.row_title {
+	FONT-SIZE: 8pt;
+	FONT-WEIGHT: bold;
+	BACKGROUND-COLOR: #FF6A22;
+	BORDER-RIGHT: #8B0000 2px outset; 
+	BORDER-TOP: #8B0000 2px outset; 
+	BORDER-LEFT: #8B0000 2px outset; 
+	BORDER-BOTTOM: #8B0000 2px outset; 
+	COLOR: #330000
+	FONT-FAMILY: Verdana,Arial,helvetica,sans-serif
+}
+A.Footer {
+	FONT-SIZE: 8pt; COLOR: yellow; TEXT-DECORATION: none
+}
+A.detail {
+	FONT-SIZE: 8pt; COLOR: blue; TEXT-DECORATION: none
+}
+.navigate {
+	FONT-SIZE: 10pt; COLOR: gray; TEXT-DECORATION: none
+}
+A.title {
+	FONT-SIZE: 10pt; COLOR: #FFFF24; TEXT-DECORATION: none
+}
+
+FORM {
+	MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px
+}
+TD {
+	FONT-SIZE: 10pt; FONT-FAMILY: verdana,arial,helvetica
+}
+
+A {
+	FONT-WEIGHT: bold; FONT-SIZE: 9pt; FONT-FAMILY: verdana,arial,helvetica; TEXT-DECORATION: none;BORDER-RIGHT: 0px; BORDER-TOP: 0px; FONT: Normal 9pt verdana,Arial,Helvetica,sans-serif; BORDER-LEFT: 0px; CURSOR: pointer; COLOR: blue; BORDER-BOTTOM: 0px
+}
+/*A:link {
+	FONT-WEIGHT: bold; FONT-SIZE: 9pt; FONT-FAMILY: verdana,arial,helvetica; TEXT-DECORATION: none
+}
+A:active {
+	FONT-WEIGHT: bold; FONT-SIZE: 9pt; FONT-FAMILY: verdana,arial,helvetica; TEXT-DECORATION: none
+}
+A:visited {
+	FONT-WEIGHT: bold; FONT-SIZE: 9pt; FONT-FAMILY: verdana,arial,helvetica; TEXT-DECORATION: none
+}
+A:hover {
+	FONT-WEIGHT: bold; FONT-SIZE: 9pt; FONT-FAMILY: verdana,arial,helvetica; TEXT-DECORATION: none
+}*/
+
+TH.labeltext {
+	FONT-WEIGHT: bold; FONT-SIZE: 8pt; COLOR: #333333; BACKGROUND-COLOR: #eeeeee
+}
+
+A.adminMenu {
+	FONT-WEIGHT: bold; FONT-SIZE: 9pt; FONT-FAMILY: verdana,arial,helvetica; TEXT-DECORATION: none;BACKGROUND-COLOR: #CFCFCF;	BORDER-RIGHT: 1pt; BORDER-TOP: 1pt; FONT: bold 9pt Verdana,Arial,Helvetica,sans-serif; BORDER-LEFT: 1pt; CURSOR: pointer; COLOR: blue; BORDER-BOTTOM: 1pt; BORDER-COLOR:white
+}
+A.adminMenu:active {
+	FONT-WEIGHT: bold; FONT-SIZE: 9pt; FONT-FAMILY: verdana,arial,helvetica; TEXT-DECORATION: none;BORDER-RIGHT: 1pt; BORDER-TOP: 1pt; FONT: bold 9pt Verdana,Arial,Helvetica,sans-serif; BORDER-LEFT: 1pt; CURSOR: pointer; COLOR: blue; BORDER-BOTTOM: 1pt; BORDER-COLOR:white
+}
+A.adminMenu:visited {
+	FONT-WEIGHT: bold; FONT-SIZE: 9pt; FONT-FAMILY: verdana,arial,helvetica; TEXT-DECORATION: none;BORDER-RIGHT: 1pt; BORDER-TOP: 1pt; FONT: bold 9pt Verdana,Arial,Helvetica,sans-serif; BORDER-LEFT: 1pt; CURSOR: pointer; COLOR: blue; BORDER-BOTTOM: 1pt; BORDER-COLOR:white
+}
+A.adminMenu:hover {
+	FONT-WEIGHT: bold; FONT-SIZE: 9pt; FONT-FAMILY: verdana,arial,helvetica; TEXT-DECORATION: none;BORDER-RIGHT: 1pt; BORDER-TOP: 1pt; FONT: bold 9pt Verdana,Arial,Helvetica,sans-serif; BORDER-LEFT: 1pt; CURSOR: pointer; COLOR: blue; BORDER-BOTTOM: 1pt; BORDER-COLOR:white
+}
+
+.Grad {
+     scrollbar-arrow-color:#00000;
+     scrollbar-base-color:#ECF8FF;
+     scrollbar-face-color:#ECF8FF;
+     scrollbar-darkshadow-color:#ECF8FF;
+	
+	}
+.SCALL {scrollbar-3dlight-color:#ECF8FF;
+     scrollbar-arrow-color:;
+     scrollbar-base-color:#ECF8FF;
+     scrollbar-darkshadow-color:#ECF8FF;
+     scrollbar-face-color:#ECF8FF;
+     scrollbar-highlight-color:#ECF8FF;
+     scrollbar-shadow-color:#ECF8FF
+	}
+
+  .transparent {
+    filter:alpha(opacity=100);
+    background-color:#FFFFDD;
+    display:none;
+    /*width:170;
+    height:100;*/
+	FONT-SIZE: 8pt;
+	FONT-FAMILY: verdana,arial,helvetica;
+    position:absolute;
+    color: black;
+    border: 1 black solid;
+}
+.Button	{
+	font-size:	9pt;
+	text-align:	center;
+	text-decoration: none;
+	color:		#000033;
+	background:	#CCCCFF;
+	margin-bottom:	2pt;
+	border-top:	2px solid #003399;
+	border-left:	2px solid #003399;
+	border-right:	2px solid #0099FF;
+	border-bottom:	2px solid #0099FF;
+	font-family:	Verdana, Arial,
+			"Comic Sans MS";
+	}
+.WinButton{
+	font-size:	8pt;
+	text-align:	center;
+	text-decoration: none;
+	color:		#000000;
+	background:	#E3E1D5;
+	border-top:		1px solid #C9C9C9;
+	border-left:	1px solid #C9C9C9;
+	border-right:	1px solid #C9C9C9;
+	border-bottom:	1px solid #C9C9C9;
+	font-family:	Verdana, Arial,"Comic Sans MS";
+	}
+.UploadButton{
+	font-size:	8pt;
+	text-align:	center;
+	text-decoration: none;
+	color:		#000000;
+	background:	#E3E1D5;
+	border-top:		1px solid #C9C9C9;
+	border-left:	1px solid #C9C9C9;
+	border-right:	1px solid #C9C9C9;
+	border-bottom:	1px solid #C9C9C9;
+	font-family:	Verdana, Arial,"Comic Sans MS";
+	}
+.TextField	{
+	font-size:	9pt;
+	text-align:	center;
+	text-decoration: none;
+	color:		#CC00CC;
+	background:	#000000;
+	border-top:		1px solid #C9C9C9;
+	border-left:	1px solid #C9C9C9;
+	border-right:	1px solid #C9C9C9;
+	border-bottom:	1px solid #C9C9C9;
+	font-family:	Verdana, Arial,"Comic Sans MS";
+	}
+.ReadOnlyTextField	{
+	font-size:	9pt;
+	text-align:	center;
+	text-decoration: none;
+	color:		#CC00CC;
+	background:	#C5C5C5;
+	border-top:		1px solid #C9C9C9;
+	border-left:	1px solid #C9C9C9;
+	border-right:	1px solid #C9C9C9;
+	border-bottom:	1px solid #C9C9C9;
+	font-family:	Verdana, Arial,"Comic Sans MS";
+	FONT-WEIGHT: bold;
+	}
+.ListBox {
+	font-size:	9pt;
+	text-align:	center;
+	text-decoration: none;
+	color:		#CC00CC;
+	background:	#ffffff;
+	font-family:	Verdana, Arial,"Comic Sans MS";
+
+}
+H1,H3,H4,H5,H6 {
+	FONT-WEIGHT: Bold;
+	FONT-FAMILY: Georgia,Verdana,Arial,helvetica,sans-serif;
+	CURSOR: default;	
+	COLOR:#FFFF00;
+	BACKGROUND-COLOR: #868686;
+}
+H2{
+	FONT-WEIGHT: Bold;
+	FONT-FAMILY: Georgia,Verdana,Arial,helvetica,sans-serif;
+	CURSOR: default;	
+	COLOR:#FFFF00;
+	BACKGROUND-COLOR: #4242FF;
+}
+H6{
+	FONT-WEIGHT: Bold;
+	FONT-FAMILY: Georgia,Verdana,Arial,helvetica,sans-serif;
+	CURSOR: default;	
+	COLOR:#000000;
+	BACKGROUND-COLOR: #EEEEEE;
+}

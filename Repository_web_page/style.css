@@ -149,88 +149,74 @@ body {
     transform: scale(1);
 }
 
-
-/* Numbers */
-
-@property --num {
-    syntax: "<integer>";
-    initial-value: 0;
-    inherits: false;
-}
-
-#value1 {
-    transition: --num 2s;
-    counter-set: num var(--num);
-    font: 800 40px system-ui;
-    --num: 132;
-    color: #170F1E;
-}
-
-#value1::after {
-    content: counter(num);
-    --num: 132;
-}
-
-#value1:hover {
-    --num: 35;
-}
-
 .pranjay-img {
     border: 1px black solid;
 }
 
-#value2 {
-    transition: --num 1s;
-    counter-set: num var(--num);
-    font: 800 40px system-ui;
-    --num: 60;
-    color: #170F1E;
-}
+/*
+ REPOSITORY STATISTICS
+*/
 
-#value2::after {
-    content: counter(num);
-}
-
-#value2:hover {
-    --num: 3;
-}
-
+#value1,
+#value2,
 #value3 {
-    transition: --num 1s;
-    counter-set: num var(--num);
-    font: 800 40px system-ui;
-    --num: 261;
-    color: #170F1E;
-}
-
-#value3::after {
-    content: counter(num);
-}
-
-#value3:hover {
-    --num: 101;
-}
-
-#value4 {
-    transition: --num 1s;
-    counter-set: num var(--num);
-    font: 800 40px system-ui;
-    --num: 10;
-    color: #170F1E;
-}
-
-#value4::after {
-    content: counter(num);
-}
-
-#value4:hover {
-    --num: 20;
+  font-family: sans-serif;
+  font-weight: 800;
+  font-size: 1.5rem
+  color: #E2E2E2;
+  letter-spacing: .1rem;
+  text-shadow: 0 5px 50px white;
+  text-transform: uppercase;
+  transition: .5s ease;
 }
 
 .contri {
     width: 80%;
 }
+#newsin {
+  /* width: 75%; */
+  text-align: center;
+  padding-top: 100px;
+  border: 2px solid black;
+  /* padding: 50px; */
+  color: white;
+  padding-bottom: 10px;
+  margin: 100px;
+  border-radius: 15px;
+  background-color: #343A40;
+  box-shadow: 1px 2px 1.2px rgb(166, 112, 11);
+}
 
+#info {
+  text-align: center;
+  padding: 10px;
+  padding-left: 0px;
+  margin-top: 50px;
+  margin-bottom: 0px;
+  color: black;
+}
+
+#nameuser{
+  width: 75%;
+  border-radius: 15px;
+  padding: 10px;
+  margin: 10px;
+}
+
+#checkedbox {
+  padding: 50px;
+  margin: 10px;
+  position: relative;
+  left: 0;
+}
+
+#submitnews {
+  padding: 10px;
+  margin: 10px;
+  width: 200px;
+  border-radius: 50px;
+  cursor: pointer;
+}
 .btn{
     display: inline-block;
     font-weight: 400;

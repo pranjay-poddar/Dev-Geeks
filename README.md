@@ -815,11 +815,38 @@ Happy Coding! -->
   <td align="center"> 261.</td>
   <td align="center"><a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Js-Games/Mastermind">Mastermind</a></td>
   <td align="center"> 268.</td>
-  <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Js-Games/Web-Image Filter">Web-Image Filter</a></td>
-  <td align="center"> 269.</td>
+  <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Python Projects/Forex Exchanger">Web-Image Filter</a></td>
+  <td align="center"> 272.</td>
+  <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Js-Games/Cubula">Cubula</a></td>
+ </tr>
+  
+ <tr align="Center">
+   <td align="center">269.</td>
   <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Python Projects/Forex Exchanger">Forex Exchanger</a></td>
   <td align="center"> 270.</td>
   <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Animations-CSS/404-Page Character">404-Page Character</a></td>
+
+  <td align="center"> 273.</td>
+  <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Js-Games/Geoguess">Geoguess</a></td>
+
+
+  <td align="center"> 277.</td>
+  <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Python Projects/Jarvis Voice Assistant">Jarvis Voice Assistant</a></td>
+
+
+  <td align="center"> 276.</td>
+  <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Python projects/Medi Scraper">Medi Scraper</a></td>
+ </tr>
+  <td align="center"> 275.</td>
+  <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Python Projects/AI Image Generator">Geoguess</a></td>
+
+
+  <td align="center"> 274.</td>
+  <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Python Projects/CollegeGPACalculator">College GPA Calculator</a></td>
+
+  <td align="center"> 278.</td>
+  <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/cpp-projects/Vaccine Management System">Vaccine Management System</a></td>
+  
   <td align="center"> 271.</td>
   <td align="center" <a href="https://github.com/Parul1606/Dev-Geeks/tree/test/ML%20Projects/Fake-News-Detection">Fake-News-Detection</a></td>
 
@@ -829,15 +856,57 @@ Happy Coding! -->
 
 <tr align="center">
 <td align="center"> 256.</td>  
-<td align="center"><a href="https://github.com/Nishitbaria/Dev-Geeks/tree/Test/Frontend-Projects/razorpayClone">   RazorpayClone  </a></td>
-
+<td align="center"><a href="https://github.com/Nishitbaria/Dev-Geeks/tree/Test/Frontend-Projects/razorpayClone">RazorpayClone</a></td>
 <td align="center"> 265.</td>
 <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Js-Games/Aim training">Aim training</a></td>
-
 <td align="center"> 263.</td>
 <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Js-Games/Alien Shooting">Alien Shooting</a></td>
-
+<td align="center"> 264.</td>
+<td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/testing/Js-Projects/Password_Validation">Password Validation</a></td>
 </tr> 
+
+<tr align="center">
+<td align="center"> 265.</td>
+<td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Python Projects/Image Classification">Image Classification</a></td>
+<td align="center"> 266.</td>
+<td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/testing/Js-Projects/Slide_and_Solve">Slide and Solve game</a></td>
+</tr> 
+<tr>
+<td align="center"> 279.</td>
+<td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Python Projects/Covid-Info">Covid-Info</a></td>
+
+</tr>
+
+<tr>
+<td align="center"> 283.</td>
+<td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Js-Projects/Lazy Loading">Lazy Loading</a></td>
+</tr>
+
+<tr>
+
+
+
+<td align="center"> 285.</td>
+<td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Python Projects/OTP Verify">OTP verify</a></td>
+
+
+<td align="center"> 281.</td>  
+<td align="center"><a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Js-Projects/Chuck Norris">Chuck Norris</a></td>
+
+<td align="center"> 280.</td>
+<td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Js-Projects/Random Cat Image Generator">Random Cat Image Generator</a></td>
+
+
+
+<td align="center"> 282.</td>
+<td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Js-Projects/Accordion Template">Accordion Template</a></td>
+
+</tr>
+
+
+<td align="center"> 284.</td>
+<td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/cpp-projects/ATM Machine">ATM Machine</a></td>
+</tr>
 
 
 </table>
@@ -880,11 +949,23 @@ Happy Coding! -->
 -   Make a pull request! (compare your branch with the owner main branch)
 
 <br>
-<h1 align="center">
- <b>Contributors
-<a href="https://github.com/pranjay-poddar/Dev-Geeks/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=pranjay-poddar/Dev-Geeks&&max=817" />
-</a>
+
+##  Our Contributors
+
+Thank you for your interest in contributing to our project! We appreciate any contributions, whether it's bug fixes, new features, or documentation improvements.
+
+<details>
+  <summary> Find Contributors list here !!!</summary>
+    <div>
+      <a href="https://github.com/pranjay-poddar/Dev-Geeks/graphs/contributors">
+      <img src="https://contrib.rocks/image?repo=pranjay-poddar/Dev-Geeks&&max=817"/>
+      </a>
+    </div>
+</details>
+
+
+
+
 
 <!-- &max={number} -->
   <br>
@@ -907,6 +988,7 @@ Happy Coding! -->
 </p>
 
 
+
 </h1>
 
 <div align="center">
@@ -916,4 +998,3 @@ Happy Coding! -->
   Back to top
  </a> 
 </div>
-
