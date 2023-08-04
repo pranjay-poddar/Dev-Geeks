@@ -1,0 +1,211 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+:root{
+    --tomato: hsl(4, 100%, 67%);
+    --darkSlateGrey: hsl(234, 29%, 20%);
+    --grey: hsl(231, 7%, 60%);
+    --charcolGrey: hsl(235, 18%, 26%);
+    --orangePinkGradient: linear-gradient(to right, rgb(255, 91, 168) 0%, hsl(4, 100%, 67%) 20%);
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+.container{
+    flex-direction: column;
+    position: relative;
+    width: 100%;
+}
+
+.img-container img{
+    width: 100%;
+}
+
+.content-container{
+    padding: 25px;
+    color: var(--darkSlateGrey);
+}
+
+.heading{
+    font-size: 40px;
+    font-weight: bold;
+    color: var(--darkSlateGrey)
+}
+
+.note{
+    margin-block: 22px;
+    font-size: 16px;
+}
+
+.features{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    font-size: 16px;
+}
+
+.features li{
+    list-style: none;
+    display: flex;
+    align-items: flex-start;
+    gap: 13px;
+}
+
+form{
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.labels{
+    display: flex;
+    justify-content: space-between;
+}
+
+.email-text{
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.email-label{
+    color: var(--charcolGrey);
+}
+
+.error-msg{
+    display: none;
+    color: var(--tomato)
+}
+
+
+#email, .primary-btn{
+    padding: 15px 20px;
+    border-radius: 10px;
+    font-size: 16px;
+    border: 1px solid var(--grey)
+}
+
+.primary-btn{
+    background-color: var(--darkSlateGrey);
+    color: white;
+    font-weight: 400;
+    margin-top: 12px;
+    cursor: pointer;
+}
+
+.primary-btn:hover{
+    background: var(--orangePinkGradient);
+}
+
+.success-msg-container{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding-top: 150px;
+    padding-bottom: 40px;
+    padding-inline: 25px;
+    min-height: 100vh;
+}
+
+.success-msg-sub-container{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 25px;
+}
+
+.success-msg-heading{
+    font-size: 40px;
+    font-weight: bold;
+    color: var(--darkSlateGrey);
+}
+
+.success-msg{
+    font-size: 16px;
+    color: var(--darkSlateGrey);
+    font-weight: 400;
+}
+
+.success-msg > span{
+    font-weight: 700;
+}
+
+.dismiss-btn{
+    width: 100%;
+}
+
+#desktop-img{
+    display: none;
+}
+
+.error-state{
+    border: 1px solid var(--tomato) !important;
+    background-color: hsla(4, 100%, 67%, 0.1);
+}
+
+.error-state:focus-visible{
+    outline-width: 0;
+    border: 1px solid var(--tomato) !important;
+    background-color: hsla(4, 100%, 67%, 0.1);
+}
+
+.show{
+    display: flex !important;
+}
+
+.hide{
+    display: none !important;
+}
+
+@media  screen and (min-width: 450px) {
+    #mobile-img{
+        display: none;
+    }
+    #desktop-img{
+        display: block;
+        height: 470px;
+    }
+    
+    body{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        background-color: var(--darkSlateGrey);
+        flex: 1;
+    }
+    .container{
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: center;
+        align-items: center;
+        width: 820px;
+    }
+    
+    .desktop-container{
+        padding: 15px;
+        background-color: white;
+        border-radius: 16px;
+    }
+
+    .success-msg-container{
+        width: 450px;
+        justify-content: space-between;
+        padding: 45px;
+        min-height: 300px;
+    }
+    
+    .success-msg-sub-container{
+        margin-bottom: 20px;
+    }
+
+    .content-container{
+        width: 450px;
+    }
+}
