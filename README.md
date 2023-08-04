@@ -860,10 +860,13 @@ Happy Coding! -->
 <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Js-Games/Alien Shooting">Alien Shooting</a></td>
 <td align="center"> 264.</td>
 <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/testing/Js-Projects/Password_Validation">Password Validation</a></td>
+</tr> 
 
-<td align="center"> 264.</td>
+<tr align="center">
+<td align="center"> 265.</td>
 <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Python Projects/Image Classification">Image Classification</a></td>
-
+<td align="center"> 266.</td>
+<td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/testing/Js-Projects/Slide_and_Solve">Slide and Solve game</a></td>
 </tr> 
 <tr>
 <td align="center"> 279.</td>
