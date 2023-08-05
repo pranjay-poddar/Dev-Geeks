@@ -9,6 +9,8 @@ Features-:
 3. Coordinate Geometry
 4. Solid Geometry
 5. Circle Properties/Calculations
+6. Ellipse Properties
+7. Polygon Area
 <h2>Screenshots</h2>
 
 ![image](https://github.com/Nikita06211/Dev-Geeks/assets/120494269/e50aebb1-52fd-4019-bd08-c1b6c96234fd)
