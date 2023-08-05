@@ -898,8 +898,7 @@ Happy Coding! -->
 <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/cpp-projects/ATM Machine">ATM Machine</a></td>
 <td align="center"> 286. </td>
 <td align="center"><a href="./React-JS Projects/Magic-Notes">Magic Notes</a></td>
- <td align="center"> 287.</td>
-  <td align="center"> <a href="./Js-Games/Anaconda Game">Anaconda Game</a></td>
+
 </tr>
 </table>
 
