@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Hover Effects</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="style.css">
+    
+
+</head>
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <div class="swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide" ><img src="2.jpg" alt="" id="images"></div>
+          <div class="swiper-slide" ><img src="3.jpg" alt="" id="images"></div>
+          <div class="swiper-slide"><img src="4.png" alt="" id="images"></div>
+          <div class="swiper-slide" ><img src="5.jpg" alt="" id="images"></div>
+          <div class="swiper-slide"><img src="6.jpg" alt="" id="images"></div>         
+        </div>
+        <!-- Add Pagination -->
+        <div class="swiper-pagination"></div>
+      </div>
+      <script type="module">
+      
+        var swiper = new Swiper('.swiper', {
+          effect: 'coverflow',
+          grabCursor: true,
+          centeredSlides: true,
+          slidesPerView: '4',
+          coverflowEffect: {
+            rotate: 20,
+            stretch: 0,
+            depth: 100,
+            modifier: 1,
+            slideShadows: true,
+            
+          },
+         
+          autoplay: {
+            delay: 500,
+            disableOnInteraction: false,
+          },
+          loop: true,
+          pagination: {
+            el: '.swiper-pagination',
+          },
+          
+        });
+      </script>
+    
+    
+</body>
+</html>

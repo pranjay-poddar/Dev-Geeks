@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+   <head>
+    <meta charset="utf-8">
+    <meta name="description" content="Scientific Calculator"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    
+    <title>Scientific Calculator</title>
+   </head>
+
+   <body>
+    <h1>Scientific Calculator</h1>
+    <form id="myform" name="calc">
+        <input id="display" name="display" readonly><br/> 
+        <input type="button" value="7" onclick="addToDisplay('7')">
+        <input type="button" value="8" onclick="addToDisplay('8')">
+        <input type="button" value="9" onclick="addToDisplay('9')">
+        <input type="button" value="+" onclick="addToDisplay('+')" style="background-color: #cc5;"><br/>
+        <input type="button" value="4" onclick="addToDisplay('4')">
+        <input type="button" value="5" onclick="addToDisplay('5')">
+        <input type="button" value="6" onclick="addToDisplay('6')">
+        <input type="button" value="-" onclick="addToDisplay('-')" style="background-color: #cc5;"><br/>
+        <input type="button" value="1" onclick="addToDisplay('1')">
+        <input type="button" value="2" onclick="addToDisplay('2')">
+        <input type="button" value="3" onclick="addToDisplay('3')">
+        <input type="button" value="X" onclick="addToDisplay('*')" style="background-color: #cc5;"><br/>
+        <input type="button" value="0" onclick="addToDisplay('0')">
+        <input type="button" value="." onclick="addToDisplay('.')">
+        <input type="button" value="&#247;" onclick="addToDisplay('/')" style="background-color: #cc5;">
+        <input type="button" value="=" onclick="calculate()" style="background-color: #cc5;"><br/>
+        <input type="button" value="&#8730;" onclick="calculateSquareRoot()">
+        <input type="button" value="x^y" onclick="addToDisplay('^')">
+        <input type="button" value="sin" onclick="calculateTrig('sin')">
+        <input type="button" value="cos" onclick="calculateTrig('cos')"><br/>
+        <input type="button" value="tan" onclick="calculateTrig('tan')">
+        <input type="button" value="log" onclick="calculateLog()">
+        <input type="button" value="ln" onclick="calculateLn()">
+        <input type="button" value="x!" onclick="calculateFactorial()"><br/>
+        <input type="button" value="x^2" onclick="calculatePowerOfTwo()">
+        <input type="button" value="x^3" onclick="calculatePowerOfThree()">
+        <input type="button" value="sinh" onclick="calculateTrig('sinh')">
+        <input type="button" value="cosh" onclick="calculateTrig('cosh')"><br/>
+        <input type="button" value="tanh" onclick="calculateTrig('tanh')">
+        <input type="button" value="AC" onclick="clearDisplay()" style="background-color: rgb(209, 39, 87);">
+        <input type="button" value="←" onclick="backspace()">
+        <input type="button" value="%" onclick="calculatePercentage()"><br/>
+        <input type="button" value="(" onclick="addToDisplay('(')">
+        <input type="button" value=")" onclick="addToDisplay(')')">
+        <input type="button" value="π" onclick="addToDisplay(Math.PI)">
+        <input type="button" value="e" onclick="addToDisplay(Math.E)">
+    </form>
+
+    <script>
+        function addToDisplay(value) {
+            calc.display.value += value;
+        }
+
+        function calculate() {
+            try {
+                calc.display.value = eval(calc.display.value);
+            } catch (error) {
+                calc.display.value = "Error";
+            }
+        }
+
+        function calculateSquareRoot() {
+            calc.display.value = Math.sqrt(calc.display.value);
+        }
+
+        function calculateTrig(operation) {
+            const angleInRadians = eval(calc.display.value);
+            switch (operation) {
+                case 'sin':
+                    calc.display.value = Math.sin(angleInRadians);
+                    break;
+                case 'cos':
+                    calc.display.value = Math.cos(angleInRadians);
+                    break;
+                case 'tan':
+                    calc.display.value = Math.tan(angleInRadians);
+                    break;
+                case 'sinh':
+                    calc.display.value = Math.sinh(angleInRadians);
+                    break;
+                case 'cosh':
+                    calc.display.value = Math.cosh(angleInRadians);
+                    break;
+                case 'tanh':
+                    calc.display.value = Math.tanh(angleInRadians);
+                    break;
+                default:
+                    calc.display.value = "Error";
+            }
+        }
+
+        function calculateLog() {
+            calc.display.value = Math.log10(eval(calc.display.value));
+        }
+
+        function calculateLn() {
+            calc.display.value = Math.log(eval(calc.display.value));
+        }
+
+        function calculateFactorial() {
+            const number = parseInt(calc.display.value);
+            if (number < 0) {
+                calc.display.value = "Error";
+            } else if (number === 0 || number === 1) {
+                calc.display.value = "1";
+            } else {
+                let result = 1;
+                for (let i = 2; i <= number; i++) {
+                    result *= i;
+                }
+                calc.display.value = result;
+            }
+        }
+
+        function calculatePowerOfTwo() {
+            calc.display.value = Math.pow(eval(calc.display.value), 2);
+        }
+
+        function calculatePowerOfThree() {
+            calc.display.value = Math.pow(eval(calc.display.value), 3);
+        }
+
+        function calculatePercentage() {
+            calc.display.value = eval(calc.display.value) / 100;
+        }
+
+        function clearDisplay() {
+            calc.display.value = '';
+        }
+
+        function backspace() {
+            calc.display.value = calc.display.value.slice(0, -1);
+        }
+
+        
+        document.addEventListener("keydown", function (event) {
+            const key = event.key;
+            const allowedKeys = [
+                '0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '.', '+', '-', '*', '/', '=', 'Enter', 'Backspace', 'Escape', '(', ')',
+            ];
+
+            if (allowedKeys.includes(key)) {
+                if (key === 'Enter') {
+                    calculate();
+                } else if (key === '=') {
+                    calculate();
+                } else if (key === 'Backspace') {
+                    backspace();
+                } else if (key === 'Escape') {
+                    clearDisplay();
+                } else {
+                    addToDisplay(key);
+                }
+                event.preventDefault();
+            }
+        });
+    </script>
+   </body>
+</html>

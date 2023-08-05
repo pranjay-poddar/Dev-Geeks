@@ -28,7 +28,7 @@ nav img {
     top: 0;
     left: 0;
     width: 100%;
-    background-color: #fff;
+    background-color: #e7d7ce;;
     z-index: 999;
 }
 
@@ -45,7 +45,7 @@ nav img {
 }
 
 .nav-links ul li a {
-    color: black;
+    color: beige;
     text-decoration: none;
     padding-right: 20px;
     font-size: 18px;
@@ -76,13 +76,13 @@ nav img {
 }
 
 .hero-btn {
+    border-radius: 0.7rem;
     display: inline-block;
     text-decoration: none;
-    color: chocolate;
-    border: 2px solid #cc4a2a;
-    padding: 10px 18px;
+    color: azure;
     font-size: 18px;
-    background: transparent;
+    background:#c2afa3;
+    padding: 16px 28px;
     position: relative;
     cursor: pointer;
 }

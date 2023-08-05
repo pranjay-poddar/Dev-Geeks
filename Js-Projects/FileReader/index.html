@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/b6fced5791.js" crossorigin="anonymous"></script>
+    <title>File Reader</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>File Reader</h1>
+        <p>Select any file to read</p>
+        <label for="input" class="file-upload">
+            <input type="file" id="input" >
+           <i class="fa-solid fa-cloud-arrow-up"></i> Choose File
+        </label>
+        <div class="info">
+            <p>Selected File : </p>
+            <div id="name">No file Selected!</div>
+        </div>
+        <pre id="content"></pre>
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+</html>

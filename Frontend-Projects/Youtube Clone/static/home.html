@@ -1,0 +1,53 @@
+{% from 'components.html' import card %}
+
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+<div class="nav">
+    <div class="yt_logo">
+        <img src="/static/assests/logo.png" alt="">
+    </div>
+    <div class="search">
+        <input type="search" name="" id="" placeholder="Search">
+        <div class="search_place_logo"><svg class = "search_focus_logo" height="25" viewBox="0 0 512 512" width="25" xmlns="http://www.w3.org/2000/svg"><title/><path d="M221.09,64A157.09,157.09,0,1,0,378.18,221.09,157.1,157.1,0,0,0,221.09,64Z" style="fill:none;stroke: #ffffff9f;stroke-miterlimit:10;stroke-width:25px"/><line style="fill:none;stroke:#ffffff9f;stroke-linecap:round;stroke-miterlimit:10;stroke-width:25px" x1="338.29" x2="448" y1="338.29" y2="448"/></svg></div>
+        <button type="submit"><svg height="25" viewBox="0 0 512 512" width="25" xmlns="http://www.w3.org/2000/svg"><title/><path d="M221.09,64A157.09,157.09,0,1,0,378.18,221.09,157.1,157.1,0,0,0,221.09,64Z" style="fill:none;stroke: #ffffff9f;stroke-miterlimit:10;stroke-width:25px"/><line style="fill:none;stroke:#ffffff9f;stroke-linecap:round;stroke-miterlimit:10;stroke-width:25px" x1="338.29" x2="448" y1="338.29" y2="448"/></svg></button>
+    </div>
+    <div class="user_logo">
+        <img src="https://yt3.ggpht.com/yti/AHyvSCAS0UU5S9ts_yDHnG6kNXaMgz8HGsVr2pmc4vpX-A=s88-c-k-c0x00ffffff-no-rj-mo" alt="">
+    </div>
+</div>
+
+<div class="tags">
+    <div class="tag">Web Development</div>
+    <div class="tag">React</div>
+    <div class="tag">Hacking</div>
+    <div class="tag">Cyber Security</div>
+    <div class="tag">Gaming</div>
+    <div class="tag">Game Development</div>
+    <div class="tag">Python</div>
+    <div class="tag">Java</div>
+    <div class="tag">C++</div>
+    <div class="tag">Kotlin</div>
+    <div class="tag">Vue Js</div>
+    <div class="tag">React</div>
+    <div class="tag">Hacking</div>
+    <div class="tag">Ethical Hacking</div>
+    <div class="tag">Free Courses</div>
+    <div class="tag">Game Development</div>
+    <div class="tag">Python</div>
+    <div class="tag">Java</div>
+    <div class="tag">C++</div>
+    <div class="tag">Game Development</div>
+    <div class="tag">Python</div>
+    <div class="tag">Java</div>
+    <div class="tag">C++</div>
+    <div class="tag">Kotlin</div>
+    <div class="tag">Vue Js</div>
+    <div class="tag">React</div>
+    <div class="tag">Hacking</div>
+</div>
+
+<div class="cards">
+    {% for video in videos %}
+        {{ card(video, channel_name, channel_logo) }}
+    {% endfor %}
+</div>
