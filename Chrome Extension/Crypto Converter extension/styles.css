@@ -1,0 +1,17 @@
+body{
+    padding: 12px;
+    margin: 5px;
+    background-color: antiquewhite;
+}
+
+select{
+    background-color: rgb(89, 151, 153);
+    color: rgb(250, 251, 253);
+}
+
+#btn{
+    color:#fcfcfc;
+    background-color: crimson;
+
+    
+}
