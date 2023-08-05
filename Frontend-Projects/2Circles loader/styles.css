@@ -1,0 +1,42 @@
+
+body{
+    font-family: "Poppins",sans-serif;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#div1{
+width: 200px;
+height: 200px;
+background: red ;
+border-radius: 50%;
+animation: animate 1s linear infinite;
+
+}
+#div2{
+width: 200px;
+height: 200px;
+background: blue ;
+border-radius: 50%;
+animation: animate1 1s linear infinite;
+}
+@keyframes animate {
+0%{
+transform: translateX(0px);
+}100%{
+transform: translateX(200px);
+}
+}
+@keyframes animate1 {
+0%{
+transform: translateX(0px);
+}100%{
+transform: translateX(-100px);
+}
+}
+h1{
+z-index: 100;
+transform: translatex(300px);
+}

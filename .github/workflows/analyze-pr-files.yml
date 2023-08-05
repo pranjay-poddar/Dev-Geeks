@@ -1,0 +1,66 @@
+name: PR File Analyzer
+
+on:
+  pull_request:
+    types:
+      - opened
+      - reopened
+      - synchronize
+
+jobs:
+  check_files:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: List all changed files
+      id: list_files
+      run: |
+        git diff --name-only origin/main ${{ github.event.pull_request.head.sha }} > changed_files.txt
+        cat changed_files.txt
+
+    - name: Check for graphical assets
+      id: check_graphical_assets
+      run: |
+        if grep -E -i ".*\.(png|jpg|jpeg|gif|mp4|svg|ico|webp)" changed_files.txt
+        then
+          echo "Found graphical assets! Please remove them from the PR."
+          exit 1
+        fi
+
+    - name: Check for non-code files
+      id: check_non_code_files
+      run: |
+        if grep -E -i ".*\.(html|css|js|jsx|tsx|json)" changed_files.txt
+        then
+          echo "All good! Code files present in the PR."
+        else
+          echo "No code-related files found! Please add code-related files (HTML, CSS, JS, JSX, TSX, JSON) to the PR."
+          exit 1
+        fi
+
+    - name: Add comment to PR
+      if: steps.check_graphical_assets.outputs.exit-code == '1' || steps.check_non_code_files.outputs.exit-code == '1'
+      uses: actions/github-script@v4
+      with:
+        github-token: ${{ secrets.GITHUB_TOKEN }}
+        script: |
+          if (steps.check_graphical_assets.outputs.exit-code == '1') {
+            github.issues.createComment({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body: "It looks like you have included graphical asset files in this pull request. Please remove them to keep the PR focused on code changes."
+            });
+          }
+
+          if (steps.check_non_code_files.outputs.exit-code == '1') {
+            github.issues.createComment({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body: "It seems that no code-related files (HTML, CSS, JS, JSX, TSX, JSON) were included in this pull request. Please add the appropriate code files for review."
+            });
+          }
