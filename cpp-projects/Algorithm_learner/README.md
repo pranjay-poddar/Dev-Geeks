@@ -25,6 +25,20 @@ i. Transpose of matrix
 ii. Multiplication of matrices
 
 iii. Spiral matrix
+
+iv. Matrix Search - Binary Search
+
+v. Matrix Search - Staircase Search
+
+BASIC ALGORITHMS
+
+i. Count Primes
+
+ii. GCD
+
+iii. Factorial
+
+iv. Fibonacci Sequence
 <h2>SCREENSHOTS</h2>
 
 ![image](https://github.com/Nikita06211/Dev-Geeks/assets/120494269/55195190-bb88-40ad-a95c-419ea72e74a3)
