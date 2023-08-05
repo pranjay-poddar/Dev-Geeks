@@ -12,9 +12,9 @@ SCREEN = pygame.display.set_mode((SCREENWIDTH, SCREENHEIGHT))
 GROUNDY = SCREENHEIGHT * 0.88
 GAME_SPRITES = {}
 GAME_SOUNDS = {}
-PLAYER = 'Python Projects\Flappy Dragon Game\gallery/sprites/dragon.png'
-BACKGROUND = 'Python Projects\Flappy Dragon Game\gallery/sprites/bg2.jpg'
-PIPE = 'Python Projects\Flappy Dragon Game\gallery/sprites/pipe2.png'
+PLAYER = 'Python Projects\Flappy_Dragon_Game\gallery/sprites/dragon.png'
+BACKGROUND = 'Python Projects\Flappy_Dragon_Game\gallery/sprites/bg2.jpg'
+PIPE = 'Python Projects\Flappy_Dragon_Game\gallery/sprites/pipe2.png'
 # This list will hold all of the scores
 score_list = [0]
 
@@ -207,8 +207,8 @@ if __name__ == '__main__':
     pygame.display.set_caption('Flappy Dragon by Lucifer')
 
     # GAME IMAGES (DICT)
-    GAME_SPRITES['message'] =pygame.image.load('Python Projects\Flappy Dragon Game\gallery/sprites/message.png').convert_alpha()
-    GAME_SPRITES['base'] =pygame.image.load('Python Projects\Flappy Dragon Game\gallery/sprites/land.png').convert_alpha()
+    GAME_SPRITES['message'] =pygame.image.load('Python Projects\Flappy_Dragon_Game\gallery/sprites/message.png').convert_alpha()
+    GAME_SPRITES['base'] =pygame.image.load('Python Projects\Flappy_Dragon_Game\gallery/sprites/land.png').convert_alpha()
     GAME_SPRITES['pipe'] =(
         pygame.transform.rotate(pygame.image.load(PIPE).convert_alpha(), 180), # rotated pipe image  by 180 degrees  
         pygame.image.load(PIPE).convert_alpha() # normal pipe image 
@@ -217,12 +217,13 @@ if __name__ == '__main__':
     GAME_SPRITES['player'] = pygame.image.load(PLAYER).convert_alpha()
 
     # Game sounds (DICT)
-    GAME_SOUNDS['die'] = pygame.mixer.Sound('Python Projects\Flappy Dragon Game\gallery/audio/die.wav')
-    GAME_SOUNDS['hit'] = pygame.mixer.Sound('Python Projects\Flappy Dragon Game\gallery/audio/hit.wav')
-    GAME_SOUNDS['point'] = pygame.mixer.Sound('Python Projects\Flappy Dragon Game\gallery/audio/point.wav')
-    GAME_SOUNDS['wing'] = pygame.mixer.Sound('Python Projects\Flappy Dragon Game\gallery/audio/wing.wav')
+    GAME_SOUNDS['die'] = pygame.mixer.Sound('Python Projects\Flappy_Dragon_Game\gallery/audio/die.wav')
+    GAME_SOUNDS['hit'] = pygame.mixer.Sound('Python Projects\Flappy_Dragon_Game\gallery/audio/hit.wav')
+    GAME_SOUNDS['point'] = pygame.mixer.Sound('Python Projects\Flappy_Dragon_Game\gallery/audio/point.wav')
+    GAME_SOUNDS['swoosh'] = pygame.mixer.Sound('Python Projects\Flappy_Dragon_Game\gallery/audio/swoosh.wav')
+    GAME_SOUNDS['wing'] = pygame.mixer.Sound('Python Projects\Flappy_Dragon_Game\gallery/audio/wing.wav')
 
-
+    
     
     while True:
         welcomeScreen() # Shows welcome screen to the user until he presses a button
