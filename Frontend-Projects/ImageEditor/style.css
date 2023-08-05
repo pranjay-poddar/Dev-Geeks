@@ -1,0 +1,73 @@
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h2 {
+    text-align: center;
+}
+
+.input-section {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+#imageLink {
+    flex: 1;
+    padding: 10px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+.edit-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    column-gap: 5%;
+}
+
+.image-container {
+    flex: 1;
+    text-align: center;
+}
+
+img {
+    max-width: 100%;
+}
+
+.edit-options {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.option{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 75%;
+}
+
+label {
+    margin-right: 10px;
+}
+
+input[type="range"]{
+width: 100%;
+max-width: 200px;
+}
