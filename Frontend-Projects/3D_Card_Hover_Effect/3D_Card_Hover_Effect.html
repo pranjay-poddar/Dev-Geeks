@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Your Page Title</title>
+    <!-- Link the CSS file here -->
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    -
+	var placeholderImage = [
+		{
+				title: 'Joker',
+				year: 2019,
+				duration: '2h 2m',
+				tags: ['Crime', 'Drama', 'Thriller'],
+				coverUrl: 'https://m.media-amazon.com/images/M/MV5BNGVjNWI4ZGUtNzE0MS00YTJmLWE0ZDctN2ZiYTk2YmI3NTYyXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_FMjpg_UY720_.jpg ',
+				description: "A mentally troubled stand-up comedian embarks on a downward spiral that leads to the creation of an iconic villain.",
+				link: 'https://www.imdb.com/title/tt7286456',
+		}, {
+				title: 'Dragon Ball Super: Super Hero',
+				year: 2022,
+				duration: '1h 40m',
+				tags: ['Animation', 'Action', 'Adventure'],
+				coverUrl: 'https://m.media-amazon.com/images/M/MV5BYmQ1Y2Y4NmItY2E4Mi00ZmM2LWFiOTEtMGVmMDRhN2ZiODU0XkEyXkFqcGdeQXVyNTkxMzEwMzU@._V1_FMjpg_UY720_.jpg',
+				description: "The Red Ribbon Army from Goku's past has returned with two new androids to challenge him and his friends.",
+				link: 'https://www.imdb.com/title/tt14614892'
+		}, {
+				title: 'Interstellar',
+				duration: '2h 49m',
+				year: 2014,
+				tags: ['Action', 'Drama', 'Sci-Fi'],
+				coverUrl: 'https://m.media-amazon.com/images/M/MV5BZjdkOTU3MDktN2IxOS00OGEyLWFmMjktY2FiMmZkNWIyODZiXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_FMjpg_UY720_.jpg',
+				description: "A team of explorers travel through a wormhole in space in an attempt to ensure humanity's survival.",
+				link: "https://www.imdb.com/title/tt0816692"
+		}, {
+				title: 'Spider-Man: No Way Home',
+				year: 2021,
+				duration: '2h 28m',
+				tags: ['Action', 'Adventure', 'Fantasy'],
+				coverUrl: 'https://m.media-amazon.com/images/M/MV5BZWMyYzFjYTYtNTRjYi00OGExLWE2YzgtOGRmYjAxZTU3NzBiXkEyXkFqcGdeQXVyMzQ0MzA0NTM@._V1_FMjpg_UY720_.jpg',
+				description: "After more than thirty years of service as one of the Navy's top aviators, Pete Mitchell is where he belongs, pushing the envelope as a courageous test pilot and dodging the advancement in rank that would ground him.",
+				link: "https://www.imdb.com/title/tt10872600"
+		}, {
+				title: 'The Batman',
+				year: 2022,
+				duration: '2h 56m',
+				tags: ['Action', 'Crime', 'Drama'],
+				coverUrl: 'https://m.media-amazon.com/images/M/MV5BMDdmMTBiNTYtMDIzNi00NGVlLWIzMDYtZTk3MTQ3NGQxZGEwXkEyXkFqcGdeQXVyMzMwOTU5MDk@._V1_FMjpg_UY720_.jpg',
+				description: "When a sadistic serial killer begins murdering key political figures in Gotham, Batman is forced to investigate the city's hidden corruption and question his family's involvement.",
+				link: "https://www.imdb.com/title/tt1877830/"
+		}, {
+				title: 'Top Gun: Maverick',
+				duration: '2h 10m',
+				year: 2022,
+				tags: ['Action', 'Drama'],
+				coverUrl: 'https://m.media-amazon.com/images/M/MV5BOWQwOTA1ZDQtNzk3Yi00ZmVmLWFiZGYtNjdjNThiYjJhNzRjXkEyXkFqcGdeQXVyODE5NzE3OTE@._V1_FMjpg_UX988_.jpg',
+				description: "After more than thirty years of service as one of the Navy's top aviators, Pete Mitchell is where he belongs, pushing the envelope as a courageous test pilot and dodging the advancement in rank that would ground him.",
+				link: "https://www.imdb.com/title/tt1745960/"
+		}, {
+				title: 'Fight Club',
+				duration: '2h 19m',
+				tags: ['Drama'],
+				coverUrl: 'https://m.media-amazon.com/images/M/MV5BNDIzNDU0YzEtYzE5Ni00ZjlkLTk5ZjgtNjM3NWE4YzA3Nzk3XkEyXkFqcGdeQXVyMjUzOTY1NTc@._V1_FMjpg_UY720_.jpg',
+				year: 1999,
+				description: 'An insomniac office worker and a devil-may-care soap maker form an underground fight club that evolves into much more.',
+				link: 'https://www.imdb.com/title/tt0137523/'
+		}
+	];
+
+mixin figure(item)
+	a.card(
+		href=item.link,
+		target="_blank",
+		style=`--card-image:url('${item.coverUrl}')`
+	)
+		.card__container
+			.card__image
+			.card__content
+				p.card-meta
+					span.card-meta-item= item.year
+					span.card-meta-item= item.duration
+				h2.card-title= item.title
+				ul.card-tag-list
+					each tag in item.tags
+						li.card-tag-list-item= tag
+				p.card-description= item.description
+
+.container
+	.slider
+		- for (var index = 0; index < placeholderImage.length; index++)
+			input.slider-target(
+				type="radio",
+				id='slide-' + index,
+				name="slider",
+				checked=index == Math.floor(placeholderImage.length / 2)
+			)
+
+		.slider__viewport
+			.slider__viewbox
+				.slider__container
+					- for (var index = 0; index < placeholderImage.length; index++)
+						.slider-item
+							.slider-item__inner
+								label.slider-item__trigger(
+									for='slide-' + index,
+									title='Show product ' + index
+								)
+								+figure(placeholderImage[index])
+
+</body>
+</html>
