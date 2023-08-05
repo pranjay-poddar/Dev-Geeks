@@ -1,0 +1,103 @@
+.homePageWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  height: 100vh;
+}
+.fromPageWrapper {
+  display: flex;
+  border-radius: 2%;
+  flex-direction: column;
+  padding: 0 0 1% 0;
+  background-color: #282a36;
+}
+.logo-main {
+  width: 35%;
+  margin: 0 0 0 5%;
+}
+.inputGroup {
+  display: flex;
+  flex-direction: column;
+  margin: 0 10%;
+}
+.mainLabel {
+  margin-left: 10%;
+}
+.inputBox {
+  border: 1px transparent;
+  border-radius: 5px;
+  padding: 1.9%;
+  margin: 1% 0;
+}
+.joinbtn {
+  margin: 1% 0 1% 80%;
+  border-radius: 5px;
+  font-weight: 800;
+  border: 1px transparent;
+  background-color: #004aad;
+  padding: 1.9%;
+}
+.bottomName {
+  color: #004aad;
+  text-decoration: none;
+}
+.createNewBtn{
+  color: #004aad;
+}
+.mainWrapper{
+  display: grid;
+  height: 100vh;
+  grid-template-columns: 230px 1fr;
+}
+.aside{
+  background-color: #1c1e29;
+  padding: 16px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+}
+.asideInner{
+  flex: 1;
+}
+.logoImg{
+  width: 35%;
+  margin-left: 28%;
+}
+.clientList{
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.client{
+  display: flex;
+ align-items: center;
+ flex-direction: column;
+ font-weight: bold;
+}
+.userName{
+  margin-top: 10px;
+}
+.logo{
+  border-bottom: 1px solid #424242;
+  padding-bottom: 10px;
+}
+.copybtn,.leavebtn{
+  margin: 2% 4%;
+  border-radius: 5px;
+  padding: 3.4% 1%;
+  border: transparent;
+  font-weight: bolder;
+  cursor: pointer;
+}
+.leavebtn{
+  background: #004aad;
+}
+.CodeMirror{
+  min-height: calc(100vh - 20px);
+  font-size: 20px;
+  line-height: 1.6;
+  padding-top: 20px;
+}
