@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    </link>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="../css_files/result.css">
+    <link rel="stylesheet" type="text/css" href="../css_files/caesardark.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+        integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <link rel="icon" href="../assets/Image/Favicon.png" />
+    <title>Molarity Calculator</title>
+</head>
+<style>
+    body {
+        /* text-align: center; */
+        margin-bottom: 3em;
+    }
+
+    .potential-set{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 3rem 6rem;
+        text-align: center;
+        background-color: blue;
+    }
+
+    .calculator-name-header {
+        margin-top: 2.5rem;
+        padding: 14px;
+        border-radius: 0px 15px 0px 15px;
+        box-shadow: 0px 0px 16px 1px;
+        font-size: 28px;
+        margin-bottom: 50px
+    }
+
+    #home {
+        /* background-color: black; */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        position: fixed;
+        right: 2rem;
+        bottom: 2rem;
+        border-radius: 15px;
+        color: #ffffff;
+        background-color: #121916;
+        height: 2.5rem;
+        width: 2.5rem;
+        font-size: 1.2;
+        z-index: 999;
+    }
+
+    .btn-work, .btn-work1  {
+        padding: 0.7rem 2rem;
+        font-size: 15px;
+        border: none;
+        border-radius: 3px;
+        background-color: black;
+        color: white;
+    }
+
+    button:hover {
+        cursor: pointer;
+    }
+
+    p {
+        font-size: large;
+    }
+
+    input,
+    select {
+        width: 200px;
+        height: 30px;
+
+    }
+
+    .main-btn {
+        padding: 0.7rem 2rem;
+        font-size: 15px;
+        border: none;
+        border-radius: 3px;
+        background-color: black;
+        color: white;
+        margin-left: 1rem;
+    }
+
+    .outterbox{
+        margin-top: 2.5rem;
+    }
+
+    @media(max-width: 550px){
+        .main-btn {
+            margin-left: 5px;
+        }
+
+        .container {
+            padding: 2rem 3rem;
+        }
+
+        .calculator-name-header{
+            font-size: 1.2rem;
+            padding: 12px;
+        }
+    }
+</style>
+
+<body>
+    <img src="../assets/Image/moon.png" id="icon">
+    <section class="potential-set">
+    <div class="calculator-name-header">
+        <span>Molarity Calculator</span>
+    </div>
+    <div class="container">
+
+
+        <div class="calc-work" id="calc-work">
+            <h2>Calculate Molarity</h2>
+            <p>Moles of solute:</p>
+            <input type="number" class="moles"></input>
+            <br>
+            <br>
+            <br>
+            <p>Volume(in litres):</p>
+            <input type="number" class="volume"></input>
+            <br>
+            <br>
+            <br>
+            <button class="btn-work1">Calculate</button>
+            <button type="button" class="main-btn" id="reset-btn" onClick="fun11()">Reset</button>
+    
+            <br>
+            <div class="outterbox">
+                <div class="box"><span class="molarity" id="result"></span></div>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+  <section class="potential-set">
+    <div class="calculator-name-header">
+        <span>Molality Calculator</span>
+    </div>
+    <div class="container">
+
+
+        <!-- <h1>Physics Calculations</h1> -->
+
+        <div class="calc-work" id="calc-work">
+            <h2>Calculate Molality</h2>
+            <p>Moles of solute:</p>
+            <input type="number" class="mass-for-energy"></input>
+            <br>
+            <br>
+            <br>
+            <p>Solvent Weight(in kgs):</p>
+            <input type="number" class="height-for-energy"></input>
+            <br>
+            <br>
+            <br>
+            <button class="btn-work">Calculate</button>
+            <button type="button" class="main-btn" id="reset-btn" onClick="fun10()">Reset</button>
+    
+            <br>
+            <div class="outterbox">
+                <div class="box"><span class="work-result results" id="result"></span></div>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+   
+<script>
+    //Calculates molality
+    document.getElementsByClassName('btn-work')[0].addEventListener('click', () => {
+    let MassForWork = document.getElementsByClassName('mass-for-energy')[0].value;
+    let distanceForWork = document.getElementsByClassName('height-for-energy')[0].value;
+    if (isNaN(MassForWork)) {
+      alert('Enter a valid number into the Mass input.');
+    } else if (isNaN(distanceForWork)) {
+      alert('Enter a valid number into the Height input.');
+    } else {
+      let workResult =  MassForWork/distanceForWork ;
+      document.getElementsByClassName('work-result')[0].innerHTML = 'Molality: ' + workResult + " mol/kg" ;
+    }
+  });
+
+    function fun10() {
+        document.querySelector("#reset-btn").addEventListener('click', function () {
+            document.getElementsByClassName('mass-for-energy')[0].value= "";
+            document.getElementsByClassName('height-for-energy')[0].value = "";
+           
+            document.getElementsByClassName('work-result')[0].innerHTML = "";
+        });
+    }
+
+    //Calculates molarity
+    document.getElementsByClassName('btn-work1')[0].addEventListener('click', () => {
+    let MassForWork = document.getElementsByClassName('moles')[0].value;
+    let distanceForWork = document.getElementsByClassName('volume')[0].value;
+    if (isNaN(MassForWork)) {
+      alert('Enter a valid number into the Mass input.');
+    } else if (isNaN(distanceForWork)) {
+      alert('Enter a valid number into the Height input.');
+    } else {
+      let workResult =  MassForWork/distanceForWork ;
+      document.getElementsByClassName('molarity')[0].innerHTML = 'Molarity: ' + workResult + " mol/l" ;
+    }
+  });
+
+    function fun11() {
+        document.querySelector("#reset-btn").addEventListener('click', function () {
+            document.getElementsByClassName('moles')[0].value= "";
+            document.getElementsByClassName('volume')[0].value = "";
+           
+            document.getElementsByClassName('molarity')[0].innerHTML = "";
+        });
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+
+body{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    background-color: coral;
+}
+h1{
+    transform: translateX(150px);
+}
+div{
+
+width:200px;
+height: 200px;
+
+border-radius: 50%;
+border-top:5px solid red;
+border-bottom:5px solid red;
+animation: animate 1.2s linear infinite;
+}
+@keyframes animate {
+0%{
+transform: rotate(0deg);
+}
+
+100%{
+transform: rotate(360deg);
+}
+
+}
