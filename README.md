@@ -820,7 +820,7 @@ Happy Coding! -->
   <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Js-Games/Cubula">Cubula</a></td>
  </tr>
   
- <tr align="Center">
+ <tr align="center">
    <td align="center">269.</td>
   <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Python Projects/Forex Exchanger">Forex Exchanger</a></td>
   <td align="center"> 270.</td>
