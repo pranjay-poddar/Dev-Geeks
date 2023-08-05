@@ -1,0 +1,11 @@
+
+.FileCss{
+    background-color: rgb(6, 141, 165);
+    padding:12px 18px;
+    border:none;
+    outline:none;
+    border-radius: 5px;
+    text-align: center;
+    cursor:pointer;
+    color:white;
+}
