@@ -796,8 +796,6 @@ Happy Coding! -->
   <td align="center"> 261.</td>
 <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Js-Projects/Facebook%20Clone"> Facebook Clone </a></td>
   <tr align="center">
-<td align="center"> 262.</td>  
-<td align="center"><a href="./React-JS Projects/Magic-Notes">Magic Notes</a></td>
 </tr>  
 
   <td align="center"> 261. </td>
