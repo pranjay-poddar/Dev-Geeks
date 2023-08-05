@@ -1,0 +1,39 @@
+
+<html>
+	<!--
+	Based on http://www.webstepbook.com/supplements/homework/6-fifteen_puzzle/ (This document's contents are based on Â© Copyright 2009 Marty Stepp / Jessica Miller and licensed
+	under Creative Commons Attribution 2.5 License.)
+	-->
+	<head>
+		<title>Slide & Solve</title>
+		<meta charset="utf-8" />
+
+		<link rel="stylesheet" type="text/css" href="styles.css" />
+
+		<script src="https://code.jquery.com/jquery-3.1.1.min.js" type="text/javascript"></script>
+		<script src="game.js" type="text/javascript"></script>
+	</head>
+
+	<body>
+		<h1>Slide & Solve</h1>
+
+		<p class="explanation">
+			The goal of the puzzle is to un-jumble its fifteen squares by repeatedly making moves that slide squares into the empty space.  How quickly can you solve it?
+		</p>
+
+		<div id="overall">
+			<div id="puzzlearea">
+				<!-- the following are the fifteen puzzle pieces -->
+				<div>1</div>  <div>2</div>  <div>3</div>  <div>4</div>
+				<div>5</div>  <div>6</div>  <div>7</div>  <div>8</div>
+				<div>9</div>  <div>10</div> <div>11</div> <div>12</div>
+				<div>13</div> <div>14</div> <div>15</div>
+			</div>
+
+			<div id="controls">
+			<button id="shufflebutton">Shuffle</button>
+			</div>
+		</div>
+	</body>
+</html>
+
