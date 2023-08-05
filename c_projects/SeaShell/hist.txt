@@ -1,0 +1,3 @@
+echo "check if this works" > tempp.txt
+cat < tempp.txt
+quit
