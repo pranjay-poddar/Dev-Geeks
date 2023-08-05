@@ -2,7 +2,7 @@
 
 ### It is a Python game.
 
-#### Used modules 
+#### It is made using these  modules 
 
     pygame 
     sys 
