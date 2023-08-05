@@ -217,6 +217,7 @@ input {
   cursor: pointer;
 }
 
+
 .nav__menu {
   position: relative;
 }
@@ -332,12 +333,34 @@ input {
 .home__social {
   display: flex;
   flex-direction: column;
-  row-gap: 1.5rem;
+  row-gap: 1.5rem;  
 }
 
 .home__social-link {
-  font-size: 1.2rem;
-  width: max-content;
+ /* font-size: 1.25rem;
+  width: max-content; */
+  margin: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  font-size: 1.50rem;
+}
+a i{
+  transition: transform 0.5s;
+}
+i:hover{
+  transform: scale(1.5);
+}
+
+#facebook :hover{
+ font-size: 2rem;
+}
+#instagram :hover{
+  font-size: 2rem;
+ }
+ #twitter :hover{
+  font-size: 2rem;
 }
 
 .home__info {
@@ -384,10 +407,12 @@ input {
   padding: 1rem 2rem;
   font-weight: var(--font-semi-bold);
   transition: .3s;
+  
 }
 
 .button:hover {
   background-color: var(--first-color-alt);
+  
 }
 
 .button--flex {
@@ -399,10 +424,13 @@ input {
 .button--link {
   background: none;
   padding: 0;
+  position:relative;
 }
 
 .button--link:hover {
   background: none;
+  transform: translateX(40%) scale(1.2);
+ 
 }
 
 /*=============== ABOUT ===============*/
@@ -716,11 +744,48 @@ input {
 .footer__description {
   margin-bottom: var(--mb-2);
 }
+.linkBox{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  
+}
+
+.link{
+  margin: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  font-size: 1.50rem;
+}
+
+a i{
+  transition: transform 0.5s;
+}
+i:hover{
+  transform: scale(1.5);
+}
+.ri-youtube-fill::before{
+  color: red;
+}
+.ri-facebook-box-fill::before{
+  color: rgb(3, 113, 210);
+}
+.ri-instagram-fill::before{
+  color: rgb(252, 66, 128);
+}
+.ri-twitter-fill::before{
+  color: #05b3ed;
+}
 
 .footer__social {
   font-size: 1.25rem;
   color: var(--title-color);
   margin-right: var(--mb-1-25);
+}
+.footer__social :hover{
+  font-size: 2rem;
 }
 
 .footer__subtitle {
@@ -858,6 +923,7 @@ input {
   }
   .nav__link:hover {
     color: var(--white-color);
+    font-size:1.2rem;
   }
   .nav__dark {
     position: initial;

@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="../assets/Image/Favicon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Ubuntu:wght@300;400&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap"
+      rel="stylesheet"
+    />
+    <title> Units Converter</title>
+    
+    <style type="text/css">
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        flex-direction: column;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+          Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+          sans-serif;
+      }
+      .top-txt {
+        margin-bottom: 15px;
+      }
+      .container {
+        box-shadow: 0 0 4px 1px rgb(179, 169, 169);
+        width: 675px;
+        height: 375px;
+        border-radius: 10px;
+        display: flex;
+        /* justify-content: center; */
+        align-items: center;
+        flex-direction: column;
+        background-color: aquamarine;
+      }
+      .container p {
+        color: rgb(20, 94, 82);
+        margin: 10px;
+        font-size: 20px;
+        font-weight: bolder;
+      }
+      .inputContainer {
+        margin: 5px;
+        display: flex;
+        justify-content: space-between;
+        width: 80%;
+      }
+      .inputContainer label {
+        font-size: larger;
+      }
+      .inputContainer input {
+        border: none;
+        outline: none;
+        box-shadow: 0.1px 1px 2px 1px rgb(145, 140, 140);
+        padding: 4px;
+        font-size: large;
+        border-radius: 2px;
+      }
+      .calculator-name-header {
+        text-align: center;
+        padding: 10px;
+        border-radius: 0px 15px 0px 15px;
+        box-shadow: 0px 0px 16px 1px;
+        font-size: 30px;
+        margin: 25px 30%;
+      }
+    </style>
+  </head>
+  <body >
+    <section>
+    <div class="calculator-name-header">
+      <span>Area Units Converter</span>
+    </div>
+    <div class="container" style="height: 400px !important">
+      <p class="top-txt">
+        Enter value in any of the fields to convert between area measurements:
+      </p>
+      <div class="inputContainer">
+        <label for="sqmm">Millimetre square</label
+        ><input
+          type="number"
+          name=""
+          id="sqmm"
+          oninput="convertToOthers('sqmm',this.value)"
+        />
+      </div>
+      <div class="inputContainer">
+        <label for="sqcm">Centimetre square</label
+        ><input
+          type="number"
+          name=""
+          id="sqcm"
+          oninput="convertToOthers('sqcm',this.value)"
+        />
+      </div>
+      <div class="inputContainer">
+        <label for="acre">Acres</label
+        ><input
+          type="number"
+          name=""
+          id="acre"
+          oninput="convertToOthers('acre',this.value)"
+        />
+      </div>
+      <div class="inputContainer">
+        <label for="sqmetre">Square metres</label
+        ><input
+          type="number"
+          name=""
+          id="sqmetre"
+          oninput="convertToOthers('sqmetre',this.value)"
+        />
+      </div>
+      <div class="inputContainer">
+        <label for="sqfeet">Square feet</label
+        ><input
+          type="number"
+          name=""
+          id="sqfeet"
+          oninput="convertToOthers('sqfeet',this.value)"
+        />
+      </div>
+      <div class="inputContainer">
+        <label for="sqinch">Square inches</label
+        ><input
+          type="number"
+          name=""
+          id="sqinch"
+          oninput="convertToOthers('sqinch',this.value)"
+        />
+      </div>
+      <div class="inputContainer">
+        <label for="hectare">Hectares</label
+        ><input
+          type="number"
+          name=""
+          id="hectare"
+          oninput="convertToOthers('hectare',this.value)"
+        />
+      </div>
+      <div class="button">
+        <button
+          style="
+            height: 30px;
+            width: 100px;
+            font-size: large;
+            margin-top: 10px;
+            background-color: black;
+            color: aliceblue;
+          "
+        >
+          reset
+        </button>
+      </div>
+    </div>
+    </section>
+   <section>
+     <div class="calculator-name-header">
+        <span>Length converter</span>
+      </div>
+    <div class="container">
+        
+        <p class="top-txt">Enter value in any of the fields to convert between Length measurements:</p>
+        <div class="inputContainer">
+            <label for="feet">Feet</label><input type="number" name="" id="feet"  oninput="convertToOthers2('feet',this.value)">
+        </div>
+        <div class="inputContainer">
+            <label for="meter">Meters</label><input type="number" name="" id="meter" oninput="convertToOthers2('meter',this.value)">
+        </div>
+        <div class="inputContainer">
+            <label for="inches">Inches</label><input type="number" name="" id="inches" oninput="convertToOthers2('inch',this.value)">
+        </div>
+        <div class="inputContainer">
+            <label for="cm">Centimeters</label><input type="number" name="" id="cm" oninput="convertToOthers2('cm',this.value)">
+        </div>
+        <div class="inputContainer">
+            <label for="yards">Yards</label><input type="number" name="" id="yards" oninput="convertToOthers2('yard',this.value)">
+        </div>
+        <div class="inputContainer">
+            <label for="km">Kilometers</label><input type="number" name="" id="km" oninput="convertToOthers2('km',this.value)">
+        </div>
+        <div class="inputContainer">
+            <label for="miles">Miles</label><input type="number" name="" id="miles" oninput="convertToOthers2('mile',this.value)">
+        </div>
+        <div class="button">
+            <button style="height: 30px; width: 100px; font-size: large; margin-top: 10px; background-color: black; color: aliceblue;">reset</button>
+        </div>
+    </div>        
+   </section>
+   <section>
+      <div class="calculator-name-header">
+      <span>Volume Units Converter</span>
+    </div>
+    <div class="container" style="height: 400px !important">
+      <p class="top-txt">
+        Enter value in any of the fields to convert between Volume measurements:
+      </p>
+      <div class="inputContainer">
+        <label for="Milliliters">Milliliters</label
+        ><input
+          type="number"
+          name=""
+          id="Milliliters"
+          oninput="convertToOthers3('Milliliters',this.value)"
+        />
+      </div>
+      <div class="inputContainer">
+        <label for="Cubic_centimeters">Cubic centimeters</label
+        ><input
+          type="number"
+          name=""
+          id="Cubic_centimeters"
+          oninput="convertToOthers3('Cubic_centimeters',this.value)"
+        />
+      </div>
+      <div class="inputContainer">
+        <label for="Liters">Liters</label
+        ><input
+          type="number"
+          name=""
+          id="Liters"
+          oninput="convertToOthers3('Liters',this.value)"
+        />
+      </div>
+      <div class="inputContainer">
+        <label for="Cubic_meters">Cubic meters</label
+        ><input
+          type="number"
+          name=""
+          id="Cubic_meters"
+          oninput="convertToOthers3('Cubic_meters',this.value)"
+        />
+      </div>
+      <div class="inputContainer">
+        <label for="gallons">gallons</label
+        ><input
+          type="number"
+          name=""
+          id="gallons"
+          oninput="convertToOthers3('gallons',this.value)"
+        />
+      </div>
+      <div class="inputContainer">
+        <label for="cubic_inches">cubic inches</label
+        ><input
+          type="number"
+          name=""
+          id="cubic_inches"
+          oninput="convertToOthers3('cubic_inches',this.value)"
+        />
+      </div>
+      <div class="inputContainer">
+        <label for="cubic_feet">cubic feet</label
+        ><input
+          type="number"
+          name=""
+          id="cubic_feet"
+          oninput="convertToOthers3('cubic_feet',this.value)"
+        />
+      </div>
+      <div class="button">
+        <button
+          style="
+            height: 30px;
+            width: 100px;
+            font-size: large;
+            margin-top: 10px;
+            background-color: black;
+            color: aliceblue;
+          "
+        style="cursor: pointer;"
+        >
+        
+          reset
+        </button>
+      </div>
+    </div>
+   </section>
+    <script >
+
+            document.querySelector("button").addEventListener('click',function(){
+                document.getElementById("feet").value="";
+                document.getElementById("meter").value="";
+                document.getElementById("inches").value="";
+                document.getElementById("cm").value="";
+                document.getElementById("yards").value="";
+                document.getElementById("km").value="";
+                document.getElementById("miles").value="";
+            });
+            let feet    =document.getElementById("feet");
+            let meter   =document.getElementById("meter");
+            let inch    =document.getElementById("inches");
+            let cm      =document.getElementById("cm");
+            let yard    =document.getElementById("yards");
+            let km      =document.getElementById("km");
+            let mile    =document.getElementById("miles");
+
+            function feetToOther(val){
+                meter.value =  val/3.2808; 
+                inch.value =  val*12;   
+                cm.value    =  val/0.032808; 
+                yard.value  =  val*0.33333;  
+                km.value    =  val/3280.8; 
+                mile.value  =  val*0.00018939;       
+            }
+            function meterToOther(val){
+                feet.value = val*3.2808;
+                inch.value = val*39.370;  
+                cm.value   = val/0.01;
+                yard.value = val*1.0936; 
+                km.value   = val/1000;
+                mile.value = val*0.00062137;
+            }
+            function inchesToOther(val){
+                feet.value = val*0.083333;
+                meter.value = val/39.370;  
+                cm.value = val/0.39370;
+                yard.value = val*0.027778; 
+                km.value = val/39370;
+                mile.value = val*0.000015783;
+            }
+            function cmToOther(val){
+                feet.value = val*0.032808;
+                meter.value = val/100;  
+                inch.value = val*0.39370;
+                yard.value = val*0.010936; 
+                km.value = val/100000 ;
+                mile.value = val*0.0000062137;
+            }
+            function yardsToOther(val){
+                feet.value = val*3;
+                inch.value = val*36;  
+                cm.value = val/0.010936;
+                meter.value = val/1.0936; 
+                km.value = val/1093.6;
+                mile.value = val*0.00056818;
+            }
+            function kmToOther(val){
+                feet.value = val*3280.8;
+                inch.value = val*39370;  
+                cm.value = val*100000;
+                yard.value = val*1093.6; 
+                meter.value = val*1000;
+                mile.value = val*0.62137;
+            }
+            function milesToOther(val){
+                feet.value = val*5280;
+                inch.value = val*63360;  
+                cm.value = val/0.0000062137;
+                yard.value = val*1760; 
+                km.value = val/0.62137;
+                meter.value = val/0.00062137;
+
+            }
+            // *********************//
+
+
+
+            function convertToOthers2(convertFrom,value){    
+                switch(convertFrom){
+                    case "feet" : feetToOther (parseFloat(value)); break;
+                    case "meter": meterToOther(parseFloat(value)); break;
+                    case "inch" : inchesToOther(parseFloat(value)); break;
+                    case "cm"   : cmToOther(parseFloat(value)); break;
+                    case "yard" : yardsToOther (parseFloat(value)); break;
+                    case "km"   : kmToOther (parseFloat(value)); break;
+                    case "mile" : milesToOther(parseFloat(value)); break;
+                }
+            }
+       
+   </script>
+    <script>
+
+        document.querySelector("button").addEventListener('click',function(){
+                        document.getElementById("sqmm").value="";
+                        document.getElementById("sqcm").value="";
+                        document.getElementById("acre").value="";
+                        document.getElementById("sqmetre").value="";
+                        document.getElementById("sqfeet").value="";
+                        document.getElementById("sqinch").value="";
+                        document.getElementById("hectare").value="";
+                    });
+                    let hectare    =document.getElementById("hectare");
+                    let sqmetre   =document.getElementById("sqmetre");
+                    let sqinch    =document.getElementById("sqinch");
+                    let sqcm      =document.getElementById("sqcm");
+                    let sqfeet    =document.getElementById("sqfeet");
+                    let sqmm      =document.getElementById("sqmm");
+                    let acre   =document.getElementById("acre");
+        
+                    function sqfeetToOther(val){
+                        sqmetre.value =  val*0.0929; 
+                        hectare.value =  val/107639.104;   
+                        sqcm.value    =  val*929.0304; 
+                        sqinch.value  =  val*144;  
+                        acre.value    =  val/43560; 
+                        sqmm.value  =  val*92903.04;       
+                    }
+                    function sqmetreToOther(val){
+                        sqfeet.value = val*10.763;
+                        sqinch.value = val*1550.003;  
+                        sqcm.value   = val*10000;
+                        sqmm.value = val*1000000; 
+                        acre.value   = val/4046.8564;
+                        hectare.value = val/10000;
+                    }
+                    function sqinchToOther(val){
+                        sqfeet.value = val*0.0069444;
+                        sqmetre.value = val/1550.003;  
+                        sqcm.value = val*6.4516;
+                        sqmm.value = val*645.16; 
+                        acre.value = val/6272640;
+                        hectare.value = val/15500031.000062;
+                    }
+                    function sqcmToOther(val){
+                        sqfeet.value = val*0.001076391;
+                        sqmetre.value = val/10000;  
+                        sqinch.value = val*0.15500031;
+                        sqmm.value = val*100; 
+                        acre.value = val/40468564.224 ;
+                        hectare.value = val/100000000;
+                    }
+                    function sqmmToOther(val){
+                        sqfeet.value =(val*0.001076391)/100;
+                        sqinch.value = (val*0.15500031)/100;  
+                        sqcm.value = val/100;
+                        sqmetre.value = (val/10000)/100; 
+                        acre.value = (val/40468564.224)/100;
+                        hectare.value = (val/100000000)/100;
+                    }
+                    function hectareToOther(val){
+                        sqfeet.value = val*107639.1041671;
+                        sqinch.value = val*15500031.000062;  
+                        sqcm.value = val*100000000;
+                        acre.value = val*2.471; 
+                        sqmetre.value = val*10000;
+                        sqmm.value = val*0.10000000000;
+                    }
+                    function acreToOther(val){
+                        sqfeet.value = val*43560;
+                        sqinch.value = val*6272640;  
+                        sqcm.value = val*40468564.224;
+                        sqmm.value = val*4046856422.4; 
+                        sqmetre.value = val*4046.8564;
+                        hectare.value = val*0.4046856;
+         
+                    }
+                    // *********************//
+        
+        
+        
+                    function convertToOthers(convertFrom,value){    
+                        switch(convertFrom){
+                            case "sqfeet" : sqfeetToOther (parseFloat(value)); break;
+                            case "sqmetre": sqmetreToOther(parseFloat(value)); break;
+                            case "sqinch" : sqinchToOther(parseFloat(value)); break;
+                            case "sqcm"   : sqcmToOther(parseFloat(value)); break;
+                            case "acre" : acreToOther (parseFloat(value)); break;
+                            case "sqmm"   : sqmmToOther (parseFloat(value)); break;
+                            case "hectare" : hectareToOther(parseFloat(value)); break;
+                        }
+                    }
+               
+            
+      document.querySelector("button").addEventListener("click", function () {
+        document.getElementById("Milliliters").value = "";
+        document.getElementById("Cubic_centimeters").value = "";
+        document.getElementById("Liters").value = "";
+        document.getElementById("Cubic_meters").value = "";
+        document.getElementById("gallons").value = "";
+        document.getElementById("cubic_inches").value = "";
+        document.getElementById("cubic_feet").value = "";
+      });
+      let Milliliters= document.getElementById("Milliliters");
+      let Cubic_centimeters = document.getElementById("Cubic_centimeters");
+      let Liters = document.getElementById("Liters");
+      let Cubic_meters = document.getElementById("Cubic_meters");
+      let gallons = document.getElementById("gallons");
+      let cubic_inches = document.getElementById("cubic_inches");
+      let cubic_feet = document.getElementById("cubic_feet");
+
+      function millilitersToOther(val) {
+        Cubic_centimeters.value = val;
+        Liters.value = val * 0.001;
+        Cubic_meters.value = val * 0.000001;
+        gallons.value = val * 0.000264;
+        cubic_inches.value = val * 0.061024;
+        cubic_feet.value = val * 0.000035;
+      }
+      function cubicCentimetersToOther(val) {
+        Milliliters.value = val;
+        Liters.value = val * 0.001;
+        Cubic_meters.value = val * 0.000001;
+        gallons.value = val * 0.000264;
+        cubic_inches.value = val * 0.061024;
+        cubic_feet.value = val * 0.000035;
+      }
+      function litersToOther(val) {
+        Milliliters.value = val * 1000;
+        Cubic_centimeters.value = val * 1000;
+        Cubic_meters.value = val * 0.001;
+        gallons.value = val * 0.264172;
+        cubic_inches.value = val * 61.02374;
+        cubic_feet.value = val * 0.035315;
+      }
+      function cubicMetersToOther(val) {
+        Milliliters.value = val * 1000000;
+        Liters.value = val * 1000;
+        Cubic_centimeters.value = val * 1000000;
+        gallons.value = val * 264.1721;
+        cubic_inches.value = val * 61023.74;
+        cubic_feet.value = val * 35.31467;
+      }
+      function gallonsToOther(val) {
+        Milliliters.value = val * 3785.412;
+        Cubic_centimeters.value = val * 3785.412;
+        Cubic_meters.value = val * 0.003785;
+        cubic_inches.value = val * 231;
+        cubic_feet.value = val * 0.133681;
+        Liters.value = val * 3.785412;
+      }
+      function cubicInchesToOther(val) {
+        Milliliters.value = val * 16.38706;
+        Cubic_centimeters.value = val * 16.38706;
+        Cubic_meters.value = val * 0.000016;
+        gallons.value = val * 0.004329;
+        cubic_feet.value = val * 0.000579;
+        Liters.value = val * 0.016387;
+      }
+      function cubicFeetToOther(val) {
+        Milliliters.value = val * 28316.85;
+        Cubic_centimeters.value = val * 28316.85;
+        Liters.value = val * 28.31685;
+        gallons.value = val * 7.480519;
+        Cubic_meters.value = val * 0.028317; 
+        cubic_inches.value = val * 1728;
+      }
+      // *********************//
+
+      function convertToOthers3(convertFrom, value) {
+        switch (convertFrom) {
+          case "Milliliters":
+            millilitersToOther(parseFloat(value));
+            break;
+          case "Cubic_centimeters":
+            cubicCentimetersToOther(parseFloat(value)); 
+            break;
+          case "Liters":
+            litersToOther(parseFloat(value));
+            break;
+          case "gallons":
+            gallonsToOther(parseFloat(value));
+            break;
+          case "cubic_feet":
+            cubicFeetToOther(parseFloat(value));
+            break;
+          case "cubic_inches":
+            cubicInchesToOther(parseFloat(value));
+            break;
+          case "Cubic_meters":
+            cubicMetersToOther(parseFloat(value));
+            break;
+        }
+      }
+    </script>
+  </body>
+</html>
