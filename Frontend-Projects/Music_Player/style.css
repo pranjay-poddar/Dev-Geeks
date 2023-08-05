@@ -1,0 +1,394 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+}
+
+/* Loader CSS */
+#loader {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#loader>h1 {
+    font-size: 4em;
+    animation: 200ms ease-in-out 100ms 10 loading;
+}
+
+/* Main Container CSS */
+main {
+    width: 100%;
+}
+
+#mainContainer {
+    height: 100%;
+    width: 100%;
+    max-height: 80vh;
+    /* display: flex; */
+    display: none;
+    background-color: #ffe6e6;
+}
+
+#headerContainer {
+    height: 12vh;
+    width: 100%;
+    /* background-color: rebeccapurple; */
+    display: flex;
+    align-items: center;
+}
+
+#logo {
+    font-size: 35px;
+    font-weight: 600;
+    font-family: sans-serif;
+    /* background-color: red; */
+    margin-left: 15px;
+}
+
+#songListContainer {
+    padding: 20px;
+    width: 100%;
+    height: calc(100% - 12vh);
+}
+
+.songList:nth-child(even) {
+    background-color: #fff1f1;
+}
+
+.songList:hover {
+    background-color: #ffe0e0;
+}
+
+.songList {
+    background-color: #ffffff;
+    height: 100%;
+    max-height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 15px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+}
+
+#songListContainer {
+    font-family: sans-serif;
+    font-weight: 500;
+}
+
+#songListContainer>section {
+    cursor: pointer;
+}
+
+
+/* Navbar */
+#navbar {
+    width: 100%;
+    max-width: 35vh;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    background-color: rgb(245, 245, 245);
+    border-right: 2px solid #dcdcdc;
+}
+
+#navbar>div {
+    height: 40px;
+    margin: 20px 0 0 0;
+    display: flex;
+}
+
+#searchContainer {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+#searchContainer>input {
+    width: 100%;
+    max-width: 90%;
+    height: 100%;
+    justify-content: center;
+    padding: 5px 30px 5px 5px;
+    margin-left: 15px;
+    border: 0;
+    border-bottom: 1px solid black;
+}
+
+#searchImg {
+    position: absolute;
+    right: 7%;
+    top: 23%;
+    height: -webkit-fill-available;
+    max-height: 18px;
+}
+
+.container {
+    align-items: center;
+    gap: 10px;
+    padding: 5px 0 5px 15px;
+}
+
+.container:hover {
+    background-color: #dcdcdc;
+}
+
+.container>img {
+    height: 100%;
+    max-height: 80%;
+    width: auto;
+}
+
+
+/* Player Container */
+#playerContainer {
+    display: none;
+    height: 100%;
+    width: 100%;
+    max-height: 20%;
+    border-top: 2px solid #dcdcdc;
+}
+
+#barContainer {
+    height: 100%;
+    max-height: 25%;
+    display: flex;
+    background-color: rgb(244, 244, 244);
+
+}
+
+#barContainer>div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.time {
+    height: 100%;
+    width: 100%;
+    max-width: fit-content;
+    padding: 0 10px;
+}
+
+#progressBar {
+    width: 100%;
+    padding: 0 2px;
+}
+
+#progressInput {
+    width: 100%;
+}
+
+#progressInput {
+    -webkit-appearance: none;
+    appearance: none;
+    background: red;
+    cursor: pointer;
+    height: 5px;
+    border-radius: 10px;
+}
+
+#progressInput::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    height: 20px;
+    width: 20px;
+    border: 6px solid white;
+    background-color: red;
+    border-radius: 50%;
+    transition: border 100ms ease-in;
+    box-shadow: 0px 0px 1px 1px rgb(194, 194, 194);
+}
+
+#progressInput::-webkit-slider-thumb:hover {
+    height: 20px;
+    width: 20px;
+    border-width: 4.5px;
+}
+
+/* infoContainer */
+#infoContainer {
+    height: 100%;
+    max-height: 75%;
+    background-color: rgb(237, 237, 237);
+    padding: 0px 10px;
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+}
+
+#songImgContainer {
+    height: 100px;
+    max-width: 100%;
+    aspect-ratio: 1;
+    /* background-color: blue; */
+    box-shadow: 0px 0px 1px 1px rgb(194, 194, 194);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#songImg {
+    display: block;
+    height: 70%;
+    aspect-ratio: 1;
+    object-fit: cover;
+    border-radius: 50%;
+    background-color: rebeccapurple;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: rotateImg infinite 4000ms linear;
+    animation-play-state: paused;
+}
+
+@keyframes rotateImg {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    25% {
+        transform: rotate(90deg);
+    }
+
+    50% {
+        transform: rotate(180deg);
+    }
+
+    75% {
+        transform: rotate(270deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+#songImg>img {
+    width: 100%;
+    max-width: 70%;
+}
+
+#info {
+    display: flex;
+}
+
+#infoContainer>div {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    max-width: 35%;
+}
+
+#songNameContainer {
+    width: 100%;
+    max-width: 78%;
+}
+
+#songName {
+    margin: auto;
+    width: 100%;
+    max-width: 90%;
+    display: block;
+    font-size: x-large;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+#controller {
+    justify-content: center;
+    max-width: fit-content;
+}
+
+.controlBtn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+}
+
+.controlBtn>img {
+    width: fit-content;
+    max-width: 45%;
+    display: block;
+}
+
+#options {
+    width: 100%;
+    justify-content: end;
+    /* display: block; */
+    /* padding-right: 25px; */
+}
+
+#options>.controlBtn>img {
+    height: 100%;
+    max-width: 30%;
+    cursor: pointer;
+}
+
+/* initializer */
+#handlePause {
+    display: none;
+}
+
+.playingAni {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    width: 13px;
+    height: 13px;
+}
+
+.playingAni>span {
+    width: 3px;
+    height: 100%;
+    background-color: rgb(255, 0, 0);
+    border-radius: 3px;
+    transform-origin: bottom;
+    animation: bounce 2.2s ease infinite alternate;
+    content: '';
+}
+
+.playingAni>span:nth-child(2) {
+    animation-delay: -2.2s; /* Start at the end of animation */
+}
+.playingAni>span:nth-of-type(3) {
+  animation-delay: -3.7s; /* Start mid-way of return of animation */
+}
+
+@keyframes bounce {
+    10% {
+        transform: scaleY(0.3);
+        /* start by scaling to 30% */
+    }
+
+    30% {
+        transform: scaleY(1);
+        /* scale up to 100% */
+    }
+
+    60% {
+        transform: scaleY(0.5);
+        /* scale down to 50% */
+    }
+
+    80% {
+        transform: scaleY(0.75);
+        /* scale up to 75% */
+    }
+
+    100% {
+        transform: scaleY(0.6);
+        /* scale down to 60% */
+    }
+}
