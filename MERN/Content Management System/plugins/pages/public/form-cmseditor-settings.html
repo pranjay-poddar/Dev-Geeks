@@ -1,0 +1,57 @@
+<div data---="form__cmseditor.form__if:settings;width:500;submit:cmseditorsettings/submit;icon:cog;title:@(Widget settings)" class="hidden">
+
+	<div id="settings-multioptions" data-scope="cmseditor.settings">
+		<div data-bind="?.options__show" class="hidden padding npb">
+			<div data---="multioptions__?.options__$id:cmseditor.settings"></div>
+		</div>
+		<div class="padding bg-smoke">
+			<div data---="input__?.hiddenlg__type:checkbox">@(Hide in large display)</div>
+			<div data---="input__?.hiddenmd__type:checkbox">@(Hide in medium display)</div>
+			<div data---="input__?.hiddensm__type:checkbox">@(Hide in small display)</div>
+			<div data---="input__?.hiddenxs__type:checkbox">@(Hide in extra small display)</div>
+		</div>
+	</div>
+	<nav>
+		<button name="submit"><i class="fa fa-check-circle"></i>@(APPLY)</button>
+		<button name="cancel">@(Cancel)</button>
+	</nav>
+
+</div>
+
+<script>
+
+	PLUGIN('cmseditorsettings', function(exports) {
+		exports.submit = function(hide) {
+			hide();
+			setTimeout(function() {
+
+				var form = cmseditor.settings;
+				var prev = cmseditor.widgetsettings[form.id];
+				var dep = FIND('#cmseditor.settings').dependencies();
+
+				// dep === Code lists
+
+				if (form.exports) {
+					form.exports.configure && form.exports.configure.call(dep, form.options, cmseditor.settings.target, prev);
+					cmseditor.widgetsettings[form.id] = form.options;
+				}
+
+				var editor = cmseditor.instance;
+				editor.change(true);
+
+				setTimeout(function() {
+					editor.autoresize();
+				}, 500);
+
+				var el = form.element;
+				el.tclass('hidden-xs', form.hiddenxs);
+				el.tclass('hidden-md', form.hiddenmd);
+				el.tclass('hidden-sm', form.hiddensm);
+				el.tclass('hidden-lg', form.hiddenlg);
+				var target = editor.getTarget();
+				editor.setTarget(null);
+				target && target.trigger('click');
+			}, 1200);
+		};
+	});
+</script>
