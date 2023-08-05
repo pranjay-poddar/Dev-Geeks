@@ -898,11 +898,11 @@ Happy Coding! -->
 <td align="center"> 282.</td>
 <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Js-Projects/Accordion Template">Accordion Template</a></td>
 
-</tr>
-
-
+<tr>
 <td align="center"> 284.</td>
 <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/cpp-projects/ATM Machine">ATM Machine</a></td>
+<td align="center"> 285.</td>
+<td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/c_projects/SeaShell">SeaShell</a></td>
 </tr>
 
 
