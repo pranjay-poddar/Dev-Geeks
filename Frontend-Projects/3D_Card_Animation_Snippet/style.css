@@ -1,0 +1,117 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;700&display=swap");
+
+html,
+body {
+	width: 100%;
+	height: 100%;
+	// background: #393e41;
+	font-family: "Montserrat", sans-serif;
+}
+
+.centered {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 3rem;
+	height: 100%;
+}
+
+.card {
+	position: relative;
+	height: 28rem;
+	width: 20rem;
+	aspect-ratio: 5 / 7;
+	color: #ffffff;
+	perspective: 50rem;
+	
+	.shadow {
+		position: absolute;
+		inset: 0;
+		background:
+			var(--url);
+		background-size: cover;
+		background-position: center;
+		opacity: 0.8;
+		filter: blur(2rem) saturate(0.9);
+		box-shadow: 0 -1.5rem 2rem -0.5rem rgba(0, 0, 0, 0.7);
+		transform: rotateX(var(--rotateX)) rotateY(var(--rotateY))
+				translate3d(0, 2rem, -2rem);
+	}
+
+	.image {
+		position: absolute;
+		inset: 0;
+		background: linear-gradient(to top, rgba(0, 0, 0, 0.5), transparent 40%),
+			var(--url);
+		background-size: cover;
+		background-position: center;
+		mask-image: var(--url);
+		mask-size: cover;
+		mask-position: center;
+
+		&.background {
+			transform: rotateX(var(--rotateX)) rotateY(var(--rotateY))
+				translate3d(0, 0, 0rem);
+		}
+
+		&.cutout {
+			transform: rotateX(var(--rotateX)) rotateY(var(--rotateY))
+				translate3d(0, 0, 4rem) scale(0.92);
+			z-index: 3;
+		}
+	}
+
+	.content {
+		position: absolute;
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-end;
+		inset: 0;
+		padding: 3.5rem;
+
+		transform: rotateX(var(--rotateX)) rotateY(var(--rotateY))
+			translate3d(0, 0, 6rem);
+		z-index: 4;
+	}
+
+	&::after,
+	&::before {
+		content: "";
+		position: absolute;
+		inset: 1.5rem;
+		border: #e2c044 0.5rem solid;
+		transform: rotateX(var(--rotateX)) rotateY(var(--rotateY))
+			translate3d(0, 0, 2rem);
+	}
+
+	&::before {
+		z-index: 4;
+	}
+	
+	&.border-left-behind::before {
+		border-left: transparent;
+	}
+	
+	
+	&.border-right-behind::before {
+		border-right: transparent;
+	}
+	
+	&.border-bottom-behind::before {
+		border-bottom: transparent;
+	}
+}
+
+h2 {
+	font-size: 1.25rem;
+	font-weight: 700;
+	margin-bottom: 0.5rem;
+	text-shadow: 0 0 2rem rgba(0, 0, 0, 0.5);
+}
+
+p {
+	font-weight: 300;
+	text-shadow: 0 0 2rem rgba(0, 0, 0, 0.5);
+}
+
+// TODO: Maybe add: transform-style: preserve-3d?
