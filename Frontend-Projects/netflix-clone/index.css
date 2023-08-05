@@ -48,6 +48,7 @@ header.black-bg{
     list-style: none;
     display: inline-flex;
     flex-direction: row;
+    margin-left: 10rem;
 }
 .nav-item{
     margin-right: 20px;

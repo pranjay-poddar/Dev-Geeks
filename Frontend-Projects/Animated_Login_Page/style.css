@@ -97,6 +97,9 @@ a {
 }
 .padding-bottom--15 {
   padding-bottom: 15px;
+  text-align: center;
+  font-family: Georgia, serif;
+  color: #5469d4;
 }
 
 
@@ -185,6 +188,10 @@ a.ssolink {
     display: block;
     text-align: center;
     font-weight: 600;
+    color: black;
+}
+a.ssolink span{
+  color:rgb(84, 105, 212) ;
 }
 .footer-link span {
     font-size: 14px;
