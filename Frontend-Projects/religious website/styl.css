@@ -1,0 +1,227 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  /* cursor:auto; */
+  /* font-family: 'Barlow', sans-serif;
+font-family: 'Bree Serif', serif; */
+}
+html{
+  scroll-behavior: smooth;
+}
+/* navigation bar */
+:root {
+  --navbar-height: 59px;
+}
+#navbar {
+  display: flex;
+  align-items: center;
+  position:relative;
+  top: 0px;
+}
+/* navigation bar:logo and img */
+#logo {
+  margin:auto 2px;
+}
+#logo img {
+  height: 72px;
+  margin: auto;
+  margin-top: 14px;
+  margin-left: 30px;
+}
+
+/* navigation bar: list styling */
+#navbar ul {
+  display: flex;
+  /* border: 2px solid red; */
+  margin-top: 27px;
+  margin-left: 40px;
+  font-family: "Pacifico", cursive;
+}
+#navbar::before {
+  content: "";
+  background-color: black;
+  position:absolute;
+  top:0px;
+  left:0px;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  opacity: 1;
+}
+#navbar ul li {
+  list-style: none;
+  font-size: 1.3rem;
+}
+#navbar ul li a {
+  color: white;
+  display: block;
+  padding: 2px 30px;
+  border-radius: 20px;
+  text-decoration: none;
+}
+#navbar ul li a:hover {
+  color: black;
+  background-color: white;
+}
+/* home section */
+#home {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 678px;
+  align-items: center;
+}
+#home::before {
+  content: "";
+  background: url(https://github.com/pranjay-poddar/Dev-Geeks/assets/104543751/5ce470cb-71fd-46ae-a5d8-31e1c5751152) no-repeat center
+    center/cover;
+  position: absolute;
+  top:0px;
+  left:0px;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  opacity: 0.89;
+}
+#home h1 {
+  color: rgb(0, 0, 0);
+  text-align: center;
+  font-family: "Kaushan Script", cursive;
+}
+#home p {
+  color: rgb(31, 29, 29);
+  text-align: center;
+  font-size: 1.5rem;
+  font-family: "Kaushan Script", cursive;
+}
+/* services section */
+#services {
+  margin: 34px;
+  margin-top: 3px;
+  margin-bottom: 32px;
+  display: flex;
+  padding: 2px;
+}
+#services .box {
+    /* border: 2px solid brown; */
+    padding: 20px;
+    margin: 2px 35px;
+    border-radius: 30px;
+    background-color:whitesmoke;
+    box-shadow: 2px 5px 10px -2px #000000b5;
+}
+#services .box img {
+  height: 187px;
+  margin: auto;
+  display: block;
+}
+#services .box p{
+    font-family: "Kaushan Script", cursive;
+}
+#services .box h2:hover {
+  font-size:2.5rem ;
+  
+}
+
+/* utility classes */
+.h-primary {
+  font-size: 3.8rem;
+  padding: 12px;
+  font-family: "Kaushan Script", cursive;
+
+}
+.h-secondary {
+  font-size: 2.3rem;
+  padding: 12px;
+  font-family: "Kaushan Script", cursive;
+}
+.btn {
+  padding: 6px 20px;
+  border: 2px solid white;
+  background-color: #29606f75;
+  color: White;
+  margin: 18px;
+  font-size: 1.5rem;
+  border-radius: 19px;
+  cursor: pointer;
+}
+.center {
+  text-align: center;
+
+}
+/* client-section  */
+#client-section{
+    /* height: 540px; */
+    position: relative;
+
+}
+#client-section::before{
+    content: "";
+    position: absolute;
+    background: rgb(255,255,255);
+background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(246,246,250,1) 35%, rgba(205,247,255,1) 100%, rgba(0,212,255,1) 100%);
+   
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.4;
+
+}
+
+#clients{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+#clients img{
+    height:154px
+}
+.client-item{
+    padding: 34px;
+}
+/* contact section  */
+#contact{
+    position: relative;
+
+}
+#contact::before{
+    content: "";
+    position: relative;
+    position: absolute;
+    width:100%;
+    height: 100%;
+    z-index: -1;
+    opacity:0.6;
+    background:url(img/food/pexels-photo-349610.jpeg) no-repeat center center/cover;
+
+}
+footer{
+    background: black;
+    color: white;
+    padding: 9px 20px;
+}
+#contact-box input,
+#contact-box textarea{
+    width: 100%;
+    padding: 0.5rem;
+    border: 2px solid white;
+    border-radius: 20px;
+    font-size: 1.1rem;
+    font-family: "Pacifico", cursive;
+
+
+}
+#contact-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 34px;
+}
+#contact-box form{
+    width:30%
+}
+#contact-box label{
+    font-size: 1.3rem;
+    font-family: "Pacifico", cursive;
+
+}
