@@ -1,0 +1,205 @@
+
+                                                17-02-2023 Friday 
+
+Nodejs core
+express js
+mongoose js
+passport js
+multer js
+axios
+fetch
+socket io
+nodemailer
+googleapi's 
+
+                                                18-02-2023 Saturday
+
+Types of language
+programming language - Java c cpp
+markup language - html
+Scripting language - js python 
+
+Compiler and Interpreture
+ Compiler: 
+    It is a translator which takes input i.e., High-Level Language, and produces an output of low-level language i.e. machine or assembly language. 
+    A compiler is more intelligent than an assembler it checks all kinds of limits, ranges, errors, etc.
+    But its program run time is more and occupies a larger part of memory. It has a slow speed because a compiler goes through the entire program and then translates the entire program into machine codes.
+
+    	It converts the source code into object code.
+
+ Interpreter: 
+    An interpreter is a program that translates a programming language into a comprehensible language. –  
+    It translates only one statement of the program at a time.
+    Interpreters, more often than not are smaller than compilers.
+
+        It does not convert source code into object code instead it scans it line by line
+
+
+var let const
+
+truthy falsy
+
+decliration
+
+initialization
+
+Windows
+
+browser apis
+
+server
+
+this
+
+
+                                       25-02-2023 Saturday
+
+Loops and Functions
+
+Method : .Join(), .split()
+
+Loops
+for, while, do-while, foreach,for...of,for..in
+
+Note- Break doesn't works in foreach
+
+                                       26-02-2023 Sunday
+
+Functions
+
+es5-before
+Functions statement
+Functions expression
+Anonumous Functions
+es6-after
+Fat Arrow Functions
+Fat Arrow with one parameter
+Fat Arrow with implicit return
+
+
+                                       27-02-2023 Monday
+
+iife(s) -> imediatly invoked function expression
+Objects
+
+                                       03-03-2023 Friday
+
+higher order Functions
+   -> any function accepting another function as parameter or teturning a function (Note always not some time)
+
+How array an objects
+   -> a[-1000] = 2 => {-1000 : 2}
+
+helper/method/inbuilt functions -> pop(),push(),shift(),unshift()
+
+map
+   -> structure is almost same as foreach,but it requires you to return somthing, it creates a blank imaginary array and
+   everytime the value you return is placed inside that array
+   
+filters
+   -> structure exactly same as map, but you don't return value in filter but true or false
+   ex - make and arry with 100 space and fill it with null without using loop
+
+
+                                       04-03-2023 Saturday
+
+This keyword
+call apply and binding
+
+imp for interview
+
+this keyword - this keyword is especial type of keyword which changes its value according to the context
+
+all the html code is an object for JavaScript
+
+global - Windows
+function - Windows
+method - object
+
+es5 function inside method = Windows
+es6 function inside method = object
+
+in the arrow function this takes its value from prents
+this in call back function it takes its value which is just before the nears method 
+
+whenever we run fucntion this takes it value windows as by default 
+but if we want to changes its value to some other object means instead of taking value windows it takes some other object 
+then we use call apply and bind
+
+call
+call takes more than two arguments which is not a good practice
+Call() Method: The call method is basically used to invoke the function with different this object. In JavaScript, this refers to an object. It depends on how we are calling a particular function. In the global scope, this refers to the global object window. Inside function also this refers to the global object window.
+
+In strict mode, when we use any function then this refers to undefined. In functions like call, this could refer to a different object. With the help of the call method, we can invoke a particular function with different objects.
+
+apply
+   apply takes only two arguments
+
+bind
+   bind return an bounded function 
+   so than we can call it when ever we want to call 
+
+
+                                          Node 
+
+
+
+Install Node js
+lts-long terrm support
+in the first java scirpt file create a var A with a value 12 var = 12 now we need to export iton a second new file 
+we need to import it
+to export we do: module.exports = (anything you want) 
+in new file to import require("./file name")
+
+/ - root folder
+. same folder
+./ same folder 
+.. one folder back
+../ - one folder back
+../../ two folders back
+
+npx nodemon script => it will reload by it self
+<%= 2+3%>
+
+package installation
+npm i packageName
+Express
+ejs
+
+route creation 
+    const express = require('express')
+    const app = express()
+
+creation
+    app.get('/', function (req, res) {
+    res.send('Hello World')
+    })
+
+    app.listen(3000)
+
+express views
+
+
+saari aisis files jo kin frontend se taaluk rakhti hai ejs ko chhodh kar unhe kahte hai static files aur uske liye
+public folder bana padta hai 
+
+__dirname
+path.join(dirname,dirname);
+
+
+backend ke route se value ejs bhejana
+
+
+
+
+
+there are only three ways in you can change your url
+    1. Anchar taa <a> </a> prams
+    2. get method - query
+    3. post method - body
+
+get -> req.query
+post -> req. body
+
+hum jab bhi form submit karte hai to wo form bhi kisi route par jaata hai wo  data leker jo appne likha tha form mei ab kuyki data gay hai backend par to shayad hame uski jarurat pade, aur jarurat padne par aapko use karna padega, to access kaise karoge?
+aisi koi bhi imput field jismein name naa ho wo bakcedn me nahi jaayegi
