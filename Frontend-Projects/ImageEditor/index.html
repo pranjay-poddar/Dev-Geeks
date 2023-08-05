@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Image Editor</title>
+</head>
+
+<body>
+    <h2>Online Image Viewer and Editor</h2>
+    <div class="container">
+        <div class="input-section">
+            <input type="text" id="imageLink" placeholder="Enter Image Link">
+            <button onclick="showImage()">Show Image</button>
+        </div>
+        <div class="edit-container">
+            <div class="image-container" id="imageContainer">
+                <!-- Image will be displayed here -->
+                <img src="https://dfstudio-d420.kxcdn.com/wordpress/wp-content/uploads/2019/06/digital_camera_photo-980x653.jpg"
+                    id="image" alt="Image">
+            </div>
+            <div class="edit-options">
+                <div class="option">
+                    <label for="blur">Blur</label>
+                    <input type="range" id="blur" min="0" max="10" value="0" step="0.1">
+                </div>
+                <div class="option">
+                    <label for="brightness">Brightness</label>
+                    <input type="range" id="brightness" min="0" max="200" value="100" step="1">
+                </div>
+                <div class="option">
+                    <label for="opacity">Opacity</label>
+                    <input type="range" id="opacity" min="0" max="100" value="100" step="1">
+                </div>
+                <div class="option">
+                    <label for="contrast">Contrast</label>
+                    <input type="range" id="contrast" min="0" max="200" value="100" step="1">
+                </div>
+                <div class="option">
+                    <label for="greyscale">Greyscale</label>
+                    <input type="range" id="greyscale" min="0" max="100" value="0" step="1">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./main.js"></script>
+
+</body>
+
+</html>

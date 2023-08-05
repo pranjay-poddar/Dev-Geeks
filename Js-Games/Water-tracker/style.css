@@ -1,0 +1,326 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Caveat:wght@700&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: "Roboto", sans-serif;
+  color: rgb(49, 49, 49, 0.7);
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.main-container {
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  max-width: 1600px;
+  max-height: 800px;
+  margin: 0 auto;
+}
+
+.main-container:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50px;
+  width: 20%;
+  height: 100%;
+  background: url(bg-2.png) no-repeat left bottom;
+  opacity: 0.7;
+  z-index: -1;
+}
+
+.main-container:before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 30%;
+  height: 100%;
+  background: url(bg-4.png) no-repeat right bottom;
+  opacity: 0.7;
+  z-index: -1;
+}
+
+h1 {
+  padding: 30px 0 10px;
+  text-align: center;
+  font-family: "Caveat", cursive;
+  font-size: 36px;
+  color: rgb(146, 216, 227);
+}
+p {
+  padding-bottom: 15px;
+  margin: auto;
+  width: 70%;
+  text-align: center;
+  line-height: 1.5;
+  color: rgba(49, 49, 49, 0.8);
+}
+
+.attribution {
+  position: absolute;
+  bottom: 15px;
+  right: 180px;
+  color: rgba(49, 49, 49, 0.3);
+}
+
+.container {
+  width: 100%;
+  height: calc(100% - 149px);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.container:before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url(Bottle\ of\ water-bro.svg) no-repeat center bottom;
+  background-size: 55% 100%;
+  opacity: 0.7;
+  z-index: -1;
+}
+
+.section-a,
+.section-b {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+  height: 100%;
+}
+
+.goal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  font-weight: 500;
+}
+
+.custom-select {
+  margin: 5px;
+}
+select {
+  padding: 5px;
+  width: 150px;
+  font: 500 20px "Roboto", sans-serif;
+  border-color: rgb(49, 49, 49, 0.5);
+  color: rgb(49, 49, 49, 0.7);
+  border-radius: 5px;
+  text-align: center;
+}
+
+select:focus {
+  outline: none;
+  border-color: rgba(146, 216, 227, 0.8);
+  border-width: 2px;
+}
+
+.cup {
+  height: 370px;
+  width: 225px;
+  border: 2px solid rgb(49, 49, 49, 0.7);
+  border-top: none;
+  border-radius: 0 0 10px 10px;
+  display: flex;
+  flex-direction: column;
+  background: rgba(255, 255, 255, 0.7);
+}
+
+.remained {
+  flex: 1;
+  width: 100%;
+  transition: flex 1s ease;
+}
+
+.percentage {
+  height: 0;
+  width: 100%;
+  text-align: center;
+  background: rgba(146, 216, 227, 0.8);
+  transition: 1s ease;
+}
+
+.remained,
+.percentage,
+.cup-small {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.remained span {
+  font-weight: bold;
+  font-size: 20px;
+  margin-bottom: 5px;
+}
+
+.cup-small {
+  height: 85px;
+  width: 62.5px;
+  border-radius: 0 0 5px 5px;
+  font-size: 14px;
+  background: rgba(146, 216, 227, 0.8);
+  overflow: hidden;
+  transition: 0.3s ease;
+}
+
+#cups {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 10px;
+}
+
+.full {
+  position: relative;
+}
+
+.full:after {
+  font-family: "Font Awesome 5 Free";
+  content: "\f580";
+  transform: scale(1.8, 1.8);
+  color: rgb(146, 216, 227);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  left: 0;
+  top: -100%;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  transition: 0.3s ease;
+  animation: fill 1s forwards ease;
+  z-index: 1;
+}
+
+@keyframes fill {
+  from {
+    top: -100%;
+  }
+  to {
+    top: 0;
+  }
+}
+
+@media (max-height: 700px) {
+  .cup {
+    height: 246px;
+    width: 172px;
+  }
+  .cup-small {
+    height: 64px;
+    width: 53px;
+  }
+}
+
+@media (max-width: 800px) {
+  body {
+    overflow: visible;
+    align-items: flex-start;
+  }
+  .main-container,
+  body {
+    overflow: visible;
+  }
+  .intro {
+    margin: 50px 0 20px 0;
+  }
+  .main-container {
+    height: auto;
+    max-height: none;
+  }
+  .main-container:before {
+    display: none;
+  }
+  .main-container:after {
+    width: 60%;
+  }
+  .attribution {
+    right: auto;
+    width: 100%;
+    text-align: center;
+  }
+  .container {
+    overflow: visible;
+    flex-direction: column;
+  }
+  .container:before {
+    display: none;
+  }
+  .section-a {
+    /* transform: translateX(-80px); */
+    margin-bottom: 80px;
+    width: 100%;
+    position: relative;
+  }
+  .section-a:before {
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background: url(Bottle\ of\ water-bro.svg) no-repeat 100% 100%;
+    background-size: 50%;
+    z-index: -1;
+    opacity: 0.9;
+  }
+  .section-b {
+    margin-bottom: 80px;
+  }
+}
+
+@media (max-width: 500px) {
+  .main-container:after {
+    display: none;
+  }
+  .intro {
+    margin-bottom: 0;
+  }
+  .section-a {
+    margin-bottom: 50px;
+    padding: 20px 0 30px 0;
+    transform: translateX(0);
+    overflow: hidden;
+    position: sticky;
+    top: 0;
+    z-index: 2;
+    background: #fff;
+  }
+  .section-b {
+    z-index: 1;
+  }
+  .cup {
+    height: 270px;
+    width: 200px;
+  }
+  .cup-small {
+    height: 85px;
+    width: 62.5px;
+  }
+  .section-a:before {
+    right: -80px;
+    bottom: 30px;
+    width: 80%;
+    height: 100%;
+    background: url(Bottle\ of\ water-bro.svg) no-repeat 100% 100%;
+    opacity: 0.6;
+  }
+}

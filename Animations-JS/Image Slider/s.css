@@ -1,0 +1,26 @@
+.image-slideshow h1{
+    text-align:center;
+    font-size: 40px;
+    color: rgb(167, 117, 81);
+    padding: 50px 0 10px 0;
+  }
+  .image-slideshow {
+  max-width: 700px;
+  position: relative;
+  margin: auto;
+  }
+  .image-slideshow img {
+  width: 100%
+  }
+  .fade {
+  animation-name: fade;
+  animation-duration: 2s;
+  }
+  @keyframes fade {
+  from {opacity: .5}
+  to {opacity: 1}
+  }
+
+  *{
+      background-color: black;
+  }
