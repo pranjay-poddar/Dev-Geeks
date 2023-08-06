@@ -1,0 +1,195 @@
+body{
+    font-family: 'Press Start 2P', cursive;
+    background: rgb(232,153,26);
+    background: linear-gradient(135deg, rgba(232,153,26,1) 0%, rgba(232,144,49,1) 24%, rgba(234,238,238,1) 100%);
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+    justify-content: center;
+    font-size: 1.3rem;
+}
+
+
+.coin{
+    height: 170px;
+    width: 160px;
+    text-align: center;
+    justify-content: center;
+    border-radius: 50%;
+    margin-left: 37%;
+    padding: 10px;
+    margin-bottom: 3%;
+    -webkit-transform-style: preserve-3d;
+            transform-style: preserve-3d;
+}
+
+.head,.tail{
+  height: 170px;
+  width: 158px;
+  position: absolute;
+  left: 44%;
+  justify-content: center;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+}
+
+.tail{
+  transform: rotateX(180deg);
+}
+
+@keyframes spin-tails{
+  0%{
+    transform: rotateX(0);
+  }
+  100%{
+    transform: rotateX(1980deg);
+  }
+}
+
+@keyframes spin-heads{
+  0%{
+      transform: rotateX(0);
+  }
+  100%{
+      transform: rotateX(2160deg);
+  }
+}
+
+.Score{
+    background-color: aliceblue;
+    margin: auto;
+    height: 16vh;
+    width: 25%;
+    border: 1px solid black;
+    border-radius: 140px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.party{
+  /* display: inline-block; */
+  
+  text-align: center;
+  padding: 5px 15px;
+  font-size: 1rem;
+}
+
+.points1,.points2{
+  flex-basis: 40%;
+  margin-top: 0;
+  margin-left: 24px;
+}
+
+.win_score{
+  margin-right: 0px;
+}
+
+.controller{
+    margin-top: 3%;
+    margin-bottom: 4%;
+}
+
+.game-text{
+  padding-bottom: 0;
+}
+
+.btn{
+  align-items: center;
+  background-clip: padding-box;
+  background-color: initial;
+  border-style: none;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 800;
+  justify-content: center;
+  min-height: 64px;
+  padding: 19px 26px;  
+  position: relative;
+  text-align: center;
+  box-shadow: 3px 4px 4px gray;
+}
+
+@media (min-width: 768px) {
+  .btn {
+    padding: 19px 32px;
+  }
+}
+
+.btn:before {
+  background-image: linear-gradient(92.83deg, #ff7426 0, #f93a13 100%);
+  content: "";
+  display: block;
+  height: 100%;
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: -2;
+}
+
+.btn:after {
+  background-color: initial;
+  background-image: linear-gradient(#541a0f 0, #0c0d0d 100%);
+  bottom: 4px;
+  content: "";
+  display: block;
+  left: 4px;
+  overflow: hidden;
+  position: absolute;
+  right: 4px;
+  top: 4px;
+  transition: all 100ms ease-out;
+  z-index: -1;
+}
+
+.btn:hover:not(:disabled):after {
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  transition-timing-function: ease-in;
+  opacity: 0;
+}
+
+
+/* media queries */
+@media (max-width: 767px) {
+  body{
+    min-height: 100vh;
+    font-size: 1rem;
+    padding-bottom: 20%;
+  }
+
+  .coin {
+    height: 120px;
+    width: 110px;
+    margin-left: 25%;
+    padding: 15% 0 ;
+    text-align: center;
+}
+
+  .Score {
+
+      height: 12vh;
+      width: 78%;
+      flex-wrap: wrap;
+      padding-bottom: 20px;
+      margin-bottom: 20%;
+      max-height: 100%;
+      max-width: 100%;
+      /* overflow: hidden; */
+  }
+
+  .head,
+  .tail {
+      height: 120px;
+      width: 108px;
+      left: 40%;
+  }
+}
