@@ -1,0 +1,50 @@
+body {
+    background-image: url('imgs/bg.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: top center;
+    background-size: cover;
+
+    font-family: system-ui;
+}
+
+#heading_area {
+
+    position: absolute;
+    width: 400px;
+    height: 80px;
+    z-index: 15;
+    top: 31rem;
+    left: 46%;
+    cursor: pointer;
+    margin: -100px 0 0 -150px;
+    color: #16344e;
+    background-color: rgba(217, 207, 63, 0.286);
+
+
+    align-items: center;  /* These 3 lines are added to align the innertext in center */
+    justify-content: center;
+    display: flex;
+}
+
+#heading_area:hover {
+    box-shadow: 0 0 75px rgba(0, 0, 0, 0.20), 0 5px 20px rgba(0, 0, 0, 0.2);
+    mix-blend-mode: hard-light;
+    filter: grayscale(80%); 
+    opacity: 0.8;
+
+    transition: transform 1.25s cubic-bezier(0.215, 0.61, 0.355, 1), box-shadow 1.25s cubic-bezier(0.215, 0.61, 0.355, 1), box-shadow 1.25s cubic-bezier(0.215, 0.61, 0.355, 1), filter 1.25s cubic-bezier(0.215, 0.61, 0.355, 1), opacity 1.25s cubic-bezier(0.215, 0.61, 0.355, 1);
+    transform: perspective(1600px) translate3d(0, 0, 0) scale(1.1);
+    will-change: transform;
+}
+
+img {
+    max-width: 250px;
+    display: block;
+    margin-top: 5.5rem;
+    margin-left: auto;
+    margin-right: auto;
+    border: 8px ridge #3e7aaf;
+    border-radius: 145px;
+    padding: 5px;
+}
