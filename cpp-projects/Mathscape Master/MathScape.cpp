@@ -489,12 +489,77 @@ void polygon()
     cout << "Area of the " << numSides << "-sided polygon: " << area << endl;
 }
 
+void lines(){
+
+    int choice;
+    cout<<"1. Calculate slope of line"<<endl;
+    cout<<"2. Check if two lines are parallel"<<endl;
+    cout<<"3. Check if two lines are perpendicular"<<endl;
+    cout<<"4. Distance between a line and a point"<<endl;
+    cout<<"Enter your choice"<<endl;
+    cin>>choice;
+
+    double x1,y1,x2,y2,slope1;//line1
+    double X1,Y1,X2,Y2,slope2;//line2
+    double Xo,Yo;//point
+    double A, B, C;
+    double dist;
+
+    switch(choice){
+        case 1:
+            cout<<"Enter coordiantes of first point on line: "<<endl;
+            cin>>x1>>y1;
+            cout<<"Enter coordiantes of second point on line: "<<endl;
+            cin>>x2>>y2;
+            slope1=(y2 - y1) / (x2 - x1);
+            cout<<"Slope of line is: "<<slope1<<endl;
+            break;
+        case 2:
+            cout<<"Enter coordiantes of first point on line1: "<<endl;
+            cin>>x1>>y1;
+            cout<<"Enter coordiantes of second point on line2: "<<endl;
+            cin>>X2>>Y2;
+            slope1=(y2 - y1) / (x2 - x1);
+            slope2=(Y2 - Y1) / (X2 - X1);
+            if(slope1==slope2){
+                cout<<"lines are parallel"<<endl;
+            }
+            else{
+                cout<<"lines are not paraller"<<endl;
+            }
+            break;
+        case 3:
+            cout<<"Enter coordiantes of first point on line1: "<<endl;
+            cin>>x1>>y1;
+            cout<<"Enter coordiantes of second point on line2: "<<endl;
+            cin>>X2>>Y2;
+            slope1=(y2 - y1) / (x2 - x1);
+            slope2=(Y2 - Y1) / (X2 - X1);
+            if(slope1*slope2==-1){
+                cout<<"lines are perpendicular"<<endl;
+            }
+            else{
+                cout<<"lines are not perpendicular"<<endl;
+            }
+        case 4:
+            cout<<"enter coordinates of point"<<endl;
+            cin>>Xo>>Yo;
+            cout << "Enter the coefficients A, B, and C of the line (Ax + By + C = 0): ";
+            cin >> A >> B >> C;
+            dist=abs(A * Xo + B * Yo + C) / pow((A * A + B * B),0.5);
+            cout<<"Distance between point and line is: "<<dist<<endl;
+            break;
+        default:
+            cout<<"Invalid Choice"<<endl;
+    }
+}
+
 int main()
 {
 
     cout << "\n====WELCOME TO MATHSCAPE MASTER====" << endl
          << endl;
-    cout << "1. Volume Calculation\n\n2. Surface Area Calculation\n\n3. Triangle Solver\n\n4. 2D Distance Calculator\n\n5. Circle Properties/Calculations\n\n6. Ellipse Properties\n\n7. Polygon Area" << endl;
+    cout << "1. Volume Calculation\n\n2. Surface Area Calculation\n\n3. Triangle Solver\n\n4. 2D Distance Calculator\n\n5. Circle Properties/Calculations\n\n6. Ellipse Properties\n\n7. Polygon Area\n\n8. Lines and its Properties" << endl;
     int choice;
     cout << endl;
     cout << "Enter Your Choice" << endl;
@@ -521,6 +586,9 @@ int main()
         break;
     case 7:
         polygon();
+        break;
+    case 8:
+        lines();
         break;
     default:
         cout << "Invalid Choice" << endl;
