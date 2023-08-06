@@ -210,12 +210,11 @@ nav .fas {
 .btn {
     display: inline-block;
     text-decoration: none;
-    color: rgb(209, 98, 19);
-    border: 2px solid #865204;
+    color: white;
     border-radius: 24px;
     padding: 8px 16px;
     font-size: 17px;
-    background: transparent;
+    background: #c2afa3;
     position: relative;
     cursor: pointer;
 }
