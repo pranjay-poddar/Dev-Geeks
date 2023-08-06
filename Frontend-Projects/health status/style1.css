@@ -1,0 +1,191 @@
+@media screen and (min-width: 64rem) {
+    .home-page .module-list-text {
+        font-size:1.375rem;
+        line-height: 2rem
+    }
+}
+
+.home-page .module-header {
+    margin-bottom: 1.25rem;
+    padding: 0 1rem
+}
+
+@media screen and (min-width: 64rem) {
+    .home-page .module-header {
+        padding:0;
+        margin-bottom: 1.875rem
+    }
+}
+
+.home-page .module-sub-header {
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    border-bottom: 1px solid #c6cedb;
+    padding-bottom: .625rem
+}
+
+.home-page .module-sub-header h2 {
+    color: #113551;
+    -webkit-box-flex: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    font-size: 1.125rem;
+    font-weight: 600;
+    margin: 0;
+    padding: 0
+}
+
+@media screen and (min-width: 48rem) {
+    .home-page .module-sub-header h2 {
+        font-size:1.25rem;
+        line-height: 1.5625rem
+    }
+}
+
+@media screen and (min-width: 64rem) {
+    .home-page .module-sub-header h2 {
+        font-size:1.5rem;
+        line-height: 1.875rem
+    }
+}
+
+.home-page .module-sub-header-link {
+    color: #0078c2;
+    font-size: 1.125rem;
+    font-weight: 400;
+    text-decoration: none
+}
+
+.home-page .global-container-2 .module-f-hs h3,.home-page .global-container-2 .module-f-idc h3 {
+    border-bottom: none!important
+}
+
+.home-page .global-container-2 .module-f-hs {
+    padding-top: 0!important
+}
+
+.home-page .hp-top {
+    margin: 1.25rem 0 3rem 0
+}
+
+@media screen and (min-width: 64rem) {
+    .home-page .hp-top {
+        margin:1.875rem 0 3.75rem 0
+    }
+}
+
+.home-page .hp-top .module-list {
+    row-gap: 2.5rem;
+    -webkit-column-gap: 1.25rem;
+    -moz-column-gap: 1.25rem;
+    column-gap: 1.25rem;
+    padding: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap
+}
+
+@media screen and (min-width: 48rem) {
+    .home-page .hp-top .module-list {
+        -webkit-box-orient:horizontal;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+        flex-direction: row
+    }
+}
+
+.home-page .hp-top .module-list-text {
+    color: #4a4a4a;
+    font-size: 1.125rem;
+    font-weight: 400;
+    line-height: 1.75rem;
+    margin: 0
+}
+
+@media screen and (min-width: 64rem) {
+    .home-page .hp-top .module-list-text {
+        font-size:1.375rem;
+        line-height: 2rem
+    }
+}
+
+.home-page .hp-top .module-list>li {
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex
+}
+
+.home-page .hp-top .module-list>li:first-child>a {
+    gap: .625rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap
+}
+
+@media screen and (min-width: 48rem) {
+    .home-page .hp-top .module-list>li:first-child>a {
+        gap:2.5rem
+    }
+}
+
+@media screen and (min-width: 64rem) {
+    .home-page .hp-top .module-list>li:first-child>a:hover img.module-list-image {
+        opacity:.5
+    }
+}
+
+@media screen and (min-width: 48rem) {
+    .home-page .hp-top .module-list>li:first-child>a {
+        -webkit-box-orient:horizontal;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+        flex-direction: row
+    }
+}
+
+.home-page .hp-top .module-list>li:first-child>a .module-list-title {
+    color: #0078c2;
+    font-size: 1.5rem;
+    line-height: 1.875rem;
+    margin: .375rem 0
+}
+
+@media screen and (min-width: 64rem) {
+    .home-page .hp-top .module-list>li:first-child>a .module-list-title {
+        font-size:2.625rem;
+        line-height: 3.3125rem;
+        margin-top: .875rem
+    }
+}
+
+.home-page .hp-top .module-list>li:not(:first-child) {
+    -webkit-box-flex: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1
+}
+
+@media screen and (min-width: 48rem) {
+    .home-page .hp-top .module-list>li:not(:first-child) {
+        margin:0;
+        width: 30%
+    }
+}
