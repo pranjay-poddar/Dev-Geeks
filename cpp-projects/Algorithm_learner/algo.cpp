@@ -1,5 +1,6 @@
 #include <iostream>
 #include <algorithm>
+#include<vector>
 using namespace std;
 
 // PRINTING ARRAY
@@ -354,6 +355,123 @@ int staircase(int mat[][100], int r, int c, int target)
     return 0;
 }
 
+void Prime(){
+    cout << "-----------------------------" << endl;
+    cout<<"COUNT PRIMES - SIEVE OF ERATOSTHENES"<<endl;
+    cout << "-----------------------------" << endl;
+    cout<<"DESCRIPTION"<<endl;
+    cout << "-----------------------------" << endl;
+    cout<<"The 'Count Prime' algorithm is used to find the number of prime numbers that exist within a given range [M, N]. The goal is to count how many prime numbers are present between the two specified integers M and N (both inclusive).\nOne of the most efficient algorithms to solve this problem is the 'Sieve of Eratosthenes'.It works as follows:\n\nInitialize: Create an array or list of size N+1, where each element represents a number from 0 to N. Initially, mark all elements as potential primes.\n\nStarting Point: Begin with the first prime number 2.\n\nMark Multiples: Starting from 2, mark all its multiples as non-prime. To do this, iterate through the list and mark numbers that are multiples of 2 as non-prime (i.e., set them as false).\n\nNext Prime: Move to the next unmarked number greater than the previous prime (in this case, 3) and mark all its multiples as non-prime.\n\nRepeat: Continue this process until you reach the square root of N. At this point, all remaining unmarked numbers are prime."<<endl;
+    cout << "-----------------------------" << endl;
+    cout<<"TIME COMPLEXITY"<<endl;
+    cout << "-----------------------------" << endl;
+    cout<<"The time complexity of the Count Prime algorithm using the Sieve of Eratosthenes is O(N log log N), where N is the upper limit of the range of numbers for which we want to count prime numbers"<<endl;
+    cout << "-----------------------------" << endl;
+    int n;
+    cout<<"Enter the Number til which you want to count primes: ";
+    cin>>n;
+    cout<<endl;
+    vector<bool> prime(n+1,true);
+        int count=0;
+        prime[0]=prime[1]=false;
+        for(int i=2;i<n;i++){
+            if(prime[i]){
+                count++;
+            }
+            for(int j=2*i;j<n;j=j+i){
+                prime[j]=0;
+            }
+            
+        }
+        cout<<endl;
+        cout<<"The number of prime numbers between 1-"<<n<<" are "<<count<<endl;
+}
+
+void GCD(){
+
+    cout << "-----------------------------" << endl;
+    cout<<"GCD-EUCLIDEAN ALGORITHM"<<endl;
+    cout << "-----------------------------" << endl;
+    cout<<"DESCRIPTION"<<endl;
+    cout << "-----------------------------" << endl;
+    cout<<"The Euclidean Algorithm is a classic and efficient method used to find the Greatest Common Divisor (GCD) of two non-negative integers, let's call them a and b. The GCD of two numbers is the largest positive integer that divides both a and b without leaving any remainder.\nThe Euclidean Algorithm is based on the following property: If we have two positive integers a and b, where a > b, then the GCD of a and b is the same as the GCD of b and the remainder of the division a by b."<<endl;
+    cout << "-----------------------------" << endl;
+    cout<<"TIME COMPLEXITY"<<endl;
+    cout << "-----------------------------" << endl;
+    cout<<"The Euclidean Algorithm is very efficient and has a time complexity of O(log min(a, b)), where a and b are the two input integers"<<endl;
+    cout << "-----------------------------" << endl;
+    int a,b;
+    cout<<"Enter a"<<endl;
+    cin>>a;
+    cout<<"Enter b"<<endl;
+    cin>>b;
+    int remainder;
+    while (b != 0) {
+        remainder = a % b;
+        cout << a << " = " << a / b << " * " << b << " + " << remainder << endl;
+        a = b;
+        b = remainder;
+    }
+    cout << "GCD is " << a << endl;
+}
+
+void fact(){
+    cout << "-----------------------------" << endl;
+    cout<<"FACTORIAL"<<endl;
+    cout << "-----------------------------" << endl;
+    cout<<"DESCRIPTION"<<endl;
+    cout << "-----------------------------" << endl;
+    cout<<"The factorial algorithm is used to compute the factorial of a non-negative integer. The factorial of a non-negative integer n, denoted by n!, is the product of all positive integers from 1 to n."<<endl;
+    cout << "-----------------------------" << endl;
+    cout<<"TIME COMPLEXITY"<<endl;
+    cout << "-----------------------------" << endl;
+    cout<<"The time complexity is O(n), where n is the number whose factorial is to be calculated"<<endl;   
+    cout << "-----------------------------" << endl;
+    int n;
+    cout<<"Enter n: ";
+    cin>>n;
+    cout<<endl;
+    int result=1;
+    for(int i=1;i<=n;i++){
+        cout<<"result = "<<result<<"X"<<i<<endl;
+        result=result*i;
+    }
+    cout<<"Factorial of "<<n<<" is "<<result<<endl;
+}
+
+void fib(){
+    cout << "-----------------------------" << endl;
+    cout<<"FACTORIAL"<<endl;
+    cout << "-----------------------------" << endl;
+    cout<<"DESCRIPTION"<<endl;
+    cout << "-----------------------------" << endl;
+    cout<<"The Fibonacci sequence is a famous mathematical sequence that starts with 0 and 1. Each subsequent number in the sequence is the sum of the two preceding numbers."<<endl;
+    cout << "-----------------------------" << endl;
+    cout<<"TIME COMPLEXITY"<<endl;
+    cout << "-----------------------------" << endl;
+    cout<<"The time complexity is O(n), where n is the nth element of fibonacci sequence";
+    cout << "-----------------------------" << endl;
+    int n;
+    cout<<"Enter n"<<endl;
+    cin>>n;
+    int sum =0;
+        int a=0;
+        int b=1;
+        cout<<"a="<<a<<endl<<"b="<<b<<endl<<"sum="<<sum<<endl<<endl;
+        if(n==1){
+            cout<<"1"<<endl;
+        }
+        for(int i=1;i<n;i++){
+            sum=a+b;
+            a=b;
+            b=sum;
+            cout<<"a="<<a<<endl<<"b="<<b<<endl<<"sum="<<sum<<endl<<endl;
+        }
+        cout<<n<<"th number in fibonacci sequence is: "<<sum<<endl;
+
+
+}
+
 int main()
 {
     int choice;
@@ -366,6 +484,7 @@ int main()
          << endl;
     cout << "3. 2D Array Algorithms" << endl
          << endl;
+    cout<<"4. Basic Math Algorithms"<<endl<<endl;
     cout << "Enter your choice" << endl;
     cin >> choice;
 
@@ -757,6 +876,38 @@ int main()
             cout << "Enter the element to be searched" << endl;
             cin >> target;
             staircase(mat,r,c,target);
+        }
+    }
+
+    //BASIC MATH 
+
+    else if(choice ==4){
+        int choice1;
+        cout << "-----------------------------" << endl;
+        cout << "BASIC MATH ALGORITHMS" << endl
+             << endl;
+        cout << "1. Count Prime" << endl
+             << endl;
+        cout << "2. Find GCD" << endl
+             << endl;
+        cout << "3. Calculate Factorial" << endl
+             << endl;
+        cout << "4. Fibonacci Sequence" << endl
+             << endl;
+        cout << "Enter your choice" << endl;
+        cin >> choice1;
+
+        if(choice1 == 1){
+            Prime();
+        }
+        else if(choice1 == 2){
+            GCD();
+        }
+        else if(choice1 == 3){
+            fact();
+        }
+        else if(choice1==4){
+            fib();
         }
     }
     return 0;

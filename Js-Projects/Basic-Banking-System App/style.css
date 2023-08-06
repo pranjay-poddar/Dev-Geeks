@@ -1,0 +1,346 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+/* Apply a box-sizing reset to all elements */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+  
+/* Apply some basic styles to the body */
+body {
+  font-family: 'Lato', sans-serif;
+  background-color: #ccc;
+  margin: 0;
+}
+
+/* Style the header */
+header {
+  background-image: url(Assets/img/navbar.jpg);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  color: #fff; 
+  position: sticky;
+  top: 0;
+  border-bottom: 1px solid black;
+  display: flex;
+  justify-content: space-between;
+  padding: 0.25rem;
+  align-items: center;
+  width: 100%;
+  gap: 10px;
+}
+
+header span{
+  color:rgb(255, 115, 1);
+}
+
+header .logo{
+  width: 40%;
+  display: flex;
+  font-size: 15px;
+  align-items: center;
+  font-family: cursive;
+  color: rgb(8, 255, 16);
+  text-align: center;
+}
+
+header img{
+  margin: 0.2rem;
+  background-color: #ccc;
+  border-radius: 50px;
+  width: 70px;
+  height: 70px;
+}
+
+header nav{
+  width: 50%;
+  margin: 0 auto;
+}
+
+header nav ul {
+  display: flex;
+  list-style: none;
+}
+
+header nav li {
+  margin-right: 1rem;
+}
+
+header nav li:last-child {
+  margin-right: 0;
+}
+
+header nav a {
+  color: #ffffff;
+  font-weight: bold;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+
+header nav a:hover{
+  color: #d3cdcd;
+}
+
+/* Style the main content area */
+main {
+  display: flex;
+  flex-wrap: wrap;
+  /* margin: 1rem; */
+
+  background-image: url(Assets/Gif/Back.gif);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+main section {
+  background-color: #fff;
+  border-radius: 0.5rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  flex: 1 1 300px;
+  margin: 1rem;
+  padding: 1rem;
+}
+
+main h2 {
+  padding-bottom: 18px;
+  text-align: center;
+}
+
+/* Style the Add user form & Style the send money form */
+
+#add-user{
+  /* margin-top: 15px; */
+  border: 1px solid #ccc;
+  padding: 20px;
+  border-radius: 5px;
+  color: #ccc;
+
+  /* background-color: rgb(225, 136, 34);  */
+  background-image: url(Assets/img/Back3.jpeg);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+#send-money{
+  border: 1px solid #ccc;
+  padding: 20px;
+  border-radius: 5px;
+  color: #e4dede;
+  font-size: 18px;
+
+  /* background-color: #0070f3;  */
+  background-image: url(Assets/img/Back3.jpeg);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+#add-user h2 ,#send-money h2{
+  margin-top: 0;
+}
+
+#add-user form ,#send-money form{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+#add-user label ,#send-money label{
+  font-weight: bold;
+}
+
+#add-user input, #send-money input{
+  background-color: #ccc;
+}
+
+#add-user input[type="text"],
+#add-user input[type="email"],
+#add-user input[type="number"],
+#send-money input[type="text"],
+#send-money input[type="email"],
+#send-money input[type="number"] {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  outline: none;
+}
+
+#add-user button[type="submit"],#send-money button[type="submit"] {
+  background-color: #008CBA;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#add-user button[type="submit"]:hover,#send-money button[type="submit"]:hover {
+  background-color: #005266;
+}
+
+
+/* Style the transaction history table */
+#transaction-history, #user-add{
+  background-image: url(Assets/Gif/Back2.gif);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+} 
+
+#transaction-history h2, #user-add h2{
+   color: white;
+}
+
+#transaction-history table,#user-add table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#transaction-history th ,#user-add th {
+  border: 1px solid #ccc;
+  padding: 0.5rem;
+  color: black;
+  font-weight: bold;
+  background-color: #f2f2f2;
+}
+
+#transaction-history td,#user-add td {
+  border: 1px solid #ccc;
+  padding: 0.5rem;
+  color: rgb(66, 64, 64);
+  background-color: #f2f2f2;
+
+}
+/* 
+#transaction-history th ,#user-add th{
+  background-color: #f2f2f2;
+  font-weight: normal;
+} */
+
+#transaction-history tr:nth-child(even) ,#user-add tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+#transaction-history tr:hover ,#user-add tr:hover {
+  background-color: #e6e6e6;
+}
+
+#transaction-history button ,#user-add button{
+  background-color: #ff4d4f;
+  border: none;
+  border-radius: 0.25rem;
+  color: #fff;
+  cursor: pointer;
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+}
+
+#transaction-history button:hover ,#user-add button:hover {
+  background-color: #cc3838;
+}
+
+/* About section styling  */
+#about {
+	padding: 50px;
+	background-color:   #f1c644c9;
+	text-align: center;
+}
+
+#about h2 {
+	font-size: 36px;
+	margin-bottom: 20px;
+}
+
+.about-content {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	margin-top: 30px;
+}
+
+.about-text {
+	flex-basis: 60%;
+	padding-right: 30px;
+}
+
+.about-text p {
+	font-size: 18px;
+	line-height: 1.5;
+	margin-bottom: 20px;
+}
+
+.about-image {
+	flex-basis: 30%;
+}
+
+.about-image img {
+	max-width: 100%;
+	height: auto;
+	border-radius: 50%;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Contact form styling   */
+#contact {
+  margin: 50px auto;
+  width: 80%;
+  max-width: 600px;
+}
+
+#contact h2 {
+  font-size: 2em;
+  margin-bottom: 30px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+textarea {
+  height: 150px;
+}
+
+button[type="submit"] {
+  background-color: #2553eb;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+button[type="submit"]:hover {
+  background-color: #333;
+}
+
+
+/* Style the footer */
+footer {
+  background-color: #322f2f;
+  color: #fff;
+  padding: 1rem;
+  text-align: center;
+  font-size: 12px;
+  font-family: cursive;
+}
