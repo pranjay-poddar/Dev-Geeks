@@ -1,6 +1,7 @@
 body {
-  background-color: var(--background--color);
-
+  background-image: url(tweet.webp);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 * {
@@ -12,8 +13,8 @@ body {
 
 :root {
 
-  --primary-color: grey;
-  --secondary-color: #d4d4d4;
+  --primary-color: black;
+  --secondary-color: #202021;
   --background--color: #202021;
   --bird-color: white;
 }
@@ -35,7 +36,7 @@ body {
 }
 
 .box {
-
+  background: radial-gradient(circle, rgba(237,245,244,1) 0%, rgba(148,210,233,1) 100%);
   border: 0.01rem solid var(--primary-color);
   width: 300px;
   margin: 1%;
@@ -66,6 +67,9 @@ body {
   font-family: arial;
   font-size: 20px;
   cursor: pointer;
+}
+.text span{
+  color: #117dc1;
 }
 
 .date {
