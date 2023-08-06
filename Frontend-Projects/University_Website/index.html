@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>University Website Design</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">   
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css"> 
+    <!--icons aren't available from font awesome..here's the solution  -->
+<link rel="stylesheet" href="path/to/fontawesome.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css" integrity="sha384-jLKHWM3JRmfMU0A5x5AkjWkw/EYfGUAGagvnfryNV3F9VqM98XiIH7VBGVoxVSc7" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+<body> 
+    <!-- header section(homepage) -->
+    <section class="header">
+        <nav>
+            <!-- <a href="index.html"><img src="https://drive.google.com/file/d/1Z3ayWESbTpZ7e6-i09LpL5ZLMcwEw0dL/view?usp=sharing" alt="plz download logo img from drive link"></a> -->
+            <div class="nav-links" id="navlinks">
+                
+                <i class="fa fa-times-circle" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="about.html">ABOUT</a></li>
+                    <li><a href="course.html">COURSE</a></li>
+                    <li><a href="blog.html">BLOG</a></li>
+                    <li><a href="contact.html">CONTACT</a></li>
+                </ul>
+            </div>
+            
+            <i class="fa fa-bars" onclick="showMenu()"></i>
+        </nav>
+        <div class="text-box">
+            <h1>World's Biggest University</h1>
+            <p>Making website is now one of the easiest thing in the world. You
+            just need to learn HTML, CSS,<br>Javascript and you are good to go.   
+            </p>
+            <a href="" class="hero-btn">Visit Us To know More</a>
+        </div>
+        
+    </section>
+
+    <!-- Course  -->
+    <section class="course">
+        <h1>Courses We Offer</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+
+        <div class="row">
+            <div class="course-col">
+                <h3>Intermediate</h3>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestiae, corporis tenetur quod consequuntur repellat hic velit reiciendis aliquid sequi dignissimos nesciunt modi necessitatibus eaque pariatur deserunt ducimus ex rem ut.</p>
+            </div>
+            <div class="course-col">
+                <h3>Degree</h3>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestiae, corporis tenetur quod consequuntur repellat hic velit reiciendis aliquid sequi dignissimos nesciunt modi necessitatibus eaque pariatur deserunt ducimus ex rem ut.</p>
+            </div>
+            <div class="course-col">
+                <h3>Post Graduation</h3>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestiae, corporis tenetur quod consequuntur repellat hic velit reiciendis aliquid sequi dignissimos nesciunt modi necessitatibus eaque pariatur deserunt ducimus ex rem ut.</p>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- campus -->
+    <section class="campus">
+        <h1>Our Global Campus</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+
+        <div class="row">
+            <div class="campus-col">
+                <!-- <img src="images/london.png"> -->
+                <!-- <img src="https://drive.google.com/file/d/1JwevS4rNT56Yd3lmT_ViUF72ZW204g8G/view?usp=sharing" alt="plz download img from drive link > -->
+                <div class="layer">
+                    <h3>LONDON</h3>
+                </div>
+            </div>
+            <div class="campus-col">
+                <!-- <img src="images/newyork.png" > -->
+                <!-- <img src="https://drive.google.com/file/d/1L3Y6iEQm7lFm3S9ZnsLhimKc7hdPf97g/view?usp=sharing" alt="download img from link"> -->
+                <div class="layer">
+                    <h3>NEW YORK</h3>
+                </div>
+            </div>
+            <div class="campus-col">
+                <!-- <img src="images/washington.png" > -->
+                <!-- <img src="https://drive.google.com/file/d/19_HG0d2X7nifRto-kUpNuDmkWdMiKxXd/view?usp=sharing" alt="download img from link"> -->
+                <div class="layer">
+                    <h3>WASHINGTON</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Facilities -->
+    <section class="facilities">
+        <h1>Our Facilities</h1>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+
+        <div class="row">
+            <div class="facilities-col">
+                <!-- <img src="images/library.png"> -->
+                <!-- <img src="https://drive.google.com/file/d/171e_hb5sQZLmOWxxWNoahyikBnHRBGEd/view?usp=sharing" alt="download img from link"> -->
+                <h3>World Class Library</h3>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquid corrupti quidem debitis praesentium.</p>
+            </div>
+            <div class="facilities-col">
+                <!-- <img src="images/basketball.png"> -->
+                <!-- <img src="https://drive.google.com/file/d/10grMFNZoxKYNblYfS2CfMo1abZTy8dsU/view?usp=sharing" alt="download img from link"> -->
+                <h3>Largest Play Ground</h3>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquid corrupti quidem debitis praesentium.</p>
+            </div>
+            <div class="facilities-col">
+                <!-- <img src="images/cafeteria.png"> -->
+                <!-- <img src="https://drive.google.com/file/d/1dkPdshnnK6DnWrvR721cHu_K18QItTjn/view?usp=sharing" alt="download img from link"> -->
+                <h3>Tasty & Healthy Food</h3>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquid corrupti quidem debitis praesentium.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- testimonials -->
+
+    <section class="testimonials">
+        <h1>What Our Student Says</h1>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquid corrupti quidem debitis praesentium.</p>
+
+        <div class="row">
+            <div class="testimonials-col">
+                <!-- <img src="images/user1.jpg" > -->
+                <!-- <img src="https://drive.google.com/file/d/1in8MxjfOAsWCfuv9RfMZWjS4xdG6O_uX/view?usp=sharing" alt="download img from link"> -->
+                <div>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis molestias quia earum itaque voluptatem blanditiis optio sit ea alias. Magnam officia similique consequuntur nam fugit ut eveniet natus suscipit dolorum.</p>
+                    <h3>Christine Berkley</h3>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    
+                </div>
+            </div>
+            <div class="testimonials-col">
+                <!-- <img src="images/user2.jpg" > -->
+                <!-- <img src="https://drive.google.com/file/d/1uKyaYoCTyHhalxD85KPZTc0DOuYhCond/view?usp=sharing" alt="download img from link"> -->
+                <div>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis molestias quia earum itaque voluptatem blanditiis optio sit ea alias. Magnam officia similique consequuntur nam fugit ut eveniet natus suscipit dolorum.</p>
+                    <h3>David Byer</h3>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-half" aria-hidden="true"></i>
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- call to action -->
+    <section class="cta">
+        <h1>Enroll For Our Various Online Courses <br> Anywhere From The World</h1>
+        <a href="" class="hero-btn">CONTACT US</a>
+    </section>
+
+    <!-- Footer -->
+    <section class="footer">
+        <h4>About Us</h4>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+         Porro, veritatis <br> delectus expedita vitae illum quos saepe voluptatem quae reprehenderit voluptate placeat ducimus nemo quis! Aspernatur voluptatem corporis repellat maiores molestiae.</p>
+         <div class="icons">
+            <i class="fa-brands fa-facebook"></i>
+            <i class="fa-brands fa-twitter"></i>
+            <i class="fa-brands fa-instagram"></i>
+            <i class="fa-brands fa-linkedin"></i>
+         </div>
+        
+    </section>
+
+    <!-- JavaScript for Toggle Menu -->
+    <script>
+        var navlinks = document.getElementById("navlinks");
+        function showMenu(){
+            navlinks.style.right="0";
+        }
+        function hideMenu(){
+            navlinks.style.right="-200px"
+        }
+
+    </script>
+    
+</body>
+</html>
