@@ -1,0 +1,96 @@
+:root {
+    --mainBlue: #3c6ae1
+}
+
+* {
+    box-sizing: border-box
+}
+
+body {
+    color: #001b36;
+    font-family: Lato,sans-serif;
+    margin: 0;
+    width: 100%
+}
+
+h1 {
+    font-size: 60px
+}
+
+h1,h2 {
+    font-family: Montserrat,sans-serif
+}
+
+h2 {
+    font-size: 50px
+}
+
+h3 {
+    font-size: 35px
+}
+
+h3,h4 {
+    font-family: Montserrat,sans-serif
+}
+
+h4 {
+    font-size: 25px
+}
+
+p {
+    font-size: 17px;
+    line-height: 25px
+}
+
+.bodyContainer {
+    float: none!important;
+    margin: 0 auto!important;
+    max-width: 1400px!important
+}
+
+@media screen and (max-width: 1420px) {
+    .bodyContainer {
+        padding-left:20px;
+        padding-right: 20px
+    }
+}
+
+.contentContainer {
+    float: none!important;
+    margin: 0 auto!important;
+    max-width: 800px!important
+}
+
+@media screen and (max-width: 850px) {
+    .contentContainer {
+        padding-left:35px;
+        padding-right: 35px
+    }
+}
+
+.centerImage {
+    margin: 0 auto
+}
+
+.centerImage,.leftImage {
+    aspect-ratio: auto;
+    display: block;
+    height: auto;
+    max-width: 100%
+}
+
+.main-cta {
+    background-color: #0074e6;
+    border-radius: 35px;
+    color: #fff;
+    display: inline-block;
+    font-family: Montserrat,sans-serif;
+    font-weight: 900;
+    padding: 10px 30px;
+    text-align: center;
+    text-decoration: none
+}
+
+.main-cta:hover {
+    background-color: #fff
+}
