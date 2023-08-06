@@ -1,0 +1,35 @@
+.para {
+  font-size: 30px;
+  height: 60px;
+}
+
+.short-url {
+  margin-top: 60px;
+}
+.inputs {
+  margin-top: 60px;
+}
+.head {
+  margin-bottom: -10px;
+}
+.text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-top: 20px;
+  display: block;
+}
+.copy {
+  margin-top: 30px;
+  background-color: rgb(232, 226, 218);
+  height: 40px;
+  border: 2px solid black;
+  font-family: sans-serif;
+}
+
+a {
+  text-decoration: none;
+  font-size: large;
+  color: blue;
+}
