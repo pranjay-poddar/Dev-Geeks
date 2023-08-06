@@ -68,3 +68,9 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+### SIGNUP PAGE
+
+This is a SignUp Page Application using Bootstrap and React
+It has validations for the inputs entered by the user
+It also uses React Hooks to change the state of component when changes in individual elements are made to take appropriate actions
