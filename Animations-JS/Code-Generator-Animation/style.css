@@ -1,0 +1,125 @@
+html {
+    font-size: 100%;
+}
+
+body {
+
+    background: rgb(0, 0, 0);
+    font-size: 100%;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    color: rgb(255, 255, 255);
+    margin: 0em;
+    padding: 0em;
+    width: 100%;
+    height: 100%;
+    user-select: none;
+}
+
+span {
+    display: inline-block;
+}
+
+._off {
+    display: none;
+}
+
+.Block_The_Matrix_Viewport {
+    position: fixed;
+    top: 1%;
+    left: 1%;
+    width: 98%;
+    height: 98%;
+    overflow: hidden;
+    color: rgb(31, 155, 31);
+    font-family: Courier New, Courier, Lucida Sans Typewriter, Lucida Typewriter, monospace;
+    font-weight: bold;
+}
+
+.Block_The_Matrix_Viewport._half_Y {
+    height: 49%;
+}
+
+.blinking_cursor {
+    width: 0.75em;
+    height: 0.9em;
+    vertical-align: middle;
+    background-color: rgb(0, 190, 0);
+    animation: 250ms steps(2, jump-none) infinite cursor_blink;
+}
+
+@keyframes cursor_blink {
+    from {
+        background-color: rgb(0, 190, 0);
+    }
+
+    to {
+        background-color: rgb(0, 0, 0);
+    }
+}
+
+.Matrix_Code_sB span {
+    margin: 0em 0.25em;
+    transform: translate(0%, -10%);
+    animation: 300ms linear infinite matrix_falling_code;
+}
+
+@keyframes matrix_falling_code {
+    from {
+        transform: translate(0%, -10%);
+    }
+
+    to {
+        transform: translate(0%, 0%);
+    }
+}
+
+.Matrix_Code_sB span div {
+
+    line-height: 1;
+}
+
+b {
+    color: rgb(142, 255, 147);
+}
+
+@media (max-width : 400px) {
+    body {
+        font-size: 60%;
+    }
+}
+
+@media (min-width : 401px) and (max-width : 600px) {
+    body {
+        font-size: 70%;
+    }
+}
+
+@media (min-width : 601px) and (max-width : 800px) {
+    body {
+        font-size: 80%;
+    }
+}
+
+@media (min-width : 801px) and (max-width : 1000px) {
+    body {
+        font-size: 90%;
+    }
+}
+
+@media (min-width : 1001px) and (max-width : 1200px) {
+    body {
+        font-size: 100%;
+    }
+}
+
+@media (min-width : 1201px) and (max-width : 1400px) {
+    body {
+        font-size: 100%;
+    }
+}
+
+@media (min-width : 1401px) {
+    body {
+        font-size: 125%;
+    }
+}
