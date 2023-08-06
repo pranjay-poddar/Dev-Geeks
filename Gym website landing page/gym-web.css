@@ -1,0 +1,106 @@
+body{
+   color:#6F8284;
+    padding: 0px;
+    margin: 0px;
+    background: url(bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-x: right;
+    font-family: 'Teko', sans-serif;
+    font-style: bold;
+}
+.left{
+    line-height: 5px;
+    display: block;
+    position: absolute;
+    width: 100px;
+    font-size: 15px;
+    text-align: center;
+    color:#6F8284;
+}
+.mid{
+    color:#6F8284;
+    margin: auto;
+    width: 40%;
+   display: block;
+}
+.right{
+    color: #6F8284;
+    display: inline-block;
+    top: 0%;
+    right: 0%;
+    position: absolute;
+}
+.navigation {
+    display: inline-block;
+    }
+.navigation li{
+    display: inline-block;
+    color: white;
+    font-size: 20px;
+    }
+.navigation li a{
+ text-decoration: none;
+ color: white;
+ padding: 10px 10px;
+}
+.navigation li a:hover{
+text-decoration: underline;
+color: rgb(207, 177, 177);
+}
+.navigation li .active:visited{
+color:rgb(207, 177, 177);
+text-decoration: underline;
+}
+.left img{
+    width: 80px;
+    padding: 0%;
+}
+.left div{
+   display: center;
+}
+.butt{
+    margin: 15px 12px;
+    color:white;
+    padding: 2px 7px;
+    font-size: 19px;
+    cursor: pointer;
+    background: rgb(87, 86, 110);
+}
+.butt:hover{
+    color: rgb(207, 177, 177);
+}
+.main{
+    color:white;
+    width: 385px;
+    display: block;
+    flex: center;
+    justify-content: center;
+   font-size: 20px;
+    margin: 181px 575px;
+}
+.main h1{
+    
+    display: inline-block;
+    font-size: 50px;
+    overflow: hidden;
+    vertical-align: middle;
+    white-space: nowrap;
+    margin: 34px -252px;
+}
+.main p{
+    display: inline-block;
+    margin: 20px 20px;
+    margin:13px -285px;
+    
+}
+.join{
+    color: white;
+    background: rgb(87, 86, 110);
+    margin: 17px 65px;
+    padding: 6px 16px;
+    font-size: 20px;
+}
+.join:hover{
+    color: rgb(207, 177, 177);
+}
