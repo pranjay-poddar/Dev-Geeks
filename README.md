@@ -903,6 +903,8 @@ Happy Coding! -->
 
 <td align="center"> 284.</td>
 <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/cpp-projects/ATM Machine">ATM Machine</a></td>
+<td align="center"> 285.</td>
+<td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Python Projects/Pencil Sketch from Picture">Pencil Sketch from Picture</a></td>
 </tr>
 
 
