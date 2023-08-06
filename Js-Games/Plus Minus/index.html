@@ -1,0 +1,395 @@
+<HTML>
+<HEAD>
+<META NAME="keywords" content="Game, PlusMinus, Streich, Stroke, JavaScript">
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<title>PlusMinus</title>
+<script language="JavaScript">
+var n, m, IsOver, StartTime, EndTime, Max=4;
+PrePMH = new Array(Max-1);
+for (n=0; n < Max-1; n++)
+{ PrePMH[n]=new Array(Max); 
+}
+PMH = new Array(Max-1);
+for (n=0; n < Max-1; n++)
+{ PMH[n]=new Array(Max); 
+}
+PrePMV = new Array(Max);
+for (n=0; n < Max; n++)
+{ PrePMV[n]=new Array(Max-1);
+}
+PMV = new Array(Max);
+for (n=0; n < Max; n++)
+{ PMV[n]=new Array(Max-1); 
+}
+OValue = new Array(Max+1);
+for (n=0; n < Max+1; n++)
+{ OValue[n]=new Array(Max+1); 
+}
+Value = new Array(Max);
+for (n=0; n < Max; n++)
+{ Value[n]=new Array(Max); 
+}
+
+Pic= new Array(13);
+Pic[0] = new Image(); Pic[0].src = "rebu0n.gif"; 
+Pic[1] = new Image(); Pic[1].src = "rebu1n.gif";
+Pic[2] = new Image(); Pic[2].src = "rebu2n.gif";   
+Pic[3] = new Image(); Pic[3].src = "rebu3n.gif";   
+Pic[4] = new Image(); Pic[4].src = "rebu4n.gif";   
+Pic[5] = new Image(); Pic[5].src = "rebu5n.gif";  
+Pic[6] = new Image(); Pic[6].src = "rebu6n.gif";  
+Pic[7] = new Image(); Pic[7].src = "rebu7n.gif";  
+Pic[8] = new Image(); Pic[8].src = "rebu8n.gif";  
+Pic[9] = new Image(); Pic[9].src = "rebu9n.gif";  
+Pic[10] = new Image(); Pic[10].src = "rebu2o.gif";  
+Pic[11] = new Image(); Pic[11].src = "rebu00.gif";  
+Pic[12] = new Image(); Pic[12].src = "rebu1o.gif";  
+
+function Clicked(I_Sel, J_Sel)
+{ if (IsOver) return;
+  var nn, ii=I_Sel-1, jj=J_Sel-1;
+  if (I_Sel%(2*Max)==0) return;
+  if (J_Sel%(2*Max)==0) return;
+  if (I_Sel%2+J_Sel%2==1)
+  { if (I_Sel%2==0)
+    { nn=(PMH[Math.floor(ii/2)][Math.floor(jj/2)]+2)%3-1;
+      PMH[Math.floor(ii/2)][Math.floor(jj/2)]=nn;
+    }
+    else
+    { nn=(PMV[Math.floor(ii/2)][Math.floor(jj/2)]+2)%3-1;
+      PMV[Math.floor(ii/2)][Math.floor(jj/2)]=nn;
+    }
+    window.document.images[(2*Max+1)*J_Sel+I_Sel].src = Pic[11+nn].src;     
+    if (OverTest()) 
+    { Now = new Date();
+      EndTime = Now.getTime() / 1000;
+      n=Math.floor(EndTime - StartTime);
+      if (window.opener)
+      { if (window.opener.SetHighscores)
+          window.opener.SetHighscores("PlusMinus","",n,-1);
+      }
+      alert("Super, you solved this game in "+n+" seconds !");
+    }
+  }
+} 
+
+function Show()  
+{ var ii, jj;
+  if (IsOver)
+  { alert("Everything's okay !");
+    return;
+  }
+  for (ii=0; ii<Max-1; ii++)
+  { for (jj=0; jj<Max; jj++)
+    { PMH[ii][jj]=PrePMH[ii][jj];
+    }
+  }
+  for (ii=0; ii<Max; ii++)
+  { for (jj=0; jj<Max-1; jj++)
+    { PMV[ii][jj]=PrePMV[ii][jj];
+    }
+  }
+  IsOver=true;
+  RefreshScreen();
+  alert("Show is not solve !");
+}
+
+function Scramble()
+{ var ii, jj, ll, nn, mm, bb=false;
+  for (ii=0; ii<Max+1; ii++)
+  { for (jj=0; jj<Max+1; jj++)
+      OValue[ii][jj]=0;
+  }
+  while (! bb)
+  { for (ii=0; ii<Max; ii++)
+    { for (jj=0; jj<Max; jj++)
+        Value[ii][jj]=1+Math.floor(Math.random()*1000)%9;
+    }
+    for (ii=0; ii<Max-1; ii++)
+    { for (jj=0; jj<Max; jj++)
+      { PMH[ii][jj]=0;
+        PrePMH[ii][jj]=2*(Math.floor(Math.random()*1000)%2)-1;
+      }
+    }
+    for (ii=0; ii<Max; ii++)
+    { for (jj=0; jj<Max-1; jj++)
+      { PMV[ii][jj]=0;
+        PrePMV[ii][jj]=2*(Math.floor(Math.random()*1000)%2)-1;
+      }
+    }
+    for (jj=0; jj<Max-1; jj++)
+    { nn=Value[0][jj];
+      for (ii=0; ii<Max-2; ii++)
+      { if (PrePMH[ii][jj]==1)
+        { nn+=Value[ii+1][jj];
+          if (nn>9)
+          { nn-=2*Value[ii+1][jj];
+            PrePMH[ii][jj]=-1;
+          }
+        }
+        else
+        { nn-=Value[ii+1][jj];
+          if (nn<-9)
+          { nn+=2*Value[ii+1][jj];
+            PrePMH[ii][jj]=1;
+          }
+        }  
+      }
+      if (nn<=0)
+      { PrePMH[Max-2][jj]=1;
+        Value[Max-1][jj]=-nn;
+      }
+      else
+      { PrePMH[Max-2][jj]=-1;
+        Value[Max-1][jj]=nn;
+      }
+    }
+    for (ii=0; ii<Max; ii++)
+    { nn=Value[ii][0];
+      for (jj=0; jj<Max-2; jj++)
+      { if (PrePMV[ii][jj]==1)
+        { nn+=Value[ii][jj+1];
+          if (nn>9)
+          { nn-=2*Value[ii][jj+1];
+            PrePMV[ii][jj]=-1;
+          }
+        }
+        else
+        { nn-=Value[ii][jj+1];
+          if (nn<-9)
+          { nn+=2*Value[ii][jj+1];
+            PrePMV[ii][jj]=1;
+          }
+        }
+      }
+      if (nn<=0)
+      { PrePMV[ii][Max-2]=1;
+        Value[ii][Max-1]=-nn;
+      }
+      else
+      { PrePMV[ii][Max-2]=-1;
+        Value[ii][Max-1]=nn;
+      }
+    }
+    for (jj=Max-1; jj<Max; jj++)
+    { nn=Value[0][jj];
+      for (ii=0; ii<Max-2; ii++)
+      { if (PrePMH[ii][jj]==1)
+        { nn+=Value[ii+1][jj];
+          if (nn>9)
+          { nn-=2*Value[ii+1][jj];
+            PrePMH[ii][jj]=-1;
+         }
+        }
+        else
+        { nn-=Value[ii+1][jj];
+          if (nn<-9)
+          { nn+=2*Value[ii+1][jj];
+            PrePMH[ii][jj]=1;
+          }
+        }  
+      }
+      if (nn<=0)
+      { PrePMH[Max-2][jj]=1;
+        if (Value[Max-1][jj]==-nn) bb=true;
+      }
+      else
+      { PrePMH[Max-2][jj]=-1;
+        if (Value[Max-1][jj]==nn) bb=true;
+      }
+    }
+    if (bb)
+    { for (ii=0; ii<Max-1; ii++)
+      { nn=0;
+        for (jj=0; jj<Max; jj++) nn+=PrePMH[ii][jj];
+        if (nn==Max) bb=false;
+      }
+      for (jj=0; jj<Max-1; jj++)
+      { nn=0;
+        for (ii=0; ii<Max; ii++) nn+=PrePMV[ii][jj];
+        if (nn==Max) bb=false;
+      }  
+    }    
+  }
+  for (nn=0; nn<19; nn++)
+  { ii=1+Math.floor(Math.random()*1000)%(Max-1);
+    do jj=1+Math.floor(Math.random()*1000)%(Max-1);
+    while (ii==jj);
+    for (mm=0; mm<Max; mm++)
+    { ll=Value[ii][mm];
+      Value[ii][mm]=Value[jj][mm];
+      Value[jj][mm]=ll;
+      ll=PrePMH[ii-1][mm];
+      PrePMH[ii-1][mm]=PrePMH[jj-1][mm];
+      PrePMH[jj-1][mm]=ll;
+    }
+    for (mm=0; mm<Max-1; mm++)
+    { ll=PrePMV[ii][mm];
+      PrePMV[ii][mm]=PrePMV[jj][mm];
+      PrePMV[jj][mm]=ll;
+    }
+    ii=1+Math.floor(Math.random()*1000)%(Max-1);
+    do jj=1+Math.floor(Math.random()*1000)%(Max-1);
+    while (ii==jj);
+    for (mm=0; mm<Max; mm++)
+    { ll=Value[mm][ii];
+      Value[mm][ii]=Value[mm][jj];
+      Value[mm][jj]=ll;
+      ll=PrePMV[mm][ii-1];
+      PrePMV[mm][ii-1]=PrePMV[mm][jj-1];
+      PrePMV[mm][jj-1]=ll;
+    }  
+    for (mm=0; mm<Max-1; mm++)
+    { ll=PrePMH[mm][ii];
+      PrePMH[mm][ii]=PrePMH[mm][jj];
+      PrePMH[mm][jj]=ll;
+    }  
+  }
+  for (nn=Max*Max*19; nn>0; nn--)
+  { ii=1+Math.floor(Math.random()*1000)%Max;
+    jj=1+Math.floor(Math.random()*1000)%Max;
+    if ((ii+jj<2*Max)&&(OValue[ii][jj]<9))
+    { bb=true;
+      if (ii<Max)
+      { if ((OValue[ii][0]-PrePMH[ii-1][jj-1]>9)||
+            (OValue[ii][0]-PrePMH[ii-1][jj-1]<=0)) bb=false;
+      }
+      if (jj<Max)
+      { if ((OValue[0][jj]-PrePMV[ii-1][jj-1]>9)||
+            (OValue[0][jj]-PrePMV[ii-1][jj-1]<=0)) bb=false;
+      }
+      if (bb)
+      { if (ii<Max)
+          OValue[ii][0]-=PrePMH[ii-1][jj-1];
+        if (jj<Max)
+          OValue[0][jj]-=PrePMV[ii-1][jj-1];
+        OValue[ii][jj]++;
+      }
+    }
+  }  
+  IsOver=false;
+  RefreshScreen();
+  Now = new Date();
+  StartTime = Now.getTime() / 1000;
+}
+
+function OverTest()
+{ var ii, jj, nn;
+  IsOver=false;
+  for (ii=0; ii<Max-1; ii++)
+  { for (jj=0; jj<Max; jj++)
+    { if (PMH[ii][jj]==0) return(false);
+    }
+  }
+  for (ii=0; ii<Max; ii++)
+  { for (jj=0; jj<Max-1; jj++)
+    { if (PMV[ii][jj]==0) return(false);
+    }
+  }
+  for (ii=0; ii<Max; ii++)
+  { nn=Value[ii][0];
+    for (jj=0; jj<Max-1; jj++)
+    { if (PMV[ii][jj]==1)
+	nn+=Value[ii][jj+1];
+      else
+	nn-=Value[ii][jj+1];
+    }
+    if (nn!=0) return(false);
+  }
+  for (jj=0; jj<Max; jj++)
+  { nn=Value[0][jj];
+    for (ii=0; ii<Max-1; ii++)
+    { if (PMH[ii][jj]==1)
+	nn+=Value[ii+1][jj];
+      else
+	nn-=Value[ii+1][jj];
+    }
+    if (nn!=0) return(false);
+  }
+
+  for (ii=0; ii<Max-1; ii++)
+  { nn=OValue[ii+1][0];
+    for (jj=0; jj<Max; jj++)
+    { if (PMH[ii][jj]==1)
+	nn+=OValue[ii+1][jj+1];
+      else
+	nn-=OValue[ii+1][jj+1];
+    }
+    if (nn!=0) return(false);
+  }
+  for (jj=0; jj<Max-1; jj++)
+  { nn=OValue[0][jj+1];
+    for (ii=0; ii<Max; ii++)
+    { if (PMV[ii][jj]==1)
+	nn+=OValue[ii+1][jj+1];
+      else
+	nn-=OValue[ii+1][jj+1];
+    }
+    if (nn!=0) return(false);
+  }
+  IsOver=true;
+  return(IsOver);
+}
+
+function RefreshScreen()
+{ var ii, jj;
+  for (ii=0; ii<Max-1; ii++)
+  { for (jj=0; jj<Max; jj++)
+      window.document.images[(2*Max+1)*(2*jj+1)+(2*ii+2)].src = Pic[11+PMH[ii][jj]].src;     
+  }
+  for (ii=0; ii<Max; ii++)
+  { for (jj=0; jj<Max-1; jj++)
+      window.document.images[(2*Max+1)*(2*jj+2)+(2*ii+1)].src = Pic[11+PMV[ii][jj]].src;     
+  }
+  for (ii=0; ii<Max; ii++)
+  { for (jj=0; jj<Max; jj++)
+      window.document.images[(2*Max+1)*(2*jj+1)+(2*ii+1)].src = Pic[Value[ii][jj]].src;     
+  }
+  for (ii=0; ii<=Max; ii++)
+  { for (jj=0; jj<=Max; jj++)
+    { if (ii%Max+jj%Max!=0)
+        window.document.images[(2*Max+1)*(2*jj)+(2*ii)].src = Pic[OValue[ii][jj]].src;
+    }    
+  }
+}
+
+function Help()
+{ alert("Fill the spaces between the numbers with plus and minus,"+
+      "\nso that the result in every row and column is equal to zero."+
+      "\nClick with the mouse on a space to change from plus to"+
+      "\nminus or from minus to plus. Good luck!");
+}
+</script>
+</head>
+<BODY bgcolor=#FFCCCC>
+<form>
+<DIV ALIGN=center>
+<table border=0 cellpadding=1 cellspacing=0>
+<script language="JavaScript">
+document.open("text/plain");
+for (m=0; m <= 2*Max; m++)
+{ document.writeln("<tr align=center>");
+  for (n=0; n <= 2*Max; n++)
+  { if (((n+m)%2==0)||(n%(2*Max)==0)||(m%(2*Max)==0))
+      document.writeln("<td><IMG src=\"rebu00.gif\" border=0 onMouseDown=\"Clicked("+n+","+m+")\"></td>");
+    else
+      document.writeln("<td bgcolor=\"#CCCCFF\"><IMG src=\"rebu00.gif\" border=0 onMouseDown=\"Clicked("+n+","+m+")\"></td>");  
+  }
+  document.writeln("</tr>");
+}
+document.close();
+</script>
+</table>
+<br>
+<table noborder><tr align=center>
+<td><input type=button value="SHOW" width=96 style="width:96" onClick="javascript:Show()"></td>
+<td><input type=button value="NEW"  width=96 style="width:96" onClick="javascript:Scramble()"></td>
+<td><input type=button value="HELP"  width=96 style="width:96" onClick="javascript:Help()"></td>
+</tr></table>
+</DIV>
+</form>
+<script language="JavaScript">
+  Scramble();
+</script>
+</BODY>
+</HTML>
