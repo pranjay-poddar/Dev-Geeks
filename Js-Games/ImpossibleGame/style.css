@@ -1,0 +1,31 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    /*background-image: url(https://www.dropbox.com/s/1t4dgtwi326xqcj/cyberpunk-city.png?raw=1);*/
+    background-size: cover;
+    display: flex;
+    align-items: flex-start;
+}
+
+#canvas-set {
+    width: 100%;
+    position: relative ;
+}
+
+#canvas-game {
+    /*width: 100%;*/
+    position: absolute;
+    display: block;
+}
+
+#canvas-background {
+    margin: 0 0;
+    z-index: 1;
+    display: block;
+
+}

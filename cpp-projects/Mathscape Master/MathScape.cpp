@@ -403,12 +403,163 @@ void Circle()
     }
 }
 
+void Ellipse()
+{
+    double semiMajorAxis, semiMinorAxis;
+
+    cout << "Enter the semi-major axis (a) of the ellipse: ";
+    cin >> semiMajorAxis;
+
+    cout << "Enter the semi-minor axis (b) of the ellipse: ";
+    cin >> semiMinorAxis;
+
+    int propertyOption;
+    cout << "Ellipse Properties\n";
+    cout << "1. Center\n";
+    cout << "2. Foci\n";
+    cout << "3. Major and Minor Axes\n";
+    cout << "4. Eccentricity\n";
+    cout << "5. Area\n";
+    cout << "Select a property to calculate: ";
+    cin>>propertyOption;
+
+    switch (propertyOption)
+    {
+        case 1:
+        {
+            cout << "Center of the ellipse: (0, 0)\n";
+            break;
+        }
+        case 2:
+        {
+            // Calculate the foci of the ellipse using the formula c = sqrt(a^2 - b^2)
+            double foci_distance = sqrt(pow(semiMajorAxis, 2) - pow(semiMinorAxis, 2));
+            double focus1_x = foci_distance;
+            double focus2_x = -foci_distance;
+            double focus_y = 0.0;
+
+            cout << "Foci of the ellipse: (" << focus1_x << ", " << focus_y << ") and (" << focus2_x << ", " << focus_y << ")\n";
+            break;
+        }
+        case 3:
+        {
+            double major_axis = 2 * semiMajorAxis;
+            double minor_axis = 2 * semiMinorAxis;
+
+            cout << "Major Axis of the ellipse: " << major_axis << endl;
+            cout << "Minor Axis of the ellipse: " << minor_axis << endl;
+            break;
+        }
+        case 4:
+        {
+            // Calculate the eccentricity of the ellipse using the formula e = c / a
+            double foci_distance = sqrt(pow(semiMajorAxis, 2) - pow(semiMinorAxis, 2));
+            double eccentricity = foci_distance / semiMajorAxis;
+
+            cout << "Eccentricity of the ellipse: " << eccentricity << endl;
+            break;
+        }
+        case 5:
+        {
+            // Calculate the area of the ellipse using the formula Area = π * a * b
+            double area = M_PI * semiMajorAxis * semiMinorAxis;
+
+            cout << "Area of the ellipse: " << area << endl;
+            break;
+        }
+        default:
+            cout << "Invalid property option. Please try again.\n";
+            
+    }
+}
+
+void polygon()
+{
+
+    int numSides;
+    cout << "Enter the number of sides in the polygon: ";
+    cin>>numSides;
+    double sideLength;
+    cout << "Enter the length of each side: ";
+    cin>>sideLength;
+
+    // Calculate the area of the regular polygon using the formula
+    double area = (numSides * pow(sideLength, 2)) / (4 * tan(M_PI / numSides));
+
+    cout << "Area of the " << numSides << "-sided polygon: " << area << endl;
+}
+
+void lines(){
+
+    int choice;
+    cout<<"1. Calculate slope of line"<<endl;
+    cout<<"2. Check if two lines are parallel"<<endl;
+    cout<<"3. Check if two lines are perpendicular"<<endl;
+    cout<<"4. Distance between a line and a point"<<endl;
+    cout<<"Enter your choice"<<endl;
+    cin>>choice;
+
+    double x1,y1,x2,y2,slope1;//line1
+    double X1,Y1,X2,Y2,slope2;//line2
+    double Xo,Yo;//point
+    double A, B, C;
+    double dist;
+
+    switch(choice){
+        case 1:
+            cout<<"Enter coordiantes of first point on line: "<<endl;
+            cin>>x1>>y1;
+            cout<<"Enter coordiantes of second point on line: "<<endl;
+            cin>>x2>>y2;
+            slope1=(y2 - y1) / (x2 - x1);
+            cout<<"Slope of line is: "<<slope1<<endl;
+            break;
+        case 2:
+            cout<<"Enter coordiantes of first point on line1: "<<endl;
+            cin>>x1>>y1;
+            cout<<"Enter coordiantes of second point on line2: "<<endl;
+            cin>>X2>>Y2;
+            slope1=(y2 - y1) / (x2 - x1);
+            slope2=(Y2 - Y1) / (X2 - X1);
+            if(slope1==slope2){
+                cout<<"lines are parallel"<<endl;
+            }
+            else{
+                cout<<"lines are not paraller"<<endl;
+            }
+            break;
+        case 3:
+            cout<<"Enter coordiantes of first point on line1: "<<endl;
+            cin>>x1>>y1;
+            cout<<"Enter coordiantes of second point on line2: "<<endl;
+            cin>>X2>>Y2;
+            slope1=(y2 - y1) / (x2 - x1);
+            slope2=(Y2 - Y1) / (X2 - X1);
+            if(slope1*slope2==-1){
+                cout<<"lines are perpendicular"<<endl;
+            }
+            else{
+                cout<<"lines are not perpendicular"<<endl;
+            }
+        case 4:
+            cout<<"enter coordinates of point"<<endl;
+            cin>>Xo>>Yo;
+            cout << "Enter the coefficients A, B, and C of the line (Ax + By + C = 0): ";
+            cin >> A >> B >> C;
+            dist=abs(A * Xo + B * Yo + C) / pow((A * A + B * B),0.5);
+            cout<<"Distance between point and line is: "<<dist<<endl;
+            break;
+        default:
+            cout<<"Invalid Choice"<<endl;
+    }
+}
+
 int main()
 {
 
     cout << "\n====WELCOME TO MATHSCAPE MASTER====" << endl
          << endl;
-    cout << "1. Volume Calculation\n\n2. Surface Area Calculation\n\n3. Triangle Solver\n\n4. 2D Distance Calculator\n\n5. Circle Properties/Calculations" << endl;
+    cout << "1. Volume Calculation\n\n2. Surface Area Calculation\n\n3. Triangle Solver\n\n4. 2D Distance Calculator\n\n5. Circle Properties/Calculations\n\n6. Ellipse Properties\n\n7. Polygon Area\n\n8. Lines and its Properties" << endl;
     int choice;
     cout << endl;
     cout << "Enter Your Choice" << endl;
@@ -429,6 +580,15 @@ int main()
         break;
     case 5:
         Circle();
+        break;
+    case 6:
+        Ellipse();
+        break;
+    case 7:
+        polygon();
+        break;
+    case 8:
+        lines();
         break;
     default:
         cout << "Invalid Choice" << endl;
