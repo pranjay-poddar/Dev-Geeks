@@ -1,0 +1,46 @@
+
+body {
+    background-color: #EDEDED;
+}
+/* Navigation Bar */
+.nav1 {
+    font-family: 'Montserrat', sans-serif;
+    color: whitesmoke;
+}
+ 
+h1,h5,h4{
+    font-family: 'Lora', serif;
+}
+p {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.product, .about {
+    text-align: center;
+    margin-top: 200px;
+    margin-bottom: 50px;
+}
+.about {
+    margin-bottom: 0;
+}
+.about1 {
+    margin-bottom: 200px;
+}
+.products {
+    margin-bottom: 100px;
+    display: flexbox;
+    align-items: center;
+    text-align: center;
+}
+.card {
+    display: inline-block;
+    margin: 10px;
+    transition: transform .3s;
+}
+.card:hover {
+    transform: scale(1.2);
+}
+.footers {
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
