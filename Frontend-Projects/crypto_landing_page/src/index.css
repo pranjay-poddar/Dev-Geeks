@@ -1,0 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --black: "#061121",
+}
+
+*{
+  scroll-behavior: smooth;
+  font-family: Acumen;
+}
+
+.perspect {
+  perspective: 1000px;
+}
+
+.blueGradient{
+  background-image: radial-gradient( 50% 50% at 50% 50%, rgba(65, 148, 236, 0.24) 0%, rgba(65, 148, 236, 0) 100% );
+}

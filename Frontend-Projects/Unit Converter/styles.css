@@ -19,10 +19,9 @@ body{
     font-family: 'Poppins', sans-serif;
 }
 main{
-    background-color:#B2A4FF;
+    background-color: #b2a4ff5e;
     padding: 2rem;
-    border-radius:0.3rem;
-
+    border-radius: 1rem;
 }
 
 
