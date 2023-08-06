@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- BOOTSTRAP -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://getbootstrap.com/docs/5.2/assets/css/docs.css" rel="stylesheet">
+    <title>App Landing Page</title>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- javascript/jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/cesiumjs/1.78/Build/Cesium/Cesium.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+    <!-- for fontstyle -->
+    <script src="https://kit.fontawesome.com/bfdb88219f.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+  </head>
+    <body>
+        <nav id="scroll" class="navbar fixed-top navbar-expand-lg bg-light ">
+            <div class="container-fluid">
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation" >
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+                <a class="navbar-brand" href="#">MyApp</a>
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#jumbotron">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#about">About</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#footer">Dowload The App</a>
+                  </li>
+                </ul>
+                <form class="d-flex" role="search">
+                  <input class="form-control me-2" type="email" placeholder="Email" aria-label="Email">
+                  <input class="form-control me-2" type="password" placeholder="password" aria-label="password">
+                  <button class="btn btn-outline-success" type="submit">Login</button>
+                </form>
+              </div>
+            </div>
+        </nav>
+
+        <!-- for middle card -->
+        <div class="jumbotron" id="jumbotron">
+          
+            <h1 class="display-4">XYZ-TECH!</h1>
+            <p class="lead">Download the app for tech related news!</p>
+            <hr class="my-4">
+            <p>Want to know more? Join are mailing list! </p>
+            <form >
+                <div class="col-auto">
+                  <label for="staticEmail2" class="visually-hidden">Email</label></div>
+                <div class="col-auto">
+                <label for="inputemail" class="visually-hidden">Email</label></div>
+                <input type="email" class="form-control" id="inputemail" placeholder="Email">
+                <div class="col-auto">
+                    <br>
+                <button type="submit" class="btn btn-primary mb-3">Sign up</button>
+                </div>
+            </form>
+
+        <!-- for summery -->
+        </div>
+        <div class="container">
+          <div class="row" id="appsummary">
+          <h1><br>Why This App Is Awesome</h1>
+          <p class="lead">Summary, Once again, of your app's awesomeness</p>
+          </div>
+        </div>
+
+
+        <!-- for cards -->
+        <div class="container" id="about">
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+          <div class="col">
+            <div class="card h-100">
+              <img src="#add image here" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title"><i class="fa-solid fa-newspaper"></i>Daily News</h5>
+                <p class="card-text">Here, Our goal to provide tech realted news daily to make you up-to-date globally. </p>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card h-100">
+              <img src="#add image here" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title"><i class="fa-sharp fa-solid fa-mobile-screen-button"></i>Social Media</h5>
+                <p class="card-text">We Leverage the strength of Corus Entertainment through video, text , photos-Social Media Manager</p>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card h-100">
+              <img src="#add image here" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title"><i class="fa-sharp fa-solid fa-vr-cardboard"></i>Gaming</h5>
+                <p class="card-text">Get all latest news on games,latest update at Ily-Tech.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div> 
+
+      <!-- last download section --> 
+      <div class="container" id="container1">
+         <div class="row" id="footer">
+        <h2>Download the App!</h2>
+        <p class="lead">Really, why should I Download this app?</p>
+        <a href="#"><img id="pplaystore" src="#add image here" alt=""></a>
+      </div>
+    </div>
+      <script id="text/javascript"></script>
+    </body>
+</hmtl>

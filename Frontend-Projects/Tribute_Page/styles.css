@@ -52,6 +52,7 @@ figcaption {
 
 ul li {
     padding: 5px;
+    text-align: justify;
 }
 
 article {
