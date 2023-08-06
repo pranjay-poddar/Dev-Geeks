@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resistance Calculator</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="./assets/resistor.png" type="image/x-icon">
+</head>
+<body>
+    <h1 class="title">Resistance <br> <img src="./assets/resistor2.png" alt="" srcset=""> <br> Calculator</h1>
+    <div id="container">
+        <div class="value_inp">
+            <div class="1stcol">
+                <label for="band1">Select Band 1 colour:</label>
+                <select id="band1">
+                </select>
+            </div>
+            <div class="2ndcol">
+                <label for="band2">Select Band 2 colour:</label>
+                <select id="band2">
+                </select>
+            </div>
+            <div class="3rdcol">
+                <label for="band3">Select Band 3 colour:</label>
+                <select id="band3">
+                </select>
+            </div>
+            <div class="tolr">
+                <label for="band4">Select Tolerance:</label>
+                <select id="band4">
+                </select>
+            </div>
+            <button class="btn">Calculate</button>
+        </div>
+        <div id="popup" class="popup">
+            <div class="popup-content">
+              <h2 id="result">Resistance Result</h2>
+              <p id="popup-result"></p>
+              <button id="closebtn">Close</button>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+</html>
