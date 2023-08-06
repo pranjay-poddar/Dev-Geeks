@@ -1,6 +1,22 @@
 <?php
     //Including the database connection file
     include("database.php");
+    $reset_link=false;
+    $pass_upd=false;
+    if(isset($_GET["reset_link"]))
+    {
+        if($_GET["reset_link"]=="success")
+        {
+            $reset_link=true;
+        }
+    }
+    if(isset($_GET["pwd_ud"]))
+    {
+        if($_GET["pwd_ud"]=="success")
+        {
+            $pass_upd=true;
+        }
+    }
 
     //Function to sanitize user input
     function obtain_proper_input($data)
@@ -91,6 +107,27 @@
     <!-- Bootstrap CSS -->
 </head>
 <body>
+    <div class="d-flex flex-column justify-content-center align-items-center">
+        <!-- Reset Link sent -->
+        <div class="row mt-3 mb-3 justify-content-center">
+            <div class="col">
+                <span class="text-warning fs-3">
+                    <?php if($reset_link) echo "Link has been sent to the email-id. Kindly reset the password and login here!"?>
+                </span>
+            </div>
+        </div>
+
+        <!-- Password updated successfully -->
+        <div class="row mt-3 mb-3 justify-content-center">
+            <div class="col">
+                <span class="text-warning fs-3">
+                    <?php if($pass_upd) echo "Password has been updated successfully. You can now login here!"?>
+                </span>
+            </div>
+        </div>
+        </div>
+    </div>
+
     <!-- Main container -->
     <div class="d-flex flex-column container-lg justify-content-center align-items-center border border-5 border-dark rounded w-50 mt-5 mb-5 p-5">
         <p class="display-2">Login</p>
@@ -155,6 +192,7 @@
             </div>
         </form>
         <p class="fst-italic">Don't have an account? <a href="signup.php">Signup here</a></p>
+        <p class="fst-italic">Forgot Password? <a href="forgot-password.php">Change here</a></p>
     </div>
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
