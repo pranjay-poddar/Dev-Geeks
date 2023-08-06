@@ -19,8 +19,7 @@ header{
     display: flex;
 }
 #logo h1{
-    /* margin: 3rem 15rem; */
-    padding: 3rem 13rem;
+    padding: 1rem 1rem;
     font-size: 3rem;
     color: #fff;
 }
@@ -31,7 +30,8 @@ header{
 #login{
     flex: 1;
     display: flex;
-    padding-top: 2.1rem;
+    padding-top: 1.1rem;
+    padding-left: 25rem;
 
 }
 .white{
