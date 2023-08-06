@@ -1,23 +1,25 @@
 import "./SignUp.css";
 import { useState } from "react";
-
+//It is used to import useState hook
 function SignUp() {
   const mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
   const phoneNumber = /^\(?(\d{3})\)?[- ]?(\d{3})[- ]?(\d{4})$/;
+  //these are regex expressions to validate email and mobile number(10 digits)
   const [data, setData] = useState({
     FirstName: "",
     LastName: "",
     CompanyName: "",
     MobileNumber: "",
     email: "",
-  });
+  }); //useState() hook is used to track the state of the component and used to change the state of the component
+  //In React we can change the state of the component using useState hook to change UI so that only that component is changed and refreshed and not the entire page that is the use of hooks
   const handleSubmit = (e) => {
-    e.preventDefault();
+    e.preventDefault(); //to prevent the automatic action of submit button
     const error = document.querySelector(".Error");
     error.innerText = "";
     if (data.FirstName === "") {
       window.alert("The FirstName Field is Empty");
-      error.innerText = "*The FirstName Field is Empty";
+      error.innerText = "*The FirstName Field is Empty"; //A separate field to update the error message
     } else if (data.LastName === "") {
       window.alert("The LastName Field is Empty");
       error.innerText = "*The LastName Field is Empty";
@@ -37,11 +39,12 @@ function SignUp() {
       window.alert("SignUp Successful");
     }
   };
+  //when
   const handleChange = (e) => {
     setData((previousState) => {
       console.log(e.target.name, e.target.value);
       return { ...previousState, [e.target.name]: e.target.value };
-    });
+    }); //when the datga inside the form is updated then the state object hooked to useState has to be updated so it is updated with setter function setData when the handleChange Event Hander is called
   };
   return (
     <div className="d-flex flex-column  justify-content-center align-content-center container-lg w-50  border border-5 border-dark mt-5 mb-5 p-5 ms-3 rounded">
