@@ -1,0 +1,56 @@
+*{
+    margin:0;
+    padding:0;
+}
+body{
+    width:100vw;
+    height: 100vh;
+    background-color: 	MediumVioletRed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+#main{
+    font-size: 3rem;
+    width:50%;
+    border-radius: 20%;
+    height: 50%;
+    background-color: LemonChiffon;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+}
+i{
+    color: black;
+    width: 47px;
+    height: 47px;
+    background-color: white;
+    border-radius: 90%;
+    animation: animate 2s ease-in-out infinite alternate;
+}
+i:hover{
+    color: white;
+    background-color: black;
+    transform: scale(1.1);
+  
+}
+@keyframes animate {
+    0%{
+transform: scale(1);
+    }
+    100%{
+        transform: scale(2) translateY(20px);
+    }
+}
+#i1{
+animation-delay: 1s;
+}
+#i2{
+    animation-delay: 2s;
+    }
+    #i3{
+        animation-delay: 3s;
+        }
+       
