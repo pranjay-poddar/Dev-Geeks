@@ -1,0 +1,77 @@
+*{
+    margin:0;
+    padding:0;
+}
+body{
+    color: white;
+    width:100vw;
+    height: 100vh;
+overflow: hidden;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-direction: column;
+}
+#main{
+   
+    margin-top: 600px;
+    font-size: 3rem;
+    width:100%;
+    border-radius: 20%;
+    height: 50%;
+ 
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+}
+i{
+   
+
+    border-radius: 90%;
+    animation: animate 8s ease-in-out infinite alternate;
+    color: Fuchsia;
+    
+}
+i:hover{
+    background-color: pink;
+    
+
+    transform: scale(1.1);
+  
+}
+@keyframes animate {
+    0%{
+transform: scale(1);
+    }
+    100%{
+    transform:  translateY(-800px) ;
+    }
+}
+#i1{
+animation-delay: 1s;
+}
+#i2{
+    animation-delay: 4s;
+    }
+    #i3{
+        animation-delay: 7s;
+        }
+        #i4{
+            animation-delay: 13s;
+            }      
+            #i5{
+                animation-delay: 12s;
+                }
+                #i6{
+                    animation-delay: 1s;
+                    }
+                    #i7{
+                        animation-delay: 2s;
+                        }
+                        #i8{
+                            animation-delay: 3s;
+                            }
+                            #i9{
+                                animation-delay: 4s;
+                                }
