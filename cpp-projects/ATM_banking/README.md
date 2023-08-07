@@ -11,7 +11,7 @@ ATMs are Automated Teller Machines that process daily financial transactions. AT
 </p>
  
  <p align="center">
-  <img width="460" height="300" src="![image](https://github.com/atumat/Dev-Geeks/assets/116307514/f7e2fce8-ca2d-4b5e-b41f-842c17b32a5c)">
+  <img width="460" height="300" src="https://www.idfcfirstbank.com/content/dam/idfcfirstbank/images/blog/finance/what-is-atm-717x404.jpg">
 </p>
 
 <h3> TABLE OF CONTENTS </h3>
