@@ -1,4 +1,4 @@
-# Celestial Body and Spacecraft Simulation
+# Spacecraft Orbital Mechanics Simulator
 
 This C++ program simulates the motion of a spacecraft influenced by the gravitational force of a celestial body (planet). It calculates the spacecraft's trajectory over a specified period using numerical integration.
 
