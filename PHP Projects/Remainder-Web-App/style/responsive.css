@@ -1,0 +1,210 @@
+@media only screen and (max-device-width: 1440px) {
+    .formContainer {
+        max-width: 35vw;
+        min-height: auto;
+    }
+
+    .inputContainer {
+        height: 100%;
+        min-height: 8vh;
+    }
+
+    .row {
+        height: 100%;
+        min-height: 65vh;
+    }
+
+}
+
+@media only screen and (max-device-width: 1024px) {
+    .loginContent {
+        height: 100%;
+        max-height: 84%;
+    }
+
+    .imgContainer {
+        max-width: 45vw;
+    }
+
+    .formContainer {
+        max-width: 45vw;
+    }
+    .row {
+        height: 100%;
+        min-height: 90vh;
+    }
+    #homeHeader h2{
+        margin: 2vh 0 0 0;
+        font-size: 3.2rem;
+    }
+    .newRmimgContainer{
+        display: none;
+    }
+
+}
+
+@media only screen and (max-device-width: 767px) {
+    #loginHeader h2 {
+        height: 10vh;
+        font-size: 2rem;
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+        
+    }
+
+    .imgContainer {
+        display: none;
+    }
+
+    .loginContent {
+        height: 100%;
+        min-height: 85vh;
+    }
+
+    .loginBtnContainer {
+        flex-direction: column-reverse;
+        height: 100%;
+        min-height: 20vh;
+    }
+
+    .formContainer {
+        padding: 15px 0px;
+        height: auto;
+        width: 100%;
+        min-height: auto;
+        max-height: auto;
+        min-width: 74vw;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 10px 16px 0 rgb(0 0 0 / 20%), 0 6px 20px 0 rgb(0 0 0 / 19%);
+    }
+
+    .formContainer form {
+        height: 100%;
+        min-height: 50vh;
+        width: 100%;
+        max-width: 85%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        justify-content: space-evenly;
+    }
+
+    .loginBtnContainer {
+        max-height: 10vh;
+    }
+
+    .inputContainer {
+        height: 100%;
+        max-height: 8vh;
+    }
+    #homeHeader h2{
+        font-size: 2.5rem;
+    }
+    #dayDesc{
+        min-height: auto;
+        font-size: 2.5rem;
+    }
+    .our_solution_category .solution_cards_box {
+        flex-direction: row;
+    }
+
+    .navHome{
+        flex-direction: column;
+    }
+    .navHome div{
+        width: 100%;
+    }
+    .dropDownIcon{
+        display: block;
+        font-size: 2rem;
+    }
+    .navHome div:nth-child(1){
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .navLoginSignUp button:nth-child(2){
+        white-space: nowrap;
+    }
+    .navLoginSignUp{
+       flex-direction: column;
+    }
+    .navLoginSignUp{
+        width: auto;
+        height: 100%;
+        min-height: 22vh;
+        justify-content: space-evenly;
+        display: none;
+    }
+    .navHome{
+        min-height: auto;
+    }
+}
+
+@media (max-width: 629px) {
+    .our_solution_category .solution_cards_box {
+        flex-direction: column;
+    }
+}
+@media (max-width: 450px) {
+    .h-custom {
+        height: 100%;
+    }
+    #dayDesc{
+        margin-top: 30px;
+    }
+    footer p{
+        font-size: 1.4rem;
+    }
+    #homeHeader {
+        padding: 0 10px;
+    }
+    .setCheckBox{
+        flex-direction: column;
+    }
+    .setCheckBox div{
+        padding-left: 25px;
+    }
+    .newRmContent{
+        max-width: calc(100vw - 25px);
+        margin: 25px;
+    }
+    
+}
+
+@media screen and (min-width: 320px) {
+    .sol_card_top_3 {
+        position: relative;
+        top: 0;
+    }
+
+    .our_solution_category {
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .our_solution_category .solution_cards_box {
+        flex: auto;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .our_solution_category .solution_cards_box {
+        flex: 1;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    .sol_card_top_3 {
+        position: relative;
+        top: 3rem;
+    }
+
+    .our_solution_category {
+        width: 50%;
+        margin: 0 auto;
+    }
+}
