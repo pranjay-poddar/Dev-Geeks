@@ -44,6 +44,17 @@ span {
     rgba(181, 181, 255, 0.311),
     rgba(255, 255, 255, 0.147));
 }
+
+.list{
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+}
+.nav-item:hover{
+    transition: transform 0.5s;
+    color: rgb(155, 215, 248);
+    text-decoration: underline;   
+}
 ul {
     list-style-type: none;
     margin: 0;
@@ -53,18 +64,45 @@ ul {
 li {
     /* display: block;
     list-style-type:none;*/
-    padding-left: 1rem; 
+    padding-left: 1rem;
+    padding-right: 1rem; 
     float: left;
 }
 a {
     text-decoration: none;
     color: aliceblue;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
+::placeholder{
+    color: black;
+}
+.list input#search{
+    background-color: aliceblue;
+    height: 30px;
+    border: 3px solid rgb(155, 215, 248);
+    border-radius: 0.25rem;
+    
+}
+.list input#search:hover{
+    background-color: transparent;
+    color:aliceblue;
+    border:2px solid aliceblue
+}
+
+
 input[type=submit] {
     background-color: aliceblue;
+    height: 1.7rem;
+    width: 4rem;
     border:none;
     cursor: pointer;
     border-radius: 0.25rem;
+}
+input[type=submit]:hover{
+ /*   background-color: rgb(155, 215, 248); */
+ background-color: transparent;
+ color:aliceblue;
+ border:2px solid aliceblue
 }
 
 /* Content */
@@ -148,6 +186,31 @@ input[type=submit] {
     fill: aliceblue;
 
 }
+.social:hover .icons{
+    transition: transform 0.3s;
+    transform: scale(1.4);
+}
+.twitter:hover svg path{
+    fill:  #00aced;
+}
+.email:hover svg path{
+    fill: gray;
+}
+.instagram:hover svg path{
+    fill: #bc2a8d;
+}
+.linkedin:hover svg path{
+    fill: #258af0;
+}
+.hashnode:hover svg path{
+    fill: rgb(7, 81, 217);
+}
+.behance:hover svg path{
+    fill: rgb(22, 22, 134);
+}
+
+
+
 
 /* footer */
 .footer { 

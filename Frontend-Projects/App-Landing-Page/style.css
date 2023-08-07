@@ -1,0 +1,29 @@
+        .jumbotron{
+            background-image: url();
+            text-align: center;
+            padding-top: 100px;
+        }
+        #inputemail{
+            width: 400px;
+            margin: auto;
+        }
+        #appsummary{
+          text-align: center;
+          margin-top: 60px;
+          margin-bottom: 60px;
+        }
+        #pplaystore{
+          width: 20%;
+          height: 70%;
+        }
+        #footer{
+          background-color: skyblue;
+          padding-top: 50px;
+          margin-top:50px ;
+          text-align: center; /*for making text at centre */
+          padding-bottom: 50px;
+        }
+        body{
+          position: relative;
+        }
+        

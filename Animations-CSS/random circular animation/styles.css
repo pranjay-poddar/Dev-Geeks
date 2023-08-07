@@ -1,0 +1,41 @@
+* {
+    box-sizing: border-box;
+  }
+  body {
+    background: black;
+    overflow: hidden;
+  }
+  
+  @keyframes square {
+    @for $i from 1 through 50 {
+      #{($i * 2%)} {
+        transform: translate3d( (random(10) * 30px) , (random(10) * -20px), (random(10) * 20px) ) scale(random(5)) rotate((random(540) * 1deg));
+        background: hsla(random(180), 50%, 50%, .5);
+      }
+    }
+  }
+  
+  .context {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    perspective: 2000px;
+    transform-style: preserve-3d;
+  }
+  
+  .square {
+    border: 1px solid transparent;
+    height: 500px;
+    width: 30px;
+    background: black;
+    position: absolute;
+    animation: square 100s linear infinite alternate;
+  }
+  
+  @for $i from 1 through 10 {
+    .square:nth-child(#{$i}){
+      animation-delay: ($i * -.15s);
+      transform: translateZ($i * 20px);
+    }
+  }
+  
