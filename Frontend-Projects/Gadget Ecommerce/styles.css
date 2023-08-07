@@ -29,7 +29,9 @@
 }
 
 
-
+.card-body {
+    text-align: center !important;
+}
 
 
 
