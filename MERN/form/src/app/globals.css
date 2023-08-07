@@ -1,0 +1,173 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  background-color: rgb(201, 255, 255);
+}
+
+/* PAGE Starts */
+#headingContainer {
+  height: 7vh;
+}
+
+#personalInfoContainer>input,
+#upiContainer>input,
+#bankContainer>input {
+  display: block;
+  height: 35px;
+  padding-left: 10px;
+}
+
+#personalInfoContainer {
+  height: 30vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+#rcvOptContainer {
+  height: 8vh;
+  display: flex;
+  align-items: center;
+}
+
+#rcvOptContainer>label {
+  font-size: 14px;
+  margin-right: 5px;
+}
+
+#upiContainer {
+  margin-top: 15px;
+}
+
+#upiContainer>h5,
+#bankContainer>h5 {
+  font-family: sans-serif;
+  font-size: 15px;
+  /* margin-bottom: 15px; */
+  text-decoration: underline;
+}
+
+#upiContainer>input,
+#bankContainer>input {
+  width: 100%;
+}
+
+#upiContainer>div {
+  display: flex;
+  margin: 15px 0;
+  align-items: center;
+}
+
+#upiContainer>div>label {
+  font-size: 12px;
+  width: 70px;
+}
+
+#btnContainer>button {
+  height: 30px;
+  width: 50%;
+  margin: 5px;
+  font-size: 18px;
+  border-radius: 5px;
+  background-color: blue;
+  color: white;
+  font-weight: bold;
+}
+
+#bankContainer {
+  height: 25vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+/* PAGE ends */
+
+/* STyling starts for components */
+#headingContainer {
+  height: 7vh;
+}
+
+#personalInfoContainer>input,
+#upiContainer>input,
+#bankContainer>input {
+  display: block;
+}
+
+#personalInfoContainer {
+  height: 30vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+#rcvOptContainer {
+  height: 8vh;
+  display: flex;
+  align-items: center;
+}
+
+#rcvOptContainer>label {
+  font-size: 14px;
+  margin-right: 5px;
+}
+
+#upiContainer {
+  margin-top: 15px;
+}
+
+#upiContainer>h5,
+#bankContainer>h5 {
+  font-family: sans-serif;
+  font-size: 15px;
+  /* margin-bottom: 15px; */
+  text-decoration: underline;
+}
+
+#upiContainer>input,
+#bankContainer>input {
+  width: 100%;
+}
+
+#upiContainer>div {
+  display: flex;
+  margin: 15px 0;
+  align-items: center;
+}
+
+#upiContainer>div>label {
+  font-size: 12px;
+  width: 70px;
+}
+
+#btnContainer>button {
+  height: 30px;
+  width: 50%;
+  margin: 5px;
+  font-size: 18px;
+  border-radius: 5px;
+  background-color: blue;
+  color: white;
+  font-weight: bold;
+}
+
+#bankContainer {
+  height: 25vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+.body{
+  width: 50%;
+  display: block;
+  margin: auto;
+  padding-top: 50px;
+}
