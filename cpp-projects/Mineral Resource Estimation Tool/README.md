@@ -1,6 +1,6 @@
-# Inverse Distance Weighting (IDW) Estimation Program
+# Mineral Resource Estimation Tool
 
-This is a C++ program that demonstrates Inverse Distance Weighting (IDW) estimation for spatial interpolation. IDW is a technique commonly used in GIS to estimate values at unmeasured locations based on nearby data points.
+This is a C++ program that demonstrates Mineral Resource estimation for spatial interpolation. MR is a technique commonly used in GIS to estimate values at unmeasured locations based on nearby data points.
 
 ## How to Use
 
