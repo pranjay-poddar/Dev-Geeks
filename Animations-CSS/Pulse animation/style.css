@@ -1,0 +1,45 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    background-color: #f2b679;
+}
+
+.button {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-color: brown;
+    margin: auto;
+}
+
+.button:before, .button:after {
+    content:"";
+    position: absolute;
+    background-color: #f2983d;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    z-index: -1;
+}
+
+.button:before {
+    animation: outward 1s ease-out infinite;
+}
+
+.button:after {
+    animation: outward 1s 0.5s ease-out infinite;
+}
+
+@keyframes outward {
+    100% {
+        transform: scale(2);
+        opacity: 0;
+    }
+}
+
