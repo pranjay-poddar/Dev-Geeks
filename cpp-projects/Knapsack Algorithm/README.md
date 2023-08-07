@@ -11,4 +11,13 @@ Put the weights and values of N objects in a knapsack of capacity W to attain th
  Place the weights and values of N objects in a W-capacity knapsack to achieve the highest overall value in the knapsack. To increase the total worth of the knapsack, we can break things down into fractional knapsacks.
 </p>
 
+<h2> Complexity</h2>
+<p align="justify">
+Time Complexity: O(N * logN) <br>
+Auxiliary Space: O(N) <br>
+ Greedy Approach 
+</p>
+
+
+
 
