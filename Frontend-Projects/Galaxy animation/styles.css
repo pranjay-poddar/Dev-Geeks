@@ -1,0 +1,28 @@
+
+*{
+    padding:0;
+    margin:0;
+
+}
+body{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+}
+div{
+width: 100%;
+height:100%;
+background:radial-gradient(black 10%,green 15%,blue 20%,black 30%,blue 40%,black 50% ,blue 60%,black 70%,blue 80%,black 90%);
+animation: animate 10s linear infinite; 
+border-radius: 50%;
+}@keyframes animate{
+    0%{
+        transform: rotateZ(0deg);
+    }
+   100%{
+        transform: rotateZ(360deg);
+    }
+}
