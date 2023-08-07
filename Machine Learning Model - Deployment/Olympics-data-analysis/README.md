@@ -1,5 +1,5 @@
 # olympics-data-analysis-web-app
-A Streamlit web application for the analysis of olympics dataset
+A Streamlit web application for the analysis of olympics dataset. So I build a website using StreamLit python library to visualize the 120 Years of Olympics history.
 
 This project aims , building an Olympics Data Analysis Web Application using Streamlit. For development, I will be using Python and Pandas. For plotting, I will be using Seaborn and Plotly libraries.Variables include Name, Sex, Age, Height, Weight of the athlete, his team name, sport, event and the year, season, city of the olympics he/she took part in. In addition, the data captures the medal won (if any) by the athlete. 
 ## Dataset
@@ -13,7 +13,16 @@ preprocessing-helper: Library container generic helper functionality for preproc
 
 Helper functions simplify complex analysis tasks and make the code modular and reusable. In the Olympic data analysis project, you can create helper functions to perform common tasks and computations efficiently.
 
-Using K-Nearest Neighbors (KNN) for Olympic data analysis can be an interesting approach, especially when dealing with classification tasks or finding similar countries/athletes based on their Olympic performance. In this context, we can use KNN to identify countries or athletes with similar performance profiles and make predictions based on their neighbors. 
+
+## These 4 step analysis are done in this project:
+
+-Medal tally (No. of total medals, No. of Gold Medals, No. of Silver Medals and No. of Bronze Medals) over the years of different countries.
+
+-Overall analysis like how many sports are played, how many countries are participated, how many cities hosted and so on. And there is a graph on participating nations over the years, graph on events over the years, graph on number of athletes participated over the years, heatmap on number of events and top 15 successful athletes on different sports.
+
+-Then did country wise analysis like graph many medals won through the years, heatmap on how many medals won through out the years in different sports and top 15 athletes of the countries.
+
+-And last, athletes wise analysis like distribution of winning Gold, Silver and Bronze Medals on the basis of athletes' age, distribution of age with respect to sports of Gold Medalist as well as height vs weight graph of different sports.
 
 ## Dependencies
 
