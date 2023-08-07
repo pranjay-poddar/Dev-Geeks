@@ -1,6 +1,6 @@
-# Aircraft Maintenance Management
+# Aircraft Maintenance System
 
-This C++ program simulates an aircraft maintenance management system. It allows you to manage aircraft information, perform flights, add, modify, and display maintenance tasks associated with an aircraft.
+This C++ program simulates an aircraft maintenance system. It allows you to manage aircraft information, perform flights, add, modify, and display maintenance tasks associated with an aircraft.
 
 ## How to Use
 
