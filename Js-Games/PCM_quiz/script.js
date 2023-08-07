@@ -64,10 +64,12 @@ const quizContainer = document.getElementById("quiz");
 const resultContainer = document.getElementById("result");
 const submitButton = document.getElementById("submit-btn");
 const subjectButtons = document.querySelectorAll(".subject-btn");
+const timerDisplay = document.getElementById("timer");
 
 let currentQuestionIndex = 0;
 let score = 0;
 let selectedSubject = "all";
+let timer;
 
 function displayQuestion() {
   const filteredQuestions = questions.filter(question => question.subject === selectedSubject || selectedSubject === "all");
@@ -86,6 +88,7 @@ function displayQuestion() {
         <div class="options">${optionsHtml}</div>
       </div>
     `;
+    startTimer(20);
   } else {
     showResult();
   }
@@ -121,6 +124,22 @@ function selectSubject(event) {
   currentQuestionIndex = 0;
   score = 0;
   displayQuestion();
+}
+
+function startTimer(seconds) {
+  clearInterval(timer);
+  let timeRemaining = seconds;
+  timer = setInterval(() => {
+    if (timeRemaining >= 0) {
+      timerDisplay.textContent = `Time Remaining: ${timeRemaining} seconds`;
+      timeRemaining--;
+    } else {
+      clearInterval(timer);
+      // Move to the next question when time is up
+      currentQuestionIndex++;
+      displayQuestion();
+    }
+  }, 1000);
 }
 
 subjectButtons.forEach(button => {
