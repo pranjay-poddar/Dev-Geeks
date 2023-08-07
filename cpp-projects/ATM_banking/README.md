@@ -11,7 +11,7 @@ ATMs are Automated Teller Machines that process daily financial transactions. AT
 </p>
  
  <p align="center">
-  <img width="460" height="300" src="https://user-images.githubusercontent.com/116307514/218083494-c9ec839e-0359-4afb-a001-514283486ced.png">
+  <img width="460" height="300" src="![image](https://github.com/atumat/Dev-Geeks/assets/116307514/f7e2fce8-ca2d-4b5e-b41f-842c17b32a5c)">
 </p>
 
 <h3> TABLE OF CONTENTS </h3>
