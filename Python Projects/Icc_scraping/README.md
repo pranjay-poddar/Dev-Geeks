@@ -1,5 +1,6 @@
-##ICC ranking scraper
-  """
+## ICC ranking scraper
+
+
     Create an instance of `ICC` class.
     ```python
     scraper = ICC()
@@ -8,9 +9,8 @@
     | ---------------------------- | ------------------------------------------------------------------- |
     | `.team_rankings(format)`     | Returns the list of rankings of teams of desired format             |
     |`.player_ranking(type,format)`| Returns the list of player ranking of desired type and format       |
-    """
 
- """
+
         Create an instance of `ICC` class.\n
         Required Params - `format` - "ODI","T20" or "TEST"
         ```python
@@ -25,8 +25,7 @@
             }   
         ]
         ```
-        """
- """
+        
         Create an instance of `ICC` class.\n
         Required Params - `format` - "ODI","T20" or "TEST"
         `type` - "batting","bowling" or "all-rounder"
@@ -42,4 +41,4 @@
             }   
         ]
         ```
-        """
+        
