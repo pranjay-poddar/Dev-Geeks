@@ -101,7 +101,23 @@ class TechCrunch:
 
     def search(self, topic):
         self.topic = topic
-        
+        """
+        Class - `TechCrunch`
+        Example:
+        ```
+        articles = TechCrunch()
+        articles.search("github")
+        ```
+        Returns:
+        {
+            "title": Tile of the article
+            "description": Description of the article
+            "image": Image of the article
+            "author": Author of the Article
+            "date": Date the article was posted
+            "link": Link to the article
+        }
+        """
         url = "https://search.techcrunch.com/search?p=" + self.topic + "&fr=techcrunch"
         try:
             res = requests.get(url)
