@@ -10,7 +10,22 @@ class EazyDiner:
         self.location = location
 
     def get_restaurants(self):
-        
+        """
+        Class - `EazyDiner`
+        Example:
+        ```
+        del = EazyDiner("Delhi NCR") or del = EazyDiner("delhi-ncr")
+        del.getRestaurants()
+        ```
+        Returns:
+        {
+            "restaurant": restaurant name
+            "location": location of restaurant
+            "rating": rating
+            "cuisine": cuisines provided
+            "price": price for two people
+        }
+        """
         url = (
             "https://www.eazydiner.com/restaurants?location="
             + self.location.replace(" ", "-").replace(",", "").lower()
