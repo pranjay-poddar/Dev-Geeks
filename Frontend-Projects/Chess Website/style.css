@@ -1,5 +1,8 @@
 html,
 body {
+    background-image: url("https://c1.wallpaperflare.com/preview/979/274/351/chess-chess-men-game-chess-pieces.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
     width: 100%;
     height: 100%;
     padding: 0;
@@ -14,6 +17,7 @@ div * {
 }
 
 #turn {
+    background: radial-gradient(circle, rgba(248,255,254,1) 0%, rgba(0,0,0,1) 100%);
     max-width: 451px;
     max-height: 30px;
     width: 100%;
