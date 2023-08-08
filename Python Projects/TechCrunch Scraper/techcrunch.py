@@ -8,7 +8,23 @@ class TechCrunch:
 
     def getArticles(self, category):
         self.category = category
-        
+        """
+        Class - `TechCrunch`
+        Example:
+        ```
+        articles = TechCrunch()
+        articles.getArticles("artificial-intelligence")
+        ```
+        Returns:
+        {
+            "title": Tile of the article
+            "description": Description of the article
+            "image": Image of the article
+            "author": Author of the Article
+            "date": Date the article was posted
+            "link": Link to the article
+        }
+        """
         url = (
             "https://techcrunch.com/category/" + self.category.replace(" ", "-").lower()
         )
