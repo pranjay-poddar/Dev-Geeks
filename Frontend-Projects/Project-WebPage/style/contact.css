@@ -1,0 +1,113 @@
+body{
+    background: linear-gradient(0deg, rgba(48, 165, 202, 0.58), rgba(48, 165, 202, 0.58)), url(https://ik.imagekit.io/5bndldf5v/frontend/Rectangle.png);
+}
+
+header{
+    display: flex;
+}
+.form input{
+    display: block;
+    background-color: transparent;
+    width: 39vw;
+    margin-bottom: 5vh;
+    height: 5vh;
+    border: 0px;
+    border-bottom: 1px solid aliceblue;
+}
+.info{
+    height: 80vh;
+    width: 30vw;
+    margin: auto;
+}
+.form{
+    height: 80vh;
+    width: 40vw;
+    margin: auto;
+}
+.info h1{
+    /* margin-bottom: 2vw; */
+    margin-top: 5vh;
+    font: 4.2rem sans-serif;
+}
+.name{
+    margin-top: 20vh;
+}
+.info p{
+    margin-bottom: 5vh;
+}
+.details{
+margin-top: 10vh;
+font-size: 1.2rem;
+font-family: sans-serif;
+}
+.details span{
+color: rgb(163, 163, 163);
+}
+.submitBtn{
+    min-height: 100px; 
+    min-width: 100px; 
+    background-color: rgb(0, 118, 165);
+    float: right;
+    border-radius: 50%;
+    text-align: center;
+}
+.submitBtn button{
+    background: transparent;
+    color: white;
+    border: 0px;
+    margin-top: 45%;
+    font-size: 0.7rem;
+}
+/* 
+footer {
+    display: flex;
+    max-width: 70vw;
+    min-width: 50vw;
+    margin: auto;
+    width: 100%;
+    min-height: 40vh;
+}
+.foooterHeading{
+    margin: 5vh 0vw;
+}
+.footerDiv p{
+    margin-bottom: 2vh;
+}
+.left {
+    display: flex;
+    max-width: 70vh;
+    min-width: 50vh;
+}
+.footerDiv{
+    flex: auto;
+}
+.right{
+    width: 13vw;
+    max-width: 50vw;
+
+    margin-left: auto;
+
+}
+.links{
+    margin-top: 5vh;
+}
+.links div{
+    margin-bottom: 2vh;
+    margin: 2vh 0vh;
+}
+.linkLogo img{
+    margin: 0vh 2vw 0vh 0vw;
+}
+.cprt{
+    text-align: center;
+    margin-bottom: 5vh;
+}
+.end{
+    align-self: flex-end;
+}
+.txtBox {
+    top: -14vh;
+    text-align: center;
+    position: relative;
+    color: black;
+} */
