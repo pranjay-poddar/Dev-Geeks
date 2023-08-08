@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>URL Encoder/Decoder</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>URL Encoder/Decoder</h1>
+        <input type="text" id="inputUrl" placeholder="Enter URL">
+        <div class="encodeDecode">
+            <div class="opt">
+                <input type="radio" name="action" id="encode" value="encode" checked>
+                <label for="encode">Encode</label>
+            </div>
+            <div class="opt">
+                <input type="radio" name="action" id="decode" value="decode">
+                <label for="decode">Decode</label>
+            </div>
+        </div>
+        <button onclick="process()">Submit</button>
+        <div id="result"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
