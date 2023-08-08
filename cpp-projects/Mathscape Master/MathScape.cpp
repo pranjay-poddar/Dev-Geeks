@@ -496,6 +496,8 @@ void lines(){
     cout<<"2. Check if two lines are parallel"<<endl;
     cout<<"3. Check if two lines are perpendicular"<<endl;
     cout<<"4. Distance between a line and a point"<<endl;
+    cout << "5. Check if two lines are intersecting" << endl;
+    cout << "6. Find point of intersection of two lines" << endl;
     cout<<"Enter your choice"<<endl;
     cin>>choice;
 
@@ -503,7 +505,9 @@ void lines(){
     double X1,Y1,X2,Y2,slope2;//line2
     double Xo,Yo;//point
     double A, B, C;
+    double A2, B2, C2;
     double dist;
+    double determinant, intersectionX, intersectionY;
 
     switch(choice){
         case 1:
@@ -549,17 +553,78 @@ void lines(){
             dist=abs(A * Xo + B * Yo + C) / pow((A * A + B * B),0.5);
             cout<<"Distance between point and line is: "<<dist<<endl;
             break;
+        case 5:
+            cout << "Enter coordinates of first point on line1: ";
+            cin >> x1 >> y1;
+            cout << "Enter coordinates of second point on line2: ";
+            cin >> X1 >> Y1;
+            slope1 = (y2 - y1) / (x2 - x1);
+            slope2 = (Y2 - Y1) / (X2 - X1);
+            
+            if (slope1 != slope2) {
+                cout << "Lines are intersecting" << endl;
+            } else {
+                cout << "Lines are not intersecting" << endl;
+            }
+            break;
+        case 6:
+            
+            // Finding point of intersection of two lines
+            cout << "Enter coefficients A, B, and C for the first line (Ax + By + C = 0): ";
+            cin >> A >> B >> C;
+            cout << "Enter coefficients A, B, and C for the second line (Ax + By + C = 0): ";
+            cin >> A2>> B2>> C2;
+
+            // Calculate the point of intersection
+            determinant = A * B2 - B * A2;
+            intersectionX = (C * B2 - C2 * B) / determinant;
+            intersectionY = (A * C2 - A2 * C) / determinant;
+
+            cout << "Point of intersection: (" << intersectionX << ", " << intersectionY << ")" << endl;
+            break;
         default:
             cout<<"Invalid Choice"<<endl;
     }
 }
+
+void parabola(){
+
+    double a, h, k;
+
+    cout << "Enter the coefficient 'a' of the parabola (y = ax^2 + bx + c): ";
+    cin >> a;
+
+    cout << "Enter the x-coordinate 'h' of the vertex: ";
+    cin >> h;
+
+    cout << "Enter the y-coordinate 'k' of the vertex: ";
+    cin >> k;
+
+    // Calculate the coordinates of the focus (h, k + 1/(4a))
+    double focus_x = h;
+    double focus_y = k + 1 / (4 * a);
+
+    // Calculate the equation of the directrix (y = k - 1/(4a))
+    string directrix = "y = " + to_string(k - 1 / (4 * a));
+
+    // Determine the opening direction based on the sign of 'a'
+    string opening_direction = (a > 0) ? "Opens upward" : "Opens downward";
+
+    cout << "\nParabola Properties:\n";
+    cout << "Vertex: (" << h << ", " << k << ")\n";
+    cout << "Focus: (" << focus_x << ", " << focus_y << ")\n";
+    cout << "Directrix: " << directrix << endl;
+    cout << "Opening Direction: " << opening_direction << endl;
+
+}
+
 
 int main()
 {
 
     cout << "\n====WELCOME TO MATHSCAPE MASTER====" << endl
          << endl;
-    cout << "1. Volume Calculation\n\n2. Surface Area Calculation\n\n3. Triangle Solver\n\n4. 2D Distance Calculator\n\n5. Circle Properties/Calculations\n\n6. Ellipse Properties\n\n7. Polygon Area\n\n8. Lines and its Properties" << endl;
+    cout << "1. Volume Calculation\n\n2. Surface Area Calculation\n\n3. Triangle Solver\n\n4. 2D Distance Calculator\n\n5. Circle Properties/Calculations\n\n6. Ellipse Properties\n\n7. Polygon Area\n\n8. Lines and its Properties\n\n9. Parabola and its properties" << endl;
     int choice;
     cout << endl;
     cout << "Enter Your Choice" << endl;
@@ -589,6 +654,9 @@ int main()
         break;
     case 8:
         lines();
+        break;
+     case 9:
+        parabola();
         break;
     default:
         cout << "Invalid Choice" << endl;
