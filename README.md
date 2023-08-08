@@ -789,9 +789,13 @@ Happy Coding! -->
   <td align="center"> 259.</td>
   <td align="center"><a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/PHP%20Projects/User_Signup_Login_with_database">PHP-Signup-Login</a></td>
   <td align="center"> 260.</td>
-  <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Flutter Projects/Instagram Clone"> Flutter Instagram Clone </a></td>  
+
+  <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Flutter Projects/Instagram Clone"> Flutter Instagram Clone </a></td>
+  <td align="center"> 261.</td>
+  <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Js-Projects/Facebook%20Clone"> Facebook Clone </a></td>
+  <td align="center"> 262.</td> 
+  <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Flutter Projects/Instagram Clone"> Flutter Instagram Clone </a></td> 
  </tr>
-  
 
  <tr align="center">
   <td align="center"> 261. </td>
@@ -803,11 +807,15 @@ Happy Coding! -->
   <td align="center"> 264.</td>  
   <td align="center"><a href="./Python Projects/Circle using Turtle">Circle using Turtle</a></td>
   <td align="center"> 265. </td>
-<td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Js-Games/Etch-a-Sketch"> Etch-a-Sketch </a> </td>
+  <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Js-Games/Etch-a-Sketch"> Etch-a-Sketch </a> </td>
+   
 </tr>
   
 <tr align="center">
-
+  <td align="center"> 261.</td>  
+  <td align="center"><a href="./Python Projects/Circle using Turtle">Circle using Turtle</a></td>
+  <td align="center"> 264.</td>
+  <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Js-Games/Platform_Game">Platform Game</a></td>
   <td align="center"> 266.</td>  
   <td align="center"><a href="./Python Projects/SMTP mailing">SMTP mailing</a></td>
   <td align="center"> 267.</td>
@@ -815,40 +823,25 @@ Happy Coding! -->
   <td align="center"> 261.</td>
   <td align="center"><a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Js-Games/Mastermind">Mastermind</a></td>
   <td align="center"> 268.</td>
-
   <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Python Projects/Forex Exchanger">Web-Image Filter</a></td>
   <td align="center"> 272.</td>
   <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Js-Games/Cubula">Cubula</a></td>
-
   <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Python Projects/Forex Exchanger">Forex Exchanger</a></td>
   <td align="center"> 270.</td>
   <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Animations-CSS/404-Page Character">404-Page Character</a></td>
-<td align="center"> 273.</td>
+  <td align="center"> 273.</td>
   <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Js-Games/Geoguess">Geoguess</a></td>
-
-
-<td align="center"> 277.</td>
+  <td align="center"> 277.</td>
   <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Python Projects/Jarvis Voice Assistant">Jarvis Voice Assistant</a></td>
-
-
   <td align="center"> 276.</td>
   <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Python projects/Medi Scraper">Medi Scraper</a></td>
-
   <td align="center"> 275.</td>
   <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Python Projects/AI Image Generator">Geoguess</a></td>
-
-
   <td align="center"> 274.</td>
   <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Python Projects/CollegeGPACalculator">College GPA Calculator</a></td>
-
   <td align="center"> 278.</td>
   <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/cpp-projects/Vaccine Management System">Vaccine Management System</a></td>
-
-
-
-
 </tr>  
-
 
 
 <tr align="center">
@@ -903,9 +896,10 @@ Happy Coding! -->
 
 <td align="center"> 284.</td>
 <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/cpp-projects/ATM Machine">ATM Machine</a></td>
+<td align="center"> 286. </td>
+<td align="center"><a href="./React-JS Projects/Magic-Notes">Magic Notes</a></td>
+
 </tr>
-
-
 </table>
 
 
