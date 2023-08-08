@@ -75,7 +75,22 @@ class AskUbuntu:
             return ejson
 
     def getActiveQuestions(self):
-        
+        """
+        Class - `AskUbuntu`
+        Example:
+        ```
+        que = AskUbuntu("github")
+        scrape = que.getActiveQuestions()
+        ```
+        Returns:
+        {
+            "question": question title
+            "views": view count of question
+            "vote_count": vote count of question
+            "answer_count": no. of answers to the question
+            "description": description of the question
+        }
+        """
         url = "https://askubuntu.com/questions/tagged/" + self.topic + "?tab=Active"
         try:
             res = requests.get(url)
