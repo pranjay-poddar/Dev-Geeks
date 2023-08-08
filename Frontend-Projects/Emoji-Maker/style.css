@@ -30,6 +30,17 @@ h1 {
 	box-shadow: 0 1.87em 4em rgba(86, 68, 9, 0.3);
 }
 
+.wait {
+	position: relative;
+	left: 80%;
+	top: 30%;
+	transform: translate(-50%, -50%);
+	z-index: 100;
+	font-size: 1.4rem;
+	font-weight: 600;
+	font-family: cursive;
+}
+
 .buttons-container {
 	height: 30%;
 	width: 100%;
