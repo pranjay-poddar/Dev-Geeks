@@ -14,6 +14,7 @@ class AskUbuntu:
     | Methods                     | Details                                                                                              |
     | --------------------------- | ---------------------------------------------------------------------------------------------------- |
     | `.getNewQuestions()`        | Returns the new questions, views, votes, answer counts, and descriptions in JSON format              |
+    | `.getActiveQuestions()`     | Returns the active questions, views, votes, answer counts, and descriptions in JSON format           |
     """
 
     def __init__(self, topic):
