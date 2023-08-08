@@ -1,0 +1,118 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+/* background color for body tag */
+body{
+    background: #bffeff;
+}
+
+/* parent div */
+.container{
+    background: url(https://drive.google.com/uc?export=view&id=1b9Jo5tSNEqwChBAyU1SzK1u0lmGBvB39) no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    width: 100%;
+}
+
+/* properties for body class */
+.body{
+    width: 500px;
+    height: 200px;
+    background-color: #b92f2f;
+    border: 0;
+    display: flex;
+    justify-content: center;
+    border-top-right-radius: 180%;
+    border-top-left-radius: 100%;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    margin-top: 165px;
+}
+.window1{
+    width: 125px;
+    height: 75px;
+    background-color: rgb(224, 252, 255);
+    border-top-right-radius: 20px;
+    border-top-left-radius: 80%;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    margin-top: 30px;
+    margin-right: 50px;
+    margin-bottom: 0px;
+}
+
+.window2{
+    width: 125px;
+    height: 75px;
+    background-color: rgb(224, 252, 255);
+    border-top-right-radius: 100%;
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    margin-top: 30px;
+    margin-right: 50px;
+    margin-bottom: 0px;
+}
+
+/* styling "wheels" class */
+.wheels{
+    display: flex;
+}
+
+/* styling divs in "wheels" class */
+.wheels div{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: rgb(0,0,1);
+    border-top: 6px solid #000;
+    border-bottom: 6px solid #000;
+    border-left: 6px solid #fff;
+    border-right: 6px solid #fff;
+    margin: -40px 100px;
+    animation: rotate 0s linear infinite;
+}
+
+/* keyframes */
+@keyframes rotate{
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+
+/* styling "btn" class */
+.btn{
+    position: relative;
+    top: 92px;
+}
+
+/* styling buttons in "btn" class */
+.btn button{
+    margin: 0 20px;
+    padding: 12px 10px;
+    border-radius: 8px;
+    font-size: 17px;
+    cursor: pointer;
+    border: 2px solid transparent;
+}
+.btn button:hover{
+    background: transparent;
+    color: #fff;
+    border: 2px solid #fff;
+    transition: .5s;
+}
+
+
+
+
+
+
+
