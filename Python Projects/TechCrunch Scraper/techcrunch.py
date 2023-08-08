@@ -4,7 +4,15 @@ import json
 
 
 class TechCrunch:
-    
+    """
+    Class - `TechCrunch`
+    Example:
+    ```
+    articles = TechCrunch()
+    ```\n
+    Methods :\n
+    1. ``.getArticles() | Response - Articles with title, descriptions, images, date and link.
+    """
 
     def getArticles(self, category):
         self.category = category
