@@ -1,0 +1,354 @@
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<title>Mancala</title>
+<style type="text/css">
+input { background-color:#eeddaa; text-align: center; font-weight:bold; font-size:15px }
+select { background-color:#eeddaa; font-weight:bold; font-size:15px }
+</style>
+<script language="JavaScript">
+var i, j, IsOver=true, I_Sel, J_Sel, N_Mov, IsStart0, Start, Size=4, MoveCount;
+Level = new Array(2);
+Fld = new Array(2);
+for (i=0; i<2; i++)
+  Fld[i] = new Array(7);
+for (i=0; i<2; i++)
+{ for (j=0; j<7; j++)
+    Fld[i][j]=new Array(7);
+}    
+  
+Pic= new Array(12);
+for (i=0; i<12; i++)
+{ Pic[i] = new Image();
+  Pic[i].src = "mancala"+i+".gif";
+}
+
+IsStart0=false;
+Level[0]=1;
+Level[1]=0;
+
+function Init()
+{ var ii, jj;
+  for (ii=0; ii<2; ii++)
+  { Fld[ii][0][0]=0;
+    for (jj=1; jj<7; jj++)
+      Fld[ii][jj][0]=Size;
+  }
+  if (IsStart0) Start=0;
+  else Start=1;
+  I_Sel=-1;
+  J_Sel=-1;
+  MoveCount=0;
+  UpdateMoveCount();
+  for (ii=0; ii<2; ii++)
+  { for (jj=0; jj<7; jj++)
+      RefreshFld(ii,jj);
+  }
+  IsMoving=false;
+  IsOver=false;
+}
+
+function SetLevel(nn, mm)
+{ Level[nn]=parseInt(mm);
+}
+
+function SetStart(nn)
+{ IsStart0=1-nn;
+}
+
+function SetSize(ss)
+{ Size=parseInt(ss);
+}
+
+function Timer()
+{ if (IsOver) return;
+  var mmove=(MoveCount+Start)%2;
+  if (IsMoving)
+  { if (N_Mov<0)
+    { N_Mov=Fld[I_Sel][J_Sel][0];
+      Fld[I_Sel][J_Sel][0]=0;
+      RefreshFld(I_Sel, J_Sel);
+      return;
+    }
+    if (N_Mov>0)
+    { J_Sel--;
+      if ((J_Sel==0)&&(mmove!=I_Sel)) J_Sel--;
+      if (J_Sel<0) { J_Sel=6; I_Sel=1-I_Sel; }
+      Fld[I_Sel][J_Sel][0]++;
+      RefreshFld(I_Sel, J_Sel);
+      N_Mov--;
+      return;
+    }
+    else
+    { if ((I_Sel==mmove)&&(J_Sel==0))
+      { IsMoving=false;
+        OverTest();
+        return;
+      }
+      if ((Fld[I_Sel][J_Sel][0]==1)&&(I_Sel==mmove)&&(J_Sel!=0))
+      { Fld[I_Sel][0][0]+=Fld[I_Sel][J_Sel][0]+Fld[1-I_Sel][7-J_Sel][0];
+        Fld[I_Sel][J_Sel][0]=0;
+        Fld[1-I_Sel][7-J_Sel][0]=0;
+        RefreshFld(I_Sel, 0);
+        RefreshFld(I_Sel, J_Sel);
+        RefreshFld(1-I_Sel, 7-J_Sel);
+        return;
+      }
+      MoveCount++;
+      UpdateMoveCount();
+      IsMoving=false;
+      OverTest();
+    }
+    return;
+  }
+  var ll=Level[mmove]+1;
+  if (ll>1) GetBestMove(mmove, 1, ll);
+}
+
+function MakeVirtualMove(mmove,tt,kk)
+{ var ii, jj, ll, mm, nn;
+  for (ii=0; ii<2; ii++)
+  { for (jj=0; jj<7; jj++)
+      Fld[ii][jj][tt]=Fld[ii][jj][tt-1];
+  }
+  ii=mmove;
+  jj=kk;
+  nn=Fld[ii][jj][tt];
+  Fld[ii][jj][tt]=0;
+  while (nn>0)
+  { jj--;
+    if ((jj==0)&&(ii!=mmove)) jj--;
+    if (jj<0) { jj=6; ii=1-ii; }
+    Fld[ii][jj][tt]++;
+    nn--;
+  }
+  if ((Fld[ii][jj][tt]==1)&&(ii==mmove)&&(jj!=0))
+  { Fld[ii][0][tt]+=Fld[ii][jj][tt]+Fld[1-ii][7-jj][tt];
+    Fld[ii][jj][tt]=0;
+    Fld[1-ii][7-jj][tt]=0;
+  }
+  for (ll=0; ll<2; ll++)
+  { nn=0;
+    for (mm=1; mm<7; mm++) nn+=Fld[ll][mm][tt];
+    if (nn==0)
+    { for (mm=1; mm<7; mm++) 
+        Fld[1-ll][0][tt]+=Fld[1-ll][mm][tt];
+    }    
+  }
+  if ((ii==mmove)&&(jj==0)) return(1);
+  return(-1);  
+}
+
+function GetBestMove(mmove, tt, ll)
+{ var ii, jj, jj_best, vv, vv_best=-1000, mm=mmove, mm1=1-mmove, tt1=tt+1;
+  if (tt==ll) return(Fld[mmove][0][tt-1]-Fld[1-mmove][0][tt-1]-Math.random());
+  for (jj=1; jj<7; jj++)
+  { if (Fld[mmove][jj][tt-1]>0)
+    { if (MakeVirtualMove(mm, tt, jj)>0)
+        vv=GetBestMove(mm, tt1, ll);
+      else
+        vv=-GetBestMove(mm1, tt1, ll);
+      if (vv_best<=vv)
+      { vv_best=vv;
+        jj_best=jj;
+      }
+    }
+  }    
+  if (tt>1) 
+  { if (vv_best>-1000) return(vv_best);
+    return(Fld[mmove][0][tt-1]-Fld[1-mmove][0][tt-1]-Math.random());
+  }
+  I_Sel=mmove;
+  J_Sel=jj_best;
+  N_Mov=-1; 
+  IsMoving=true;
+}
+
+function OverTest()
+{ var ii, jj, nn;
+  IsOver=false;
+  for (ii=0; ii<2; ii++)
+  { nn=0;
+    for (jj=1; jj<7; jj++)
+      nn+=Fld[ii][jj][0]; 
+    if (nn==0) IsOver=true;
+  }
+  if (! IsOver) return;
+  for (ii=0; ii<2; ii++)
+  { for (jj=1; jj<7; jj++)
+    {  Fld[ii][0][0]+=Fld[ii][jj][0];
+       Fld[ii][jj][0]=0;
+    }     
+  }
+  if (Fld[0][0][0]==Fld[1][0][0]) setTimeout("alert(\"Game over !\\nIt's a draw !\")", 100);
+  else
+  { if (Fld[0][0][0]>Fld[1][0][0])
+      setTimeout("alert(\"Game over !\\nThe player at top has won !\")", 100);
+    else
+      setTimeout("alert(\"Game over !\\nThe player at bottom has won !\")", 100);
+  }
+  for (ii=0; ii<2; ii++)
+  { for (jj=0; jj<7; jj++)
+      RefreshFld(ii, jj);
+  }
+}
+
+function MouseDown(ii, jj)
+{ if (IsOver) return;
+  if (IsMoving) return;
+  var mmove=(MoveCount+Start)%2;
+  if (Level[mmove]>0) return;
+  if (mmove!=ii) return;
+  if (Fld[ii][jj][0]==0) return;
+  I_Sel=ii;
+  J_Sel=jj;
+  N_Mov=-1;
+  IsMoving=true;
+}  
+
+function RefreshFld(ii, jj)
+{ var oo=eval("document.OptionsForm.i"+ii+jj);
+  oo.value=Fld[ii][jj][0];
+  var nn=Fld[ii][jj][0];
+  if (nn>10) nn=10+nn%2;
+  if ((ii==0)||(jj==0)) document.images[7*ii+jj].src=Pic[nn].src;
+  else document.images[14-jj].src=Pic[nn].src;
+}
+
+function UpdateMoveCount()
+{ if ((MoveCount+Start)%2==1)
+  { document.images[14].src=Pic[0].src;
+    document.images[15].src=Pic[1].src;
+  }
+  else
+  { document.images[14].src=Pic[1].src;
+    document.images[15].src=Pic[0].src;
+  }
+}
+
+function Help()
+{ alert("Mancala is an ancient African game. There"+
+"\nexist many variations with slightly different rules."+
+"\nEach player owns the mancala on his right"+
+"\nside and the six small bowls closest to him."+
+"\nA player starts by taking all the beans from"+
+"\none of his small bowls and drops one bean"+
+"\ninto the next bowl on the right, continuing around"+
+"\nthe board counterclockwise until he has no more"+
+"\nbeans to drop. If a player reaches his own"+
+"\nmancala, he drops a bean into it, but he never"+
+"\ndrops a bean into the opponents' mancala."+
+"\nThe player with the most beans in his mancala wins."+
+"\nThe following are the so-called Egyptian rules:"+
+"\nIf a player drops the last bean from his hand into his"+
+"\nmancala, he gets to move again. If a player drops the"+
+"\nlast bean into one of the empty bowls on his side,"+
+"\nhe takes that bean, and all the beans in the"+
+"\nopponent's bowl directly across and puts them in"+
+"\nhis mancala. The game ends when one player no"+
+"\nlonger has beans in his small bowls. The other player"+
+"\ntakes all remaining beans into his own mancala.");
+}
+
+function Resize()
+{ if(navigator.appName == "Netscape") history.go(0);
+}
+</script>
+</head>
+<BODY bgcolor="#ccaa66" background="bg_papyrus.gif" text=#000000 onResize="javascript:Resize()">
+<DIV ALIGN=center>
+<form name="OptionsForm">
+<script language="JavaScript">
+document.open();
+if ((navigator.appName == "Netscape")&&(parseInt(navigator.appVersion)<5))
+  document.writeln("<table noborder><tr><td><table border cellpadding=1 cellspacing=1>");
+else
+  document.writeln("<table noborder><tr><td background='mancala_bg.gif'><table noborder cellpadding=1 cellspacing=1>");
+document.close();      
+</script>
+    <tr>
+      <th width=96>&nbsp;<input name="i00" readonly size=4></th>
+      <th width=68><input name="i01" readonly size=3></th>
+      <th width=67><input name="i02" readonly size=3></th>
+      <th width=66><input name="i03" readonly size=3></th>
+      <th width=66><input name="i04" readonly size=3></th>
+      <th width=67><input name="i05" readonly size=3></th>
+      <th width=68><input name="i06" readonly size=3></th>
+      <th width=96><SELECT onChange="SetLevel(0, this.options[selectedIndex].value)" SIZE=1>
+          <OPTION VALUE=0>Human
+          <OPTION VALUE=1 selected>Comp. 1
+          <OPTION VALUE=2>Comp. 2
+          <OPTION VALUE=3>Comp. 3
+          <OPTION VALUE=4>Comp. 4
+          <OPTION VALUE=5>Comp. 5
+          </SELECT></th>
+    </tr>
+    <tr><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td>
+        <td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td rowspan=2 align=right><img src="mancala0.gif" border=0></td>
+      <td align=right><img src="mancala0.gif" border=0 onMouseDown="MouseDown(0,1)"></td>
+      <td align=right><img src="mancala0.gif" border=0 onMouseDown="MouseDown(0,2)"></td>
+      <td align=middle><img src="mancala0.gif" border=0 onMouseDown="MouseDown(0,3)"></td>
+      <td align=middle><img src="mancala0.gif" border=0 onMouseDown="MouseDown(0,4)"></td>
+      <td align=left><img src="mancala0.gif" border=0 onMouseDown="MouseDown(0,5)"></td>
+      <td align=left><img src="mancala0.gif" border=0 onMouseDown="MouseDown(0,6)"></td>
+      <td rowspan=2 align=left><img src="mancala0.gif" border=0></td>
+    </tr>
+    <tr>
+      <td align=left><img src="mancala0.gif" border=0 onMouseDown="MouseDown(1,6)"></td>
+      <td align=left><img src="mancala0.gif" border=0 onMouseDown="MouseDown(1,5)"></td>
+      <td align=middle><img src="mancala0.gif" border=0 onMouseDown="MouseDown(1,4)"></td>
+      <td align=middle><img src="mancala0.gif" border=0 onMouseDown="MouseDown(1,3)"></td>
+      <td align=right><img src="mancala0.gif" border=0 onMouseDown="MouseDown(1,2)"></td>
+      <td align=right><img src="mancala0.gif" border=0 onMouseDown="MouseDown(1,1)"></td>
+    </tr>
+    <tr><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td>
+        <td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td>
+    </tr>
+    <tr>
+      <th><SELECT onChange="SetLevel(1, this.options[selectedIndex].value)" SIZE=1>
+          <OPTION VALUE=0 selected>Human
+          <OPTION VALUE=1>Comp. 1
+          <OPTION VALUE=2>Comp. 2
+          <OPTION VALUE=3>Comp. 3
+          <OPTION VALUE=4>Comp. 4
+          <OPTION VALUE=5>Comp. 5
+          </SELECT></th></th>
+      <th><input name="i16" readonly size=3></th>
+      <th><input name="i15" readonly size=3></th>
+      <th><input name="i14" readonly size=3></th>
+      <th><input name="i13" readonly size=3></th>
+      <th><input name="i12" readonly size=3></th>
+      <th><input name="i11" readonly size=3></th>
+      <th><input name="i10" readonly size=4>&nbsp;</th>
+    </tr></table>
+  </td>
+  <td valign=middle><img src="mancala0.gif"><br><img src="mancala0.gif">
+  </td>
+</tr>
+</table>
+<hr>
+<table noborder cellpadding=4 cellspacing=1><tr>
+<th><SELECT onChange="SetStart(this.options[selectedIndex].value)" SIZE=1>
+          <OPTION VALUE=0>Player at top begins
+          <OPTION VALUE=1 selected>Player at bottom begins
+          </SELECT></th>
+<th><SELECT onChange="SetSize(this.options[selectedIndex].value)" SIZE=1>
+          <OPTION VALUE=3>3 beans
+          <OPTION VALUE=4 selected>4 beans
+          <OPTION VALUE=5>5 beans
+          <OPTION VALUE=6>6 beans
+          </SELECT></th>
+<th><input type=button value="New" onClick="javascript:Init()"></th>
+<th><input type=button value="Help" onClick="javascript:Help()"></th>
+</tr></table>
+</form>
+</DIV>
+<script language="JavaScript">
+  Init();
+  setInterval("Timer()",700);
+</script>
+</BODY>
+</HTML>
