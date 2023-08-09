@@ -16,6 +16,7 @@
     <li><a href="#intro"> Introduction  </a></li>
     <li><a href="#scope"> Minimum Spanning Tree </a></li>
     <li><a href="#assump"> Algorithm </a></li>
+    <li><a href="#assumps"> Applications </a></li>
     <li><a href="#req"> Language Used</a></li>
   
     
@@ -40,16 +41,21 @@ First, we must initialize an MST with a randomly selected vertex. <br>
 Now we must locate all of the edges that connect the tree from the previous phase to the new vertices. Choose the shortest edge from the 
 list and add it to the tree. <br>
 Step 2 should be repeated until the minimum spanning tree is constructed. <br>
-
-
-
- 
-  
 </p>
+
+<h2 id="assumps"> Applications</h2> <p align="justify">
+Prim's algorithm is used in the following ways: <br>
+
+Prim's algorithm can be used to construct networks. <br>
+It is capable of generating network cycles. <br>
+It is also useful for laying down electrical wire cables. <br>
+</p>
+
+
 
 <h2 id="req">Language Used </h2>
  <p align="justify">
-C++
+C
  </p>
  
  
