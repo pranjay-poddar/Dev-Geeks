@@ -16,11 +16,11 @@ $mail = new PHPMailer(true);
 $mail->isSMTP();
 $mail->SMTPAuth = true;
 
-$mail->Host = "smtp-relay.sendinblue.com ";
+$mail->Host = "host@example.com";
 $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
 $mail->Port = 587;
-$mail->Username = "iamvittaln@gmail.com";
-$mail->Password = "V6r1RNOqcHvgtMYK";
+$mail->Username = "user@example.com";
+$mail->Password = "password";
 
 $mail->isHtml(true);
 

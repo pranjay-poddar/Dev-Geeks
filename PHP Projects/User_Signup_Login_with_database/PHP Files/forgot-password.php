@@ -1,6 +1,7 @@
 <?php
     $not_found=false;
     $token_expired=false;
+    // If token is invalid or expired
     if(isset($_GET["status"]))
     {
         if($_GET["status"]=="not_found")
@@ -97,6 +98,7 @@
                     <br> <br> <br>
                     Copy paste the below link manually if the above link does not work.
 
+                    <!-- Here, localhost link is provided. In actual deployment, the proper domain details are included -->
                     <br> <br> <br>
                     Link: localhost/Apache_Web_Server/User_Signup_Login_with_database/PHP Files/reset-password.php?token=$token
 

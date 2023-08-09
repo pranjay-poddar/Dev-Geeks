@@ -4,6 +4,8 @@
     //Process the data only if the method is POST and submit button is set
     if($_SERVER["REQUEST_METHOD"]=="POST" && isset($_POST["submit"]))
     {
+        //If the user clicks the link before time, but doesn't fill in 30minutes, still the password would be changed. Thus,
+        // the token validity is checked after pressing the submit button also
         $token = $_POST["token_copy"];
         $hash_token = hash("sha256", $token);
         $sql = "SELECT * FROM user_details
@@ -18,14 +20,14 @@
         $result = $stmt->get_result();
         
         $user = $result->fetch_assoc();
-
-        echo($user["reset_token_hashed"]);
         
+        //if nothing is returned matching the token, the user is redirected to the forgot-password page
         if ($user === null) {
             header("Location: forgot-password.php?status=not_found");
             exit;
         }
         
+        // If the token validity has exceeded 30minutes, the user is redirected to forgot password page.
         if (strtotime($user["token_expires_at"]) <= time()) {
             header("Location: forgot-password.php?status=token_expired");
             exit;
@@ -115,6 +117,7 @@
     }
 ?>
 <?php
+    //Initial checking of token validity before pressing the submit button
     if(!$submit_button_pressed)
     {
         include("database.php");
