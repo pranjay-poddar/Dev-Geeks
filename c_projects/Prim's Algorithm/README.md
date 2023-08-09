@@ -3,7 +3,7 @@
   
   
  <p align="center">
-<img src="https://img.shields.io/badge/  CPP-blue">
+<img src="https://img.shields.io/badge/  C-blue">
 <img src="https://img.shields.io/badge/Contributions-welcome-brightgreen">
 <img src="https://badges.frapsoft.com/os/v1/open-source.svg?v=103">
 </p>
