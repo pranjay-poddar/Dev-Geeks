@@ -1,35 +1,23 @@
-(async function getData() {
-  const apiUrl = "https://api.github.com/graphql";
-  const accessToken = "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";
-  const owner = "pranjay-poddar";
-  const name = "Dev-Geeks";
-
-  const query = `
-      query ($owner: String!, $name: String!) {
-
-        repository(owner: $owner, name: $name) {
-
-          issues(states: CLOSED) {
-            totalCount
-          }
-          pullRequests(states: CLOSED) {
-            totalCount
-          }
-          mentionableUsers {
-            totalCount
-          }
-        }
-      }
-    `;
-
-  const variables = {
-    owner: owner,
-    name: name,
-  };
+const getData = async () => {
 
   const closedIssuesDisplayer = document.getElementById("value1");
   const totalContributorsDisplayer = document.getElementById("value2");
   const closedPRsDisplayer = document.getElementById("value3");
+  const fetchValueArray = document.querySelectorAll('.fetchValue')
+
+  const apiUrl = "https://api.github.com/graphql";
+  const accessToken = "";//Enter your Access Token
+  const owner = "pranjay-poddar";
+  const name = "Dev-Geeks";
+
+  const queryTemplate = `query ($owner: String!, $name: String!) {
+                    repository(owner: $owner, name: $name) {
+                      issues(states: CLOSED) {totalCount}
+                      pullRequests(states: CLOSED) {totalCount}
+                      mentionableUsers {totalCount}
+                    }
+                  }`;
+  const info = {owner,name};
 
   const response = await fetch(apiUrl, {
     method: "POST",
@@ -37,14 +25,10 @@
       Authorization: `Bearer ${accessToken}`,
       "Content-Type": "application/json",
     },
-    body: JSON.stringify({
-      query: query,
-      variables: variables,
-    }),
+    body: JSON.stringify({query: queryTemplate ,variables:info}),
   });
 
   if (response.ok) {
-
     const data = await response.json();
 
     const closedIssuesCount = data.data.repository.issues.totalCount;
@@ -55,14 +39,13 @@
     closedPRsDisplayer.textContent = closedPullRequestsCount;
     totalContributorsDisplayer.textContent = contributorsCount;
 
-    closedIssuesDisplayer.style = 'font-size: 3.5rem'
-    closedPRsDisplayer.style = 'font-size: 3.5rem'
-    totalContributorsDisplayer.style = 'font-size: 3.5rem'
-    
-  } else {
+    fetchValueArray.forEach((ele)=>ele.style = 'font-size: 3.5rem');
 
-    closedIssuesDisplayer.textContent = 'Retry';
-    closedPRsDisplayer.textContent = 'Retry';
-    totalContributorsDisplayer.textContent = 'Retry';
+  } 
+  else{
+    fetchValueArray.forEach((ele)=>ele.textContent = 'Retry');
   }
-})();
+
+}
+
+getData();

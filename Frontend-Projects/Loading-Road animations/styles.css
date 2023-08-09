@@ -1,0 +1,47 @@
+*{
+    margin:0;
+    padding:0;
+
+}
+body{
+overflow: hidden;
+    height: 100vh;
+    width: 200vw;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+#main{
+background-color: black;
+width: 100%;
+height:20%;
+display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.box{
+    width: 3%;
+    height: 3%;
+    margin: 10px;
+    border: 2px solid black;
+    background-color: wheat;
+}
+.box{
+    animation: animate 5s ease-in-out infinite;
+}
+@keyframes animate {
+    0%{
+transform: translateX(500px);
+    }
+    100%{
+transform: translateX(-1600px);
+    }
+}
+#box1{
+    margin-right: 600px;
+}
+h1{
+    transform: translateX(-500px);
+}
