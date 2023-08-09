@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+    <title>QwickStay</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<head>
+<style>
+body{
+  background-color: rgba(245, 245, 245, 0.852);
+}
+.navbar {
+  width: 100%;
+  background-color: black;
+  overflow: auto;
+}
+
+.navbar a {
+  float: left;
+  padding: 12px;
+  color: whitesmoke;
+  text-decoration: none;
+  font-size: 30px;
+}
+
+.navbar a:hover {
+  background-color: burlywood;
+}
+
+.active {
+  background-color: brown;
+}
+
+h1{
+  text-align: center;
+  margin-top: 50px;
+  font-family: Copperplate, Papyrus, fantasy;
+  font-size: 50px;
+  color: brown;
+  
+}
+.section{
+  
+  margin: 1rem;
+  padding: 2rem 2rem;
+  text-align: center;
+
+}
+.details{
+  
+  display: inline-block;
+  border: 1px solid burlywood;
+  padding: 1rem 1rem;
+  vertical-align: middle;
+  color: black;
+  background-color: burlywood;
+  width: 300px;
+  height: 500px;
+}
+.contact{
+  display: inline-block;
+  border: 1px solid white;
+  padding: 1rem 1rem;
+  vertical-align: middle;
+  height: 500px;
+  width: 500px;
+  background: white;
+}
+.contact h2{
+  color: brown;
+  font-size: 30px;
+}
+.contact label{
+  font-size: 20px;
+  margin-left: -300px;
+}
+.contact input{
+  width: 300px;
+  height: 30px;
+  font-size: 15px;
+  margin-left: -100px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+
+#text-area {
+  text-align: top;
+  margin-left: 20px;
+  width: 450px;
+  height: 100px;
+}
+.contact button{
+  margin-top: 15pxpx;
+  font-size: 20px;
+  background-color: brown;
+  color: whitesmoke;
+  border: 1px solid brown;
+  border-radius: 20px;
+  width: 120px;
+  height: 30px;
+}
+
+</style>
+</head>
+<body>
+    <div class="navbar">
+        <a class="active" href="index.html"><i class="fa fa-fw fa-home"></i> Home</a> 
+        <a href="search.html"><i class="fa fa-fw fa-search"></i> Search</a> 
+        <a href="contact.html"><i class="fa fa-fw fa-envelope"></i> Contact</a> 
+        <a href="login.html"><i class="fa fa-fw fa-user"></i> Login</a>
+      </div>
+
+<div class="background"></div>
+<h1>Contact Form</h1>
+<div class="section">
+  <div class="details">
+    
+    <h2>Contact Us</h2>
+    
+    <p>We're open for any suggestion/complaint or just to have a chat to let you know more about us.</p>
+    <h3><i class='fas fa-map-marker-alt'></i> Address : <p>12 West 8th Block Victoria, Queensland, Australia</p></h3>
+    <h3> <i class="fa-solid fa-phone"></i>Phone : +630428958</h3>
+    <h3><i class="fa-solid fa-envelope"></i> Email : info@stay.com</h3>
+    <h3><i class="fa-solid fa-globe"></i> Website: yoursite.com</h3>
+  </div>
+  <div class="contact">
+    <h2>Get in touch  <i class="fa-solid fa-handshake"></i></h2>
+    <label> Full Name  </label><i class="fa-solid fa-user"></i> <br>
+    <input type="text" placeholder="Enter your name"><br>
+    <label> Phone number  </label> <i class="fa-solid fa-phone"></i><br>
+    <input type="number" placeholder="Enter your number"> <br>
+    <label> Email  </label><i class="fa-solid fa-envelope"></i><br>
+    <input type="email" placeholder="Enter your mail id"><br>
+    <label> Suggestion/Complaint 📜</label><br>
+    <input type="text" id="text-area" placeholder=""><br>
+    <button> Submit</button>
+</div>
+
+</div>
+
+
+</body>
+</html>
