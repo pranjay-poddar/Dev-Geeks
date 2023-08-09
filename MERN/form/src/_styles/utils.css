@@ -1,0 +1,26 @@
+.txt-center {
+    text-align: center;
+}
+
+.item-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.display-block {
+    display: block;
+}
+
+input {
+    height: 25px;
+    padding-left: 5px;
+}
+
+.m-15 {
+    margin: 15px 0;
+}
+
+.p-10 {
+    padding: 10px;
+}
