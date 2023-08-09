@@ -1,0 +1,258 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Raleway:wght@700&display=swap');
+
+*{
+    box-sizing: border-box;
+}
+body{
+    color:hsl(243, 87%, 12%);
+    font-family: 'Open Sans' , sans-serif;
+    font-size: 1.1em;
+    margin:0;
+}
+a{
+    color:#3DA08F;
+}
+img{
+    max-width: 100%;
+}
+h1 , h2 , h4{
+    font-family: 'Raleway',sans-serif;
+}
+h2{
+    font-size:1.8em;
+    margin-top:0;
+}
+.container{
+    padding:30px;
+    margin:0 auto;
+    max-width:100%;
+    width:1200px;
+}
+.align-start{
+    align-items:flex-start;
+}
+.flex{
+    display:flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.flex > div ,
+.flex ul{
+    flex:1;
+}
+.flex > div:first-child{
+    margin-right: 20px;
+}
+
+.flex > div:last-child{
+    margin-left: 20px;
+}
+
+nav{
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    margin:30px 0;
+}
+
+nav ul{
+    display: flex;
+    padding:0;
+    list-style-type: none;
+}
+
+nav ul li{
+    margin-left: 50px;
+
+}
+nav ul a {
+    color:hsl(243, 87%, 12%);
+    font-family: 'Raleway',sans-serif;  
+    text-decoration:none;
+}
+form{
+    display:flex;
+}
+input{
+border: 1px solid hsl(243, 87%, 12%);
+border-radius:2px;
+font-family: 'Raleway', sans-serif;
+font-weight:700;
+font-size:14px;
+flex:0.7;
+padding:15px;
+}
+
+input::placeholder{
+    color:hsl(0, 0%, 75%);
+}
+button{
+    border: 1px solid  hsl(224, 93%, 58%);
+    background-color:  hsl(224, 93%, 58%);
+    border-radius:2px;
+    box-shadow: 0  0  10px rgba(0 , 0 , 0 , 0.1);
+    color:#fff;
+    font-family: 'Raleway', sans-serif;
+    font-weight:700;
+    font-size: 14px;
+    flex:0.3;
+    margin-left: 10px;
+    padding:15px;
+}
+.light-blueish{
+background-color: hsl(240, 75%, 98%);
+margin-top: 100px;
+position: relative;
+padding: 50px 0;
+}
+
+.light-blueish::before{
+    content:'';
+    background-image: url('./images/bg-curve-desktop.svg');
+    background-size: cover;
+    background-position: center center;
+    position: absolute;
+    top: -60px;
+    left:0;
+    height: 60px;
+    width: 100%;
+
+}
+.testimonial{
+background-color:#fff;
+box-shadow: 0  0  10px rgba(0 , 0 , 0 , 0.1);
+border-radius:5px;
+padding : 25px;
+margin-top:40px;
+width:80%;
+}
+
+.testimonial p{
+    font-size: 14px;
+    letter-spacing: 1px;
+    line-height: 2;
+}
+.user-info{
+    display:flex;
+    margin-top: 20px;
+}
+
+.user-info img{
+    border-radius:50;
+    height:50px;
+    margin-right: 10px;
+    width:50px;
+}
+.user-info h4{
+    font-weight: 700;
+    margin:0;
+
+}
+.blueish{
+    background-color:hsl(238, 22%, 44%);
+    color:#fff;
+    padding: 50px 0;
+}
+.blueish form{
+    flex-direction: column;
+}
+.blueish form input{
+    box-shadow: 0  0  10px rgba(0 , 0 , 0 , 0.1);
+    border-radius:none;
+    display: 1;
+}
+.blueish form button{
+    margin:20px 0;
+    width:50%;
+}
+
+footer{
+    background-color: hsl(243, 87%, 12%);
+    color:#fff;
+    padding:100px 0 60px;
+}
+footer ul {
+    list-style-type:none;
+ }
+
+footer ul li{
+    margin-bottom: 20px;
+}
+footer .social-media{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
+footer .circle{
+    border: 1px solid #fff;
+    border-radius: 50%;
+    color: #fff;
+    display:inline-block;
+    align-items: inline-flex;
+    justify-content: center;
+    margin-right: 10px;
+    height: 40px;
+    width:40px;
+    text-decoration: none;
+}
+footer p {
+    text-align: right;
+}
+.credit{
+    text-align: center;
+}
+@media screen and( max-width: 768px) {
+    body{
+        text-align: center;
+    }
+    nav{
+        flex-direction: column;
+        margin: 10px 0;
+    }
+    nav ul li{
+        margin: 10px 20px;
+    
+    }
+    .light-blueish::before{
+        content:'';
+        background-image: url('./images/bg-curve-mobile.svg');
+        height:80px;
+    }
+    .flex{
+        flex-direction: column;
+    }
+    .flex > div{
+        width:100%;
+    }
+
+    .flex > div:first-child{
+        margin-right: 0px;
+    }
+    
+    .flex > div:last-child{
+        margin-left: 0px;
+    }
+        
+    .testimonial{
+        width:100%;
+    }
+    .blueish form input{
+     flex:1;
+    }
+    .blueish form button{
+        margin:20px 0;
+        width:100%;
+    }
+.illustration{
+margin-top:30px;
+}
+.user-info{
+    justify-content: center;
+}
+
+    footer ul{
+        padding:0;
+        width:100%;
+    }
+}
