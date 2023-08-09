@@ -9,13 +9,13 @@
  
   
  <p align="justify">
-A shopping list is a list of items needed to be purchased by a shoppe
+A shopping list is a list of items needed to be purchased by a shopper.
  </p>
  
+ <h2> Steps</h2> <p align="justify">
+1. First we will create an input type to enter the item. <br>
+2. Button to submit the item. <br>
+3. A list to display the items along with the functionality to delete and mark it complete. <br>
  </p>
- <p align="center">
-  <img width="460" height="300" src="https://user-images.githubusercontent.com/116307514/218083494-c9ec839e-0359-4afb-a001-514283486ced.png">
-</p>
-
 
    
