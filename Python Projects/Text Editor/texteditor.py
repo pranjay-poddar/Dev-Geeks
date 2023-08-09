@@ -107,15 +107,17 @@ class TextEditor:
             self.title.set("Untitled")
 
     # Defining New file Function
-    def newfile(self, *args):
-        # Clearing the Text Area
-        self.txtarea.delete("1.0", END)
-        # Updating filename as None
-        self.filename = None
-        # Calling settitle funtion
-        self.settitle()
-        # updating status
-        self.status.set("New File Created")
+    # Defining New file Function
+def newfile(self, *args):
+    # Clearing the Text Area
+    self.txtarea.delete("1.0", END)
+    # Updating filename as None
+    self.filename = None
+    # Calling settitle function
+    self.settitle()
+    # Updating status
+    self.status.set("New File Created")
+
 
     # Defining Open File Funtion
     def openfile(self, *args):
