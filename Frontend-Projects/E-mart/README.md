@@ -6,12 +6,13 @@
 
 
 # Screenshots :
+<h2>Home page</h2>
  <img width="1440" alt="Screenshot 2023-08-09 at 8 05 33 PM" src="https://github.com/pranjay-poddar/Dev-Geeks/assets/102572480/bdad1a6a-9e8e-47cb-977b-2bb306c03ae2">
-
+<h2>Products Page </h2>
  <img width="1440" alt="Screenshot 2023-08-09 at 8 05 43 PM" src="https://github.com/pranjay-poddar/Dev-Geeks/assets/102572480/c97cf697-ee47-4d55-89d2-4d6b805511c2">
-
+<h2>Contact Page</h2>
 <img width="1440" alt="Screenshot 2023-08-09 at 8 07 10 PM" src="https://github.com/pranjay-poddar/Dev-Geeks/assets/102572480/11bea93d-fa37-4881-889a-0758cbfc4dbb">
-
+<h2>About Page</h2>
 <img width="1440" alt="Screenshot 2023-08-09 at 8 07 23 PM" src="https://github.com/pranjay-poddar/Dev-Geeks/assets/102572480/c4a6f28e-c450-4795-8bd9-828779dd9c2f">
 
 
