@@ -472,6 +472,121 @@ void fib(){
 
 }
 
+void merge(vector<int> &arr, int left, int mid, int right)
+{
+    int i, j, k;
+    int n1 = mid - left + 1;
+    int n2 = right - mid;
+
+    vector<int> leftArr(n1);
+    vector<int> rightArr(n2);
+
+    // Copy data to temporary arrays
+    for (i = 0; i < n1; i++)
+        leftArr[i] = arr[left + i];
+    for (j = 0; j < n2; j++)
+        rightArr[j] = arr[mid + 1 + j];
+
+    // Merge the two temporary arrays back into arr
+    i = 0;
+    j = 0;
+    k = left;
+    while (i < n1 && j < n2)
+    {
+        if (leftArr[i] <= rightArr[j])
+        {
+            arr[k] = leftArr[i];
+            i++;
+        }
+        else
+        {
+            arr[k] = rightArr[j];
+            j++;
+        }
+        k++;
+    }
+
+    // Copy the remaining elements of leftArr, if any
+    while (i < n1)
+    {
+        arr[k] = leftArr[i];
+        i++;
+        k++;
+    }
+
+    // Copy the remaining elements of rightArr, if any
+    while (j < n2)
+    {
+        arr[k] = rightArr[j];
+        j++;
+        k++;
+    }
+}
+
+// Recursive Merge Sort function
+void mergeSort(vector<int> &arr, int left, int right)
+{
+    if (left < right)
+    {
+        int mid = left + (right - left) / 2;
+
+        // Sort first and second halves
+        mergeSort(arr, left, mid);
+        mergeSort(arr, mid + 1, right);
+
+        // Merge the sorted halves
+        merge(arr, left, mid, right);
+
+        // Visualization: Print the current state of the array after each merge
+        cout << "Current state: ";
+        for (int i = left; i <= right; i++)
+        {
+            cout << arr[i] << " ";
+        }
+        cout << endl;
+    }
+}
+
+int partition(vector<int> &arr, int low, int high)
+{
+    int pivot = arr[high]; // Choose the last element as the pivot
+    int i = low - 1;       // Index of the smaller element
+
+    for (int j = low; j < high; j++)
+    {
+        // If the current element is smaller than or equal to the pivot
+        if (arr[j] <= pivot)
+        {
+            i++;                  // Increment index of the smaller element
+            swap(arr[i], arr[j]); // Swap the elements at i and j
+        }
+    }
+    swap(arr[i + 1], arr[high]); // Place the pivot at its correct position
+    return i + 1;                // Return the index of the pivot
+}
+
+// Recursive Quick Sort function
+void quickSort(vector<int> &arr, int low, int high)
+{
+    if (low < high)
+    {
+        // Perform partitioning and get the pivot index
+        int pivotIdx = partition(arr, low, high);
+
+        // Visualization: Print the current state of the array after each partitioning
+        cout << "Current state: ";
+        for (int i = low; i <= high; i++)
+        {
+            cout << arr[i] << " ";
+        }
+        cout << endl;
+
+        // Recursively sort elements before and after the pivot
+        quickSort(arr, low, pivotIdx - 1);
+        quickSort(arr, pivotIdx + 1, high);
+    }
+}
+
 int main()
 {
     int choice;
@@ -501,6 +616,10 @@ int main()
         cout << "2. Selection sort" << endl
              << endl;
         cout << "3. Insertion sort" << endl
+             << endl;
+        cout << "4. Merge Sort" << endl
+             << endl;
+        cout << "5. Quick Sort" << endl
              << endl;
         cout << "Enter your choice" << endl;
         cin >> choice1;
@@ -556,7 +675,7 @@ int main()
             SelectionSort(arr, n);
         }
         // INSERTION SORT
-        else
+        else if(choice1==3)
         {
             cout << "-----------------------------" << endl;
             cout << "INSERTION SORT" << endl;
@@ -579,6 +698,71 @@ int main()
                 cin >> arr[i];
             }
             InsertionSort(arr, n);
+        }
+        else if (choice1 == 4)
+        {
+            cout << "-----------------------------" << endl;
+            cout << "MERGE SORT" << endl;
+            cout << "-----------------------------" << endl;
+            cout << "DESCRIPTION" << endl;
+            cout << "-----------------------------" << endl;
+            cout << "Merge Sort is a popular divide-and-conquer sorting algorithm that divides the input array into two halves, recursively sorts each half, and then merges the two sorted halves to produce a sorted array." << endl;
+            cout << "-----------------------------" << endl;
+            cout << "TIME COMPLEXITY" << endl;
+            cout << "-----------------------------" << endl;
+            cout << "The time complexity of Merge Sort is O(n log n), where n is the number of elements in the array to be sorted.\nThis makes Merge Sort one of the most efficient sorting algorithms, especially for large datasets." << endl;
+            cout << "-----------------------------" << endl;
+
+            vector<int> arr = {38, 27, 43, 3, 9, 82, 10};
+            int n = arr.size();
+
+            cout << "Original Array: ";
+            for (int num : arr)
+            {
+                cout << num << " ";
+            }
+            cout << endl;
+
+            mergeSort(arr, 0, n - 1);
+
+            cout << "Sorted Array: ";
+            for (int num : arr)
+            {
+                cout << num << " ";
+            }
+            cout << endl;
+        }
+        else if (choice1 == 5)
+        {
+            cout << "-----------------------------" << endl;
+            cout << "QUICK SORT" << endl;
+            cout << "-----------------------------" << endl;
+            cout << "DESCRIPTION" << endl;
+            cout << "-----------------------------" << endl;
+            cout << "Quick Sort is a popular sorting algorithm that follows the divide-and-conquer strategy.\nIt picks an element as a pivot and partitions the array into two subarrays - elements less than the pivot and elements greater than the pivot. It then recursively sorts the two subarrays." << endl;
+            cout << "-----------------------------" << endl;
+            cout << "TIME COMPLEXITY" << endl;
+            cout << "-----------------------------" << endl;
+            cout << "The average-case time complexity of Quick Sort is O(n log n) because the algorithm employs a divide-and-conquer strategy, similar to Merge Sort. " << endl;
+            cout << "-----------------------------" << endl;
+            vector<int> arr = {38, 27, 43, 3, 9, 82, 10};
+            int n = arr.size();
+
+            cout << "Original Array: ";
+            for (int num : arr)
+            {
+                cout << num << " ";
+            }
+            cout << endl;
+
+            quickSort(arr, 0, n - 1);
+
+            cout << "Sorted Array: ";
+            for (int num : arr)
+            {
+                cout << num << " ";
+            }
+            cout << endl;
         }
     }
 
