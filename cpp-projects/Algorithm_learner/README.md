@@ -12,6 +12,10 @@ ii. Insertion Sort
 
 iii. Selection Sort
 
+iv. Merge Sort
+
+v. Quick Sort
+
 Searching Algorithms-:
 
 i. Linear Search
