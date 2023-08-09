@@ -6,10 +6,8 @@
 <img src="https://badges.frapsoft.com/os/v1/open-source.svg?v=103">
 </p>
  
- 
-  
  <p align="justify">
-A shopping list is a list of items needed to be purchased by a shopper.
+A shopping list is a list of items needed to be purchased by a shopper. This project is made in React.js
  </p>
  
  <h2> Steps</h2> <p align="justify">
@@ -17,5 +15,8 @@ A shopping list is a list of items needed to be purchased by a shopper.
 2. Button to submit the item. <br>
 3. A list to display the items along with the functionality to delete and mark it complete. <br>
  </p>
+ 
+<h2> SCreenshots</h2> <p align="justify">![imageaarti](https://github.com/atumat/Dev-Geeks/assets/116307514/b89132ce-0d1f-4405-90ee-aad12c9c6d90)
+
 
    
