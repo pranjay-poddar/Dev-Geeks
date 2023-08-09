@@ -16,8 +16,8 @@ A shopping list is a list of items needed to be purchased by a shopper. This pro
 3. A list to display the items along with the functionality to delete and mark it complete. <br>
  </p>
  
-<h2> Screenshots</h2> 
+<h2> Screenshot</h2>  <p align="justify">
 <img width="600" height="300" src="https://github.com/atumat/Dev-Geeks/assets/116307514/b89132ce-0d1f-4405-90ee-aad12c9c6d90">
 
-
+</p>
    
