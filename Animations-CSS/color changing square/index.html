@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            /* animation properties */
+            animation-name: my-animation;
+            animation-duration: 2s;
+            animation-direction: alternate;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+
+            /* other properties */
+            width: 300px;
+            height: 100px;
+            border-radius: 10px;
+            position: absolute;
+            left: 0;
+            right: 0;
+            margin-left: auto;
+            margin-right: auto;
+
+        }
+
+        @keyframes my-animation {
+            from {
+                background-color: #ff7a59;
+                width: 300px;
+                top: 10px;
+            }
+
+            to {
+                background-color: #33475b;
+                width: 50px;
+                top: 100px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div></div>
+</body>
+
+</html>

@@ -1,0 +1,81 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background: #282923;
+}
+.container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+}
+h1 {
+  color: rgb(25, 251, 25);
+  text-align: center;
+  margin-top: 20px;
+}
+.animation-wrapper {
+  width: 300px;
+  height: 100px;
+  position: absolute;
+}
+.circle {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+  background-color: #4ce22b;
+  animation: move-the-circle 1s infinite;
+  transform-origin: center center;
+}
+.circle span {
+  position: absolute;
+  top: -28px;
+  font-size: 20px;
+  color: white;
+  font-family: cursive;
+  left: 15px;
+}
+.circle:nth-child(1) {
+  left: 0px;
+  animation-delay: 0.1s;
+}
+.circle:nth-child(2) {
+  left: 30px;
+  animation-delay: 0.2s;
+}
+.circle:nth-child(3) {
+  left: 60px;
+  animation-delay: 0.3s;
+}
+.circle:nth-child(4) {
+  left: 90px;
+  animation-delay: 0.4s;
+}
+.circle:nth-child(5) {
+  left: 120px;
+  animation-delay: 0.5s;
+}
+.circle:nth-child(6) {
+  left: 150px;
+  animation-delay: 0.6s;
+}
+.circle:nth-child(7) {
+  left: 180px;
+  animation-delay: 0.7s;
+}
+
+@keyframes move-the-circle {
+  0% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(0, 50px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}

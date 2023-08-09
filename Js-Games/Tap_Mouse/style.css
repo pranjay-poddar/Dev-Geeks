@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+}
+
+.game-container {
+    text-align: center;
+    position: relative;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 90%;
+    max-width: 900px; 
+    margin: 0 auto; 
+}
+
+.game-title {
+    font-family: 'Pacifico', cursive;
+    font-size: 48px;
+    color: #2196F3; /* Blue color */
+    margin-top: 0;
+}
+
+#mice-container {
+    position: relative;
+    width: 600px;
+    height: 300px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    overflow: hidden;
+    margin: 20px auto;
+    background-color: #f0f0f0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.mouse {
+    font-size: 30px;
+    color: #333;
+    position: absolute;
+    cursor: pointer;
+    transform: translate(-50%, -50%);
+}
+
+#start-button {
+    font-size: 16px;
+    padding: 10px 20px;
+    border: none;
+    background-color: #4CAF50;
+    color: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+    outline: none;
+    transition: background-color 0.2s;
+}
+
+#start-button:hover {
+    background-color: #45a049;
+}

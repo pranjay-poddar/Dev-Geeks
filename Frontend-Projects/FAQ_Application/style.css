@@ -25,7 +25,7 @@ section {
 .title {
 	font-size: 40px;
 	margin: 40px 0;
-	color: rgb(255, 103, 235);
+	color: rgb(149 174 252);
 }
 
 .faq {
@@ -45,14 +45,14 @@ section {
 
 h3 {
 	font-size: 25px;
-	color: rgb(255, 191, 191);
+	color: bisque;
 }
 
 .answer {
 	max-height: 0;
 	overflow: hidden;
 	transition: max-height 1.4s ease;
-	color: rgb(191, 253, 233);
+	color: aliceblue
 }
 
 .answer p {
