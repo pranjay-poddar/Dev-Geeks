@@ -1,0 +1,166 @@
+:root {
+    --bg-color: #ddd;
+    --p-color: #333;
+    --a-color: Teal;
+    --a-hover-color: LightSeaGreen;
+    --citation-bg-color: #1E0519;
+    --citation-p-color: Salmon;
+    --citation-a-color: MediumVioletRed;
+    --citation-a-hover-color: DeepPink;
+  }
+  
+  html {
+    box-sizing: border-box;
+  }
+  
+  *, *::before, *::after {
+    box-sizing: inherit;
+  }
+  *:focus, *::before:focus, *::after:focus {
+    outline: none;
+  }
+  
+  * {
+    font-family: monaco, courier;
+  }
+  
+  body {
+    margin: 0;
+    padding: 0;
+  }
+  
+  .wrapper {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: auto;
+    background: var(--bg-color);
+  }
+  
+  .ciao-frames {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    justify-items: center;
+    justify-content: space-evenly;
+    width: 80%;
+    max-width: 800px;
+    height: 400px;
+  }
+  
+  .frame {
+    width: 400px;
+    height: 200px;
+    margin: 2px;
+    display: block;
+    border: 1px solid white;
+    background: transparent url("https://assets.codepen.io/219932/ciao-frames.png") 0 0 no-repeat;
+  }
+  
+  #one {
+    -webkit-animation: letterL 1s steps(12) infinite;
+    animation: letterL 1s steps(12) infinite;
+  }
+  
+  #two {
+    -webkit-animation: letterO 1s steps(12) infinite;
+    animation: letterO 1s steps(12) infinite;
+  }
+  
+  #three {
+    -webkit-animation: letterK 1s steps(12) infinite;
+    animation: letterK 1s steps(12) infinite;
+  }
+  
+  #four {
+    -webkit-animation: letterI 1s steps(12) infinite;
+    animation: letterI 1s steps(12) infinite;
+  }
+  
+  @-webkit-keyframes letterL {
+    0% {
+      background-position: 0 0;
+    }
+    100% {
+      background-position: 0 -2400px;
+    }
+  }
+  @keyframes letterL {
+    0% {
+      background-position: 0 0;
+    }
+    100% {
+      background-position: 0 -2400px;
+    }
+  }
+  @-webkit-keyframes letterO {
+    0% {
+      background-position: -400px 0;
+    }
+    100% {
+      background-position: -400px -2400px;
+    }
+  }
+  @keyframes letterO {
+    0% {
+      background-position: -400px 0;
+    }
+    100% {
+      background-position: -400px -2400px;
+    }
+  }
+  @-webkit-keyframes letterK {
+    0% {
+      background-position: -800px 0;
+    }
+    100% {
+      background-position: -800px -2400px;
+    }
+  }
+  @keyframes letterK {
+    0% {
+      background-position: -800px 0;
+    }
+    100% {
+      background-position: -800px -2400px;
+    }
+  }
+  @-webkit-keyframes letterI {
+    0% {
+      background-position: -1200px 0;
+    }
+    100% {
+      background-position: -1200px -2400px;
+    }
+  }
+  @keyframes letterI {
+    0% {
+      background-position: -1200px 0;
+    }
+    100% {
+      background-position: -1200px -2400px;
+    }
+  }
+  .citation {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 100;
+    background: var(--citation-bg-color);
+  }
+  .citation p {
+    margin: 0;
+    padding: 10px;
+    font-size: 12px;
+    color: var(--citation-p-color);
+  }
+  .citation p a {
+    color: var(--citation-a-color);
+    cursor: pointer;
+  }
+  .citation p a:hover {
+    color: var(--citation-a-hover-color);
+  }
