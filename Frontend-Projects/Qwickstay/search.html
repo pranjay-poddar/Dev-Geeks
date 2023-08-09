@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<head>
+<style>
+* {
+  box-sizing: border-box;
+}
+.navbar {
+  width: 100%;
+  background-color: black;
+  overflow: auto;
+}
+
+.navbar a {
+  float: left;
+  padding: 12px;
+  color: whitesmoke;
+  text-decoration: none;
+  font-size: 30px;
+}
+
+.navbar a:hover {
+  background-color: burlywood;
+}
+
+.active {
+  background-color: brown;
+}
+h2{
+    color: brown;
+    text-align: center;
+    font-size: 40px;
+}
+.column button{
+    margin-top: 15px;
+    text-align: center;
+    color: white;
+    background-color: brown;
+    font-size: 20px;
+    border-radius: 12px;
+}
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 5px;
+}
+
+/* Clearfix (clear floats) */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+</style>
+</head>
+<body>
+
+    <div class="navbar">
+        <a class="active" href="#"><i class="fa fa-fw fa-home"></i> Home</a> 
+        <a href="search.html"><i class="fa fa-fw fa-search"></i> Search</a> 
+        <a href="contact.html"><i class="fa fa-fw fa-envelope"></i> Contact</a> 
+        <a href="login.html"><i class="fa fa-fw fa-user"></i> Login</a>
+      </div>
+<h2>Search according to your preferences!</h2>
+<div class="row">
+  <div class="column">
+    <img src="https://previews.123rf.com/images/maradaisy/maradaisy1809/maradaisy180900041/110398766-hotel-room-with-ocean-sea-landscape-view-window-and-tropic-palms-vector-bedroom-interior-with.jpg"  style="width:400px; height: 300px;">
+    
+    <button>See availability</button>
+  </div>
+  <div class="column">
+    <img src="https://bloximages.newyork1.vip.townnews.com/lancasteronline.com/content/tncms/assets/v3/editorial/5/d7/5d7c4f80-1861-11ea-9d79-afa7510983fe/5deab088b9fc0.image.jpg?resize=750%2C500" style="width:400px; height: 300px;">
+    
+    <button>See availability</button>
+  </div>
+  <div class="column">
+    <img src="https://previews.123rf.com/images/maradaisy/maradaisy1809/maradaisy180900020/110398758-hotel-room-vector-bedroom-interior-with-two-single-beds-modern-home-space-with-furniture-in-flat.jpg"  style="width:400px; height: 300px;">
+    
+    <button>See availability</button>
+  </div>
+</div>
+<br><br>
+<div class="row">
+    <div class="column">
+      <img src="https://img.freepik.com/free-vector/vector-cartoon-interior-cozy-hotel-bedroom-with-furniture_33099-1216.jpg?w=2000" style="width:400px; height: 300px;">
+      
+      <button>See availability</button>
+    </div>
+    <div class="column">
+      <img src="https://previews.123rf.com/images/maradaisy/maradaisy1805/maradaisy180500016/101615923-room-with-double-bed-bedroom-retro-interior-vector-home-space-in-flat-design-cartoon-hotel-room.jpg" style="width:400px; height: 300px;">
+      
+      <button>See availability</button>
+    </div>
+    <div class="column">
+      <img src="https://img.freepik.com/premium-vector/cartoon-bedroom-with-bed-desk-desk-with-clock_895122-435.jpg"  style="width:400px; height: 300px;">
+      
+      <button>See availability</button>
+    </div>
+  </div>
+  
+</body>
+</html>
