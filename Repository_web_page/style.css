@@ -149,82 +149,24 @@ body {
     transform: scale(1);
 }
 
-
-/* Numbers */
-
-@property --num {
-    syntax: "<integer>";
-    initial-value: 0;
-    inherits: false;
-}
-
-#value1 {
-    transition: --num 2s;
-    counter-set: num var(--num);
-    font: 800 40px system-ui;
-    --num: 132;
-    color: #170F1E;
-}
-
-#value1::after {
-    content: counter(num);
-    --num: 132;
-}
-
-#value1:hover {
-    --num: 35;
-}
-
 .pranjay-img {
     border: 1px black solid;
 }
 
-#value2 {
-    transition: --num 1s;
-    counter-set: num var(--num);
-    font: 800 40px system-ui;
-    --num: 60;
-    color: #170F1E;
-}
+/*
+ REPOSITORY STATISTICS
+*/
 
-#value2::after {
-    content: counter(num);
-}
-
-#value2:hover {
-    --num: 3;
-}
-
+#value1,
+#value2,
 #value3 {
-    transition: --num 1s;
-    counter-set: num var(--num);
-    font: 800 40px system-ui;
-    --num: 261;
-    color: #170F1E;
-}
-
-#value3::after {
-    content: counter(num);
-}
-
-#value3:hover {
-    --num: 101;
-}
-
-#value4 {
-    transition: --num 1s;
-    counter-set: num var(--num);
-    font: 800 40px system-ui;
-    --num: 10;
-    color: #170F1E;
-}
-
-#value4::after {
-    content: counter(num);
-}
-
-#value4:hover {
-    --num: 20;
+  font-family: sans-serif;
+  font-weight: 800;
+  color: #E2E2E2;
+  letter-spacing: .1rem;
+  text-shadow: 0 5px 50px white;
+  text-transform: uppercase;
+  transition: .5s ease;
 }
 
 .contri {
