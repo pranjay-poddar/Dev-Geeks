@@ -1,11 +1,17 @@
+html{
+    scroll-behavior: smooth;
+}
 body{
     margin: 0;
     font-family: math;
 }      
 .header{
-   padding: 20px 20px 40px 20px;
+    width: 100%;
    background-color: #0D2A79;
    color: white;
+   position: fixed;
+   z-index: 1;
+   top: 0;
 }
 .logo-image{
    width: 5%;

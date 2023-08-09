@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Coding</title>
+  </head>
+  <style>
+    body {
+      background-color: #9fd3c7;
+      text-align: center;
+    }
+    p {
+      text-align: center;
+      color: #385170;
+      font-size: 19px;
+      font-weight: 500;
+      line-height: 1.5;
+    }
+    .container {
+      max-width: 80%;
+      display: block;
+      margin: 0 auto;
+    }
+    h1 {
+      color: #142d4c;
+    }
+    img {
+      width: 400px;
+    }
+    a {
+      text-decoration: none;
+      display: block;
+      margin: 10px;
+    }
+    button {
+      background-color: #385170;
+      padding: 15px;
+      color: #ececec;
+      border-radius: 20px;
+      transition: all 200ms ease-in-out;
+      border: #ececec solid 2px;
+      box-shadow: rgba(37, 39, 89, 0.08) 0px 8px 8px 0;
+    }
+    button:hover {
+      background-color: #ececec;
+      color: #385170;
+      cursor: pointer;
+    }
+
+.navigation {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-left {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
+.nav-ul li .activee{
+  text-decoration: dashed;
+}
+.nav-ul {
+  display: flex;
+  align-items: center;
+  list-style: none;
+}
+
+.nav-ul li {
+  padding: 0 5px;
+}
+.nav-ul li a{
+  text-decoration: none;
+  font-weight: bold;
+  color: rgb(0, 0, 0);
+  padding: 5px 8px;
+  border-radius: 5px;
+  transition: 0.4s ease-in;
+}
+.nav-ul li:hover a{
+  text-decoration: none;
+  font-weight: bold;
+  color: white;
+  padding: 5px 8px;
+  border-radius: 5px;
+  transition: 0.4s ease-in;
+}
+.footer_c{
+  background-color: black;
+  color: white;
+}
+.foot {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.foot h3{
+  color:brown;
+  font-weight: bold;
+  margin-bottom: 10px;
+  font-size: 25px;
+  text-transform: uppercase;
+}
+
+
+.icons {
+  padding: 0.5rem;
+}
+.icons a{
+  text-decoration: none;
+}
+.icons i {
+  width: 35px;
+  height: 35px;
+  line-height: 35px;
+  margin-bottom: 6px !important;
+  border-radius: 100%;
+  background-color: #33353d;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  transition: all 0.2s linear;
+}
+
+.twitter :hover {
+  background-color: #00aced;
+  color: #fff;
+}
+
+.linkedin :hover {
+  background-color: #007bb6;
+  color: #fff;
+}
+
+.instagram :hover {
+  background-color: #ea2c59;
+  color: #fff;
+}
+.email :hover {
+  background-color:#623005;
+  color: white;
+}
+
+.footer_c p{
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.footer1 {
+  margin-top: 20px;
+  background-color:white;
+  display: flex;
+  color: black;
+  padding-left: 70px;
+  padding-right: 70px;
+  padding-top: 50px;
+  padding-bottom: 30px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.right,
+.left{
+     text-align: center;
+}
+.right{
+  display: flex;
+  flex-direction: column;
+}
+
+.left{
+  width: 40% ;
+}
+.left p{
+  text-align: justify;
+  font-size: 16px;
+  font-weight: 400;
+  color: black !important;
+}
+
+.left h4{
+  margin-top: 10px;
+  font-weight: bolder;
+  text-transform: uppercase;
+  color:white;
+  letter-spacing: 2px;
+}
+.footer-content h3{
+  color:brown;
+  font-weight: bold;
+  margin-bottom: 10px;
+  font-size: 25px;
+  text-transform: uppercase;
+}
+
+.footer-content h2{
+  color:brown;
+  font-size: 1.2rem;
+}
+
+.right a{
+  text-decoration: none;
+  color: black !important;
+  margin-bottom: 8px;
+}
+.foot-right{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.foot-right a{
+  margin: 0 5px;
+  margin-bottom: 10px;
+}
+
+  </style>
+  <body> <nav class="navigation">
+        <div class="nav-left">
+           
+            <ul class="nav-ul">
+                <li><a class="activee" href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Testimonials</a></li>
+                <li><a href="#">FAQs</a></li>
+                <li><a href="#">Contact</a></li>
+             
+            </ul>
+        </div>
+        </nav>
+    <div class="container">
+      <h1>⌨<br />Hire a coder!</h1>
+      <h2>
+        I’m not a great programmer; I’m just a good programmer with great
+        habits.
+      </h2>
+      <hr />
+      <img
+        src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/079/857/original/woman-coding-768x510.jpg?1682948684"
+      />
+
+      <p>
+        <strong> Coding</strong>, sometimes called
+        <em>computer programming</em>, is how we communicate with computers.
+        Code tells a computer what actions to take, and writing code is like
+        creating a set of instructions. By learning to write code, you can tell
+        computers what to do or how to behave in a much faster way. You can use
+        this skill to make websites and apps, process data, and do lots of other
+        cool things.We all have hopes, dreams, and plans for the future. Whether
+        you’re looking for a new opportunity, want to optimize your current job,
+        or are simply searching for a new hobby, coding can help you get closer
+        to your goals. And remember, anyone can learn how to code!
+
+        <br /><span
+          >Have you ever met a coder who regretted learning to code? Probably
+          not, because learning to code is fun and empowering! Coding also opens
+          up a whole new community and network for you. In fact, we've heard the
+          term "addictive" regularly.</span
+        >
+      </p>
+      <a href="https://en.wikipedia.org/wiki/Coding" target="_blank"
+        >Learn More</a
+      >
+      <button>Contact a Coder</button>
+    </div>
+
+        <div class="footer1">
+      <div class="footer-content left">
+        <h3>About Us</h3>
+        <p>
+         Have you ever met a coder who regretted learning to code? Probably
+          not, because learning to code is fun and empowering!
+          <h1>hire a coder!!!</h1>
+        </p>
+      </div>
+
+      <div class="footer-content right">
+        <h3>Important Pages</h3>
+           <a href="#" >Home</a>
+            <a href="#">About</a>
+            <a href="#">Testimonial</a>
+            <a href="#">FAQs</a>
+            <a href="#">Contact</a>
+    </div>
+    <footer class="foot" >
+        <h3>CONTACT US</h3>
+        <div class="icons">
+          <a class="email" href="#" target="_blank">
+            <i class="fa fa-envelope"></i>
+          </a>
+          <a class="twitter" href="#" target="_blank">
+            <i class="fa fa-twitter"></i>
+          </a>
+          <a class="linkedin" href="#" target="_blank">
+            <i class="fa fa-linkedin"></i>
+          </a>
+          <a class="instagram" href="#" target="_blank">
+            <i class="fa fa-instagram"></i>
+          </a>
+        </div>
+      </footer>
+    </div>
+    <div class="footer_c">
+      <p>Copyright &copy; </p>
+    </div>
+
+  </body>
+  <script>
+    function contact() {
+      let age = prompt("What is your age?");
+      let name = prompt("What is your name?");
+      let email = prompt("What is your email?");
+
+      if (age < 18) {
+        alert(
+          "Thank you, " +
+            name +
+            " ! We'll be in touch with your guardian by email, meanwhile you code! "
+        );
+      } else {
+        alert(
+          "Thank you, " +
+            name +
+            " ! We'll be in touch by email, meanwhile you code! "
+        );
+      }
+    }
+    let cButton = document.querySelector("button");
+    cButton.addEventListener("click", contact);
+  </script>
+</html>

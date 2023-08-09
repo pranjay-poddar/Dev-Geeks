@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Piano Tiles</title>
+    <link rel="stylesheet" href="styles.css">
+    
+    <link rel="icon" type="image/x-icon" href="https://cdn-icons-png.flaticon.com/128/570/570549.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Poppins:wght@600&display=swap" rel="stylesheet">
+    
+</head>
+
+<body>
+    <img src="https://drive.google.com/uc?id=19zSLvSV1l4_bkxfaYUC9OpR1OZLBPZa_">
+    <div class="start"> 
+      <h1>Welcome To The Game</h1>
+      <button>P L A Y</button>
+    </div> 
+    
+    <div id="game" style="display: none;">
+      <div id="game-container">
+        <div class="line" id="line1"></div>
+        <div class="line" id="line2"></div>
+        <div class="line" id="line3"></div>
+        <div class="line" id="line4"></div>
+      </div>
+      <div class="tiles" id="tiles"></div> 
+      <div class="score"><p id="score">0</p></div>
+    </div>
+    <div class="result_box">
+      <div class="icon">
+        👑
+      </div>
+      <div class="complete_text">You've completed The Game!</div>
+      <div class="score_text">You've scored 0 points</div>
+      <div class="buttons">
+          <button class="restart">Replay</button>
+      </div>
+    </div>
+    <audio id="audio" src="https://drive.google.com/uc?id=1vCDIoUu4NIjBlMOee-wTDsHBMc1bxzES" hidden>
+    <audio id="play" src="https://drive.google.com/uc?id=16ZqyQo4C59nUeXcP7H7L7XzUwrI7f3bW" hidden>
+    <audio id="out" src="https://drive.google.com/uc?id=1OtAEm0PY38LdtKPBRe_ucoysYkAY7cG2" hidden>
+    <audio id="result" src="https://drive.google.com/uc?id=1GvdIT1VsX48R9emQHCWxs4KP-hEQxeal" hidden>
+
+        <script src="script.js"></script>
+    </body>
+</html>
