@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+    <title>E-Mart</title>
+<head>
+<style>
+  body{
+  background-color: rgba(245, 245, 245, 0.852);
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  font-size: 30px;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color: #111;
+}
+
+.active {
+  background-color: #04AA6D;
+}
+.container{
+    display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.container h1{
+    font-size: 80px;
+    color: brown;
+    font-family: Copperplate, Papyrus, fantasy;
+}
+.container p{
+    font-family: Georgia;
+    background-color: rgb(121, 242, 210);
+    border-radius: 30px;
+}
+img {
+  max-width: 900px;
+  max-height:800px;
+  margin-top: 50px;
+  border-radius: 50px;
+  margin-left:40px;
+}
+
+.text {
+  font-size: 20px;
+  padding-left: 20px;
+}
+.column {
+    float: left;
+    padding: 5px;
+  }
+  
+  /* Clearfix (clear floats) */
+.row::after 
+{
+    content: "";
+    clear: both;
+    display: table;
+}
+h1{
+  text-align: center;
+  color: brown;
+  font-family: Copperplate, Papyrus, fantasy;
+  font-size: 60px;
+}
+.column h2 a{
+  background-color: #04AA6D;
+  color: white;
+  padding: 10px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin-left: 75px;
+}
+</style>
+</head>
+<body>
+
+<ul>
+  <li><a href="index.html">Home</a></li>
+  <li><a href="products.html">Products</a></li>
+  <li><a href="contact.html">Contact</a></li>
+  <li style="float:right"><a class="active" href="about.html">About</a></li>
+</ul>
+<h1> Products - Items we sale</h1>
+<div class="row">
+  <div class="column">
+    <img src="https://img.freepik.com/premium-vector/grocery-store-color-illustration-variety-foods-goods-shelves-shop-trolley-cart-with-veggies-fruits-inside-supermarket-cartoon-interior-with-decor-background_151150-2381.jpg?w=360" alt="Snow" style="max-width: 400px; height: 300px;">
+    <h2><a href=""> Vegatables and fruits</a></h2>
+  </div>
+  <div class="column">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTRfKTCACP-OjTr-WWP1cYfNe9Px2QfjIOPZA&usqp=CAU" alt="Forest"  style="width: 400px; height: 300px;">
+    <h2><a href=""> Dairy products</a></h2>
+  </div>
+  <div class="column">
+    <img src="https://img.freepik.com/premium-vector/frozen-food-store-with-products-vacuumed-using-foil-pouch-packaging-be-fresh-illustration_2175-8695.jpg?w=2000" alt="Mountains" style="max-width: 400px; max-height: 400px;">
+    <h2><a href=""> Frozen products</a></h2>
+  </div>
+</div>
+<div class="row">
+  <div class="column">
+    <img src="https://t3.ftcdn.net/jpg/02/51/96/76/360_F_251967663_l5Y0XFme50Oqe1WFAmeVeERhq8ZbfBuG.jpg" alt="Snow" style="max-width: 400px; height: 300px;">
+    <h2><a href=""> Groceries</a></h2>
+  </div>
+  <div class="column">
+    <img src="https://previews.123rf.com/images/ntlstudio/ntlstudio2009/ntlstudio200900034/154645970-clothes-emporium-flat-color-vector-illustration-department-store-shopping-mall-cloth-boutique.jpg" alt="Forest"  style="width: 400px; height: 300px;">
+    <h2><a href=""> Clothing</a></h2>
+  </div>
+  <div class="column">
+    <img src="https://media.istockphoto.com/id/1360397857/vector/rich-customer-and-saleswoman-in-trading-room-in-jewelry-shop.jpg?s=612x612&w=0&k=20&c=quRLCM3lr72f0ctv5IcGIjGHn-mRVshlDgELEcxnQF8=" alt="Mountains" style="max-width: 400px; max-height: 400px;">
+    <h2><a href="">  Jewelery store</a></h2>
+  </div>
+</div>
+
+</body>
+</html>
