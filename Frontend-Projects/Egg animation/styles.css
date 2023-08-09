@@ -1,0 +1,37 @@
+body{
+    width:100vw;
+height: 100vh;
+display: flex;
+justify-content: center;
+align-items: center;
+overflow: hidden;
+background-color: black;
+
+}
+#main{
+    
+    display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+
+font-size: 0.1rem;
+  width: 200px;
+    height: 300px;
+  animation: animate 4s ease-in-out infinite  ;
+border-radius: 90%;
+background-color: white;
+  /* background-image:conic-gradient(deeppink, white); */
+}
+@keyframes animate {
+    0%{
+ transform: rotateY(0deg) ;
+    }
+    50%{
+        transform: rotateZ(180deg) translateZ(-200px);
+    }
+    100%{
+        transform: rotateZ(360deg) translateZ(200px) scale(100);
+    }
+    
+}
