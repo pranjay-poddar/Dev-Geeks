@@ -84,9 +84,25 @@ vii. Calculation of Buoyant Force
 
 viii. Calculation of Flow Rate
 
+MECHANICS OF MATERIALS
+
+i. Stress and Strain
+
+ii. Elasticity and Hooke's Law
+
+iii. Mechanical Properties of Materials
+
+iv. Bending, Torsion, and Shear
+
+v. Failure Criteria
+
+vi. Structural Analysis
+
+vii. Sample Calculations
+
 <h2>Screenshots</h2>
 
-![image](https://github.com/pranjay-poddar/Dev-Geeks/assets/120494269/f419cb0d-6a37-49a7-af87-3775011787e5)
+![image](https://github.com/Nikita06211/Dev-Geeks/assets/120494269/f7764a60-7a60-4078-9536-8cd925a98814)
 
 ![image](https://github.com/Nikita06211/Dev-Geeks/assets/120494269/3da67791-f949-4dbb-b6ef-60e945bcf035)
 
