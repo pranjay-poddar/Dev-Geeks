@@ -33,7 +33,7 @@ Prim's Algorithm is a greedy algorithm used for determining the shortest path th
    The shortest path of graph G starting from one vertex returning to the same vertex is obtained as the output.
 </p>
 
-<h2 id="assump"> Algorithm</h2>
+<h2 id="assump"> Algorithm</h2> <p align="justify">
  Prim's algorithm is a greedy algorithm that begins with one vertex and adds edges with the minimum weight until the goal is met. 
  The following are the steps to implement the prim's algorithm: <br>
 
