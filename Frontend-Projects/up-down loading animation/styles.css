@@ -1,0 +1,26 @@
+body{
+    width:100vw;
+height: 100vh;
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+
+}
+#main{
+    border-radius: 50%;
+    width: 40%;
+    height: 40%;
+  animation: animate 4s linear infinite ;
+background-size: 20em 20em;
+  background-image: repeating-conic-gradient(DeepPink 0deg,	DeepPink,90deg,white 90deg ,white 180deg,	DeepPink 180deg,	DeepPink 270deg,white 270deg ,white 360deg);
+}
+@keyframes animate {
+    0%{
+ transform: rotateX(0deg);
+    }
+    100%{
+        transform: rotateX(360deg);
+    }
+    
+}
