@@ -1,0 +1,310 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+body {
+    background: linear-gradient(0deg, rgba(48, 165, 202, 0.58), rgba(48, 165, 202, 0.58)), url(https://ik.imagekit.io/5bndldf5v/frontend/backgroung.png);
+    background-blend-mode: overlay, normal;
+    color: white;
+}
+.active{
+    border-bottom: 1px solid white;
+}
+.navLogoImg {
+    width: 8vh;
+    margin: 2vh 0.5vw 2vh 2vw;
+}
+
+nav {
+    display: flex;
+}
+
+nav ul {
+    display: flex;
+    margin: auto;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+}
+
+nav ul li {
+    list-style: none;
+    flex: auto;
+    text-align: center;
+    margin: 0vh 5vw;
+}
+
+.navLinks {
+    text-align: center;
+    margin: auto 2vw auto 0vw;
+    border-radius: 2rem;
+    border: 1px solid #FFFFFF2B;
+    padding: 2vh 1vw;
+}
+
+.headerImg {
+    width: 50vw;
+}
+
+.header {
+    display: flex;
+}
+
+body {
+    max-width: 90vw;
+    margin: auto;
+}
+
+.head {
+    display: flex;
+    width: 100%;
+}
+
+.headImg {
+    max-width: 15vw;
+    /* margin-right: 10vw; */
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    /* flex:auto; */
+}
+
+.info h2,
+.info h3,
+.info p {
+    margin: 0vh 0vw 3vh 3vw;
+}
+
+.roadmapRec {
+    max-width: 35vh;
+    position: absolute;
+}
+
+.roadmapCircle {
+    left: 18px;
+    position: relative;
+    top: 10px;
+}
+
+.q2roadmapRec {
+    max-width: 15vw;
+    position: absolute;
+}
+
+.q2roadmapCircle {
+    position: relative;
+    top: -12px;
+}
+
+.headingRoadmap {
+    margin: 1vh 16vh 5vw;
+}
+
+.info h2 {
+    font-weight: 200;
+    font-size: xx-large;
+}
+
+.q2 {
+    display: flex;
+    margin: 10vh auto;
+    flex-direction: row-reverse;
+    gap: 4vw;
+}
+
+.info {
+    /* border: 2px solid red; */
+    width: 25%;
+}
+
+.imgs {
+    display: flex;
+    width: 55%;
+    align-items: center;
+    justify-content: flex-end;
+}
+.q2img{
+    display: flex;
+    /* width: 17%; */
+    justify-content: end;
+}
+.q2info{
+    display: flex;
+    align-items: end;
+    gap: 17px;
+    width: 24%;
+    flex-direction: column;
+}
+.container{
+    display: flex;
+}
+hr{
+    margin: 5vh 0vw;
+}
+footer {
+    display: flex;
+    max-width: 70vw;
+    min-width: 50vw;
+    margin: auto;
+    width: 100%;
+    min-height: 40vh;
+}
+.foooterHeading{
+    margin: 5vh 0vw;
+}
+.footerDiv p{
+    margin-bottom: 2vh;
+}
+.left {
+    display: flex;
+    max-width: 70vh;
+    min-width: 50vh;
+}
+.footerDiv{
+    flex: auto;
+}
+.right{
+    width: 13vw;
+    max-width: 50vw;
+
+    margin-left: auto;
+
+}
+.links{
+    margin-top: 5vh;
+}
+.links div{
+    /* margin-bottom: 2vh; */
+    margin: 2vh 0vh;
+}
+.linkLogo img{
+    margin: 0vh 2vw 0vh 0vw;
+}
+.cprt{
+    text-align: center;
+    margin-bottom: 5vh;
+}
+.end{
+    align-self: flex-end;
+}
+.txtBox {
+    top: -14vh;
+    text-align: center;
+    position: relative;
+    color: black;
+}
+
+
+.headerInfo {
+    width: 80vh;
+    margin: auto;
+
+}
+
+.headerInput {
+    background: transparent;
+    border: 0px;
+    border-radius: 2rem;
+    margin-left: 1vw;
+}
+
+.headerInfo h1 {
+    font-family: 'Outfit';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 4.2rem;
+    letter-spacing: 0.2px;
+}
+
+.headerFormBtn {
+    border: 1px solid aliceblue;
+    border-radius: 38px;
+    height: 7vh;
+    width: 23vw;
+}
+
+.headerLine {
+    margin-top: 8px;
+    width: 1.4px;
+}
+
+.headerLine {
+    width: 1px;
+    margin-top: 11px;
+}
+
+.headerInfo p {
+    margin: 4vh auto;
+}
+
+.headerImg1,
+.headerImg2,
+.headerImg3 {
+   display: none;
+}
+
+
+
+.contactHeader{
+    display: flex;
+}
+.form input{
+    display: block;
+    background-color: transparent;
+    width: 39vw;
+    margin-bottom: 5vh;
+    height: 5vh;
+    border: 0px;
+    border-bottom: 1px solid aliceblue;
+}
+.contactInfo{
+    height: 80vh;
+    width: 30vw;
+    margin: auto;
+}
+.form{
+    height: 80vh;
+    width: 40vw;
+    margin: auto;
+}
+.contactInfo h1{
+    margin-top: 5vh;
+    font: 4.2rem sans-serif;
+}
+.name{
+    margin-top: 20vh;
+}
+.contactInfo p{
+    margin-bottom: 5vh;
+}
+.contactHeader .info p{
+    white-space: nowrap;
+}
+
+.details{
+margin-top: 10vh;
+font-size: 1.2rem;
+font-family: sans-serif;
+}
+.details span{
+color: rgb(163, 163, 163);
+}
+.submitBtn{
+    min-height: 100px; 
+    min-width: 100px; 
+    background-color: rgb(0, 118, 165);
+    float: right;
+    border-radius: 50%;
+    text-align: center;
+}
+.submitBtn button{
+    background: transparent;
+    color: white;
+    border: 0px;
+    margin-top: 45%;
+    font-size: 0.7rem;
+}
