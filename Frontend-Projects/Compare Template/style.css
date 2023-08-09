@@ -1,0 +1,48 @@
+.compare {
+    border-collapse: collapse;
+    font-family: sans-serif;
+    width: 100%;
+}
+
+.compare__cell {
+    max-width: 250px;
+    font-size: 0.9em;
+    font-weight: normal;
+    padding: 0.5em 1em;
+    color: #333333;
+    border: 1px solid #dddddd;
+    line-height: 1.35;
+    vertical-align: text-top;
+}
+
+.compare__cell__desc{
+    text-align: left;
+}
+.compare__cell_desc__p{
+    margin: 5px 0 0 0;
+}
+
+.compare__cell_desc__ul{
+    margin: 5px 0px;
+}
+
+
+.compare__cell--bold {
+    font-weight: bold;
+}
+
+.compare__cell--shaded {
+    background: #eeeeee;
+}
+
+.compare__cell--large {
+    font-size: 1.25em;
+}
+
+.compare__cell--center {
+    text-align: center;
+}
+
+.compare__img {
+    width: 100%;
+}

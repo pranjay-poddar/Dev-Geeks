@@ -8,7 +8,9 @@
 
 body {
     font-family: 'Manrope', sans-serif;
-    background: linear-gradient(#e66465, #9198e5);
+
+    background: #202733;
+
     display: flex;
     justify-content: center;
     align-items: center;
@@ -16,8 +18,8 @@ body {
 }
 
 .card {
-    background: hsl(216, 73%, 24%);
-    max-width: 600px;
+    background: #313848;
+    max-width: 800px;
     margin: 0 auto;
     text-align: center;
     padding: 30px;
@@ -26,16 +28,18 @@ body {
 }
 
 .title {
-    color: hsl(84, 82%, 47%);
+    color: hsl(84, 90%, 27%);
     text-transform: uppercase;
-    font-size: 14px;
+    font-size: 25px;
     letter-spacing: 3px;
     padding-bottom: 14px;
 }
 
 .advice{
-    color: #f04f4f;
-    font-size: 18px;
+
+    color: white;
+    font-size: 20px;
+
     line-height: 1.6;
     letter-spacing: 1.1px;
     margin-bottom: 20px;
