@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fitness is our Goal</title>
+</head>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=Crimson+Text:wght@600&family=Dancing+Script:wght@600&family=Montserrat:wght@500&family=Open+Sans:wght@500&family=Quicksand:wght@700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<style>
+    body{
+     font-family: 'Montserrat', 'sans-serif' ; 
+     color: white;
+     margin: 0px;
+     padding: 12px 15px;
+  background: url('https://i.ibb.co/cbXL17y/gym4.jpg');
+     } 
+     .left{
+         line-height: 1;
+         font-size: 80%;
+         display :inline-block;
+          border: 2px solid red; 
+         position: absolute;
+          left: 49px;
+         top: 20px;
+     }
+     .left img{
+         width: 90px;
+         height: 52px;
+         filter: invert(100%);
+     }
+     .left div{
+         text-align: center;
+     }
+     .mid{
+         display: block;
+         width: 37%;
+         margin: 20px auto;
+        
+     }
+     .right{
+         position: absolute;
+         right: 34px;
+         top: 20px;
+         display: inline-block;
+         border: 2px solid hsl(0, 0%, 3%);
+     }
+     .navbar{
+         display: flex;
+      }
+      .navbar li{
+         display: flex;
+        font-size:  12px;
+     }
+     .navbar li a{
+         color:white;
+         text-decoration: none;
+         padding: 22px 23px;
+     }
+     .navbar li a:hover, .navbar li a.active{
+         color:rgba(59, 127, 127, 0.937);
+         text-decoration: underline;
+         padding: 22px 16px;
+     }
+    .btn{
+        font-family: 'Montserrat', 'sans-serif' ; 
+        margin: 0px 9px;
+        background-color: black;
+        color: white;
+        padding: 4px 14px;
+        border: 2px solid gray;
+        border-radius: 10px;
+        font: size 20px; 
+        cursor: pointer;
+    }
+    .btn:hover{
+     background-color:rgba(77, 81, 81, 0.937)
+    }
+    .container{
+     
+     margin: 32px 576px;
+     padding: 20px 48px;
+     width:38%;
+     border-radius: 12px;
+   
+    }
+    .container h1{
+     text-align: center;
+    }
+    .container button{
+     display: block;
+     width: 54%;
+     margin: 2% auto;
+    }
+    .form-group input{
+     text-align: center;
+     display: block;
+     width: 287px;
+     padding: 6px;
+     border: 2px solid black;
+     margin: 3px auto;
+     font-size: 19px;
+     border-radius: 1%;
+    }
+
+ </style>
+
+<body>
+<header class="header">
+    <!-- left box for logo -->
+    <div class ="left">
+       <img src="https://i.ibb.co/Rg0wZT1/gymlogo2.jpg" alt="">
+       <div>Ankita Fitness </div>
+ </div>
+ <!-- right box for nav bar -->
+    <div class="mid">
+        <ul class="navbar">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Fitness Calculator</a></li>
+            <li><a href="#">Contact Us</a></li>
+        </ul>
+ </div>
+ <!-- right box for buttons -->
+ <div class ="right">
+   <button class="btn">Call us Now</button>
+   <button class="btn">Email Us</button>
+ </div>
+</header>
+<div class="container">
+<h1>Join the best gym of Kolkata, today</h1>
+<form action="noaction.php">
+    <div class="form-group">
+        <input type="text" name=""placeholder="Enter your name">
+    </div>
+    <div class="form-group">
+        <input type="text" name=""placeholder="Enter your age">
+    </div>
+    <div class="form-group">
+        <input type="text" name=""placeholder="Enter your gender">
+    </div>
+    <div class="form-group">
+        <input type="text" name=""placeholder="Enter your locality">
+    </div>
+    <div class="form-group">
+        <input type="text" name=""placeholder="Enter your phone number">
+    </div>
+    <div class="form-group">
+        <input type="text" name=""placeholder="Enter your Email id">
+    </div>
+    <button class="btn">Submit</button>
+</form>
+</div>
+</body>
+</html>
