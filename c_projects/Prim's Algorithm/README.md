@@ -14,7 +14,7 @@
 <h3> TABLE OF CONTENTS </h3>
 <ol type="I">
     <li><a href="#intro"> Introduction  </a></li>
-    <li><a href="#scope"> Travelling Salesman Approach </a></li>
+    <li><a href="#scope"> Minimum Spanning Tree </a></li>
     <li><a href="#assump"> Algorithm </a></li>
     <li><a href="#req"> Language Used</a></li>
   
@@ -27,10 +27,9 @@ Prim's Algorithm is a greedy algorithm used for determining the shortest path th
 
 </p>
 
-<h2 id="scope">Approach</h2>
+<h2 id="scope">Minimum Spanning Tree</h2>
  <p align="justify">
- As the definition for greedy approach states, we need to find the best optimal solution locally to figure out the global optimal solution. The inputs taken by the algorithm are the graph G {V, E}, where V is the set of vertices and E is the set of edges. 
-   The shortest path of graph G starting from one vertex returning to the same vertex is obtained as the output.
+Minimum spanning tree can be defined as the spanning tree in which the sum of the weights of the edge is minimum. The weight of the spanning tree is the sum of the weights given to the edges of the spanning tree.
 </p>
 
 <h2 id="assump"> Algorithm</h2> <p align="justify">
@@ -44,7 +43,7 @@ Step 2 should be repeated until the minimum spanning tree is constructed. <br>
 
 
 
- <p align="justify">
+ 
   
 </p>
 
