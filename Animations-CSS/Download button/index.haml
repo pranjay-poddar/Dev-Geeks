@@ -1,0 +1,19 @@
+!!!
+%html
+  %head
+    %meta{ charset: "UTF-8" }
+    %meta{ name: "viewport", content: "width=device-width, initial-scale=1.0" }
+    %title Your Page Title
+%link{ rel: "stylesheet", href: "./styles.css" }
+  %body
+.button
+  %input#button{ type: 'checkbox' }
+  %label{ for: 'button' }
+    .button_inner.q
+      %i.l.ion-log-in
+      %span.t Downloads
+      %span
+        %i.tick.ion-checkmark-round
+      .b_l_quad
+        - (1..52).each do
+          .button_spots
