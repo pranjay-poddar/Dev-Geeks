@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body {font-family: Arial, Helvetica, sans-serif;}
+
+.navbar {
+  width: 100%;
+  background-color: black;
+  overflow: auto;
+}
+
+.navbar a {
+  float: left;
+  padding: 12px;
+  color: whitesmoke;
+  text-decoration: none;
+  font-size: 30px;
+}
+
+.navbar a:hover {
+  background-color: burlywood;
+}
+
+.active {
+  background-color: brown;
+}
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center
+}
+
+img {
+  max-width: 800px;
+  max-height:800px;
+  margin-top: 20px;
+}
+
+.text {
+  
+  padding-left: 20px;
+  
+}
+.text h1{
+    font-size: 60px;
+    color: brown;
+    font-family: Garamond, serif;
+}
+.text p{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 20px;
+    background-color: burlywood;
+    border-radius: 30px;
+}
+.column {
+  float: left;
+ 
+  padding: 5px;
+}
+.column h2{
+  text-align: center;
+  background-color: burlywood;
+  color: brown;
+  border-radius: 12px;
+  padding: 15px, 20px;
+}
+
+/* Clearfix (clear floats) */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+@media screen and (max-width: 500px) {
+  .navbar a {
+    float: none;
+    display: block;
+  }
+}
+</style>
+<body>
+
+
+<div class="navbar">
+  <a class="active" href="#"><i class="fa fa-fw fa-home"></i> Home</a> 
+  <a href="search.html"><i class="fa fa-fw fa-search"></i> Search</a> 
+  <a href="contact.html"><i class="fa fa-fw fa-envelope"></i> Contact</a> 
+  <a href="login.html"><i class="fa fa-fw fa-user"></i> Login</a>
+</div>
+<div class="container">
+    <div class="images">
+        <img src="https://img.freepik.com/premium-vector/family-people-travel-stand-with-suitcases-near-reception-desk-cartoon-couple-guests-checkout-hotel-lobby-room-luxury-hall-worker-uniform-doing-registration-accommodation_575670-863.jpg?w=2000" >
+    </div>
+    <div class="text">
+        <h1>QwickStay</h1>
+        <h3>Stay shorter time, Pay Less!</h3>
+        <p>Stay is your overnight visit at a hotel where you will need an accommodation to stay regardless of the number of nights.When going on vacation, your hotel is your home away from home. It provides all the comforts, security, and entertainment you need when not exploring the attractions surrounding you. </p>
+    </div>
+</div>
+<br>
+<div class="row">
+    <div class="column">
+      <img src="https://img.freepik.com/free-vector/empty-apartment-interior-illustration_33099-2021.jpg" alt="Snow" style="width: 500px; height: 300px;">
+      <h2>Spacious Rooms</h2>
+    </div>
+    <div class="column">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR0KrinhEwcxhddxfFDGw8jC47zavk_9aBWSw&usqp=CAU" alt="Forest" style="width: 400px; height: 300px;">
+      <h2>Room service<br> & <br>Catering available!</h2>
+    </div>
+    <div class="column">
+      <img src="https://png.pngtree.com/png-vector/20210812/ourlarge/pngtree-travel-cartoon-man-hotel-check-in-concept-png-image_3766471.jpg" alt="Mountains" style="width: 400px; height: 300px;">
+      <h2>Hassel Free <br>check-in!</h2>
+    </div>
+  </div>
+
+</body>
+</html> 

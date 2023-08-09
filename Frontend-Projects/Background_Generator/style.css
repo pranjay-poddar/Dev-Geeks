@@ -1,0 +1,77 @@
+body
+{
+    font-family: sans-serif;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.5em;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(254, 238, 221);
+}
+
+h1
+{
+    font-size: 3rem;
+    color: palevioletred;
+}
+
+.container 
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.container .linear
+{
+    margin: 10px;
+    width: 50vw;
+    height: 50vh;
+    background-image: url(images/linearGradient.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 50px;
+}
+
+.container .radial
+{
+    margin: 10px;
+    width: 50vw;
+    height: 50vh;
+    background-image: url(images/radialGradient.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 50px;
+}
+
+@media only screen and (max-width: 800px)
+{
+    body 
+    {
+        justify-content: center;
+        text-align: center;
+    }
+    h1 
+    {
+        font-size: 30px;
+    }
+    .container
+    {
+        flex-direction: column;
+    }
+    .container .linear
+    {
+        width: 90vw;
+        height: 30vh;
+        background-size: contain;
+        border-radius: 0;
+    }
+    .container .radial
+    {
+        width: 90vw;
+        height: 30vh;
+        background-size: contain;
+        border-radius: 0;
+    }
+}

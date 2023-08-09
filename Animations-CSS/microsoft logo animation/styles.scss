@@ -1,0 +1,109 @@
+// Variables
+$lt-color: #F25022;
+$rt-color: #7FBA00;
+$lb-color: #00A4EF;
+$rb-color: #FFB900;
+$animation-time: 8s;
+$animation-margin: 5.1vw;
+//Styling
+.box {
+  position: absolute;
+  top: 42%;
+  left: 42%;
+}
+
+@mixin box-general() {
+  width: 4.8vw;
+  height: 4.8vw;
+  padding: 0;
+  position: absolute;
+}
+
+.left-top {
+  @include box-general();
+  background-color: $lt-color;
+  z-index: 40;
+}
+
+.right-top {
+  @include box-general();
+  background-color: $rt-color;
+  z-index: 30;
+  animation: rt-animate $animation-time linear infinite;
+}
+
+.left-bottom {
+  @include box-general();
+  background-color: $lb-color;
+  z-index: 10;
+  animation: lb-animate $animation-time linear infinite;
+}
+
+.right-bottom {
+  @include box-general();
+  background-color: $rb-color;
+  z-index: 20;
+  animation: rb-animate $animation-time linear infinite;
+}
+
+//Animation
+@keyframes rt-animate {
+  0% {
+    margin: 0;
+    transform: rotate(90deg);
+  }
+  25% {
+    margin-left: $animation-margin;
+  }
+  75% {
+    transform: rotate(0deg);
+  }
+  100% {
+    margin-left: $animation-margin;
+  }
+}
+
+@keyframes rb-animate {
+  0% {
+    margin: 0;
+    transform: rotate(90deg);
+  }
+  25% {
+    margin-top: 0;
+    margin-left: $animation-margin;
+  }
+  50% {
+    margin-top: $animation-margin;
+  }
+  75% {
+    transform: rotate(0deg);
+  }
+  100% {
+    margin-top: $animation-margin;
+    margin-left: $animation-margin;
+  }
+}
+
+@keyframes lb-animate {
+  0% {
+    margin: 0;
+    transform: rotate(90deg);
+  }
+  25% {
+    margin-top: 0;
+    margin-left: $animation-margin;
+  }
+  50% {
+    margin-top: $animation-margin;
+    margin-left: $animation-margin;
+  }
+  75% {
+    margin-top: $animation-margin;
+    margin-left: 0;
+    transform: rotate(0deg);
+  }
+  100% {
+    margin-top: $animation-margin;
+    margin-left: 0;
+  }
+}
