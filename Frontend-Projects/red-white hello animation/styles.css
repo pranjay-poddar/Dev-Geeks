@@ -1,0 +1,38 @@
+body{
+    width:100vw;
+height: 100vh;
+display: flex;
+justify-content: center;
+align-items: center;
+overflow: hidden;
+
+
+}
+#main{
+    
+    display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+
+font-size: 0.1rem;
+  width: 200px;
+    height: 300px;
+  animation: animate 60s ease-in-out infinite  ;
+border-radius: 30%;
+background-size: 40em 40em;
+
+  background-image:conic-gradient(red,white);
+}
+@keyframes animate {
+    0%{
+ transform: rotateY(0deg) ;
+    }
+    50%{
+        transform: rotateZ(180deg) translateX(-200px);
+    }
+    100%{
+        transform: rotateZ(360deg) translateZ(200px) scale(100);
+    }
+    
+}
