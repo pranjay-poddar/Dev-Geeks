@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&family=Outfit:wght@400;700&display=swap');
+
+:root{
+    --softRed: hsl(10, 79%, 65%);
+    --cyan: hsl(186, 34%, 60%);
+    --darkBrown: hsl(25, 47%, 15%);
+    --mediumBrown: hsl(28, 10%, 53%);
+    --cream: hsl(27, 66%, 92%);
+    --veryPaleOrange: hsl(33, 100%, 98%);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'DM Sans', sans-serif;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    background-color: var(--cream);
+    padding: 15px;
+}
+
+.sub-container{
+    margin-block: 15px;
+    border-radius: 10px;
+    padding: 20px 20px;
+    width: 350px;
+}
+
+.balance-container{
+    background-color: var(--softRed);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.details-container{
+    background-color: var(--veryPaleOrange);
+}
+
+.balance-text{
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 30px;
+    color: var(--cream)
+}
+
+.balance{
+    font-size: 22px;
+    color: var(--veryPaleOrange);
+    font-weight: 700;
+}
+
+img{
+    height: 40px;
+}
+
+.spending-text{
+    font-size: 23px;
+    font-weight: 700;
+    color: var(--darkBrown);
+}
+
+.days{
+    padding-block: 25px;
+    display: flex;
+    justify-content: space-between;
+    color: var(--mediumBrown);
+    font-size: 14px;
+    border-bottom: 2px solid var(--cream);
+}
+
+.summary{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-top: 25px;
+}
+
+.sum-section > h5{
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--mediumBrown);
+}
+
+.sum-section > p{
+    color: var(--darkBrown);
+    font-weight: 700;
+}
+
+.amt{
+    margin-top: 6px;
+    font-size: 25px;
+}
+
+.increment{
+    width: 34px;
+    transform: translateX(67px);
+}
+
+.bar-container{
+    display: flex;
+    flex-direction: column-reverse;
+    text-align: center;
+    align-items: center;
+    height: 190px;
+    position: sticky;
+}
+
+.bar{
+    width: 30px;
+    background-color: var(--softRed);
+    border-radius: 3px;
+    margin-bottom: 8px;
+    cursor: pointer;
+}
+
+.bar:hover{
+    opacity: 0.5;
+}
+
+.bar:hover ~ .amtSpend{
+    display: inline-block;
+}
+
+.amtSpend{
+    display: none;
+    margin-bottom: 10px;
+    border-radius: 3px;
+    padding-block: 0px;
+    padding-inline: 0px;
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 5px;
+}
