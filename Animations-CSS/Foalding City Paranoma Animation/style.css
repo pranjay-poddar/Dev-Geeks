@@ -1,0 +1,89 @@
+html {
+    background: radial-gradient(at center right, #222, #000);
+  }
+  
+  body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    -webkit-animation: crunch 4s 1s ease-in-out infinite;
+            animation: crunch 4s 1s ease-in-out infinite;
+  }
+  @-webkit-keyframes crunch {
+    50% {
+      transform: scaleX(0.6);
+    }
+  }
+  @keyframes crunch {
+    50% {
+      transform: scaleX(0.6);
+    }
+  }
+  
+  .card {
+    display: flex;
+    width: 95vw;
+    height: 22.5625vw;
+  }
+  
+  .fold {
+    flex: 1;
+    background: url(https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Pittsburgh_Panorama_from_the_Duquesne_Incline.jpg/1280px-Pittsburgh_Panorama_from_the_Duquesne_Incline.jpg);
+    background-size: cover;
+    -webkit-animation: 4s 1s ease-in-out infinite;
+            animation: 4s 1s ease-in-out infinite;
+  }
+  .fold:nth-child(1) {
+    background-position: 0%;
+  }
+  .fold:nth-child(2) {
+    background-position: 25%;
+  }
+  .fold:nth-child(3) {
+    background-position: 50%;
+  }
+  .fold:nth-child(4) {
+    background-position: 75%;
+  }
+  .fold:nth-child(5) {
+    background-position: 100%;
+  }
+  .fold:first-child {
+    border-radius: 2vw 0 0 2vw;
+  }
+  .fold:last-child {
+    border-radius: 0 2vw 2vw 0;
+  }
+  .fold:nth-child(odd) {
+    -webkit-animation-name: odd-fold;
+            animation-name: odd-fold;
+  }
+  @-webkit-keyframes odd-fold {
+    50% {
+      transform: skewY(15deg);
+      filter: brightness(1.25);
+    }
+  }
+  @keyframes odd-fold {
+    50% {
+      transform: skewY(15deg);
+      filter: brightness(1.25);
+    }
+  }
+  .fold:nth-child(even) {
+    -webkit-animation-name: even-fold;
+            animation-name: even-fold;
+  }
+  @-webkit-keyframes even-fold {
+    50% {
+      transform: skewY(-15deg);
+      filter: brightness(0.75);
+    }
+  }
+  @keyframes even-fold {
+    50% {
+      transform: skewY(-15deg);
+      filter: brightness(0.75);
+    }
+  }
