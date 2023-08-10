@@ -1,0 +1,112 @@
+.card{
+    min-height: 450px;
+    width: 45%;
+    position: relative;
+    border-radius: 10px;
+    background-color: rgb(232, 228, 228);
+    border: 5px dashed pink;
+    border-top: none;
+    height: auto;
+}
+
+.btn-img{
+    border-radius: inherit;
+    width: 100%;
+    height: 60%;
+}
+
+.button-info{
+    padding-inline: 20px;
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    height: 40%;
+}
+
+.btn{
+    padding: 10px;
+    font-size: 20px;
+    cursor: pointer;
+    border-radius: 10px;
+    border: none;
+    font-weight: 700;
+}
+
+.download-btn{
+    background: linear-gradient(to right, rgb(255, 74, 74) 0%, rgb(255, 25, 255) 100%),
+    radial-gradient(rgb(255, 110, 110) 20%, rgb(75, 98, 212) 20%);
+    color: white;
+    transition: all 0.3s ease-in-out;
+}
+.view-code-btn{
+    background: radial-gradient(circle, rgb(133, 180, 255) 0%, rgb(104, 255, 104) 100%);    transition: all 0.3s ease-in-out;
+}
+
+.view-code-btn a, .download-btn a {
+    color: white;
+    text-decoration: none;
+}
+
+.view-code-btn:hover, .download-btn:hover{
+    transform: translateY(-8px);
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+.download-btn:hover{
+    background: linear-gradient(to right, rgb(255, 55, 55) 0%, rgb(255, 16, 255) 100%);
+}
+
+.view-code-btn:hover{
+    background: radial-gradient(circle, rgb(113, 160, 255) 0%, rgb(84, 255, 84) 100%);
+}
+
+.download-btn:active{
+    transform: translateY(4px);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    background: linear-gradient(to right, rgb(255, 122, 122) 0%, rgb(255, 62, 255) 100%);
+}
+.view-code-btn:active{
+    transform: translateY(4px);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    background: radial-gradient(circle, rgb(133, 180, 255) 0%, rgb(104, 255, 104) 100%);
+}
+
+
+.author{
+    display: flex;
+    gap: 5px;
+    font-size: 20px;
+    font-weight: bold;
+    color: rgb(0, 0, 0);
+}
+
+address a{
+    color:darkcyan;
+    text-decoration: none;
+}
+
+address a:hover{
+    text-decoration: underline;
+}
+
+address:hover{
+    background: linear-gradient(gray, rgb(45, 43, 43), rgb(56, 53, 53), gray);
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+
+@media screen and (min-width: 1400px){
+    .card{
+        max-width: 600px;
+    }    
+}
+
+@media screen and (max-width: 800px){
+    .card{
+        width: 80%;
+        flex: 1 0 auto;
+        padding: 10px;
+    }
+}
+    

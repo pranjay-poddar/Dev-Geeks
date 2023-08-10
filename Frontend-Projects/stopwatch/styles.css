@@ -1,0 +1,31 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background-color: grey;
+    flex-direction: column;
+}
+.stopwatch{
+    background-color: black;
+    color: white;
+    padding: 20px;
+    font-size: 90px;
+    border-radius: 10px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;   
+}
+.button{
+    padding: 12px 24px;
+    border-radius: 5px;
+    background-color: var(--clr);
+    margin-inline: 12px;
+    color: white;
+    outline: none;
+    border-color: transparent;
+    margin-top: 20px;
+    cursor: pointer;
+}
