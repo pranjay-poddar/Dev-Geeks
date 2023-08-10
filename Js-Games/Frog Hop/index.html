@@ -13,7 +13,16 @@ Fld = new Array(Max);
 Pic= new Array(3);
 for (i=0; i<3; i++)
 { Pic[i] = new Image();
-  Pic[i].src = "frog"+i+".gif"; 
+ if(i==0) {
+  Pic[i].src = "https://drive.google.com/file/d/1avp7Brz0i4JrKLe17MNBUe_4EWhSR5bI/view?usp=sharing";
+ }
+ else if(i==1) {
+  Pic[i].src = "https://drive.google.com/file/d/1M7L6o4Y6LqoqIqWG4wMdLNyp_k4bSEJ1/view?usp=sharing";
+ }
+ else {
+  Pic[i].src = "https://drive.google.com/file/d/1lu1yUR0hVTrkXfM1uq9CA7nP_E1xtXCu/view?usp=sharing";
+ }
+   
 }
 History=new Array(MaxMove);
 for (i=0; i<MaxMove; i++) History[i]=new Array(3);
