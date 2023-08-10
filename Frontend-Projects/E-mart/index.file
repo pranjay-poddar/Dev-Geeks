@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+    <title>E-Mart</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<head>
+<style>
+  body{
+  background-color: rgba(245, 245, 245, 0.852);
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  font-size: 30px;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color: #111;
+}
+
+.active {
+  background-color: #04AA6D;
+}
+.container{
+    display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.container h1{
+    font-size: 80px;
+    color: brown;
+    font-family: Copperplate, Papyrus, fantasy;
+}
+.container p{
+    font-family: Georgia;
+    background-color: rgb(121, 242, 210);
+    border-radius: 30px;
+}
+img {
+  max-width: 900px;
+  max-height:800px;
+  margin-top: 50px;
+  border-radius: 50px;
+  margin-left:40px;
+}
+
+.text {
+  font-size: 20px;
+  padding-left: 20px;
+}
+.column {
+    float: left;
+    
+    padding: 5px;
+  }
+  
+  /* Clearfix (clear floats) */
+  .row::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+.column h3{
+  background-color: #04AA6D;
+  color: white;
+  padding: 10px 15px;
+  text-align: center;
+}
+  .footer{
+    text-align: center;
+  }
+  .footer a{
+    color: black;
+  }
+</style>
+</head>
+<body>
+
+<ul>
+  <li><a href="index.html">Home</a></li>
+  <li><a href="products.html">Products</a></li>
+  <li><a href="contact.html">Contact</a></li>
+  <li style="float:right"><a class="active" href="about.html">About</a></li>
+</ul>
+
+<div class="container">
+    <div class="text">
+        <h1>E- Mart</h1>
+        <h3>We serve you at your door step!</h3>
+        <p>We introduce a new form of supermarket: Smart Market, in which customers can acquire detailed product information with Smart Marketpsilas facilities and expedite the checkout process without human intervention.</p>
+    </div>
+    <div class="image">
+      <img src="https://img.freepik.com/premium-vector/supermarket-cartoon-street-flat-city-shop-vector-illustration-urban-market-background-people-go-shopping-store-concept_109722-5071.jpg?w=2000" alt="market">
+    </div>
+</div>
+<br>
+<div class="row">
+    <div class="column">
+      <img src="https://static4.depositphotos.com/1000764/300/i/450/depositphotos_3004053-stock-photo-supermarket.jpg" alt="Snow" style="width: 400px; height: 400px;">
+      <h3>Hassel free shopping</h3>
+    </div>
+    <div class="column">
+      <img src="https://st4.depositphotos.com/1832477/29987/v/450/depositphotos_299875630-stock-illustration-grocery-supermarket-checkout-line-cartoon.jpg" alt="Forest"  style="width: 400px; height: 400px;">
+      <h3>We serve at best!</h3>
+    </div>
+    <div class="column">
+      <img src="https://img.freepik.com/free-vector/supermarket-aisle-perspective-view_107791-19303.jpg?w=2000" alt="Mountains" style="width: 400px; height: 400px;">
+      <h3>Wide range of Products to shop from!</h3>
+    </div>
+  </div>
+  <!-- Footer-->
+  <div class="footer">
+    <h3>Copyright by @SnigdhaP2022 <a href="https://github.com/SnigdhaP2022"><i class="fa-brands fa-github"></i> </a> </h3>
+  </div>
+  
+</body>
+</html>
+
+
