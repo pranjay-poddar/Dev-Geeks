@@ -1,0 +1,31 @@
+.flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-block: 15px;
+}
+
+.logo{
+    margin-top: 15px;
+    width: 100px;
+}
+
+.logoText{
+    font-family: 'Darumadrop One', cursive;
+    font-size: 80px;
+    color: transparent;
+    background: linear-gradient(to right, #ff105f,#7777c2,#fa4868, #f0395b, #ffad06);
+    background-clip: text;
+    -moz-background-clip: text;
+    -webkit-background-clip: text;
+}
+
+
+@media screen and (max-width: 624px) {
+    .logo{
+        width: 50px;
+    }
+    .logoText{
+        font-size: 50px;
+    }
+}
