@@ -816,25 +816,28 @@ Happy Coding! -->
   <td align="center"> 261.</td>
   <td align="center"><a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Js-Games/Mastermind">Mastermind</a></td>
   <td align="center"> 268.</td>
-
   <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Python Projects/Forex Exchanger">Web-Image Filter</a></td>
   <td align="center"> 272.</td>
   <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Js-Games/Cubula">Cubula</a></td>
-
+ </tr>
+  
+ <tr align="center">
+   <td align="center">269.</td>
   <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Python Projects/Forex Exchanger">Forex Exchanger</a></td>
   <td align="center"> 270.</td>
   <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Animations-CSS/404-Page Character">404-Page Character</a></td>
-<td align="center"> 273.</td>
+
+  <td align="center"> 273.</td>
   <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Js-Games/Geoguess">Geoguess</a></td>
 
 
-<td align="center"> 277.</td>
+  <td align="center"> 277.</td>
   <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Python Projects/Jarvis Voice Assistant">Jarvis Voice Assistant</a></td>
 
 
   <td align="center"> 276.</td>
   <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Python projects/Medi Scraper">Medi Scraper</a></td>
-
+ </tr>
   <td align="center"> 275.</td>
   <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Python Projects/AI Image Generator">Geoguess</a></td>
 
@@ -844,9 +847,9 @@ Happy Coding! -->
 
   <td align="center"> 278.</td>
   <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/cpp-projects/Vaccine Management System">Vaccine Management System</a></td>
-
-
-
+  
+  <td align="center"> 271.</td>
+  <td align="center"> <a href="https://github.com/Parul1606/Dev-Geeks/tree/test/ML%20Projects/Fake-News-Detection">Fake-News-Detection</a></td>
 
 </tr>  
 
