@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 24, 2023 at 08:57 PM
+-- Generation Time: Aug 06, 2023 at 08:39 PM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
@@ -32,15 +32,17 @@ CREATE TABLE `user_details` (
   `FName` varchar(255) NOT NULL,
   `LName` varchar(255) DEFAULT NULL,
   `Email` varchar(255) NOT NULL,
-  `Password` varchar(255) NOT NULL
+  `Password` varchar(255) NOT NULL,
+  `reset_token_hashed` varchar(128) DEFAULT NULL,
+  `token_expires_at` datetime DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `user_details`
 --
 
-INSERT INTO `user_details` (`ID`, `FName`, `LName`, `Email`, `Password`) VALUES
-(37, 'Ram', '', 'ram@gmail.com', '$2y$10$HeDpieeg8rTny7hHdPOsjOQiUApDzHn3dBHb1XXXdRBICKf6EfR2m');
+INSERT INTO `user_details` (`ID`, `FName`, `LName`, `Email`, `Password`, `reset_token_hashed`, `token_expires_at`) VALUES
+(1, 'Ram', '', 'ram@gmail.com', '$2y$10$lGdXQk4KGQLjFqK7lNAjVukXQF4wnUkFGBIHCt6bg38gyAkPZu1Yi', NULL, NULL);
 
 --
 -- Indexes for dumped tables
@@ -61,7 +63,7 @@ ALTER TABLE `user_details`
 -- AUTO_INCREMENT for table `user_details`
 --
 ALTER TABLE `user_details`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=38;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
