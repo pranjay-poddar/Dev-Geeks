@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html {
+            background: #F2F2F2;
+        }
+
+        .logo-holder {
+            background: #f2f2f2;
+            width: 180px;
+            height: 220px;
+            position: relative;
+            margin: 0 auto;
+            padding-top: 12px;
+            padding-bottom: 24px;
+            -webkit-transform: translateZ(0);
+        }
+
+        .bg {
+
+            position: absolute;
+            top: 9px;
+            left: 8px;
+            right: 8px;
+            bottom: 8px;
+            background: url(http://boutique.flarework.com/wp-content/themes/boutique/img/logo_large.png) center 0px no-repeat;
+            background-size: contain;
+            -webkit-filter: drop-shadow(0px 6px 25px rgba(0, 0, 0, 0.5));
+        }
+
+        .bar {
+            position: relative;
+            height: 8px;
+            background: #6a6a6a;
+            width: 0%;
+            top: 0px;
+            left: 18px;
+            margin-top: 8px;
+            box-shadow: 0 0 3px rgba(192, 192, 192, 0.9);
+            animation: fill 5s infinite alternate, colors 5s infinite alternate;
+        }
+
+        .bar.fill1 {
+            animation: fill-1 5s infinite alternate, colors 5s infinite alternate;
+        }
+
+        .bar.fill2 {
+            animation: fill-2 5s infinite alternate, colors 5s infinite alternate;
+        }
+
+
+        .bar.fill3 {
+            animation: fill-3 5s infinite alternate, colors 5s infinite alternate;
+        }
+
+
+        .bar.fill4 {
+            animation: fill-4 5s infinite alternate, colors 5s infinite alternate;
+        }
+
+        .bar.fill5 {
+            animation: fill-5 5s infinite alternate, colors 5s infinite alternate;
+        }
+
+        .bar.fill6 {
+            animation: fill-6 5s infinite alternate, colors 5s infinite alternate;
+        }
+
+
+
+        @keyframes fill {
+            0% {
+                width: 0;
+            }
+
+            33% {
+                width: 30px;
+            }
+
+            66% {
+                width: 10px;
+            }
+
+            100% {
+                width: 105px;
+            }
+        }
+
+        @keyframes fill-1 {
+            0% {
+                width: 0;
+            }
+
+            33% {
+                width: 50px;
+            }
+
+            66% {
+                width: 20px;
+            }
+
+            100% {
+                width: 130px;
+            }
+        }
+
+        @keyframes fill-2 {
+            0% {
+                width: 0;
+            }
+
+            33% {
+                width: 90px;
+            }
+
+            66% {
+                width: 70px;
+            }
+
+            100% {
+                width: 136px;
+            }
+        }
+
+        @keyframes fill-3 {
+            0% {
+                width: 0;
+            }
+
+            33% {
+                width: 50px;
+            }
+
+            66% {
+                width: 24px;
+            }
+
+            100% {
+                width: 109px;
+            }
+        }
+
+        @keyframes fill-4 {
+            0% {
+                width: 0;
+            }
+
+            33% {
+                width: 98px;
+            }
+
+            66% {
+                width: 34px;
+            }
+
+            100% {
+                width: 99px;
+            }
+        }
+
+        @keyframes fill-5 {
+            0% {
+                width: 0;
+            }
+
+            33% {
+                width: 30px;
+            }
+
+            66% {
+                width: 10px;
+            }
+
+            100% {
+                width: 148px;
+            }
+        }
+
+
+        @keyframes fill-6 {
+            0% {
+                width: 0;
+            }
+
+            33% {
+                width: 48px;
+            }
+
+            66% {
+                width: 22px;
+            }
+
+            100% {
+                width: 140px;
+            }
+        }
+
+        @keyframes colors {
+            0% {
+                background-color: #5a5a5a;
+            }
+
+            50% {
+                background-color: #3a3;
+            }
+
+            100% {
+                background-color: #6a6a6a;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="logo-holder">
+        <div class="bg"></div>
+        <div class="bar"></div>
+        <div class="bar fill1"></div>
+        <div class="bar fill2"></div>
+        <div class="bar fill3"></div>
+        <div class="bar fill4"></div>
+        <div class="bar fill1"></div>
+        <div class="bar fill5"></div>
+        <div class="bar fill6"></div>
+        <div class="bar"></div>
+    </div>
+</body>
+
+</html>
