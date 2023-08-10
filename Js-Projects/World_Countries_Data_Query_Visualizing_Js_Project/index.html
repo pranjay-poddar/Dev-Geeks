@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>World Countries Data - Day 30: 30DaysOfJavaScript</title>
+	<link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+	<header>
+		<h1>World Countries Data</h1>
+		<p>Currently we have <span id="country-count">250</span> Countries</p>
+		<p class="search-feedback">
+			<span class="count-results">5</span>
+			have satisfied the search criteria
+		</p>
+	</header>
+
+	<section class="search-countries-wrapper">
+		<div class="input-container">
+			<input type="text" placeholder="Search countries with name & languages">
+		</div>
+		<div class="controls-container">
+			<button class="sort-by-name">name</button>
+			<button class="sort-by-capital">capital</button>
+			<button class="sort-by-population">population</button>
+		</div>
+	</section>
+
+	<section class="place-center">
+		<div class="countries-wrapper">
+			<div class="country-container">
+				<img src="https://flagcdn.com/al.svg" alt="albania">
+				<p class="country-name">Albania</p>
+				<p class="country-capital">Capital: Tirana</p>
+				<p class="country-languages">Languages: english, tamil, marathi</p>
+				<p class="country-population">Population: 2432421</p>
+			</div>
+
+			<div class="country-container">
+				<img src="https://flagcdn.com/al.svg" alt="albania">
+				<p class="country-name">Albania</p>
+				<p class="country-capital">Capital: Tirana</p>
+				<p class="country-languages">Languages: english, tamil, marathi</p>
+				<p class="country-population">Population: 2432421</p>
+			</div>
+		</div>
+	</section>
+
+	<section class="place-center">
+		<div class="input-container">
+				<button value="population">population</button>
+				<button value="languages">languages</button>
+		</div>
+		<div class="wrapper">
+			<div class="get-started">
+				<p>Start searching the countries to visualize the data</p>
+			</div>
+		</div>
+	</section>
+
+	<footer class="attribution">
+		<p>
+			Challenge by <a href="https://www.github.com/asabeneh/" target="_blank" rel="noopener">Asabeneh Yetayeh</a>, 
+			Coded by <a href="https://github.com/0xabdulkhalid" target="_blank" rel="noopener">0xabdulkhalid</a>.
+		</p>
+	</footer>
+	<script src="../data/countries_data.js" defer></script>
+	<script src="./scripts/main.js" defer></script>
+</body>
+
+</html>
