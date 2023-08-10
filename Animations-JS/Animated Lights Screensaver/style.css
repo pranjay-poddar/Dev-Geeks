@@ -1,0 +1,33 @@
+body {
+    overflow: hidden;
+    margin:0;
+    background-color: black;
+    height: 100vh;
+    width:100vw;
+    display: flex;
+}
+
+.light {
+    height:20px;
+    width:20px;
+    border-radius: 50%;
+    position: absolute;
+    filter:opacity(0.8) blur(1px) brightness(0.32);
+    cursor: pointer;
+    border: 1px solid #111111;
+}
+.light:hover {
+    background-color:orange;
+    filter: opacity(1) brightness(1.5) blur(2px);
+}
+
+#user {
+    /* z-index: 1; */
+    position: absolute;
+    height:200px;
+    width:200px;
+    border-radius: 50%;
+    filter:blur(2px) drop-shadow(0 0 2px #2c2c2c7e);
+    backdrop-filter: blur(1px) brightness(3);
+    background:radial-gradient(10% #6c6c6c47,90% #ffffff00) ; 
+}
