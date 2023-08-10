@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+  <link rel="stylesheet" href="style.css">
+  <title>Drink water</title>
+</head>
+<body>
+  <div class="main-container">
+    <header class="intro">
+      <h1>WATER TRACKER</h1>
+      <p>Set your daily water intake goal and discover how many glasses of water you should consume. Fill your goal tank adding glasses of water you drunk. Each time you take a glass of water, you just need to tap a glass icon and it gets empty.
+      </p>
+    </header>
+    
+    <div class="container">
+      <section class="section-a">
+        <h2 class="goal">Goal: 
+          <div class="custom-select">
+            <select class="text" id="text">
+              <option class = 'input-text' value="0">Select litres</option>
+              <option value="1">1</option>
+              <option value="1.5">1.5</option>
+              <option value="2">2</option>
+              <option value="2.5">2.5</option>
+              <option value="3">3</option>
+              <option value="3.5">3.5</option>
+              <option value="4">4</option>
+              <option value="4.5">4.5</option>
+              <option value="5">5</option>
+            </select>
+          </div> L
+        </h2>
+          
+    
+        <div class="cup">
+          <div class="remained" id="remained">
+            <span id="litres">2L</span>
+            <small>Remained</small>
+          </div>
+          <div class="percentage" id="percentage"></div>
+        </div>
+      </section>
+      
+      <section class="section-b">
+        <div id="cups">
+          <span class="cup cup-small">250ml</span>
+          <span class="cup cup-small">250ml</span>
+          <span class="cup cup-small">250ml</span>
+          <span class="cup cup-small">250ml</span>
+          <span class="cup cup-small">250ml</span>
+          <span class="cup cup-small">250ml</span>
+          <span class="cup cup-small">250ml</span>
+          <span class="cup cup-small">250ml</span>
+        </div>
+      </section>
+    </div>
+    <a class='attribution' href="https://storyset.com/drink">Illustration by Freepik Storyset</a>
+  </div>
+  
+  
+  <script src="script.js"></script>
+</body>
+</html>

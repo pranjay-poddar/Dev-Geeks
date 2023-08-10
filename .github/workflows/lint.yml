@@ -1,0 +1,41 @@
+name: Prettier Code Formatting
+
+on:
+
+  push:
+
+    branches:
+
+      - main
+
+      - develop
+
+  pull_request:
+
+    branches:
+
+      - main
+
+      - develop
+
+jobs:
+
+  prettier-lint:
+
+    runs-on: ubuntu-latest
+
+    steps:
+
+      - name: Checkout repository
+
+        uses: actions/checkout@v3
+
+      - name: Run prettier
+
+        run: |
+          npx prettier --check .
+          prettier_exit_code=$?
+          if [ $prettier_exit_code -ne 0 ]; then
+            echo "Prettier check failed. Please run 'npx prettier --write .' to fix formatting issues."
+            exit 1
+          fi
