@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Recursion Visualizer</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+  <div class="container">
+    <h1>Recursion Visualizer</h1>
+    <div class="input-group">
+      <label for="number">Enter a number:</label>
+      <input type="number" id="number" min="0">
+    </div>
+    <div class="btn-group">
+      <button id="start-btn">Start Factorial Visualization</button>
+      <button id="fibonacci-btn">Visualize Fibonacci Sequence</button>
+      <button id="power-btn">Visualize Power Function</button>
+      <button id="sum-array-btn">Visualize Sum of Array</button>
+    </div>
+    <div class="input-group">
+      <label for="array-input">Enter comma-separated numbers:</label>
+      <textarea id="array-input" rows="5" cols="30"></textarea>
+    </div>
+    <div class="result" id="result">Result will be displayed here</div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

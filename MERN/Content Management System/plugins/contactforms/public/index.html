@@ -1,0 +1,134 @@
+<div data-scope="contactforms">
+
+	<div data---="layout2__null__parent:.ui-layout2-section" class="invisible">
+
+		<section data-type="top2" data-size="44">
+			<div class="header">
+				<label><i class="far fa-envelope-open"></i>@(Contact forms)</label>
+				<nav data-bind="?.checked__enabled .S:value && value.length">
+					<button class="exec S" data-exec="?/checked" disabled><i class="fa fa-check-circle"></i>@(Checked)</button>
+				</nav>
+			</div>
+		</section>
+
+		<section data-type="main">
+			<div data---="datagrid__?.grid__filterlabel:@(Search);checked:?.checked;button:?/button;noborder:1;height:window;margin:45;dblclick:?/preview;exec:?/refresh">
+				<script type="text/plain">
+					[
+						{ name: 'name', text: '@(User)', width: 200 },
+						{ name: 'email', text: '@(Email address)', width: 200 },
+						{ name: 'phone', text: '@(Phone)', width: 150 },
+						{ name: 'source', text: '@(Source)', width: 150 },
+						{ name: 'ip', text: '@(IP address)', width: 150 },
+						{ name: 'browser', text: '@(Browser)', width: 150 },
+						{ name: 'dtcreated', text: '@(Created)', width: 190, template: '{{ dtcreated | format(\'@(yyyy-MM-dd HH:mm)\') }} / <span class="fs11 gray">{{ dtcreated | time }}</span>' },
+						{ name: '@(Options)', align: 1, filter: false, sort: false, width: 100, template: '<button name="preview" title="@(Preview)"><i class="fa fa-search"></i></button><button class="btn-remove" name="remove" title="@(Remove)"><i class="far fa-trash-o"></i></button>' }
+					]
+				</script>
+			</div>
+
+		</section>
+	</div>
+
+</div>
+
+<div data---="importer__common.form__if:contactformsform;url:@{#}/_contactforms/form.html"></div>
+
+<script>
+	PLUGIN('contactforms', function(exports) {
+
+		exports.refresh = function(type, filter, sort, page) {
+
+			FUNC.loading(true);
+
+			if (!filter)
+				filter = {};
+
+			if (!filter.limit)
+				filter.limit = 100;
+
+			filter.page = page || 1;
+
+			if (sort && sort.length)
+				filter.sort = sort.join(',');
+			else
+				delete filter.sort;
+
+			AJAX('GET [url]api/contactforms/', filter, function(response) {
+				SET('?.grid', response);
+				FUNC.loading(false, 200);
+			});
+		};
+
+		exports.reload = function() {
+			SET('?.grid', null);
+		};
+
+		exports.button = function(name, row, grid) {
+			switch (name) {
+				case 'remove':
+					SETTER('approve/show', '@(Are you sure you want to remove selected contact form?)', '"trash" @(Remove)', function() {
+						FUNC.loading(true);
+						AJAX('DELETE [url]api/contactforms/?id=' + row.id, function(response) {
+							FUNC.loading(false, 1000);
+							if (response.success) {
+								SETTER('snackbar/success', '@(Contact form has been removed successfully.)');
+								exports.refresh();
+							}
+						});
+					});
+					break;
+				case 'preview':
+					FUNC.loading(true);
+					AJAX('GET [url]api/contactforms/' + row.id, function(response) {
+						FUNC.loading(false, 500);
+						SETR('contactformsform', response);
+						SET('common.form', 'contactformsform');
+					});
+					break;
+			}
+		};
+
+		exports.preview = function(row) {
+			exports.button('preview', row);
+		};
+
+		exports.checked = function(el) {
+			var opt = {};
+			opt.align = 'right';
+			opt.element = el;
+			opt.items = [];
+			opt.items.push({ id: 'remove', name: '@(Remove contact forms)', icon: 'trash red' });
+			opt.align = 'right';
+
+			opt.callback = function(item) {
+				switch (item.id) {
+					case 'remove':
+						SETTER('approve/show', '@(Are you sure you want to remove all selected contact forms?)', '"trash" @(Remove)', function() {
+							FUNC.loading(true);
+							var arr = GET('?.checked');
+							var id = [];
+							for (var i = 0; i < arr.length; i++)
+								id.push(arr[i].id);
+							AJAX('DELETE [url]api/contactforms/?id=' + id.join(','), function() {
+								exports.refresh();
+								FUNC.loading(false, 1000);
+								SETTER('snackbar/success', '@(Contact forms have been removed successfully.)');
+							});
+						});
+						break;
+				}
+			};
+
+			SETTER('menu/show', opt);
+		};
+
+		exports.filter = function(type, obj, sort, page) {
+			filter = obj ? CLONE(obj) : {};
+			sort && (filter.sort = sort[0].replace(' ', '_'));
+			filter.page = page;
+			exports.refresh();
+		};
+	});
+
+</script>

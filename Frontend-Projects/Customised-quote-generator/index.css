@@ -1,0 +1,220 @@
+:root {
+    /* FONTS */
+    --scary-font: 'Metal Mania';
+    --typewriter-font: 'Inconsolata';
+    --funny-font: 'Balsamiq Sans';
+    --curly-font: 'Pacifico';
+    --old-font: 'Cinzel';
+    --simple-font: 'Noto Sans HK';
+    --funky-font: 'MuseoModerno';
+    --sweet-font: 'Lobster';
+    --professional-font: 'Old Standard TT';
+    --elegant-font: 'Sora';
+    --border-color: black;
+    --box-bg-color: white;
+    --text-color: black;
+}
+
+
+body {
+    box-sizing: border-box;
+    font-family: var(--elegant-font);
+    margin: 0;
+    color: var(--text-color);
+    height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.container {
+    width: 90%;
+    max-width: 600px;
+    height: 100vh;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#loader {
+    display: none;
+}
+
+h3 {
+    margin: 1em;
+}
+
+#loader-img {
+    width: 30px;
+    display: block;
+    margin: 1.5em auto;
+}
+
+.avatar {
+    width: 100px;
+    border: 4px solid #f1faee;
+    margin: 20px auto 0;
+    border-radius: 50%;
+    display: block;
+    box-shadow: 0px 2px 6px rgb(0, 0, 0, 0.5);
+}
+
+h2,
+h3 {
+    margin: 0;
+}
+
+.quote {
+    margin: 1.5em 0;
+    font-size: 1.25em;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: white;
+    line-height: 1.8em;
+    text-align:center ;
+}
+
+.quote-span {
+    padding: 3px;
+    background: rgba(22, 43, 72, 0.85);
+}
+
+.name-wrapper {
+    text-align: center;
+    margin: 20px auto;
+}
+
+.name-span {
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    text-transform: uppercase;
+    line-height: 1.4em;
+    padding: 10px;
+    background: rgba(250, 0, 0, 0.75);
+}
+
+.title {
+    display: none;
+    background-color: var(--box-bg-color);
+    border: 3px solid var(--border-color);
+    text-transform: uppercase;
+    font-size: 20px;
+    padding: 10px 20px;
+    display: inline;
+    box-shadow: 3px 3px 10px rgb(0 0 0 / 0.5);
+    text-align: center;
+}
+
+
+.description {
+    text-transform: uppercase;
+    box-shadow: 3px 3px 10px rgb(0 0 0 / 0.2);
+    padding: 8px 16px;
+    background-color: var(--box-bg-color);
+    border: 3px solid var(--border-color);
+}
+
+#inputcontent{
+    display : flex ;
+    flex-direction: column ;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+#choice {
+    background-color: rgba(22, 43, 72, 0.85);
+    background-color: rgba(245, 245, 245, 0.571);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 20px;
+    justify-content: center;
+    align-items: center;
+    margin: auto 10px;
+    border-radius: 1px ;
+    line-height: 2.5;
+    outline: rgba(255, 255, 255, 0.806) solid 11px;
+}
+
+.val {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    color: white;
+    color: black;
+}
+
+#name,
+#favactivity,
+#favplace,
+#random {
+    background-color: rgb(33 59 92 41%);
+    border: 1px solid rgba(22, 43, 72, 0);
+    border-radius: 2px;
+    line-height: 2.5;
+
+}
+
+.val i {
+    position: absolute;
+    width: 1px;
+    height: 43%;
+    background-color: gray;
+    left: 5px;
+    top: 50%;
+    animation-name: blink;
+    animation-duration: 1000ms;
+    animation-iteration-count: infinite;
+    opacity: 1;
+}
+
+.val input:focus+i {
+    display: none;
+}
+
+@keyframes blink {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+
+#choiceBtn {
+    display : block ;
+    margin : 40px auto ;
+    text-align : center ;
+    background-color:rgba(250, 0, 0, 0.75) ;
+    background-color: hsl(224, 30%, 27%) ;
+    border-radius: 5px;
+    padding : 10px ;
+    width : 20% ;
+}
+#choiceBtn a {
+    color : white ;
+    text-decoration: none;
+}
+#tryagain {
+    display : block ;
+    margin : 40px auto ;
+    text-align : center ;
+    background-color:rgba(250, 0, 0, 0.75) ;
+    background-color: hsl(224, 30%, 27%) ;
+    border-radius: 5px;
+    padding : 10px ;
+    width : 20% ;
+}
+#tryagain a {
+    color : white ;
+    text-decoration: none;
+}
+
