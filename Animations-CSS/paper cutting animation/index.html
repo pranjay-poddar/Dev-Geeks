@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        .note {
+            margin: 20px auto;
+            width: 600px;
+        }
+
+        @import url(https://fonts.googleapis.com/css?family=Lato:300,400,700,900);
+
+        body {
+            font-size: 1em;
+            font-family: 'Lato', sans-serif;
+        }
+
+        .container {
+            width: 700px;
+            height: 600px;
+            margin: 30px auto;
+            padding: 25px;
+            background: #eee url(https://sarasoueidan.com/blog/animating-css-shapes/images/tree.png) 50% 50% no-repeat;
+            background-size: 0;
+            transition: all 1s linear;
+        }
+
+        .container:hover {
+            background-size: 50% auto;
+        }
+
+        .column {
+            width: 300px;
+            height: 550px;
+            text-align: justify;
+            transition: all 1s linear;
+            color: #ddd;
+            background-color: #000;
+            shape-padding: 10px;
+        }
+
+        .column-left {
+            float: left;
+        }
+
+        .column-right {
+            float: right;
+            shape-inside: polygon(0 0, 300px 0, 300px 550px, 0 550px, 0 450px, 0 400px, 0 400px, 0 400px, 0 350px, 0 250px, 0 200px, 0 170px, 0 160px, 0 130px, 0 110px, 0 60px);
+            -webkit-clip-path: polygon(0 0, 300px 0, 300px 550px, 0 550px, 0 450px, 0 400px, 0 400px, 0 400px, 0 350px, 0 250px, 0 200px, 0 170px, 0 160px, 0 130px, 0 110px, 0 60px);
+        }
+
+        .container:hover .column-right {
+            shape-inside: polygon(0 0, 300px 0, 300px 550px, 30px 550px, 30px 450px, 80px 400px, 100px 400px, 120px 400px, 160px 350px, 120px 250px, 100px 200px, 100px 170px, 100px 160px, 60px 130px, 60px 110px, 0 60px);
+            -webkit-clip-path: polygon(0 0, 300px 0, 300px 550px, 30px 550px, 30px 450px, 80px 400px, 100px 400px, 120px 400px, 160px 350px, 120px 250px, 100px 200px, 100px 170px, 100px 160px, 60px 130px, 60px 110px, 0 60px);
+        }
+
+        .column-left {
+            float: left;
+            shape-inside: polygon(0 0, 300px 0, 300px 60px, 300px 80px, 300px 100px, 300px 150px, 300px 180px, 300px 275px, 300px 375px, 300px 420px, 300px 410px, 300px 440px, 300px 450px, 300px 550px, 0 550px);
+            -webkit-clip-path: polygon(0 0, 300px 0, 300px 60px, 300px 80px, 300px 100px, 300px 150px, 300px 180px, 300px 275px, 300px 375px, 300px 420px, 300px 410px, 300px 440px, 300px 450px, 300px 550px, 0 550px);
+        }
+
+        .container:hover .column-left {
+            shape-inside: polygon(0 0, 300px 0, 300px 60px, 280px 80px, 240px 100px, 230px 150px, 200px 180px, 160px 275px, 130px 375px, 160px 420px, 240px 410px, 270px 440px, 290px 450px, 290px 550px, 0 550px);
+            -webkit-clip-path: polygon(0 0, 300px 0, 300px 60px, 280px 80px, 240px 100px, 230px 150px, 200px 180px, 160px 275px, 130px 375px, 160px 420px, 240px 410px, 270px 440px, 290px 450px, 290px 550px, 0 550px);
+        }
+    </style>
+</head>
+
+<body>
+    <p class="note">Hover over the container to see the shapes animate. <span style="color:red">Please see browser
+            support note at beginning of article.</span></p>
+    <div class="container">
+        <div class="column column-left">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium veritatis totam voluptate officia
+            perspiciatis reprehenderit soluta dolore omnis nisi eius quibusdam pariatur veniam nesciunt ducimus alias
+            non doloribus! Quae mollitia.
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente praesentium eaque voluptates animi et
+            distinctio officiis commodi iusto ullam nam consequatur sunt nesciunt vitae provident excepturi. Fuga
+            eveniet inventore neque?
+        </div>
+        <div class="column column-right">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam beatae totam recusandae inventore iure
+            fuga dolorum debitis quia quasi laborum porro magnam odit ut optio aspernatur consequuntur assumenda ipsum
+            vel.
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur molestias pariatur corporis cumque eos
+            magni perspiciatis libero ad possimus vel iusto sed dolores? Incidunt non ipsa nulla sapiente porro saepe.
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+        </div>
+    </div>
+</body>
+
+</html>
