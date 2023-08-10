@@ -16,7 +16,7 @@
     width: 100px;
 }
 .logo{
-    background-image: url("amazon_logo.png");
+    background-image: url("https://github.com/pranjay-poddar/Dev-Geeks/assets/116579393/923543ab-e115-4e11-b461-cbdd34b36228");
     background-size: cover;
     height: 50px;
     width: 100%;
@@ -116,7 +116,7 @@ span{
 }
 /** hero secction **/
 .hero-section{
-    background-image: url(hero_image.jpg);
+    background-image: url(https://github.com/pranjay-poddar/Dev-Geeks/assets/116579393/ae9784b2-1bc1-4157-aacc-b76ba9d5c3bc);
     background-size: cover;
     height: 350px;
     display: flex;
