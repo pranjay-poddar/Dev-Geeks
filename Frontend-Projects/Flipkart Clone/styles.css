@@ -39,7 +39,8 @@ header .nav-container .logo {
 header .nav-container .logo{
     display: flex;
     min-width: 137px;
-    justify-content: flex-end;
+    justify-content: flex-start;
+    margin-left: -7rem;
 
 }
 
@@ -51,7 +52,7 @@ header .search{
     height: 100;
     display: flex;
     align-items: center;
-    margin-left: 12px;
+    margin-left: 11rem;
 }
 
 header .search .search-container{
@@ -85,7 +86,8 @@ header .login{
     height: 100%;
     display: flex;
     align-items: center;
-    margin: 0 20px;
+    margin-right: 12rem;
+    margin-left: 2rem;
 }
 header .login button{
     width: 122px;

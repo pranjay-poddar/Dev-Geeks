@@ -1,0 +1,65 @@
+<!doctype html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+    <title>Poetic Quote Generator</title>
+    <link rel="stylesheet" href="index.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Old+Standard+TT&Balsamiq+Sans&family=Cinzel&family=Inconsolata&family=Sora&Lobster&family=Metal+Mania&family=MuseoModerno&family=Noto+Sans+HK&family=Pacifico&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+
+        <h1 class="header" style="text-transform:uppercase;padding:10px;line-height: 2.5;"> Customised Quote Generator
+        </h1>
+        <div id="inputcontent">
+            <div id="choice">
+                <div class="val enter-name">
+                    <label for="name">Enter your name</label>
+                    <input type="text" name="" id="name" />
+                    <i></i>
+                </div>
+                <div class="val enter-favactivity">
+                    <label for="favactivity">Enter your favorite activity</label>
+                    <input type="text" name="" id="favactivity" />
+                    <i></i>
+                </div>
+                <div class="val enter-favplace">
+                    <label for="favplace">Enter your favorite place</label>
+                    <input type="text" name="" id="favplace" />
+                    <i></i>
+                </div>
+                <div class="val enter-random">
+                    <label for="random">Enter random number</label>
+                    <input type="number" name="" id="random" />
+                    <i></i>
+                </div>
+            </div>
+            <div id="choiceBtn">
+                <a href="#"> Submit </a>
+            </div>
+        </div>
+        <div class="result">
+            <img class="avatar" src="avatar.jpg" alt="A headshot of the quote author" />
+            <div id="loader">
+                <img id="loader-img" src="loading.gif" alt="Loading spinner" />
+                <h3>Fetching phrase &amp; image...</h3>
+            </div>
+            <div class="quote-wrapper">
+                <h2 class="quote"><span><span class="quote-span"></span></span></h2>
+            </div>
+            <div class="name-wrapper">
+                <span><span class="name-span"></span></span>
+            </div>
+            <div id="tryagain">
+                <a href="#"> Try Again </a>
+            </div>
+        </div>
+    </div>
+    <script src="index.js" type="module"></script>
+</body>
+
+</html>

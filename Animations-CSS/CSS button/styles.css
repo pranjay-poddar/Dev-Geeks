@@ -1,0 +1,38 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+  
+body {
+    display: flex;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background-color: #000000;
+}
+
+.btn{
+    font-size: 50px;
+    background-color: #000000;
+    font-style: italic;
+    color: #00fbff;
+    border: solid;
+    border-color: #00fbff;
+    border-width: 3px;
+    padding: 10px;
+    transition: 1s;
+}
+
+.btn:hover{
+    font-size: 50px;
+    background-color: #000000;
+    font-style: italic;
+    color: #8bfdff;
+    border: solid;
+    border-color: #00fbff;
+    border-radius: 45px;
+    border-width: 3px;
+    padding: 10px;
+    transition: 1s;
+}
