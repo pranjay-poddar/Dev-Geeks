@@ -851,6 +851,34 @@ Happy Coding! -->
 </tr>  
 
 
+
+
+<tr align="center">
+<td align="center"> 256.</td>  
+<td align="center"><a href="https://github.com/Nishitbaria/Dev-Geeks/tree/Test/Frontend-Projects/razorpayClone">RazorpayClone</a></td>
+<td align="center"> 265.</td>
+<td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Js-Games/Aim training">Aim training</a></td>
+<td align="center"> 263.</td>
+<td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Js-Games/Alien Shooting">Alien Shooting</a></td>
+<td align="center"> 264.</td>
+<td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/testing/Js-Projects/Password_Validation">Password Validation</a></td>
+</tr> 
+
+<tr align="center">
+<td align="center"> 265.</td>
+<td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Python Projects/Image Classification">Image Classification</a></td>
+
+
+<td align="center"> 282.</td>
+<td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Python Projects/Ceaser%20Cipher">Encryption Using Ceaser Cipher</a></td>
+
+
+<td align="center"> 266.</td>
+<td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/testing/Js-Projects/Slide_and_Solve">Slide and Solve game</a></td>
+
+</tr> 
+
+
 <tr>
 <td align="center"> 279.</td>
 <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Python Projects/Covid-Info">Covid-Info</a></td>
