@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @import url(https://fonts.googleapis.com/css?family=Lato:300,400,700,900);
+
+        body {
+            background-color: #F5F5F5;
+            color: #555;
+            font-size: 1.1em;
+            font-family: 'Lato', sans-serif;
+        }
+
+        .note {
+            width: 600px;
+            margin: 30px auto;
+        }
+
+        .element {
+            background-color: #f1c40f;
+            color: white;
+            width: 500px;
+            height: 500px;
+            margin: 30px auto;
+            text-align: justify;
+            shape-inside: polygon(250px 0, 350px 170px, 500px 180px, 380px 320px, 450px 500px, 250px 420px, 50px 500px, 120px 320px, 0px 180px, 150px 170px);
+            shape-padding: 10px;
+            transition: all 3s ease;
+            -webkit-clip-path: polygon(250px 0, 350px 170px, 500px 180px, 380px 320px, 450px 500px, 250px 420px, 50px 500px, 120px 320px, 0px 180px, 150px 170px);
+        }
+
+        .element:hover {
+            shape-inside: polygon(250px 0, 500px 0, 500px 180px, 500px 320px, 500px 500px, 250px 500px, 0 500px, 0 320px, 0 180px, 0 0);
+            -webkit-clip-path: polygon(250px 0, 500px 0, 500px 180px, 500px 320px, 500px 500px, 250px 500px, 0 500px, 0 320px, 0 180px, 0 0);
+        }
+    </style>
+</head>
+
+<body>
+    <p class="note">Hover over the element to see its shape animate. <span style="color:red">Please see browser support
+            note at beginning of article.</span></p>
+    <div class="element">
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel ratione qui voluptatum quod et quaerat dolorum
+            odio consequuntur dolores! Ipsum commodi mollitia maiores expedita reiciendis ducimus qui unde! Odio
+            molestias!
+        </p>
+    </div>
+</body>
+
+</html>
