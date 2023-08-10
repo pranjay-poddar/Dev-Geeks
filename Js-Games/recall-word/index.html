@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Word Recall Challenge</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Word Recall Challenge</h1>
+    <div class="game-container">
+      <div class="words" id="words"></div>
+      <input type="text" id="userInput" placeholder="Enter words separated by commas">
+      <button onclick="startGame()" id="startButton">Start</button>
+      <button onclick="checkWords()" id="checkButton" disabled>Check</button>
+    </div>
+    <p>Score: <span id="score">0</span></p>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

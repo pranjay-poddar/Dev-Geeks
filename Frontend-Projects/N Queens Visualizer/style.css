@@ -2,25 +2,21 @@ body {
     margin: 0;
     padding: 0;
     /* /* font-family: Arial, Helvetica, sans-serif; */
-    font-family: 'ABeeZee';
+    font-family: math !important;
     font-weight: 400;
     background-color: rgb(247, 240, 249);
+    color: rgb(109, 17, 109);
 }
 
 header {
     background-color: rgb(167, 2, 167);
     color: rgb(254, 205, 255);
-    /* font-family: Arial, Helvetica, sans-serif;*/
-    font-family: "Josefin Sans", sans-serif;
-    margin-top: 0px;
     position: sticky;
     font-size: 2.4em;
-    margin-bottom: 10px;
-    margin-left: 0px;
     height: 70px;
     padding-top: 10px;
-    padding-left: 18px;
-    padding-bottom: -10px;
+    margin: auto;
+    text-align: center;
 }
 
 .each-board {
@@ -61,18 +57,21 @@ td {
 
 .user-input {
     margin-top: 10px;
+    text-align: center;
 }
 
 .start {
-    background-color: rgb(68, 179, 253);
+    background-color: rgb(167 2 167);
     margin-top: 10px;
     color: white;
     height: 60px;
     width: 120px;
-    border-radius: 10px;
+    border-radius: 1rem;
     border: 0px;
-    font-size: 24px;
+    font-size: 22px;
+    padding: 19px 26px;
     cursor: pointer;
+
 }
 
 .main {
@@ -81,20 +80,18 @@ td {
 }
 
 p {
-    font-family: Arial, Helvetica, sans-serif;
     font-size: 20px;
 }
 
 #input-num {
-    border-radius: 5px;
+    border-radius: 1rem;
     height: 29px;
     width: 250px;
     font-size: 16px;
-    font-family: Arial, Helvetica, sans-serif;
-    border: 1px solid;
-    background-color: rgb(209, 237, 252);
+    border: 1px solid #80008026;
+    background-color: rgb(167 2 167 / 11%);
     margin-bottom: 10px;
-    padding-left: 10px;
+    padding: 9px 12px;
 }
 
 #input-num :focus {
@@ -102,7 +99,6 @@ p {
     height: 29px;
     width: 250px;
     font-size: 16px;
-    font-family: Arial, Helvetica, sans-serif;
     border: 1px solid;
     background-color: rgb(22, 36, 43);
     margin-bottom: 10px;
@@ -149,13 +145,13 @@ p {
 #queen-info {
     margin-top: 20px;
     font-size: 25px;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
 pre {
     margin-top: -12px;
-    font-size: 15px;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 18px;
+    margin-left: 11rem;
+    word-spacing: -0.9rem;
 }
 
 #no-of-arrangements {
