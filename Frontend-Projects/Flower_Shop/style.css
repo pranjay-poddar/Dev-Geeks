@@ -1,0 +1,512 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  text-decoration: none;
+  text-transform: capitalize;
+  transition: 0.2s linear;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+#preloader {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 9999;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+:root {
+  --pink: rgb(253, 104, 169);
+}
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.7rem 8% 0.7rem 5px;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+  overflow: visible;
+  height: 70px;
+  z-index: 1000;
+}
+section {
+  padding: 2rem 9%;
+}
+.list a {
+  margin: 20px;
+  color: rgb(75, 75, 75);
+  font-size: larger;
+  font-weight: bold;
+}
+.list a:hover {
+  color: black;
+}
+/* .list a:active{
+      color:var(--pink);
+  } */
+
+.logo {
+  display: flex;
+  align-items: center;
+  color: var(--pink);
+}
+.logo img {
+  width: 80px;
+}
+nav {
+  align-items: center;
+  padding: 10px;
+}
+.icons {
+  display: flex;
+  flex-wrap: nowrap; /*workd on parent element only*/
+}
+.icons i {
+  font-size: 20px;
+  margin: 7px;
+  color: black;
+}
+.icons i:hover {
+  color: var(--pink);
+}
+
+header #toggler {
+  display: none;
+}
+header .fa-bars {
+  font-size: 3rem;
+  color: rgb(62, 62, 62);
+  padding: 0.5rem 1.5rem;
+  cursor: pointer;
+  border: 3px solid rgba(0, 0, 0, 0.3);
+  border-radius: 0.5rem;
+  display: none;
+}
+.home {
+  display: flex;
+  align-items: center;
+  background: url(images/beautiful-little-pink-flowers-branches.jpg) no-repeat;
+  min-height: 100vh;
+  background-size: cover;
+  background-position: center;
+  margin-bottom: 10px;
+}
+.content {
+  max-width: 45rem;
+}
+.content h1 {
+  font-size: 3.5rem;
+  padding: 0.3rem 0;
+}
+.home .content span {
+  color: rgb(252, 73, 103);
+  display: inline-block; /*span doesn't have padding*/
+  font-size: 2rem;
+  padding: 0.5rem 0;
+}
+.content p {
+  line-height: 1.5rem;
+  padding-bottom: 1rem;
+}
+button {
+  margin: 0.5rem 0;
+  padding: 1rem 2.5rem;
+  border-radius: 25px;
+  background-color: black;
+}
+button a {
+  color: white;
+  font-size: 1rem;
+  font-weight: 500;
+}
+button:hover {
+  background-color: rgb(252, 73, 103);
+  cursor: pointer;
+}
+.about {
+  text-align: center;
+  align-items: center;
+  padding: 3rem 0;
+}
+.heading {
+  font-size: 1.7rem;
+  margin-bottom: 4rem;
+  background-color: rgb(251, 231, 234);
+  padding: 20px;
+}
+.row {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  align-items: stretch;
+  padding: 2rem 0;
+  padding-bottom: 3rem;
+}
+.row .video {
+  flex: 1 1 40rem;
+  position: relative;
+  border: 1.5rem solid #fff;
+  border-radius: 0.5rem;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+  overflow-y: hidden;
+}
+.row .video video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.row .video h3 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 3rem;
+  width: 100%;
+  mix-blend-mode: screen;
+  padding: 0.1rem 2rem;
+  background: white;
+}
+.row .video-content {
+  border: 1.5rem solid #fff;
+  border-radius: 0.5rem;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+  flex: 1 1 40rem;
+}
+.row .video-content h3 {
+  font-size: 3rem;
+  color: #333;
+}
+.row .video-content p {
+  font-size: 1.2rem;
+  color: #4d4c4c;
+  padding: 0.5rem 0;
+  padding-top: 1rem;
+  line-height: 1.5;
+}
+.icons-container {
+  background: #eee;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.2rem;
+}
+.icons-container .icons {
+  background: white;
+  border: 0.1rem solid rgba(0, 0, 0, 0.1);
+  display: flex;
+  padding: 1.5rem;
+  align-items: center;
+  justify-content: center;
+  flex: 1 1 20rem;
+}
+.icons img {
+  height: 5rem;
+  margin-right: 2rem;
+}
+.icons h3 {
+  color: #333;
+  padding-bottom: 0.5rem;
+  font-size: 1.2rem;
+}
+.icons span {
+  color: #555;
+  font-size: 1.3rem;
+}
+.icons .info {
+  padding: 1rem;
+}
+.products {
+  text-align: center;
+  align-items: center;
+  padding: 3rem 0;
+}
+.products .heading {
+  font-size: 2rem;
+}
+.products .box-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  padding: 10px;
+}
+.products .box-container .box {
+  display: flex;
+  flex-direction: column;
+  flex: 0 1 25rem;
+  box-shadow: 0 0.9rem 1.5rem rgba(0, 0, 0, 0.1);
+  border: 0.1rem solid rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+  position: relative;
+  overflow: hidden;
+  /* height: auto; */
+}
+.products .box-container .box .discount {
+  position: absolute;
+  background-color: rgb(251, 231, 234);
+  padding: 5px 10px;
+  margin: 10px;
+  font-size: large;
+  border-radius: 0.5rem;
+}
+.products .box-container .box .image {
+  font-size: larger;
+  overflow-y: hidden;
+}
+.products .box-container .box img {
+  width: 100%;
+  height: 30rem;
+  /* overflow-y: hidden; */
+}
+.products .box-container .box img:hover {
+  transform: scale(1.1); /*increases size by 10%*/
+}
+.products .box-container .box .image .icons {
+  position: absolute;
+  bottom: -7rem;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+}
+.products .box-container .box:hover .image .icons {
+  bottom: 5rem;
+}
+.products .box-container .box .image .icons a {
+  height: 4rem;
+  line-height: 4rem;
+  font-size: 1.5rem;
+  width: 50%;
+  background: var(--pink);
+  color: #fff;
+  overflow-y: hidden;
+}
+.products .box-container .box .image .icons a:hover {
+  background-color: #333;
+}
+.products .box-container .box .image .icons .card-btn {
+  /* border-left: 0.1rem solid #fff7;
+    border-right: 0.1rem solid #fff7; */
+  width: 100%;
+}
+.products .box-container .box .content {
+  flex-grow: 1;
+  padding: 1rem;
+}
+.products .box-container .box .content h3 {
+  font-size: 1.7rem;
+}
+.products .box-container .box .content .price {
+  font-size: 1.6rem;
+  color: var(--pink);
+  font-weight: 800;
+}
+.products .box-container .box .content .price span {
+  font-size: 1.3rem;
+  color: grey;
+  font-weight: 8;
+  text-decoration: line-through;
+}
+.review {
+  text-align: center;
+  align-items: center;
+  padding: 3rem 0;
+}
+.review .heading {
+  font-size: 2rem;
+}
+.review .box-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+}
+.review .box-container .box {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 25rem;
+  box-shadow: 0 0.9rem 1.5rem rgba(0, 0, 0, 0.1);
+  border: 0.1rem solid rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+  padding: 3rem 1rem;
+  position: relative;
+}
+.review .box-container .box .stars {
+  position: absolute;
+  color: var(--pink);
+  top: 0;
+  left: 0;
+  margin: 20px;
+  font-size: 1.8rem;
+}
+.review .box-container .box p {
+  margin: 20px 5px;
+  line-height: 1.5rem;
+  color: grey;
+  font-weight: 400;
+}
+.review .box-container .box .user {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  overflow: hidden;
+}
+.review .box-container .box .user img {
+  flex-basis: 60%;
+  margin: 5px 10px;
+  max-height: 200px;
+  min-height: 200px;
+  border-radius: 5px;
+  object-fit: cover;
+}
+.review .box-container .box .user .user-info {
+  font-size: 1rem;
+  margin: 10px;
+}
+.contact {
+  align-items: center;
+  padding: 3rem 0;
+}
+.contact .heading {
+  font-size: 2rem;
+  text-align: center;
+}
+.contact .row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap-reverse;
+  gap: 1.5rem;
+}
+.contact .row form {
+  flex: 1 1 30rem;
+  padding: 2rem 2.5rem;
+  margin: 0 7rem;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+  border: 0.1rem solid rgba(0, 0, 0, 0.1);
+  background: #fff;
+  border-radius: 0.5rem;
+}
+.contact .row .image {
+  flex: 1 1 30rem;
+  object-fit: cover;
+  overflow: hidden;
+  height: auto;
+}
+.contact .row .image img {
+  /* height: 100%; */
+  width: 100%;
+  object-fit: cover;
+}
+.contact .row form .box {
+  padding: 1rem;
+  font-size: 1.7rem;
+  color: #333;
+  text-transform: none;
+  border: 0.1rem solid rgba(0, 0, 0, 0.1);
+  border-radius: 0.5rem;
+  margin: 0.7rem 0;
+  width: 100%;
+}
+.contact .row form .box:focus {
+  border-color: var(--pink);
+}
+.contact .row form textarea {
+  height: 15rem;
+  resize: none;
+  width: 100%;
+}
+.footer {
+  margin-top: 3rem;
+}
+.footer .box-container {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 6rem;
+  background-color: #333;
+}
+.footer .box-container .box {
+  display: flex;
+  flex: 1 1 14rem;
+  gap: 1.5rem;
+  margin: 20px;
+  flex-direction: column;
+}
+.footer .box-container .box h3 {
+  font-size: 1.4rem;
+  color: white;
+}
+.footer .box-container .box a {
+  color: white;
+  display: block;
+}
+.footer .box-container .box a:hover {
+  color: var(--pink);
+  text-decoration: underline;
+}
+.credit {
+  text-align: center;
+}
+/*for laptop or small size screen*/
+@media (max-width: 991px) {
+  html {
+    font-size: 55%;
+  }
+  header {
+    padding: 2rem;
+  }
+}
+/*for tablet*/
+@media (max-width: 768px) {
+  header .fa-bars {
+    display: block;
+  }
+  header .list {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: #eee;
+    border-top: 0.1rem solid rgba(0, 0, 0, 0.1);
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+  }
+  header #toggler:checked ~ .list {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+  }
+  header .list a {
+    display: block;
+    margin: 1.5rem;
+    padding: 1.5rem;
+    background: white;
+    border: 0.1rem solid rgba(0, 0, 0, 0.1);
+  }
+  .home .content h3 {
+    font-size: 2rem;
+  }
+  .home .content span {
+    font-size: 2.5rem;
+  }
+  .icons h3 {
+    color: #333;
+    padding-bottom: 0.5rem;
+    font-size: 1.7rem;
+  }
+  .icons span {
+    color: #555;
+    font-size: 1.3rem;
+  }
+}
+@media (max-width: 450px) {
+  html {
+    font-size: 50%;
+  }
+}
