@@ -1,0 +1,55 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    display: flex;
+    background-color: black;
+}
+
+.glass {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 150px;
+    height: 180px;
+    border: 5px solid black;
+    border-radius: 20px;
+    border-top: 2px solid transparent;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    transform: translate(-50%,-50%);
+    background: url(waterWave.jpg);
+    color: #ffffff;
+    font-size: 130px;
+    background-repeat: repeat-x;
+    animation: filling 5s linear infinite;
+    box-shadow: 0 0 0 6px #ffffff;
+}
+
+@keyframes filling {
+    0%{
+        background-position: 0 100px;
+    }
+
+    10%{
+        background-position: 0 100px;
+    }
+
+    40%{
+        background-position: 1000px -70px;
+    }
+
+    80%{
+        background-position: 2000px -80px;
+    }
+
+    100%{
+        background-position: 2500px 100px;
+    }
+}
