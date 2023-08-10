@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #333;
+  }
+
+  .apple-logo {
+    width: 200px;
+    height: 250px;
+    position: relative;
+    animation: rotate 4s infinite linear;
+  }
+
+  .leaf {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: #66BB6A;
+    position: absolute;
+    top: 60px;
+    left: 50px;
+    transform-origin: center bottom;
+    animation: bounce 1s alternate infinite ease-in-out;
+  }
+
+  .leaf:before,
+  .leaf:after {
+    content: "";
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: #66BB6A;
+  }
+
+  .leaf:before {
+    top: -15px;
+    left: -40px;
+    transform: rotate(-45deg);
+  }
+
+  .leaf:after {
+    top: -40px;
+    left: 25px;
+    transform: rotate(45deg);
+  }
+
+  @keyframes rotate {
+    0% {
+      transform: rotate(0);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+  @keyframes bounce {
+    0%, 100% {
+      transform: scaleY(1);
+    }
+    50% {
+      transform: scaleY(0.8);
+    }
+  }
+</style>
+<title>Apple Logo Animation</title>
+</head>
+<body>
+  <div class="apple-logo">
+    <div class="leaf"></div>
+  </div>
+</body>
+</html>
