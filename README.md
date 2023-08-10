@@ -849,7 +849,7 @@ Happy Coding! -->
   <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/cpp-projects/Vaccine Management System">Vaccine Management System</a></td>
   
   <td align="center"> 271.</td>
-  <td align="center" <a href="https://github.com/Parul1606/Dev-Geeks/tree/test/ML%20Projects/Fake-News-Detection">Fake-News-Detection</a></td>
+  <td align="center"> <a href="https://github.com/Parul1606/Dev-Geeks/tree/test/ML%20Projects/Fake-News-Detection">Fake-News-Detection</a></td>
 
 </tr>  
 
