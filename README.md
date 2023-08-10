@@ -877,6 +877,8 @@ Happy Coding! -->
 <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/testing/Js-Projects/Slide_and_Solve">Slide and Solve game</a></td>
 
 </tr> 
+<td align="center"> 270.</td>
+<td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/pull/3901">Handwritten digit recognition ML model</a></td>
 
 
 <tr>
