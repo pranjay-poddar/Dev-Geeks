@@ -1,0 +1,35 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    min-height: 100vh;
+}
+
+.bulb {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: rgb(56, 55, 55);
+}
+
+.bulb::before {
+    content: "";
+    position: absolute;
+    width: 2px;
+    height: 200px;
+    left: calc(50% - 1px);
+    bottom: 100px;
+    background-color: darkgray;
+}
+
+.bulb:active {
+    background: radial-gradient(aliceblue, gray);
+}
