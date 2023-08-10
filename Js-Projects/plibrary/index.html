@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plibary</title>
+    <meta name="locale" property="og:locale" content="en_US">
+    <meta name="title" property="og:title" content="Plibary | Your Personal Book-tracker">
+    <link rel="canonical" href="https://0xabdulkhalid.github.io/plibrary/">
+    <meta name="description" property="og:description" content="Plibrary, your private library the lightweight book-tracker web application">
+    <meta name="url" property="og:url" content="https://0xabdulkhalid.github.io/plibrary">
+    <meta property="og:site_name" content="Plibrary | Personal Book-tracker">
+    <meta name="author" property="og:author" content="0xabdulkhalid">
+    <meta name="twitter:site" content="@0xabdulkhalid">
+    <link rel="shortcut icon" href="./assets/images/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="./assets/css/styles.css">
+</head>
+<body>
+
+    <header class="reveal-down">
+        <h1>Plibrary</h1>
+        <img src="./assets/images/logo.svg" alt="" aria-hidden="true" class="logo">
+    </header>
+
+    <nav role="navigation">
+        <div id="menuToggle">
+            <input type="checkbox" id="togglerCheckbox"/>
+            <div class="toggle">
+                <img src="./assets/images/add.png" alt="add-book">
+            </div>
+    
+            <section class="pop-up" id="menu">
+                <form id="book-form">
+                    <div class="form-container">
+                        <h1 class="form-header">
+                            New Book
+                        </h1>
+                        <div class="input-container">
+                            <label for="title"></label>
+                            <input type="text" name="title" id="title" required>
+                            <span>
+                                Title
+                            </span>
+                        </div>
+                        <div class="input-container">
+                            <label for="author"></label>
+                            <input type="text" name="author" id="author" required>
+                            <span>
+                                Author
+                            </span>
+                        </div>
+                        <div class="input-container">
+                            <label for="pages">
+                            </label>
+                            <input type="number" name="pages" id="pages" min="1" required>
+                            <span>
+                                Pages
+                            </span>
+                        </div>
+                        <div class="input-container checkbox">
+                            <span class="checkbox">
+                                Read
+                            </span>
+                            <label class="checkbox-container">
+                                <input type="checkbox" class="read-status-determiner">
+                                <span class="checkmark"></span>
+                            </label>
+                        </div>
+                        <div id="btm">
+                            <button type="submit" class="submit-btn">Add to Library</button>
+                        </div>
+                    </div>
+                </form>
+            </section>
+        </div>
+    </nav>    
+
+    <main>
+        <div class="usage-tip book-card">
+            <h2>Your plibrary is empty !</h2>
+            <p>Click the "<strong>+</strong>" button to add a new book</p>
+            <p>-- (OR) --</p>
+            <button class="try-books">Try some books</button>
+        </div>
+    </main>
+
+    <footer class="author-link">  <!-- author referral link section -->
+            <a href="https://www.github.com/0xabdulkhalid/" class="link" target="_blank">0xabdulkhalid</a> <span class="bar">|</span>
+            <a href="https://www.github.com/0xabdulkhalid/plibrary/" class="link" target="_blank">Source Code</a>
+    </footer>
+
+    <script src="./assets/js/script.js" defer></script>
+</body>
+</html>

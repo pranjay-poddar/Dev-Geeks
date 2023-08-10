@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Guess The number</title>
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link
+      href="https://fonts.googleapis.com/css2?family=Diplomata+SC&family=Goldman:wght@700&family=Lato:wght@700&family=Metal+Mania&family=Permanent+Marker&family=Press+Start+2P&family=Rubik+Vinyl&display=swap"
+      rel="stylesheet">
+   <link
+      href="https://fonts.googleapis.com/css2?family=Diplomata+SC&family=Lato:wght@700&family=Permanent+Marker&family=Press+Start+2P&family=Rubik+Vinyl&display=swap"
+      rel="stylesheet">
+
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+   <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">       -->
+   <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <audio id="game-music">
+      <source src="music/game-music.mp3" type="audio/mpeg" id="game-music">
+   </audio>
+   <audio id="warn-music">
+      <source src="music/warn_muisic.wav" type="audio/mpeg" id="warn-music">
+   </audio>
+   <audio id="wrong-ans">
+      <source src="music/wrong_answer_music.wav" type="audio/mpeg" id="wrong-ans">
+   </audio>
+   <audio id="correct-ans">
+      <source src="music/correct_anser_mudic.wav" type="audio/mpeg" id="correct-ans">
+   </audio>
+   <audio id="game_over">
+      <source src="music/Game_over.mp3" type="audio/mpeg" id="game_over">
+   </audio>
+   
+   <header>
+      <img src="images/logo.png" alt="Logo">
+      <p>Number Guessing Game</p>
+   </header>
+
+   <div class="game-over" id="game-over">
+      <div class="title">
+         GAME OVER
+      </div>
+      <div class="content">
+         <img src="images/confused.gif" alt="Confused">
+         <div class="final-score">FINAL SCORE :</div>
+         <div class="question">Confused about the number ? Hover the bellow box.</div>
+          <div class="result">Number : </div>
+      </div>
+      <div class="footer">
+         <h5 id="playagin">PLAY AGIAIN ?</h5>
+         <div class="button-y-n">
+            <button id="yes-btn">YES</button>
+            <button id="no-btn">NO</button>
+         </div>
+      </div>
+   </div>
+
+   <div class="warning" id="warning">
+      <div class="warn">
+      <img src="images/warning-sign.png" alt="WARNING">
+      <h2>WARNING 🚫</h2>
+   </div>
+      <div class="number-error">
+         Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veritatis, enim.
+      </div>
+      <button id="warning-ok">ok</button>
+   </div>
+   <div class="congratulation">
+      <div class="image">
+         <img src="images/congratulation.png" alt="">
+      </div>
+      <div class="final-score" id="final-score">FINAL SCORE :</div>
+      <div class="comment">Congratulation!! 🎉👏You did it.</div>
+      <div class="footer">
+         <h5 id="playagin" style="color: rgb(110, 64, 196)">PLAY AGIAIN ?</h5>
+         <div class="button-y-n">
+            <button id="yesh-btn">YES</button>
+            <button id="noo-btn">NO</button>
+         </div>
+      </div>
+   </div>
+   <div class="overlay"></div>
+
+   <h4>Try to Guess a Raondom Number Between the range 1 to 100.</h5>
+      <h4>You have 10 chances to guess the correct !</h5>
+
+         <div class="container">
+            <div class="head">
+               <h3> Chance = <span id="chance">10</span>/10</h2>
+                  <h3 id="score">Score = 100</h2>
+            </div>
+            <div class="gussing-part">
+               <h2>Guess The Number</h2>
+               <h5 class="alert">❌Input Box can't be empty!❌</h5>
+               <input type="text" id="enter-numer" placeholder="Enter the number 1-100" pattern="[0-9]+"">
+        <button class=" btn">Guess</button>
+            </div>
+            <div class="hint-box">
+                <div class="wrong">
+                  <img src="images/wrong.png" alt="Wrong">
+                  <h3>WRONG GUESS🛑</h3>
+               </div>
+                  <div class="hint">
+
+                  </div>
+               </div>
+         </div>
+    
+
+         <footer>
+            <p>Copyright &#169; Chayan</p>
+            <div class="social-btn">
+               <a href="https://github.com/Chayandev"><i class="fa fa-github"></i></a>
+               <a href="https://linkedin.com/in/chayandev-bera-324bb5220"> <i class="fa fa-linkedin-square"></i></a>
+               <a href="https://instagram.com/c_dev_b"><i class="fa fa-instagram"></i></a>
+            </div>
+         </footer>
+
+         <script src="main.js"></script>
+</body>
+
+</html>

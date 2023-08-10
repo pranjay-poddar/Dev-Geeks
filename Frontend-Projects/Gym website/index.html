@@ -1,135 +1,218 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Apna Gym</title>
-    
-    <style>
-      
-      body {
-        background-color: rgb(106, 102, 102);
-        font-family: "georgia",garamond,serif;
 
-      }
-      h1 {
-        text-align: center;
-        font-family: "georgia",garamond,serif;
-      }
-      .navbar {
-        display: flex;
-        border: 2px solid black;
-        border-radius: 10px;
-        margin: 10px;
-        padding: 10px;
-        padding-left: 1000px;
-        background-color: black;
-      }
-      
-      body {
-        
-        background-image: linear-gradient(
-            rgba(255, 255, 255, 0.5),
-            rgba(255, 255, 255, 0.5)
-          ),
-          url(backimage.jpg);
-        height: 100%;
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-attachment: fixed;
-        background-position: 50% 50%;
-      }
-      a {
-        color: white;
-        font-family: "georgia",garamond,serif;
-      }
-      a:hover {
-        background-color: rgb(0, 255, 247);
-        border: 2px solid black;
-      }
-      p {
-        margin-left: 200px;
-      }
-      
-      form {
-        padding-left: 200px;
-        text-align: justify;
-        float: top;
-        font-size: 25px;
-      }
-      img {
-        display: inline-block;
-        position: fixed;
-        right: 8px;
-      }
-      #para {
-        font-size: 20px;
-        font-family: "Lucida Console", Courier, monospace;
-        font-weight: bold;
-      }
-      #para2 {
-        font-size: 20px;
-        font-family: "Lucida Console", Courier, monospace;
-      }
-      #footer {
-        font-size: 20px;
-      }
-    </style>
-  </head>
-  <body>
-    <header>
-      <nav class="navbar">
-        <a href="home.html">HOME 
-        </a> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
-        &nbsp &nbsp &nbsp &nbsp 
-        <a href="aboutus.html">ABOUT US
-        </a> &nbsp &nbsp
-        &nbsp &nbsp &nbsp &nbsp &nbsp
-      </nav>
-    </header>
-    <h1><b>Welcome to Apna Gym</b></h1>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css"
+    integrity="sha384-QYIZto+st3yW+o8+5OHfT6S482Zsvz2WfOzpFSXMF9zqeLcFV0/wlZpMtyFcZALm" crossorigin="anonymous">
+  <link rel="shortcut icon"
+    href="https://icons-for-free.com/iconfiles/png/512/fitness+gym+gymnasium+icon-1320168052118785594.png"
+    type="image/x-icon">
+  <title>Apna Gym</title>
+</head>
 
-    <p id="para">
-      Apna Gym provides a personalized, accessible, and inclusive place for your
-      workout! Achieve your individual fitness goals under the supervision of
-      certified trainers. Get added benefits of feature-loaded AF workouts App
-      absolutely free with your membership.The best of time-tested fitness
-      essentials combined with cutting-edge modern exercise science. Our
-      workouts are effective, safe, dynamic and fun. They do not make you feel
-      bored and monotonous unlike conventional gyms. We emphasize on movement,
-      full-body involvement, and quality form for optimal results.
-    </p>
-    <br />
-    <p id="para2">GIVE YOUR DETAILS TO GRAB THE MEMBERSHIP:-</p>
-    
-    <form action="">
-      <label for="name" size="25">Name</label> <br />
-      <input type="text" placeholder="Enter your name" size="25" required /><br />
-      <br />
-      <label for="age">Age</label><br />
-      <input type="text" placeholder="Enter your age" size="25" required/> <br />
-      <br />
-      <label for="email">Email </label><br />
-      <input type="email" placeholder="Enter your email" size="25" required/> <br />
-      <br />
-      <label for="phone">Phone number</label><br />
-      <input type="text" placeholder="Enter your phone number" size="25" required/> <br /><br />
-      <label for="location">Location</label><br />
-      <input type="text" placeholder="Enter your location" size="25" required/> <br /><br />
-      <label for="shift">Which shift do you prefer</label><br />
-      <input type="radio" id="morningshift" name="shift" value="morningshift" size="25" required/>
-      <label for="morningshift">Morning shift(8am to 11:30am)</label><br />
-      <input type="radio" id="eveningshift" name="shift" value="eveningshift" size="25" required/>
-      <label for="eveningshift">Evening shift(4pm to 9pm)</label><br /><br />
-      <input type="submit" style="height: 30px" size="25" required/><br />
-    </form>
-    <hr />
-    <div id="footer">
-      <p>Contact us:</p>
-      <p>7/A Amber Street , Kolkata-700098</p>
-      <p>Contact number - 033-12345678/9876543210</p>
+<body>
+  <header>
+    <nav>
+      <div class="logo">
+        <img src="apnagymlogo.jpg" />
+      </div>
+      <div class="menu">
+        <a href="#">Home</a>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#client">Client</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <div class="icon">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6f/Logo_of_Twitter.svg" />
+        <img src="https://1000logos.net/wp-content/uploads/2021/04/Facebook-logo.png" />
+        <img
+          src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Instagram_logo_2022.svg/640px-Instagram_logo_2022.svg.png" />
+      </div>
+    </nav>
+    <div class="container">
+      <div class="left">
+        <img
+          src="https://yardathletics.ca/wp-content/uploads/photo-gallery/imported_from_media_libray/Yard-Athletics-18.jpg" />
+      </div>
+      <div class="right">
+        <h1>Welcome to <span class="Ag">APNA GYM</span> </h1>
+        <p>
+          Apna Gym provides a personalized, accessible, and inclusive place for your
+          workout! Achieve your individual fitness goals under the supervision of
+          certified trainers.
+          Get added benefits of feature-loaded AF workouts App absolutely free with your membership.The best of
+          time-tested fitness
+          essentials combined with cutting-edge modern exercise science.
+          Our workouts are effective, safe, dynamic and fun. They do not make you feel
+          bored and monotonous unlike conventional gyms. We emphasize on movement,
+          full-body involvement, and quality form for optimal results.
+        </p>
+      </div>
     </div>
-  </body>
+  </header>
+  <section id="about">
+    <div class="about-row">
+      <div class="left-about">
+        <h1>About <span class="Ag"> us</span> </h1>
+        <p><b>Who are we?</b></p>
+        <p>
+          My name is Md Ilham Ansari, and I am the founder of 'Apna Gym'. I
+          decided to become a trainer after I won a gold in the state level
+          bodybuilding championship.
+          We care about our clients and there's nothing more important to us
+          than helping them build a physique of their own choice. <br />
+          We at Apna gym offer a discount of 10% if you take a membership of 6
+          months and a discount of 25% if you take a membership of 1 year.
+          We also provide supplements at lower prices as compared to that available
+          at the market.
+        </p>
+        <p> The equipments used by us here at Apna Gym are of best quality.</p>
+
+        <a href="./aboutus.html"><button class="k-btn">Know more</button></a>
+      </div>
+      <div class="right-about">
+        <img src="https://m.media-amazon.com/images/I/91l1snl0dmL._SL1500_.jpg" />
+      </div>
+    </div>
+  </section>
+  <section id="form">
+    <div>
+      <img src="https://c7.alamy.com/zooms/9/6d4d8c7143e8484fbe80322b8da1042e/2m9636p.jpg" />
+    </div>
+    <form action="">
+      <p id="title">GIVE YOUR DETAILS TO GRAB THE MEMBERSHIP</p><br>
+      <label for="name" size="25">Name</label>
+      <input type="text" placeholder="Enter your name" size="25" required />
+      <label for="age">Age</label>
+      <input type="text" placeholder="Enter your age" size="25" required />
+      <label for="email">Email </label>
+      <input type="email" placeholder="Enter your email" size="25" required />
+      <label for="phone">Phone number</label>
+      <input type="text" placeholder="Enter your phone number" size="25" required />
+      <label for="location">Location</label>
+      <input type="text" placeholder="Enter your location" size="25" required />
+      <label for="shift">Which shift do you prefer </label>
+      <select id="shift">
+        <option value="Morning">Shift</option>
+        <option value="Morning">Morning(8am-11:30am)</option>
+        <option value="Evening">Evening(4pm-9pm)</option>
+      </select>
+      <div>
+        <button type="submit" class="k-btn" required> Submit</button>
+      </div>
+    </form>
+  </section>
+  <section id="services">
+    <div class="services-info">
+      <h1>Our <span class="Ag">Services</span></h1>
+      <p>What we Provide</p>
+    </div>
+    <div class="services-row">
+      <div class="services-box">
+        <h2>Aerobics classes</h2>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Obcaecati quos provident, veniam magnam est cum
+          quas deserunt ullam suscipit.</p>
+
+      </div>
+      <div class="services-box">
+        <h2>Personal Trainer</h2>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Obcaecati quos provident, veniam magnam est cum
+          quas deserunt ullam suscipit.</p>
+
+      </div>
+      <div class="services-box">
+        <h2>Cycling</h2>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Obcaecati quos provident, veniam magnam est cum
+          quas deserunt ullam suscipit.</p>
+
+      </div>
+      <div class="services-box">
+        <h2>Zumba</h2>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Obcaecati quos provident, veniam magnam est cum
+          quas deserunt ullam suscipit.</p>
+
+      </div>
+      <div class="services-box">
+        <h2>Cardio</h2>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Obcaecati quos provident, veniam magnam est cum
+          quas deserunt ullam suscipit.</p>
+
+      </div>
+      <div class="services-box">
+        <h2>Yoga</h2>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Obcaecati quos provident, veniam magnam est cum
+          quas deserunt ullam suscipit.</p>
+
+      </div>
+    </div>
+  </section>
+  <section id="client">
+    <div class="services-info">
+      <h1>Our <span class="Ag">Members</span></h1>
+      <p>What our members says</p>
+    </div>
+    <div class="member-card">
+      <img src="https://i.insider.com/5dbb0264045a3106e85478b4?width=800&format=jpeg" />
+      <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Atque, ut! Voluptas ea, accusamus neque sint eligendi
+        illo eveniet adipisci similique laudantium numquam consectetur debitis dolores aut quam totam veritatis unde!
+      </p>
+      <h2>Narrudin Ansari, Gym client</h2>
+      <div class="icon">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6f/Logo_of_Twitter.svg" />
+        <img src="https://1000logos.net/wp-content/uploads/2021/04/Facebook-logo.png" />
+        <img
+          src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Instagram_logo_2022.svg/640px-Instagram_logo_2022.svg.png" />
+      </div>
+    </div>
+  </section>
+  <section id="contact">
+    <div class="services-info">
+      <h1>Get in <span class="Ag">Touch</span></h1>
+      <p>Feel free to contact</p>
+    </div>
+    <div class="contact-row">
+      <div class="contact-left">
+        <div class="contact-form">
+          <input type="text" name="" placeholder="Email" />
+          <input type="text" name="" placeholder="Subject" /><br>
+          <textarea rows="10" cols="40" placeholder="Message"></textarea><br>
+          <button class="k-btn">Send</button>
+        </div>
+      </div>
+      <div class="contact-right">
+        <p><img src="https://cdn-icons-png.flaticon.com/512/3059/3059502.png"> 033-12345678 / 9876543210</p>
+        <p><img src="https://cdn-icons-png.flaticon.com/512/646/646135.png">abcd123456@gmail.com</p>
+        <p><img src="https://cdn-icons-png.flaticon.com/512/484/484167.png">7/A Amber Street , Kolkata-700098</p>
+      </div>
+    </div>
+
+  </section>
+  <section id="footer">
+    <div class="logo">
+      <img src="apnagymlogo.jpg" />
+    </div>
+    <div class="footer-div">
+      <div class="footer-menu">
+        <a href="#">Home</a>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#client">Client</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <p><span class="Ag">&copy;</span> 2023 APNA GYM, Nagpur, India</p>
+    </div>
+    <div class="icon">
+      <img width="30px" src="https://upload.wikimedia.org/wikipedia/commons/6/6f/Logo_of_Twitter.svg" />
+      <img width="30px" src="https://1000logos.net/wp-content/uploads/2021/04/Facebook-logo.png" />
+      <img width="30px"
+        src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Instagram_logo_2022.svg/640px-Instagram_logo_2022.svg.png" />
+    </div>
+  </section>
+</body>
+
 </html>

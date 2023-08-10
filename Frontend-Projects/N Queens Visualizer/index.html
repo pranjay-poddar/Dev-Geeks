@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>N Queens Visualizer</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+        integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+</head>
+
+<body style="font-family: math;">
+
+    <header class="head" id="head-1">
+        <!-- <h1> -->
+        <i class="fas fa-chess-queen" style="color:rgb(254, 205, 255)"></i>&nbspN Queens Visualizer
+        <!-- </h1> -->
+    </header>
+    <div class="main" id="main-body" style="font-family: math !important;">
+        <div class="user-input">
+            <div class="input">
+                <p>Enter the number of queens:</p>
+                <input type="text" id="input-num"></input>
+            </div>
+            <div>
+                <p>Select Speed: </p>
+                <input type="range" id="speed-select" class="slider" name="points" min="0" max="100" value="30"></input>
+                <p id="slow-fast">
+                <pre>Slow                                                       Fast</pre>
+                </p>
+            </div>
+            <div id="progress-bar"></div>
+            <div class="start-button">
+                <button class="start" id="start">START</button>
+            </div>
+        </div>
+        <div class="main-content">
+            <div id="no-of-arrangements">
+
+            </div>
+            <div id="chess-boards">
+
+            </div>
+        </div>
+    </div>
+    <script src="n-queens.js"></script>
+</body>
+
+</html>

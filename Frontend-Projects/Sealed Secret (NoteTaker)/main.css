@@ -1,0 +1,116 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 100%;
+    overflow-wrap: normal;
+
+    background-image: linear-gradient(to top, #c0c0c0,
+            #808080, #171717);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-size: 22px;
+    font-family: 'Oxygen', sans-serif;
+}
+
+.back {
+    border: none;
+}
+
+h1 {
+    margin-top: 5vh;
+    margin-bottom: 3vh;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+
+#myText {
+    margin-bottom: 2vh;
+    border-radius: 3px;
+    resize: none;
+    outline: none;
+    padding: 10px;
+    font-size: 22px;
+    font-family: 'Oxygen', sans-serif;
+    background-image: linear-gradient(to bottom, #808080, #171717);
+    color: black;
+    opacity: 1;
+
+
+}
+
+.FS {
+    border-color: transparent;
+    color: black;
+}
+
+#addBt {
+    margin-bottom: 2vw;
+    font-family: 'Oxygen', sans-serif;
+    width: 100px;
+    height: 50px;
+}
+
+div {
+    /* display:inline-block; */
+    margin: 40px;
+    padding: 30px;
+    height: auto;
+    width: auto;
+    border: 2px solid black;
+    border-radius: 5px;
+    justify-content: space-between;
+    font-family: 'Oxygen', sans-serif;
+    /* overflow: scroll; */
+}
+
+.delBtn {
+    align-self: flex-end;
+}
+
+#noteslist {
+    display: grid;
+    white-space: wrap;
+    outline: none;
+
+
+}
+
+
+@media screen and (min-width: 576px) {
+    #noteslist {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (min-width: 767px) {
+    #noteslist {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media screen and (min-width: 990px) {
+    #noteslist {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+p {
+    max-width: 150px;
+}
+
+.logoForMain {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    width: 40%;
+    height: 200px;
+    border: none;
+    position: relative;
+    top: 0;
+    left: 430px;
+    bottom: 150px;
+}

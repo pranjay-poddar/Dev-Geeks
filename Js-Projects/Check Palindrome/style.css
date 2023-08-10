@@ -1,0 +1,113 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    outline: none;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background-color: #4571f5;
+}
+
+/* CSS styling of Author Line 😎 */
+a {
+    color: #ffffff;
+}
+
+.author {
+    position: absolute;
+    left: 50%;
+    top: 85%;
+    transform: translate(-50%, -50%);
+    font-size: 1.2rem;
+    font-weight: 600;
+    transition: all 0.85s;
+}
+
+/* Styling of main container */
+.container {
+    width: 90%;
+    max-width: 31.25em;
+    background-color: #ffffff;
+    padding: 4em 3em;
+    border-radius: 0.5em;
+    box-shadow: 0 2em 3.5em rgba(0, 9, 50, 0.3);
+    position: absolute;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%;
+}
+
+/* Title of the page */
+.app-title {
+    color: #172039;
+    font-size: 1.6em;
+}
+
+/* Input box */
+.input-wrapper {
+    display: grid;
+    grid-template-columns: 9fr 3fr;
+    gap: 1em;
+    margin: 2em 0 1em 0;
+}
+
+input {
+    border: none;
+    border-bottom: 2px solid #e2e4ef;
+    color: #172039;
+    padding: 1em 0;
+    font-weight: 400;
+    font-size: 1em;
+}
+
+input:focus {
+    border-bottom: 2px solid #4571f5;
+}
+
+/* Check Button */
+button {
+    font-size: 1em;
+    padding: 1em 0.5em;
+    background-color: #4571f5;
+    border: none;
+    color: #ffffff;
+    border-radius: 0.5em;
+    cursor: pointer;
+}
+
+/* Result announcement */
+p {
+    text-align: center;
+    color: #ffffff;
+    font-weight: 400;
+    padding: 1em 0;
+    border-radius: 0.5em;
+    transition: 0.5s;
+}
+
+p span {
+    font-weight: 500;
+    font-style: italic;
+}
+
+.success {
+    background-color: #01bd5f;
+    animation: pop 0.4s;
+}
+
+.error {
+    background-color: #f52a3b;
+    animation: pop 0.4s;
+}
+
+@keyframes pop {
+    0% {
+        transform: scale(0);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}

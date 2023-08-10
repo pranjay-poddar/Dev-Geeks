@@ -1,0 +1,133 @@
+*{
+    margin: 0;
+    padding: 0;
+  /*  box-sizing: border-box;   */
+}
+body{
+    background-color:#ede2d5;
+ /*   border: solid 10px white;     */
+}
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    background-color: white; 
+}
+.flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+ul{
+    list-style: none;
+    
+}
+
+a{
+    text-decoration: none;
+    color: black;
+    transition: 0.3s;
+}
+a:hover{
+    cursor: pointer;
+    color: rgb(8, 97, 63);
+    text-shadow: 0 0 3px rgb(8, 97, 63);
+/*    transition: 0.5s ease;    */
+}
+h1{
+    color: rgb(29, 7, 7);
+    font-size: 3rem;
+}
+/*
+.btns{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row; 
+    
+    
+}
+.btns:hover{
+    text-shadow: 0 0 3px rgb(84, 1, 1);
+    color: rgb(84, 1, 1);
+}
+*/
+.logo img{
+    width: 200px;
+    margin:20px;
+}
+.nav-links{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-basis: 1100px;
+    margin-right: 20px;
+
+}
+.nav-links ul{
+    justify-content: left;
+    gap: 50px;
+    font-size: 25px;
+    font-weight: bold;
+    
+}
+.btns{
+    padding-bottom: 20px;
+}
+.btns .buttons{
+    color: white;
+    margin-left: 80px;
+    margin-top:20px ;
+    width: 150px;
+    height: 50px;
+    border-radius: 40px;
+    transition: 0.4s;
+    background-color:  rgb(8, 97, 63);
+}
+.btns .buttons:hover{
+    transform: scale(1.2);
+    background-color: rgb(5, 51, 33);
+}
+/*.nav-links button img{
+    margin-left: 20px;
+    margin-right: 5px;;
+    width :15px;
+    align-items: flex-start;
+}
+*/
+.header-left h1 {
+    margin-left:80px;
+    flex-wrap: wrap;
+    max-width:20vw;
+    align-items: left;
+    font-size: 5rem;
+}
+.header-left h2{
+    max-width: 35vw;
+    margin-left:80px;
+    margin-top: 20px;
+}
+.header-left h3{
+    margin-left: 80px;
+    margin-top:20px ;
+    font-size: 2.5rem;
+}
+.header-left button{
+    margin-left: 80px;
+    margin-top:20px ;
+    width: 150px;
+    height: 50px;
+    border-radius: 40px;
+    background-color: black;
+    color: white;
+}
+.header-mid img{
+    margin-top: 100px;
+    width: 900px;
+}
+img{
+    width:1420px;
+}

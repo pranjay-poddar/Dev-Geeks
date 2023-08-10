@@ -1,18 +1,24 @@
- body{
+html{
+    scroll-behavior: smooth;
+}
+body{
     margin: 0;
-}       
+    font-family: math;
+}      
 .header{
-   padding: 20px 20px 40px 20px;
+    width: 100%;
    background-color: #0D2A79;
    color: white;
+   position: fixed;
+   z-index: 1;
+   top: 0;
 }
 .logo-image{
-   width: 100%;
-   height: 100%;
+   width: 5%;
    float: left;
 }
 .name{
-   font-size: 40px;
+   font-size: 20px;
    color: #A76502;
    font-weight: bold;
    padding: 15px ;
@@ -23,6 +29,8 @@
 .options{
    float: right;
    color: #060E22;
+   margin-top: -1rem;
+
 }
 .options a{
    text-decoration: none;
@@ -58,9 +66,9 @@ margin: 0;
 }
 
 .left{
-   padding: 8px;
-   flex: 40%;
-   background-color: white;
+    padding: 18px 1px;
+    flex: 40%;
+    background-color: #e0a54d;
 }
 .right{
    flex: 60%;
@@ -82,7 +90,7 @@ margin: 0;
  }
 }
 
- Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other 
+ /*Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other*/
 @media screen and (max-width: 400px) {
  .navbar a {
    float: none;
@@ -94,6 +102,7 @@ margin: 0;
  }
  
 }
+
 .footer{
    padding: 10px;
    display: block;
@@ -108,18 +117,18 @@ margin: 0;
    box-sizing: border-box;
 }
 .order-button{
-   width: 20% ;
-   color: white;
-   text-align: center;
-   background-color: black;
-   font-size: 20px;
-   font-weight: bold;
-   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-   padding: 10px;
-   cursor:grab;
-   border-radius: 12px;
-   display: block;
-   border: 2px solid yellow;
+    display: block;
+    width: 20%;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 10px;
+    cursor: grab;
+    border-radius: 12px;
+    font-family: math;
+    border: 2px solid black;
+    background: none;
+    color: black;
 }
 .right a{
    text-decoration: none;
@@ -130,17 +139,17 @@ margin: 0;
 
 }
 .book-button{
-   width: 20% ;
-   color: white;
-   text-align: center;
-   background-color: black;
-   font-size: 20px;
-   font-weight: bold;
-   padding: 10px;
-   cursor:grab;
-   border-radius: 12px;
-   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-   border: 2px solid yellow;
+    width: 20%;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 10px;
+    cursor: grab;
+    border-radius: 12px;
+    font-family: math;
+    border: 2px solid black;
+    background: none;
+    color: black;
 }
 .social{
    float: right;
@@ -167,8 +176,24 @@ margin: 0;
     color: #A76502;
 }
 .img1{
-    float: left;
+    border-radius: 50%;
 }
+.img2{
+    border-radius: 50%;
+}
+.img3{
+    border-radius: 50%;
+}
+.img4{
+    border-radius: 50%;
+}
+
+.column1 {
+    float: left;
+    width: 50%;
+    padding: 5px;
+}
+
 .container{
     background-color:#E0A54D;
 }
@@ -328,3 +353,20 @@ input[type=submit]:hover{
     }
    
 } 
+
+/* header's logo paragraph styling */
+.logo-para{
+    margin-left: 5rem;
+    font-style: italic;
+    font-size: 10px;
+    display: inline;
+}
+
+.navbar {
+    height: 2rem;
+}
+/* homepage image styling */
+.homepage-img {
+    border-radius: 28rem;
+    margin-left: 3rem;
+}

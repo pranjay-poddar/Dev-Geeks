@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+  <title></title>
+</head>
+
+<body>
+  <div>
+
+  
+    <div class="bg-light d-flex align-items-center justify-content-between p-2" id="mainNav">
+      <div class="d-flex flex-row">
+        <div class="logoDiv p-3">
+        <img width="60px" src="https://logos-world.net/wp-content/uploads/2022/04/OLX-Logo.png" alt="">
+      </div>
+        <div class="d-flex flex-row m-2">
+          <input style="width:130px; height: 45px; margin-right: -2rem; border-radius: 0.7rem; 
+          border: 1px solid darkgrey; text-align: center;" class='ml-5' type="search" name="" id="dropBar"
+              placeholder="Location">
+              <div data-aut-id="btnSearch" class="p-1"><span><svg width="24px" height="24px" viewBox="0 0 1024 1024" data-aut-id="icon" class="" fill-rule="evenodd"><path class="rui-o3KKi" d="M448 725.333c-152.917 0-277.333-124.416-277.333-277.333s124.416-277.333 277.333-277.333c152.917 0 277.333 124.416 277.333 277.333s-124.416 277.333-277.333 277.333v0zM884.437 824.107v0.021l-151.915-151.936c48.768-61.781 78.144-139.541 78.144-224.192 0-199.979-162.688-362.667-362.667-362.667s-362.667 162.688-362.667 362.667c0 199.979 162.688 362.667 362.667 362.667 84.629 0 162.411-29.376 224.171-78.144l206.144 206.144h60.352v-60.331l-54.229-54.229z"></path></svg></span></div>
+
+        </div>
+        <div class="d-flex flex-row m-2">
+          <input style="width:500px; height: 45px; margin-right: -2rem; border-radius: 0.7rem; 
+          border: 1px solid darkgrey; text-align: center;" type="text" name="" id=""
+            placeholder="Find Cars Mobiles and more...">
+        
+        <div data-aut-id="btnSearch" class="p-1"><span><svg width="24px" height="24px" viewBox="0 0 1024 1024" data-aut-id="icon" class="" fill-rule="evenodd"><path class="rui-o3KKi" d="M448 725.333c-152.917 0-277.333-124.416-277.333-277.333s124.416-277.333 277.333-277.333c152.917 0 277.333 124.416 277.333 277.333s-124.416 277.333-277.333 277.333v0zM884.437 824.107v0.021l-151.915-151.936c48.768-61.781 78.144-139.541 78.144-224.192 0-199.979-162.688-362.667-362.667-362.667s-362.667 162.688-362.667 362.667c0 199.979 162.688 362.667 362.667 362.667 84.629 0 162.411-29.376 224.171-78.144l206.144 206.144h60.352v-60.331l-54.229-54.229z"></path></svg></span></div>
+      </div>
+    </div>
+    <div class="d-flex flex-row">
+        <div class="p-1">
+        <a href="" id="loginBtn">
+          Login
+        </a>
+      </div>
+    
+      <button style="background-color: white;border: none;">
+        <div id="sellBtn">
+          <p style="color: black; font-size: 20px; text-align: center; font-weight: bold; margin-top: 17px;">+ SELL</p>
+        </div>
+      </button>
+    </div>
+    </div>
+
+    <div class="bg-light d-flex justify-content-start align-items-center p-5">
+      <div class="allCatDiv d-flex">
+        <div class="dropdown " style="border: none;">
+          <button class="btn btn-secondary dropdown-toggle bg-light text-dark"
+            style="border: none;font-size: 18px; font-weight: bold;" type="button" id="dropdownMenuButton1"
+            data-bs-toggle="dropdown" aria-expanded="false">
+            All Catogaries
+          </button>
+          <ul class="dropdown-menu " aria-labelledby="dropdownMenuButton1">
+            <li><a class="dropdown-item" href="#">Action</a></li>
+            <li><a class="dropdown-item" href="#">Another action</a></li>
+            <li><a class="dropdown-item" href="#">Something else here</a></li>
+          </ul>
+
+        </div>
+
+      </div>
+      <div>
+        <a style="margin-left: 10px; padding:20px;" href="" id="linksNav">Mobiles</a>
+        <a style="margin-left: 10px; padding:20px;" href="" id="linksNav">Cars</a>
+        <a style="margin-left: 10px; padding:20px;" href="" id="linksNav">Motor Cycle</a>
+        <a style="margin-left: 10px; padding:20px;" href="" id="linksNav">Houses</a>
+        <a style="margin-left: 10px; padding:20px;" href="" id="linksNav">TV</a>
+        <a style="margin-left: 10px; padding:20px;" href="" id="linksNav">Tablets</a>
+        <a style="margin-left: 10px; padding:20px;" href="" id="linksNav">Laptops</a>
+        <a style="margin-left: 10px; padding:20px;" href="" id="linksNav">Land & Plots</a>
+      </div>
+    </div>
+
+  <!-- banner start -->  
+  <div class="container d-flex justify-content-center mt-5">
+    <img src="https://images.olx.com.pk/thumbnails/245178240-800x600.webp" class="d-block w-100 txt" alt="...">
+  </div>
+
+  <!-- cards start -->
+  <div class="cards-container">
+    <div class="card">
+      <div class="card-background-container nike-bg-image-1">
+        <p class="badge">Trending</p>
+      </div>
+      <h4 class="card-heading mt-2">Nike Zoom Rival Fly</h4>
+      <p class="card-description">
+        The Nike Zoom Rival Fly features a futuristic look with cushioning
+        in the forefoot that gives you a responsive feel.
+      </p>
+      <div class="card-footer-container">
+        <p class="price">$170.00</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-background-container nike-bg-image-2">
+        <p class="badge">Trending</p>
+      </div>
+      <h4 class="card-heading">Iphone</h4>
+      <p class="card-description">
+       The new arrival of iphone the performance is under good condition and no problem arrived.
+      </p>
+      <div class="card-footer-container">
+        <p class="price">$480.00</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-background-container nike-bg-image-3">
+        <p class="badge">Trending</p>
+      </div>
+      <h4 class="card-heading">Formal Clothing</h4>
+      <p class="card-description">
+       The new arrival of formal Clothing the looking is under good condition and no problem arrived.
+      </p>
+      <div class="card-footer-container">
+        <p class="price">$80.00</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-background-container nike-bg-image-4">
+        <p class="badge">Trending</p>
+      </div>
+      <h4 class="card-heading">Dell Laptop</h4>
+      <p class="card-description">
+       The new arrival of dell laptop the performance is under good condition and no problem arrived.
+      </p>
+      <div class="card-footer-container">
+        <p class="price">$380.00</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-background-container nike-bg-image-5">
+        <p class="badge">Trending</p>
+      </div>
+      <h4 class="card-heading">Activa</h4>
+      <p class="card-description">
+       The new arrival of activa the performance is under good condition and no problem arrived.
+      </p>
+      <div class="card-footer-container">
+        <p class="price">$880.00</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-background-container nike-bg-image-6">
+        <p class="badge">Trending</p>
+      </div>
+      <h4 class="card-heading">Tv</h4>
+      <p class="card-description">
+       The new arrival of tv the performance is under good condition and no problem arrived.
+      </p>
+      <div class="card-footer-container">
+        <p class="price">$780.00</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-background-container nike-bg-image-7">
+        <p class="badge">Trending</p>
+      </div>
+      <h4 class="card-heading">Car</h4>
+      <p class="card-description">
+       The new arrival of car the performance is under good condition and no problem arrived.
+      </p>
+      <div class="card-footer-container">
+        <p class="price">$1480.00</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-background-container nike-bg-image-8">
+        <p class="badge">Trending</p>
+      </div>
+      <h4 class="card-heading">Building</h4>
+      <p class="card-description">
+       The new arrival of buildingp the looking is under good condition and no problem arrived.
+      </p>
+      <div class="card-footer-container">
+        <p class="price">$3480.00</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-background-container nike-bg-image-9">
+        <p class="badge">Trending</p>
+      </div>
+      <h4 class="card-heading">Bike</h4>
+      <p class="card-description">
+       The new arrival of bike the performance is under good condition and no problem arrived.
+      </p>
+      <div class="card-footer-container">
+        <p class="price">$980.00</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-background-container nike-bg-image-10">
+        <p class="badge">Trending</p>
+      </div>
+      <h4 class="card-heading">Plot</h4>
+      <p class="card-description">
+       The new arrival of plot the near to the highway.
+      </p>
+      <div class="card-footer-container">
+        <p class="price">$2480.00</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-background-container nike-bg-image-11">
+        <p class="badge">Trending</p>
+      </div>
+      <h4 class="card-heading">Bed</h4>
+      <p class="card-description">
+       The new arrival of bed the looking is under good condition and no problem arrived.
+      </p>
+      <div class="card-footer-container">
+        <p class="price">$480.00</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-background-container nike-bg-image-12">
+        <p class="badge">Trending</p>
+      </div>
+      <h4 class="card-heading">MacBook</h4>
+      <p class="card-description">
+       The new arrival of laptop the performance is under good condition and no problem arrived.
+      </p>
+      <div class="card-footer-container">
+        <p class="price">$980.00</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-background-container nike-bg-image-13">
+        <p class="badge">Trending</p>
+      </div>
+      <h4 class="card-heading">House</h4>
+      <p class="card-description">
+       The new arrival of house the looking is under good condition and no problem arrived.
+      </p>
+      <div class="card-footer-container">
+        <p class="price">$5480.00</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-background-container nike-bg-image-14">
+        <p class="badge">Trending</p>
+      </div>
+      <h4 class="card-heading">Furniture</h4>
+      <p class="card-description">
+       The new arrival of furniture the looking is under good condition and no problem arrived.
+      </p>
+      <div class="card-footer-container">
+        <p class="price">$580.00</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-background-container nike-bg-image-15">
+        <p class="badge">Trending</p>
+      </div>
+      <h4 class="card-heading">Cooler</h4>
+      <p class="card-description">
+       The new arrival of cooler the performance is under good condition and no problem arrived.
+      </p>
+      <div class="card-footer-container">
+        <p class="price">$480.00</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-background-container nike-bg-image-16">
+        <p class="badge">Trending</p>
+      </div>
+      <h4 class="card-heading">Sofa</h4>
+      <p class="card-description">
+       The new arrival of sofa the performance is under good condition and no problem arrived.
+      </p>
+      <div class="card-footer-container">
+        <p class="price">$680.00</p>
+      </div>
+    </div>
+
+  </div>
+
+ 
+  
+  <div class="container d-flex justify-content-center my-5">
+    <button style="width:120px; height:50px; border: 3px solid black; border-radius: 10px;" class="btn btn-primary">Load more</button>
+  </div>
+
+  <!-- footerBanner -->
+  <div class="container  d-flex flex-column justify-content-center align-items-center">
+      <h4>Get it right know</h4>
+      <div class="d-flex">
+        <div class="p-3">
+          <a href="">
+            <img width="150px" src="	https://www.olx.com.pk/assets/iconGooglePlayEN_noinline.9892833785b26dd5896b7c70b089f684.svg" alt="">
+          </a>
+        </div>
+        <div class="p-3">
+          <a href="">
+            <img width="150px" src="https://www.olx.com.pk/assets/iconAppStoreEN_noinline.a731d99c8218d6faa0e83a6d038d08e8.svg" alt="">
+          </a>
+        </div>
+        <div class="p-3">
+          <a href="">
+            <img width="150px" src="	https://www.olx.com.pk/assets/iconAppGallery_noinline.6092a9d739c77147c884f1f7ab3f1771.svg" alt="">
+          </a>
+        </div>
+      </div>
+  </div>
+
+<footer class="page-footer font-small blue">
+  <!-- Copyright -->
+  <div class="footer-copyright text-white bg-dark footer-dark text-center py-3">© OLX
+  </div>
+</footer>
+</div>
+
+</body>
+</html>

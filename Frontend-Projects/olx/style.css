@@ -1,0 +1,227 @@
+@import url("https://fonts.googleapis.com/css2?family=Bree+Serif&family=Caveat:wght@400;700&family=Lobster&family=Monoton&family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display+SC:ital,wght@0,400;0,700;1,700&family=Playfair+Display:ital,wght@0,400;0,700;1,700&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&family=Source+Sans+Pro:ital,wght@0,400;0,700;1,700&family=Work+Sans:ital,wght@0,400;0,700;1,700&display=swap");
+
+
+#iconDiv{
+    color: black;
+    text-decoration: none;
+    
+}
+#iconDiv:hover{
+    color: rgb(0, 21, 255);
+}
+
+#dropBar{
+    width: 300px;
+    height: 100px;
+    background-color: white;
+}
+
+#loginBtn{
+    text-decoration: none; color: black; font-size: 20px; font-weight: bold;
+}
+#loginBtn:hover{
+    color: blue;
+    text-decoration: underline;
+
+}
+
+#sellBtn{
+    width: 100px;
+    height: 45px;
+   background-image: url(https://www.olx.com.pk/assets/iconSellBorder_noinline.d9eebe038fbfae9f90fd61d971037e02.svg);
+   background-repeat: no-repeat;
+   background-size: cover;
+    border-radius:20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#linksNav{
+    text-decoration: none;
+    color: black;
+    
+}
+
+.txt{
+    height: 200px;
+    width: 100%;
+}
+
+#linksNav:hover{
+    color: aqua;
+}
+
+
+.tad{
+    height: 20vh;
+}
+
+body {
+  margin: 0px;
+}
+
+.bg-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image: linear-gradient(to right, #659ebc, #2aaba8, #2aaba8);
+  min-height: 100vh;
+  padding-top: 100px;
+}
+
+.heading {
+  color: white;
+  font-family: "Open Sans";
+  width: 90%;
+  max-width: 900px;
+}
+
+.description {
+  color: white;
+  font-family: "Open Sans";
+  width: 90%;
+  max-width: 900px;
+  margin-bottom: 48px;
+}
+
+.cards-container {
+margin: 80px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+ 
+}
+
+.card {
+  width: 280px;
+  background-color: white;
+  padding: 16px;
+  margin-right: 30px;
+  margin-bottom: 30px;
+  border-radius: 16px;
+  font-family: "Brief Sans";
+  font-size: 16px;
+}
+
+.card-background-container {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  height: 150px;
+  width: 100%;
+  background-size: cover;
+  border-radius: 16px;
+}
+
+h4.card-heading {
+  text-align: center;
+}
+
+.nike-bg-image-1 {
+  background-image: url("https://assets.ccbp.in/frontend/intermediate-rwd/nike-shoes-1-img.png");
+}
+
+.nike-bg-image-2 {
+  background-image: url("https://img.freepik.com/free-photo/creative-reels-composition_23-2149711507.jpg?w=1060&t=st=1687020174~exp=1687020774~hmac=d0baf2c9c16e0eabe1731c720b79702013ec10f311e91f8667ca8b86b1cb57de");
+}
+
+.nike-bg-image-3 {
+  background-image: url("https://mdbcdn.b-cdn.net/img/Photos/Horizontal/E-commerce/new/img(4).webp");
+}
+
+.nike-bg-image-5 {
+    background-image: url("https://img.freepik.com/premium-photo/modern-urban-white-moped_101266-647.jpg?w=1060");
+  }
+.nike-bg-image-4{
+    background-image: url("  https://img.freepik.com/free-photo/closeup-shot-open-laptop-dark-surface-work-from-home-concept_181624-61063.jpg?w=1060&t=st=1687020421~exp=1687021021~hmac=a2f8419f5c301a3db6fd1ec76ef8fd1ca800260d0b96bcb7c54bc2bf94c47a5e");
+}
+.nike-bg-image-6{
+background-image: url("https://img.freepik.com/free-photo/modern-home-interior-with-comfortable-sofa-window-generative-ai_188544-19459.jpg?w=826&t=st=1687020800~exp=1687021400~hmac=ff8f18ceef6220c0426dfd10569f955431e4186db19afb4ce10b70c13326ad4b");
+}
+.nike-bg-image-7{
+    background-image: url("https://img.freepik.com/free-photo/red-luxury-sedan-road_114579-5079.jpg?w=826&t=st=1687020969~exp=1687021569~hmac=82b4647993421cf7f6d99e8d83e1f7611c607216315c3abcbfed9bb954868585");
+}
+.nike-bg-image-8{
+    background-image: url("https://img.freepik.com/free-photo/design-house-modern-villa-with-open-plan-living-private-bedroom-wing-large-terrace-with-privacy_1258-169741.jpg?w=826&t=st=1687021004~exp=1687021604~hmac=ca2cb905b51a8c69ae89db23e4c3f9adc10afebf37ebd2e2790e936bae9300cc");
+}
+.nike-bg-image-9{
+    background-image: url("https://img.freepik.com/free-photo/motorcycle-with-word-harley-side_1340-23328.jpg?size=626&ext=jpg&uid=R107019172&ga=GA1.2.205681647.1687020107&semt=sph");
+}
+.nike-bg-image-10{
+    background-image: url("https://img.freepik.com/free-photo/land-plot-with-nature-landscape-location-pin_23-2149937913.jpg?size=626&ext=jpg&uid=R107019172&ga=GA1.2.205681647.1687020107&semt=sph");
+}
+.nike-bg-image-11{
+    background-image: url("https://img.freepik.com/free-photo/interior-bedroom-white-creamy-tones_181624-16134.jpg?w=826&t=st=1687021263~exp=1687021863~hmac=5c4fe86caff3bcf4d7be613f3a602658fa81949157b5c52bf4e1f52edd6307e2");
+}
+.nike-bg-image-12{
+    background-image: url("https://img.freepik.com/free-photo/young-businesswoman-typing-laptop-using-wireless-connection-generated-by-ai_188544-26040.jpg?size=626&ext=jpg&uid=R107019172&ga=GA1.2.205681647.1687020107&semt=sph");
+}
+.nike-bg-image-13{
+    background-image: url("https://img.freepik.com/premium-photo/modern-home-with-garage-door_781958-651.jpg?w=826");
+}
+.nike-bg-image-14{
+    background-image: url("https://img.freepik.com/free-photo/living-room-with-blue-couch-white-wall-with-painting-it_1340-23237.jpg?w=826&t=st=1687021292~exp=1687021892~hmac=b76c85dcac8e32e6c63af285452dfd9ea9a722116a367fb487647aa0040e1e27");
+}
+.nike-bg-image-15{
+    background-image: url("https://img.freepik.com/premium-photo/white-air-conditioner-with-large-fan-bottom_900101-2913.jpg?size=626&ext=jpg&uid=R107019172&ga=GA1.2.205681647.1687020107&semt=ais");
+}
+.nike-bg-image-16{
+    background-image: url("https://img.freepik.com/free-photo/living-room-interior-luxury-industrial-style_53876-134088.jpg?size=626&ext=jpg&uid=R107019172&ga=GA1.2.205681647.1687020107&semt=sph");
+}
+.card-description {
+  font-size: 16px;
+  color: #594d6d;
+  text-align: center;
+}
+
+.badge {
+  background-color: #f7941d;
+  color: white;
+  padding-top: 4px;
+  padding-right: 15px;
+  padding-bottom: 4px;
+  padding-left: 15px;
+  font-size: 12px;
+  border-radius: 16px;
+  margin-right: 8px;
+  margin-bottom: 6px;
+}
+
+.icon-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #659ebc;
+  width: 56px;
+  height: 56px;
+  border-radius: 100%;
+}
+
+.price {
+  font-weight: 700;
+}
+
+.card-footer-container {
+  display: flex;
+  justify-content: space-between;
+  margin: auto;
+}
+
+.icon {
+  color: white;
+  font-size: 22px;
+}
+
+.p-1 {
+  margin-top: 4px;
+}
+
+.bg-light.d-flex.justify-content-start.align-items-center.p-5{
+  padding: 1rem !important;
+}
+
+@media screen and (min-width: 480px) {
+    #leftsidebar {width: 200px; float: left;}
+    #main {margin-left: 16px;}
+  }

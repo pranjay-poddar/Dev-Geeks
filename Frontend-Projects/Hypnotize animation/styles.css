@@ -1,0 +1,32 @@
+
+*{
+    padding:0;
+    margin:0;
+
+}
+h1{
+    transform: translate(800px 800px);
+}
+body{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    overflow: hidden;
+}
+div{
+width: 80%;
+height:80%;
+background:repeating-radial-gradient(black 10%,white 20% );
+animation: animate 30s linear infinite; 
+border-radius: 50%;
+}@keyframes animate{
+    0%{
+        transform: rotateZ(0deg);
+    }
+   100%{
+        transform:scale(10) rotate(360deg);
+    }
+}

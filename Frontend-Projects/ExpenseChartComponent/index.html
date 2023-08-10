@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/logo.svg">
+  
+  <title>Expenses chart component | Frontend Mentor</title> 
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main>
+  <div class="balance-container sub-container">
+    <span>
+      <h6 class="balance-text">My balance</h6>
+      <p class="balance">$921.48</p>
+    </span>
+    <img src="/images/logo.svg" alt="">
+  </div>
+  <div class="details-container sub-container">
+    <h1 class="spending-text">Spending - Last 7 days</h1>
+    <div class="days">
+      <span class="bar-container">
+        <p>mon</p> 
+        <span class="bar"></span>
+        <span class="amtSpend"></span>
+      </span>
+      <span class="bar-container">
+        <p>tue</p> 
+        <span class="bar"></span>
+        <span class="amtSpend"></span>
+      </span>
+      <span class="bar-container">
+        <p>wed</p> 
+        <span class="bar"></span>
+        <span class="amtSpend"></span>
+      </span>
+      <span class="bar-container">
+        <p>thu</p> 
+        <span class="bar"></span>
+        <span class="amtSpend"></span>
+      </span>
+      <span class="bar-container">
+        <p>fri</p> 
+        <span class="bar"></span>
+        <span class="amtSpend"></span>
+      </span>
+      <span class="bar-container">
+        <p>sat</p> 
+        <span class="bar"></span>
+        <span class="amtSpend"></span>
+      </span>
+      <span class="bar-container">
+        <p>sun</p> 
+        <span class="bar"></span>
+        <span class="amtSpend"></span>
+      </span>
+    </div>
+    <div class="summary">
+      <section class="sum-section total-section">
+        <h5>Total this month</h5>
+        <p class="amt" id="amt">$</p>
+      </section>
+      <section class="sum-section">
+        <p class="increment">+2.4</p>
+        <h5>from last month</h5>
+      </section>
+    </div>
+  </div>
+</main>
+  
+  <div>
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="https://github.com/Palakkgoyal" target="_blank">Palak Goyal</a>.
+  </div>
+
+  <script type="module" src="script.js"></script>
+</body>
+</html>

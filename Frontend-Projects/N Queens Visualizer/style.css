@@ -1,0 +1,165 @@
+body {
+    margin: 0;
+    padding: 0;
+    /* /* font-family: Arial, Helvetica, sans-serif; */
+    font-family: math !important;
+    font-weight: 400;
+    background-color: rgb(247, 240, 249);
+    color: rgb(109, 17, 109);
+}
+
+header {
+    background-color: rgb(167, 2, 167);
+    color: rgb(254, 205, 255);
+    position: sticky;
+    font-size: 2.4em;
+    height: 70px;
+    padding-top: 10px;
+    margin: auto;
+    text-align: center;
+}
+
+.each-board {
+    margin: 30px;
+    border-collapse: collapse;
+}
+
+.queen-icon {
+    height: 5px;
+    width: 1px;
+    margin: auto;
+}
+
+.queen-icon-black {
+    color: rgb(0, 0, 0);
+}
+
+.queen-icon-white {
+    color: rgb(255, 255, 255);
+}
+
+td {
+    width: 40px;
+    height: 55px;
+    /* text-align: center; */
+    font-size: 25px;
+    padding-left: 18px;
+    margin: 0px;
+    /* color: rgb(182, 221, 255); */
+}
+
+#chess-boards {
+    display: flex;
+    justify-content: center;
+    margin-right: 45px;
+    flex-wrap: wrap;
+}
+
+.user-input {
+    margin-top: 10px;
+    text-align: center;
+}
+
+.start {
+    background-color: rgb(167 2 167);
+    margin-top: 10px;
+    color: white;
+    height: 60px;
+    width: 120px;
+    border-radius: 1rem;
+    border: 0px;
+    font-size: 22px;
+    padding: 19px 26px;
+    cursor: pointer;
+
+}
+
+.main {
+    margin-top: 30px;
+    margin-left: 30px;
+}
+
+p {
+    font-size: 20px;
+}
+
+#input-num {
+    border-radius: 1rem;
+    height: 29px;
+    width: 250px;
+    font-size: 16px;
+    border: 1px solid #80008026;
+    background-color: rgb(167 2 167 / 11%);
+    margin-bottom: 10px;
+    padding: 9px 12px;
+}
+
+#input-num :focus {
+    border-radius: 5px;
+    height: 29px;
+    width: 250px;
+    font-size: 16px;
+    border: 1px solid;
+    background-color: rgb(22, 36, 43);
+    margin-bottom: 10px;
+    padding-left: 10px;
+}
+
+.slider {
+    -webkit-appearance: none;
+    width: 15%;
+    height: 10px;
+    border-radius: 5px;
+    background: rgb(232, 178, 245);
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+    margin-bottom: 0px;
+}
+
+.slider:hover {
+    opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 23px;
+    height: 24px;
+    border: 0;
+    background: rgb(217, 72, 254);
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.slider::-moz-range-thumb {
+    width: 23px;
+    height: 24px;
+    border: 0;
+    border-radius: 50%;
+    background: rgb(217, 72, 254);
+    cursor: pointer;
+}
+
+#queen-info {
+    margin-top: 20px;
+    font-size: 25px;
+}
+
+pre {
+    margin-top: -12px;
+    font-size: 18px;
+    margin-left: 11rem;
+    word-spacing: -0.9rem;
+}
+
+#no-of-arrangements {
+    margin-top: 20px;
+}
+
+@media only screen and (max-width: 600px) {
+    .slider {
+        width: 70%;
+    }
+}

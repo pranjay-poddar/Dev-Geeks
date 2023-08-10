@@ -1,0 +1,93 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GCS</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="entry">
+            <div class="sub1">
+               <label >English</label>
+               <input id="m1" type="number" placeholder="Enter Marks" >
+
+             </div>
+             <div class="sub2">
+                <label >Chemistry</label>
+               <input id="m2" type="number" placeholder="Enter Marks">
+
+             </div>
+             <div class="sub3">
+                <label >Physics</label>
+               <input id="m3" type="number" placeholder="Enter Marks">
+
+             </div>
+             <div class="sub4">
+                <label >Biology</label>
+               <input id="m4" type="number" placeholder="Enter Marks">
+
+             </div>
+             <div class="sub5">
+                <label >Maths</label>
+               <input id="m5" type="number" placeholder="Enter Marks">
+
+             </div>
+             <div>
+                <button id="btn" onclick="calculate()">Calculate</button>
+             </div>
+            </div>
+        <div>
+            <table id="result">
+                <tr >
+                    <td class="one">
+                      Total Marks:
+                    </td>
+                    <td class="two">
+                       500
+                    </td>
+                </tr>
+
+               
+
+                <tr>
+                    <td class="one" >
+                      Obtained Marks:
+                    </td>
+                    <td id="obtain" class="two">
+                       
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="one">
+                      Percentage:
+                    </td>
+                    <td id="per" class="two">
+                      
+                    </td>
+                </tr>
+                <tr>
+                    <td class="one" >
+                     Grade:
+                    </td>
+                    <td id="gr" class="two">
+                      
+                    </td>
+                </tr>
+                <tr>
+                    <td class="one">
+                      Remarks:
+                    </td>
+                    <td id="rem" class="two">
+                      
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

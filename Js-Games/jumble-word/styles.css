@@ -1,0 +1,110 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image:url("https://wallpaperaccess.com/full/3362848.jpg");
+  }
+  
+  h1 {
+    text-align: center;
+    margin: 20px 0;
+  }
+  
+  #game-container {
+    text-align: center;
+    margin-bottom: 20px;
+    border: 2px solid ;
+    width:500px;
+    height:250px;
+    justify-content:center;
+    align-items:center;
+    margin: 0 auto;
+    background-color: #D4A8FF;
+  }
+  
+  #word-container {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  #button-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+  }
+  
+  #refresh-button,
+  #submit-button {
+    padding: 5px 10px;
+    font-size: 16px;
+  }
+  
+  #submit-button {
+    margin-left: 10px;
+  }
+  
+  #guess-input {
+    width: 100%;
+    max-width: 300px;
+    height: 30px;
+    margin-bottom: 10px;
+  }
+  
+  #message {
+    margin-top: 10px;
+    font-weight: bold;
+  }
+  
+  #hint {
+    margin-top: 10px;
+  }
+  
+  #timer {
+    margin-top: 20px;
+    font-size: 16px;
+    font-weight: bold;
+  }
+  
+  #leaderboard-container {
+    text-align: center;
+  }
+  
+  #leaderboard-list {
+    list-style: none;
+    padding: 0;
+  }
+  
+  #leaderboard-list li {
+    margin-bottom: 5px;
+  }
+  
+  @media screen and (max-width: 480px) {
+    body{
+      background-image:url("https://i.pinimg.com/564x/d4/22/9f/d4229fbaa3a9a5ab65ad44a28a890a24.jpg");
+    }
+    #game-container {
+    text-align: center;
+    margin-bottom: 20px;
+    border: 2px solid ;
+    width:250px;
+    height:250px;
+    justify-content:center;
+    align-items:center;
+    margin: 0 auto;
+    background-color: #D4A8FF;
+  }  
+  } 
+  
+  @media (min-width: 481px) and (max-width: 767px){
+    #game-container {
+    text-align: center;
+    margin-bottom: 20px;
+    border: 2px solid ;
+    width:400px;
+    height:250px;
+    justify-content:center;
+    align-items:center;
+    margin: 0 auto;
+    background-color: #D4A8FF;
+  } 
+  }  

@@ -219,13 +219,17 @@ section{
 
 .home .content h3{
     font-size: 6rem;
-    text-transform: uppercase;
     color:#fff;
+}
+.home .content span {
+    text-transform: uppercase;
+    color: #d3ad7f;
 }
 
 .home .content p{
     font-size: 2rem;
     font-weight: lighter;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     line-height: 1.8;
     padding:1rem 0;
     color:#eee;
@@ -244,6 +248,7 @@ section{
 
 .about .row .image img{
     width: 100%;
+    border-radius: 30%;
 }
 .about .row .content{
     flex:1 1 45rem;
@@ -252,14 +257,21 @@ section{
 
 .about .row .content h3{
     font-size: 3rem;
-    color:#fff;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: rgb(134, 97, 2);
+    
 }
 
 .about .row .content p{
     font-size: 1.6rem;
-    color:#ccc;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: bisque;
     padding:1rem 0;
     line-height: 1.8;
+}
+.about .row .content .btn{
+    border-radius: 20px;
+    background-color: rgb(209, 72, 72) ;
 }
 
 .menu .box-container{
@@ -268,39 +280,78 @@ section{
     gap:1.5rem;
 }
 
-.menu .box-container .box{
+.menu .box-container .box1{
     padding:5rem;
     text-align: center;
     border:var(--border);    
 }
 
-.menu .box-container .box img{
-    height: 10rem;
+.menu .box-container .box1 img{
+    height: 20rem;
 }
 
-.menu .box-container .box h3{
+.menu .box-container .box1 h3{
     color: #fff;
     font-size: 2rem;
+    font-family: Georgia, 'Times New Roman', Times, serif;
     padding:1rem 0;
 }
 
-.menu .box-container .box .price{
+.menu .box-container .box1 .price{
     color: #fff;
     font-size: 2.5rem;
     padding:.5rem 0;
 }
 
-.menu .box-container .box .price span{
+.menu .box-container .box1 .price span{
     font-size: 1.5rem;
     text-decoration: line-through;
     font-weight: lighter;
 }
 
-.menu .box-container .box:hover{
+.menu .box-container .box1:hover{
     background:#fff;
 }
 
-.menu .box-container .box:hover > *{
+.menu .box-container .box1:hover > *{
+    color:var(--black);
+}
+
+.menu .box-container .box2{
+    background-color: goldenrod;
+    padding:5rem;
+    text-align: center;
+    border:var(--border);    
+}
+
+.menu .box-container .box2 img{
+    height: 20rem;
+}
+
+.menu .box-container .box2 h3{
+    color: #fff;
+    font-size: 2rem;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    padding:1rem 0;
+}
+
+.menu .box-container .box2 .price{
+    color: #fff;
+    font-size: 2.5rem;
+    padding:.5rem 0;
+}
+
+.menu .box-container .box2 .price span{
+    font-size: 1.5rem;
+    text-decoration: line-through;
+    font-weight: lighter;
+}
+
+.menu .box-container .box2:hover{
+    background:#fff;
+}
+
+.menu .box-container .box2:hover > *{
     color:var(--black);
 }
 
@@ -369,33 +420,66 @@ section{
     gap:1.5rem;
 }
 
-.review .box-container .box{
+.review .box-container .box1{
     border:var(--border);
     text-align: center;
     padding:3rem 2rem;
 }
 
-.review .box-container .box p{
+.review .box-container .box1 p{
     font-size: 1.5rem;
     line-height: 1.8;
     color:#ccc;
     padding:2rem 0;
 }
 
-.review .box-container .box .user{
-    height: 7rem;
-    width: 7rem;
+.review .box-container .box1 .user{
+    height: 10rem;
+    width: 10rem;
     border-radius: 50%;
     object-fit: cover;
 }
 
-.review .box-container .box h3{
+.review .box-container .box1 h3{
     padding:1rem 0;
     font-size: 2rem;
+    font-family: Georgia, 'Times New Roman', Times, serif;
     color:#fff;
 }
 
-.review .box-container .box .stars i{
+.review .box-container .box1 .stars i{
+    font-size: 1.5rem;
+    color:var(--main-color);
+}
+.review .box-container .box2{
+    background-color: rgb(134, 97, 2);
+    border:var(--border);
+    text-align: center;
+    padding:3rem 2rem;
+}
+
+.review .box-container .box2 p{
+    font-size: 1.5rem;
+    line-height: 1.8;
+    color:#ccc;
+    padding:2rem 0;
+}
+
+.review .box-container .box2 .user{
+    height: 10rem;
+    width: 10rem;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.review .box-container .box2 h3{
+    padding:1rem 0;
+    font-size: 2rem;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color:#fff;
+}
+
+.review .box-container .box2 .stars i{
     font-size: 1.5rem;
     color:var(--main-color);
 }
@@ -424,6 +508,9 @@ section{
     font-size: 3.5rem;
     color:#fff;
 }
+.contact .row form h3 span{
+    color: rgb(209, 72, 72);
+}
 
 .contact .row form .inputBox{
     display: flex;
@@ -447,6 +534,10 @@ section{
     color:#fff;
     text-transform: none;
     background:none;
+}
+.contact .row form .btn{
+    font-size: 20px;
+    border-radius: 12px;
 }
 
 .blogs .box-container{
@@ -481,6 +572,7 @@ section{
 
 .blogs .box-container .box .content .title{
     font-size: 2.5rem;
+    font-family: Georgia, 'Times New Roman', Times, serif;
     line-height: 1.5;
     color:#fff;
 }
@@ -497,6 +589,55 @@ section{
 }
 
 .blogs .box-container .box .content p{
+    font-size: 1.6rem;
+    line-height: 1.8;
+    color:#ccc;
+    padding:1rem 0;
+}
+.blogs .box-container .box1{
+    background-color: rgb(134, 97, 2) ;
+    border:var(--border);    
+}
+
+.blogs .box-container .box1 .image{
+    height: 25rem;
+    overflow:hidden;
+    width: 100%;
+}
+
+.blogs .box-container .box1 .image img{
+    height: 100%;
+    object-fit: cover;
+    width: 100%;
+}
+
+.blogs .box-container .box1:hover .image img{
+    transform: scale(1.2);
+}
+
+.blogs .box-container .box1 .content{
+    padding:2rem;
+}
+
+.blogs .box-container .box1 .content .title{
+    font-size: 2.5rem;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    line-height: 1.5;
+    color:#fff;
+}
+
+.blogs .box-container .box1 .content .title:hover{
+    color:var(--main-color);
+}
+
+.blogs .box-container .box1 .content span{
+    color:var(--main-color);
+    display: block;
+    padding-top: 1rem;
+    font-size: 2rem;
+}
+
+.blogs .box-container .box1 .content p{
     font-size: 1.6rem;
     line-height: 1.8;
     color:#ccc;
@@ -557,6 +698,31 @@ section{
     color:var(--main-color);
 }
 
+.to-top {
+    background-color: #d3ad7f;
+    position: fixed;
+    bottom: 16px;
+    right: 16px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1px solid white;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: #1f1f1f;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s;
+}
+
+.to-top.active {
+    bottom: 32px;
+    pointer-events: auto;
+    opacity: 1;
+}
 
 
 
@@ -596,7 +762,8 @@ section{
         position: absolute;
         top:100%; right: -100%;
         background: #fff;
-        width: 30rem;
+        width: 72rem;
+      
         height: calc(100vh - 9.5rem);
     }
 
@@ -610,6 +777,7 @@ section{
         margin:1.5rem;
         padding:.5rem;
         font-size: 2rem;
+        margin-left:45%;
     }
 
     .header .search-form{
@@ -633,10 +801,58 @@ section{
 
 }
 
-@media (max-width:450px){
+@media (max-width:460px){
 
     html{
         font-size: 50%;
     }
+    .header .navbar{
+        position: absolute;
+        top:100%; right: -100%;
+        background: #fff;
+        width: -10rem;
+      
+        height: calc(100vh - 9.5rem);
+    }
+
+    .header .navbar.active{
+        right:0;
+    }
+
+    .header .navbar a{
+        color:var(--black);
+        display: block;
+        margin:1.5rem;
+        padding:.5rem;
+        font-size: 2rem;
+        margin-left:45%;
+    }
 
 }
+@media (max-width:615px){
+
+    #menu-btn{
+        display: inline-block;
+    }
+
+    .header .navbar{
+        position: absolute;
+        top:100%; right: -100%;
+        background: #fff;
+        width: 58rem;
+      
+        height: calc(100vh - 9.5rem);
+    }
+
+    .header .navbar.active{
+        right:0;
+    }
+
+    .header .navbar a{
+        color:var(--black);
+        display: block;
+        margin:1.5rem;
+        padding:.5rem;
+        font-size: 2rem;
+        margin-left:45%;
+    }}

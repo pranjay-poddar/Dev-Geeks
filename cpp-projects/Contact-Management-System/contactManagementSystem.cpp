@@ -13,11 +13,11 @@ int count_contacts(string); // counts no. of contacts present in the ContactBook
 void get_input(string *Name, string *Mobile);
 class Person
 {
-    string name, mobile, address;
+    string name, mobile, address ;
 
 public:
     /* constructor to initialize data members*/
-    Person(string Name, string Mobile, string Address)
+    Person(string Name, string Mobile, string Address )
     {
         name = Name;
         mobile = Mobile;
@@ -90,6 +90,7 @@ void Person::add_contacts()
         file1 << "Mobile: " << mobile << endl;
         file1 << "Address: " << address << endl;
         file1 << endl; //
+        cout<<"\n**********************************"<<endl;
         cout << "Contact Details added successfully!!" << endl;
         file1.close();
     }
@@ -144,7 +145,7 @@ void Person::edit_or_delete_contact(bool edit)
                 if(edit)
                 {
                     string name4, mobile4, address4;
-                    cout<<endl<<"Enter new contact details -";
+                    cout<<endl<<"Enter new contact details:-"<<endl;
                     get_input(&name4, &mobile4);
                     cout << "Enter Address : ";
                     getline(cin, address4);
@@ -155,6 +156,7 @@ void Person::edit_or_delete_contact(bool edit)
                         file2 << "Mobile: " << mobile4 << endl;
                         file2 << "Address: " << address4 << endl;
                         file2 << endl;
+                        cout<<"\n*************************************"<<endl;
                         cout << "Contact Details Updated successfully!!" << endl;
                     }
                     else
@@ -168,6 +170,7 @@ void Person::edit_or_delete_contact(bool edit)
                 }
                 else
                 {
+                    cout<<"********************"<<endl;
                     cout << "Deletion Successful!" << endl;
                     continue;
                 }
@@ -217,7 +220,8 @@ void showContacts()
     else
     {
         cout << setw(50) << endl
-             << "Contact Details" << endl
+             << "Contact Details" << endl;
+         cout<<setw(50)<<"***************"<<endl
              << endl;
         fstream file1;
         file1.open("ContactBook.txt", ios::in);
@@ -229,7 +233,7 @@ void showContacts()
         }
         file1.close();
     }
-    cout << "Press Enter key to Continue : ";
+    cout << "# Press Enter key to Continue : ";
     getchar();
 }
 
@@ -253,12 +257,13 @@ void get_input(string *Name, string *Mobile) // Take contact details as input fr
 void searchContact()
 {
     system("cls");
-    cout << setw(60) << "Search by Name || Number ||  Address" << endl
+    cout << setw(60) << "Search by Name || Number ||  Address" << endl;
+    cout<< setw(60)<<"************************************"<<endl
          << endl;
     int chk = 0;
     string search_str = " ";
     string name, number, address;
-    cout << "Enter Name/Number/Address you want to search : ";
+    cout << "# Enter Name/Number/Address you want to search : ";
     getline(cin, search_str);
     cout << endl;
     fstream file1;
@@ -288,9 +293,9 @@ void searchContact()
     }
     file1.close();
     if (chk < 1)
-        cout << "No contacts were found having this contact detail." << endl;
+        cout << "# No contacts were found having this contact detail." << endl;
     cout << endl
-         << "Enter any key to continue : ";
+         << "# Enter any key to continue : ";
     getchar();
 }
 
@@ -306,12 +311,13 @@ int main()
     {
         string choice;
         int ch = 0;
-        cout << setw(50) << "****" << endl;
+        //cout << setw(50) << "****" << endl;
         cout << setw(50) << "Menu" << endl;
         cout << setw(50) << "****" << endl;
-
-        cout << "You can perform following operations:-\n1. Add a new Contact\n2. Show all Contacts\n3. Search a Contact\n4. Edit a Contact\n5. Delete a Contact\n6. Exit" << endl;
-        cout << "\nEnter the S.No. of the operation you want to perform: ";
+        cout<<"*************************************"<<endl;
+        cout << "# You can perform following operations:-\n1. Add a new Contact\n2. Show all Contacts\n3. Search a Contact\n4. Edit a Contact\n5. Delete a Contact\n6. Exit"<<endl;
+        cout<<"\n*************************************";
+        cout << "\n# Enter the S.No. of the operation you want to perform:- ";
         getline(cin, choice);
         stringstream stream(choice);
         stream >> ch; // takes first integer from entered string choice
@@ -321,7 +327,9 @@ int main()
         {
             system("cls");
             string Name, Mobile, Address;
-            cout << setw(60) << "Add Contacts" << endl
+            //cout<< setw(60)<< "************"<<endl;
+            cout << setw(60) << "Add Contacts" << endl;
+            cout<< setw(60)<< "************" <<endl
                  << endl;
             get_input(&Name, &Mobile); // Call by Address
             cout << "Enter Address: ";
@@ -344,8 +352,10 @@ int main()
         {
             system("cls");
             string Name, Mobile;
-            cout << setw(60) << "Edit a Contact" << endl<< endl;
-            cout<<"Enter contact details to be edited - ";
+            cout << setw(60) << "Edit a Contact" << endl;
+            cout<< setw(60)<<"**************"<<endl
+            << endl;
+            cout<<"# Enter contact details to be edited - ";
             get_input(&Name, &Mobile); // Call by address
             Person p2(Name, Mobile, " ");
             p2.edit_or_delete_contact(true);
@@ -355,7 +365,9 @@ int main()
         {
             system("cls");
             string Name, Mobile;
-            cout << setw(60) << "Delete a Contact" << endl<< endl;
+            cout << setw(60) << "Delete a Contact" << endl;
+            cout<< setw(60)<<"****************"<<endl
+            << endl;
             get_input(&Name, &Mobile); // Call by address
             Person p2(Name, Mobile, " ");
             p2.edit_or_delete_contact(false);
@@ -363,7 +375,7 @@ int main()
         }
         case 6:
         {
-            cout << "\nThank you for using the program!" << endl
+            cout << "\n*******Thank you for using the program!*******" << endl
                  << endl;
             exit(0);
         }

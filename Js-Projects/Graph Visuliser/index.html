@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <h1>Graph Visualiser</h1>
+        <div class="info-holder">
+            <p style="font-size:20px;font-weight:bold;">Select Graph Type</p>
+            <select id="graphType">
+                <option value="directed">Directed</option>
+                <option value="undirected">Undirected</option>
+            </select>
+        </div>
+        <button class="btn" type="button" id="addBtn" > Add node</button>
+
+        <div class="super-outer">
+
+        
+        <div class="outer">
+
+        <div class="table-holder inner">
+            <table id="AdjencyMatrix">
+                <thead>
+                    <tr id="matrix-header">
+                        <th class="header-element index fix vfix">
+                            index
+                        </th>
+                    </tr>
+
+                </thead>
+                <tbody id="matrix-body">
+                </tbody>
+                
+            </table>
+
+        </div>
+    </div>
+</div>
+
+        <div style="align-self:center;">
+            <button class="btn" type="button" id="bfsBtn" > BFS</button>
+            <button class="btn" type="button" id="dfsBtn" > DFS</button>
+            <button class="btn" type="button" id="dijkstraBtn" > Dijkstra</button>
+        </div>
+
+
+
+
+
+
+        <canvas id="canvas" width="1000" height="500">
+            Your browser does not support the HTML5 canvas tag.
+        </canvas>
+        <canvas id="res-canvas" width="1000" height="500">
+            Your browser does not support the HTML5 canvas tag.
+        </canvas>
+
+
+        <script src="script.js" async defer></script>
+    </body>
+</html>
