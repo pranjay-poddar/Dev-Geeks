@@ -1,0 +1,42 @@
+.gradient{
+    background-size: 100% 100%;
+    animation: gradient 15s ease infinite;
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    z-index: -1;
+    inset: 0;
+    background: radial-gradient(circle, transparent 0%, #f9f1f2 100%, transparent 80%);
+}
+
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    max-width: 100%;
+}
+
+.sub-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    height: 100vh;
+    width: 100%;
+    max-width: 1400px;
+    padding-inline: 30px;
+}
+
+/* @keyframes gradient{
+    0%{
+        background-position: 0% 50%;
+    }
+    50%{
+        background-position: 100% 50%;
+    }
+    100%{
+        background-position: 0% 50%;
+    }
+}
+     */
