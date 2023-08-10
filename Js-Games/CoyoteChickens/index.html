@@ -1,0 +1,1062 @@
+<HTML>
+<HEAD>
+    <META NAME="keywords" content="Coyote and Chickens, Games, JavaScript">
+    <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+    <title>Coyote and Chickens</title>
+    <script language="JavaScript">
+    var i,
+        j,
+        k,
+        Start,
+        StartN,
+        WaT = 1,
+        NDraw,
+        MoveCount,
+        MaxMoveCount,
+        MoveVal,
+        MaxMove = 490,
+        NLine,
+        size = 5,
+        size2 = size * size,
+        Rnd;
+    IsPlayer = new Array(2);
+    IsPlayer[0] = 1;
+    IsPlayer[1] = 0;
+    Level = new Array(2);
+    Level[0] = 3;
+    Level[1] = 3;
+    StartN = 0;
+    WaT = -1;
+    Rnd = 1;
+    Fld = new Array(size);
+    for (i = 0; i < size; i++)
+    {
+        Fld[i] = new Array(size);
+    }
+    FldOld = new Array(size);
+    for (i = 0; i < size; i++)
+    {
+        FldOld[i] = new Array(0, 0, 0, 0, 0);
+    }
+    FldVal = new Array(5);
+    FldVal[0] = new Array(1, 2, 2, 2, 1);
+    FldVal[1] = new Array(2, 3, 3, 3, 2);
+    FldVal[2] = new Array(2, 3, 8, 3, 2);
+    FldVal[3] = new Array(2, 3, 3, 3, 2);
+    FldVal[4] = new Array(1, 2, 2, 2, 1);
+    MoveLine = new Array();
+    TmpLine = new Array(size2);
+    for (i = 0; i < size2; i++)
+        TmpLine[i] = new Array();
+    History = new Array(MaxMove);
+    for (i = 0; i < MaxMove; i++)
+        History[i] = new Array();
+    Pic = new Array(6);
+    for (i = 0; i < 2; i++)
+    {
+        Pic[3 * i] = new Image();
+        Pic[3 * i].src = "chicoyo" + i + ".gif";
+        Pic[3 * i + 1] = new Array(4);
+        for (j = 0; j < 4; j++)
+        {
+            Pic[3 * i + 1][j] = new Image();
+            Pic[3 * i + 1][j].src = "coyote" + i + "" + j + ".gif";
+        }
+        Pic[3 * i + 2] = new Array(4);
+        for (j = 0; j < 4; j++)
+        {
+            Pic[3 * i + 2][j] = new Image();
+            Pic[3 * i + 2][j].src = "chicken" + i + "" + j + ".gif";
+        }
+    }
+    function Init()
+    {
+        var ii,
+            jj;
+        NDraw = 0;
+        NLine = 0;
+        Start = StartN;
+        MoveCount = 0;
+        MaxMoveCount = 0;
+        MoveVal = 1;
+        for (ii = 0; ii < size; ii++)
+        {
+            for (jj = 0; jj < size; jj++)
+            {
+                if (ii <= (size - 1) / 2)
+                    Fld[ii][jj] = 0;
+                else
+                    Fld[ii][jj] = 1;
+            }
+        }
+        Fld[(size - 1) / 2][0] = 1;
+        Fld[(size - 1) / 2][size - 1] = 1;
+        Fld[(size - 1) / 2][(size - 1) / 2] = -1;
+        RefreshScreen();
+        window.document.OptionsForm.Moves.value = " 0 ";
+    }
+    function SetOption(nn, mm)
+    {
+        if (nn < 2)
+            IsPlayer[nn] = mm;
+        else
+        {
+            StartN = 1 - mm;
+            Init();
+        }
+    }
+    function SetLevel(nn, mm)
+    {
+        Level[nn] = mm;
+    }
+    function SetTop(tt)
+    {
+        WaT = tt;
+        RefreshScreen();
+    }
+    function Timer()
+    {
+        if (NDraw > 0)
+        {
+            if (NDraw >= NLine)
+                MakeMove();
+            else
+            {
+                if (NLine == 2)
+                {
+                    Fld[MoveLine[3 * NDraw]][MoveLine[3 * NDraw + 1]] = Fld[MoveLine[3 * NDraw - 3]][MoveLine[3 * NDraw - 2]];
+                    Fld[MoveLine[3 * NDraw - 3]][MoveLine[3 * NDraw - 2]] = 0;
+                    RefreshPic(MoveLine[3 * NDraw - 3], MoveLine[3 * NDraw - 2]);
+                    RefreshPic(MoveLine[3 * NDraw], MoveLine[3 * NDraw + 1]);
+                    NDraw++;
+                }
+                else
+                {
+                    Fld[MoveLine[3 * NDraw + 3]][MoveLine[3 * NDraw + 4]] = Fld[MoveLine[3 * NDraw - 3]][MoveLine[3 * NDraw - 2]];
+                    Fld[MoveLine[3 * NDraw - 3]][MoveLine[3 * NDraw - 2]] = 0;
+                    RefreshPic(MoveLine[3 * NDraw - 3], MoveLine[3 * NDraw - 2]);
+                    RefreshPic(MoveLine[3 * NDraw + 3], MoveLine[3 * NDraw + 4]);
+                    NDraw += 2;
+                }
+            }
+        }
+        else
+        {
+            if ((!IsPlayer[(MoveCount + Start) % 2]) && (MoveVal > 0))
+            {
+                var vv = MakeBestMove(Level[(MoveCount + Start) % 2], Level[(MoveCount + Start) % 2], 0, -10000);
+                //alert(vv);
+                NDraw = 1;
+            }
+        }
+    }
+    function Back()
+    {
+        if (MoveCount == 0)
+            return;
+        if (NDraw > 0)
+            return;
+        NLine = 0;
+        MoveCount--;
+        var nn,
+            ii,
+            jj;
+        for (nn = 0; nn < History[MoveCount].length; nn += 3)
+        {
+            ii = History[MoveCount][nn];
+            jj = History[MoveCount][nn + 1];
+            Fld[ii][jj] = History[MoveCount][nn + 2];
+        }
+        RefreshScreen();
+        MoveVal = GetMoveVal(size, size);
+    }
+    function Replay()
+    {
+        if (NDraw > 0)
+            return;
+        if (MoveCount < MaxMoveCount)
+        {
+            for (nn = 0; nn < History[MoveCount].length; nn++)
+                MoveLine[nn] = History[MoveCount][nn];
+            NLine = History[MoveCount].length / 3;
+            MakeMove();
+        }
+    }
+    function NextJump(tt, nn0, mm0, cc)
+    {
+        var ii,
+            jj,
+            kk,
+            nn,
+            mm,
+            vv,
+            NTmpLine3 = TmpLine[tt].length,
+            NTmpLine = NTmpLine3 / 3;
+        ii = TmpLine[tt][NTmpLine3 - 3];
+        jj = TmpLine[tt][NTmpLine3 - 2];
+        for (nn = -1; nn <= 1; nn++)
+        {
+            for (mm = -1; mm <= 1; mm++)
+            {
+                if (3 * nn + mm > 3 * nn0 + mm0)
+                {
+                    if ((nn == 0) || (mm == 0) || ((ii + jj) % 2 == 0))
+                    {
+                        if ((GetFld(ii + 2 * nn, jj + 2 * mm) == 0) && (GetFld(ii + nn, jj + mm) == -cc))
+                        {
+                            lloop = false;
+                            for (kk = 1; kk < NTmpLine - 1; kk += 2)
+                            {
+                                if ((TmpLine[tt][3 * kk] == ii + nn) && (TmpLine[tt][3 * kk + 1] == jj + mm))
+                                    lloop = true;
+                            }
+                            if (!lloop)
+                                return ( (nn + 1) * 3 + (mm + 1)) ;
+                        }
+                    }
+                }
+            }
+        }
+        return ( -1) ;
+    }
+    function NextMoveLine(tt, cc)
+    {
+        var nn,
+            mm,
+            vv,
+            NTmpLine3 = TmpLine[tt].length,
+            NTmpLine = NTmpLine3 / 3;
+        if (NTmpLine == 1)
+        {
+            while ((vv = NextJump(tt, -2, -2, cc)) >= 0)
+            {
+                mm = vv % 3;
+                nn = (vv - mm) / 3;
+                mm--;
+                nn--;
+                TmpLine[tt][NTmpLine3] = TmpLine[tt][NTmpLine3 - 3] + nn;
+                TmpLine[tt][NTmpLine3 + 1] = TmpLine[tt][NTmpLine3 - 2] + mm;
+                TmpLine[tt][NTmpLine3 + 2] = Fld[TmpLine[tt][NTmpLine3]][TmpLine[tt][NTmpLine3 + 1]];
+                NTmpLine++;
+                NTmpLine3 += 3;
+                TmpLine[tt][NTmpLine3] = TmpLine[tt][NTmpLine3 - 3] + nn;
+                TmpLine[tt][NTmpLine3 + 1] = TmpLine[tt][NTmpLine3 - 2] + mm;
+                TmpLine[tt][NTmpLine3 + 2] = Fld[TmpLine[tt][NTmpLine3]][TmpLine[tt][NTmpLine3 + 1]];
+                NTmpLine++;
+                NTmpLine3 += 3;
+            }
+            return ( true) ;
+        }
+        while (NTmpLine > 1)
+        {
+            nn = TmpLine[tt][NTmpLine3 - 3] - TmpLine[tt][NTmpLine3 - 6];
+            mm = TmpLine[tt][NTmpLine3 - 2] - TmpLine[tt][NTmpLine3 - 5];
+            NTmpLine3 -= 6;
+            NTmpLine -= 2;
+            TmpLine[tt].length = NTmpLine3;
+            if ((vv = NextJump(tt, nn, mm, cc)) >= 0)
+            {
+                mm = vv % 3;
+                nn = (vv - mm) / 3;
+                mm--;
+                nn--;
+                TmpLine[tt][NTmpLine3] = TmpLine[tt][NTmpLine3 - 3] + nn;
+                TmpLine[tt][NTmpLine3 + 1] = TmpLine[tt][NTmpLine3 - 2] + mm;
+                TmpLine[tt][NTmpLine3 + 2] = Fld[TmpLine[tt][NTmpLine3]][TmpLine[tt][NTmpLine3 + 1]];
+                NTmpLine++;
+                NTmpLine3 += 3;
+                TmpLine[tt][NTmpLine3] = TmpLine[tt][NTmpLine3 - 3] + nn;
+                TmpLine[tt][NTmpLine3 + 1] = TmpLine[tt][NTmpLine3 - 2] + mm;
+                TmpLine[tt][NTmpLine3 + 2] = Fld[TmpLine[tt][NTmpLine3]][TmpLine[tt][NTmpLine3 + 1]];
+                NTmpLine++;
+                NTmpLine3 += 3;
+                while ((vv = NextJump(tt, -2, -2, cc)) >= 0)
+                {
+                    mm = vv % 3;
+                    nn = (vv - mm) / 3;
+                    mm--;
+                    nn--;
+                    TmpLine[tt][NTmpLine3] = TmpLine[tt][NTmpLine3 - 3] + nn;
+                    TmpLine[tt][NTmpLine3 + 1] = TmpLine[tt][NTmpLine3 - 2] + mm;
+                    TmpLine[tt][NTmpLine3 + 2] = Fld[TmpLine[tt][NTmpLine3]][TmpLine[tt][NTmpLine3 + 1]];
+                    NTmpLine++;
+                    NTmpLine3 += 3;
+                    TmpLine[tt][NTmpLine3] = TmpLine[tt][NTmpLine3 - 3] + nn;
+                    TmpLine[tt][NTmpLine3 + 1] = TmpLine[tt][NTmpLine3 - 2] + mm;
+                    TmpLine[tt][NTmpLine3 + 2] = Fld[TmpLine[tt][NTmpLine3]][TmpLine[tt][NTmpLine3 + 1]];
+                    NTmpLine++;
+                    NTmpLine3 += 3;
+                }
+                return ( true) ;
+            }
+        }
+        return ( false) ;
+    }
+    function MakeBestMove(ii, jj, tt, vv_cut)
+    {
+        if (MoveVal == 0)
+            return ( -9000) ; //no moves available
+        var kk,
+            ll,
+            nn,
+            mm,
+            oo,
+            cc = ((MoveCount + Start) % 2) * 2 - 1,
+            vv,
+            vv_max = -9999.0,
+            NTmpLine;
+        if (MoveVal == 2)//jump
+        {
+            for (nn = 0; nn < size; nn++)
+            {
+                for (mm = 0; mm < size; mm++)
+                {
+                    if ((Fld[nn][mm] * cc > 0) && (GetMoveVal(nn, mm) == 2))
+                    {
+                        TmpLine[tt][0] = nn;
+                        TmpLine[tt][1] = mm;
+                        TmpLine[tt][2] = Fld[nn][mm];
+                        TmpLine[tt].length = 3;
+                        while (NextMoveLine(tt, cc))
+                        {
+                            NTmpLine = TmpLine[tt].length / 3;
+                            Fld[TmpLine[tt][3 * NTmpLine - 3]][TmpLine[tt][3 * NTmpLine - 2]] = TmpLine[tt][2];
+                            Fld[TmpLine[tt][0]][TmpLine[tt][1]] = 0;
+                            oo = NTmpLine - 2;
+                            while (oo >= 0)
+                            {
+                                Fld[TmpLine[tt][3 * oo]][TmpLine[tt][3 * oo + 1]] = 0;
+                                oo -= 2;
+                            }
+                            MoveCount++;
+                            MoveVal = GetMoveVal(size, size);
+                            vv = -MakeBestMove(ii - 1, jj, tt + 1, vv_max);
+                            if (ii == jj)
+                                vv += (2 * Math.random() - 1) * Rnd;
+                            MoveCount--;
+                            for (oo = 0; oo < NTmpLine; oo++)
+                                Fld[TmpLine[tt][3 * oo]][TmpLine[tt][3 * oo + 1]] = TmpLine[tt][3 * oo + 2];
+                            if (vv_max < vv)
+                            {
+                                if (vv >= -vv_cut)
+                                    return ( vv) ;
+                                vv_max = vv;
+                                if (ii == jj)
+                                {
+                                    NLine = NTmpLine;
+                                    for (oo = 0; oo < 3 * NTmpLine; oo++)
+                                        MoveLine[oo] = TmpLine[tt][oo];
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            return ( 1 * vv_max) ;
+        }
+        if (ii <= 0)
+            return ( cc * EvalPosition()) ;
+        if (MoveVal == 1)//move
+        {
+            for (nn = 0; nn < size; nn++)
+            {
+                for (mm = 0; mm < size; mm++)
+                {
+                    if (Fld[nn][mm] * cc > 0)
+                    {
+                        for (kk = -1; kk <= 1; kk++)
+                        {
+                            for (ll = -1; ll <= 1; ll++)
+                            {
+                                if (((kk == 0) || (ll == 0) || ((nn + mm) % 2 == 0)) && (GetFld(nn + kk, mm + ll) == 0))
+                                {
+                                    Fld[nn + kk][mm + ll] = Fld[nn][mm];
+                                    Fld[nn][mm] = 0;
+                                    MoveCount++;
+                                    MoveVal = GetMoveVal(size, size);
+                                    vv = -MakeBestMove(ii - 1, jj, tt + 1, vv_max);
+                                    if (ii == jj)
+                                        vv += (2 * Math.random() - 1) * Rnd;
+                                    MoveCount--;
+                                    Fld[nn][mm] = Fld[nn + kk][mm + ll];
+                                    Fld[nn + kk][mm + ll] = 0;
+                                    if (vv_max < vv)
+                                    {
+                                        if (vv >= -vv_cut)
+                                            return ( vv) ;
+                                        vv_max = vv;
+                                        if (ii == jj)
+                                        {
+                                            NLine = 2;
+                                            MoveLine[0] = nn;
+                                            MoveLine[1] = mm;
+                                            MoveLine[2] = Fld[nn][mm];
+                                            MoveLine[3] = nn + kk;
+                                            MoveLine[4] = mm + ll;
+                                            MoveLine[5] = 0;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            return ( 1 * vv_max) ;
+        }
+    }
+
+    function EvalPosition()
+    {
+        var nn,
+            mm,
+            vv = -400,
+            nn0 = 0,
+            mm0 = 0,
+            nnm = 0,
+            nnp = 0,
+            mmm = 0,
+            mmp = 0;
+        for (nn = 0; nn < size; nn++)
+        {
+            for (mm = 0; mm < size; mm++)
+            {
+                if (Fld[nn][mm] < 0)
+                {
+                    nn0 = nn;
+                    mm0 = mm;
+                    vv += 4 * Fld[nn][mm] * FldVal[nn][mm];
+                }
+                else
+                    vv += Fld[nn][mm] * FldVal[nn][mm];
+            }
+        }
+        Fld[nn0][mm0] = 0;
+        vv -= (UpdFld(nn0, mm0, 1)) / 2;
+        for (nn = 0; nn < size; nn++)
+        {
+            for (mm = 0; mm < size; mm++)
+            {
+                if (Fld[nn][mm] >= 2)
+                    Fld[nn][mm] = 0;
+                if (Fld[nn][mm] == 1)
+                {
+                    vv += 64;
+                    vv -= ((nn - nn0) * (nn - nn0) + (mm - mm0) * (mm - mm0)) / 4;
+                    if (nn < nn0)
+                        nnm++;
+                    if (nn > nn0)
+                        nnp++;
+                    if (mm < mm0)
+                        mmm++;
+                    if (mm > mm0)
+                        mmp++;
+                }
+            }
+        }
+        Fld[nn0][mm0] = -1;
+        if ((nnm) && (nnp) && (mmm) && (mmp))
+            vv -= 24;
+        return ( vv) ;
+    }
+
+    function UpdFld(ii, jj, kk)
+    {
+        var vv = GetFld(ii, jj);
+        if (vv == 0)
+        {
+            if (kk > 2)
+                return ( 1) ;
+            vv = 1 / kk;
+            Fld[ii][jj] = kk + 1;
+            if (GetFld(ii - 1, jj) == 1)
+                vv += 8 * UpdFld(ii - 2, jj, kk + 1);
+            if (GetFld(ii + 1, jj) == 1)
+                vv += 8 * UpdFld(ii + 2, jj, kk + 1);
+            if (GetFld(ii, jj - 1) == 1)
+                vv += 8 * UpdFld(ii, jj - 2, kk + 1);
+            if (GetFld(ii, jj + 1) == 1)
+                vv += 8 * UpdFld(ii, jj + 2, kk + 1);
+            if ((ii + jj) % 2 == 0)
+            {
+                if (GetFld(ii - 1, jj - 1) == 1)
+                    vv += 8 * UpdFld(ii - 2, jj - 2, kk + 1);
+                if (GetFld(ii + 1, jj + 1) == 1)
+                    vv += 8 * UpdFld(ii + 2, jj + 2, kk + 1);
+                if (GetFld(ii + 1, jj - 1) == 1)
+                    vv += 8 * UpdFld(ii + 2, jj - 2, kk + 1);
+                if (GetFld(ii - 1, jj + 1) == 1)
+                    vv += 8 * UpdFld(ii - 2, jj + 2, kk + 1);
+            }
+            vv += UpdFld(ii - 1, jj, kk + 1);
+            vv += UpdFld(ii + 1, jj, kk + 1);
+            vv += UpdFld(ii, jj - 1, kk + 1);
+            vv += UpdFld(ii, jj + 1, kk + 1);
+            if ((ii + jj) % 2 == 0)
+            {
+                vv += UpdFld(ii - 1, jj - 1, kk + 1);
+                vv += UpdFld(ii + 1, jj + 1, kk + 1);
+                vv += UpdFld(ii + 1, jj - 1, kk + 1);
+                vv += UpdFld(ii - 1, jj + 1, kk + 1);
+            }
+            return ( vv) ;
+        }
+        return ( 0) ;
+    }
+
+    function MakeMove()
+    {
+        Fld[MoveLine[3 * NLine - 3]][MoveLine[3 * NLine - 2]] = MoveLine[2];
+        Fld[MoveLine[0]][MoveLine[1]] = 0;
+        var nn = NLine - 2;
+        while (nn >= 0)
+        {
+            Fld[MoveLine[3 * nn]][MoveLine[3 * nn + 1]] = 0;
+            nn -= 2;
+        }
+        for (nn = 0; nn < NLine; nn++)
+        {
+            if (History[MoveCount][3 * nn] != MoveLine[3 * nn])
+            {
+                History[MoveCount][3 * nn] = MoveLine[3 * nn];
+                MaxMoveCount = MoveCount + 1;
+            }
+            if (History[MoveCount][3 * nn + 1] != MoveLine[3 * nn + 1])
+            {
+                History[MoveCount][3 * nn + 1] = MoveLine[3 * nn + 1];
+                MaxMoveCount = MoveCount + 1;
+            }
+            if (History[MoveCount][3 * nn + 2] != MoveLine[3 * nn + 2])
+            {
+                History[MoveCount][3 * nn + 2] = MoveLine[3 * nn + 2];
+                MaxMoveCount = MoveCount + 1;
+            }
+        }
+        History[MoveCount].length = 3 * NLine;
+        MoveCount++;
+        NLine = 0;
+        NDraw = 0;
+        RefreshScreen();
+        MoveVal = GetMoveVal(size, size);
+        if (MoveVal == 0)
+        {
+            if ((MoveCount + Start) % 2 == 0)
+                alert("The Chickens have won !");
+            else
+                alert("The Coyote has won !");
+        }
+        else
+        {
+            if (MoveCount >= MaxMove)
+            {
+                MoveVal = 0;
+                alert("It's a draw !");
+            }
+        }
+        var mm,
+            kk = 0;
+        if ((MoveCount + Start) % 4 == 1)
+        {
+            for (nn = 0; nn < size; nn++)
+            {
+                for (mm = 0; mm < size; mm++)
+                {
+                    if (FldOld[nn][mm] != Fld[nn][mm])
+                    {
+                        FldOld[nn][mm] = Fld[nn][mm];
+                        kk++;
+                    }
+                }
+            }
+            if (kk == 0)
+                Rnd *= 1.5;
+            else
+                Rnd = 1;
+        }
+    }
+    function GetFld(nn, mm)
+    {
+        if (nn < 0)
+            return ( -9) ;
+        if (mm < 0)
+            return ( -9) ;
+        if (nn > size - 1)
+            return ( -9) ;
+        if (mm > size - 1)
+            return ( -9) ;
+        if (Fld[nn][mm] == 0)
+            return ( 0) ;
+        if (Fld[nn][mm] > 0)
+            return ( 1) ;
+        return ( -1) ;
+    }
+    function GetMoveVal(ii, jj)
+    {
+        var nn,
+            mm,
+            cc = ((MoveCount + Start) % 2) * 2 - 1,
+            vv = 0;
+        if (cc > 0)
+        {
+            for (nn = 0; nn < size; nn++)
+            {
+                for (mm = 0; mm < size; mm++)
+                {
+                    if (Fld[nn][mm] == cc)
+                        vv++;
+                }
+            }
+            if (vv < 11)
+                return ( 0) ;
+            else
+                return ( 1) ;
+        }
+        vv = 0;
+        if ((ii != size) || (jj != size))
+        {
+            nn = ii;
+            mm = jj;
+            if ((GetFld(nn - 2, mm) == 0) && (GetFld(nn - 1, mm) == -cc))
+                return ( 2) ;
+            if ((GetFld(nn, mm + 2) == 0) && (GetFld(nn, mm + 1) == -cc))
+                return ( 2) ;
+            if ((GetFld(nn + 2, mm) == 0) && (GetFld(nn + 1, mm) == -cc))
+                return ( 2) ;
+            if ((GetFld(nn, mm - 2) == 0) && (GetFld(nn, mm - 1) == -cc))
+                return ( 2) ;
+            if ((nn + mm) % 2 == 0)
+            {
+                if ((GetFld(nn - 2, mm - 2) == 0) && (GetFld(nn - 1, mm - 1) == -cc))
+                    return ( 2) ;
+                if ((GetFld(nn - 2, mm + 2) == 0) && (GetFld(nn - 1, mm + 1) == -cc))
+                    return ( 2) ;
+                if ((GetFld(nn + 2, mm + 2) == 0) && (GetFld(nn + 1, mm + 1) == -cc))
+                    return ( 2) ;
+                if ((GetFld(nn + 2, mm - 2) == 0) && (GetFld(nn + 1, mm - 1) == -cc))
+                    return ( 2) ;
+            }
+            if ((GetFld(nn - 1, mm) == 0))
+                return ( 1) ;
+            if ((GetFld(nn, mm + 1) == 0))
+                return ( 1) ;
+            if ((GetFld(nn + 1, mm) == 0))
+                return ( 1) ;
+            if ((GetFld(nn, mm - 1) == 0))
+                return ( 1) ;
+            if ((nn + mm) % 2 == 0)
+            {
+                if ((GetFld(nn - 1, mm - 1) == 0))
+                    return ( 1) ;
+                if ((GetFld(nn - 1, mm + 1) == 0))
+                    return ( 1) ;
+                if ((GetFld(nn + 1, mm + 1) == 0))
+                    return ( 1) ;
+                if ((GetFld(nn + 1, mm - 1) == 0))
+                    return ( 1) ;
+            }
+            return ( 0) ;
+        }
+        for (nn = 0; nn < size; nn++)
+        {
+            for (mm = 0; mm < size; mm++)
+            {
+                if (Fld[nn][mm] * cc > 0)
+                {
+                    if ((GetFld(nn - 2, mm) == 0) && (GetFld(nn - 1, mm) == -cc))
+                        return ( 2) ;
+                    if ((GetFld(nn, mm + 2) == 0) && (GetFld(nn, mm + 1) == -cc))
+                        return ( 2) ;
+                    if ((GetFld(nn + 2, mm) == 0) && (GetFld(nn + 1, mm) == -cc))
+                        return ( 2) ;
+                    if ((GetFld(nn, mm - 2) == 0) && (GetFld(nn, mm - 1) == -cc))
+                        return ( 2) ;
+                    if ((nn + mm) % 2 == 0)
+                    {
+                        if ((GetFld(nn - 2, mm - 2) == 0) && (GetFld(nn - 1, mm - 1) == -cc))
+                            return ( 2) ;
+                        if ((GetFld(nn - 2, mm + 2) == 0) && (GetFld(nn - 1, mm + 1) == -cc))
+                            return ( 2) ;
+                        if ((GetFld(nn + 2, mm + 2) == 0) && (GetFld(nn + 1, mm + 1) == -cc))
+                            return ( 2) ;
+                        if ((GetFld(nn + 2, mm - 2) == 0) && (GetFld(nn + 1, mm - 1) == -cc))
+                            return ( 2) ;
+                    }
+                    if ((GetFld(nn - 1, mm) == 0))
+                        vv = 1;
+                    if ((GetFld(nn, mm + 1) == 0))
+                        vv = 1;
+                    if ((GetFld(nn + 1, mm) == 0))
+                        vv = 1;
+                    if ((GetFld(nn, mm - 1) == 0))
+                        vv = 1;
+                    if ((nn + mm) % 2 == 0)
+                    {
+                        if ((GetFld(nn - 1, mm - 1) == 0))
+                            vv = 1;
+                        if ((GetFld(nn - 1, mm + 1) == 0))
+                            vv = 1;
+                        if ((GetFld(nn + 1, mm + 1) == 0))
+                            vv = 1;
+                        if ((GetFld(nn + 1, mm - 1) == 0))
+                            vv = 1;
+                    }
+                }
+            }
+        }
+        return ( vv) ;
+    }
+    function Clicked(nn, mm)
+    {
+        if (WaT == 1)
+            Pressed(nn, mm);
+        else
+            Pressed(size - 1 - nn, size - 1 - mm);
+        window.document.OptionsForm.HelpButton.focus();
+        window.document.OptionsForm.HelpButton.blur();
+    }
+    function Pressed(nn, mm)
+    {
+        if (MoveVal == 0)
+            return;
+        if (!IsPlayer[(MoveCount + Start) % 2])
+            return;
+        if (NDraw > 0)
+            return;
+        var cc = ((MoveCount + Start) % 2) * 2 - 1;
+        if (NLine == 0)
+        {
+            if (Fld[nn][mm] * cc > 0)
+            {
+                if (MoveVal != GetMoveVal(nn, mm)) {
+                    alert("You can not move with this piece !");
+                    return;
+                }
+                MoveLine[3 * NLine] = nn;
+                MoveLine[3 * NLine + 1] = mm;
+                MoveLine[3 * NLine + 2] = Fld[nn][mm];
+                NLine++;
+                RefreshPic(nn, mm);
+            }
+            return;
+        }
+        if ((nn == MoveLine[0]) && (mm == MoveLine[1]))
+        {
+            nn = NLine;
+            Fld[MoveLine[3 * nn - 3]][MoveLine[3 * nn - 2]] = 0;
+            Fld[MoveLine[0]][MoveLine[1]] = MoveLine[2];
+            NLine = 0;
+            for (mm = 0; mm < nn; mm++)
+                RefreshPic(MoveLine[3 * mm], MoveLine[3 * mm + 1]);
+            return;
+        }
+        if (Fld[nn][mm] != 0)
+            return;
+        if (MoveVal == 1)
+        {
+            if ((Math.abs(mm - MoveLine[1]) + Math.abs(nn - MoveLine[0]) == 1) ||
+            (((nn + mm) % 2 == 0) && (Math.abs(mm - MoveLine[1]) == 1) && (Math.abs(nn - MoveLine[0]) == 1)))
+            {
+                MoveLine[3 * NLine] = nn;
+                MoveLine[3 * NLine + 1] = mm;
+                MoveLine[3 * NLine + 2] = 0;
+                NLine++;
+                RefreshPic(nn, mm);
+                NDraw = 1;
+            }
+            return;
+        }
+        if (((Math.abs(mm - MoveLine[3 * NLine - 2]) == 2) && (nn - MoveLine[3 * NLine - 3] == 0)) ||
+        ((mm - MoveLine[3 * NLine - 2] == 0) && (Math.abs(nn - MoveLine[3 * NLine - 3]) == 2)) ||
+        (((nn + mm) % 2 == 0) && (Math.abs(mm - MoveLine[3 * NLine - 2]) == 2) && (Math.abs(nn - MoveLine[3 * NLine - 3]) == 2)))
+        {
+            if (Fld[(nn + MoveLine[3 * NLine - 3]) / 2][(mm + MoveLine[3 * NLine - 2]) / 2] != -cc)
+                return;
+            MoveLine[3 * NLine] = (nn + MoveLine[3 * NLine - 3]) / 2;
+            MoveLine[3 * NLine + 1] = (mm + MoveLine[3 * NLine - 2]) / 2;
+            MoveLine[3 * NLine + 2] = Fld[(nn + MoveLine[3 * NLine - 3]) / 2][(mm + MoveLine[3 * NLine - 2]) / 2];
+            NLine++;
+            MoveLine[3 * NLine] = nn;
+            MoveLine[3 * NLine + 1] = mm;
+            MoveLine[3 * NLine + 2] = 0;
+            NLine++;
+            RefreshPic(nn, mm);
+            if ((GetFld(nn - 2, mm) == 0) && (GetFld(nn - 1, mm) == -cc) && (!IsInLine(nn - 1, mm)))
+                return;
+            if ((GetFld(nn, mm + 2) == 0) && (GetFld(nn, mm + 1) == -cc) && (!IsInLine(nn, mm + 1)))
+                return;
+            if ((GetFld(nn + 2, mm) == 0) && (GetFld(nn + 1, mm) == -cc) && (!IsInLine(nn + 1, mm)))
+                return;
+            if ((GetFld(nn, mm - 2) == 0) && (GetFld(nn, mm - 1) == -cc) && (!IsInLine(nn, mm - 1)))
+                return;
+            if ((nn + mm) % 2 == 0)
+            {
+                if ((GetFld(nn - 2, mm - 2) == 0) && (GetFld(nn - 1, mm - 1) == -cc) && (!IsInLine(nn - 1, mm - 1)))
+                    return;
+                if ((GetFld(nn - 2, mm + 2) == 0) && (GetFld(nn - 1, mm + 1) == -cc) && (!IsInLine(nn - 1, mm + 1)))
+                    return;
+                if ((GetFld(nn + 2, mm + 2) == 0) && (GetFld(nn + 1, mm + 1) == -cc) && (!IsInLine(nn + 1, mm + 1)))
+                    return;
+                if ((GetFld(nn + 2, mm - 2) == 0) && (GetFld(nn + 1, mm - 1) == -cc) && (!IsInLine(nn + 1, mm - 1)))
+                    return;
+            }
+            NDraw = 1;
+        }
+    }
+    function IsInLine(nn, mm)
+    {
+        for (var ii = 0; ii < NLine; ii++)
+        {
+            if ((MoveLine[3 * ii] == nn) && (MoveLine[3 * ii + 1] == mm))
+                return ( true) ;
+        }
+        return ( false) ;
+    }
+    function RefreshPic(ii, jj)
+    {
+        var dd = 0,
+            ss = (size * size - 1) * (1 - WaT) / 2,
+            tt = 3 * (1 - WaT) / 2;
+        if (NLine > 0)
+            dd = 3;
+        if (Fld[ii][jj] == -1)
+            window.document.images[ss + WaT * (size * ii + jj)].src = Pic[1 + dd][tt + WaT * (Math.round(3 * jj / (size - 1) + Math.random() / 10 - 0.05))].src;
+        if (Fld[ii][jj] == 0)
+            window.document.images[ss + WaT * (size * ii + jj)].src = Pic[0 + dd].src;
+        if (Fld[ii][jj] == 1)
+            window.document.images[ss + WaT * (size * ii + jj)].src = Pic[2 + dd][tt + WaT * (Math.round(3 * jj / (size - 1) + Math.random() / 10 - 0.05))].src;
+    }
+    function RefreshScreen()
+    {
+        var ii,
+            jj,
+            ss = (size * size - 1) * (1 - WaT) / 2,
+            tt = 3 * (1 - WaT) / 2;
+        for (ii = 0; ii < size; ii++)
+        {
+            for (jj = 0; jj < size; jj++)
+            {
+                if (Fld[ii][jj] == -1)
+                    window.document.images[ss + WaT * (size * ii + jj)].src = Pic[1][tt + WaT * (Math.round(3 * jj / (size - 1) + Math.random() / 10 - 0.05))].src;
+                if (Fld[ii][jj] == 0)
+                    window.document.images[ss + WaT * (size * ii + jj)].src = Pic[0].src;
+                if (Fld[ii][jj] == 1)
+                    window.document.images[ss + WaT * (size * ii + jj)].src = Pic[2][tt + WaT * (Math.round(3 * jj / (size - 1) + Math.random() / 10 - 0.05))].src;
+            }
+        }
+        if (MoveCount < 10)
+            window.document.OptionsForm.Moves.value = " " + MoveCount + " ";
+        else
+            window.document.OptionsForm.Moves.value = MoveCount;
+        window.document.OptionsForm.Moves.blur();
+    }
+    function Resize()
+    {
+        if (navigator.appName == "Netscape")
+            history.go(0);
+    }
+    function Help()
+    {
+        alert("This game was played by Native American tribes," +
+        "\nfor instance the Papago of Arizona." +
+        "\nThe coyote tries to capture the chickens jumping over," +
+        "\nwhile the chickens try to surround and trap the coyote." +
+        "\nIn this version of the game, the coyote has won after" +
+        "\ncapturing at least 2 chickens." +
+        "\nThe chickens have the advantage - with perfect play" +
+        "\nthey always win." +
+        "\nSorry, but for now the computer player doesn't have more" +
+        "\nintelligence than a real chicken or coyote would have." +
+        "\nSo there are good chances for you to beat the computer.");
+    }
+    </script>
+</HEAD>
+<BODY bgcolor=#aaeeaa background='chicoyobg.gif' text=#ffeedd onResize="javascript:Resize()">
+    <DIV ALIGN=center style="position:absolute; top=0px">
+        <form name="OptionsForm">
+            <table noborder>
+                <tr>
+                    <td>
+                        <script language="JavaScript">
+                        document.open();
+                        document.writeln("<table border=0 cellpadding=0 cellspacing=0 background='chicoyo_bg.gif'><tr><td>");
+                        for (i = 0; i < size; i++)
+                        {
+                            document.write("<nobr>");
+                            for (j = 0; j < size; j++)
+                                document.write("<a href=\"javascript:Clicked(" + i + "," + j + ")\"><IMG src=\"chicoyo0.gif\" border=0 width=140 height=140></a>");
+                            document.write("</nobr>");
+                            if (i < size - 1)
+                                document.write("<br>");
+                        }
+                        document.writeln("</td></tr></table>");
+                        document.close();
+                        </script>
+                    </td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>
+                        <table noborder cellpadding=3 cellspacing=3>
+                            <tr>
+                                <td>
+                                    <table border cellpadding=1 cellspacing=1 width=100% bgcolor=#b59484>
+                                        <tr>
+                                            <td>
+                                                <input type=radio name="Coyote" checked value="Player" onClick="javascript:SetOption(0,1)">
+                                                <b>Coyote: Player</b>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <table noborder width=100% cellpadding=0 cellspacing=0>
+                                                    <tr>
+                                                        <td>
+                                                            <input type=radio name="Coyote" value="Computer" onClick="javascript:SetOption(0,0)">
+                                                            <b>Coyote: Computer</b>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            &nbsp;
+                                                            <b>Level:</b>
+                                                            <input type=radio name="CoyoteLevel" value="1" onClick="javascript:SetLevel(0,1)">
+                                                            <b>1&nbsp;</b>
+                                                            <input type=radio name="CoyoteLevel" value="2" onClick="javascript:SetLevel(0,2)">
+                                                            <b>2&nbsp;</b>
+                                                            <input type=radio name="CoyoteLevel" checked value="3" onClick="javascript:SetLevel(0,3)">
+                                                            <b>3&nbsp;</b>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <table border cellpadding=1 cellspacing=1 width=100% bgcolor=#995533>
+                                        <tr>
+                                            <td>
+                                                <input type=radio name="Chickens" value="Player" onClick="javascript:SetOption(1,1)">
+                                                <b>Chickens: Player</b>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <table noborder width=100% cellpadding=0 cellspacing=0>
+                                                    <tr>
+                                                        <td>
+                                                            <input type=radio name="Chickens" checked value="Computer" onClick="javascript:SetOption(1,0)">
+                                                            <b>Chickens: Computer</b>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            &nbsp;
+                                                            <b>Level:</b>
+                                                            <input type=radio name="ChickensLevel" value="1" onClick="javascript:SetLevel(1,1)">
+                                                            <b>1&nbsp;</b>
+                                                            <input type=radio name="ChickensLevel" value="2" onClick="javascript:SetLevel(1,2)">
+                                                            <b>2&nbsp;</b>
+                                                            <input type=radio name="ChickensLevel" checked value="3" onClick="javascript:SetLevel(1,3)">
+                                                            <b>3&nbsp;</b>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <table border cellpadding=1 cellspacing=1 width=100%>
+                                        <tr>
+                                            <td bgcolor=#b59484>
+                                                <input type=radio name="Start" checked value="Coyote" onClick="javascript:SetOption(2,1)">
+                                                <b>Coyote begins</b>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td bgcolor=#995533>
+                                                <input type=radio name="Start" value="Chickens" onClick="javascript:SetOption(2,0)">
+                                                <b>Chickens begin</b>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <table border cellpadding=1 cellspacing=1 width=100%>
+                                        <tr>
+                                            <td bgcolor=#b59484>
+                                                <input type=radio name="atTop" value="Coyote" onClick="javascript:SetTop(1)">
+                                                <b>Coyote at top</b>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td bgcolor=#995533>
+                                                <input type=radio name="atTop" checked value="Chickens" onClick="javascript:SetTop(-1)">
+                                                <b>Chickens at top</b>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <table border cellpadding=1 cellspacing=1 width=100%>
+                                        <tr>
+                                            <td align=center>
+                                                <table noborder cellpadding=0 cellspacing=0 width=100%>
+                                                    <tr>
+                                                        <td align=center>
+                                                            <input type=button value="NEW" style="width:81" width=83 onClick="javascript:Init()">
+                                                        </td>
+                                                        <td align=center>
+                                                            <input type=button name="HelpButton" value="HELP" style="width:81" width=83 onClick="javascript:Help()">
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td align=center>
+                                                <table noborder cellpadding=0 cellspacing=0 width=100%>
+                                                    <tr>
+                                                        <td align=center>
+                                                            <input type=button value="&nbsp;&lt;&lt;&nbsp;" style="width:30" onClick="javascript:Back();Back()" title="two moves back">
+                                                        </td>
+                                                        <td align=center>
+                                                            <input type=button value="&nbsp;&lt;&nbsp;" style="width:27" onClick="javascript:Back()" title="one move back">
+                                                        </td>
+                                                        <td align=center>
+                                                            <input type=button value="&nbsp;&nbsp;&nbsp;&nbsp;" width=35 style="width:34;background-color:#FFFFFF;font-weight:bold" disabled name="Moves">
+                                                        </td>
+                                                        <td align=center>
+                                                            <input type=button value="&nbsp;&gt;&nbsp;" style="width:27" onClick="javascript:Replay()" title="one move forward">
+                                                        </td>
+                                                        <td align=center>
+                                                            <input type=button value="&nbsp;&gt;&gt;&nbsp;" style="width:30" onClick="javascript:Replay();Replay()" title="two moves forward">
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </DIV>
+    <script language="JavaScript">
+    Init();
+    setInterval("Timer()", 300);
+    </script>
+</BODY>
+</HTML>
+
