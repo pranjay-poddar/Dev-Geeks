@@ -1,23 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Github Profiles</title>
-    <link rel="stylesheet" href="./styles.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GitHub Profile Finder</title>
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <link rel="stylesheet" href="./styles.css">
 </head>
 
 <body>
-    <form id="form" onsubmit="return formSubmit()">
-        <input type="text" id="search" autofocus placeholder="Search a Github User Here" />
-        <button id="submit"><pre>Submit</pre></button>
-    </form>
-    <main id="main">
-    </main>
-    
-    
-    <script src="./index.js" defer></script>
-</body>
+    <div class="container">
+        <h1>GitHub Profile Finder</h1>
+        <div class="profileTop">
+            <form id="search-form" >
+                <input type="text" id="username" placeholder="Enter GitHub username">
+                <button type="submit">Search User</button>
+            </form>
+        </div>
 
+        <div id="user-details">
+            <!-- Display user details here -->
+        </div>
+    </div>
+
+  <script src="./index.js" ></script>
+
+</body>
+</html>
+
+    </script>
+</body>
 </html>
