@@ -1,116 +1,68 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap");
-* {
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
+body{
+   margin: 0;
+   padding: 0;
+   color: white;
+   background-image: url(https://cdn.neowin.com/news/images/uploaded/2021/04/1619644762_github-desktop_story.jpg);
+}
+.container{
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   flex-direction: column;
+   flex-wrap: wrap;
+    
 }
 
-body {
-    background-color: #FFC300;
-
+#user-details {
+    margin-top: 10px;
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
-    font-family: "Poppins", sans-serif;
-    margin: 0;
-    min-height: 100vh;
-}
-
-input {
-    background:linear-gradient(90deg,#FF5733 50%,#C70039 50%);
-    border-radius: 10px;
-    border: none;
-    box-shadow: 0 5px 10px rgba(154, 160, 185, 0.05), 0 15px 40px rgba(0, 0, 0, 0.1);
-    color: white;
-    font-family: inherit;
-    font-size: 1rem;
-    padding: 1rem;
-    margin-bottom: 2rem;
+    flex-direction: column;
     width: 400px;
-}
-button{
-    
-
-    background:#C70039;
+    height: auto;
+    text-align: center;
+    border: 1px solid red;
     border-radius: 10px;
+    background-color: white;
+    color: black;
 
-  border:2px solid black;
-cursor: pointer;
-    color: white;
-    font-family: inherit;
-    font-size: 1rem;
-    padding: 1rem;
-    margin-bottom: 2rem;
-    margin-left:10px;
+}
+form{
+    width: 100%;
+    height: auto;
+}
+form input{
+    text-align: center;
+    font-size: 16px;
+    width: 300px;
+    height: 20px;
+    border-radius: 10px;
+    flex-wrap: wrap;
+}
+img{
+    height: 80px;
     width: 80px;
-
-}
-button:hover{
-    transform:scale(1.1);
-    transition:transform 1s;
-}
-
-input::placeholder {
-    color: white;
-}
-
-input:focus {
-    outline: none;
-}
-
-.card {
-    background-color:#FF5733;
-    border-radius: 20px;
-    box-shadow: 0 5px 10px rgba(154, 160, 185, 0.05), 0 15px 40px rgba(0, 0, 0, 0.1);
-    display: flex;
-    padding: 3rem;
-    max-width: 800px;
-}
-
-.avatar {
-    border: 10px solid #2a2a72;
+    object-fit: cover;
     border-radius: 50%;
-    height: 150px;
-    width: 150px;
 }
-
-.user-info {
-    color: #eee;
-    margin-left: 2rem;
+.bio,.name,.follow{
+    margin-top: 10px;
+    width: 100%;
+    border-bottom: 1px solid grey;
+    margin: 0;
 }
-
-.user-info h2 {
-    margin-top: 0;
+.bio p{
+    color: green;
 }
-
-.user-info ul {
+.follow{
     display: flex;
-    justify-content: space-between;
-    list-style-type: none;
-    padding: 0;
-    max-width: 400px;
-}
-
-.user-info ul li {
-    display: flex;
-    margin-right: 10px;
+    flex-direction: row;
+    justify-content: space-evenly;
     align-items: center;
+    
 }
-
-.user-info ul li strong {
-    font-size: 0.9rem;
-    margin-left: 0.5rem;
-}
-
-.repo {
-    background-color: #2a2a72;
-    border-radius: 5px;
-    display: inline-block;
-    color: white;
-    font-size: 0.7rem;
-    padding: 0.25rem 0.5rem;
-    margin-right: 0.5rem;
-    margin-bottom: 0.5rem;
-    text-decoration: none;
+.follow p,.bio p,.name p{
+    margin: 20px 20px;
+   
 }
