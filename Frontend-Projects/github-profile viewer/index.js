@@ -1,69 +1,41 @@
-const APIURL = "https://api.github.com/users/";
-const main = document.querySelector("#main");
-const searchBox = document.querySelector("#search")
-const getUser = async(username) => {
-    const response = await fetch(APIURL + username);
-    const data = await response.json()
-    const card = `
-        <div class="card">
-            <div>
-                <img class="avatar" src="${data.avatar_url}" alt="Florin Pop">
-            </div>
-            <div class="user-info">
-                <h2>${data.name}</h2>
-                <p>${data.bio}</p>
 
-                <ul class="info">
-                    <li>${data.followers}<strong>Followers</strong></li>
-                    <li>${data.following}<strong>Following</strong></li>
-                    <li>${data.public_repos}<strong>Repos</strong></li>
-                </ul>
+const form = document.getElementById('search-form');
+const userDetails = document.getElementById('user-details');
 
-                <div id="repos">
-                  
-                </div>
-            </div>
+form.addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    const username = document.getElementById('username').value;
+    fetchUserData(username);
+});
+
+function fetchUserData(username) {
+    const apiUrl = `https://api.github.com/users/${username}`;
+
+    fetch(apiUrl)
+        .then(response => response.json())
+        .then(data => {
+            displayUserDetails(data);
+        })
+        .catch(error => {
+            console.error('Error fetching data:', error);
+        });
+}
+
+function displayUserDetails(user) {
+    userDetails.innerHTML = `
+    <div class="name">
+    <img src="${user.avatar_url}" alt="Profile Picture">
+        <h2>${user.name}</h2>
+        <a href="${user.html_url}" target="_blank">Visit Profile</a>
         </div>
-    `
-    main.innerHTML = card;
-    getRepos(username)
+        <div class="bio">
+        <p>${user.bio}</p>
+        <p>Repositories: ${user.public_repos}</p>
+        </div>
+        <div class="follow"
+        <p>Followers: ${user.followers}</p>
+        <p>Following: ${user.following}</p>
+        </div>
+    `;
 }
-
-
-// init call
-getUser("shreyans2004")
-
-
-const getRepos = async(username) => {
-    const repos = document.querySelector("#repos")
-    const response = await fetch(APIURL + username + "/repos")
-    const data = await response.json();
-    data.forEach(
-        (item) => {
-
-            const elem = document.createElement("a")
-            elem.classList.add("repo")
-            elem.href = item.html_url
-            elem.innerText = item.name
-            elem.target = "_blank"
-            repos.appendChild(elem)
-        }
-    )
-}
-
-const formSubmit = () => {
-    if (searchBox.value != "") {
-        getUser(searchBox.value);
-        searchBox.value = ""
-    }
-    return false;
-}
-
-submit=document.getElementById("submit");
-submit.addEventListener(
-        "click",
-        function() {
-            formSubmit()
-        }
-    )
-   
