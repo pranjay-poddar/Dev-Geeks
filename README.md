@@ -876,6 +876,8 @@ Happy Coding! -->
 <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/cpp-projects/ATM Machine">ATM Machine</a></td>
 <td align="center"> 295.</td>
 <td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Python%20Projects/Speech_Recognition_ChatBot">Speech Recognition ChatBot</a>
+<td align="center"> 296.</td>
+<td align="center"> <a href="https://github.com/pranjay-poddar/Dev-Geeks/tree/main/Python Projects/Pencil Sketch from Picture">Pencil Sketch from Picture</a></td>
 </tr>
 
 </table>
