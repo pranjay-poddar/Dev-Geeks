@@ -1,0 +1,70 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    background-color: brown;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.countdown {
+    background-color: blue;
+    width: 400px;
+    height: 400px;
+    text-align: center;
+    color: aquamarine;
+    margin: 10px auto;
+    padding: 80px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    border-radius: 50%;
+    font-size: 200px;
+    border: 7px solid aquamarine;
+}
+
+.buttons {
+    display: block;
+    
+}
+
+.btn1 {
+    width: 120px;
+    height: 50px;
+    font-size: 30px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: aquamarine;
+    color: black;
+    text-align: center;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.btn2 {
+    width: 120px;
+    height: 50px;
+    font-size: 30px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: aquamarine;
+    color: black;
+    text-align: center;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.btn3 {
+    width: 120px;
+    height: 50px;
+    font-size: 30px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: aquamarine;
+    color: black;
+    text-align: center;
+    border-radius: 20px;
+    cursor: pointer;
+}

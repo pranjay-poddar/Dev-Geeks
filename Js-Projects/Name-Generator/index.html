@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!-- logo of the website -->
+    <link rel="shortcut icon"
+        href="https://play-lh.googleusercontent.com/HbYLGJ68ka0szB_dfUqtXz9DCfaqG0Nyj9lwU1h9MKLr2hVHqg4ns4LzqJAGnmdubLU"
+        type="image/x-icon">
+
+    <title>Name Generator</title>
+
+    <!-- custom stylesheets -->
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/responsive.css">
+</head>
+
+<body>
+    <div class="container">
+        <div id="content" class="content">
+            <h1>Generate Names</h1>
+            <p>
+                Created By <a href="https://github.com/Avdhesh-Varshney">Avdhesh Varshney</a>
+            </p>
+
+            <!-- container of the application -->
+            <form action="#" id="generate-names">
+                <div class="row">
+                    <div class="six columns">
+                        <label for="gender">Gender:</label>
+                        <select class="u-full-width" id="gender">
+                            <option value=''>-- Select --</option>
+                            <option value="random">Random</option>
+                            <option value="male">Male</option>
+                            <option value="female">Female</option>
+                        </select>
+
+                        <label>Number of names to generate</label>
+                        <input type="number" id="quantity" class="u-full-width" min="1" max="15" value="1"
+                            placeholder="Enter Number...">
+                        <input class="button-primary u-full-width" type="submit" value="Generate">
+                    </div>
+
+                    <div class="six columns">
+                        <div id="result">
+                            <h2>Generated Names</h2>
+                            <ul id="list"></ul>
+                        </div>
+                    </div>
+                </div>
+
+            </form>
+
+        </div>
+
+    </div>
+
+    <!-- custom javascript file -->
+    <script src="./script.js"></script>
+</body>
+
+</html>
