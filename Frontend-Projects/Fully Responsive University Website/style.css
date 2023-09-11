@@ -255,11 +255,12 @@ h3{
 }
 .facilities-col p{
     padding: 0;
+    text-align: center;
 }
 .facilities-col h3{
     margin-top: 16px;
     margin-bottom: 15px;
-    text-align: left;
+    text-align: center;
 }
 
 /* -----Testimonials---- */
