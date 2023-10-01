@@ -1,0 +1,124 @@
+*{
+    box-sizing: border-box;
+    margin:0px;
+    padding: 0px;
+}
+.left-column{
+    width:30%;
+    
+}
+
+.right-column{
+    width:70%;
+    display: flex;
+    gap:20px;
+    flex-direction: column;
+    
+}
+
+.container{
+    width: 70%;
+    display: flex;
+    margin-inline: auto;
+    gap:20px;
+    margin-block:20px;
+}
+
+body{
+    background-color: #eee;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+p{
+  font-size: 0.9rem; 
+  font-weight: normal; 
+  color:#888;
+  padding: 3px;
+}
+h2{
+    font-weight: normal; 
+    color:#888;
+}
+h3{
+    font-weight: normal;
+    font-size:0.9rem;
+    color:#888;
+    margin-block: 8px;
+}
+.icon-text{
+    display: flex;
+    margin-inline: auto;
+    gap: 9px;
+    color:teal;
+    align-items: center;
+}
+
+.badge{
+    background-color: teal;
+    color:white;
+    padding: 2px 2px;
+    font-size: 0.6rem;
+    border-radius: 4px;
+}
+
+.image-box{
+    position: relative;
+}
+
+.image-box img{
+    width: 100%;
+}
+.image-box .user-name{
+    position: absolute;
+    bottom: 20px;
+    left: 10px;
+    color: rgb(251, 244, 244);
+}
+ul {
+    list-style: none;
+    margin-block: 18px;
+}
+ul > li{
+    margin-top:6px;
+}
+hr{
+    border: 0.5px solid #eee;
+}
+i{
+    color: teal;
+}
+.prograss-bar{
+    background-color: #ccc;
+    width:100%;
+    border-radius: 20px;
+    margin-block:6px;
+}
+.skills{
+margin-block: 6px;
+}
+.prograss{
+    width: 90%;
+    background-color: teal;
+    border-radius: 20px;
+    text-align: center;
+    font-size: 0.5rem;
+    padding-block: 2px;
+}
+.card{
+    box-shadow: 4px 4px 4px;
+    background-color: white;
+    
+}
+.laguages{
+    margin-block: 6px;   
+}
+.subtext{
+    color:black;
+}
+.left-desc, .card-container{
+    margin:15px ;
+    padding:15px;
+}
+.date{
+    color:teal;
+}
