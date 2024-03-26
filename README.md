@@ -11,7 +11,6 @@
 
 ![forthebadge](https://forthebadge.com/images/badges/uses-brains.svg)
 ![forthebadge](https://forthebadge.com/images/badges/check-it-out.svg)
-
 <br>
 
 ![GitHub repo size](https://img.shields.io/github/repo-size/pranjay-poddar/Dev-Geeks?color=yellow)
