@@ -1,0 +1,37 @@
+body{
+    width:100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  
+  
+  }
+  #main{
+    color: white;
+    display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column !important;
+  
+  font-size: 3rem;
+  width: 100px;
+    height: 40px;
+  animation: animate 12s ease-in-out infinite  ;
+  
+  background-color: white;
+  background-image:conic-gradient(deeppink, white);
+  }
+  @keyframes animate {
+    0%{
+  transform: rotateY(0deg) translateX(-1900px) ;
+    }
+    50%{
+        transform: rotateX(360deg) translateX(0px);
+    }
+    100%{
+        transform: rotateX(20deg) translateX(1900px) ;
+    }
+    
+  }
