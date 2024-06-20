@@ -1,0 +1,213 @@
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+  font-family: Gilroy;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+#main {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: flex;
+}
+
+#left {
+  width: 20vw;
+  height: 100%;
+  background-color: #3f3f45;
+  position: relative;
+  opacity: .9;
+}
+
+#right {
+  width: 80vw;
+  height: 100%;
+  background-color: #f3f3fa;
+  opacity: .8;
+  position: relative;
+}
+
+#lnav {
+  width: 100%;
+  height: 20px;
+  background-color: rgba(65, 65, 153, 0.821);
+  position: absolute;
+  top: 20px;
+  color: rgb(166, 163, 173);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#lnav #icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+a i {
+  color: white;
+  text-decoration: none;
+  border-color: white;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+  display: flex; /* Added this */
+  align-items: center; /* Added this */
+}
+
+#files {
+  width: 100%;
+  height: 10px;
+  display: flex;
+  top: 2%;
+  color: white;
+  gap: 4px;
+  align-items: center;
+  font-size: 10px;
+  padding-left: 30px;
+  padding-top: 25px;
+}
+
+input {
+  width: calc(100% - 30px);
+  padding: 7px;
+  font-size: 10px;
+  margin-left: 30px;
+  margin-bottom: 10px;
+}
+
+#fileForm {
+  display: none;
+}
+
+#folderForm {
+  display: none;
+}
+
+#ll {
+  width: 100%;
+  height: 93%;
+  position: relative;
+  top: 7%;
+}
+
+#files i {
+  font-size: 20px;
+  cursor: pointer;
+}
+
+#edit {
+  position: absolute;
+  right: 13%;
+  font-size: 20px;
+  color: white;
+  display: none;
+}
+
+#delete {
+  position: absolute;
+  right: 22%;
+  font-size: 20px;
+  color: white;
+  display: none;
+}
+
+small {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: rgb(0, 0, 0);
+  font-size: 20px;
+  opacity: .6;
+}
+
+#files:hover #edit {
+  display: initial;
+}
+
+#files:hover #delete {
+  display: initial;
+}
+
+#top-nav {
+  position: absolute;
+  width: 100%;
+  background-color: #07070a;
+  height: 5%;
+}
+
+#opened {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  height: 100%;
+  background-color: #373741;
+}
+
+#opened h1{
+  font-size: 20px;
+  color : white;
+  padding-left: 15px;
+}
+#opened i{
+  font-size : 25px;
+  color : white;
+}
+
+form {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+textarea{
+  position: absolute;
+  width: 100%;
+  height: 95%;
+  bottom: 0%;
+  color: rgba(0, 0, 0, 0.675);
+  padding: 25px;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  font-family: "consola";
+  font-size: 20px;
+   
+}
+
+button[type="submit"] {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 60px;
+  height: 40px;
+  background-color: #0077FF;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+  cursor: pointer;
+}
+
+button[type="submit"]:hover {
+  background-color: #0066CC;
+}
+

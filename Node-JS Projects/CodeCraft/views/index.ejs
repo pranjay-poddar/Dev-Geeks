@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Index </title>
+  <link rel="stylesheet" href="../stylesheets/style.css">
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@3.0.0/fonts/remixicon.css" rel="stylesheet">
+</head>
+<body>
+
+  <div id="main">
+    <div id="left">
+      <div id="lnav">
+        <h3>VS Code</h3>
+        <div id="icons">
+          <i id="fileicon" class="ri-file-line"></i>
+          <i id="foldericon" class="ri-folder-2-line"></i>
+          <a href="/"><i class="ri-restart-line"></i></a>  
+        </div>
+      </div>
+      
+      <div id="ll">
+
+        <form id="fileForm" action="/createFile">
+          <input type="text" name="fileName" placeholder="Enter file Name">
+        </form>
+        <form id="folderForm" action="/createFolder">
+          <input type="text" name="folderName" placeholder="Enter folder Name">
+        </form>
+
+        <% files.forEach(function(elem) { %>
+          <div id="files">
+            <% if (elem.isFolder === true) { %>
+              <i id="fileicon" class="ri-folder-line"></i>
+              <a href="/fileName/<%= elem.name %>"><h1><%= elem.name %></h1></a>  
+              <i id="edit" class="ri-pencil-line"></i>
+              <a href="/deleteFolder/<%= elem.name %>">
+                <i id="delete" class="ri-delete-bin-7-fill"></i>
+              </a>
+            <% } else { %>
+              <i id="fileicon" class="ri-file-line"></i>
+              <a href="/fileName/<%= elem.name %>"><h1><%= elem.name %></h1></a>
+              <i id="edit" class="ri-pencil-line"></i>
+              <a href="/deleteFile/<%= elem.name %>">
+                <i id="delete" class="ri-delete-bin-7-fill"></i>
+              </a>
+            <% } %>
+          </div>
+        <% }) %>
+
+      </div>
+    </div>
+    <div id="right">
+      <small>Nathing to show here.</small>
+    </div>
+  </div>
+</body>
+
+<script>
+
+  function donoOff()
+  {
+    document.querySelector("#fileForm").style.display = "none";
+    document.querySelector("#folderForm").style.display = "none";
+  }
+  document.querySelector("#fileicon").addEventListener("click",function(det)
+  {
+    donoOff();
+    document.querySelector("#fileForm").style.display = "initial";
+  })
+  document.querySelector("#foldericon").addEventListener("click",function(det)
+  {
+    donoOff();
+    document.querySelector("#folderForm").style.display = "initial";
+  })
+
+  window.addEventListener("keydown",function(det)
+  {
+    if(det.keyCode===27)
+    {
+      donoOff();
+      document.querySelectorAll("form input").forEach(function(elem)
+      {
+        elem.value = "";
+      })
+    }
+  })
+
+</script>
+</html>
