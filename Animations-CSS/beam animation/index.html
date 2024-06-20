@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Apple Logo Animation</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+
+        .apple-logo {
+            width: 150px;
+            height: 180px;
+            position: relative;
+        }
+
+        .leaf {
+            width: 75px;
+            height: 150px;
+            border-radius: 50%;
+            background-color: #66BB6A;
+            position: absolute;
+            top: 15px;
+            transform-origin: center;
+        }
+
+        .leaf:first-child {
+            left: 0;
+            transform: rotate(45deg);
+        }
+
+        .leaf:last-child {
+            right: 0;
+            transform: rotate(-45deg);
+        }
+
+        @keyframes rotate {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        .apple-logo:hover .leaf {
+            animation: rotate 3s linear infinite;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="apple-logo">
+        <div class="leaf"></div>
+        <div class="leaf"></div>
+    </div>
+</body>
+
+</html>
