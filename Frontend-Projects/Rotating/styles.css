@@ -1,0 +1,36 @@
+body{
+    width:100vw;
+height: 100vh;
+display: flex;
+justify-content: center;
+align-items: center;
+
+
+
+}
+#main{
+    
+    display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+box-shadow: 10px 10px 5px black;
+font-size: 0.1rem;
+    width: 30px;
+    height: 30px;
+  animation: animate 9s linear infinite  alternate;
+
+  background-image: repeating-conic-gradient(	#FF7F00,#FF0000,	#9400D3,#FF7F00);
+}
+@keyframes animate {
+    0%{
+ transform: rotateY(0deg) ;
+    }
+    50%{
+        transform: rotateZ(360deg) scale(5);
+    }
+    100%{
+        transform: rotateZ(0deg) scale(20)  ;
+    }
+    
+}
