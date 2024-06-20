@@ -1,0 +1,9 @@
+mixin cube(index)
+  - const sides = ['front', 'back', 'right', 'left', 'top', 'bottom'];
+  .cube(style=`--index: ${index}`)
+    each side in sides  
+      .side(class=`${side}`)
+
+.container
+  - for(let i = 0; i < 7; i++)
+    +cube(i)

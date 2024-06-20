@@ -1,0 +1,107 @@
+$cube-color: #3AE2C2;
+
+:root {
+  --cube-w: 40vmin;
+  --cube-h: calc(var(--cube-w) / 8);
+  --side-z: calc(var(--cube-w) / 2);
+  --perspective: calc(var(--cube-w) * 1.5);
+  --duration: 1600ms;
+  --ease: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  background-color: #C1B809;
+}
+
+.container {
+  display: flex;
+  flex-direction: column-reverse;
+  position: relative;
+  perspective: var(--perspective);
+}
+
+.cube {
+  position: relative;
+  width: var(--cube-w);
+  height: var(--cube-h);
+  transform-style: preserve-3d;
+  animation: cube-rotation var(--duration) var(--ease) infinite;
+  animation-delay: calc(var(--index) * 0.075s);
+  
+  &:nth-child(1) { z-index: 1; }
+  &:nth-child(2) { z-index: 2; }
+  &:nth-child(3) { z-index: 3; }
+  &:nth-child(4) { z-index: 4; }
+  &:nth-child(5) { z-index: 3; }
+  &:nth-child(6) { z-index: 2; }
+  &:nth-child(7) { z-index: 1; }
+}
+
+.side {
+  position: absolute;
+  width: var(--cube-w);
+  height: var(--cube-h);
+  background-color: $cube-color;
+  animation-duration: var(--duration);
+  animation-timing-function: var(--ease);
+  animation-iteration-count: infinite;
+  
+  &.front {
+    animation-name: front;
+    animation-delay: calc(var(--index) * 0.075s);
+  }
+  &.left {
+    animation-name: left;
+    animation-delay: calc(var(--index) * 0.075s);
+  }
+  &.back {
+    animation-name: back;
+    animation-delay: calc(var(--index) * 0.075s);
+  }
+}
+
+.front { transform: translateZ(var(--side-z)); }
+.back  { transform: rotateY(180deg) translateZ(var(--side-z)); }
+.right { transform: rotateY( 90deg) translateZ(var(--side-z)); }
+.left  { transform: rotateY(-90deg) translateZ(var(--side-z)); }
+.top,
+.bottom {
+  height: var(--cube-w);
+  background-color: darken($cube-color, 10%);
+}
+
+.top {
+  transform: rotateX(90deg) translateZ(var(--side-z));
+}
+
+.bottom {
+  transform: rotateX(-90deg) translateZ(calc(var(--cube-h) * -3));
+}
+
+@keyframes cube-rotation {
+  60%, 100% { transform: rotateY(0.5turn) }
+}
+
+@keyframes front {
+  0%, 25% { background-color: $cube-color }
+  40% { background-color: lighten($cube-color, 20%) }
+  60% { background-color: $cube-color }
+}
+
+@keyframes left {
+  0%, 25% { background-color: darken($cube-color, 10%) }
+  45%, 50% { background-color: $cube-color }
+  55%, 100% { background-color: lighten($cube-color, 20%) }
+}
+
+@keyframes back {
+  0%, 45% { background-color: darken($cube-color, 10%) }
+  60% { background-color: $cube-color }
+}
