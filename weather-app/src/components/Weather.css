@@ -1,0 +1,22 @@
+.weather {
+  text-align: center;
+  margin: 2rem;
+}
+
+input {
+  padding: 0.5rem;
+  width: 200px;
+  margin-right: 1rem;
+}
+
+.weather-result {
+  margin-top: 2rem;
+}
+
+.weather-result h3 {
+  font-size: 2rem;
+}
+
+.weather-result p {
+  font-size: 1.5rem;
+}

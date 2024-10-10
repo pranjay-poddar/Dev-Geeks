@@ -1,4 +1,0 @@
-flask
-numpy
-pandas
-gunicorn

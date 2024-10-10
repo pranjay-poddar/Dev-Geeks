@@ -1,1 +1,0 @@
-I have created a clone of the Myntra landing page.

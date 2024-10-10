@@ -1,0 +1,22 @@
+.home {
+  text-align: center;
+  padding: 5rem;
+  background-color: #f5f5f5;
+}
+
+.weather-text {
+  color: #1e90ff;
+}
+
+button {
+  padding: 0.5rem 1rem;
+  background-color: #1e90ff;
+  color: white;
+  border: none;
+  cursor: pointer;
+  margin-top: 2rem;
+}
+
+button:hover {
+  background-color: #4169e1;
+}

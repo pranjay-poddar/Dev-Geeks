@@ -1,6 +1,0 @@
-name                      : CMS
-version                   : 14.0.0
-jcomponent                : 18
-
-// Secret for administrators
-admin_secret  (generate)  : 10

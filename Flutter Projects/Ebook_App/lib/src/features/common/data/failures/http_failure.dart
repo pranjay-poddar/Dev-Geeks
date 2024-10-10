@@ -1,1 +1,0 @@
-enum HttpFailure { notFound, unknown }

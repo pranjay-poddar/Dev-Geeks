@@ -1,3 +1,0 @@
-streamlit~=1.23.1
-xgboost
-pandas~=2.0.2
