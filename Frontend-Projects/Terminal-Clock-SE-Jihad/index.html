@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Terminal Clock</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="scanlines"></div>
+
+    <main class="term-wrapper">
+        <header class="term-header">
+            <div class="window-controls">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="window-title">bash - root@sejihad:~</div>
+        </header>
+
+        <section class="term-content">
+            <div class="input-line">
+                <span class="path">root@sejihad:~$</span>
+                <span id="cmd-text" class="cmd"></span><span id="cmd-cursor" class="block-cursor"></span>
+            </div>
+
+            <div id="clock-container" class="output-block hidden">
+                <div id="sys-date" class="date-text"></div>
+                <div id="sys-time" class="time-text">00:00:00</div>
+            </div>
+
+            <div id="new-prompt" class="input-line mt hidden">
+                <span class="path">root@sejihad:~$</span>
+                <span class="block-cursor"></span>
+            </div>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+
+</html>
