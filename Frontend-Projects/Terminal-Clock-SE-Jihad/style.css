@@ -1,0 +1,195 @@
+@import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;700&display=swap");
+
+:root {
+  --bg-main: #050505;
+  --bg-term: rgba(15, 15, 18, 0.95);
+  --term-border: #27272a;
+  --text-primary: #00ff41;
+  --text-secondary: #888;
+  --text-path: #3b82f6;
+  --font-mono: "Fira Code", monospace;
+  --glow: 0 0 10px rgba(0, 255, 65, 0.4), 0 0 20px rgba(0, 255, 65, 0.2);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--bg-main);
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+  font-family: var(--font-mono);
+  overflow: hidden;
+  padding: 1rem;
+}
+
+/* CRT Scanline Effect */
+.scanlines {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background:
+    linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%),
+    linear-gradient(
+      90deg,
+      rgba(255, 0, 0, 0.06),
+      rgba(0, 255, 0, 0.02),
+      rgba(0, 0, 255, 0.06)
+    );
+  background-size:
+    100% 4px,
+    3px 100%;
+  pointer-events: none;
+  z-index: 50;
+}
+
+/* Responsive Wrapper */
+.term-wrapper {
+  width: 100%;
+  max-width: 650px;
+  background-color: var(--bg-term);
+  border-radius: 10px;
+  border: 1px solid #333;
+  box-shadow:
+    0 20px 60px rgba(0, 255, 65, 0.05),
+    inset 0 0 20px rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(5px);
+  z-index: 10;
+}
+
+.term-header {
+  background-color: #121214;
+  padding: 0.8rem 1.2rem;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid var(--term-border);
+}
+
+.window-controls {
+  display: flex;
+  gap: 6px;
+  flex-shrink: 0;
+}
+
+.window-controls span {
+  display: inline-block;
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+}
+.window-controls span:nth-child(1) {
+  background: #ff5f56;
+  box-shadow: 0 0 5px #ff5f56;
+}
+.window-controls span:nth-child(2) {
+  background: #ffbd2e;
+  box-shadow: 0 0 5px #ffbd2e;
+}
+.window-controls span:nth-child(3) {
+  background: #27c93f;
+  box-shadow: 0 0 5px #27c93f;
+}
+
+.window-title {
+  color: var(--text-secondary);
+  /* Fluid typography for title */
+  font-size: clamp(0.7rem, 2vw, 0.85rem);
+  flex-grow: 1;
+  text-align: center;
+  /* Remove strict padding so it centers nicely on mobile */
+  padding-right: 45px;
+}
+
+/* Fluid Padding for different screens */
+.term-content {
+  padding: clamp(1rem, 5vw, 2rem);
+}
+
+/* Fluid Typography for text elements */
+.input-line {
+  font-size: clamp(0.85rem, 3vw, 1rem);
+  margin-bottom: 1.5rem;
+  word-wrap: break-word;
+}
+
+.path {
+  color: var(--text-path);
+  font-weight: 700;
+  margin-right: 0.5rem;
+}
+.cmd {
+  color: #fff;
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+}
+
+.output-block {
+  border-left: 2px solid rgba(0, 255, 65, 0.3);
+  padding-left: clamp(0.8rem, 3vw, 1.5rem);
+  margin-bottom: 1.5rem;
+  transition: opacity 0.5s ease-in;
+}
+
+.date-text {
+  color: var(--text-secondary);
+  font-size: clamp(0.75rem, 2.5vw, 1rem);
+  margin-bottom: 0.5rem;
+}
+
+.time-text {
+  color: var(--text-primary);
+  /* Magic part: Font size scales smoothly from 2.5rem (mobile) to 4rem (desktop) */
+  font-size: clamp(2.5rem, 8vw, 4rem);
+  font-weight: 700;
+  text-shadow: var(--glow);
+  letter-spacing: 2px;
+  line-height: 1.2;
+}
+
+.time-text span.ampm {
+  font-size: clamp(1rem, 3vw, 1.5rem);
+  color: var(--text-secondary);
+  text-shadow: none;
+}
+
+.block-cursor {
+  display: inline-block;
+  width: clamp(6px, 2vw, 10px);
+  height: 1.1em;
+  background-color: var(--text-primary);
+  vertical-align: middle;
+  animation: blinker 1s step-end infinite;
+  box-shadow: var(--glow);
+}
+
+.mt {
+  margin-top: 2rem;
+}
+.hidden {
+  display: none;
+  opacity: 0;
+}
+
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
+}
+
+/* Extra check for very small screens (like iPhone SE) */
+@media (max-width: 400px) {
+  .path {
+    display: block; /* Username path will sit above the command */
+    margin-bottom: 0.3rem;
+  }
+  .window-title {
+    padding-right: 0;
+    text-align: left;
+    padding-left: 15px;
+  }
+}
